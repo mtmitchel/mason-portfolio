@@ -33,7 +33,7 @@ export default function SimpleHome() {
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#about">About</a>
-          <a href="/mason-cv.pdf" target="_blank">CV</a>
+          <a href="/mason-cv.pdf" target="_blank">Résumé</a>
         </nav>
       </header>
 

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
+export { default } from "./CheckoutCaseStudy";
+
 export const metadata: Metadata = {
   title: "Checkout reassurance — Mason Mitchel",
   description: "A UX copywriting and content design case study from DeepL.",
 };
 
-export default function CheckoutCaseStudy() {
+function LegacyCheckoutCaseStudy() {
   return (
     <main className="case-page">
       <header className="simple-header case-header">
