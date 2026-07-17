@@ -91,7 +91,7 @@ export default function Home() {
       <section className="work shell" id="work">
         <div className="section-heading">
           <p className="eyebrow">Selected work</p>
-          <p>Not a gallery of finished screens. Each case study shows the content problem, evidence, decisions and result.</p>
+          <p>Case studies in UX copywriting and content design.</p>
         </div>
 
         <div className="project-list">
@@ -141,7 +141,15 @@ export default function Home() {
           <div><span>Stage</span><strong>Designed and tested in product</strong></div>
         </section>
 
-        <section className="story shell narrow">
+        <nav className="case-nav shell" aria-label="Checkout case study sections">
+          <span>On this page</span>
+          <a href="#case-problem">Problem</a>
+          <a href="#case-decisions">Decisions</a>
+          <a href="#case-experiment">Experiment</a>
+          <a href="#case-outcome">Outcome</a>
+        </nav>
+
+        <section className="story shell narrow" id="case-problem">
           <div className="story-label">01 / The problem</div>
           <div className="story-content">
             <h3>A free trial still asked for payment details. The page did not adequately explain why.</h3>
@@ -177,7 +185,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="decisions shell narrow">
+        <section className="decisions shell narrow" id="case-decisions">
           <div className="story-label">03 / Content decisions</div>
           <div className="decisions-list">
             {decisions.map((decision) => (
@@ -203,7 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="final-experience shell">
+        <section className="final-experience shell" id="case-experiment">
           <div className="final-heading">
             <div><p className="eyebrow">04 / The experiment</p><h3>Compare the content approaches, not just the screens.</h3></div>
             <p>Current, variant and intervention states made the content change—and its intended effect—reviewable by the wider team.</p>
@@ -234,7 +242,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="outcome shell">
+        <section className="outcome shell" id="case-outcome">
           <div className="outcome-copy">
             <p className="eyebrow light">06 / Outcome &amp; reflection</p>
             <h3>The work made reassurance testable—not decorative.</h3>
