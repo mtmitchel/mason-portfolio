@@ -1,3 +1,5 @@
+export { default } from "./SimpleHome";
+
 const projects = [
   {
     number: "01",
@@ -50,7 +52,7 @@ const decisions = [
   },
 ];
 
-export default function Home() {
+function LegacyHome() {
   return (
     <main>
       <nav className="nav shell" aria-label="Primary navigation">
