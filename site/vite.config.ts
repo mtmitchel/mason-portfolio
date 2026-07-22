@@ -44,6 +44,11 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    build: {
+      // Generated output is moved to Trash before clean builds. Keep Vite from
+      // permanently deleting the directory so builds respect that boundary.
+      emptyOutDir: false,
+    },
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
