@@ -112,8 +112,8 @@ notation makes a change explicit.
   drafts with one fact per line and the 50+-user SSO threshold; the Write
   Pro delta tightens to four lines (`Set terms to never edit` sits on Free);
   the Write Business card is `DeepL Write for Business`; the API Pro card
-  rebuilds from `Monetization/API.png`; the bundle toggle label completes
-  as `Save 16% with annual`. The old-design `Translate Tab` /
+  rebuilds from `Monetization/API.png`; discounts follow the discount
+  decision below. The old-design `Translate Tab` /
   `Bundle Tab` frames are not exhibit bases and their clipped comparison
   tables must never be exported as table evidence; complete tables exist in
   the bundle-era full page and node `12:13311` inside
@@ -137,17 +137,23 @@ notation makes a change explicit.
 - DeepL's current public pricing page uses a cumulative "Everything in X,
   plus" tier pattern. The team's improvement board documents a simplification
   backlog ("Reduce number of features in pricing grid" rated high impact /
-  low effort, "Comparison table change", "Unified pricing page"). Public
-  wording may say the reconstruction "extends the simplification direction
-  the team had prioritized" and may show the current public page as a
-  reference.
-- Placeholder prices (€49.99 across the add-on-era WIP cards) are not real.
-  Cleaned exhibits omit the price rows and captions say prices were unset in
-  the working file. Bundle-era and Translator-grid prices (€0 / €7.49 /
-  €24.99 / €49.99) are real historical prices and stay, labeled historical.
+  low effort, "Comparison table change", "Unified pricing page"). This is
+  internal context that anchors the narrative; none of it enters public copy.
+- **Discount decision (Mason, 2026-07-23):** discounts are price information,
+  never feature bullets. The three bundle cards carry matching `Save 20%` /
+  `Save 40%` / `Save 60%` badges next to the price; no `X% off` line ever
+  appears inside a feature list. The bundle toggle label completes as
+  `Save 16% with annual`.
+- **Price display:** placeholder prices (€49.99 across the add-on-era WIP
+  cards) are not real; cleaned Act 3 exhibits omit the price rows and their
+  captions do not mention prices at all. Act 2 exhibits keep their real
+  period prices (€0 / €7.49 / €24.99 / €49.99 Translator; €15.49 / €30.99 /
+  €53.99 bundles) with no label — the narrative's loose dating carries the
+  timeline; no caption calls a price historical or current.
 - Figma execution instructions live in
-  `private-evidence/figma-pricing-exhibit-brief.md` (Codex, via Mason's
-  logged-in Chrome). Exports land in
+  `private-evidence/figma-pricing-exhibit-brief.md` (single execution owner
+  for all exhibit edits and exports; the older Chrome-profile export queue is
+  retired). Exports land in
   `private-evidence/figma-exports-pricing-2026-07/`; Mason approves them
   before any site integration. Edits and exports go through the authorized
   Figma tooling on the executing machine (Chrome here; the desktop app plus
@@ -155,35 +161,46 @@ notation makes a change explicit.
 - Use American English in public feature copy and preserve the approved
   light-touch revisions recorded in the working Figma file.
 
-#### Outstanding exact export queue
+#### Public presentation model (Mason, 2026-07-23)
 
-Use Mason's logged-in Chrome profile and the historical Monetization source
-file `0JYwhKhRAliGBhyl2kBnEu`. Export product frames at 2x; never export canvas
-headings, notes, selection borders or neighboring frames.
+- Public captions describe content and design decisions only — what a card,
+  list or page communicates and why. No public copy addresses artifact
+  provenance, status or lifecycle. Banned anywhere in `site/` user-visible
+  copy for this case: reconstruction, recreated, historical, internal, WIP,
+  work-in-progress, working file, not shipped, proof, mockup.
+- The case narrative is Mason's first-person professional account of the
+  work, dated loosely in prose ("When Write Pro launched…", "As Voice
+  arrived…"). No forensic dates, no citations, no side-by-side
+  internal-versus-shipped comparisons.
+- `deep-research-report.md` is the accuracy backstop for every dated or
+  factual statement in the narrative; it stays in the repo and none of its
+  citations or archive references enter public copy.
+- The live DeepL pricing page gets exactly one closing line with a link to
+  deepl.com/pro — no comparison screenshot, no causal claim, no "they later
+  adopted" framing.
+- If provenance ever comes up in conversation, that is Mason's verbal layer,
+  not the site's job.
 
-- Pricing source `5:269002`: prefer the clean Translator pricing grid candidate
-  `5:269713` after confirming the selected frame contains no red proposal text.
-  Target filename: `pricing-translator.png`.
-- Pricing source `5:270915`: prefer the clean bundle pricing grid candidate
-  `5:271012` after confirming the selected frame contains no red proposal text.
-  Target filename: `pricing-bundle.png`.
-- Locate the matching standalone Write Pro grid in the same pricing cluster.
-  It must match the selected Translator and bundle frames in viewport,
-  completeness and visual treatment. Target filename: `pricing-write-pro.png`.
-- Feature-awareness source `5:315615`: the exact security-expanded frame is
-  already exported as `feature-awareness-security.png`.
-- Detailed feature-awareness source `5:313906`: export the matching expanded
-  Clarify, file-translation, formality and glossary product frames as
-  `feature-awareness-clarify.png`, `feature-awareness-file-translation.png`,
-  `feature-awareness-formality.png` and `feature-awareness-glossaries.png`.
+#### Exhibit set (three acts, locked 2026-07-23)
 
-Before every export, check all visible copy for American English. Red text in
-these frames is Mason's suggested copy revisions (see the red-text meaning
-note above), not disposable content: for these unedited evidence exports,
-prefer a frame without red styling, but never discard or avoid a frame's
-content merely because a suggestion is in red — escalate to Mason instead. If
-the selected bundle frame uses `organisation`, the authorized light edit is
-`organization`.
+- **Act 1 (2023) — narrative only, no exhibit:** one Translator grid, API
+  priced separately, Write free. Pricing was simple because the product was.
+- **Act 2 (the problem) — four exhibits:** the three existing public grids
+  (`pricing-translator.png`, `pricing-write-pro.png`, `pricing-bundle.png`,
+  originally exported from Monetization file `0JYwhKhRAliGBhyl2kBnEu`
+  nodes `5:269713`, the matching Write Pro grid, and `5:271012`) presented
+  as coexisting grids, plus the cleaned full bundle page
+  (`pricing-bundle-era-clean.png`) as the centerpiece — the same Write Pro
+  block repeated across three tiers, three ways to buy one product.
+- **Act 3 (the simplification) — four exhibits:** the cleaned 1512px add-on
+  era frames — Translator cumulative, Write add-on, Voice, API — one page
+  per product, cumulative tiers, add-ons.
+- **Coda:** one line plus the deepl.com/pro link. Feature awareness stays a
+  secondary section of the same case with its existing image.
+- **Rename decision (pending Phase 2 implementation):** the case moves to
+  `/work/pricing-evolution` with card title
+  `Simplifying pricing across four products`; `/work/write-pro-launch`
+  becomes a redirect stub following the existing retired-route pattern.
 
 ### Account, team and security writing
 
@@ -231,6 +248,6 @@ originals, dimensions, crops, permissions, captions, alt text and relocated
 unused material. Retired source code and assets remain preserved under
 `private-evidence/` and are not deployable.
 
-The site remains local, uncommitted and unpublished. Publication still
-requires Mason's approval, followed by separate authorization for commit,
-push, access changes and deployment.
+The repository is private and synced across Mason's machines; the site is not
+deployed. Publication still requires Mason's approval, followed by separate
+authorization for access changes and deployment.

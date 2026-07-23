@@ -1,8 +1,16 @@
-# Figma work brief: pricing evolution exhibits — REVISION 4
+# Figma work brief: pricing evolution exhibits — REVISION 5
 
-**Created:** 2026-07-23 · **Revision 4:** 2026-07-23 (post peer review)
-**For:** Codex GPT 5.6 Sol, operating Figma through Mason's logged-in Chrome profile
+**Created:** 2026-07-23 · **Revision 4:** 2026-07-23 (post peer review) ·
+**Revision 5:** 2026-07-23 (post round-1 export QA)
+**For:** the executing agent — the Figma desktop app plus MCP server on the
+Windows machine, or Mason's logged-in Chrome profile
 **Authorized by:** Mason, for this task only
+
+**Revision 5 is a repair pass** on the existing rev-4 exhibit frames plus one
+content change (discounts become price-adjacent badges — defect 8). Do not
+rebuild clusters from scratch. Fix every item in the round-1 defect register,
+re-verify each cluster against its full spec, and re-export all five files
+under the new export verification rule.
 
 ## Purpose and philosophy (read first)
 
@@ -32,8 +40,10 @@ be revisited. It is not a preservation doctrine.
 
 ## Hard safety rules
 
-- Work only in Mason's logged-in Chrome profile. Do not use the Figma MCP,
-  any Figma API, plugins, Playwright, or another browser for edits or exports.
+- Work only through Mason's authorized Figma tooling on the executing
+  machine: the Figma desktop app plus its MCP server on the Windows machine,
+  or Mason's logged-in Chrome profile. Never direct Figma REST APIs,
+  unrelated plugins, Playwright, or another browser.
 - All edits happen inside duplicated frames in the `Portfolio exhibits
   2026-07` section. Do not edit source frames in place.
 - Never run page-wide Tidy Up, Auto Layout, auto-distribute, or whole-page
@@ -47,20 +57,54 @@ be revisited. It is not a preservation doctrine.
   checkpoint.
 - Do not screenshot or record anything except the specified frame exports.
 
-## Cleanup of earlier revisions (do first, idempotent)
+## Cleanup and bases (do first, idempotent)
 
-Save a named checkpoint `rev4 pre-cleanup` before deleting anything.
+Save a named checkpoint `rev5 pre-repair` before changing anything.
 
-In `Portfolio exhibits 2026-07`, if present:
+In `Portfolio exhibits 2026-07`:
 
-- Delete **every** exhibit duplicate from earlier revisions (all `EXHIBIT — …`
-  frames and any `BEFORE EXPORT — …` duplicates). The `rev4 pre-cleanup`
-  checkpoint and version history preserve them. Every cluster below starts
-  from a **fresh duplicate of its canonical source node**, so no stale
-  revision-2 or revision-3 edits leak into the new exhibits.
-- In `~/Projects/Mason Portfolio/private-evidence/figma-exports-pricing-2026-07/`,
-  move any stale exports into `superseded/`.
-- Checkpoint: `rev4 cleanup done`.
+- The five rev-4 `EXHIBIT — …` frames are the rev-5 repair bases. Keep them;
+  do not delete or re-duplicate them. If one is missing or structurally
+  broken, recreate only that one as a fresh duplicate of its canonical
+  source node and apply its full cluster spec.
+- Delete any surviving pre-rev-4 duplicates (`BEFORE EXPORT — …` or older
+  `EXHIBIT — …` copies); version history preserves them.
+- In `private-evidence/figma-exports-pricing-2026-07/` in the repository
+  clone on the executing machine, move the five defective round-1 exports
+  into `superseded/`.
+- Checkpoint: `rev5 cleanup done`.
+
+## Round-1 defect register (every item must be fixed and re-verified)
+
+The round-1 exports violated the spec in the ways below, and `export-log.md`
+recorded verification claims the PNGs disprove — see the export verification
+rule. Fix each defect, then re-check the whole cluster against its spec.
+
+1. **`Main Navigation` visible on every subscriber view** (A, B, C, E
+   exports). Rule 11 requires it hidden; only the product tab bar stays.
+2. **Dark border bands** — black columns or edge slivers on all five
+   exports. Find the cause (frame background, stray rectangles behind the
+   frame, export bounds larger than the frame, clip settings) and remove
+   it. Every exported edge must be clean page background.
+3. **Cluster A, Advanced card:** the merged glossary line
+   `2,000 shared glossaries` is missing — the merge deleted both rows
+   instead of producing one. Restore the single line, styled per rule 5.
+4. **Cluster B, Write Pro card:** the header `Everything in Free, plus:` is
+   missing. Insert it per rule 6, directly above the first feature line.
+5. **Cluster D, Ultimate + Write Pro card:** the delta list is missing
+   entirely. Rebuild it per the Cluster D spec (header
+   `Everything in Advanced + Write Pro, plus:` and its feature lines).
+6. **Cluster D, Ultimate and Enterprise cards:** headers are positioned
+   wrongly. Each header sits directly above the first feature line inside
+   the list block, aligned with its sibling rows (rules 6 and 13).
+7. **Cluster D comparison table:** red text remains. Recolor every red
+   layer per the comparison-table spec.
+8. **Discount decision (Mason, 2026-07-23):** discounts are price
+   information, never feature bullets. Delete every `X% off DeepL Write
+   Pro` list line and express all three bundle discounts as matching
+   `Save 20%` / `Save 40%` / `Save 60%` badges next to the price — see the
+   Discount badges block in Cluster D. (This also removes the round-1
+   discount-line wrapping defect.)
 
 ## File and node inventory
 
@@ -96,7 +140,8 @@ annual-discount figure — import no other facts or thresholds from them.
 
 Before mutating anything, record in the completion log the node IDs of: the
 Cluster D base inside `Pricing Pages`, both `Pro on Voice` frames (which is
-Voice, which is API), and every fresh exhibit duplicate.
+Voice, which is API), and every exhibit frame (carry them forward from the
+round-1 log where already recorded and correct).
 
 ## System-wide content rules (all clusters)
 
@@ -154,9 +199,9 @@ are the visible evidence of Mason's craft:
 
 ## Cluster D — Bundle-era page, cleaned (the "beginning")
 
-Base: duplicate of the bundle-era full page in `Pricing Pages`, renamed
-`EXHIBIT — Bundle era pricing (refined)`.
-Checkpoints: `rev4 cluster D start` / `rev4 cluster D done`.
+Base: the existing rev-4 `EXHIBIT — Bundle era pricing (refined)` frame
+(originally duplicated from the bundle-era full page in `Pricing Pages`).
+Checkpoints: `rev5 cluster D start` / `rev5 cluster D done`.
 
 This page has no `Main Navigation` layer — nothing to hide. Keep the full
 page: hero, toggle bar, cards, logo strip, quotes, "DeepL Pro for large
@@ -175,6 +220,14 @@ FAQ, footer.
 Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
 "Let's talk"), CTAs (see Ultimate fix below), Recommended badge.
 
+**Discount badges (rev 5):** the `Save 20%` badge on the Starter card's
+`DeepL Write Pro` group is the style template. For each of the three bundle
+cards, reuse its existing `Save X%` badge where the group header has one;
+otherwise duplicate the Starter badge and edit the text. Final state: three
+matching badges — `Save 20%` (Starter), `Save 40%` (Advanced), `Save 60%`
+(Ultimate) — placed identically on all three cards, adjacent to the price
+block. Discounts never appear inside a feature list.
+
 **Starter + Write Pro**
 - Audience `Up to 5 users`: keep.
 - Keep the two product groups. Group 1 `DeepL Pro Starter`, resolve red lines
@@ -184,11 +237,9 @@ Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
   - **5** file translations per user/month
   - Translate files up to **10 MB**
   - **1 glossary** with unlimited entries
-- Group 2 `DeepL Write Pro` (delete its `Save 20%` badge — the discount
-  becomes a list line so all three tiers express it identically). Replace
-  the six lines with these five (dedupe data security — it is already in
-  group 1 — and tighten):
-  - **20% off** DeepL Write Pro
+- Group 2 `DeepL Write Pro` (its `Save 20%` badge moves next to the price —
+  see Discount badges above). Replace the six lines with these four (dedupe
+  data security — it is already in group 1 — and tighten):
   - **Unlimited** text improvements
   - **Unlimited** alternatives
   - **All** writing styles and tones
@@ -198,9 +249,9 @@ Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
 - Audience: resolve red `For individuals and teams` to black, wording
   unchanged.
 - Delete both group lists and their group headers ("DeepL Pro Advanced",
-  "DeepL Write Pro" + Save 40% badge). Replace with header
+  "DeepL Write Pro"; move its `Save 40%` badge next to the price — see
+  Discount badges above). Replace with header
   `Everything in Starter + Write Pro, plus:` and this single list:
-  - **40% off** DeepL Write Pro
   - **Unlimited** text translation
   - **20** file translations per user/month
   - Translate files up to **20 MB**
@@ -212,8 +263,8 @@ Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
 - Audience: replace the duplicated red `For individuals and teams` with
   `For teams and businesses` (black). Log as a reconstruction decision.
 - Replace both groups with header `Everything in Advanced + Write Pro, plus:`
-  and:
-  - **60% off** DeepL Write Pro
+  and (the `Save 60%` badge sits next to the price — see Discount badges
+  above):
   - **100** file translations per user/month
   - Translate files up to **30 MB**
 - CTA stays `Buy now`.
@@ -245,9 +296,9 @@ Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
 
 ## Cluster A — Translator cumulative (rebuilt on `Pro on Translate`)
 
-Base: fresh duplicate of `13:17289`, renamed
-`EXHIBIT — Translator cumulative (refined)`.
-Checkpoints: `rev4 cluster A start` / `rev4 cluster A done`.
+Base: the existing rev-4 `EXHIBIT — Translator cumulative (refined)` frame
+(originally duplicated from `13:17289`).
+Checkpoints: `rev5 cluster A start` / `rev5 cluster A done`.
 
 Keep: product tab bar, hero, chips, blue account banner, currency selector,
 card titles, Recommended badge, all four descriptions. Delete all four
@@ -283,9 +334,9 @@ Delete every feature row except:
 
 ## Cluster B — Write add-on page, cleaned
 
-Base: fresh duplicate of `13:17485`, renamed
-`EXHIBIT — Write add-on (refined)`.
-Checkpoints: `rev4 cluster B start` / `rev4 cluster B done`.
+Base: the existing rev-4 `EXHIBIT — Write add-on (refined)` frame
+(originally duplicated from `13:17485`).
+Checkpoints: `rev5 cluster B start` / `rev5 cluster B done`.
 
 Keep: hero, chips, product tab bar, account banner, currency selector,
 titles, Recommended badge. Delete all three placeholder price blocks. Apply
@@ -333,9 +384,9 @@ Keep the polished wording `Set terms to never edit`.
 
 ## Cluster C — Voice page, cleaned
 
-Base: fresh duplicate of the true Voice frame (log its node ID), renamed
-`EXHIBIT — Voice add-on (refined)`.
-Checkpoints: `rev4 cluster C start` / `rev4 cluster C done`.
+Base: the existing rev-4 `EXHIBIT — Voice add-on (refined)` frame
+(originally duplicated from the true Voice frame; log its node ID).
+Checkpoints: `rev5 cluster C start` / `rev5 cluster C done`.
 
 Keep: hero, chips, tab bar, card illustrations, titles, descriptions,
 Contact Sales buttons, Play video links. Delete both placeholder price
@@ -366,10 +417,10 @@ SSO threshold from the Copy island is restored):
 
 ## Cluster E — API page, light touch (the end-state fourth tab)
 
-Base: duplicate of the API-content frame (whichever of `13:17681` /
-`13:17852` shows "Scale multilingual workflows with the DeepL API"), renamed
-`EXHIBIT — API pricing (refined)`.
-Checkpoints: `rev4 cluster E start` / `rev4 cluster E done`.
+Base: the existing rev-4 `EXHIBIT — API pricing (refined)` frame (originally
+duplicated from the API-content frame — whichever of `13:17681` / `13:17852`
+shows "Scale multilingual workflows with the DeepL API").
+Checkpoints: `rev5 cluster E start` / `rev5 cluster E done`.
 
 Keep: hero, the Translator API / Write API selector, chips, banner, titles,
 Recommended badge, CTAs (Sign up for free / Buy now / Contact Sales). Delete
@@ -400,11 +451,27 @@ placeholder price blocks. Apply nav + bottom-crop rules.
 
 ## Exports
 
-Destination:
-`/home/mason/Projects/Mason Portfolio/private-evidence/figma-exports-pricing-2026-07/`
+Destination: `private-evidence/figma-exports-pricing-2026-07/` in the
+repository clone on the executing machine.
 
 PNG at **2x**, exact frame node only, no canvas artifacts. Verify pixel size
 = 2x frame size.
+
+**Export verification rule (rev 5):** the round-1 log recorded verification
+claims the PNGs disprove. No claim goes into the log without opening the
+exported PNG itself. For every export, inspect the actual file at readable
+zoom and record pass/fail per check:
+
+- Top edge: no `Main Navigation` on A / B / C / E; product tab bar present.
+- All four edges: no dark bands, columns, or slivers; clean page background.
+- Every card: headers present and correctly positioned, feature lists
+  complete per spec, no red text, no lorem ipsum, no placeholder prices.
+- Cluster D additionally: comparison table fully recolored, table and cards
+  use identical plan names and CTAs, FAQ placeholders gone, three matching
+  `Save X%` badges next to the prices.
+
+A failed check blocks that export from being listed as complete; fix the
+frame and re-export instead of logging the failure as done.
 
 Before-evidence: **already covered by Mason's own exports** in
 `~/Projects/Mason Portfolio/Monetization/` and `figma screenshots/` — do not
@@ -433,9 +500,10 @@ Create or update `export-log.md` in the destination folder:
 - Reconstruction decisions applied (Ultimate audience rows, merged glossary
   lines, Voice list rebuild with split lines and SSO threshold, Write Pro
   delta tightened to four lines with `Set terms to never edit` on Free,
-  `DeepL Write for Business` rename, uniform discount lines, `Save 16%`
-  fill-in with its two image sources, FAQ placeholder removal, API Pro
-  rebuild from `Monetization/API.png`).
+  `DeepL Write for Business` rename, `Save 20% / 40% / 60%` price-adjacent
+  badges with no discount feature lines, `Save 16%` fill-in with its two
+  image sources, FAQ placeholder removal, API Pro rebuild from
+  `Monetization/API.png`).
 - Checkpoint names; exported files with pixel dimensions and source node IDs;
   override-vs-detach decisions; anything not completed exactly as specified.
 
