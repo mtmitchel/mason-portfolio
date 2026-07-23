@@ -6,9 +6,13 @@ recovery, or an explicitly authorized Figma edit. The repository-root
 
 ## Access and source safety
 
-- Use Mason's logged-in Chrome profile through the Chrome-control workflow.
-- Never use Figma MCP, `use_figma`, an API, plugin, Playwright, another browser,
-  or programmatic canvas manipulation.
+- Use Mason's logged-in Chrome profile through the Chrome-control workflow when
+  accessing Figma directly.
+- Non-official Figma MCP servers and their required local desktop or plugin
+  bridges are allowed. Never use Figma's official native MCP server,
+  `use_figma`, a direct API, an unrelated plugin, Playwright, or another browser.
+- MCP access does not authorize a Figma write. The same read-only default and
+  explicit edit approval below apply to every permitted access route.
 - Keep one Figma tab open. Work on one file and one bounded cluster at a time.
 - Restored source files are immutable provenance archives. Do not rename pages,
   move nodes, change visibility, delete, annotate, or reorganize them.

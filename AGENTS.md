@@ -11,7 +11,9 @@ nested `AGENTS.md` owns implementation details inside its subtree.
 - `site/` is the versioned portfolio application. Read `site/AGENTS.md` before
   changing its code, copy, routes, tests, or public assets.
 - `private-evidence/`, `claim-review.md`, `archive/`, `tmp/`, and the root CV are
-  local working material and are ignored by Git. Never publish or stage them.
+  local working material and are ignored by Git by default. Never publish or
+  stage them except for the exact private-repository cross-machine allowlist in
+  `.gitignore`; allowlisted items must never enter public routes or assets.
 - `private-evidence/deepl-portfolio-current-direction.md` owns the current DeepL
   portfolio selection, metric, writing, and layout decisions. Do not duplicate
   changing task state in this file.
@@ -72,8 +74,11 @@ selected project, claim, frame, or acceptance outcome.
 ## Protected phases and artifacts
 
 - Figma is read-only unless Mason explicitly authorizes an edit in the current
-  task. All Figma access uses Mason's logged-in Chrome profile; never use Figma
-  MCP, APIs, plugins, Playwright, another browser, or programmatic canvas edits.
+  task. Use Mason's logged-in Chrome profile when accessing Figma directly.
+  Non-official Figma MCP servers and their required local desktop or plugin
+  bridges are allowed, but Figma's official native MCP server is prohibited.
+  Never use direct Figma APIs, unrelated plugins, Playwright, or another
+  browser. MCP access does not authorize a Figma write.
 - Do not create screenshots, recordings, browser captures, visual diffs, PDFs,
   or other visual QA artifacts unless Mason requests that exact artifact.
 - Local inspection, requested repository edits, and focused verification are

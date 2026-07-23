@@ -1,10 +1,19 @@
 # Local private evidence and historical working material
-/private-evidence/
+/private-evidence/*
+# Private-repository transfer bundle for the Windows Figwright task
+!/private-evidence/figma-pricing-exhibit-brief.md
+!/private-evidence/figma-exports-pricing-2026-07/
+!/private-evidence/figma-exports-pricing-2026-07/**
 /archive/
 /tmp/
 /claim-review.md
 /mason cv.pdf
-/figma screenshots/
+/figma screenshots/*
+# Exact reference images required by the Windows Figwright task
+!/figma screenshots/1440px.png
+!/figma screenshots/1920px.png
+!/figma screenshots/Pro on Write.png
+!/figma screenshots/Pro on Voice (2).png
 
 # Workstation noise
 .DS_Store
