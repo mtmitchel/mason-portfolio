@@ -27,6 +27,9 @@ public site publication and deployment.
 - Restored AI-content-generation evidence for the report-to-article adaptation.
 - Private asset-manifest records for selected assets, derivatives, preserved
   originals and relocated unused material.
+- Added a private seven-file 2x pricing evidence set covering the untouched
+  bundle, Write and Voice states, the bundle comparison table, and the finished
+  Translator, Write and Voice exhibits.
 - Rendered-HTML coverage for canonical routes, one-hop redirects, exact source
   wording, quotation semantics, assets, row-major order, responsive image sizes
   and computed WCAG contrast.
@@ -45,6 +48,9 @@ public site publication and deployment.
 - Updated the existing Translator pricing rows to the current pricing-page
   wording where the same features still exist, without adding plans, rows or
   features; the historical prices and comparison structure remain intact.
+- Reconstructed a duplicate of the historical Translator grid as cumulative
+  tier deltas, removed placeholder prices from duplicate Write and Voice pages,
+  and resolved their proposal copy while preserving the original Figma frames.
 - Rebuilt the homepage card layout as a row-major three-, two- and one-column
   grid so DOM, visual, keyboard and screen-reader order match.
 - Kept the route-backed Selected work/Writing switcher as quiet text navigation;
@@ -95,6 +101,8 @@ public site publication and deployment.
 
 - The approved feature-awareness copy edits and exact frame export were made in
   Mason's logged-in Chrome/Figma session. No other Figma changes were made.
+- The three new pricing exhibits remain private evidence and are not wired into
+  deployable site routes or public assets.
 - The GitHub repository is private. A commit or push is a source-control
   checkpoint only; it does not publish or deploy the site.
 - No public site publication, deployment or access change has occurred.
