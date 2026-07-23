@@ -2,7 +2,7 @@
 
 **Updated:** 2026-07-23
 
-**Status:** Private current-decision owner
+**Status:** Current-decision owner
 
 This file records the current portfolio selection, route, evidence and claim
 decisions. Current disk evidence and the private asset manifest remain the
@@ -62,7 +62,7 @@ notation makes a change explicit.
 - The 12% paid-conversion lift and seven-figure ARR uplift belong to the whole
   experiment wave.
 - The public Write comparison uses the cleaner illustrated Free and Translator
-  Pro pair. The placeholder-grade full surfaces remain preserved privately.
+  Pro pair. The placeholder-grade full surfaces remain preserved.
 - `{5}`, `{1}` and `{16}` in the document frames are design-file variables that
   are replaced with user-specific values; captions must say so.
 
@@ -81,9 +81,8 @@ notation makes a change explicit.
   bundle-era "beginning" — are refined in duplicated frames: red text
   resolved, lorem ipsum replaced, placeholder prices removed, copy tightened,
   consistency fixed. Exhibits need not be 100% faithful to WIP states; they
-  must tell the true transition story and look professional. Raw WIP exports
-  stay private. Duplicates-only editing is working hygiene, not a
-  preservation rule. The repo-wide preservation, no-invention and
+  must tell the true transition story and look professional. Duplicates-only
+  editing is working hygiene, not a preservation rule. The repo-wide preservation, no-invention and
   claim-ceiling rules were removed on 2026-07-23 at Mason's direction; do
   not reintroduce them.
 - **Narrative spine (evidence-grounded):** the bundle cards repeat an
@@ -123,7 +122,7 @@ notation makes a change explicit.
   originated in the main Monetization Figma file and were moved by Mason into
   the Pricing Grid file (`fdxAxs14RUKijGsznWusF3`), section `Pricing Pages`.
   Mason's own 2x exports live in `Monetization/` at the repository root
-  (git-ignored): `Bundles@2x.png` (3024x16883, complete bundle grid with the
+  (tracked): `Bundles@2x.png` (3024x16883, complete bundle grid with the
   "Add DeepL Write Pro" toggle, complete comparison table, real bundle prices
   €15.49 / €30.99 / €53.99), `Translator@2x.png` (3024x15679, complete
   transition-era Translator page and comparison table), plus 1x `Write.png`,
@@ -142,8 +141,6 @@ notation makes a change explicit.
   wording may say the reconstruction "extends the simplification direction
   the team had prioritized" and may show the current public page as a
   reference.
-- The improvement board (exported as `figma screenshots/Section
-  2085662595.*`) reads as internal tickets and stays private.
 - Placeholder prices (€49.99 across the add-on-era WIP cards) are not real.
   Cleaned exhibits omit the price rows and captions say prices were unset in
   the working file. Bundle-era and Translator-grid prices (€0 / €7.49 /
@@ -152,8 +149,9 @@ notation makes a change explicit.
   `private-evidence/figma-pricing-exhibit-brief.md` (Codex, via Mason's
   logged-in Chrome). Exports land in
   `private-evidence/figma-exports-pricing-2026-07/`; Mason approves them
-  before any site integration. The Figma MCP server is limited to read-only
-  inspection for this task; edits and exports go through Chrome.
+  before any site integration. Edits and exports go through the authorized
+  Figma tooling on the executing machine (Chrome here; the desktop app plus
+  MCP on the Windows machine).
 - Use American English in public feature copy and preserve the approved
   light-touch revisions recorded in the working Figma file.
 
@@ -193,11 +191,9 @@ the selected bundle frame uses `organisation`, the authorized light edit is
 - Keep account security and team administration together as a focused writing
   collection. Bulk deletion is one team-administration section inside it.
 - The selected security sequence shows code entry, an unsuccessful-code state,
-  reset acknowledgement and restored protection. Do not expose authenticator
-  secrets, recovery addresses, customer identifiers or internal URLs.
+  reset acknowledgement and restored protection.
 - The bulk-deletion example uses fictional `domain.com` accounts and only the
-  documented confirmation and result crops. The full interaction remains
-  private; the contradictory celebratory sentence stays out of public use.
+  documented confirmation and result crops.
 
 ### Subscription checkout
 
@@ -230,12 +226,11 @@ the selected bundle frame uses `organisation`, the authorized light edit is
 
 ## Evidence and publication boundary
 
-`private-evidence/portfolio-asset-manifest.json` records public paths, private
+`private-evidence/portfolio-asset-manifest.json` records public paths, source
 originals, dimensions, crops, permissions, captions, alt text and relocated
-unused material. Retired source code and assets remain preserved under ignored
-private evidence and are not deployable.
+unused material. Retired source code and assets remain preserved under
+`private-evidence/` and are not deployable.
 
-The site remains local, uncommitted and unpublished.
-Publication still requires Mason's factual, confidentiality, employer-rights,
-wording and redaction approval, followed by separate authorization for commit,
+The site remains local, uncommitted and unpublished. Publication still
+requires Mason's approval, followed by separate authorization for commit,
 push, access changes and deployment.

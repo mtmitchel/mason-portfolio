@@ -26,11 +26,10 @@ recovery, or an explicitly authorized Figma edit. The repository-root
   colors; never discard content merely because it is red.
 - Inventory the selected source cluster before moving or classifying it. Record
   its source file, page and node URL, theme/lifecycle evidence, editability,
-  destination, duplicate relationship, portfolio value, evidence links,
-  confidentiality risk, and export suitability.
+  destination, duplicate relationship, portfolio value, evidence links, and
+  export suitability.
 - Give each cluster one disposition: editable canonical work, editable variant,
-  link-only duplicate, reference-only evidence, deferred/ambiguous evidence, or
-  private-only evidence.
+  link-only duplicate, reference-only evidence, or deferred/ambiguous evidence.
 - Do not delete a suspected duplicate until source, destination, visual
   equivalence, editability, and intended disposition are recorded.
 
@@ -80,7 +79,7 @@ Never guess what Figma saved.
 - Obtain a fresh export from the exact requested frame or cluster. Reusing an
   older asset or similar frame does not implement a requested visual change.
 - Export the product frame itself at 2x or 3x, not the canvas. Exclude headings,
-  notes, comments, selection borders, neighboring frames, and private data.
+  notes, comments, selection borders, and neighboring frames.
 - Keep portfolio annotations outside the exportable frame and use matching
   viewport, scale, and aspect ratio for comparisons.
 - Exhibits presented as a set must share one design generation, viewport, and
@@ -93,7 +92,7 @@ Never guess what Figma saved.
 ## Completion
 
 Do not claim completion while a required provenance, editability, mapping,
-navigation, load, save-state, confidentiality, or export check is unverified.
+navigation, load, save-state, or export check is unverified.
 Record the exact source/destination URLs, disposition, evidence relationship,
 checkpoint or export result, and any unresolved evidence in the existing
 private owner for the task.

@@ -1,0 +1,825 @@
+The state of
+translation and
+localization in
+2023-2024
+            Insights,
+            challenges, and
+            opportunities
+Content                                                                                           1
+
+
+
+
+                                 Content
+                                 2
+
+       Executive summary and key findings
+
+
+
+                                 3
+
+       Introduction
+
+
+
+                                 4
+
+       Challenges in localization projects
+
+
+
+                                 5
+
+
+      98% use machine translation; glossaries boost
+                                           effectiveness
+
+
+
+                                 7
+
+       The rise of AI in content generation
+
+
+
+                                 8
+
+
+
+
+
+   How two global companies are tackling localization with
+                                           machine translatio
+
+                                               HubSpo
+                                               Phrase
+
+
+
+                                 11
+
+      Selecting and working with machine translation vendors
+
+
+
+                                 12
+
+      Human-in-the-loop localization is here to stay
+
+
+
+                                 13
+
+
+     Practical recommendations for improving translation and
+                                           localization workflows
+
+
+
+                                 14
+
+      Looking ahead
+
+
+
+                                 15
+       Conclusion
+
+
+
+
+The state of translation and localization in 2023-2024
+Executive summary and key findings                                                                           2
+
+
+
+
+Executive summary
+This report analyzes a survey of global marketers handling translation and
+localization within their organizations. We will explore the return on
+investment (ROI) from AI-powered writing tools and machine translation. You
+will also gain insights into best practices for the accurate translation of
+industry-specific terms and integrating technology solutions.
+
+
+
+
+Key findings
+
+Across all respondents:
+
+
+
+
+      75%
+                                                     77%
+
+      agree localized content significantly                    use AI-assisted writing tools and 98%
+      boosts customer engagement.                              are using machine translation,
+                                                               highlighting a trend towards AI reliance.
+
+
+
+
+      82%
+                                                     81%
+
+      express concerns about                                   face integration difficulties with existing
+      mistranslation of industry-specific                      technology stacks, signaling room for
+      jargon, which they address through                       improvement in system compatibility,
+      custom machine translation models or                     despite the evident benefits of machine
+      vendor-provided glossaries.                              translation.
+
+
+
+
+      96%
+
+      of respondents report positive ROI from
+      localization efforts, suggesting the
+      significant value of these initiatives.
+
+
+
+
+The state of translation and localization in 2023-2024
+Introduction                                                                                                       3
+
+
+
+
+Introduction
+For businesses that operate globally, creating multilingual content—from
+websites to email campaigns, social media posts, and more—is necessary for
+connecting with global audiences. It’s also essential for driving growth. 
+
+
+
+In a recent survey conducted by DeepL and Regina Corso Consulting, an
+overwhelming 96% of respondents reported a positive return on investment
+(ROI) from their translation or localization projects, with a notable 65%
+reporting an ROI of 3x or greater.
+
+     The data is clear: translating and localizing content is a sound
+     investment. And to maximize the ROI of translation and localization,
+     marketers across the world are increasingly working with machine
+     translation and AI-powered writing tools.
+
+
+This white paper examines the role of machine translation in global marketing,
+along with its challenges and opportunities. These insights are distilled from
+the aforementioned “Machine Translations Survey Report,” conducted in 2023. 
+
+
+
+The survey was distributed to marketers in France, Germany, Japan, and the
+United States who are responsible for the translation and/or localization of
+their company’s content, hold a director-level position or higher, and work in
+organizations with 100 or more employees. [1]
+
+
+
+The purpose of the survey was to learn more about how these marketers
+approach translation and localization at their companies, whether they use
+machine translation and AI-writing tools in their workflows, and the challenges
+they most commonly encounter.
+
+
+
+
+[1] While interpreting the charts and tables presented in this report, percentages may not add up to 100% due to
+rounding or multiple response options. An "*" indicates a response rate of less than 0.5%. Unless otherwise
+specified, the base for all slides is the 415 respondents. Any differences highlighted between target industries
+(retail, e-commerce, and media/entertainment) and other industries are indicative of the varied localization
+practices and experiences across sectors.
+
+
+
+
+The state of translation and localization in 2023-2024
+Challenges in localization projects                                                                   4
+
+
+
+
+Challenges in localization projects:
+From headcount to tech stack
+Despite the apparent benefits, the localization process is not without its
+hurdles. 
+
+
+
+The biggest frustrations cited by marketers include:
+
+
+
+
+                                                                         15%
+
+                                                                         SEO for translated content
+
+
+
+                                                                         16%
+
+                                                                         number of people involved
+                                                                         in the end-to-end process
+
+
+                                                                         18%
+
+                                                                         technical challenges in
+                                                                         pushing content to website
+
+
+                                                                         22%
+
+                                                                         working with tech staff
+
+
+
+
+A significant portion of these respondents (35%) work in companies with over
+1,000 employees, suggesting that these challenges in localization projects are
+particularly relevant for larger organizations with expansive international
+operations.
+
+
+
+Evidently, organizations incorporating translation into their workflows need to
+find ways to reduce the headcount involved in the content translation pipeline.
+
+
+     Key steps could include increasing their own autonomy and
+     removing the reliance on more technical staff to create more
+     streamlined and efficient localization processes.
+
+
+
+
+The state of translation and localization in 2023-2024
+98% use machine translation; glossaries boost effectiveness                                                 5
+
+
+
+
+98% use machine translation;
+glossaries boost effectiveness
+With the increasing complexity and scale of localization projects, it’s no surprise
+that machine translation has become an essential tool in localization
+workflows. 
+
+
+
+As per our survey:
+
+
+
+
+                                                              98%
+
+                                                              of respondents use some form of machine
+                                                              translation in their localization workflow.
+
+
+
+
+                                                              64%
+
+                                                              process most of their monthly content
+                                                              using machine translation.
+
+
+
+
+The range of job titles among respondents was broad, with the largest groups
+being Content Marketers (20%), Localization Managers (15%), and Product
+Managers (10%).
+
+    This data underscores that the use of machine translation in
+    localization workflows is widespread across different roles and
+    departments within organizations.
+
+
+
+
+The state of translation and localization in 2023-2024
+      98% use machine translation; glossaries boost effectiveness                         6
+
+
+
+
+      Though machine translation brings speed and accuracy benefits and frees up
+
+      human reviewers for more meaningful tasks, there are valid concerns about its
+
+      ability to translate industry-specific jargon.
+
+
+
+
+
+      As per the findings, 82% of respondents report that product, company, or
+
+      industry jargon is not translated accurately when only using machine
+
+      translation. Yet 61% handle such vocabulary by training their own custom
+
+      machine translation models (33%) or using a glossary provided by a machine
+
+      translation vendor (28%).
+
+
+
+           When a custom model is employed, human reviewers spend an
+
+           average of 20.36 hours on a typical machine translation job. In
+
+           contrast, using a glossary reduces this time to an average of 14.37
+
+           hours.
+
+
+
+
+      These responses illustrate that manual revisions, although time-consuming, are
+
+      often necessary for accurate translations. Tools like glossaries can considerably
+
+      reduce this manual effort, especially when it comes to translating technical
+
+      jargon or domain-specific words.
+
+
+
+
+The state of translation and localization in 2023-2024
+The rise of AI in content generation                                                                     7
+
+
+
+
+The rise of AI in content generation
+AI's burgeoning role in content generation is an exciting trend that is reshaping
+the localization process. 
+
+
+
+
+
+As per the survey:
+
+
+
+
+          77%
+                                                                         98%
+
+          of respondents are using                                  believe that a significant portion
+          AI-assisted writing to                                     of content will be AI-generated
+          generate content.                                                    in the next 2-3 years.
+
+
+
+
+Among respondents, 43% have been working in their current role for more
+than 5 years. This could suggest that experienced professionals who have
+witnessed AI's evolution firsthand are leading the adoption of AI in content
+generation.
+
+
+     Generative AI isn't going away anytime soon. Rather than being
+     seen as a gimmick or tech demo, marketers are already using
+     commercial AI tools to augment their workflows. This area is set to
+     expand even more over the coming years, and businesses must
+     stay informed to keep up with these advances.
+
+
+
+
+The state of translation and localization in 2023-2024
+How two global companies are tackling localization with machine translation        8
+
+
+
+
+How two global companies are
+tackling localization with machine
+translation
+     HubSpot
+
+HubSpot, a leading provider of customer relationship management (CRM)
+tools, serves over 175,000 customers in 100 countries worldwide. The
+company's success is thanks in part to its innovative use of technology such
+as AI-powered machine translation. This strategy has made the
+internationalization and localization of HubSpot's products and content a
+success, empowering the company to meet the unique demands of its global
+customer base.
+
+      The challenge
+
+      HubSpot owns and manages over 75,000 web assets like landing pages,
+      blog posts, and more. These are frequently updated in real time. The
+      challenge lies in overseeing these assets and providing correct and prompt
+      localization to serve their diverse global customers.
+
+
+
+      The solution
+
+      To tackle this, HubSpot rolled out Mova, an internally developed system
+      that acts as a central repository and combines functionalities of various
+      tools like Slack, Jira, and Workato. Mova enables real-time monitoring of
+      web assets, which can be sorted based on criteria like when they were
+      updated, created, or published. This makes it easy for the company to
+      quickly identify the assets that need localization.
+
+
+
+      Additionally, Mova integrates machine translation services such as
+      DeepL and ModernMT for instant translation of content. Assets can be
+      translated one at a time or set up to automatically translate and update
+      the content when changes are made in the original language.
+
+
+
+
+The state of translation and localization in 2023-2024
+How two global companies are tackling localization with machine translation       9
+
+
+
+
+Having technological literacy and the capability to come up with
+technological solutions for the challenges that you and your
+stakeholders face is pivotal for internal localization teams. You will
+also need the capability to implement these solutions, but that
+doesn’t necessarily mean you’ll need dedicated engineering
+headcount. There are other options like outsourcing or low-code/
+no-code solutions, depending on your needs.”
+
+              Dierk Runne
+              Senior Manager of Localization and Systems at HubSpot
+
+
+
+      The outcome
+
+      Mova allows the HubSpot team to scale their localization efforts and
+      publish multilingual content quickly. This efficient and accurate
+      automation reduces the workload for their team.
+
+
+Additionally, HubSpot can adjust its localization workflows based on how well
+assets are performing. For example, if there’s a popular blog post, it can be
+assigned a workflow that includes human review. Alternatively, if there’s an
+asset that isn’t viewed as often, it can be designated for machine translation.
+This optimizes their team’s resources and ensures high-quality translations
+where it's most important.
+
+
+     Phrase
+
+
+
+Phrase, formerly known as Memsource, is a leading language localization and
+translation platform that has effectively utilized machine translation and
+translation management systems to establish a seamless translation process.
+The company champions quality assurance, deploying both external and
+internal reviewers to ensure accurate translations.
+
+     The challenge
+
+     Global organizations often face significant hurdles in translation and
+     localization because there are so many moving parts in the process. These
+     include the need for system integration, maintenance of translation
+     consistency, assurance of cost-efficiency, and adaptation to varied
+     language pairs.
+
+
+
+
+The state of translation and localization in 2023-2024
+How two global companies are tackling localization with machine translation          10
+
+
+
+
+       The solution
+
+       Phrase addressed these challenges with its product suite, designed to
+       simplify localization and translation. The suite includes Phrase
+       Translate, an AI-driven tool that allows users to connect to multiple
+       machine translation (MT) providers simultaneously.
+
+
+
+       It continually measures each MT provider's performance, selecting the
+       most appropriate one based on the content domain and language pair
+       being translated. It ensures the right terminology is used across all
+       translations, enhancing the consistency and clarity of translated content.
+
+       Additionally, Phrase supports seamless workflow through integration
+       with over 50 applications—such as HubSpot, WordPress, and Figma—and
+       offers an automated pipeline for content translation.
+
+
+
+       The outcome
+
+       Phrase's integration of AI and automation into translation and
+       localization demonstrates how these technologies can simplify complex
+       tasks. By intelligently choosing the best MT providers and allowing for
+       seamless integration with external systems, Phrase streamlines the
+       localization workflow for global companies.
+
+
+
+
+Generally speaking, because of the features we provide—
+including terminology integration and making sure the right
+machine translator is available when needed—we’ve seen
+customers achieve an additional 55% in cost savings” 
+
+
+              Tobias Scherf
+              Director of Solutions at Phrase
+
+
+
+
+The state of translation and localization in 2023-2024
+Selecting and working with machine translation vendors                                                    11
+
+
+
+
+Selecting and working with machine
+translation vendors
+Choosing the right machine translation vendor is a crucial decision that can
+significantly impact an organization's localization workflow. The survey results
+show that the ability to handle XML, HTML, and other document formats is the
+most important factor (23%) when selecting a machine translation vendor. This
+is followed closely by data security and whether an API is offered (both 20%).
+
+
+
+Interestingly, most respondents (80%) work in the technology industry. This
+could suggest that the prioritization of factors such as data security, API
+offerings, and document format compatibility might be heavily influenced by
+the specific needs of tech companies.
+
+
+
+Looking at the methods marketers typically use to work with
+machine translation vendors, the data reveals that:
+
+
+
+       44%
+
+       work with a technology
+                                                         33%
+
+                                                         partner with an agency
+                                                                                   23%
+
+                                                                                   directly contract
+       partner that uses the                             that uses the machine     with the machine
+       machine translation vendor.                       translation vendor.       translation vendor.
+
+
+
+
+                                                                                   80%
+
+                                                                                   are employed in the
+                                                                                   technology industry.
+
+
+
+
+   These findings show that most marketers aren't going at it alone—
+   they're supported by an ecosystem of technologists and advisers
+   who strive to make the localization process simpler.
+
+
+
+
+The state of translation and localization in 2023-2024
+Human-in-the-loop localization is here to stay                                                 12
+
+
+
+
+Human-in-the-loop localization is
+here to stay
+Even as machine translation tools advance, human review remains an integral
+part of the localization workflow. 
+
+
+
+
+According to our survey:
+
+
+
+
+                   99%
+                                     85%
+
+                   of respondents will follow               think machine-translated content
+                   up machine translation with              needs editing for accuracy,
+                   human review.                            nuance, and creative tone.
+
+
+
+
+A significant portion of respondents (40%) handle more than 1 million words
+per month. This underscores the importance of the human review process in
+ensuring the quality of high-volume translation projects.
+
+
+
+    The message is clear: machine translation isn't 100% perfect, and
+    marketers are incorporating human review into their localization
+    workflows to polish translations and ensure perfection.
+
+
+
+
+The state of translation and localization in 2023-2024
+Practical recommendations for improving translation and localization workflows                                             13
+
+
+
+
+Practical recommendations for
+improving translation and localization
+workflows
+Based on the insights from this report, here are a few actionable suggestions
+for organizations looking to transform their translation and localization efforts:
+
+1. Invest in machine translation tools
+
+Given the proven ROI of translation and localization
+projects, companies should consider allocating
+more resources towards machine translation tools.
+
+
+
+2. Focus on human review
+
+Machine translation is a powerful tool, but it's not                                                                   1
+perfect. Human reviewers play a critical role in
+ensuring the quality of translated content.
+
+
+
+3. Train machine translation models
+
+For industry-specific jargon and vocabulary,
+companies should consider training their own
+custom machine translation models or using a
+glossary provided by a machine translation vendor.                                        2
+
+
+
+
+                             3
+
+
+
+
+                                                                          4. Embrace AI
+
+                                                                          AI content generation is here to stay. By adopting
+                                                                          AI-assisted writing tools, companies can stay ahead
+         4
+                                                                          of the curve and leverage the benefits of this
+                                                                          technology.
+
+
+                                   5
+                                                                          5. Choose machine translation vendors carefully
+                                                                          Companies should choose vendors who can handle
+                                                                          different document formats, prioritize data security,
+                                                                          and offer APIs.
+
+
+
+
+The state of translation and localization in 2023-2024
+Looking ahead                                                                   14
+
+
+
+
+Looking ahead
+Key takeaways:
+
+
+                  Machine translation is the established norm in localization
+                  workflows, used by 98% of survey respondents.
+
+
+
+
+
+
+                  Human review is still a key part of the translation process
+                  to ensure accuracy and nuance.
+
+
+
+
+
+
+                  AI in content generation is a force that marketers and
+                  content creators cannot afford to ignore.
+
+
+
+
+
+
+                  A significant majority of respondents currently use AI-
+                  assisted writing and even more predict a substantial
+                  increase in AI-generated content in the near future.
+
+
+
+
+
+
+                  Most valued features of machine translation vendors
+                  include support for specific document formats, data
+                  security, and API offerings.
+
+
+
+
+
+
+                  Our data reveals a strong reliance on partnerships with
+                  technology providers or agencies to simplify the
+                  localization process.
+
+
+
+
+The state of translation and localization in 2023-2024
+Conclusion                                                                        15
+
+
+
+
+Conclusion
+
+In conclusion, our exploration of the landscape of localization in business has
+
+illuminated several important trends and challenges. With respondents coming
+
+from a mix of B2B (40%), B2C (35%), and hybrid B2B/B2C (25%) companies, we
+
+see that these trends and challenges have broad relevance across a variety of
+
+business models and industries.
+
+
+
+
+
+
+Localization is a complex, multi-faceted process with many moving parts, and
+
+its importance in the global business landscape cannot be overstated. Moving
+
+forward, businesses should start incorporating AI and machine translation into
+
+their processes to stay competitive. Machine translation vendors like DeepL
+
+offer advanced tools that can help companies streamline their localization
+
+workflows.
+
+
+
+
+   By leveraging machine translation, embracing AI, and applying
+
+   human review, companies can optimize their localization
+
+   workflows, improve the quality of their content, and maximize
+
+   their ROI.
+
+
+
+
+The state of translation and localization in 2023-2024
+Need a translation solution for
+ your business’ localization?
+            Learn more
+

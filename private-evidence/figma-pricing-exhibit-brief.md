@@ -3,7 +3,6 @@
 **Created:** 2026-07-23 · **Revision 4:** 2026-07-23 (post peer review)
 **For:** Codex GPT 5.6 Sol, operating Figma through Mason's logged-in Chrome profile
 **Authorized by:** Mason, for this task only
-**Private document. Never copy its contents into public routes or assets.**
 
 ## Purpose and philosophy (read first)
 

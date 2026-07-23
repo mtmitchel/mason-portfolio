@@ -1,0 +1,831 @@
+{
+  "generated_from": "ChatGPT data export in /home/mason/Downloads/gptexport",
+  "supplemental_sources": [
+    {
+      "repo_path": "private-evidence/more deepl",
+      "reviewed_on": "2026-07-21",
+      "master": "private-evidence/more deepl/deepl-performance-review-master.md",
+      "policy": "Original HiBob PDFs are primary self-reports. Derivative Markdown drafts and general DKH guides are not independent achievement evidence."
+    }
+  ],
+  "evidence_policy": {
+    "confirmed": "Direct contemporaneous user-authored project material identifies Mason's work or deliverable.",
+    "strong": "The contribution is repeated in review material and supported by project records or manager feedback.",
+    "supported_missing_attachment": "The claim was extracted from an uploaded source and repeated in review material, but the uploaded source file is absent from the export.",
+    "lead": "The chat establishes likely work or planning, but completion or impact needs another source.",
+    "excluded": "A claim contradicted by Mason or traceable only to assistant invention. Excluded from career bullets."
+  },
+  "achievements": [
+    {
+      "id": "MKT-01",
+      "period": "2023-05",
+      "team": "Marketing / Content",
+      "initiative": "DeepL AI Talks launch content",
+      "achievement": "Created social copy supporting DeepL AI Talks, a webinar series about AI translation and communication technology for business.",
+      "contribution": "Adapted webinar and blog material into LinkedIn-ready promotional copy.",
+      "outcome": "Launch-support content exists in the contemporaneous export; campaign performance is not available.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "AI Talks: Legal & Ethical",
+          "date": "2023-05-16",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f89618d8-1207-4fa5-9ab2-3537624fd327",
+          "message_id": "aaa2ac68-46af-44bb-bed8-ead86d30a405"
+        }
+      ]
+    },
+    {
+      "id": "MKT-02",
+      "period": "2023-06",
+      "team": "Marketing / Apps & Integrations",
+      "initiative": "Browser-extension SSO launch",
+      "achievement": "Developed launch-blog content announcing SSO login for DeepL browser extensions.",
+      "contribution": "Translated a feature brief covering Chrome and Edge into customer-facing benefit messaging and launch content.",
+      "outcome": "Produced content supporting the extension SSO rollout; no campaign metric is present.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "New SSO Login Blog",
+          "date": "2023-06-09",
+          "source_file": "conversations-052.json",
+          "conversation_id": "fd7f5ae1-ab59-4c76-bed9-a26c630a8809",
+          "message_id": "aaa2e881-8321-4c83-8de9-44a3e4de47c6"
+        }
+      ]
+    },
+    {
+      "id": "MKT-03",
+      "period": "2023-06 to 2023-10",
+      "team": "Marketing / Content",
+      "initiative": "The state of translation and localization in 2023",
+      "achievement": "Developed and repurposed a substantial research-led content package about translation and localization trends.",
+      "contribution": "Turned survey findings into a 2,000-3,000-word whitepaper, edited its structure and recommendations, incorporated webinar-derived mini case studies, and later repurposed the report as a marketing blog post.",
+      "outcome": "Created a multi-format thought-leadership package from one research asset; distribution or lead metrics are not present.",
+      "metrics": [
+        {
+          "claim": "2,000-3,000-word whitepaper",
+          "status": "confirmed scope, not a performance metric"
+        }
+      ],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Survey Whitepaper Assistance",
+          "date": "2023-06-22",
+          "source_file": "conversations-048.json",
+          "conversation_id": "bbe4c3a0-67ce-40a1-8a33-7a217bc9b59d"
+        },
+        {
+          "title": "Localization Challenges & Solutions",
+          "date": "2023-06-22",
+          "source_file": "conversations-005.json",
+          "conversation_id": "62aaaed9-c293-4c2d-8620-e18eb63bf2f6"
+        },
+        {
+          "title": "Transcript to Case Studies",
+          "date": "2023-07-12",
+          "source_file": "conversations-047.json",
+          "conversation_id": "a7957091-7f16-4b19-b9d6-038cd958a83c"
+        },
+        {
+          "title": "Repurpose Whitepaper into Blog",
+          "date": "2023-10-11",
+          "source_file": "conversations-050.json",
+          "conversation_id": "de3f6f12-94e9-4ea6-a674-16692b60c62f"
+        }
+      ]
+    },
+    {
+      "id": "MKT-04",
+      "period": "2023-08",
+      "team": "Marketing / Lifecycle",
+      "initiative": "DeepL Pro trial nurture and reactivation",
+      "achievement": "Created lifecycle-email content for people who cancelled or did not convert after a DeepL Pro trial.",
+      "contribution": "Developed nurture emails and mini case-study content using customer examples including Deutsche Bahn.",
+      "outcome": "Completed campaign-ready copy variants; conversion performance is not available in the export.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "DeepL Pro: Boost Business!",
+          "date": "2023-08-01",
+          "source_file": "conversations-051.json",
+          "conversation_id": "eb7b50cb-296f-4bdb-a138-95668001d5be"
+        },
+        {
+          "title": "DeepL Pro Email Marketing",
+          "date": "2023-08-01",
+          "source_file": "conversations-047.json",
+          "conversation_id": "a99eea82-269c-4476-acfb-285e69a374d4"
+        }
+      ]
+    },
+    {
+      "id": "APP-01",
+      "period": "2023-11 to 2024-02",
+      "team": "Apps & Integrations",
+      "initiative": "Post-signup ecosystem discovery experiment",
+      "achievement": "Wrote UX copy for an A/B-tested post-signup callout designed to help free-account users discover DeepL apps and integrations.",
+      "contribution": "Developed and refined concise headline, supporting copy, and CTA options around cross-device access, app-specific features, and ecosystem discovery while rejecting inaccurate claims.",
+      "outcome": "A follow-up brief explicitly says the initial callout hypothesis was proven and the team expanded the concept into a richer sidebar experience. The export does not preserve the numeric lift.",
+      "metrics": [
+        {
+          "claim": "Approximately 94% of free-account signups occurred on desktop",
+          "status": "brief context, not attributed impact"
+        },
+        {
+          "claim": "The initial callout hypothesis was proven and prompted a follow-on sidebar experiment",
+          "status": "confirmed qualitative experiment outcome; numeric result absent"
+        }
+      ],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Improve DeepL App Copy",
+          "date": "2023-11-21",
+          "source_file": "conversations-002.json",
+          "conversation_id": "2eca15ca-e027-46e0-8faf-e27e6a16d7ba",
+          "message_id": "aaa2b834-c626-43f2-9400-601acff6ceab"
+        },
+        {
+          "title": "Enhance UI Copy",
+          "date": "2024-02-07",
+          "source_file": "conversations-000.json",
+          "conversation_id": "0f56d90a-cce0-46a7-a62e-08421f574403",
+          "message_id": "aaa24092-8560-4b72-8d8d-0bd1af8325e8"
+        },
+        {
+          "title": "Install Desktop & Browser Enhancements",
+          "date": "2024-02-08",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f7ef4aa7-a873-4876-aff4-c36cdeca6421",
+          "message_id": "aaa224b2-627d-4cbe-a2d2-8e707d659acb"
+        }
+      ]
+    },
+    {
+      "id": "APP-02",
+      "period": "2024-02",
+      "team": "Apps & Integrations / Acquisition",
+      "initiative": "Mobile app-store listing optimization",
+      "achievement": "Optimized Google Play short and long descriptions for DeepL mobile apps as part of an app-store acquisition test program.",
+      "contribution": "Integrated researched search terms into publishable copy while preserving product accuracy, style, and strict store-character constraints.",
+      "outcome": "Prepared English listing experiments intended to improve ranking, discovery, and first-time installs; experiment results are not present.",
+      "metrics": [
+        {
+          "claim": "80-character short-description constraint and 4,000-character long-description constraint",
+          "status": "confirmed delivery constraint"
+        }
+      ],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Update Copy for App",
+          "date": "2024-02-15",
+          "source_file": "conversations-002.json",
+          "conversation_id": "2579e3a2-79a1-4b71-98ec-e2740410a0a6",
+          "message_id": "aaa2eddc-c86f-4288-838c-47382a13b6a5"
+        },
+        {
+          "title": "App Store Description Update",
+          "date": "2024-02-15",
+          "source_file": "conversations-003.json",
+          "conversation_id": "3ae24593-04a7-4cd4-a8b5-1a3da20cc88e"
+        }
+      ]
+    },
+    {
+      "id": "APP-03",
+      "period": "2024-02 to 2024-Q3",
+      "team": "Apps & Integrations / Content Experience",
+      "initiative": "Desktop and integration landing-page portfolio",
+      "achievement": "Developed product and landing-page content to improve discovery and positioning of DeepL's desktop apps, browser tools, Microsoft integrations, and broader enterprise integration story.",
+      "contribution": "Worked from usability findings and product briefs; wrote and refined copy in collaboration with product managers and designers, including assigned copy for Microsoft Outlook and PowerPoint pages.",
+      "outcome": "Multiple pages and migrations are documented as done or in progress; attribution to overall platform download totals is not established.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Improve DeepL Desktop Landing",
+          "date": "2024-02-21",
+          "source_file": "conversations-050.json",
+          "conversation_id": "e1f8c908-2396-4297-9d0c-ba04b1b7123a"
+        },
+        {
+          "title": "DeepL Integrations Landing",
+          "date": "2024-06-06",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f83209e0-7daa-45a9-b185-bc0ccf6e0e94"
+        },
+        {
+          "title": "Performance Review Assistance",
+          "date": "2024-08-30",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+          "message_id": "e5b80f0d-d9e5-4b3f-9df0-ce155eaefb85"
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [2],
+          "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
+          "evidence_role": "primary_self_report",
+          "note": "First-half 2024 HiBob self-reflection; corroborates desktop-promotion contribution but not platform-metric attribution."
+        },
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [2],
+          "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
+          "evidence_role": "primary_self_report",
+          "note": "Full-year 2024 HiBob self-reflection; submission and manager-validation status are not established."
+        }
+      ]
+    },
+    {
+      "id": "CEX-01",
+      "period": "2024-Q2 to 2024-Q3",
+      "team": "Content Experience",
+      "initiative": "Go Enterprise website expansion",
+      "achievement": "Contributed copy to more than 25 new landing pages and a major Enterprise-page revamp supporting DeepL's enterprise positioning.",
+      "contribution": "Wrote copy for product, enterprise, and developer pages; collaborated with designers, product managers, PMM, SEO, and implementation partners; accurately described the role as contribution rather than leadership.",
+      "outcome": "The project plan identifies Mason as copy contributor and the recovered self-reflections say the work launched on schedule; exact engagement and inquiry lifts still require the underlying analytics.",
+      "metrics": [
+        {
+          "claim": "More than 25 new landing pages",
+          "status": "strong: direct project plan plus repeated review statement"
+        },
+        {
+          "claim": "20% increase in B2B engagement and 15% increase in enterprise sales inquiries",
+          "status": "supported_missing_attachment: recovered self-report, underlying analytics and individual attribution absent"
+        }
+      ],
+      "confidence": "strong",
+      "sources": [
+        {
+          "title": "Performance Review Assistance",
+          "date": "2024-08-30",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+          "message_id": "e5b80f0d-d9e5-4b3f-9df0-ce155eaefb85"
+        },
+        {
+          "title": "Performance Review Reflection Help",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "6793425e-2340-8006-a7d3-3ea84fac6d1e",
+          "message_id": "b4f33387-3d0b-4dee-abb5-01c97f4af69d",
+          "note": "Manager feedback says the What section was good to go."
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [1, 2],
+          "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
+          "evidence_role": "primary_self_report",
+          "note": "First-half 2024 HiBob self-reflection; supports contribution and 25+ page scope, not the underlying analytics."
+        },
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [1, 2],
+          "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
+          "evidence_role": "primary_self_report",
+          "note": "Full-year 2024 HiBob self-reflection; does not independently verify engagement or inquiry figures."
+        }
+      ]
+    },
+    {
+      "id": "CEX-02",
+      "period": "2024-Q2 to 2024-Q3",
+      "team": "Content Experience",
+      "initiative": "Website discovery and conversion surfaces",
+      "achievement": "Supported a broader website-discovery program spanning navigation for free and anonymous users, the press page, footer work, landing-page information architecture, and Apps & Integrations page migration.",
+      "contribution": "Created or was assigned copy within a cross-functional program designed to help customers discover relevant content and make faster decisions.",
+      "outcome": "The export establishes assignments and shipped/in-progress milestones, but does not consistently prove final completion for every listed surface.",
+      "metrics": [],
+      "confidence": "lead",
+      "sources": [
+        {
+          "title": "Performance Review Assistance",
+          "date": "2024-08-30",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+          "message_id": "e5b80f0d-d9e5-4b3f-9df0-ce155eaefb85"
+        }
+      ]
+    },
+    {
+      "id": "CEX-03",
+      "period": "2024",
+      "team": "Content Experience",
+      "initiative": "Scalable content-creation workflow",
+      "achievement": "Helped shape the content-creation workflow adopted by the team for a high-volume landing-page program.",
+      "contribution": "Used prior marketing experience to propose practical workflow examples, templates, roles, and review steps; explicitly did not claim sole ownership or authorship of reusable blocks.",
+      "outcome": "The review material connects the workflow to delivering more than 25 pages on schedule, but turnaround-time or quality metrics are not available.",
+      "metrics": [],
+      "confidence": "strong",
+      "sources": [
+        {
+          "title": "Performance Review Assistance",
+          "date": "2024-08-30",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+          "message_id": "5c352458-7cc6-4aca-bad8-e36032442b83"
+        },
+        {
+          "title": "Performance Review Assistance",
+          "date": "2024-08-30",
+          "source_file": "conversations-052.json",
+          "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+          "message_id": "6cd3ac93-913a-418b-8e49-431520190d6d"
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [3, 4],
+          "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
+          "evidence_role": "primary_self_report",
+          "note": "Describes workflow contribution and on-schedule delivery; does not prove sole ownership or a quantified efficiency gain."
+        }
+      ]
+    },
+    {
+      "id": "SEO-01",
+      "period": "2024",
+      "team": "Content Experience / Monetization / SPICE",
+      "initiative": "SEO-informed enterprise landing-page optimization",
+      "achievement": "Adapted major landing-page content to current SEO briefs while preserving user-centered structure, product accuracy, and conversion intent.",
+      "contribution": "Compared old and updated SEO briefs, translated keyword and content-priority guidance into page-ready copy, and worked across quality, security, platform, ROI, and sustainability sections rather than copying the brief mechanically.",
+      "outcome": "The recovered HiBob self-reflections attribute organic-traffic, conversion, and revenue gains to the combined team effort, but the analytics source is not available and individual causation cannot be isolated.",
+      "metrics": [
+        {
+          "claim": "15% increase in organic traffic, 30% increase in conversion, and €800,000 additional revenue",
+          "status": "supported_missing_attachment: appears in recovered self-reports; underlying SEO/analytics source and individual attribution absent"
+        }
+      ],
+      "confidence": "supported_missing_attachment",
+      "sources": [
+        {
+          "title": "SEO Landing Page Update",
+          "date": "2024-07-30",
+          "source_file": "conversations-049.json",
+          "conversation_id": "cedab5a9-0ff7-4d55-96bc-72296ad522f9",
+          "message_id": "aaa288dd-14f6-4071-b47d-c0d1a17d8e3a"
+        },
+        {
+          "title": "Performance Review Reflection Help",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "6793425e-2340-8006-a7d3-3ea84fac6d1e",
+          "message_id": "0de9888c-e876-472a-8277-898dc25a1f84"
+        },
+        {
+          "title": "Performance Review Reflection Help",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "6793425e-2340-8006-a7d3-3ea84fac6d1e",
+          "message_id": "b4f33387-3d0b-4dee-abb5-01c97f4af69d",
+          "note": "Manager said the What section was good to go."
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [2],
+          "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
+          "evidence_role": "primary_self_report",
+          "note": "Repeats the team-level SEO and landing-page outcome claims without supplying analytics or individual attribution."
+        },
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [2, 3],
+          "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
+          "evidence_role": "primary_self_report",
+          "note": "Full-year self-report corroboration only; the underlying SEO and revenue analytics remain missing."
+        }
+      ]
+    },
+    {
+      "id": "MON-01",
+      "period": "2024",
+      "team": "Monetization",
+      "initiative": "DM-1523 Pro Driver experiment",
+      "achievement": "Contributed benefit-led messaging and copy variations for a post-signup Pro Driver experiment.",
+      "contribution": "Worked with Product Design, Content Design, and Monetization to refine the message shown after free-account signup; did not claim sole leadership.",
+      "outcome": "The missing experiment canvas was summarized at the time as producing 124 additional Pro purchases per day; later review material repeats that formulation, while the recovered HiBob self-reflections contain a conflicting 12%/€1.2M formulation.",
+      "metrics": [
+        {
+          "claim": "+124 Pro purchases per day and projected €3.2M incremental ARR",
+          "status": "supported_missing_attachment: GPT cited the uploaded experiment canvas, but that PDF is absent from the export"
+        }
+      ],
+      "confidence": "supported_missing_attachment",
+      "sources": [
+        {
+          "title": "Experiment Canvas Summary",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce",
+          "note": "Uploaded PDF pointer exists, exported asset is missing."
+        },
+        {
+          "title": "Performance Review Talking Points",
+          "date": "2025-03-13",
+          "source_file": "conversations-018.json",
+          "conversation_id": "67d2da73-0148-8006-83c3-1bbb62aab9cb",
+          "message_id": "bf50a01c-3e38-48c9-be44-060b6a439734"
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [2],
+          "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
+          "evidence_role": "primary_self_report",
+          "note": "Contains the conflicting 12% conversion and €1.2M ARR formulation; it is not the experiment readout."
+        },
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [2, 3],
+          "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
+          "evidence_role": "primary_self_report",
+          "note": "Repeats the conflicting 12% conversion and €1.2M ARR formulation; all Pro Driver metrics remain withheld."
+        }
+      ]
+    },
+    {
+      "id": "MON-02",
+      "period": "2024",
+      "team": "Monetization",
+      "initiative": "DM-1418 checkout-flow simplification",
+      "achievement": "Contributed content iterations to a checkout-flow experiment intended to remove friction and clarify plan information.",
+      "contribution": "Supported messaging and content refinement within a cross-functional experiment; the export does not establish that Mason designed the flow or owned the test.",
+      "outcome": "The missing canvas was summarized as a 3.02% lift in Pro purchases and 100 additional purchases per day.",
+      "metrics": [
+        {
+          "claim": "3.02% increase in Pro purchases, about 100 additional purchases per day, and €2.4M incremental ARR",
+          "status": "supported_missing_attachment: source PDF absent; exact ARR should be rechecked before external use"
+        }
+      ],
+      "confidence": "supported_missing_attachment",
+      "sources": [
+        {
+          "title": "Experiment Canvas Summary",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce"
+        },
+        {
+          "title": "Performance Review Talking Points",
+          "date": "2025-03-13",
+          "source_file": "conversations-018.json",
+          "conversation_id": "67d2da73-0148-8006-83c3-1bbb62aab9cb",
+          "message_id": "bf50a01c-3e38-48c9-be44-060b6a439734"
+        }
+      ]
+    },
+    {
+      "id": "MON-03",
+      "period": "2024",
+      "team": "Monetization",
+      "initiative": "DM-1417 anonymous-user soft block",
+      "achievement": "Contributed strategic UX messaging to an experiment encouraging frequent anonymous users to create free accounts without unnecessarily disrupting translation use.",
+      "contribution": "Helped shape and refine the soft-block copy within Product Design, Content Design, and Monetization collaboration.",
+      "outcome": "The missing canvas was summarized as a large increase in free-account creation with minimal session impact.",
+      "metrics": [
+        {
+          "claim": "76.22% increase in free-account creation, 514 additional accounts per day, and a 0.26% session decrease",
+          "status": "supported_missing_attachment: source PDF absent"
+        }
+      ],
+      "confidence": "supported_missing_attachment",
+      "sources": [
+        {
+          "title": "Experiment Canvas Summary",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce"
+        },
+        {
+          "title": "Performance Review Talking Points",
+          "date": "2025-03-13",
+          "source_file": "conversations-018.json",
+          "conversation_id": "67d2da73-0148-8006-83c3-1bbb62aab9cb",
+          "message_id": "bf50a01c-3e38-48c9-be44-060b6a439734"
+        }
+      ]
+    },
+    {
+      "id": "MON-04",
+      "period": "2024-Q4 to 2025-Q1",
+      "team": "Monetization",
+      "initiative": "Pricing Page V2 and packaging communication",
+      "achievement": "Supported the high-priority Pricing Page V2 program with competitor research, messaging analysis, headline concepts, and A/B-test-ready copy variations.",
+      "contribution": "Converted research into actionable content work; explored value propositions and trial, pricing, cancellation, and plan-comparison messaging with attention to user needs and testability.",
+      "outcome": "The work is documented against DM-2112 and multiple experiment-preparation threads; final test results are not present.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Pricing Page Action Items",
+          "date": "2025-01-09",
+          "source_file": "conversations-014.json",
+          "conversation_id": "677ffdf8-dea8-8006-bc27-44404198780d",
+          "message_id": "7f008296-3936-4686-ae18-2d5a456bb247"
+        },
+        {
+          "title": "P&P Redesign Competitor Analysis",
+          "date": "2025-01-10",
+          "source_file": "conversations-014.json",
+          "conversation_id": "67813aac-829c-8006-a341-a6aedb1ff4d4"
+        },
+        {
+          "title": "DeepL Pricing Headlines",
+          "date": "2025-02-13",
+          "source_file": "conversations-016.json",
+          "conversation_id": "67ade857-c3ac-8006-9ef6-9377f8bcda18"
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [3],
+          "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
+          "evidence_role": "primary_self_report",
+          "note": "Describes pricing-copy collaboration as work in progress and not fully rolled out; expected impact is not a result."
+        }
+      ]
+    },
+    {
+      "id": "IAM-01",
+      "period": "2024 to 2025-02",
+      "team": "IAM / UI-UX",
+      "initiative": "Authentication and administrator messaging",
+      "achievement": "Partnered with IAM to improve authentication and administrator UX copy, including an MFA-related flow whose DIAM-657 copy was approved and ready for deployment.",
+      "contribution": "Aligned authentication wording with IAM and UI/UX partners, added agreed copy to the DIAM ticket, and maintained careful terminology around authentication and recovery concepts.",
+      "outcome": "DIAM-657 is directly described as approved and ready for deployment; no adoption or support metric is present.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Starfleet UI/UX Update",
+          "date": "2025-02-12",
+          "source_file": "conversations-016.json",
+          "conversation_id": "67ac86ee-6dc4-8006-a23f-1565bd055004",
+          "message_id": "f3c9fae1-3020-498a-bb9b-ad539247c497"
+        },
+        {
+          "title": "Copy Update and Sharing",
+          "date": "2025-02-17",
+          "source_file": "conversations-016.json",
+          "conversation_id": "67b316d3-8330-8006-9c8c-b85cbc9edb1d"
+        }
+      ]
+    },
+    {
+      "id": "IAM-02",
+      "period": "2024-Q4 to 2025-03",
+      "team": "IAM / Account experience",
+      "initiative": "Account security and administration content portfolio",
+      "achievement": "Produced and refined UX content across sensitive account-management and security flows.",
+      "contribution": "Worked on audit-log delivery, support-access authorization, account-email change alerts related to takeover attacks, team invitations and groups, MFA/recovery terminology, CSV member uploads, and team usage-report states.",
+      "outcome": "The export provides contemporaneous briefs and copy for multiple flows; it does not prove that every item shipped.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Audit Log Copy Review",
+          "date": "2024-11-19",
+          "source_file": "conversations-011.json",
+          "conversation_id": "673c6a20-4500-8006-9711-3228bebbd8b7"
+        },
+        {
+          "title": "DeepL Access Authorization Review",
+          "date": "2025-01-17",
+          "source_file": "conversations-014.json",
+          "conversation_id": "678a28c7-0b5c-8006-8395-e213192130be"
+        },
+        {
+          "title": "Email Change Notification Copy",
+          "date": "2025-02-20",
+          "source_file": "conversations-017.json",
+          "conversation_id": "67b75788-67b0-8006-aa70-7a69e9f682b9",
+          "message_id": "ec8a47b7-2569-4bc9-bc4c-89a4deae7d81"
+        },
+        {
+          "title": "DeepL Invitation Compliance Review",
+          "date": "2025-03-11",
+          "source_file": "conversations-018.json",
+          "conversation_id": "67d00978-93c4-8006-8309-f2c6c829c4c0"
+        },
+        {
+          "title": "Team Member Report Review",
+          "date": "2025-03-14",
+          "source_file": "conversations-018.json",
+          "conversation_id": "67d42b6a-4fa8-8006-99b1-8b4fe26c0133"
+        }
+      ]
+    },
+    {
+      "id": "IAM-03",
+      "period": "2025-02",
+      "team": "IAM / Localization",
+      "initiative": "IAM localization-process clarification",
+      "achievement": "Investigated and clarified a missing localization process for security-critical IAM copy.",
+      "contribution": "Reviewed the existing state, consulted localization documentation and the Phrase-adapter process, identified the unsubmitted admin-MFA ticket as evidence of a bottleneck, and proposed a basic setup aligned with other teams while explicitly leaving ownership with IAM.",
+      "outcome": "Created a clearer path for continued UI/UX support; the export does not establish full process adoption.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "IAM Localization Process Clarification",
+          "date": "2025-02-26",
+          "source_file": "conversations-017.json",
+          "conversation_id": "67bf5fb9-fdcc-8006-a54a-6231dfe3934e",
+          "message_id": "a2c4f1db-79f1-4e85-a5d5-b32dd434ab5f"
+        }
+      ]
+    },
+    {
+      "id": "ATE-01",
+      "period": "2025-02",
+      "team": "ATE",
+      "initiative": "Multi-subscriptions and ways-of-working support",
+      "achievement": "Supported ATE through the first phase of multi-subscriptions work and proposed a lightweight review of team processes after recognizing that standard ways of working were missing.",
+      "contribution": "Offered to align with the content-design manager and ATE partner on practical, low-effort improvements that would create shared value.",
+      "outcome": "The Slack draft establishes support and a process proposal; adoption or further delivery is not shown.",
+      "metrics": [],
+      "confidence": "lead",
+      "sources": [
+        {
+          "title": "ATE Process Alignment",
+          "date": "2025-02-12",
+          "source_file": "conversations-016.json",
+          "conversation_id": "67acabb4-737c-8006-a1f4-27058bcc7c3e",
+          "message_id": "a7108a10-d0d4-4b4f-8809-fd160b905e67"
+        }
+      ]
+    },
+    {
+      "id": "SYS-01",
+      "period": "2024-Q4 to 2025-Q1",
+      "team": "Content Design",
+      "initiative": "Content standards and structured guidance",
+      "achievement": "Consolidated content-style, terminology, product, and naming guidance into structured formats suitable for consistent human and AI-assisted review.",
+      "contribution": "Cleaned and organized the English content style guide and product guide, encoded terminology and usage rules in JSON, and connected the material to repeatable copy-review workflows.",
+      "outcome": "Produced structured reference material used in tooling prototypes; organization-wide adoption is not proven.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Content Style Guide Review",
+          "date": "2025-01-01",
+          "source_file": "conversations-013.json",
+          "conversation_id": "677485a8-fef8-8006-8bc9-331f4fe6ea42"
+        },
+        {
+          "title": "JSON Format and Glossary",
+          "date": "2025-01-05",
+          "source_file": "conversations-014.json",
+          "conversation_id": "677a1eea-e1e8-8006-9ca6-c552122c2c99"
+        }
+      ]
+    },
+    {
+      "id": "SYS-02",
+      "period": "2024-Q4 to 2025-03",
+      "team": "Content Design",
+      "initiative": "Figma content-review plugin prototype",
+      "achievement": "Prototyped and documented a Figma plugin for UX writers and designers to review copy against content standards inside the design workflow.",
+      "contribution": "Defined research and analysis features, structured style-guide and product knowledge for the tool, developed and debugged the prototype, and prepared developer-facing documentation.",
+      "outcome": "A working-development trail and documentation exist; production deployment and team-wide usage are not established.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "DeepL Figma Plugin Docs",
+          "date": "2024-12-08",
+          "source_file": "conversations-012.json",
+          "conversation_id": "6755d7b4-7c64-8006-a4dd-6530648e48f1"
+        },
+        {
+          "title": "Figma Plugin for UX Writing",
+          "date": "2024-12-13",
+          "source_file": "conversations-012.json",
+          "conversation_id": "675c7963-8678-8006-a747-a5f733cc6580"
+        },
+        {
+          "title": "Performance Review Reflection Help",
+          "date": "2025-01-24",
+          "source_file": "conversations-015.json",
+          "conversation_id": "6793425e-2340-8006-a7d3-3ea84fac6d1e",
+          "message_id": "b4f33387-3d0b-4dee-abb5-01c97f4af69d",
+          "note": "Manager feedback treated the plugin as an example of proactive engagement."
+        }
+      ],
+      "artifact_sources": [
+        {
+          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "source_type": "local_pdf",
+          "pages": [4],
+          "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
+          "evidence_role": "primary_self_report",
+          "note": "Confirms a beta Figma-plugin prototype and potential value; deployment, adoption, and measured efficiency remain unproved."
+        }
+      ]
+    },
+    {
+      "id": "SYS-03",
+      "period": "2025-02 to 2025-03",
+      "team": "Content Design / Localization",
+      "initiative": "Dynamic-content and Phrase-string inventory",
+      "achievement": "Created a practical inventory of dynamic product content by filtering roughly 9,000 English Phrase keys for placeholders and important content categories.",
+      "contribution": "Built and refined Google Sheets filtering/categorization logic to expose prices, feature limits, usage limits, files, users, glossaries, and other variable content for copy, design, and localization review.",
+      "outcome": "Produced a reusable content-audit dataset and workflow; downstream remediation results are not present.",
+      "metrics": [
+        {
+          "claim": "Approximately 9,000 English Phrase keys reviewed",
+          "status": "confirmed scope"
+        }
+      ],
+      "confidence": "confirmed",
+      "sources": [
+        {
+          "title": "Localized Dynamic Content Insights",
+          "date": "2025-03-04",
+          "source_file": "conversations-017.json",
+          "conversation_id": "67c6d2da-895c-8006-ad62-a6f65ca2a208",
+          "message_id": "1c31f681-fa88-4adf-a49f-af94e045e84c"
+        },
+        {
+          "title": "Filter by Keywords and Placeholders",
+          "date": "2025-03-10",
+          "source_file": "conversations-018.json",
+          "conversation_id": "67ce9df7-24f4-8006-baa8-946383375134"
+        }
+      ]
+    }
+  ],
+  "excluded_or_quarantined_claims": [
+    {
+      "claim": "Pro Driver work produced both a 12% conversion increase/€1.2M ARR and +124 purchases per day/€3.2M ARR",
+      "reason": "Two materially different metric formulations survive. The +124/day result is indirectly tied to the missing DM-1523 canvas; the 12%/€1.2M formulation appears in the recovered HiBob self-reflections but is not an experiment readout. Reconcile before using either ARR figure externally.",
+      "source_file": "conversations-015.json",
+      "conversation_ids": [
+        "6793425e-2340-8006-a7d3-3ea84fac6d1e",
+        "67934ac4-b938-8006-acc7-78ae99eacfce"
+      ]
+    },
+    {
+      "claim": "A 20% reduction attributed to the content workflow",
+      "reason": "Mason explicitly said GPT made up the 20% reduction.",
+      "source_file": "conversations-052.json",
+      "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+      "message_id": "0e6378b2-b901-4550-a6d8-977a4aa6526d"
+    },
+    {
+      "claim": "Mason led or fully owned the 2024 landing-page program",
+      "reason": "Mason explicitly said he did not lead it; he contributed copy and worked with designers and PMs.",
+      "source_file": "conversations-052.json",
+      "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+      "message_id": "9cbd0861-8772-4466-a865-4d12dfc450c0"
+    },
+    {
+      "claim": "Mason fully owned the content workflow or proposed the reusable blocks",
+      "reason": "Mason limited his role to examples and contributions based on prior marketing experience and said he did not propose the reusable blocks.",
+      "source_file": "conversations-052.json",
+      "conversation_id": "f5b0554c-46e3-4229-b773-8b48a4078b17",
+      "message_ids": [
+        "5c352458-7cc6-4aca-bad8-e36032442b83",
+        "6cd3ac93-913a-418b-8e49-431520190d6d"
+      ]
+    },
+    {
+      "claim": "Mason's app copy caused 4.19M Windows and 1.95M Mac downloads, a 25% active-user increase, or 10% feature-engagement growth",
+      "reason": "Those figures appear in the recovered HiBob self-reflections, but no attribution reporting or underlying analytics establishes personal causation.",
+      "source_file": "conversations-015.json",
+      "conversation_id": "6793425e-2340-8006-a7d3-3ea84fac6d1e"
+    },
+    {
+      "claim": "SEO and landing-page work generated €800,000 or a 30% conversion increase",
+      "reason": "Repeated in the recovered HiBob self-reflections, but no underlying analytics or individual attribution is available.",
+      "source_file": "conversations-015.json",
+      "conversation_id": "6793425e-2340-8006-a7d3-3ea84fac6d1e"
+    }
+  ]
+}

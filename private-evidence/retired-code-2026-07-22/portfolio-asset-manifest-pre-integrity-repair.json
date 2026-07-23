@@ -1,0 +1,108 @@
+{
+  "version": "1.0",
+  "assets": [
+    {
+      "id": "DEEPL-HARD-BLOCKERS",
+      "project_id": "DEEPL-PRO-DRIVERS",
+      "source_path": "site/public/work/hard-blockers/",
+      "source_type": "design",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "No personal identifiers, comments, tickets, allocation details or private links are visible in the selected exports.",
+      "crop_notes": "Use complete product-frame exports. Present free and Translator Pro account-state variants as labeled pairs; do not silently crop or redesign the UI.",
+      "caption": "Each caption identifies the blocking condition, account state and content job visible in that frame.",
+      "text_alternative": "Describe the reason for the blocker, relevant account state and available route without repeating the caption.",
+      "export_ready": false,
+      "files": [
+        { "path": "usage-limit.png", "dimensions": "1092x1500" },
+        { "path": "formality.png", "dimensions": "1092x1150" },
+        { "path": "glossaries.png", "dimensions": "1092x1388" },
+        { "path": "document-size.png", "dimensions": "1092x1204" },
+        { "path": "remaining-documents.png", "dimensions": "546x626" },
+        { "path": "network-usage-limit.png", "dimensions": "1092x1600" },
+        { "path": "write-pro-free.png", "dimensions": "2880x1764" },
+        { "path": "write-pro-existing-translator-pro.png", "dimensions": "1236x800" },
+        { "path": "write-pro-illustrated-free.png", "dimensions": "1648x1504" },
+        { "path": "write-pro-illustrated-translator-pro.png", "dimensions": "1648x1504" }
+      ]
+    },
+    {
+      "id": "DEEPL-BULK-DELETION",
+      "project_id": "DEEPL-BULK-ADMIN",
+      "source_path": "site/public/work/bulk-administration/",
+      "source_type": "design",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The six frames use fictional domain.com demo accounts. No employee or customer identifiers are visible.",
+      "crop_notes": "Keep each 2880x2828 frame complete in the lightbox. Inline presentation may emphasize the relevant menu, dialog or result only when labeled as a detail.",
+      "caption": "Captions identify how scope, selection, action, consequence and result remain visible through the flow.",
+      "text_alternative": "Describe the specific state and the visible fictional scope; do not enumerate every table row.",
+      "export_ready": false,
+      "files": [
+        { "path": "bulk-delete-01-scope.png", "dimensions": "2880x2828" },
+        { "path": "bulk-delete-02-filter-scope.png", "dimensions": "2880x2828" },
+        { "path": "bulk-delete-03-selected-users.png", "dimensions": "2880x2828" },
+        { "path": "bulk-delete-04-action-menu.png", "dimensions": "2880x2828" },
+        { "path": "bulk-delete-05-confirmation.png", "dimensions": "2880x2828" },
+        { "path": "bulk-delete-06-result.png", "dimensions": "2880x2828" }
+      ]
+    },
+    {
+      "id": "DEEPL-LOCALIZATION-CAMPAIGN",
+      "project_id": "DEEPL-REPORT-CAMPAIGN",
+      "source_path": "site/public/work/localization-report/ and site/public/work/report-campaign/",
+      "source_type": "document",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "Published report pages contain no private comments, source links, participant data or internal identifiers.",
+      "crop_notes": "Use the report cover as the card image. Show body-text pages only as supporting document evidence; reproduce essential writing as selectable HTML text.",
+      "caption": "Captions explain the editorial purpose of each report page or customer example.",
+      "text_alternative": "Describe the page's editorial function and provide essential claims as nearby text rather than relying on the image.",
+      "export_ready": false,
+      "files": [
+        { "path": "localization-report/report-cover.png", "dimensions": "1488x1100" },
+        { "path": "localization-report/key-findings.png", "dimensions": "1488x2105" },
+        { "path": "localization-report/recommendations.png", "dimensions": "1488x2105" },
+        { "path": "report-campaign/hubspot-case-study.png", "dimensions": "1488x2105" },
+        { "path": "report-campaign/phrase-case-study.png", "dimensions": "1488x2105" }
+      ]
+    },
+    {
+      "id": "SMARTRECRUITERS-HIRING-SUCCESS-COVER",
+      "project_id": "SMARTRECRUITERS-HIRING-SUCCESS",
+      "source_path": "https://media.journoportfolio.com/users/48175/images/54cdae3b-c2cb-4967-b3be-5a0642278f7b.jpg",
+      "source_type": "photo",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "Public guide artwork contains no personal or account data.",
+      "crop_notes": "Use the complete 1000x562 archive thumbnail without reframing or adding portfolio text to the artwork.",
+      "caption": "The public guide organizes Hiring Success as a practical methodology, from strategy through optimization.",
+      "text_alternative": "SmartRecruiters Definitive Guide to Hiring Success shown as two blue and green books.",
+      "export_ready": false,
+      "public_path": "site/public/work/editorial/smartrecruiters-hiring-success.jpg",
+      "dimensions": "1000x562",
+      "sha256": "c1da36305c623ce2b9932251fd1eeae89f40d3539b4f992d85b3f61ccc1df673"
+    },
+    {
+      "id": "LOCALYZE-FORBES-GHOSTWRITING-COVER",
+      "project_id": "LOCALYZE-EXECUTIVE-GHOSTWRITING",
+      "source_path": "https://media.journoportfolio.com/users/48175/images/652baf75-74a4-4eab-b45d-ad2419ac9db2.jpg",
+      "source_type": "photo",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "Public Forbes article artwork contains no private identifiers or account data.",
+      "crop_notes": "Use the complete 1024x682 public archive thumbnail. Treat it as publication art, not evidence of Mason's visual-design contribution.",
+      "caption": "Public article artwork from Mason's existing Localyze writing archive.",
+      "text_alternative": "Forbes Council article photograph of a professional working beside the Arno in Florence.",
+      "export_ready": false,
+      "public_path": "site/public/work/editorial/localyze-forbes-ghostwriting.jpg",
+      "dimensions": "1024x682",
+      "sha256": "95594d7f22adb75418d71cba734deab9c4987e4d7d5f5a4b113729dfe351bcc2"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "version": "1.3",
+  "assets": [
+    {
+      "id": "DEEPL-UPGRADE-PROMPTS",
+      "project_id": "DEEPL-UPGRADE-PROMPTS",
+      "source_path": "site/public/work/hard-blockers/",
+      "source_type": "design",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The selected exports show historical product states without personal identifiers, comments, tickets, allocation details or private links.",
+      "crop_notes": "Use the complete selected product frames. The illustrated Free and Translator Pro modals form the public account-state pair. The weaker write-pro-free.png and write-pro-existing-translator-pro.png surfaces were relocated to private evidence without alteration.",
+      "caption": "Captions identify the blocking condition, account state and content job; document captions explain that brace tokens are design-file variables replaced with user-specific values.",
+      "text_alternative": "Describe the visible offer, the stated reason for the block, the relevant account state and the available route.",
+      "export_ready": false,
+      "files": [
+        { "path": "usage-limit.png", "dimensions": "1092x1500" },
+        { "path": "formality.png", "dimensions": "1092x1150" },
+        { "path": "glossaries.png", "dimensions": "1092x1388" },
+        { "path": "document-size.png", "dimensions": "1092x1204" },
+        { "path": "remaining-documents.png", "dimensions": "546x626" },
+        { "path": "network-usage-limit.png", "dimensions": "1092x1600" },
+        { "path": "write-pro-illustrated-free.png", "dimensions": "1648x1504" },
+        { "path": "write-pro-illustrated-translator-pro.png", "dimensions": "1648x1504" }
+      ],
+      "relocated_files": [
+        "private-evidence/retired-public-assets-2026-07-22/work/hard-blockers/write-pro-free.png",
+        "private-evidence/retired-public-assets-2026-07-22/work/hard-blockers/write-pro-existing-translator-pro.png"
+      ]
+    },
+    {
+      "id": "DEEPL-WRITE-PRO-LAUNCH",
+      "project_id": "DEEPL-WRITE-PRO-LAUNCH",
+      "source_path": "site/public/work/write-pro-launch/",
+      "source_type": "design",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The complete 2x exports contain no private identifiers, comments, tickets, Figma chrome or red work-in-progress proposal text.",
+      "crop_notes": "Use the complete feature-awareness product frame and the complete Translator pricing-grid working duplicate from the historical Monetization file. The feature module shows the data-security description expanded and four feature headings collapsed. The pricing grid retains the full Free-to-Enterprise structure and historical euro prices. Only wording for features that also appear on the current pricing page was updated; no plans, rows or features were added.",
+      "caption": "The feature module keeps five paid capabilities scannable; the Translator grid keeps the historical comparison structure while using current wording for the overlapping feature set.",
+      "text_alternative": "Describe the five feature headings and expanded data-security explanation, or the complete Translator pricing comparison, noting that the plan structure and prices are historical and the overlapping feature labels use current wording.",
+      "export_ready": false,
+      "files": [
+        { "path": "feature-awareness-security.png", "dimensions": "3024x1431", "sha256": "8567b050cb463973483aa22fd3184f40c9436225e122b5c6cf0eb8bc11e80cda" },
+        { "path": "pricing-translator.png", "dimensions": "3840x1459", "sha256": "ecbb01394236b50b0914da2055e3bffb913a2d7c8d59152240a09468fe752c38" },
+        { "path": "pricing-write-pro.png", "dimensions": "2482x1233", "sha256": "27aa96e69d50848228d328382d3cd9de78052e3044f9b30921d7305f4fc861c8" },
+        { "path": "pricing-bundle.png", "dimensions": "2880x2099", "sha256": "3b3773e66cd6d4dfd3a545c30b9ae98032e1d2c207c3edbebe5793fb4fd35160" }
+      ],
+      "private_originals": [
+        "private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-2x.png",
+        "private-evidence/figma-exports-2026-07-22/write-pro-launch/pricing-translator-2x.png"
+      ],
+      "private_source_archive": "private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-source.zip"
+    },
+    {
+      "id": "DEEPL-ACCOUNT-TEAM-SECURITY",
+      "project_id": "DEEPL-ACCOUNT-TEAM-SECURITY",
+      "source_path": "site/public/work/account-team-security/ and site/public/work/bulk-administration/",
+      "source_type": "design",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The selected account-security exports contain no authenticator secret, private recovery email, customer identifier or internal URL. The team-administration frames use fictional domain.com demo accounts.",
+      "crop_notes": "The account-security set uses exact fresh 2x product-frame exports selected from canonical MFA recovery nodes; the reset acknowledgement is the safe component selected inside the larger recovery frame. bulk-delete-confirmation-card.png is a 2000x1500 crop of the confirmation and affected rows. bulk-delete-06-result-detail.png is a 2600x500 crop of the Users deleted toast and zero-result footer and excludes the contradictory celebratory empty-state sentence. The complete bulk sequence and result frame remain intact privately.",
+      "caption": "Captions distinguish incorrect-code recovery, reset consequences, restored protection and the scope and completion of a destructive team action.",
+      "text_alternative": "Describe the visible account-security or team-administration state and the available next step without exposing or inventing account data.",
+      "export_ready": false,
+      "files": [
+        { "path": "account-team-security/account-security-login.png", "dimensions": "2880x1950", "sha256": "cf3f63266085d3f8d0fc6e687f560d71d93c96ac7b144ce7839da911d8bb9c17" },
+        { "path": "account-team-security/account-security-authentication-error.png", "dimensions": "2880x1938", "sha256": "880e9c685c46b0d03ecf0b08096bd1ebacebffb9d67107ba486c15854e976dd0" },
+        { "path": "account-team-security/account-security-reset-required.png", "dimensions": "1176x720", "sha256": "d6ad4ffbf551cb626ae128e83fe4907b9bc30d9e847f25a1748ec280eac4a822" },
+        { "path": "account-team-security/account-security-protection-restored.png", "dimensions": "2360x734", "sha256": "b03d2d11379f3bd89b9914320d50000d05497b166c06eaaf185546e665240589" },
+        { "path": "bulk-delete-confirmation-card.png", "dimensions": "2000x1500", "sha256": "d8f0ac76dbe7990f01ac5383776a35e8abf20c2af6a7fd12cf154f4ec5d6f6b0" },
+        { "path": "bulk-delete-06-result-detail.png", "dimensions": "2600x500", "sha256": "4ce8ff6e44423d167c5089a843497620f31a9a8e14dcc1c80d32de84d2617ed1" }
+      ],
+      "private_originals": "private-evidence/retired-public-assets-2026-07-22/work/multi-factor-authentication/ and private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/",
+      "relocated_files": [
+        "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-01-scope.png",
+        "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-02-filter-scope.png",
+        "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-03-selected-users.png",
+        "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-04-action-menu.png",
+        "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-05-confirmation.png",
+        "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/bulk-delete-06-result.png"
+      ]
+    },
+    {
+      "id": "DEEPL-SUBSCRIPTION-CHECKOUT",
+      "project_id": "DEEPL-SUBSCRIPTION-CHECKOUT",
+      "source_path": "site/public/work/subscription-checkout/fresh/",
+      "source_type": "design",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The selected historical checkout frames contain product and fictional purchase data, not credentials, customer identifiers or private links.",
+      "crop_notes": "Use all four complete product frames: sign-up continuity, bundle checkout, twenty-seat team checkout and no-trial checkout. Private preserved copies remain under the retired-public-assets archive.",
+      "caption": "Captions identify the condition that changes each purchase promise: sign-up continuity, product bundle, seat count or trial eligibility.",
+      "text_alternative": "Describe the product combination, seat count, trial state and payment timing visible in each frame.",
+      "export_ready": false,
+      "files": [
+        { "path": "start-my-free-trial.png", "dimensions": "3024x1800", "sha256": "c14505a4e602089cd1a6fb7813f210ad75068f328a8e4e641ed55737907e98cf" },
+        { "path": "bundle-checkout.png", "dimensions": "3024x2864", "sha256": "37c79d9f65411ea1601fa54f3ff01f5f063642013006af82f8ae19f21da2e751" },
+        { "path": "team-license-checkout.png", "dimensions": "3024x2864", "sha256": "4a7b8812d96329817b166896026c16aff1f5e4dcd2d3921cf386ea17345886de" },
+        { "path": "no-trial-ultimate-checkout.png", "dimensions": "3024x2738", "sha256": "387b33b914237dfab4fa85c941803fef4b7dafff104ca5089c40d274d2fd9f66" }
+      ]
+    },
+    {
+      "id": "DEEPL-LOCALIZATION-CAMPAIGN",
+      "project_id": "DEEPL-LOCALIZATION-CAMPAIGN",
+      "source_path": "site/public/work/localization-report/ and site/public/work/report-campaign/",
+      "source_type": "document",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The published report and article pages contain no private comments, source links, participant data or internal identifiers.",
+      "crop_notes": "Use the report cover as the card image. The restored ai-content-generation.png page shows the article adaptation. Body text remains selectable HTML so the page images are supporting evidence rather than the only readable source.",
+      "caption": "Captions explain whether a frame belongs to the report, article adaptation or customer-story sequence.",
+      "text_alternative": "Describe each page's editorial function and keep its essential claim available as nearby HTML text.",
+      "export_ready": false,
+      "files": [
+        { "path": "localization-report/report-cover.png", "dimensions": "1488x1100" },
+        { "path": "localization-report/key-findings.png", "dimensions": "1488x2105" },
+        { "path": "localization-report/recommendations.png", "dimensions": "1488x2105" },
+        { "path": "report-campaign/ai-content-generation.png", "dimensions": "1488x1100", "sha256": "fd5ad9735dd5f37b59d88381d309c3b65be2b90953b35e35089089ea4539b667" },
+        { "path": "report-campaign/hubspot-case-study.png", "dimensions": "1488x2105" },
+        { "path": "report-campaign/phrase-case-study.png", "dimensions": "1488x2105" }
+      ]
+    },
+    {
+      "id": "LOCALYZE-FORBES-GHOSTWRITING-COVER",
+      "project_id": "LOCALYZE-EXECUTIVE-GHOSTWRITING",
+      "source_path": "https://media.journoportfolio.com/users/48175/images/652baf75-74a4-4eab-b45d-ad2419ac9db2.jpg",
+      "source_type": "photo",
+      "editability": "flattened",
+      "publication_permission": "unknown",
+      "contains_sensitive_data": false,
+      "redaction_notes": "The public Forbes article artwork contains no private identifiers or account data.",
+      "crop_notes": "Keep the complete 1024x682 archive thumbnail on the homepage only. The case page uses the published headlines and excerpts as its evidence and does not display the oversized stock-art cover.",
+      "caption": "Public article artwork from Mason's existing Localyze writing archive.",
+      "text_alternative": "Forbes Council article photograph of a professional working beside the Arno in Florence.",
+      "export_ready": false,
+      "public_path": "site/public/work/editorial/localyze-forbes-ghostwriting.jpg",
+      "dimensions": "1024x682",
+      "sha256": "95594d7f22adb75418d71cba734deab9c4987e4d7d5f5a4b113729dfe351bcc2",
+      "relocated_files": [
+        "private-evidence/retired-public-assets-2026-07-22/work/editorial/smartrecruiters-hiring-success.jpg"
+      ]
+    }
+  ]
+}

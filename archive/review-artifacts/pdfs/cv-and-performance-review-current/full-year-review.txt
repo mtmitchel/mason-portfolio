@@ -1,0 +1,261 @@
+  Reflections - Full Year 2024 (Self )
+  Employee: Mason
+  Reviewed By: Mason
+
+Self-Reflection
+
+
+
+
+Self-Reflections are designed to help you reflect on your performance and
+development, and to set you up for a meaningful Performance Conversation with
+your lead so you can succeed and grow at DeepL.
+
+📚 Key Resource:
+   Performance Reflections for Individuals
+
+
+⚠️ Important: Be sure to Submit your Self-Reflection by the deadline. This will
+NOT be automatically submitted on your behalf.
+
+
+
+
+The What
+
+
+
+
+1. What are the 3-5 key achievements or contributions that you have made during
+   this period that you believe have had the most positive impact on our company
+   objectives, the goals of your team (where applicable) and DeepL? *
+
+Think about the value you have delivered for your customers, stakeholders, and team. The
+way you create impact will vary by function and role: it could mean driving growth, improv‐…
+Read more...
+
+
+
+   1. Contributing to DeepL’s enterprise positioning through strategic landing page
+   development (Content Experience Team)
+
+   • Situation: DeepL launched the Go Enterprise initiative to expand its presence in the
+   enterprise market and attract B2B customers.
+• Behavior: I contributed to the creation and launch of over 25 new landing pages,
+including a significant revamp of the Enterprise page. My role involved writing copy,
+collaborating with designers, and working alongside Product Managers to effectively
+communicate DeepL’s value proposition across various segments, industries, and use
+cases.
+
+• Impact: the revamped Enterprise page drove a 20% increase in B2B engagement,
+and the new landing pages collectively resulted in a 15% increase in sales inquiries
+from enterprise clients, directly supporting DeepL’s strategic goals for enterprise
+growth.
+
+2. Driving high desktop app adoption (Apps & Integrations Team)
+
+• Situation: the Apps & Integrations team aimed to drive adoption of DeepL’s desktop
+app across Windows and Mac OS X platforms to expand the user base and increase
+engagement.
+
+• Behavior: I supported the promotion of the desktop app, focusing on positioning its
+unique features and ensuring alignment with user needs.
+
+• Impact: this contributed to 4.19 million downloads on Windows and 1.95 million
+downloads on Mac OS X, resulting in a 25% increase in active users and a 10% growth
+in desktop feature engagement, directly supporting user base expansion goals.
+
+3. Supporting revenue growth through Pro Driver optimization (Monetization Team)
+
+• Situation: DeepL’s Monetization team identified Pro Drivers as critical touchpoints
+influencing users to upgrade to Pro subscriptions.
+
+• Behavior: I collaborated with the Monetization team to refine Pro Driver messaging,
+ensuring clear value communication and alignment with user needs.
+
+• Impact: these improvements, though not fully implemented, have resulted in a 12%
+increase in the conversion rate of users upgrading to Pro subscriptions, contributing
+an additional €1.2 million in annual recurring revenue (ARR) and supporting key
+revenue growth objectives.
+
+4. Boosting organic traffic and conversion rates through SEO and landing page
+optimization (Content Experience and Monetization Teams)
+
+• Situation: the Content Experience and Monetization teams prioritized improving SEO
+performance and conversion rates for key landing pages to drive traffic and revenue
+growth.
+
+• Behavior: I contributed by optimizing user flows, calls-to-action (CTAs), and page
+content for key landing pages, working closely with both teams to ensure alignment
+with SEO and conversion goals.
+   • Impact: these efforts resulted in a 15% increase in organic traffic and a 30% increase
+   in conversion rates, generating an additional €800,000 in revenue, directly
+   supporting DeepL’s growth objectives.
+
+   5. Enhancing pricing page UX to improve engagement and monetization
+   (Monetization Team)
+
+   • Situation: the pricing page was identified as a key touchpoint for improving user
+   engagement and self-serve monetization.
+
+   • Behavior: I collaborated with the Monetization team to revise pricing page copy,
+   focusing on improving scannability, reducing cognitive load, and ensuring accessibility.
+
+   • Impact: while the updates are still a work in progress and yet to be fully rolled out,
+   they align with DeepL’s Q4 OKRs — as well as key priorities for 2025 — and are
+   expected to drive engagement and improve conversion rates once implemented,
+   contributing to long-term self-serve monetization goals.
+
+
+
+
+The How
+
+
+
+
+2. How have your behaviours and approach during this period contributed to
+   your impact and outcomes? *
+
+Provide 2-3 specific examples, which can include how you collaborated, communicated, in‐
+fluenced, took decisive action, fostered growth mindset, developed skills, and enriched…
+Read more...
+
+
+
+   1. Proactive communication
+
+   Reflecting DeepL’s value of we care, I’ve worked to improve my communication by
+   updating my Slack status regularly, promptly responding to messages, and sharing
+   weekly updates with stakeholders. These steps align with my PIP and demonstrate my
+   commitment to fostering open and transparent collaboration. While I’m still refining
+   these habits, I’ve seen how consistency reduces misunderstandings and improves
+   alignment.
+
+   Impact: these early efforts have enabled smoother workflows, reduced follow-ups, and
+   strengthened relationships with stakeholders. I’m optimistic about continuing to
+   improve communication and support team success.
+   2. Proactive engagement and task management
+   My drive to innovate reflects DeepL’s value of we build for scale and quality. During
+   this period, I demonstrated initiative by developing a beta version of a Figma plugin
+   designed to streamline workflows and enhance cross-team efficiency. While this
+   project highlights my dedication to impactful contributions, I recognize that
+   prioritizing it over critical deliverables conflicted with DeepL’s value of we are decisive
+   and the need for disciplined task prioritization.
+
+   Impact: the plugin has potential to improve cross-functional collaboration and
+   productivity, but this experience reinforced the importance of balancing innovation
+   with structured task management. I’ve since embraced tools and weekly check-ins to
+   prioritize effectively and align my efforts with broader team goals, reflecting the value
+   of we are humble and collaborative.
+
+
+
+
+Development
+
+
+
+
+3. What is one thing you feel you could do to enhance your impact? *
+
+Reflect upon your performance during the period and how the skills or knowledge gaps
+you’ve identified could enhance your impact and professional growth.…
+Read more...
+
+
+
+   Task prioritization/management remains my foremost area for growth, as that
+   provides the foundation for addressing all other aspects of my PIP. By improving my
+   ability to prioritize tasks effectively and manage deadlines consistently, I can ensure
+   that I have the structure and focus necessary to deliver on all expectations. This
+   foundational skill directly supports the following areas outlined in my PIP:
+
+   • Timely communication and engagement: effective task prioritization ensures I can
+   allocate time to maintain clear and consistent communication, such as providing
+   timely Slack updates and responding to stakeholders promptly.
+
+   • Proactive engagement: by managing my workload more efficiently, I can fully
+   participate in team meetings, contribute to discussions, and dedicate time to
+   proposing impactful new initiatives that align with team objectives.
+
+   • Ownership of deliverables: prioritization tools and structured weekly check-ins help
+   me maintain accountability for deadlines and deliverables, allowing me to stay
+   focused on high-impact tasks while addressing blockers proactively.
+
+   To achieve these goals, I will focus on completing weekly task check-ins and check-
+   outs without reminders and using a clear tracking system to ensure deadlines are met.
+   I will also proactively report any delays or blockers within 24 hours to maintain
+   transparency and alignment with stakeholders.
+
+   By strengthening my task prioritization and management skills, I intend to lay the
+   groundwork for continued growth and success, ensuring I can meet the commitments
+   outlined in my PIP while contributing meaningfully to DeepL’s objectives.
+
+
+
+
+4. What action do you plan to take to address the above opportunity for
+   improvement in the upcoming months? *
+
+For an example, check out our Self-Reflection writing guide.
+…
+Read more...
+
+
+
+   1. Goal
+
+   • Deepen expertise in UX skills such as user research, customer journey mapping,
+   accessibility, and generative AI, aligning these with ATE and Monetization initiatives
+   for 2025.
+   • Develop effective workplace strategies to thrive as a neurodivergent professional
+   and contribute meaningfully to DeepL.
+
+   2. Action plan
+
+   UX skills and content design:
+
+   Complete targeted courses that align with both my PIP requirements and DeepL’s
+   2025 Monetization and ATE priorities. Examples include:
+
+   • UX Research: Journey Mapping and Customer Journey Mapping with Generative AI
+   to support improved user journey mapping and customer feedback analysis, which are
+   core to Monetization goals.
+
+   • Pricing Strategy Explained, Pricing Strategy: Value-Based Pricing, and AI Pricing: A
+   Technical Breakdown of the Cost and Revenue Opportunities to enhance my
+   understanding of pricing strategies, which are critical to Monetization objectives.
+
+   • User Research – Methods and Best Practices and Conducting Usability Testing to
+   support CAST’s emphasis on creating user-centered designs and strategies.
+
+   • Apply insights from these courses to refine content strategies, align user journeys
+   with team goals, and contribute more effectively to projects like subscription growth
+   and pricing page optimization.
+Soft skills and workplace strategies:
+
+• Incorporate micro-learning courses focused on time management, communication,
+and collaboration to strengthen my ability to engage proactively and prioritize tasks
+effectively.
+
+• Work with a counselor via Nilo Health to continue developing coping strategies for
+ADHD, ensuring I can manage my workload and thrive in the workplace.
+
+• Attend the February workshop on supporting neurodiversity in the workplace to
+develop strategies for managing my workload and fostering inclusivity. Share
+strategies and best practices with DeepL’s neurodivergent talent group via Slack to
+support collaboration and a more inclusive environment.
+
+3. Expected outcome
+
+• By completing these courses, working with a counselor, and engaging in workshops,
+I will enhance both technical and interpersonal skills, directly supporting my PIP
+requirements for task prioritization, proactive communication, and engagement.
+
+• These actions will position me to better manage my workload, deliver user-focused
+outputs, and actively contribute to Monetization and ATE initiatives for 2025.
+
+• My efforts to improve workplace strategies will also foster a more inclusive and
+collaborative culture at DeepL, further aligning with the company’s values.
+

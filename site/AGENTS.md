@@ -22,10 +22,7 @@ validation, Git, and publication rules for `site/`.
   authentication, Tailwind, or external runtime state without explicit scope.
 - `README.md` owns the current route list, commands, and application overview.
   `CHANGELOG.md` owns meaningful user-visible and publication history.
-- `../private-evidence/` and `../claim-review.md` are private sources. Never copy
-  them, their raw excerpts, or private links into public routes or assets.
-- Public evidence belongs under `public/work/<case>/`. Raw, unsafe, exhaustive,
-  or private source material stays outside the public tree.
+- Public evidence belongs under `public/work/<case>/`.
 
 ## Evidence images and interaction
 
@@ -33,7 +30,7 @@ validation, Git, and publication rules for `site/`.
   a Figma-backed visual change. Never substitute an older or merely similar
   asset.
 - Export the product frame itself at 2x or 3x. Exclude headings, notes, comments,
-  selection borders, adjacent frames, and private data.
+  selection borders, and adjacent frames.
 - Every image needs truthful dimensions, descriptive alt text, and an
   evidence-based caption. Do not use `object-fit: cover`, arbitrary
   `object-position`, or fixed aspect ratios that hide interface evidence.
@@ -99,7 +96,7 @@ fully proves the change; a broader row subsumes the rows above it.
 | Site documentation only | From the repository root: `git diff --check -- site/` |
 | Public copy, route data, captions, or evidence assets | Production build, `node --test tests/rendered-html.test.mjs`, then root `git diff --check -- site/` |
 | TypeScript, TSX, worker, configuration, or shared interaction | Scoped ESLint, production build, rendered HTML tests, then root `git diff --check -- site/` |
-| Publication | All implementation proof plus Mason's claim/privacy approval, exact approved commit, terminal deployment result, and anonymous route verification |
+| Publication | All implementation proof plus Mason's approval, exact approved commit, terminal deployment result, and anonymous route verification |
 
 Canonical implementation checks:
 
@@ -125,6 +122,6 @@ running site; do not take screenshots unless explicitly requested.
 - Do not commit, push, save a Sites version, publish, change access, deploy, or
   update the public description without explicit authorization for that phase.
 - Approval of copy or code is not publication approval. Publication requires
-  final factual, ownership, confidentiality, and redaction review.
+  Mason's final review.
 - Distinguish local build proof, remote commit proof, saved-version proof,
   deployment proof, and anonymous public-access proof.

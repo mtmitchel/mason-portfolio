@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-07-18T13:16:25.209Z",
+  "export_root": "/home/mason/Downloads/gptexport",
+  "conversation_files": 53,
+  "total_conversations": 5270,
+  "total_user_messages": 26224,
+  "candidate_conversations": 451,
+  "review_spine_conversations": 5,
+  "extracted_source_messages": 1265,
+  "metric_candidates": 2587,
+  "correction_statements": 96,
+  "methodology": "Only user-authored messages are retained as evidence. Assistant responses are excluded from the source index."
+}
