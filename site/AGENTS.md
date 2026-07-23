@@ -14,9 +14,6 @@ validation, Git, and publication rules for `site/`.
 - Use literal, recruiter-scannable project names and direct case-study
   headlines. Do not use slogans, metaphors, faux drama, or advertising-style
   hooks to manufacture interest.
-- Use careful inference to make the story understandable, but never invent
-  research, ownership, collaborators, launch status, experimentation results or
-  business outcomes.
 - Keep marketing work secondary to UX copywriting and content design.
 
 ## Site and source boundaries
@@ -27,8 +24,6 @@ validation, Git, and publication rules for `site/`.
   `CHANGELOG.md` owns meaningful user-visible and publication history.
 - `../private-evidence/` and `../claim-review.md` are private sources. Never copy
   them, their raw excerpts, or private links into public routes or assets.
-- Historical Figma sources and canonical files are read-only. Follow
-  `../docs/figma-workflow.md` for any inspection or export.
 - Public evidence belongs under `public/work/<case>/`. Raw, unsafe, exhaustive,
   or private source material stays outside the public tree.
 
@@ -39,8 +34,6 @@ validation, Git, and publication rules for `site/`.
   asset.
 - Export the product frame itself at 2x or 3x. Exclude headings, notes, comments,
   selection borders, adjacent frames, and private data.
-- Preserve the historical UI. Cropping and approved confidentiality redaction
-  are allowed; silent redesign is not.
 - Every image needs truthful dimensions, descriptive alt text, and an
   evidence-based caption. Do not use `object-fit: cover`, arbitrary
   `object-position`, or fixed aspect ratios that hide interface evidence.

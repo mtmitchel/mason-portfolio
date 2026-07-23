@@ -58,9 +58,6 @@ selected project, claim, frame, or acceptance outcome.
 
 ## Evidence and confidentiality
 
-- This is an evidence-led UX writing and content-design portfolio. Do not invent
-  research, ownership, collaborators, lifecycle state, experiment results,
-  metrics, causation, or business outcomes.
 - Support artifact/state, Mason's contribution, lifecycle, and outcome as
   separate claim dimensions. Evidence for one dimension does not prove another.
 - Keep invitation URLs, account or subscription identifiers, emails, comments,
