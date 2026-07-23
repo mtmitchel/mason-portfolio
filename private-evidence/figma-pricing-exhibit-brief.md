@@ -1,6 +1,6 @@
-# Figma work brief: pricing evolution exhibits — REVISION 3
+# Figma work brief: pricing evolution exhibits — REVISION 4
 
-**Created:** 2026-07-23 · **Revision 3:** 2026-07-23
+**Created:** 2026-07-23 · **Revision 4:** 2026-07-23 (post peer review)
 **For:** Codex GPT 5.6 Sol, operating Figma through Mason's logged-in Chrome profile
 **Authorized by:** Mason, for this task only
 **Private document. Never copy its contents into public routes or assets.**
@@ -50,18 +50,18 @@ be revisited. It is not a preservation doctrine.
 
 ## Cleanup of earlier revisions (do first, idempotent)
 
+Save a named checkpoint `rev4 pre-cleanup` before deleting anything.
+
 In `Portfolio exhibits 2026-07`, if present:
 
-- Delete the old frame `EXHIBIT — Translator cumulative (portfolio
-  reconstruction)` if it was built on the old-design `Translate Tab / 1440px`
-  base (no product tab bar at top). Version history preserves it.
-- Delete any `BEFORE EXPORT — Bundle comparison table` duplicate (its source
-  table is clipped and unusable).
-- Keep existing Write / Voice exhibit duplicates; they get verified and
-  updated below.
+- Delete **every** exhibit duplicate from earlier revisions (all `EXHIBIT — …`
+  frames and any `BEFORE EXPORT — …` duplicates). The `rev4 pre-cleanup`
+  checkpoint and version history preserve them. Every cluster below starts
+  from a **fresh duplicate of its canonical source node**, so no stale
+  revision-2 or revision-3 edits leak into the new exhibits.
 - In `~/Projects/Mason Portfolio/private-evidence/figma-exports-pricing-2026-07/`,
   move any stale exports into `superseded/`.
-- Checkpoint: `rev3 cleanup done`.
+- Checkpoint: `rev4 cleanup done`.
 
 ## File and node inventory
 
@@ -84,6 +84,20 @@ Reference images (expected content of each base, from Mason):
 - `figma screenshots/Pro on Voice (2).png` = Cluster C base
 - `figma screenshots/Pro on Voice.png` = Cluster E base (API content)
 - `Monetization/….png` = "Copy island" Voice copy drafts (source for Cluster C wording; no edits there)
+- `Monetization/API.png` = historical API pricing page (source for the Cluster E Pro card content)
+
+### Source precedence
+
+When sources conflict: the base frame owns layout and design generation;
+`Monetization/Bundles@2x.png` owns bundle-era tier facts and terminology;
+Mason's red candidate copy (including the Copy island) owns wording;
+`Monetization/API.png` owns the API Pro card content. The older-generation
+`figma screenshots/1440px.png` / `1920px.png` are used **only** for the
+annual-discount figure — import no other facts or thresholds from them.
+
+Before mutating anything, record in the completion log the node IDs of: the
+Cluster D base inside `Pricing Pages`, both `Pro on Voice` frames (which is
+Voice, which is API), and every fresh exhibit duplicate.
 
 ## System-wide content rules (all clusters)
 
@@ -104,8 +118,9 @@ are the visible evidence of Mason's craft:
    prices (bundle page: €15.49 / €30.99 / €53.99) stay.
 4. **Standard security line everywhere:** `Maximum data security` — never
    "Enterprise-grade security protection."
-5. **Feature-line style:** green check, leading key word or number bold, rest
-   regular (match each card's existing styling).
+5. **Feature-line style:** green check; bold the differentiating quantity or
+   key phrase, which may fall mid-line (`Translate files up to **10 MB**`);
+   rest regular (match each card's existing styling).
 6. **New header lines:** duplicate an existing feature-line text layer in the
    same card, remove the check icon, set the line semibold in the standard
    dark color, end with a colon.
@@ -117,20 +132,32 @@ are the visible evidence of Mason's craft:
    auto layout close the gap; otherwise move remaining rows up.
 9. **Audience rows must differ between tiers.** Never repeat "For individuals
    and teams" on two cards.
-10. **CTA logic:** Start free trial (trial-eligible tiers), Buy now (highest
-    self-serve tier), Contact Sales (Enterprise/sales-led). Grid and
-    comparison table must agree.
+10. **CTA logic (Clusters C, D, E only):** Start free trial (trial-eligible
+    tiers), Buy now (highest self-serve tier), Contact Sales
+    (Enterprise/sales-led). Where a comparison table exists (Cluster D),
+    grid and table must agree. Clusters A and B are subscriber-view frames
+    with **no card CTAs** — that is intentional; do not add buttons.
 11. **Nav rule (Clusters A, B, C, E):** `Main Navigation` hidden; the product
     tab bar (DeepL Translator / Write / Voice / API) stays visible.
-12. **Bottom crop rule (Clusters A, B, C, E):** resize the exhibit frame to
-    end 64px below the card row; delete now-outside layers. Cluster D stays a
-    full page.
+12. **Bottom crop rule (Clusters A, B, C, E):** perform the crop **last**,
+    after all copy and layout edits have settled. First delete every layer
+    below the card row (testimonial and logo strips, banners, comparison
+    tables, FAQ, footer) **regardless of whether it starts inside the
+    intended bounds** — layers like "Join 500,000+ professionals…" begin
+    within 64px of the cards and would otherwise export partially clipped.
+    Then resize the frame to end 64px below the card row and verify the
+    final 64px band contains background only. Cluster D stays a full page.
+13. **Edit sequence (every cluster):** change text and visibility through
+    instance overrides first; detach only the smallest affected instance
+    when an override is impossible — never detach the card grid or a shared
+    component. Insert header lines as rows above the first feature line.
+    Finish all list edits, let auto layout settle, then crop (rule 12).
 
 ## Cluster D — Bundle-era page, cleaned (the "beginning")
 
 Base: duplicate of the bundle-era full page in `Pricing Pages`, renamed
 `EXHIBIT — Bundle era pricing (refined)`.
-Checkpoints: `rev3 cluster D start` / `rev3 cluster D done`.
+Checkpoints: `rev4 cluster D start` / `rev4 cluster D done`.
 
 This page has no `Main Navigation` layer — nothing to hide. Keep the full
 page: hero, toggle bar, cards, logo strip, quotes, "DeepL Pro for large
@@ -141,7 +168,8 @@ FAQ, footer.
 
 - Keep the `Add DeepL Write Pro` toggle.
 - Fix the incomplete label `Save % with annual` → `Save 16% with annual`
-  (16% is the figure used in this era's sibling frames).
+  (16% is the figure shown in `Monetization/Translator@2x.png` and
+  `figma screenshots/1920px.png`; cite both in the completion log).
 
 ### Cards
 
@@ -157,9 +185,11 @@ Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
   - **5** file translations per user/month
   - Translate files up to **10 MB**
   - **1 glossary** with unlimited entries
-- Group 2 `DeepL Write Pro` (keep its `Save 20%` badge). Replace the six
-  lines with these four (dedupe data security — it is already in group 1 —
-  and tighten):
+- Group 2 `DeepL Write Pro` (delete its `Save 20%` badge — the discount
+  becomes a list line so all three tiers express it identically). Replace
+  the six lines with these five (dedupe data security — it is already in
+  group 1 — and tighten):
+  - **20% off** DeepL Write Pro
   - **Unlimited** text improvements
   - **Unlimited** alternatives
   - **All** writing styles and tones
@@ -209,13 +239,16 @@ Keep: titles, descriptions, real prices (€15.49 / €30.99 / €53.99 /
   - Ultimate column CTA `Contact Sales` → `Buy now` (must match the card)
   - Team size row, Ultimate column: `For individuals and teams` →
     `For teams and businesses` (match the card)
-- Leave FAQ and footer as they are (already clean).
+- FAQ: delete the two placeholder subsections whose rows are all titled
+  `Question` (`Changes to your plan` and `Using DeepL`); keep the real
+  `Trials and purchases` questions. Do not write replacement questions.
+- Footer stays as-is.
 
 ## Cluster A — Translator cumulative (rebuilt on `Pro on Translate`)
 
 Base: fresh duplicate of `13:17289`, renamed
 `EXHIBIT — Translator cumulative (refined)`.
-Checkpoints: `rev3 cluster A start` / `rev3 cluster A done`.
+Checkpoints: `rev4 cluster A start` / `rev4 cluster A done`.
 
 Keep: product tab bar, hero, chips, blue account banner, currency selector,
 card titles, Recommended badge, all four descriptions. Delete all four
@@ -251,43 +284,48 @@ Delete every feature row except:
 
 ## Cluster B — Write add-on page, cleaned
 
-Base: existing duplicate of `13:17485`, renamed
+Base: fresh duplicate of `13:17485`, renamed
 `EXHIBIT — Write add-on (refined)`.
-Checkpoints: `rev3 cluster B start` / `rev3 cluster B done`.
+Checkpoints: `rev4 cluster B start` / `rev4 cluster B done`.
 
 Keep: hero, chips, product tab bar, account banner, currency selector,
 titles, Recommended badge. Delete all three placeholder price blocks. Apply
 nav + bottom-crop rules.
 
-**Important correction from revision 2:** `Terms to never edit` is a real
-product feature (the bundle-era comparison table gives it checkmarks per
-plan). Do **not** delete it — keep it with polished wording as specified.
+**Important correction (rev 4):** `Terms to never edit` is a real product
+feature, and the bundle-era comparison table checkmarks it **in the Free
+column**. It therefore belongs on the Free card — listing it under
+`Everything in Free, plus:` would assert a delta the Free plan already has.
+Keep the polished wording `Set terms to never edit`.
 
 **Free card**
-- Description (replaces lorem ipsum): `Basic writing improvements for
-  occasional use`
+- Description (replaces lorem ipsum): `Basic writing improvements with daily
+  limits`
 - Audience `1 user only`: keep.
 - Header `What's included:`.
-- Replace the single wrong line `Limited text translation` with three lines
+- Replace the single wrong line `Limited text translation` with four lines
   (facts from the bundle-era table's Free column):
   - **Daily** character limit
   - **Limited** text length
   - **Limited** writing styles and tones
+  - Set terms to never edit
 
 **Write Pro card**
 - Description: `Unlimited writing improvements with maximum data security`
 - Audience: resolve red `For individuals and teams` to black.
 - Header `Everything in Free, plus:`.
-- Replace the six existing lines with these five:
+- Replace the six existing lines with these four (`Set terms to never edit`
+  moved to Free — see the correction above):
   - **Maximum** data security
   - **Unlimited** text improvements
   - **Unlimited** alternatives
   - **All** writing styles and tones
-  - Set terms to never edit
 
-**Write Pro for Business card**
-- Description: `Write Pro with centralized administration for larger
-  organizations`
+**Business card**
+- Card title: rename `Write Pro for Business` → `DeepL Write for Business`
+  (the launch-era materials support `DeepL Write for Business`;
+  `Write Pro for Business` is not an attested plan name).
+- Description: `Manage Write access across your organization`
 - Audience: resolve red `Available from 50 users` to black.
 - Header `Everything in Write Pro, plus:`.
 - Delete all rows except:
@@ -296,9 +334,9 @@ plan). Do **not** delete it — keep it with polished wording as specified.
 
 ## Cluster C — Voice page, cleaned
 
-Base: existing duplicate of the true Voice frame, renamed
+Base: fresh duplicate of the true Voice frame (log its node ID), renamed
 `EXHIBIT — Voice add-on (refined)`.
-Checkpoints: `rev3 cluster C start` / `rev3 cluster C done`.
+Checkpoints: `rev4 cluster C start` / `rev4 cluster C done`.
 
 Keep: hero, chips, tab bar, card illustrations, titles, descriptions,
 Contact Sales buttons, Play video links. Delete both placeholder price
@@ -307,13 +345,16 @@ products, not tiers).
 
 Wording draws on Mason's own Copy island drafts (`Monetization/….png`).
 
-**DeepL Voice for Meetings** — replace the seven existing lines with:
+**DeepL Voice for Meetings** — replace the seven existing lines with these
+eight (one line, one fact — the previously merged lines are split, and the
+SSO threshold from the Copy island is restored):
 - **Maximum** data security
-- **Unlimited** voice translation with live captions
+- **Unlimited** voice translation
+- **Live captions** in **30+ languages**
+- Speaks **13 languages**
 - Works with team members and guests
-- Speaks **13 languages**; captions in **30+**
 - **Automatically generated** transcripts
-- Single sign-on (SSO)
+- Single sign-on (SSO) for **50+ users**
 - Native Microsoft Teams integration
 
 **DeepL Voice for Conversations** — replace the five existing lines with:
@@ -322,29 +363,37 @@ Wording draws on Mason's own Copy island drafts (`Monetization/….png`).
 - **Live on-screen** translation for one-on-one conversations
 - **Automatically generated** transcripts
 - Available on **iOS and Android**
-- Single sign-on (SSO)
+- Single sign-on (SSO) for **50+ users**
 
 ## Cluster E — API page, light touch (the end-state fourth tab)
 
 Base: duplicate of the API-content frame (whichever of `13:17681` /
 `13:17852` shows "Scale multilingual workflows with the DeepL API"), renamed
 `EXHIBIT — API pricing (refined)`.
-Checkpoints: `rev3 cluster E start` / `rev3 cluster E done`.
+Checkpoints: `rev4 cluster E start` / `rev4 cluster E done`.
 
 Keep: hero, the Translator API / Write API selector, chips, banner, titles,
 Recommended badge, CTAs (Sign up for free / Buy now / Contact Sales). Delete
 placeholder price blocks. Apply nav + bottom-crop rules.
 
-- **Free card:** add header `What's included:`. Keep its five lines. In the
+- **Free card:** add header `What's included:`. Delete the line
+  `Access to all features immediately` if present — it directly contradicts
+  the `Does not include:` block beneath it. Keep the remaining lines. In the
   `Does not include:` block, resolve the red `Access to the web translator`
   line to the standard muted styling of its sibling.
-- **Pro card:** add header `What's included:`. Resolve the red
-  `Access to the web translator` line as above. **OPEN ITEM:** the Pro card
-  is currently copy-identical to Free (same 500,000-character line) — a WIP
-  duplication. Mason must confirm the differentiating line (candidate:
-  `Usage-based pricing — pay for what you translate`) before it is applied.
-  If unconfirmed at execution time, leave the list as-is and log the open
-  item.
+- **Pro card (resolved in rev 4):** the WIP card is copy-identical to Free.
+  Rebuild it from the historical API page (`Monetization/API.png`), which
+  shows distinct Pro content. Add header `Everything in DeepL API Free,
+  plus:`, delete the duplicated Free lines (including the 500,000-character
+  line and `Access to all features immediately`), and build this list:
+  - Create and manage up to **25 API keys**
+  - **No volume** restrictions
+  - Pay as you go (**€20.00** per 1,000,000 characters) — real historical
+    price from the API page, keep it
+  - **Prioritized** execution of requests
+
+  If the card keeps a `Does not include:` block, resolve its red
+  `Access to the web translator` line as on the Free card.
 - **Business card:** keep its existing header `Everything in DeepL API Pro,
   plus:` (this card is the one place the cumulative pattern already existed —
   do not restyle it away). Resolve the red `Dedicated Customer Success
@@ -383,8 +432,11 @@ Create or update `export-log.md` in the destination folder:
 - Node IDs: Cluster D base within `Pricing Pages`; which `Pro on Voice` node
   is Voice vs API; all five exhibit frames; the section.
 - Reconstruction decisions applied (Ultimate audience rows, merged glossary
-  lines, Voice list rebuild, Write Pro list tightening, `Save 16%` fill-in,
-  API open item status).
+  lines, Voice list rebuild with split lines and SSO threshold, Write Pro
+  delta tightened to four lines with `Set terms to never edit` on Free,
+  `DeepL Write for Business` rename, uniform discount lines, `Save 16%`
+  fill-in with its two image sources, FAQ placeholder removal, API Pro
+  rebuild from `Monetization/API.png`).
 - Checkpoint names; exported files with pixel dimensions and source node IDs;
   override-vs-detach decisions; anything not completed exactly as specified.
 

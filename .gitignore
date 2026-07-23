@@ -1,20 +1,17 @@
 # Local private evidence and historical working material
-/Monetization/
 /private-evidence/*
-# Private-repository transfer bundle for the Windows Figwright task
+# Private-repository cross-machine bundle for the Figma pricing-exhibit task
 !/private-evidence/figma-pricing-exhibit-brief.md
+!/private-evidence/deepl-portfolio-current-direction.md
 !/private-evidence/figma-exports-pricing-2026-07/
 !/private-evidence/figma-exports-pricing-2026-07/**
 /archive/
 /tmp/
 /claim-review.md
 /mason cv.pdf
-/figma screenshots/*
-# Exact reference images required by the Windows Figwright task
-!/figma screenshots/1440px.png
-!/figma screenshots/1920px.png
-!/figma screenshots/Pro on Write.png
-!/figma screenshots/Pro on Voice (2).png
+# Monetization/ and figma screenshots/ are intentionally tracked: they are
+# reference material agents on other machines need for the Figma task.
+# The repository is private; never move them into public routes or assets.
 
 # Workstation noise
 .DS_Store

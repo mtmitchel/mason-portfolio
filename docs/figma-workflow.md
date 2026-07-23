@@ -14,21 +14,16 @@ recovery, or an explicitly authorized Figma edit. The repository-root
 - MCP access does not authorize a Figma write. The same read-only default and
   explicit edit approval below apply to every permitted access route.
 - Keep one Figma tab open. Work on one file and one bounded cluster at a time.
-- Restored source files are immutable provenance archives. Do not rename pages,
-  move nodes, change visibility, delete, annotate, or reorganize them.
 - Figma remains read-only unless Mason explicitly authorizes an edit in the
-  current task. Authorized edits belong only in the named working duplicate or
-  new canonical file.
+  current task.
 
 ## Evidence classification
 
 - Classify frame-level evidence by actual product and behavior, never by page or
   file name alone.
-- A screenshot, flattened image, PDF, or exported frame may be historical or
-  current evidence. It is never proof of editable active design work, WIP, or an
-  improvement.
-- Do not infer Current, Approved, Shipped, Ready for development, or another
-  lifecycle state without direct evidence.
+- Red text in Mason's DeepL working files is his authored candidate copy, not
+  disposable WIP. Adopt it by default in refined exhibits, restyled to standard
+  colors; never discard content merely because it is red.
 - Inventory the selected source cluster before moving or classifying it. Record
   its source file, page and node URL, theme/lifecycle evidence, editability,
   destination, duplicate relationship, portfolio value, evidence links,
@@ -48,8 +43,6 @@ recovery, or an explicitly authorized Figma edit. The repository-root
   page, frame or cluster, node ID/URL, and relationship type when available.
 - Classify relationships as direct, correlated, contextual, conflicting,
   recovery-only, Figma-only, or unresolved. Record unmatched items on both sides.
-- Keep artifact/state, contribution/role, lifecycle, and outcome/metric support
-  separate. Neither source automatically proves the other dimensions.
 - Update the private crosswalk when canonical destinations or node URLs change.
 
 ## Layout and performance for authorized edits
@@ -90,6 +83,9 @@ Never guess what Figma saved.
   notes, comments, selection borders, neighboring frames, and private data.
 - Keep portfolio annotations outside the exportable frame and use matching
   viewport, scale, and aspect ratio for comparisons.
+- Exhibits presented as a set must share one design generation, viewport, and
+  treatment (navigation, crop). Never export clipped or truncated frames as
+  evidence.
 - Verify the export against the exact source before changing the site.
 - Do not create screenshots, recordings, PDFs, or visual-diff artifacts unless
   Mason requested that exact deliverable.
@@ -99,5 +95,5 @@ Never guess what Figma saved.
 Do not claim completion while a required provenance, editability, mapping,
 navigation, load, save-state, confidentiality, or export check is unverified.
 Record the exact source/destination URLs, disposition, evidence relationship,
-claim ceiling, checkpoint or export result, and any unresolved evidence in the
-existing private owner for the task.
+checkpoint or export result, and any unresolved evidence in the existing
+private owner for the task.

@@ -11,9 +11,11 @@ nested `AGENTS.md` owns implementation details inside its subtree.
 - `site/` is the versioned portfolio application. Read `site/AGENTS.md` before
   changing its code, copy, routes, tests, or public assets.
 - `private-evidence/`, `claim-review.md`, `archive/`, `tmp/`, and the root CV are
-  local working material and are ignored by Git by default. Never publish or
-  stage them except for the exact private-repository cross-machine allowlist in
-  `.gitignore`; allowlisted items must never enter public routes or assets.
+  local working material and are ignored by Git by default, except for the
+  private-repository cross-machine allowlist in `.gitignore`. `Monetization/`
+  and `figma screenshots/` are tracked reference material for the
+  cross-machine Figma pricing-exhibit task. The repository is private; none of
+  this material may enter public routes or assets.
 - `private-evidence/deepl-portfolio-current-direction.md` owns the current DeepL
   portfolio selection, metric, writing, and layout decisions. Do not duplicate
   changing task state in this file.
@@ -60,16 +62,9 @@ selected project, claim, frame, or acceptance outcome.
 
 ## Evidence and confidentiality
 
-- Support artifact/state, Mason's contribution, lifecycle, and outcome as
-  separate claim dimensions. Evidence for one dimension does not prove another.
 - Keep invitation URLs, account or subscription identifiers, emails, comments,
   employee identities, internal tickets, participant data, unreleased features,
-  allocation details, private Figma links, and unsupported metrics private.
-- A screenshot, flattened image, PDF, or export may prove historical or current
-  state. It does not prove editable active design work or an improvement.
-- User-confirmed aggregate outcomes may appear only at their documented program
-  or experiment-wave scope, never attached to an individual screen without
-  direct support.
+  allocation details, and private Figma links private.
 
 ## Protected phases and artifacts
 
@@ -91,8 +86,8 @@ selected project, claim, frame, or acceptance outcome.
 
 ## Verification and closeout
 
-- Evidence or documentation changes: verify affected links, claim ceilings,
-  privacy boundaries, and `git diff --check` on the changed paths.
+- Evidence or documentation changes: verify affected links, privacy
+  boundaries, and `git diff --check` on the changed paths.
 - Site changes: follow the change-to-proof matrix in `site/AGENTS.md` and review
   the final diff from this repository root.
 - A handover is created only when Mason asks for one. It must be rebuilt from
