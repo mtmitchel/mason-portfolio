@@ -1,10 +1,11 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { readdir, readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 const publicRoot = new URL("../public/", import.meta.url);
+const privateRoot = new URL("../../private-evidence/", import.meta.url);
 
 async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -15,267 +16,435 @@ async function render(pathname = "/") {
   }, { waitUntil() {}, passThroughOnException() {} });
 }
 
+async function htmlFor(pathname) {
+  const response = await render(pathname);
+  assert.equal(response.status, 200, `${pathname} should render`);
+  return (await response.text()).replaceAll("<!-- -->", "");
+}
+
 function pngDimensions(buffer) {
   assert.equal(buffer.subarray(0, 8).toString("hex"), "89504e470d0a1a0a", "asset must be a PNG");
   return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
 }
 
-async function pngFiles(directory) {
-  const entries = await readdir(new URL(directory, publicRoot), { withFileTypes: true, recursive: true });
-  return entries.filter((entry) => entry.isFile() && entry.name.endsWith(".png"));
+function jpegDimensions(buffer) {
+  assert.equal(buffer.subarray(0, 2).toString("hex"), "ffd8", "asset must be a JPEG");
+  const markers = new Set([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf]);
+  let offset = 2;
+  while (offset < buffer.length) {
+    if (buffer[offset] !== 0xff) { offset += 1; continue; }
+    const marker = buffer[offset + 1];
+    if (marker === 0xd8 || marker === 0xd9) { offset += 2; continue; }
+    const length = buffer.readUInt16BE(offset + 2);
+    if (markers.has(marker)) return { height: buffer.readUInt16BE(offset + 5), width: buffer.readUInt16BE(offset + 7) };
+    offset += 2 + length;
+  }
+  assert.fail("JPEG dimensions were not found");
 }
 
-const caseRoutes = [
-  ["/work/pro-driver-experiments", "Designing hard blockers across DeepL Translator and Write", "Hard blockers"],
-  ["/work/checkout", "Designing subscription checkout across trial and no-trial states", "Subscription checkout"],
-  ["/work/multi-factor-authentication", "Designing MFA account recovery from failed login to restored protection", "MFA account recovery"],
-  ["/work/bulk-administration", "Designing a complete bulk user deletion flow", "Bulk user deletion"],
-  ["/work/csv-import", "Designing an add-users flow that scales from one person to a CSV", "Adding users at scale"],
-  ["/work/custom-domain", "Designing a custom-domain lifecycle an admin can safely manage", "Custom domain management"],
-  ["/work/custom-logo", "Designing clear feedback for uploading and removing a team logo", "Custom logo management"],
-  ["/work/team-access", "Clarifying roles, status and access in team administration", "Team access controls"],
-  ["/work/localization-report", "Turning localization research into a clear business narrative", "Localization research report"],
-  ["/work/report-campaign", "Extending one research report across several editorial formats", "Localization report campaign"],
-  ["/work/data-security", "Explaining DeepL’s data-security safeguards in plain language", "Data security article"],
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function relativeLuminance(hex) {
+  const channels = hex.match(/[a-f\d]{2}/gi).map((part) => Number.parseInt(part, 16) / 255);
+  const linear = channels.map((value) => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4);
+  return .2126 * linear[0] + .7152 * linear[1] + .0722 * linear[2];
+}
+
+function contrastRatio(foreground, background) {
+  const values = [relativeLuminance(foreground), relativeLuminance(background)].sort((a, b) => b - a);
+  return (values[0] + .05) / (values[1] + .05);
+}
+
+const selectedRoutes = [
+  ["/work/upgrade-prompts", "Upgrade prompts across Translator and Write"],
+  ["/work/write-pro-launch", "Write Pro launch, pricing and feature awareness"],
+  ["/work/checkout", "Subscription checkout"],
+  ["/work/account-team-security", "Account, team and security writing"],
+  ["/work/report-campaign", "Localization report campaign"],
+  ["/work/localyze-executive-ghostwriting", "Executive ghostwriting"],
 ];
 
-const comparisonOnlyRoutes = new Set([
-  "/work/custom-domain",
-  "/work/custom-logo",
-  "/work/localization-report",
-  "/work/report-campaign",
-  "/work/data-security",
-]);
-const homepageRoutes = caseRoutes.filter(([route]) => !comparisonOnlyRoutes.has(route));
-
-test("homepage presents the six finished, image-led stories", async () => {
-  const response = await render("/");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  assert.match(html, /<title>Mason Mitchel — UX Copywriter &amp; Content Designer<\/title>/);
-  assert.match(html, /class="project-list"/);
-  assert.match(html, /href="\/work\/candidate-review"/);
-  assert.match(html, /View all 10 DeepL projects/);
-  for (const [route, , cardTitle] of homepageRoutes) {
-    assert.match(html, new RegExp(`href="${route}"`));
-    assert.match(html, new RegExp(cardTitle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-  }
-  assert.doesNotMatch(html, /href="\/work\/(?:translator-upgrade|write-pro|trial-eligibility|global-pricing)"/);
-  assert.doesNotMatch(html, /Translator upgrade prompts|DeepL Write Pro upgrades|Trial eligibility|Global pricing and checkout/);
-  assert.doesNotMatch(html, /subscription-lifecycle|In progress|Dev area|placeholder|Figma/i);
-});
-
-test("DeepL index is an index, not a monolithic case-study page", async () => {
-  const response = await render("/work/candidate-review");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  assert.match(html, /UX writing, content design and editorial work at DeepL/);
-  assert.match(html, /class="project-list"/);
-  assert.equal((html.match(/class="project-entry"/g) ?? []).length, 10);
-  assert.match(html, /Product option 1 · Hard blockers/);
-  assert.match(html, /Product option 2 · Checkout/);
-  assert.match(html, /Admin option 1 · Account security/);
-  assert.match(html, /Admin option 2 · Bulk deletion/);
-  assert.match(html, /Admin option 3 · Add users/);
-  assert.match(html, /Admin option 4 · Custom domain/);
-  assert.match(html, /Admin option 5 · Custom logo/);
-  assert.match(html, /Marketing option 3 · Data security/);
-  assert.match(html, /content="(?:noindex, nofollow|nofollow, noindex)"/);
-  assert.doesNotMatch(html, /proposal|audit|rank|candidate number|node-id=|figma\.com|subscription-lifecycle/i);
-});
-
-for (const [pathname, heading] of caseRoutes) {
-  test(`renders ${pathname} as a complete story`, async () => {
-    const response = await render(pathname);
-    assert.equal(response.status, 200);
-    const html = (await response.text()).replaceAll("<!-- -->", "");
-    assert.match(html, new RegExp(heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-    assert.match(html, /01 · (?:The experience|The publication|The campaign|The article)/);
-    assert.match(html, /The decisions doing the work/);
-    assert.match(html, /What the work made possible/);
-    assert.match(html, /What this shows/);
-    assert.match(html, /href="\/work\/candidate-review"/);
-    assert.doesNotMatch(html, /placeholder (?:image|visual|section)|Figma canvas|sticky note|node-id=|figma\.com/i);
-  });
-}
-
-test("hard-blocker case presents ten distinct source visuals", async () => {
-  const response = await render("/work/pro-driver-experiments");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  const matches = html.match(/\/work\/hard-blockers\/[^"? ]+\.png/g) ?? [];
-  const sources = new Set(matches);
-  assert.equal(sources.size, 10);
-  assert.ok(sources.has("/work/hard-blockers/remaining-documents.png"));
-  assert.ok(sources.has("/work/hard-blockers/write-pro-illustrated-free.png"));
-  assert.ok(sources.has("/work/hard-blockers/write-pro-illustrated-translator-pro.png"));
-});
-
-test("MFA case presents the safe recovery journey and omits credentials", async () => {
-  const response = await render("/work/multi-factor-authentication");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  const matches = html.match(/\/work\/multi-factor-authentication\/mfa-recovery-[^"? ]+\.png/g) ?? [];
-  assert.equal(new Set(matches).size, 5);
-  assert.match(html, /From failed authentication to an active security state/);
-  assert.match(html, /credential-bearing setup screen is intentionally omitted/);
-  assert.doesNotMatch(html, /mfa-recovery-05-protection-restored-full|authenticator secret|QR code/i);
-});
-
-test("bulk-deletion case presents one complete six-state journey", async () => {
-  const response = await render("/work/bulk-administration");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  const matches = html.match(/\/work\/bulk-administration\/bulk-delete-[^"? ]+\.png/g) ?? [];
-  assert.equal(new Set(matches).size, 6);
-  assert.match(html, /From a scoped user set to a visible result/);
-  assert.match(html, /fictional domain\.com demo accounts/);
-});
-
-test("add-users case presents all 84 exported source layers", async () => {
-  const response = await render("/work/csv-import");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  const matches = html.match(/\/work\/csv-import\/complete-source\/[^"?]+?\.png/g) ?? [];
-  assert.equal(new Set(matches).size, 84);
-  assert.match(html, /Every exported layer from the add-and-manage users source flow/);
-  assert.match(html, /All 84 exported layers from the source cluster are shown here before selection/);
-});
-
-test("custom-domain case presents all 19 source exports", async () => {
-  const response = await render("/work/custom-domain");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  const matches = html.match(/\/work\/custom-domain\/[^"?]+?\.png/g) ?? [];
-  assert.equal(new Set(matches).size, 19);
-  assert.match(html, /Every export from the custom-domain source flow/);
-  assert.match(html, /All 19 exports from the custom-domain source flow are shown here before selection/);
-});
-
-test("custom-logo case presents all nine source exports", async () => {
-  const response = await render("/work/custom-logo");
-  assert.equal(response.status, 200);
-  const html = (await response.text()).replaceAll("<!-- -->", "");
-  const matches = html.match(/\/work\/custom-logo\/[^"?]+?\.png/g) ?? [];
-  assert.equal(new Set(matches).size, 9);
-  assert.match(html, /Every export from the custom-logo source flow/);
-  assert.match(html, /All nine exports from the custom-logo source flow are shown here before selection/);
-});
-
-for (const [pathname, destination] of [
-  ["/work/translator-upgrade", "/work/pro-driver-experiments"],
-  ["/work/write-pro", "/work/pro-driver-experiments"],
+const retiredRoutes = [
+  ["/work/pro-driver-experiments", "/work/upgrade-prompts"],
+  ["/work/translator-upgrade", "/work/upgrade-prompts"],
+  ["/work/write-pro", "/work/upgrade-prompts"],
   ["/work/trial-eligibility", "/work/checkout"],
   ["/work/global-pricing", "/work/checkout"],
-]) {
-  test(`${pathname} redirects to its consolidated case`, async () => {
-    const response = await render(pathname);
-    assert.equal(response.status, 307);
-    assert.equal(new URL(response.headers.get("location"), "http://localhost").pathname, destination);
+  ["/work/localization-report", "/work/report-campaign"],
+  ["/work/hiring-success-methodology", "/writing#smartrecruiters-hiring-success"],
+  ["/work/data-security", "/writing"],
+  ["/work/ux-copy", "/writing"],
+  ["/work/bulk-administration", "/work/account-team-security#bulk-user-deletion"],
+  ["/work/team-access", "/work/account-team-security"],
+  ["/work/candidate-review", "/"],
+  ["/work/multi-factor-authentication", "/work/account-team-security#account-security"],
+  ["/work/csv-import", "/"],
+  ["/work/custom-domain", "/"],
+  ["/work/custom-logo", "/"],
+];
+
+const selectedAssets = [
+  ["work/hard-blockers/usage-limit.png", 1092, 1500],
+  ["work/hard-blockers/formality.png", 1092, 1150],
+  ["work/hard-blockers/glossaries.png", 1092, 1388],
+  ["work/hard-blockers/document-size.png", 1092, 1204],
+  ["work/hard-blockers/remaining-documents.png", 546, 626],
+  ["work/hard-blockers/network-usage-limit.png", 1092, 1600],
+  ["work/hard-blockers/write-pro-illustrated-free.png", 1648, 1504],
+  ["work/hard-blockers/write-pro-illustrated-translator-pro.png", 1648, 1504],
+  ["work/write-pro-launch/feature-awareness-security.png", 3024, 1431],
+  ["work/write-pro-launch/pricing-translator.png", 3840, 1459],
+  ["work/write-pro-launch/pricing-write-pro.png", 2482, 1233],
+  ["work/write-pro-launch/pricing-bundle.png", 2880, 2099],
+  ["work/account-team-security/account-security-login.png", 2880, 1950],
+  ["work/account-team-security/account-security-authentication-error.png", 2880, 1938],
+  ["work/account-team-security/account-security-reset-required.png", 1176, 720],
+  ["work/account-team-security/account-security-protection-restored.png", 2360, 734],
+  ["work/bulk-administration/bulk-delete-confirmation-card.png", 2000, 1500],
+  ["work/bulk-administration/bulk-delete-06-result-detail.png", 2600, 500],
+  ["work/subscription-checkout/fresh/start-my-free-trial.png", 3024, 1800],
+  ["work/subscription-checkout/fresh/bundle-checkout.png", 3024, 2864],
+  ["work/subscription-checkout/fresh/team-license-checkout.png", 3024, 2864],
+  ["work/subscription-checkout/fresh/no-trial-ultimate-checkout.png", 3024, 2738],
+  ["work/localization-report/report-cover.png", 1488, 1100],
+  ["work/localization-report/key-findings.png", 1488, 2105],
+  ["work/localization-report/recommendations.png", 1488, 2105],
+  ["work/report-campaign/ai-content-generation.png", 1488, 1100],
+  ["work/report-campaign/hubspot-case-study.png", 1488, 2105],
+  ["work/report-campaign/phrase-case-study.png", 1488, 2105],
+  ["work/editorial/localyze-forbes-ghostwriting.jpg", 1024, 682],
+];
+
+const exactQuotes = [
+  "We didn't choose to refashion our platform simply because we thought it needed a new look or wanted to strengthen our position in the marketplace.",
+  "The onboarding process is what bridges the gap between the candidate and employee experience.",
+  "French cuisine is often reputed for being overly fancy and expensive, when, in fact, so much of it is simple, honest, and affordable—coq au vin exemplifies this.",
+  "Without a doubt, hybrid working on a global scale adds several layers of logistical complexity.",
+  "The best locations will be those where public policies ensure well-being, support for ongoing training and research and social safety nets.",
+  "But before long, hybrid or remote work arrangements will be the rule rather than the exception, and flexibility is only a part of the Great Resignation equation.",
+  "96% of respondents report positive ROI from localization efforts, suggesting the significant value of these initiatives.",
+  "AI-assisted writing tools are used by 77% of respondents, and machine translation by an astonishing 98%.",
+  "HubSpot owns and manages over 75,000 web assets like landing pages, blog posts, and more.",
+];
+
+test("homepage renders exactly six projects in row-major content order", async () => {
+  const html = await htmlFor("/");
+  assert.match(html, /<title>Mason Mitchel — UX Copywriter &amp; Content Designer<\/title>/);
+  assert.equal((html.match(/class="project-entry"/g) ?? []).length, 6);
+  let previous = -1;
+  for (const [route, title] of selectedRoutes) {
+    const index = html.indexOf(`href="${route}"`);
+    assert.ok(index > previous, `${title} should follow the approved order`);
+    previous = index;
+  }
+  assert.doesNotMatch(html, /Hiring Success methodology|Writing collection|Airy/);
+  assert.doesNotMatch(html, /href="\/work\/bulk-administration"/);
+});
+
+test("selected work and writing retain the identical shared shell", async () => {
+  const [selected, writing] = await Promise.all([htmlFor("/"), htmlFor("/writing")]);
+  for (const marker of [
+    "Mason Mitchel",
+    "UX copywriter and content designer across product, growth and enterprise.",
+    "I write the words inside products",
+    "Localyze and SmartRecruiters",
+    "mtmitchel@gmail.com",
+  ]) {
+    assert.match(selected, new RegExp(escapeRegExp(marker)));
+    assert.match(writing, new RegExp(escapeRegExp(marker)));
+  }
+  assert.match(selected, /href="\/" aria-current="page">Selected work<\/a>/);
+  assert.match(selected, /href="\/writing">Writing<\/a>/);
+  assert.match(writing, /href="\/">Selected work<\/a>/);
+  assert.match(writing, /href="\/writing" aria-current="page">Writing<\/a>/);
+});
+
+test("the route switcher is real navigation with no client state", async () => {
+  const component = await readFile(new URL("app/components/WorkIndexPage.tsx", root), "utf8");
+  assert.doesNotMatch(component, /["']use client["']|useState|onClick/);
+  assert.match(component, /<nav className="work-switcher" aria-label="Portfolio view">/);
+});
+
+for (const [pathname, title] of selectedRoutes) {
+  test(`${pathname} renders the selected ${title} case`, async () => {
+    const html = await htmlFor(pathname);
+    assert.match(html, /Back to selected work/);
+    assert.match(html, /<h1>/);
+    assert.doesNotMatch(html, /noindex/);
   });
 }
 
-test("public evidence assets are intentional PNGs with usable dimensions", async () => {
-  const assets = [
-    "work/hard-blockers/usage-limit.png",
-    "work/hard-blockers/formality.png",
-    "work/hard-blockers/glossaries.png",
-    "work/hard-blockers/document-size.png",
-    "work/hard-blockers/remaining-documents.png",
-    "work/hard-blockers/network-usage-limit.png",
+test("the flagship uses one canonical, indexable URL", async () => {
+  const html = await htmlFor("/work/upgrade-prompts");
+  assert.equal((html.match(/rel="canonical"/g) ?? []).length, 1);
+  assert.match(html, /<link rel="canonical" href="\/work\/upgrade-prompts"\/>/);
+  assert.doesNotMatch(html, /noindex|nofollow/);
+  assert.match(html, /Writing upgrade prompts across DeepL Translator and Write/);
+});
+
+for (const [pathname, destination] of retiredRoutes) {
+  test(`${pathname} redirects once to ${destination}`, async () => {
+    const response = await render(pathname);
+    assert.equal(response.status, 307);
+    const location = new URL(response.headers.get("location"), "http://localhost");
+    assert.equal(`${location.pathname}${location.hash}`, destination);
+    const finalResponse = await render(`${location.pathname}${location.hash}`);
+    assert.equal(finalResponse.status, 200, `${destination} must be the final destination`);
+  });
+}
+
+test("case-to-case navigation follows the homepage order", async () => {
+  for (const [route, next] of [
+    ["/work/upgrade-prompts", "/work/write-pro-launch"],
+    ["/work/write-pro-launch", "/work/checkout"],
+    ["/work/checkout", "/work/account-team-security"],
+    ["/work/account-team-security", "/work/report-campaign"],
+    ["/work/report-campaign", "/work/localyze-executive-ghostwriting"],
+    ["/work/localyze-executive-ghostwriting", "/writing"],
+  ]) assert.match(await htmlFor(route), new RegExp(`class="next-project"[\\s\\S]*href="${escapeRegExp(next)}"`));
+});
+
+test("Write Pro launch keeps pricing and feature awareness separate from experiment results", async () => {
+  const html = await htmlFor("/work/write-pro-launch");
+  assert.match(html, /Explaining DeepL Write Pro across pricing and feature awareness/);
+  assert.match(html, /feature-awareness-security\.png/);
+  assert.match(html, /pricing-translator\.png/);
+  assert.match(html, /pricing-write-pro\.png/);
+  assert.match(html, /pricing-bundle\.png/);
+  assert.match(html, /Historical plan names and prices remain; features that also appear on the current pricing page use the current wording/);
+  assert.match(html, /Translator, Write Pro and bundles/);
+  assert.match(html, /No conversion or revenue result is attributed to this pricing or feature-awareness work/);
+  assert.doesNotMatch(html, /paid conversion rose 12%|seven figures/);
+  for (const copy of [
+    "Keep your sensitive information protected. DeepL Pro safeguards your data with enterprise-grade encryption, and your texts are never stored without your consent.",
+    "Clarify improves translations by asking questions when your text is ambiguous, then adjusting based on your answers. Currently available for German ↔ English translations.",
+    "Say goodbye to endless copy and paste. Translate entire files in just a few clicks — formatting included.",
+    "Not every conversation sounds the same. Set your translation to formal or informal to match the situation.",
+    "Consistency matters in translation. Create and manage a personal glossary so key terms are translated your way, every time. With DeepL Pro, upload glossaries of up to 10 MB.",
+  ]) assert.match(html, new RegExp(escapeRegExp(copy)));
+  assert.match(html, /Translate entire files in a single click/);
+  assert.match(html, /aria-label="Finalized feature-awareness copy"[\s\S]*<ul>/);
+  assert.doesNotMatch(html, /single-click|organisation|personalized glossary|always accurate/);
+});
+
+test("upgrade prompts keep the wave result and accurate visible-state copy", async () => {
+  const html = await htmlFor("/work/upgrade-prompts");
+  assert.match(html, /Every blocker names its reason—usage, file size or feature access—in the first line of body copy/);
+  assert.match(html, /Across the whole experiment wave, paid conversion rose 12% and ARR rose by seven figures/);
+  assert.match(html, /That result belongs to the wave, not to any single screen here/);
+  assert.match(html, /offer-first headline, explanatory body copy/);
+  for (const token of ["{5}", "{1}", "{16}"]) assert.match(html, new RegExp(escapeRegExp(token)));
+  assert.doesNotMatch(html, /write-pro-free\.png|write-pro-existing-translator-pro\.png|with a countdown/);
+});
+
+test("account, team and security writing leads with security and contains bulk deletion as one section", async () => {
+  const [home, html] = await Promise.all([htmlFor("/"), htmlFor("/work/account-team-security")]);
+  for (const asset of ["account-security-protection-restored.png", "account-security-reset-required.png", "bulk-delete-confirmation-card.png"]) {
+    assert.match(home, new RegExp(asset));
+  }
+  assert.doesNotMatch(home, /account-security-authentication-error\.png/);
+  assert.match(home, /Account, team and security writing/);
+  assert.doesNotMatch(home, /Bulk user deletion/);
+  assert.doesNotMatch(home, /href="\/work\/bulk-administration"/);
+  assert.equal((html.match(/class="story-evidence artifact-collection-section"/g) ?? []).length, 2);
+  assert.match(html, /id="account-security"/);
+  assert.match(html, /id="bulk-user-deletion"/);
+  for (const asset of ["account-security-login.png", "account-security-authentication-error.png", "account-security-reset-required.png", "account-security-protection-restored.png"]) {
+    assert.match(html, new RegExp(escapeRegExp(asset)));
+  }
+  assert.match(html, /Bulk deletion is one representative pattern within the wider account and team collection, not a standalone portfolio story/);
+  assert.match(html, /bulk-delete-06-result-detail\.png/);
+  assert.match(html, /Users deleted toast above a zero-result table footer reading Displaying 0-0 of 0/);
+  assert.doesNotMatch(html, /Congrats! No users, no problems!|bulk-delete-06-result\.png/);
+});
+
+test("checkout renders sign-up, bundle, team and no-trial states", async () => {
+  const html = await htmlFor("/work/checkout");
+  for (const asset of ["start-my-free-trial.png", "bundle-checkout.png", "team-license-checkout.png", "no-trial-ultimate-checkout.png"]) {
+    assert.match(html, new RegExp(escapeRegExp(asset)));
+  }
+  assert.match(html, /Writing checkout for trial, no-trial, bundle and team purchases/);
+});
+
+test("writing contains the five approved entries and no data-security placeholder", async () => {
+  const html = await htmlFor("/writing");
+  assert.equal((html.match(/class="writing-entry"/g) ?? []).length, 5);
+  for (const id of [
+    "localyze-product-guidance",
+    "smartrecruiters-hiring-success",
+    "smartrecruiters-onboarding",
+    "joblift-renewable-energy",
+    "kitchen-stories-french-recipes",
+  ]) assert.match(html, new RegExp(`id="${id}"`));
+  assert.doesNotMatch(html, /deepl-data-security|data-security safeguards|enterprise-grade security/i);
+});
+
+test("quoted samples preserve the validated source strings exactly", async () => {
+  const pages = await Promise.all([htmlFor("/writing"), htmlFor("/work/report-campaign"), htmlFor("/work/localyze-executive-ghostwriting")]);
+  const combined = pages.join("\n");
+  for (const quote of exactQuotes) assert.match(combined, new RegExp(escapeRegExp(quote)), quote);
+  for (const altered of [
+    "Hybrid working on a global scale adds several layers of logistical complexity.",
+    "The best locations will be those where public policies support wellbeing",
+    "96% of respondents reported a positive ROI from localization efforts.",
+    "machine translation by 98%.",
+    "more than 75,000 web assets.",
+  ]) assert.doesNotMatch(combined, new RegExp(escapeRegExp(altered)));
+});
+
+test("headlines and chapter structures are labelled text, not quotations", async () => {
+  const html = await htmlFor("/writing");
+  assert.equal((html.match(/<blockquote>/g) ?? []).length, 3);
+  assert.match(html, /writing-sample writing-sample--structure/);
+  assert.match(html, /Structure:<\/span> Four parts: Evaluate, Strategize, Transform, Optimize\./);
+  assert.match(html, /writing-sample writing-sample--headline/);
+  assert.match(html, /Headline:<\/span> Renewable Energy: Wind Power Adds Close to 50,000 Jobs to U\.S\. Economy and Spurs Growth in Midwest/);
+  assert.doesNotMatch(html, /Editorial decision/);
+});
+
+test("Hiring Success uses the real title, contribution and lifecycle note", async () => {
+  const html = await htmlFor("/writing");
+  assert.match(html, /The Definitive Guide to Hiring Success/);
+  assert.match(html, /Mason wrote the 2019 edition/);
+  assert.match(html, /current resource is gated behind a short form and now contains newer material/);
+});
+
+test("Localyze shows full headlines, exact excerpts and the ghostwriting/byline distinction", async () => {
+  const html = await htmlFor("/work/localyze-executive-ghostwriting");
+  for (const headline of [
+    "Considering An International Hybrid Setup? What Business Leaders Need To Know",
+    "Why Public Policy Should Determine The Location Of Your International Entity",
+    "Five Tips For Developing A Global Mobility Policy During The Great Resignation",
+  ]) assert.match(html, new RegExp(escapeRegExp(headline)));
+  assert.match(html, /I wrote the articles for Hanna Marie Asmussen\. Forbes published them under her name/);
+  assert.doesNotMatch(html, /editorial-cover|localyze-forbes-ghostwriting\.jpg/);
+});
+
+test("report campaign restores the exact writing and article-adaptation asset", async () => {
+  const html = await htmlFor("/work/report-campaign");
+  assert.match(html, /report-campaign\/ai-content-generation\.png/);
+  assert.match(html, /Report<\/span><strong>Full research narrative/);
+  assert.match(html, /Article<\/span><strong>Fast entry point/);
+  assert.match(html, /Customer stories<\/span><strong>Operating examples/);
+  assert.match(html, /Page nine closes the HubSpot story and opens Phrase's\./);
+  assert.doesNotMatch(html, /<blockquote><span>Report finding/);
+  assert.match(html, /<span>Report finding<\/span><blockquote><p>96% of respondents report positive ROI/);
+});
+
+test("selected assets retain truthful dimensions and unique contents", async () => {
+  const hashes = new Set();
+  for (const [asset, width, height] of selectedAssets) {
+    const buffer = await readFile(new URL(asset, publicRoot));
+    const dimensions = asset.endsWith(".png") ? pngDimensions(buffer) : jpegDimensions(buffer);
+    assert.deepEqual(dimensions, { width, height }, `${asset} dimensions should match`);
+    const hash = createHash("sha256").update(buffer).digest("hex");
+    assert.ok(!hashes.has(hash), `${asset} should not duplicate another selected asset`);
+    hashes.add(hash);
+  }
+});
+
+test("derivatives and restored assets match their private provenance records", async () => {
+  const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
+  assert.equal(manifest.version, "1.3");
+  assert.equal(manifest.assets.length, 6);
+  for (const asset of manifest.assets) {
+    for (const field of ["id", "project_id", "source_path", "source_type", "publication_permission", "crop_notes", "caption", "text_alternative"]) {
+      assert.equal(typeof asset[field], "string", `${asset.id}.${field} should be recorded`);
+      assert.ok(asset[field].length > 0, `${asset.id}.${field} should not be empty`);
+    }
+    assert.equal(asset.contains_sensitive_data, false);
+    assert.equal(asset.export_ready, false);
+  }
+  const records = JSON.stringify(manifest);
+  for (const hash of [
+    "d8f0ac76dbe7990f01ac5383776a35e8abf20c2af6a7fd12cf154f4ec5d6f6b0",
+    "4ce8ff6e44423d167c5089a843497620f31a9a8e14dcc1c80d32de84d2617ed1",
+    "880e9c685c46b0d03ecf0b08096bd1ebacebffb9d67107ba486c15854e976dd0",
+    "8567b050cb463973483aa22fd3184f40c9436225e122b5c6cf0eb8bc11e80cda",
+    "ecbb01394236b50b0914da2055e3bffb913a2d7c8d59152240a09468fe752c38",
+    "fd5ad9735dd5f37b59d88381d309c3b65be2b90953b35e35089089ea4539b667",
+  ]) assert.match(records, new RegExp(hash));
+  for (const source of [
+    "retired-public-assets-2026-07-22/work/bulk-administration/bulk-delete-06-result.png",
+    "retired-public-assets-2026-07-22/work/hard-blockers/write-pro-free.png",
+    "retired-public-assets-2026-07-22/work/editorial/smartrecruiters-hiring-success.jpg",
+  ]) assert.match(records, new RegExp(escapeRegExp(source)));
+});
+
+test("retired galleries, weak public assets and dead source modules are absent", async () => {
+  for (const directory of [
+    "csv-import", "custom-domain", "custom-logo", "data-security", "global-pricing",
+    "multi-factor-authentication", "team-access", "translator-free-to-paid", "trial-eligibility", "write-pro-upgrade",
+  ]) await assert.rejects(access(new URL(`work/${directory}/`, publicRoot)), `${directory} should be private`);
+  for (const file of [
     "work/hard-blockers/write-pro-free.png",
     "work/hard-blockers/write-pro-existing-translator-pro.png",
-    "work/hard-blockers/write-pro-illustrated-free.png",
-    "work/hard-blockers/write-pro-illustrated-translator-pro.png",
-    "work/subscription-checkout/fresh/bundle-checkout.png",
-    "work/subscription-checkout/fresh/start-my-free-trial.png",
-    "work/subscription-checkout/fresh/team-license-checkout.png",
-    "work/subscription-checkout/fresh/no-trial-ultimate-checkout.png",
-    "work/multi-factor-authentication/mfa-recovery-01-entry.png",
-    "work/multi-factor-authentication/mfa-recovery-02-authentication-error.png",
-    "work/multi-factor-authentication/mfa-recovery-02-code-login.png",
-    "work/multi-factor-authentication/mfa-recovery-03-reset-required.png",
-    "work/multi-factor-authentication/mfa-recovery-05-protection-restored.png",
-    "work/bulk-administration/bulk-delete-01-scope.png",
-    "work/bulk-administration/bulk-delete-02-filter-scope.png",
-    "work/bulk-administration/bulk-delete-03-selected-users.png",
-    "work/bulk-administration/bulk-delete-04-action-menu.png",
-    "work/bulk-administration/bulk-delete-05-confirmation.png",
     "work/bulk-administration/bulk-delete-06-result.png",
-    "work/csv-import/fresh/01-add-users-to-group.png",
-    "work/custom-domain/custom-url-dialog-5.png",
-    "work/custom-logo/Frame 427322350.png",
-    "work/team-access/users-and-status.png",
-    "work/localization-report/report-cover.png",
-    "work/report-campaign/ai-content-generation.png",
-    "work/data-security/article-hero.png",
-  ];
-  for (const asset of assets) {
-    const buffer = await readFile(new URL(asset, publicRoot));
-    const { width, height } = pngDimensions(buffer);
-    assert.ok(width >= 450, `${asset} should be at least 450px wide`);
-    assert.ok(height >= 400, `${asset} should be at least 400px high`);
-    assert.doesNotMatch(asset, /canvas|sticky|comment|board|trial-eligibility\.png/i);
-  }
+    "work/bulk-administration/bulk-delete-01-scope.png",
+    "work/bulk-administration/bulk-delete-05-confirmation.png",
+    "work/editorial/smartrecruiters-hiring-success.jpg",
+  ]) await assert.rejects(access(new URL(file, publicRoot)), `${file} should not be public`);
+  await assert.rejects(access(new URL("app/work/teamAdministrationCompleteSource.ts", root)));
+  await assert.rejects(access(new URL("app/components/DeepLProjectGrid.tsx", root)));
 });
 
-test("all 112 Team Administration source exports are present as valid PNGs", async () => {
-  const addManage = await pngFiles("work/csv-import/complete-source/");
-  const domainDialogs = (await pngFiles("work/custom-domain/"))
-    .filter((entry) => entry.name.startsWith("custom-url-dialog"));
-  const domainFullPages = await pngFiles("work/custom-domain/complete-source/");
-  const customLogo = await pngFiles("work/custom-logo/");
-
-  assert.equal(addManage.length, 84);
-  assert.equal(domainDialogs.length + domainFullPages.length, 19);
-  assert.equal(customLogo.length, 9);
-
-  for (const entry of [...addManage, ...domainDialogs, ...domainFullPages, ...customLogo]) {
-    const buffer = await readFile(`${entry.parentPath}/${entry.name}`);
-    const { width, height } = pngDimensions(buffer);
-    assert.ok(width > 0 && height > 0, `${entry.name} should have valid dimensions`);
-  }
+test("active DeepL case data keeps upgrade prompts, Write Pro launch and checkout distinct", async () => {
+  const source = await readFile(new URL("app/work/deeplProjectData.ts", root), "utf8");
+  assert.equal((source.match(/export const [a-zA-Z]+Project: ProductCaseStory =/g) ?? []).length, 3);
+  for (const route of ["upgrade-prompts", "write-pro-launch", "checkout"]) assert.match(source, new RegExp(`href: "/work/${route}"`));
+  assert.doesNotMatch(source, /bulkAdministrationProject/);
+  assert.doesNotMatch(source, /csvImport|customDomain|customLogo|teamAdministrationCompleteSource|marketingProjects|homepageProjects/);
 });
 
-test("every referenced visual has truthful dimensions and alternative cases can reuse evidence", async () => {
-  const data = await readFile(new URL("app/work/deeplProjectData.ts", root), "utf8");
-  const imagePattern = /src: "([^"]+)", width: (\d+), height: (\d+), alt: "([^"]+)"/g;
-  const images = [...data.matchAll(imagePattern)];
-  assert.equal(images.length, 52);
-
-  const sources = new Set();
-  const hashes = new Set();
-  for (const [, src, declaredWidth, declaredHeight, alt] of images) {
-    assert.ok(alt.trim().length >= 20, `${src} should have descriptive alt text`);
-    const isFirstReference = !sources.has(src);
-    sources.add(src);
-
-    const buffer = await readFile(new URL(src.replace(/^\//, ""), publicRoot));
-    const { width, height } = pngDimensions(buffer);
-    assert.equal(width, Number(declaredWidth), `${src} width should match the source asset`);
-    assert.equal(height, Number(declaredHeight), `${src} height should match the source asset`);
-
-    if (isFirstReference) {
-      const hash = createHash("sha256").update(buffer).digest("hex");
-      assert.ok(!hashes.has(hash), `${src} should not duplicate another evidence image`);
-      hashes.add(hash);
-    }
-  }
-  assert.equal(sources.size, 52);
-});
-
-test("images use natural dimensions and the failed template is gone", async () => {
-  const [css, grid, data] = await Promise.all([
+test("layout is row-major, responsive, naturally sized and keeps mobile About", async () => {
+  const [css, grid, chrome] = await Promise.all([
     readFile(new URL("app/globals.css", root), "utf8"),
-    readFile(new URL("app/components/DeepLProjectGrid.tsx", root), "utf8"),
-    readFile(new URL("app/work/deeplProjectData.ts", root), "utf8"),
+    readFile(new URL("app/components/PortfolioProjectGrid.tsx", root), "utf8"),
+    readFile(new URL("app/components/PortfolioChrome.tsx", root), "utf8"),
   ]);
-  assert.doesNotMatch(css, /object-fit\s*:\s*cover|aspect-ratio/);
-  assert.doesNotMatch(grid, /\bfill\b|index-mockup|ProjectVisual/);
-  assert.doesNotMatch(data, /reconstruction|subscriptionLifecycleProject|work\/plans\/trial-eligibility/);
+  assert.match(css, /\.project-list\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(3,/s);
+  assert.match(css, /@media \(max-width: 820px\)[\s\S]*\.project-list \{ grid-template-columns: repeat\(2,/);
+  assert.match(css, /@media \(max-width: 600px\)[\s\S]*\.project-list \{ grid-template-columns: 1fr; \}/);
+  assert.doesNotMatch(css, /(?:^|[;{])\s*columns?\s*:/m);
+  assert.doesNotMatch(css, /object-fit\s*:\s*cover|aspect-ratio|translateY\s*\(/);
+  assert.match(grid, /sizes="\(max-width: 600px\) 100vw, \(max-width: 820px\) 50vw, 33vw"/);
+  assert.doesNotMatch(css, /site-header nav a:nth-child\(2\)[^{]*\{[^}]*display:\s*none/s);
+  assert.match(chrome, />About<\/Link>/);
 });
 
-test("résumé is present and anonymously downloadable", async () => {
+test("quiet text meets WCAG AA contrast against paper", async () => {
+  const css = await readFile(new URL("app/globals.css", root), "utf8");
+  const paper = css.match(/--paper:\s*(#[a-f\d]{6})/i)?.[1];
+  const quiet = css.match(/--quiet:\s*(#[a-f\d]{6})/i)?.[1];
+  assert.ok(paper && quiet);
+  assert.equal(quiet.toLowerCase(), "#686d6a");
+  assert.ok(contrastRatio(quiet, paper) >= 4.5, `quiet contrast was ${contrastRatio(quiet, paper).toFixed(2)}:1`);
+});
+
+test("switcher stays unboxed while both routes remain visibly underlined", async () => {
+  const css = await readFile(new URL("app/globals.css", root), "utf8");
+  const shell = css.match(/\.work-switcher\s*\{([^}]+)\}/)?.[1] ?? "";
+  const links = css.match(/\.work-switcher a\s*\{([^}]+)\}/)?.[1] ?? "";
+  assert.doesNotMatch(shell, /background|border|border-radius|box-shadow/);
+  assert.match(links, /text-decoration-line:\s*underline/);
+  assert.match(css, /\.portfolio-section-heading\s*\{[^}]*flex-direction:\s*column/s);
+});
+
+test("selected evidence retains the accessible lightbox behavior", async () => {
+  const lightbox = await readFile(new URL("app/components/ImageLightbox.tsx", root), "utf8");
+  for (const behavior of [
+    /role="dialog"/,
+    /aria-modal="true"/,
+    /event\.key === "Escape"/,
+    /event\.key !== "Tab"/,
+    /document\.body\.style\.overflow = "hidden"/,
+    /triggerElement\?\.focus\(\)/,
+  ]) assert.match(lightbox, behavior);
+});
+
+test("résumé remains anonymously downloadable", async () => {
   const pdf = await readFile(new URL("mason-cv.pdf", publicRoot));
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
   assert.ok(pdf.length > 50_000);

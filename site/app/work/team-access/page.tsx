@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import DeepLProjectCase from "../DeepLProjectCase";
-import { teamAccessProject } from "../deeplProjectData";
-
-export const metadata: Metadata = {
-  title: "Team access and permissions — Mason Mitchel",
-  description: "A content-design case study about authority, status and access language in DeepL Team Administration.",
-};
+import { redirect } from "next/navigation";
 
 export default function TeamAccessPage() {
-  return <DeepLProjectCase project={teamAccessProject} />;
+  redirect("/work/account-team-security");
 }

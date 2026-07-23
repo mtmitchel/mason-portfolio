@@ -1,46 +1,9 @@
 import Link from "next/link";
 import ImageLightbox from "../components/ImageLightbox";
 import { SiteFooter, SiteHeader } from "../components/PortfolioChrome";
+import type { ProductCaseStory, StoryImage } from "./portfolioTypes";
 
-export type StoryImage = {
-  alt: string;
-  caption: string;
-  height: number;
-  label: string;
-  src: string;
-  width: number;
-};
-
-export type CandidateStory = {
-  cardTitle: string;
-  collaborators: string;
-  constraints: string;
-  context: string;
-  cover: StoryImage;
-  decisions: Array<{ title: string; text: string }>;
-  evidenceNote: string;
-  evidenceSectionLabel?: string;
-  evidenceSectionTitle?: string;
-  experienceTitle: string;
-  experienceSectionLabel?: string;
-  href: string;
-  flow?: Array<{ label: string; title: string; text: string }>;
-  flowTitle?: string;
-  hook: string;
-  next: { href: string; label: string };
-  outcome: string[];
-  problem: string[];
-  role: string;
-  sequence: StoryImage[];
-  stakes: string;
-  title: string;
-  tradeoff: string;
-  transformation?: {
-    after: string;
-    before: string;
-    label: string;
-  };
-};
+export type { ProductCaseStory, StoryImage } from "./portfolioTypes";
 
 function EvidenceFigure({ image }: { image: StoryImage }) {
   const previewClassName = image.height / image.width > 2 ? "evidence-preview--tall-page" : undefined;
@@ -58,12 +21,14 @@ function EvidenceFigure({ image }: { image: StoryImage }) {
   );
 }
 
-export default function DeepLProjectCase({ project }: { project: CandidateStory }) {
+export default function DeepLProjectCase({ project }: { project: ProductCaseStory }) {
+  const FlowList = project.flowIsOrdered === false ? "ul" : "ol";
+
   return (
     <main className="site-shell case-shell">
       <SiteHeader />
       <article className="story-page">
-        <Link className="back-link" href="/work/candidate-review">Back to DeepL work</Link>
+        <Link className="back-link" href="/">Back to selected work</Link>
 
         <header className="story-hero">
           <p className="story-context">{project.context}</p>
@@ -78,7 +43,7 @@ export default function DeepLProjectCase({ project }: { project: CandidateStory 
 
         <section className="story-cover" aria-label="Final experience">
           <div className="story-section-heading">
-            <p>01 · {project.experienceSectionLabel ?? "The experience"}</p>
+            <p>{project.experienceSectionLabel ?? "The experience"}</p>
             <h2>{project.experienceTitle}</h2>
           </div>
           <EvidenceFigure image={project.cover} />
@@ -86,8 +51,8 @@ export default function DeepLProjectCase({ project }: { project: CandidateStory 
 
         <section className="story-narrative">
           <div className="story-section-heading">
-            <p>02 · The problem</p>
-            <h2>{project.stakes}</h2>
+            <p>The problem</p>
+            <h2>{project.problemTitle ?? "The content problem behind the interface"}</h2>
           </div>
           <div className="story-copy">
             {project.problem.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -98,7 +63,7 @@ export default function DeepLProjectCase({ project }: { project: CandidateStory 
         {project.transformation && (
           <section className="language-turn">
             <div className="story-section-heading">
-              <p>03 · The language turn</p>
+              <p>Before and after</p>
               <h2>{project.transformation.label}</h2>
             </div>
             <div className="language-comparison">
@@ -110,13 +75,12 @@ export default function DeepLProjectCase({ project }: { project: CandidateStory 
 
         <section className="story-decisions">
           <div className="story-section-heading">
-            <p>04 · The judgment</p>
-            <h2>The decisions doing the work</h2>
+            <p>Key content decisions</p>
+            <h2>{project.decisionsTitle ?? "The choices that shaped the experience"}</h2>
           </div>
           <div className="decision-list">
-            {project.decisions.map((decision, index) => (
+            {project.decisions.map((decision) => (
               <div key={decision.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <div><h3>{decision.title}</h3><p>{decision.text}</p></div>
               </div>
             ))}
@@ -125,43 +89,45 @@ export default function DeepLProjectCase({ project }: { project: CandidateStory 
         </section>
 
         {project.flow && (
-          <section className="state-sequence" aria-label="Content sequence">
+          <section className="state-sequence" aria-label={project.flowAriaLabel ?? "Content sequence"}>
             <div className="story-section-heading">
-              <p>05 · The sequence</p>
+              <p>{project.flowSectionLabel ?? "The sequence"}</p>
               <h2>{project.flowTitle ?? "The decision, state by state"}</h2>
             </div>
-            <ol>
+            <FlowList>
               {project.flow.map((step) => (
                 <li key={step.label}><span>{step.label}</span><h3>{step.title}</h3><p>{step.text}</p></li>
               ))}
-            </ol>
+            </FlowList>
           </section>
         )}
 
-        <section className="story-evidence">
-          <div className="story-section-heading">
-            <p>{project.flow ? "06" : "05"} · {project.evidenceSectionLabel ?? "The interface"}</p>
-            <h2>{project.evidenceSectionTitle ?? "How the language changes the experience"}</h2>
-          </div>
-          <div className="story-evidence-grid">
-            {project.sequence.map((image) => <EvidenceFigure image={image} key={image.src} />)}
-          </div>
-        </section>
+        {project.sequence.length > 0 && (
+          <section className="story-evidence">
+            <div className="story-section-heading">
+              <p>{project.evidenceSectionLabel ?? "The interface"}</p>
+              <h2>{project.evidenceSectionTitle ?? "How the language changes the experience"}</h2>
+            </div>
+            <div className="story-evidence-grid">
+              {project.sequence.map((image) => <EvidenceFigure image={image} key={image.src} />)}
+            </div>
+          </section>
+        )}
 
         <section className="story-outcome">
           <div className="story-section-heading">
-            <p>{project.flow ? "07" : "06"} · The outcome</p>
-            <h2>What the work made possible</h2>
+            <p>The outcome</p>
+            <h2>{project.outcomeTitle ?? "The result of the content system"}</h2>
           </div>
           <div className="story-copy">
             {project.outcome.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            <aside className="evidence-limit"><strong>What this shows</strong>{project.evidenceNote}</aside>
+            <p className="integrated-evidence-note">{project.evidenceNote}</p>
           </div>
         </section>
 
         <nav className="next-project" aria-label="Next project">
           <span>Next project</span>
-          <Link href={project.next.href}>{project.next.label}<b aria-hidden="true">↗</b></Link>
+          <Link href={project.next.href}>{project.next.label}<b aria-hidden="true">→</b></Link>
         </nav>
       </article>
       <SiteFooter />

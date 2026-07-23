@@ -6,8 +6,8 @@ artifacts separate. Material under `private-evidence/`, `archive/`, `tmp/`,
 
 ## Active work
 
-- [`site/`](site/) — versioned portfolio application inside this repository. Its
-  existing dirty changes predate the Git-root correction and must be preserved.
+- [`site/`](site/) — versioned portfolio application inside this repository.
+  Preserve unrelated work whenever the repository is dirty.
 - [`mason cv.pdf`](mason%20cv.pdf) — current CV source.
 - [`claim-review.md`](claim-review.md) — private publication and claim-ceiling
   review for DeepL work.

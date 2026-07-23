@@ -1,140 +1,103 @@
 # Changelog
 
-This file records meaningful changes to the portfolio. It distinguishes local
-implementation from committed, deployed and publicly verified work.
+This file records meaningful local portfolio changes and separates implemented
+work from publication state.
 
 ## Unreleased
 
-Status: implemented and validated locally; not committed, pushed or published.
+Status: the six-entry information architecture, combined account collection,
+current feature-awareness evidence and reviewed Translator pricing evidence
+are implemented and validated. Repository checkpoints remain distinct from
+public site publication and deployment.
 
 ### Added
 
-- A self-contained Claude Fable review brief covering the portfolio strategy,
-  current information architecture, evidence boundaries, design system, case
-  slate and requested critique format.
-- A private, no-index candidate-review route with ten finished options in one
-  consistent image-led grid: two product and monetization cases, five account
-  and administration cases, and three marketing and editorial treatments.
-- Exhaustive Team Administration review galleries using all 112 exports from
-  the three requested source pages: 84 add-and-manage-user layers, 19
-  custom-domain exports and 9 custom-logo exports. These complete pre-selection
-  sets use the existing project-page layout and are intended to be trimmed
-  before publication.
-- A Pro Driver experiment-wave case that brings several related upgrade prompts
-  into one program-level story while keeping the 12% conversion and seven-figure
-  ARR result attached to the wave rather than an individual modal.
-- Three complete marketing/editorial options using the published localization
-  report and historical data-security article artwork.
-- A visible homepage entry point for the ten-project local candidate review.
-- Complete individual pages for subscription checkout, multi-factor
-  authentication and the other current review options.
-- A focused UX-copy collection covering bulk translation limits, team
-  administration and a DeepL Write Pro hard block.
-- High-resolution historical product evidence with descriptive captions, alt
-  text and enlarged views.
-- A shared accessible image lightbox with focus trapping, focus restoration,
-  scroll locking, Escape and backdrop closing, and associated dialog captions.
-- A private claim and confidentiality review at `../claim-review.md`.
-- A private evidence area at `../private-evidence/` for unsafe or uncropped source
-  exports that must not be published.
-- Rendered-route, asset-dimension, résumé-access and publication-safety tests.
-- Repository guidance for Figma navigation, evidence handling, claims,
-  validation and publication in `AGENTS.md`.
+- Canonical, indexable `/work/upgrade-prompts` case for the Translator and Write
+  experiment wave.
+- Restored `/work/checkout` case with sign-up, bundle, team and no-trial states.
+- Added a distinct Write Pro launch, pricing and feature-awareness case with
+  fresh 2x feature-module and Translator pricing exports and an explicit
+  no-metric boundary.
+- Added all five finalized feature-awareness messages as selectable HTML; the
+  unordered feature set uses responsive five-, two- and
+  one-column layouts instead of implying a step-by-step sequence.
+- Added one account, team and security collection led by account access and MFA
+  recovery; bulk deletion is one supporting section and its complete flow is
+  preserved privately.
+- Restored AI-content-generation evidence for the report-to-article adaptation.
+- Private asset-manifest records for selected assets, derivatives, preserved
+  originals and relocated unused material.
+- Rendered-HTML coverage for canonical routes, one-hop redirects, exact source
+  wording, quotation semantics, assets, row-major order, responsive image sizes
+  and computed WCAG contrast.
 
 ### Changed
 
-- Removed a redundant checkout-derived project and its public visuals from the
-  homepage and route set.
+- Rebalanced the homepage to six selected entries in this order: upgrade
+  prompts; Write Pro launch, pricing and feature awareness; subscription
+  checkout; account, team and security writing; localization report campaign;
+  and executive ghostwriting.
+- Removed count-based homepage framing so the selected index does not imply
+  that Mason's broader work is reducible to a fixed number of artifact types.
+- Replaced the sparse authentication-error homepage thumbnail with an
+  uncropped three-frame preview of restored protection, reset guidance and one
+  representative team-administration confirmation.
+- Updated the existing Translator pricing rows to the current pricing-page
+  wording where the same features still exist, without adding plans, rows or
+  features; the historical prices and comparison structure remain intact.
+- Rebuilt the homepage card layout as a row-major three-, two- and one-column
+  grid so DOM, visual, keyboard and screen-reader order match.
+- Kept the route-backed Selected work/Writing switcher as quiet text navigation;
+  both links are underlined and active state uses ink and weight.
+- Curated `/writing` as Localyze product guidance, SmartRecruiters' 2019 Hiring
+  Success guide, SmartRecruiters onboarding, Joblift renewable-energy press
+  release and Kitchen Stories coq au vin editorial.
+- Restored exact validated wording for all quoted excerpts and full Forbes and
+  Joblift headlines. Headlines and chapter structures are labelled text rather
+  than blockquotes.
+- Reframed evidence notes positively around artifact, contribution, lifecycle,
+  outcome and permission.
+- Kept the 12% conversion lift and seven-figure ARR uplift at the complete
+  experiment-wave scope.
+- Corrected usage-limit alt text, caption and decision copy to describe the
+  visible offer-first headline and explanatory body.
+- Explained `{5}`, `{1}` and `{16}` as design-file variables replaced with
+  user-specific values.
+- Removed the stock-art cover from the Localyze case while retaining its public
+  archive thumbnail on the homepage.
+- Expanded About with evidenced work at Localyze, SmartRecruiters, Joblift and
+  Kitchen Stories; Airy remains omitted.
+- Consolidated the CSS into one current style system, restored passing quiet
+  text colour and kept About visible in mobile navigation.
+- Renamed the shared index component to `PortfolioProjectGrid.tsx` and reduced
+  the active DeepL data source to the three selected product cases.
 
-- Replaced promotional, metaphorical project hooks with literal project names
-  and direct case-study headlines that state the work and scope.
-- Reduced the homepage introduction to one role line, removed redundant section
-  copy and stacked card metadata below readable 18px project titles.
-- Raised all visible index and case-study labels to at least 14px.
-- Aligned the shared portfolio index and individual project-page proportions to
-  the binding Fredrika reference: compact introduction, one image-led project
-  list, confident whitespace and restrained editorial typography.
-- Rebuilt the homepage as a quiet, image-led portfolio index with a concise
-  introduction and about section.
-- Reframed the work around UX copywriting and content-design decisions rather
-  than product-design ownership or a gallery of finished screens.
-- Expanded checkout from one CTA comparison into one coherent story covering
-  the earlier review, the later complete checkout and the trial/no-trial state
-  branch.
-- Kept the MFA account-recovery case separate from the résumé's SSO claim;
-  neither flow is used as evidence for the other.
-- Consolidated the visual language around readable 17–18px body text, restrained
-  color, proportional headings, compact spacing and a 700–760px prose measure.
-- Replaced raw canvas captures with deliberate product-frame crops and moved
-  unsafe source material out of the public asset tree.
-- Attached the 12% paid-conversion and seven-figure ARR results only to the
-  overall Pro Driver experiment wave, never to one modal, checkout treatment or
-  pricing screen.
-- Consolidated the separate Translator and Write upgrade entries into one
-  hard-blocker case and removed the standalone global-pricing entry from the
-  project index. Legacy URLs now lead to the relevant consolidated case.
-- Consolidated trial eligibility into the subscription-checkout case after
-  verifying that the archived review, current checkout and trial/no-trial
-  comparison are three related Figma clusters in the same journey.
-- Expanded the hard-blocker case to ten distinct fresh Figma exports: usage
-  limit, formality, multiple glossaries, document size, monthly document
-  allowance, network usage, two Write hard-block surfaces and two illustrated
-  Write account-state variants. The Free and existing-Translator-Pro variants
-  remain paired so the account-state content decision is visible.
-- Replaced the checkout case's older review and repeated trial-state visuals
-  with four fresh product-frame exports: the DM-2031 sign-up state using “Start
-  my 30-day free trial,” plus DM-2185 bundle, team-license and no-trial
-  checkouts. The page layout and number of featured visuals remain unchanged.
-- Replaced the mixed multi-persona MFA page with one complete account-recovery
-  story: normal login, failed authentication, recovery-code verification, reset
-  guidance and the final active state. The credential-bearing setup frame is
-  deliberately excluded from public assets.
-- Replaced the mixed bulk-action sampler with one complete bulk user-deletion
-  flow: starting context, filtered scope, selected users, action menu, access-
-  loss confirmation and resulting state. All visible accounts are fictional
-  `@domain.com` demo data.
-- Re-exported every Account Security and Team Administration visual from the
-  exact canonical Figma product frame at 2×, without canvas chrome, sticky notes
-  or clipped neighboring material.
-- Reframed the private comparison around the three DeepL portfolio slots under
-  consideration instead of presenting every recovered project as an equal final
-  candidate.
-- Made build metadata packaging non-destructive so generated output can follow
-  the workstation's Trash-first safety policy.
-- Replaced generic starter documentation with portfolio-specific routes, asset
-  conventions, validation and publication guidance.
+### Removed from the deployable surface
 
-### Removed
+- Unsupported DeepL data-security writing entry.
+- SmartRecruiters Hiring Success case route; it now redirects directly to the
+  anchored writing entry.
+- Placeholder-grade Write surfaces and the contradictory complete bulk-result
+  frame. All originals remain preserved privately.
+- Retired project arrays, exhaustive team-administration source data and unused
+  portfolio-template components.
+- Obsolete CSS layers and selectors that no current component uses.
 
-- Unused database, authentication, Tailwind and example-app starter scaffolding.
-- Four superseded checkout images that were no longer referenced by the site.
-- The previous card-heavy and oversized homepage treatments.
-- Obsolete checkout implementations and starter assets.
-- The unused loading-skeleton dependency and stale starter tests.
-- All-caps transformations, decorative pills, placeholder project rows and raw
-  Figma canvas labels from the public presentation.
+### Preserved behavior
 
-### Validated locally
-
-- Direct no-cache ESLint completed with zero errors or warnings.
-- Production client, server, RSC and SSR compilation completed successfully using
-  the non-destructive Vite build route.
-- All 23 rendered-route and asset tests passed.
-- Homepage and all implemented work routes rendered without horizontal overflow
-  at desktop, tablet and narrow-mobile widths.
-- Lightbox focus trapping, focus restoration, Escape closing and scroll locking
-  were exercised in the browser.
-- Public original and optimized image requests returned successfully.
-- The résumé route returned successfully.
-- Normal secondary text met accessible contrast requirements.
+- Header placement, homepage About opening, résumé delivery and accessible
+  lightbox focus, Escape, scroll-lock and focus-restoration behavior.
+- One-hop redirect discipline for all retired routes.
+- Natural image sizing without forced crop, cover fill or arbitrary aspect
+  ratios.
 
 ### Publication state
 
-- Figma sources remain read-only.
-- No Figma MCP was used.
-- The candidate-review route is local and no-index; it has not been published.
-- No portfolio changes have been committed or pushed.
-- Sites access and the currently deployed version have not been changed.
-- Publication remains gated on Mason's factual, ownership, confidentiality and
-  employment-agreement review, followed by explicit approval for commit, push,
-  public access and deployment.
+- The approved feature-awareness copy edits and exact frame export were made in
+  Mason's logged-in Chrome/Figma session. No other Figma changes were made.
+- The GitHub repository is private. A commit or push is a source-control
+  checkpoint only; it does not publish or deploy the site.
+- No public site publication, deployment or access change has occurred.
+- Before publication, Mason still needs to check factual accuracy, confidential
+  information, employer permission, wording and any redactions. Those checks do
+  not block local implementation.

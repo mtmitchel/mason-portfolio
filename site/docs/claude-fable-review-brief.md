@@ -25,6 +25,16 @@ room to add work from previous employers:
 - one account-security or administration-flow case; and
 - one compact marketing or editorial entry.
 
+The portfolio is therefore structurally incomplete even after the DeepL edit.
+It still needs a selective set of writing examples from previous employers.
+Mason's existing archive at
+[mtmitchel.journoportfolio.com](https://mtmitchel.journoportfolio.com/) includes
+work for Localyze, SmartRecruiters, Airy, Joblift, Kitchen Stories and
+gallereplay across reports, thought leadership, product and instructional
+content, case studies, interviews, press releases and editorial features. The
+goal is not to migrate that archive wholesale, but to choose examples that add
+range and prevent DeepL from defining the entire portfolio.
+
 The central review question is therefore not only “Does each page look good?” It
 is also “Does this system make Mason's responsibilities, judgment and impact easy
 to scan, and which three DeepL stories create the strongest foundation for a
@@ -75,9 +85,14 @@ public portfolio.
   options for the three eventual DeepL slots: two product/monetization options,
   five security/administration options and three marketing/editorial options.
 - The final selected-work list will later include previous-employer material.
+- Previous-employer writing has not yet been selected, rewritten or integrated.
+  Treat the [existing writing archive](https://mtmitchel.journoportfolio.com/)
+  as a source pool, not as the intended information architecture for this site.
 - Some supporting routes and evidence remain available locally even if they are
   not expected to become headline portfolio projects.
-- The site has not been committed, pushed or deployed in its current form.
+- The site implementation is committed locally. This Claude/Fable handover and
+  its PDF review assets are not yet committed. Nothing from this repository has
+  been pushed to GitHub or deployed.
 - Publication still requires a separate factual, confidentiality and
   employment-agreement review.
 
@@ -86,9 +101,10 @@ not as a recommendation that all visible DeepL projects should ship.
 
 ## Binding creative direction
 
-The binding composition reference is [fredrika.dev](https://fredrika.dev/).
-The goal is to follow its restraint and information architecture, not copy its
-identity or wording:
+[fredrika.dev](https://fredrika.dev/) is the binding general reference for the
+**homepage/landing page and project index**. Mason wants that part of the site
+to follow its overall restraint and information architecture without copying
+its identity or wording:
 
 - a concise introduction;
 - an image-led project index;
@@ -97,9 +113,39 @@ identity or wording:
 - restrained typography; and
 - one focused page per project.
 
-The site should not become a design-agency landing page, a dashboard, a set of
-proposal cards or one monolithic case-study document. It should remain calm,
-direct and recruiter-scannable.
+This does **not** mean the current individual project-page template is binding
+or should inherit Fredrika's treatment uncritically. Scrutinize every project
+page on its own terms: narrative structure, information hierarchy, pacing,
+length, prose-to-visual balance, sequence design, evidence legibility and the
+way each artifact type is packaged. Recommend structural changes when they
+would make a case clearer or more persuasive.
+
+The homepage should not become a design-agency landing page, a dashboard or a
+set of proposal cards. The project pages should not become monolithic reports
+or preserve a uniform template at the expense of the work. The overall site
+should remain calm, direct and recruiter-scannable.
+
+### Visual packaging is open to critique
+
+The shared layout is intentional, but the current way individual visual types
+are packaged is not beyond challenge. Please push back when a different
+presentation would communicate the work more clearly. In particular, assess
+whether the site is treating materially different evidence as though it were
+interchangeable:
+
+- families of compact product dialogs and hard blockers;
+- before-and-after or trial/no-trial comparisons;
+- long, sequential administration flows;
+- full-height settings pages and operating-system file pickers;
+- report covers, charts and selected spreads; and
+- published blog posts and articles that still exist on DeepL's live site.
+
+If a sequence, comparison, annotated crop, excerpt-led treatment, compact
+gallery, writing sample or external-link treatment would be stronger than the
+current repeated image-and-caption pattern, say so. Explain what the alternative
+would help a recruiter understand and where it should replace or supplement the
+current packaging. Do not preserve a presentation choice merely because it is
+already implemented.
 
 ### Writing constraints
 
@@ -310,6 +356,16 @@ marketing article and webinar-derived customer stories for HubSpot and Phrase.
 It is about editorial range and repurposing rather than an unsupported campaign
 performance figure.
 
+Two relevant examples remain live on DeepL's site:
+
+- [Navigating the challenges of content localization in 2023-2024](https://www.deepl.com/en/blog/navigating-localization-challanges-report)
+- [How HubSpot tackled localization and scaled content production with DeepL](https://www.deepl.com/en/blog/how-hubspot-streamlines-localization-with-machine-translation)
+
+Review the live writing as well as the portfolio treatment. The question is not
+only whether the portfolio page looks polished, but whether it lets a hiring
+manager evaluate the writing's structure, argument, voice and adaptation across
+formats without simply sending them away to another site.
+
 ### Marketing/editorial option 3: Data security article
 
 **Route:** `/work/data-security`
@@ -319,6 +375,25 @@ retention, encryption, failover, subcontractor and account-control details into
 plain language for business readers. It is comparatively compact and may leave
 more room for previous-employer work, but its product and technical statements
 need a final current-accuracy review before publication.
+
+### Product evidence versus published marketing work
+
+Please review the product/Figma cases and the marketing/editorial cases as
+different evidence types, not merely different subjects using one template.
+
+- The product work is best evidenced through UI states, content decisions,
+  conditional logic, comparisons and complete user or administrator flows.
+- The marketing work is published writing. The relevant questions are whether
+  to show article or report covers, readable excerpts, annotated structural
+  decisions, selected charts or spreads, and a direct link to the live DeepL
+  page—not whether to imitate a Figma case-study sequence.
+
+Give specific guidance on whether the three current marketing treatments make
+the writing itself sufficiently legible and assessable. If they overemphasize
+page screenshots, thumbnails or case-study scaffolding at the expense of voice,
+structure and argument, recommend a better package. Also say whether published
+DeepL articles should appear as compact portfolio entries, a writing
+collection, individual mini cases or a deliberate mixture.
 
 ## Supporting DeepL material currently on the homepage
 
@@ -358,8 +433,8 @@ outcomes, but it does not turn every related frame into a shipped treatment.
 Final public-facing assets must not include gray Figma canvas, sticky notes, working
 labels, comments, selection chrome, employee identities, customer data,
 invitation links, account identifiers, credentials, internal tickets,
-experiment allocation or unsupported metrics. Images currently under
-`public/work/` currently include the three exhaustive Team Administration
+experiment allocation or unsupported metrics. Images under `public/work/`
+currently include the three exhaustive Team Administration
 review sets as a temporary pre-selection state. Those sets require a separate
 confidentiality and publication pass after Mason chooses what to keep.
 
@@ -368,25 +443,32 @@ those notes build trust without becoming repetitive, defensive or too prominent.
 
 ## Repository and implementation map
 
-The actual Git repository is the `site/` directory. The parent workspace holds
-private evidence and archives and is not itself a Git repository.
+The Git repository root is the parent `Mason Portfolio/` directory. The
+versioned portfolio application is nested at `site/`. Private evidence and
+archives remain at the repository root and are ignored by Git.
 
-Key files:
+Key files, relative to the repository root:
 
-- `app/page.tsx` — homepage structure and About copy.
-- `app/work/deeplProjectData.ts` — the case-study content and image metadata.
-- `app/work/DeepLProjectCase.tsx` — shared case-study page structure.
-- `app/components/DeepLProjectGrid.tsx` — shared image-led project index.
-- `app/components/PortfolioChrome.tsx` — site header, footer and supporting case
+- `site/app/page.tsx` — homepage structure and About copy.
+- `site/app/work/deeplProjectData.ts` — the case-study content and image metadata.
+- `site/app/work/teamAdministrationCompleteSource.ts` — the complete 84/19/9
+  Team Administration pre-selection galleries.
+- `site/app/work/DeepLProjectCase.tsx` — shared case-study page structure.
+- `site/app/components/DeepLProjectGrid.tsx` — shared image-led project index.
+- `site/app/components/PortfolioChrome.tsx` — site header, footer and supporting case
   components.
-- `app/components/ImageLightbox.tsx` — accessible evidence enlargement.
-- `app/globals.css` — the complete visual system and responsive behavior.
-- `app/work/*/page.tsx` — route metadata and page entry points.
-- `public/work/<case>/` — sanitized historical product and editorial evidence.
-- `tests/rendered-html.test.mjs` — route, content, redirect, image-dimension,
+- `site/app/components/ImageLightbox.tsx` — accessible evidence enlargement.
+- `site/app/globals.css` — the complete visual system and responsive behavior.
+- `site/app/work/*/page.tsx` — route metadata and page entry points.
+- `site/public/work/<case>/` — historical product and editorial evidence used by the
+  local review build; the exhaustive Team Administration sets still need final
+  selection and publication review.
+- `site/docs/review-assets/claude-fable/` — the ordered PDF screenshot handover and
+  its route manifest.
+- `site/tests/rendered-html.test.mjs` — route, content, redirect, image-dimension,
   duplicate-asset, safety and résumé checks.
-- `README.md` — local commands, routes and publication boundary.
-- `CHANGELOG.md` — meaningful local changes and publication state.
+- `site/README.md` — local commands, routes and publication boundary.
+- `site/CHANGELOG.md` — meaningful local changes and publication state.
 
 Technical stack:
 
@@ -425,8 +507,11 @@ specific remedy.
 7. Does the state-sequence treatment clarify complex flows such as MFA recovery
    and bulk deletion?
 8. Does the layout continue to work at desktop, tablet and narrow mobile sizes?
-9. Does the design resemble the restraint and pacing of Fredrika's portfolio
-   without feeling like an imitation?
+9. Does the homepage/landing page resemble the restraint and pacing of
+   Fredrika's portfolio without feeling like an imitation?
+10. Ignoring the assumption that every case needs one shared template, which
+    individual project pages need a different hierarchy, rhythm, narrative
+    structure or visual treatment?
 
 ### Copy and content questions
 
@@ -459,29 +544,47 @@ specific remedy.
    without requiring a new layout?
 6. What is the smallest set of changes that would make the portfolio feel ready
    for hiring review after the final project selection?
+7. Which previous-employer examples or content types from
+   [Mason's existing writing archive](https://mtmitchel.journoportfolio.com/)
+   would add the most useful range, and should they be full cases, mini cases or
+   a writing collection?
 
-## Suggested screenshot set for the review
+### Visual-packaging questions
 
-To review the experience rather than isolated components, use screenshots in
-this order:
+1. Which current visual treatments help a recruiter understand Mason's writing
+   decisions, and which merely prove that many artifacts exist?
+2. Where should multiple UI states be paired, sequenced, annotated, cropped or
+   reduced instead of presented as equal standalone images?
+3. Do very long administration flows need chapters, progressive disclosure or
+   another navigational treatment after the selection pass?
+4. Should full-page settings screens be supplemented by readable detail crops,
+   or do those crops risk removing necessary product context?
+5. What presentation pattern best distinguishes published marketing writing
+   from product/Figma evidence while keeping one coherent portfolio identity?
 
-1. Homepage at desktop width, including the introduction and first project row.
-2. Full desktop homepage showing the complete masonry rhythm and About section.
-3. Homepage at a narrow mobile width.
-4. Candidate-review index showing all ten options.
-5. Hard-blocker case: hero, representative visual, decisions and evidence grid.
-6. Checkout case: hero, sign-up state and conditional checkout examples.
-7. MFA recovery case: hero and complete five-step sequence.
-8. Bulk user deletion case: hero and complete six-state flow.
-9. Adding users case: hero and representative portions of the complete 84-layer source gallery.
-10. Custom domain case: representative portions of all 19 source exports.
-11. Custom logo case: representative portions of all 9 source exports.
-12. One marketing option, preferably the localization report or report campaign.
-13. One expanded image-lightbox state if interaction feedback is desired.
+## Included screenshot handover
 
-Screenshots should be assessed alongside the live repository because a static
-capture cannot demonstrate responsive behavior, image enlargement, keyboard
-interaction or redirects.
+The repository includes twelve ordered PDF captures under
+[`docs/review-assets/claude-fable/`](review-assets/claude-fable/README.md). Review
+them in the manifest order:
+
+1. [Homepage](review-assets/claude-fable/portfolio-screenshots/01-homepage.pdf)
+2. [Ten-option candidate index](review-assets/claude-fable/portfolio-screenshots/02-candidate-review-index.pdf)
+3. [Hard blockers](review-assets/claude-fable/portfolio-screenshots/03-hard-blockers.pdf)
+4. [Subscription checkout](review-assets/claude-fable/portfolio-screenshots/04-subscription-checkout.pdf)
+5. [MFA account recovery](review-assets/claude-fable/portfolio-screenshots/05-mfa-account-recovery.pdf)
+6. [Bulk user deletion](review-assets/claude-fable/portfolio-screenshots/06-bulk-user-deletion.pdf)
+7. [Adding users at scale](review-assets/claude-fable/portfolio-screenshots/07-adding-users-at-scale.pdf)
+8. [Custom domain management](review-assets/claude-fable/portfolio-screenshots/08-custom-domain-management.pdf)
+9. [Custom logo management](review-assets/claude-fable/portfolio-screenshots/09-custom-logo-management.pdf)
+10. [Localization research report](review-assets/claude-fable/portfolio-screenshots/10-localization-research-report.pdf)
+11. [Localization report campaign](review-assets/claude-fable/portfolio-screenshots/11-localization-report-campaign.pdf)
+12. [Data security article](review-assets/claude-fable/portfolio-screenshots/12-data-security-article.pdf)
+
+These are 28 print-layout pages captured from the desktop site on 22 July 2026.
+They should be assessed alongside the live repository because static PDFs do
+not demonstrate responsive behavior, image enlargement, keyboard interaction
+or redirects. No separate narrow-mobile capture is included in this batch.
 
 ## Review format requested
 
@@ -494,9 +597,12 @@ Please deliver:
    each choice.
 4. Specific copy edits only where the current wording materially weakens
    comprehension, credibility or scanning.
-5. A short “keep as-is” section so strong decisions are not accidentally lost.
-6. A smallest-useful revision sequence rather than a completely new visual
-   direction.
+5. A visual-packaging recommendation that explicitly distinguishes product/UI
+   evidence from published marketing/editorial work.
+6. A short “keep as-is” section so strong decisions are not accidentally lost.
+7. A smallest-useful revision sequence that preserves the intended Fredrika-led
+   homepage direction while still allowing substantial project-page changes
+   where the critique supports them.
 
 Do not assume that more content, more case studies, more metrics or a new layout
 will automatically improve the portfolio. The goal is a selective, credible and

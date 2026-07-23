@@ -4,24 +4,25 @@ A calm, evidence-led portfolio for Mason's UX copywriting and content design wor
 
 For a self-contained project and review overview, see
 [`docs/claude-fable-review-brief.md`](docs/claude-fable-review-brief.md).
+The ordered PDF captures for that review are indexed in
+[`docs/review-assets/claude-fable/`](docs/review-assets/claude-fable/README.md).
 
 ## Routes
 
-- `/` — selected work and about
-- `/work/pro-driver-experiments` — hard blockers across Translator and Write
-- `/work/checkout` — subscription checkout
-- `/work/multi-factor-authentication` — multi-factor authentication
-- `/work/bulk-administration` — bulk administration
-- `/work/csv-import` — adding users by manual entry or CSV
-- `/work/custom-domain` — custom-domain request, approval and removal
-- `/work/custom-logo` — custom-logo upload, validation and removal
-- `/work/team-access` — team access controls
-- `/work/ux-copy` — focused UX-copy collection
-- `/work/candidate-review` — private, no-index visual review of ten finished options across three possible DeepL portfolio slots
-- `/work/localization-report` — research-report editorial option
-- `/work/report-campaign` — multi-format report-campaign option
-- `/work/data-security` — data-security editorial option
+- `/` — six selected portfolio entries and about
+- `/writing` — five selected writing samples across product, methodology, instructional, press-release and consumer formats
+- `/work/upgrade-prompts` — upgrade prompts across Translator and Write
+- `/work/write-pro-launch` — Write Pro launch, pricing and feature awareness
+- `/work/checkout` — trial, no-trial, bundle and team-purchase checkout
+- `/work/account-team-security` — account access, recovery and team-administration writing collection
+- `/work/report-campaign` — merged localization report campaign
+- `/work/localyze-executive-ghostwriting` — Localyze executive ghostwriting
 - `/mason-cv.pdf` — résumé
+
+Retired candidate-review and unselected case-study URLs redirect once to their
+final retained destination. The previous upgrade aliases lead directly to
+`/work/upgrade-prompts`; account-security and team-administration aliases lead
+to the combined collection; Hiring Success leads to its anchored writing entry.
 
 ## Local development
 
@@ -58,31 +59,35 @@ actually being reviewed.
   work.”
 - Stack short factual metadata beneath 18px card titles. Keep all visible text at
   14px or larger.
-- Use the same shared grid for the homepage and private candidate review. Do not
-  introduce a separate comparison-dashboard layout.
-- Keep the ten-option candidate review linked from the Selected work heading so
-  the larger local review slate is discoverable without replacing the curated
-  six-project homepage.
+- Keep `Selected work` and `Writing` as underlined route-backed text links in
+  the section-heading row. Use colour and weight for active state; do not add an
+  `All` view, boxed control or client-side tab state.
+- Use the shared page shell on `/` and `/writing`; switching routes changes only
+  the index content, not the header, About section or footer.
+- Treat writing samples as readable text and external links, not as case studies
+  or screenshot galleries.
 
 ## Evidence assets
 
-Case-study images live in `public/work/<case>/`.
-
-The three Team Administration review routes currently show the complete
-pre-selection export sets: 84 add-and-manage-user layers, 19 custom-domain
-exports and 9 custom-logo exports. This exhaustive local review state is for
-selection and trimming; it is not the publication-ready asset set.
+Selected case-study images live in `public/work/<case>/`. Evidence retained only
+for retired routes lives in ignored private evidence and is not deployable.
+`../private-evidence/portfolio-asset-manifest.json` records source, permission,
+privacy, crop, caption and text-alternative decisions for the selected visuals.
 
 - Export the product frame itself from the historical Figma file at 2x or 3x.
 - Keep source Figma files read-only.
 - Do not include canvas headings, sticky notes, comments or private Figma links.
-- Use the complete historical frame for the lightbox and a deliberate CSS crop for the inline preview.
+- Preserve complete historical frames privately. Any public detail crop must be
+  labelled, documented in the manifest and limited to a truthful part of the
+  original interface.
 - Record dimensions, descriptive alt text and an evidence-based caption where each image is used.
 - Do not redesign historical screens to resemble the current product.
 
 ## Publication gate
 
-The site stays private and uncommitted until the private claim review is complete.
-Publishing requires Mason's explicit approval for the claims, redactions, commit,
-push, public-access change and deployment. The deployed Sites version must be tied
-to the exact approved commit and verified anonymously after deployment.
+The site remains unpublished. The GitHub repository is private, and a commit or
+push is a source-control checkpoint only; it does not publish or deploy the
+site. Public release requires Mason's explicit approval for claims, employer
+rights, redactions, public-access change and deployment. The deployed Sites
+version must be tied to the exact approved commit and verified anonymously
+after deployment.

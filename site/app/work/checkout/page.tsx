@@ -4,7 +4,7 @@ import { checkoutProject } from "../deeplProjectData";
 
 export const metadata: Metadata = {
   title: "Subscription checkout — Mason Mitchel",
-  description: "A content-design case study about trial, payment and commitment language at DeepL.",
+  description: "A content-design case study about trial, no-trial, bundle and team-purchase checkout states.",
 };
 
 export default function CheckoutPage() {

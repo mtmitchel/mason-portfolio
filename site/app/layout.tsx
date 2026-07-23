@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mason Mitchel — UX Copywriter & Content Designer",
-  description: "UX copywriting and content design case studies across Language AI, monetization, multilingual UX and enterprise software.",
+  description: "Product case studies and published writing by UX copywriter and content designer Mason Mitchel.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
