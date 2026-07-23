@@ -1,4 +1,5 @@
 # Local private evidence and historical working material
+/Monetization/
 /private-evidence/*
 # Private-repository transfer bundle for the Windows Figwright task
 !/private-evidence/figma-pricing-exhibit-brief.md
