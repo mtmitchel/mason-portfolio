@@ -144,12 +144,35 @@ notation makes a change explicit.
   `Save 40%` / `Save 60%` badges next to the price; no `X% off` line ever
   appears inside a feature list. The bundle toggle label completes as
   `Save 16% with annual`.
-- **Price display:** placeholder prices (€49.99 across the add-on-era WIP
-  cards) are not real; cleaned Act 3 exhibits omit the price rows and their
-  captions do not mention prices at all. Act 2 exhibits keep their real
-  period prices (€0 / €7.49 / €24.99 / €49.99 Translator; €15.49 / €30.99 /
-  €53.99 bundles) with no label — the narrative's loose dating carries the
-  timeline; no caption calls a price historical or current.
+- **Price display (revised by Mason, 2026-07-24):** every exhibit shows its
+  real, attested prices; omitting prices was rejected as absurd. Attested
+  values: Translator Starter/Advanced/Ultimate €7.49 / €24.99 / €49.99
+  per user/month billed annually (deep-research report 2023 baseline and
+  `Monetization/Translator@2x.png`); Write Free €0, Write Pro €10 per
+  user/month billed annually, Write for Business "Let's talk"
+  (`Monetization/Write.png`, toggle `Save 33% with annual`); API Free €0,
+  API Pro €4.99 "per month + usage-based price" (`Monetization/API.png`
+  and the research's €4.99 + €0.00002/character baseline), API Business
+  "Custom pricing available"; bundles €15.49 / €30.99 / €53.99. The €49.99
+  on the API Free card in `Monetization/API.png` is a placeholder error —
+  API Free is free. Voice web prices were never public (research: not
+  established); Voice cards use the sales-led "Let's talk" + "Our Sales
+  team is ready for your call." block instead of a price. Captions never
+  call a price historical or current.
+- **Style system (Mason, 2026-07-24):**
+  - Feature bullets carry no bold anywhere — entire lines regular weight.
+    Mixed bolding reads as sloppy. List headers stay semibold.
+  - Feature bullets never say "per user" — `per user/month` becomes
+    `per month`; per-user billing lives in the price subtext only.
+  - No feature bullet or audience row may wrap to a second line. Fix text
+    box width first, shorten copy second.
+  - Card anatomy is uniform: title → description → price block → CTA →
+    audience row → divider → feature list, with CTAs on a shared baseline
+    across each grid. The subscriber account banners on the Translator,
+    Write and API frames are removed; the currency selector stays.
+  - CTA logic applies to every exhibit: Start free trial (trial-eligible),
+    Buy now (highest self-serve), Contact Sales (sales-led), Sign up for
+    free (API Free), no CTA on Write Free (source-attested).
 - Figma execution instructions live in
   `private-evidence/figma-pricing-exhibit-brief.md` (single execution owner
   for all exhibit edits and exports; the older Chrome-profile export queue is
@@ -181,20 +204,34 @@ notation makes a change explicit.
 - If provenance ever comes up in conversation, that is Mason's verbal layer,
   not the site's job.
 
-#### Exhibit set (three acts, locked 2026-07-23)
+#### Exhibit set (three acts; expanded by Mason, 2026-07-24)
+
+Build the robust, complete set first; Mason cuts back later if he wants.
 
 - **Act 1 (2023) — narrative only, no exhibit:** one Translator grid, API
   priced separately, Write free. Pricing was simple because the product was.
-- **Act 2 (the problem) — four exhibits:** the three existing public grids
+  No 2023-era artifact exists in the working files; Act 1 stays prose.
+- **Act 2 (the problem) — five exhibits:** the three existing public grids
   (`pricing-translator.png`, `pricing-write-pro.png`, `pricing-bundle.png`,
   originally exported from Monetization file `0JYwhKhRAliGBhyl2kBnEu`
   nodes `5:269713`, the matching Write Pro grid, and `5:271012`) presented
-  as coexisting grids, plus the cleaned full bundle page
-  (`pricing-bundle-era-clean.png`) as the centerpiece — the same Write Pro
-  block repeated across three tiers, three ways to buy one product.
+  as coexisting grids; the cleaned full bundle page
+  (`pricing-bundle-era-clean.png`) as the density centerpiece — the same
+  Write Pro block repeated across three tiers, three ways to buy one
+  product; and the cleaned transition-era Translator full page
+  (`pricing-translator-transition-clean.png`, new Cluster F) with the
+  "Add DeepL Write Pro" toggle — the pivot artifact where the add-on model
+  emerged on the grid itself, with real prices and its complete comparison
+  table.
 - **Act 3 (the simplification) — four exhibits:** the cleaned 1512px add-on
   era frames — Translator cumulative, Write add-on, Voice, API — one page
-  per product, cumulative tiers, add-ons.
+  per product, cumulative tiers, add-ons, real prices and CTAs restored
+  per the style system above.
+- **Comparison tables:** only two exist in the sources — on the bundle full
+  page and the transition-era Translator full page. The Write, Voice and
+  API source pages have none (verified against `Monetization/Write.png`,
+  `Voice.png`, `API.png`: cards → logos → quotes → FAQ → footer). The case
+  never fabricates a table for a product that had none.
 - **Coda:** one line plus the deepl.com/pro link. Feature awareness stays a
   secondary section of the same case with its existing image.
 - **Rename decision (pending Phase 2 implementation):** the case moves to

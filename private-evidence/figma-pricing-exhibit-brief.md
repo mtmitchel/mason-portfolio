@@ -1,16 +1,19 @@
-# Figma work brief: pricing evolution exhibits — REVISION 5
+# Figma work brief: pricing evolution exhibits — REVISION 6
 
-**Created:** 2026-07-23 · **Revision 4:** 2026-07-23 (post peer review) ·
-**Revision 5:** 2026-07-23 (post round-1 export QA)
+**Created:** 2026-07-23 · **Revision 5:** 2026-07-23 (post round-1 QA) ·
+**Revision 6:** 2026-07-24 (post round-2 QA by Mason)
 **For:** the executing agent — the Figma desktop app plus MCP server on the
 Windows machine, or Mason's logged-in Chrome profile
 **Authorized by:** Mason, for this task only
 
-**Revision 5 is a repair pass** on the existing rev-4 exhibit frames plus one
-content change (discounts become price-adjacent badges — defect 8). Do not
-rebuild clusters from scratch. Fix every item in the round-1 defect register,
-re-verify each cluster against its full spec, and re-export all five files
-under the new export verification rule.
+**Revision 6 is a style-system pass plus one new cluster.** Mason reviewed
+the round-2 exports: the round-1 defects are repaired, but the exhibits fail
+his eye on bullet styling, wrapped lines, missing prices and CTAs, and
+description-to-button spacing — and Act 2 needs one more page. Work on the
+existing exhibit frames; do not rebuild the existing clusters from scratch.
+Fix every item in the round-2 QA register, apply the revised system rules to
+all clusters, build Cluster F, and re-export everything under the export
+verification rule.
 
 ## Purpose and philosophy (read first)
 
@@ -59,52 +62,55 @@ be revisited. It is not a preservation doctrine.
 
 ## Cleanup and bases (do first, idempotent)
 
-Save a named checkpoint `rev5 pre-repair` before changing anything.
+Record checkpoint `rev6 pre-pass` before changing anything (see the
+checkpoint fallback below).
 
 In `Portfolio exhibits 2026-07`:
 
-- The five rev-4 `EXHIBIT — …` frames are the rev-5 repair bases. Keep them;
-  do not delete or re-duplicate them. If one is missing or structurally
-  broken, recreate only that one as a fresh duplicate of its canonical
-  source node and apply its full cluster spec.
-- Delete any surviving pre-rev-4 duplicates (`BEFORE EXPORT — …` or older
-  `EXHIBIT — …` copies); version history preserves them.
+- The five existing `EXHIBIT — …` frames are the rev-6 bases. Keep them; do
+  not delete or re-duplicate them. If one is missing or structurally broken,
+  recreate only that one as a fresh duplicate of its canonical source node
+  and apply its full cluster spec.
+- Cluster F starts from a fresh duplicate of its source (see Cluster F).
 - In `private-evidence/figma-exports-pricing-2026-07/` in the repository
-  clone on the executing machine, move the five defective round-1 exports
-  into `superseded/`.
-- Checkpoint: `rev5 cleanup done`.
+  clone on the executing machine, move the five round-2 exports into
+  `superseded/` as `rev5-round2-*.png` before re-exporting.
+- Checkpoint: `rev6 cleanup done`.
 
-## Round-1 defect register (every item must be fixed and re-verified)
+**Checkpoint fallback:** round 2 established that the tooling exposes no
+named-version operation. Where a named checkpoint cannot be created, record
+an ISO timestamp against the checkpoint name in the completion log instead,
+and never claim a checkpoint was created when it was not.
 
-The round-1 exports violated the spec in the ways below, and `export-log.md`
-recorded verification claims the PNGs disprove — see the export verification
-rule. Fix each defect, then re-check the whole cluster against its spec.
+## Round-2 QA register (Mason, 2026-07-24 — every item must be fixed)
 
-1. **`Main Navigation` visible on every subscriber view** (A, B, C, E
-   exports). Rule 11 requires it hidden; only the product tab bar stays.
-2. **Dark border bands** — black columns or edge slivers on all five
-   exports. Find the cause (frame background, stray rectangles behind the
-   frame, export bounds larger than the frame, clip settings) and remove
-   it. Every exported edge must be clean page background.
-3. **Cluster A, Advanced card:** the merged glossary line
-   `2,000 shared glossaries` is missing — the merge deleted both rows
-   instead of producing one. Restore the single line, styled per rule 5.
-4. **Cluster B, Write Pro card:** the header `Everything in Free, plus:` is
-   missing. Insert it per rule 6, directly above the first feature line.
-5. **Cluster D, Ultimate + Write Pro card:** the delta list is missing
-   entirely. Rebuild it per the Cluster D spec (header
-   `Everything in Advanced + Write Pro, plus:` and its feature lines).
-6. **Cluster D, Ultimate and Enterprise cards:** headers are positioned
-   wrongly. Each header sits directly above the first feature line inside
-   the list block, aligned with its sibling rows (rules 6 and 13).
-7. **Cluster D comparison table:** red text remains. Recolor every red
-   layer per the comparison-table spec.
-8. **Discount decision (Mason, 2026-07-23):** discounts are price
-   information, never feature bullets. Delete every `X% off DeepL Write
-   Pro` list line and express all three bundle discounts as matching
-   `Save 20%` / `Save 40%` / `Save 60%` badges next to the price — see the
-   Discount badges block in Cluster D. (This also removes the round-1
-   discount-line wrapping defect.)
+The round-1 defects are repaired and stay repaired. Mason's review of the
+round-2 exports found the failures below; each maps to a revised system rule.
+
+1. **Redundant "per user/month" in feature bullets** (all clusters). Bullets
+   never say "per user" — write `per month`. Per-user billing lives in the
+   price subtext only. Comparison-table row labels are out of scope.
+2. **Feature bullets wrapping to two lines** (`Unlimited text translation`,
+   `20 file translations per user/month`, `100 file translations per
+   user/month`, `Translate files up to 30 MB`, audience row `For teams and
+   businesses`). No bullet or audience row may wrap. Widen the text layer
+   to the card's content width first; the shortened `per month` copy
+   removes most remaining wraps.
+3. **Mixed bold/regular inside bullets looks sloppy** (all clusters).
+   Remove all bolding inside feature bullets — entire lines regular
+   weight. List headers (`What's included:`, `Everything in …, plus:`,
+   `Tailor to your enterprise needs:`) stay semibold.
+4. **Prices were removed — rejected as absurd** (Clusters A, B, E). Restore
+   real price blocks and CTAs per rules 14 and 15. Every value is attested;
+   no placeholder returns.
+5. **Description-to-button spacing is terrible** (Voice cards; API Free).
+   Root cause: deleting the price blocks collapsed the card anatomy and the
+   CTA slid up under the description. Restoring the price block (or the
+   Voice `Let's talk` block) restores the rhythm. Verify uniform spacing
+   and a shared CTA baseline across every grid (rule 15).
+6. **Act 2 needs more weight.** Build and export Cluster F, the
+   transition-era Translator full page with the `Add DeepL Write Pro`
+   toggle and its complete comparison table.
 
 ## File and node inventory
 
@@ -113,7 +119,7 @@ File: `https://www.figma.com/design/fdxAxs14RUKijGsznWusF3/Pricing-Grid`
 
 | Node / location | Name | Role |
 |---|---|---|
-| Section `Pricing Pages` (top of canvas; node IDs not yet recorded — identify by content and log them) | Full pricing pages moved in by Mason from the Monetization file | **Cluster D base** lives here: the tall bundle-era page (~1512x8442) matching `~/Projects/Mason Portfolio/Monetization/Bundles@2x.png` — hero "Fast, accurate, and secure translations", "Add DeepL Write Pro" toggle, bundle cards, complete comparison table, FAQ |
+| Section `Pricing Pages` (top of canvas; round 2 logged the bundle page as `35:25257` — identify the rest by content and log them) | Full pricing pages moved in by Mason from the Monetization file | **Cluster D base** lives here: the tall bundle-era page (`35:25257`, ~1512x8442) matching `~/Projects/Mason Portfolio/Monetization/Bundles@2x.png` — toggle ON, bundle cards, complete comparison table, FAQ. **Cluster F base** lives here too: the transition-era Translator page matching `Monetization/Translator@2x.png` — same hero, toggle OFF, Translator cards €7.49 / €24.99 / €49.99, complete comparison table |
 | `13:17289` | `Pro on Translate` (1512x4975) | Cluster A base. Its `Main Navigation` child (`13:17296`) is already hidden — leave hidden |
 | `13:17485` | `Pro on Write` (1512x1427) | Cluster B base |
 | `13:17681` / `13:17852` | Both named `Pro on Voice` (1512x1427) | One is the true Voice page (hero "Real-time voice translations for global collaboration", Voice tab active, Meetings/Conversations cards). The other is the **API page** (hero "Scale multilingual workflows with the DeepL API") — that one is the **Cluster E base**. Verify by content; log which is which |
@@ -157,14 +163,17 @@ are the visible evidence of Mason's craft:
    glossaries"); exact quantities and edge details live in the comparison
    table.
 3. **Sentence case; no periods on short list items; no red text; no lorem
-   ipsum; no placeholder prices.** Delete every `€49.99` +
-   `per user/month, billed annually *` placeholder block. Real historical
-   prices (bundle page: €15.49 / €30.99 / €53.99) stay.
+   ipsum; no placeholder prices.** Every placeholder price block is
+   replaced by its real, attested price block per rule 14 — never left
+   deleted and never left as a placeholder.
 4. **Standard security line everywhere:** `Maximum data security` — never
    "Enterprise-grade security protection."
-5. **Feature-line style:** green check; bold the differentiating quantity or
-   key phrase, which may fall mid-line (`Translate files up to **10 MB**`);
-   rest regular (match each card's existing styling).
+5. **Feature-line style (revised rev 6):** green check; the entire line
+   regular weight — no bold anywhere inside a bullet. List headers stay
+   semibold. Bullets never say "per user": write `per month`. No bullet or
+   audience row wraps to a second line — widen the text layer to the
+   card's content width first; shorten copy only where this brief
+   specifies the exact string.
 6. **New header lines:** duplicate an existing feature-line text layer in the
    same card, remove the check icon, set the line semibold in the standard
    dark color, end with a colon.
@@ -176,11 +185,12 @@ are the visible evidence of Mason's craft:
    auto layout close the gap; otherwise move remaining rows up.
 9. **Audience rows must differ between tiers.** Never repeat "For individuals
    and teams" on two cards.
-10. **CTA logic (Clusters C, D, E only):** Start free trial (trial-eligible
-    tiers), Buy now (highest self-serve tier), Contact Sales
-    (Enterprise/sales-led). Where a comparison table exists (Cluster D),
-    grid and table must agree. Clusters A and B are subscriber-view frames
-    with **no card CTAs** — that is intentional; do not add buttons.
+10. **CTA logic (revised rev 6 — all clusters):** Start free trial
+    (trial-eligible tiers), Buy now (highest self-serve tier), Contact
+    Sales (sales-led), Sign up for free (API Free only), and no CTA on
+    Write Free (source-attested). Where a comparison table exists
+    (Clusters D, F), grid and table must agree. CTAs sit on one shared
+    baseline across each grid.
 11. **Nav rule (Clusters A, B, C, E):** `Main Navigation` hidden; the product
     tab bar (DeepL Translator / Write / Voice / API) stays visible.
 12. **Bottom crop rule (Clusters A, B, C, E):** perform the crop **last**,
@@ -190,18 +200,45 @@ are the visible evidence of Mason's craft:
     intended bounds** — layers like "Join 500,000+ professionals…" begin
     within 64px of the cards and would otherwise export partially clipped.
     Then resize the frame to end 64px below the card row and verify the
-    final 64px band contains background only. Cluster D stays a full page.
+    final 64px band contains background only. Clusters D and F stay full
+    pages.
 13. **Edit sequence (every cluster):** change text and visibility through
     instance overrides first; detach only the smallest affected instance
     when an override is impossible — never detach the card grid or a shared
     component. Insert header lines as rows above the first feature line.
     Finish all list edits, let auto layout settle, then crop (rule 12).
+14. **Price blocks (restored, Mason 2026-07-24):** every card shows its
+    attested price block between description and CTA, styled like the
+    bundle-page cards (`€15.49` + `per user/month, billed annually *`).
+    Attested values:
+    - Translator (A, F): Starter `€7.49`, Advanced `€24.99`, Ultimate
+      `€49.99`, each with `per user/month, billed annually *`; Enterprise
+      `Let's talk` + `Our Sales team is ready for your call.`
+      (`Monetization/Translator@2x.png`).
+    - Write (B): Free `€0` (no subtext, no CTA); Write Pro `€10` +
+      `per user/month, billed annually *`; Business `Let's talk` +
+      `Our Sales team is ready for your call.` (`Monetization/Write.png`).
+    - API (E): Free `€0` with no subtext — the `€49.99` on the source's
+      Free card is a placeholder error; API Free is free. Pro `€4.99` +
+      `per month + usage-based price`; Business `Custom pricing available`
+      as large text, no subtext (`Monetization/API.png`).
+    - Voice (C): no public price ever existed; both cards get `Let's talk`
+      + `Our Sales team is ready for your call.` above Contact Sales.
+    No other prices may be introduced anywhere.
+15. **Card anatomy and spacing (rev 6):** title → description → price block
+    → CTA → audience row → divider → feature list, using the bundle page's
+    vertical rhythm. CTAs align on one shared baseline across each grid;
+    where a card has no CTA (Write Free), align its audience row with its
+    siblings through spacing, exactly as `Monetization/Write.png` does.
+    Delete the blue account/support banner row on Clusters A, B and E
+    (`Want to change your plan…`, `Want to add DeepL Write Pro…`,
+    `Want DeepL API…`); keep the currency selector aligned right.
 
 ## Cluster D — Bundle-era page, cleaned (the "beginning")
 
-Base: the existing rev-4 `EXHIBIT — Bundle era pricing (refined)` frame
+Base: the existing `EXHIBIT — Bundle era pricing (refined)` frame
 (originally duplicated from the bundle-era full page in `Pricing Pages`).
-Checkpoints: `rev5 cluster D start` / `rev5 cluster D done`.
+Checkpoints: `rev6 cluster D start` / `rev6 cluster D done`.
 
 This page has no `Main Navigation` layer — nothing to hide. Keep the full
 page: hero, toggle bar, cards, logo strip, quotes, "DeepL Pro for large
@@ -228,21 +265,23 @@ matching badges — `Save 20%` (Starter), `Save 40%` (Advanced), `Save 60%`
 (Ultimate) — placed identically on all three cards, adjacent to the price
 block. Discounts never appear inside a feature list.
 
+Every card list in this cluster follows rule 5: regular weight throughout,
+`per month` phrasing, no wrapped lines.
+
 **Starter + Write Pro**
 - Audience `Up to 5 users`: keep.
-- Keep the two product groups. Group 1 `DeepL Pro Starter`, resolve red lines
-  to standard styling, wording unchanged:
-  - **Maximum** data security
-  - **1 million** characters per user/month
-  - **5** file translations per user/month
-  - Translate files up to **10 MB**
-  - **1 glossary** with unlimited entries
+- Keep the two product groups. Group 1 `DeepL Pro Starter`:
+  - Maximum data security
+  - 1 million characters per month
+  - 5 file translations per month
+  - Translate files up to 10 MB
+  - 1 glossary with unlimited entries
 - Group 2 `DeepL Write Pro` (its `Save 20%` badge moves next to the price —
-  see Discount badges above). Replace the six lines with these four (dedupe
-  data security — it is already in group 1 — and tighten):
-  - **Unlimited** text improvements
-  - **Unlimited** alternatives
-  - **All** writing styles and tones
+  see Discount badges above). Four lines (data security is deduped — it is
+  already in group 1):
+  - Unlimited text improvements
+  - Unlimited alternatives
+  - All writing styles and tones
   - Set terms to never edit
 
 **Advanced + Write Pro**
@@ -252,26 +291,27 @@ block. Discounts never appear inside a feature list.
   "DeepL Write Pro"; move its `Save 40%` badge next to the price — see
   Discount badges above). Replace with header
   `Everything in Starter + Write Pro, plus:` and this single list:
-  - **Unlimited** text translation
-  - **20** file translations per user/month
-  - Translate files up to **20 MB**
-  - **2,000** shared glossaries
+  - Unlimited text translation
+  - 20 file translations per month
+  - Translate files up to 20 MB
+  - 2,000 shared glossaries
   - Single sign-on (SSO)
   - CAT tool integration
 
 **Ultimate + Write Pro**
 - Audience: replace the duplicated red `For individuals and teams` with
-  `For teams and businesses` (black). Log as a reconstruction decision.
+  `For teams and businesses` (black), on one line — widen the layer so it
+  does not wrap.
 - Replace both groups with header `Everything in Advanced + Write Pro, plus:`
   and (the `Save 60%` badge sits next to the price — see Discount badges
   above):
-  - **100** file translations per user/month
-  - Translate files up to **30 MB**
+  - 100 file translations per month
+  - Translate files up to 30 MB
 - CTA stays `Buy now`.
 
 **Enterprise**
-- Add header `Tailor to your enterprise needs:`; keep all five lines and the
-  account-executive footer.
+- Add header `Tailor to your enterprise needs:`; keep all five lines
+  (regular weight, no wraps) and the account-executive footer.
 
 ### Below the grid
 
@@ -296,51 +336,60 @@ block. Discounts never appear inside a feature list.
 
 ## Cluster A — Translator cumulative (rebuilt on `Pro on Translate`)
 
-Base: the existing rev-4 `EXHIBIT — Translator cumulative (refined)` frame
+Base: the existing `EXHIBIT — Translator cumulative (refined)` frame
 (originally duplicated from `13:17289`).
-Checkpoints: `rev5 cluster A start` / `rev5 cluster A done`.
+Checkpoints: `rev6 cluster A start` / `rev6 cluster A done`.
 
-Keep: product tab bar, hero, chips, blue account banner, currency selector,
-card titles, Recommended badge, all four descriptions. Delete all four
-placeholder price blocks. Apply nav + bottom-crop rules.
+Keep: product tab bar, hero, chips, currency selector, card titles,
+Recommended badge, all four descriptions. Delete the blue account banner
+(rule 15). Replace the deleted placeholder price blocks with real price
+blocks and CTAs (rule 14), exactly the treatment in
+`Monetization/Translator@2x.png`: Starter `€7.49` + Start free trial,
+Advanced `€24.99` + Start free trial (dark, Recommended), Ultimate `€49.99`
++ Buy now, Enterprise `Let's talk` + Contact Sales. Apply nav +
+bottom-crop rules. All lists regular weight, `per month`, no wraps
+(rule 5).
 
 **Starter** — audience `Up to 5 users` keep. Header `What's included:`.
-Resolve red lines, wording unchanged:
-- **Maximum** data security
-- **1 million** characters per user/month
-- **5** file translations per user/month
-- Translate files up to **10 MB**
-- **1 glossary** with unlimited entries
+- Maximum data security
+- 1 million characters per month
+- 5 file translations per month
+- Translate files up to 10 MB
+- 1 glossary with unlimited entries
 
-**Advanced** — audience: resolve red `For individuals and teams` to black.
-Header `Everything in Starter, plus:`. Delete `Maximum data security` row.
-Merge the two glossary rows (`2,000 glossaries with unlimited entries` +
-`Share glossaries with your team`) into one. Final list:
-- **Unlimited** text translation
-- **20** file translations per user/month
-- Translate files up to **20 MB**
-- **2,000** shared glossaries
+**Advanced** — audience `For individuals and teams` (black).
+Header `Everything in Starter, plus:`. Final list:
+- Unlimited text translation
+- 20 file translations per month
+- Translate files up to 20 MB
+- 2,000 shared glossaries
 - Single sign-on (SSO)
 - CAT tool integration
 
-**Ultimate** — audience: replace duplicated red row with
-`For teams and businesses` (black). Header `Everything in Advanced, plus:`.
-Delete every feature row except:
-- **100** file translations per user/month
-- Translate files up to **30 MB**
+**Ultimate** — audience `For teams and businesses` (black, one line).
+Header `Everything in Advanced, plus:`. Only:
+- 100 file translations per month
+- Translate files up to 30 MB
 
 **Enterprise** — audience `Available from 1,000 users` keep. Header
-`Tailor to your enterprise needs:`. Keep all lines and footer.
+`Tailor to your enterprise needs:`. Keep all lines (regular weight, no
+wraps) and footer.
 
 ## Cluster B — Write add-on page, cleaned
 
-Base: the existing rev-4 `EXHIBIT — Write add-on (refined)` frame
+Base: the existing `EXHIBIT — Write add-on (refined)` frame
 (originally duplicated from `13:17485`).
-Checkpoints: `rev5 cluster B start` / `rev5 cluster B done`.
+Checkpoints: `rev6 cluster B start` / `rev6 cluster B done`.
 
-Keep: hero, chips, product tab bar, account banner, currency selector,
-titles, Recommended badge. Delete all three placeholder price blocks. Apply
-nav + bottom-crop rules.
+Keep: hero, chips, product tab bar, currency selector, titles, Recommended
+badge. Delete the blue account banner (rule 15). Replace the deleted
+placeholder price blocks with real price blocks and CTAs (rule 14), exactly
+the treatment in `Monetization/Write.png`: Free `€0` (no subtext, no CTA);
+Write Pro `€10` + `per user/month, billed annually *` + Start free trial
+(dark, Recommended); Business `Let's talk` + `Our Sales team is ready for
+your call.` + Contact Sales. Align Free's audience row with its siblings
+through spacing (rule 15). Apply nav + bottom-crop rules. All lists regular
+weight, no wraps (rule 5).
 
 **Important correction (rev 4):** `Terms to never edit` is a real product
 feature, and the bundle-era comparison table checkmarks it **in the Free
@@ -355,9 +404,9 @@ Keep the polished wording `Set terms to never edit`.
 - Header `What's included:`.
 - Replace the single wrong line `Limited text translation` with four lines
   (facts from the bundle-era table's Free column):
-  - **Daily** character limit
-  - **Limited** text length
-  - **Limited** writing styles and tones
+  - Daily character limit
+  - Limited text length
+  - Limited writing styles and tones
   - Set terms to never edit
 
 **Write Pro card**
@@ -366,10 +415,10 @@ Keep the polished wording `Set terms to never edit`.
 - Header `Everything in Free, plus:`.
 - Replace the six existing lines with these four (`Set terms to never edit`
   moved to Free — see the correction above):
-  - **Maximum** data security
-  - **Unlimited** text improvements
-  - **Unlimited** alternatives
-  - **All** writing styles and tones
+  - Maximum data security
+  - Unlimited text improvements
+  - Unlimited alternatives
+  - All writing styles and tones
 
 **Business card**
 - Card title: rename `Write Pro for Business` → `DeepL Write for Business`
@@ -384,70 +433,113 @@ Keep the polished wording `Set terms to never edit`.
 
 ## Cluster C — Voice page, cleaned
 
-Base: the existing rev-4 `EXHIBIT — Voice add-on (refined)` frame
+Base: the existing `EXHIBIT — Voice add-on (refined)` frame
 (originally duplicated from the true Voice frame; log its node ID).
-Checkpoints: `rev5 cluster C start` / `rev5 cluster C done`.
+Checkpoints: `rev6 cluster C start` / `rev6 cluster C done`.
 
 Keep: hero, chips, tab bar, card illustrations, titles, descriptions,
-Contact Sales buttons, Play video links. Delete both placeholder price
-blocks. Apply nav + bottom-crop rules. No cumulative headers (parallel
-products, not tiers).
+Contact Sales buttons, Play video links. Apply nav + bottom-crop rules. No
+cumulative headers (parallel products, not tiers).
+
+**Sales-led block (rule 14, fixes the round-2 spacing defect):** Voice
+never had a public price, so both cards get `Let's talk` + `Our Sales team
+is ready for your call.` in the price-block slot between the description
+and the Contact Sales button, matching the Enterprise and Write for
+Business cards. This restores the card's vertical rhythm — the round-2
+export had Contact Sales crammed under the description because the deleted
+placeholder price left a collapsed gap. Verify both cards share one CTA
+baseline.
 
 Wording draws on Mason's own Copy island drafts (`Monetization/….png`).
+All lines regular weight, one line each (rule 5).
 
-**DeepL Voice for Meetings** — replace the seven existing lines with these
-eight (one line, one fact — the previously merged lines are split, and the
-SSO threshold from the Copy island is restored):
-- **Maximum** data security
-- **Unlimited** voice translation
-- **Live captions** in **30+ languages**
-- Speaks **13 languages**
+**DeepL Voice for Meetings** — eight lines (one line, one fact):
+- Maximum data security
+- Unlimited voice translation
+- Live captions in 30+ languages
+- Speaks 13 languages
 - Works with team members and guests
-- **Automatically generated** transcripts
-- Single sign-on (SSO) for **50+ users**
+- Automatically generated transcripts
+- Single sign-on (SSO) for 50+ users
 - Native Microsoft Teams integration
 
-**DeepL Voice for Conversations** — replace the five existing lines with:
-- **Maximum** data security
-- **Unlimited** hours of voice translation
-- **Live on-screen** translation for one-on-one conversations
-- **Automatically generated** transcripts
-- Available on **iOS and Android**
-- Single sign-on (SSO) for **50+ users**
+**DeepL Voice for Conversations** — six lines:
+- Maximum data security
+- Unlimited hours of voice translation
+- Live on-screen translation for one-on-one conversations
+- Automatically generated transcripts
+- Available on iOS and Android
+- Single sign-on (SSO) for 50+ users
+
+If `Live on-screen translation for one-on-one conversations` cannot fit one
+line at the card's content width, the authorized shorter string is
+`Live translation for one-on-one conversations`.
 
 ## Cluster E — API page, light touch (the end-state fourth tab)
 
-Base: the existing rev-4 `EXHIBIT — API pricing (refined)` frame (originally
+Base: the existing `EXHIBIT — API pricing (refined)` frame (originally
 duplicated from the API-content frame — whichever of `13:17681` / `13:17852`
 shows "Scale multilingual workflows with the DeepL API").
-Checkpoints: `rev5 cluster E start` / `rev5 cluster E done`.
+Checkpoints: `rev6 cluster E start` / `rev6 cluster E done`.
 
-Keep: hero, the Translator API / Write API selector, chips, banner, titles,
-Recommended badge, CTAs (Sign up for free / Buy now / Contact Sales). Delete
-placeholder price blocks. Apply nav + bottom-crop rules.
+Keep: hero, the Translator API / Write API selector, chips, titles,
+Recommended badge, CTAs (Sign up for free / Buy now / Contact Sales).
+Delete the blue support banner (rule 15). Restore real price blocks
+(rule 14), the treatment in `Monetization/API.png` with one correction:
+Free `€0` with no subtext (the source's `€49.99` + `per user/month` on the
+Free card is a placeholder error — API Free is free); Pro `€4.99` +
+`per month + usage-based price`; Business `Custom pricing available` as
+large text. Apply nav + bottom-crop rules. All lists regular weight, no
+wraps (rule 5).
 
-- **Free card:** add header `What's included:`. Delete the line
-  `Access to all features immediately` if present — it directly contradicts
-  the `Does not include:` block beneath it. Keep the remaining lines. In the
-  `Does not include:` block, resolve the red `Access to the web translator`
-  line to the standard muted styling of its sibling.
-- **Pro card (resolved in rev 4):** the WIP card is copy-identical to Free.
-  Rebuild it from the historical API page (`Monetization/API.png`), which
-  shows distinct Pro content. Add header `Everything in DeepL API Free,
-  plus:`, delete the duplicated Free lines (including the 500,000-character
-  line and `Access to all features immediately`), and build this list:
-  - Create and manage up to **25 API keys**
-  - **No volume** restrictions
-  - Pay as you go (**€20.00** per 1,000,000 characters) — real historical
-    price from the API page, keep it
-  - **Prioritized** execution of requests
+- **Free card:** header `What's included:` stays. `Access to all features
+  immediately` stays deleted. List (regular weight): Access to the DeepL
+  REST API / Create and manage up to 2 API keys / 500,000 character
+  limit/month / 1,000 glossaries (for specific languages). The
+  `Does not include:` block keeps its standard muted styling.
+- **Pro card:** header `Everything in DeepL API Free, plus:` stays. List
+  (regular weight):
+  - Create and manage up to 25 API keys
+  - No volume restrictions
+  - Pay as you go (€20.00 per 1,000,000 characters) — real usage price,
+    keep; must fit one line
+  - Prioritized execution of requests
 
-  If the card keeps a `Does not include:` block, resolve its red
-  `Access to the web translator` line as on the Free card.
+  The `Does not include:` block keeps its standard muted styling.
 - **Business card:** keep its existing header `Everything in DeepL API Pro,
-  plus:` (this card is the one place the cumulative pattern already existed —
-  do not restyle it away). Resolve the red `Dedicated Customer Success
-  Manager` and `Onboarding planning and support` lines to black.
+  plus:` (this card is the one place the cumulative pattern already existed
+  — do not restyle it away). All five lines regular weight.
+
+## Cluster F — Translator transition page, cleaned (new in rev 6)
+
+Base: fresh duplicate of the transition-era Translator full page in
+`Pricing Pages` — the page matching `Monetization/Translator@2x.png`: hero
+"Fast, accurate, and secure translations", `Add DeepL Write Pro` toggle set
+OFF, Translator cards with real prices and CTAs, complete comparison table,
+FAQ, footer. Rename it `EXHIBIT — Translator transition (refined)` and log
+its source node ID.
+Checkpoints: `rev6 cluster F start` / `rev6 cluster F done`.
+
+This is the Act 2 pivot exhibit: the add-on model emerging on the grid
+itself. Keep the full page — nav, tab bar, hero, toggle bar, cards, logo
+strip, quotes, banner, comparison table, FAQ, footer. **This is a styling
+pass, not a restructure.** Rule 1 (cumulative tiers) does **not** apply
+here: the full, repetitive per-card lists are period evidence of the
+density problem and must stay.
+
+- Toggle bar: keep `Add DeepL Write Pro` OFF. If the annual label is
+  incomplete (`Save % with annual`), complete it to `Save 16% with annual`.
+- Cards: keep real prices (€7.49 / €24.99 / €49.99 / `Let's talk`) and CTAs
+  (Start free trial / Start free trial / Buy now / Contact Sales).
+- Resolve every red line to standard styling, adopting Mason's wording.
+- Apply rule 5 styling to all card lists: regular weight, `per month`
+  phrasing, no wrapped lines. Make no other list content change.
+- Comparison table: recolor all red text to the color and weight of its
+  black siblings, wording preserved. Table and cards must agree on plan
+  names, prices and CTAs.
+- FAQ: delete placeholder subsections whose rows are all titled `Question`;
+  keep the real questions. Footer stays.
+- Export as `pricing-translator-transition-clean.png` (full page).
 
 ## Exports
 
@@ -457,18 +549,27 @@ repository clone on the executing machine.
 PNG at **2x**, exact frame node only, no canvas artifacts. Verify pixel size
 = 2x frame size.
 
-**Export verification rule (rev 5):** the round-1 log recorded verification
-claims the PNGs disprove. No claim goes into the log without opening the
-exported PNG itself. For every export, inspect the actual file at readable
-zoom and record pass/fail per check:
+**Export verification rule:** no claim goes into the log without opening
+the exported PNG itself. For every export, inspect the actual file at
+readable zoom and record pass/fail per check:
 
 - Top edge: no `Main Navigation` on A / B / C / E; product tab bar present.
+  D and F are full pages and keep their site nav.
 - All four edges: no dark bands, columns, or slivers; clean page background.
 - Every card: headers present and correctly positioned, feature lists
   complete per spec, no red text, no lorem ipsum, no placeholder prices.
+- Rev-6 style checks on every card: no bold inside any bullet; no
+  "per user" inside any bullet; no bullet or audience row wrapped to a
+  second line; price block present with its exact attested value (rule
+  14); CTAs on one shared baseline per grid; consistent
+  description-to-price-to-CTA spacing; no blue account/support banner on
+  A / B / E.
 - Cluster D additionally: comparison table fully recolored, table and cards
   use identical plan names and CTAs, FAQ placeholders gone, three matching
   `Save X%` badges next to the prices.
+- Cluster F additionally: toggle OFF with `Save 16% with annual`, full
+  per-card lists retained (no cumulative headers), comparison table fully
+  recolored and consistent with the cards, FAQ placeholders gone.
 
 A failed check blocks that export from being listed as complete; fix the
 frame and re-export instead of logging the failure as done.
@@ -480,16 +581,17 @@ re-export the originals unless a specific file below fails.
 | File | Source |
 |---|---|
 | `pricing-bundle-era-clean.png` | Cluster D exhibit (full page) |
+| `pricing-translator-transition-clean.png` | Cluster F exhibit (full page) |
 | `pricing-translator-cumulative.png` | Cluster A exhibit |
 | `pricing-write-addon-clean.png` | Cluster B exhibit |
 | `pricing-voice-clean.png` | Cluster C exhibit |
 | `pricing-api-clean.png` | Cluster E exhibit |
 
 Final consistency check across A, B, C, E exports: same 1512px family,
-product tab bar at top, no main navigation, no red text, no lorem ipsum, no
-placeholder prices, clean bottom edge below the card row. Cluster D: full
-page, no red text anywhere, table and cards use identical plan names and
-CTAs.
+product tab bar at top, no main navigation, real prices and CTAs per rules
+14–15, no red text, no lorem ipsum, no placeholder prices, clean bottom
+edge below the card row. Clusters D and F: full pages, no red text
+anywhere, tables and cards use identical plan names, prices and CTAs.
 
 ## Completion log
 
@@ -504,6 +606,11 @@ Create or update `export-log.md` in the destination folder:
   badges with no discount feature lines, `Save 16%` fill-in with its two
   image sources, FAQ placeholder removal, API Pro rebuild from
   `Monetization/API.png`).
+- Rev-6 style decisions applied (all-regular bullets, `per month` phrasing,
+  wrap fixes with any authorized shorter strings used, restored price
+  blocks with their attested values and sources, Voice and Enterprise
+  `Let's talk` blocks, banner removals, shared CTA baselines) and the
+  Cluster F source node ID.
 - Checkpoint names; exported files with pixel dimensions and source node IDs;
   override-vs-detach decisions; anything not completed exactly as specified.
 
