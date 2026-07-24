@@ -1,28 +1,34 @@
-# Figma work brief: pricing evolution exhibits — REVISION 6
+# Figma work brief: pricing evolution exhibits — REVISION 7
 
 **Created:** 2026-07-23 · **Revision 5:** 2026-07-23 (post round-1 QA) ·
-**Revision 6:** 2026-07-24 (post round-2 QA by Mason)
+**Revision 6:** 2026-07-24 (post round-2 QA) ·
+**Revision 7:** 2026-07-24 (post round-3 QA by Mason)
 **For:** the executing agent — the Figma desktop app plus MCP server on the
 Windows machine, or Mason's logged-in Chrome profile
 **Authorized by:** Mason, for this task only
 
-**Revision 6 is a style-system pass plus one new cluster.** Mason reviewed
-the round-2 exports: the round-1 defects are repaired, but the exhibits fail
-his eye on bullet styling, wrapped lines, missing prices and CTAs, and
-description-to-button spacing — and Act 2 needs one more page. Work on the
-existing exhibit frames; do not rebuild the existing clusters from scratch.
-Fix every item in the round-2 QA register, apply the revised system rules to
-all clusters, build Cluster F, and re-export everything under the export
-verification rule.
+**Revision 7 is a small, targeted pass — three fix categories, three
+re-exports.** The round-2 defects are repaired and the round-3 exports are
+structurally sound (clean edges, prices and CTAs restored, bullets
+unbolded and single-line, Cluster F built correctly). Mason's round-3
+review found three remaining defects: one crammed Enterprise bullet, bold
+still inside comparison-table values, and table values repeating their row
+label's noun. Only Clusters A, D and F change; **Clusters B, C and E are
+approved as exported — do not touch their frames or re-export them.**
 
 ## Purpose and philosophy (read first)
 
 These exhibits are for Mason's UX-writing and content-design portfolio. The
 audience is recruiters and hiring managers. The goal is a clear
-beginning-to-end story: DeepL's pricing page evolved from bundles and
-standalone products (confusing) to one product per page with Write and Voice
-as add-ons (simpler), ending with a consistent four-product pattern
-(Translator / Write / Voice / API).
+beginning-to-end story with three beats (history corrected by Mason,
+2026-07-24): the **shipped bundle rollout** used a three-tab selector
+(DeepL Translator / DeepL Translator + DeepL Write / DeepL API) with
+bundles and standalone products coexisting (confusing); the **toggle
+pages** — the bundle page with `Add DeepL Write Pro` ON and the Translator
+page with it OFF — are the later internal simplification direction, not
+the rollout state; the story ends at one product per page with Write and
+Voice as add-ons and a consistent four-product pattern (Translator /
+Write / Voice / API).
 
 Accordingly: **polish is the point.** The historical frames are works in
 progress — lorem ipsum, placeholder prices, duplicated copy, and unfinished
@@ -62,55 +68,58 @@ be revisited. It is not a preservation doctrine.
 
 ## Cleanup and bases (do first, idempotent)
 
-Record checkpoint `rev6 pre-pass` before changing anything (see the
+Record checkpoint `rev7 pre-pass` before changing anything (see the
 checkpoint fallback below).
 
 In `Portfolio exhibits 2026-07`:
 
-- The five existing `EXHIBIT — …` frames are the rev-6 bases. Keep them; do
+- The six existing `EXHIBIT — …` frames are the rev-7 bases. Keep them; do
   not delete or re-duplicate them. If one is missing or structurally broken,
   recreate only that one as a fresh duplicate of its canonical source node
   and apply its full cluster spec.
-- Cluster F starts from a fresh duplicate of its source (see Cluster F).
-- In `private-evidence/figma-exports-pricing-2026-07/` in the repository
-  clone on the executing machine, move the five round-2 exports into
-  `superseded/` as `rev5-round2-*.png` before re-exporting.
-- Checkpoint: `rev6 cleanup done`.
+- Only Clusters A, D and F are edited in this revision. In
+  `private-evidence/figma-exports-pricing-2026-07/` in the repository clone
+  on the executing machine, move **only** the three affected round-3
+  exports (`pricing-translator-cumulative.png`,
+  `pricing-bundle-era-clean.png`,
+  `pricing-translator-transition-clean.png`) into `superseded/` as
+  `rev6-round3-*.png` before re-exporting. Leave the B, C and E exports in
+  place.
+- `pricing-bundle-tabs.png` (the shipped three-tab bundle view) was
+  promoted from `superseded/` back into the exports folder in the repo on
+  2026-07-24. It needs **no Figma action** — do not re-export it.
+- Checkpoint: `rev7 cleanup done`.
 
 **Checkpoint fallback:** round 2 established that the tooling exposes no
 named-version operation. Where a named checkpoint cannot be created, record
 an ISO timestamp against the checkpoint name in the completion log instead,
 and never claim a checkpoint was created when it was not.
 
-## Round-2 QA register (Mason, 2026-07-24 — every item must be fixed)
+## Round-3 QA register (Mason, 2026-07-24 — every item must be fixed)
 
-The round-1 defects are repaired and stay repaired. Mason's review of the
-round-2 exports found the failures below; each maps to a revised system rule.
+The round-1 and round-2 defects are repaired and stay repaired (bullets are
+all-regular, `per month`, single-line; prices, CTAs and spacing are
+restored; Cluster F is built). Mason's review of the round-3 exports found
+three remaining defects:
 
-1. **Redundant "per user/month" in feature bullets** (all clusters). Bullets
-   never say "per user" — write `per month`. Per-user billing lives in the
-   price subtext only. Comparison-table row labels are out of scope.
-2. **Feature bullets wrapping to two lines** (`Unlimited text translation`,
-   `20 file translations per user/month`, `100 file translations per
-   user/month`, `Translate files up to 30 MB`, audience row `For teams and
-   businesses`). No bullet or audience row may wrap. Widen the text layer
-   to the card's content width first; the shortened `per month` copy
-   removes most remaining wraps.
-3. **Mixed bold/regular inside bullets looks sloppy** (all clusters).
-   Remove all bolding inside feature bullets — entire lines regular
-   weight. List headers (`What's included:`, `Everything in …, plus:`,
-   `Tailor to your enterprise needs:`) stay semibold.
-4. **Prices were removed — rejected as absurd** (Clusters A, B, E). Restore
-   real price blocks and CTAs per rules 14 and 15. Every value is attested;
-   no placeholder returns.
-5. **Description-to-button spacing is terrible** (Voice cards; API Free).
-   Root cause: deleting the price blocks collapsed the card anatomy and the
-   CTA slid up under the description. Restoring the price block (or the
-   Voice `Let's talk` block) restores the rhythm. Verify uniform spacing
-   and a shared CTA baseline across every grid (rule 15).
-6. **Act 2 needs more weight.** Build and export Cluster F, the
-   transition-era Translator full page with the `Add DeepL Write Pro`
-   toggle and its complete comparison table.
+1. **Enterprise bullet crammed to the card edge** (Clusters A, D, F). The
+   no-wrap rule forced `Multilingual AI-powered business writing at scale`
+   onto one line that runs into the card's right edge. The approved
+   replacement string is `AI-powered business writing at scale` — apply it
+   on every Enterprise card that carries the line.
+2. **Bold still inside comparison-table values** (Clusters D and F tables:
+   `1 million` per user, `3/5/20/100` per user, `5/10/20/30 MB`, `2,000`
+   glossaries, `1` glossary). Remove all bold from table **values** —
+   entire values regular weight, same reasoning as the bullets. Section
+   headers (`Text translation`, `Glossary`, …) and row labels keep their
+   existing weight.
+3. **Table values repeat the row label's noun or qualifier** (Clusters D
+   and F tables). Adopt the label-once pattern DeepL's current public
+   table uses — the row label owns the noun and the qualifier; values are
+   bare. Exact transforms in rule 16.
+
+No structural change anywhere. Clusters B, C and E are approved; their
+frames and exports stay untouched.
 
 ## File and node inventory
 
@@ -123,7 +132,7 @@ File: `https://www.figma.com/design/fdxAxs14RUKijGsznWusF3/Pricing-Grid`
 | `13:17289` | `Pro on Translate` (1512x4975) | Cluster A base. Its `Main Navigation` child (`13:17296`) is already hidden — leave hidden |
 | `13:17485` | `Pro on Write` (1512x1427) | Cluster B base |
 | `13:17681` / `13:17852` | Both named `Pro on Voice` (1512x1427) | One is the true Voice page (hero "Real-time voice translations for global collaboration", Voice tab active, Meetings/Conversations cards). The other is the **API page** (hero "Scale multilingual workflows with the DeepL API") — that one is the **Cluster E base**. Verify by content; log which is which |
-| `3:2782` / `3:4695` | `Translate Tab` / `Bundle Tab` sections | Not used. Their comparison tables are clipped by construction; never export tables from them |
+| `3:2782` / `3:4695` | `Translate Tab` / `Bundle Tab` sections | Shipped-rollout evidence only (the "Find your perfect plan" three-tab selector). The bundle-tab grid region is already exported as `pricing-bundle-tabs.png` — no further export needed. Their comparison tables are clipped by construction; never export tables from them, and never use these frames as exhibit bases |
 
 Reference images (expected content of each base, from Mason):
 
@@ -233,12 +242,36 @@ are the visible evidence of Mason's craft:
     Delete the blue account/support banner row on Clusters A, B and E
     (`Want to change your plan…`, `Want to add DeepL Write Pro…`,
     `Want DeepL API…`); keep the currency selector aligned right.
+16. **Comparison-table style (new rev 7 — Clusters D and F tables):**
+    - No bold anywhere inside a table **value** — entire values regular
+      weight. Section headers and row labels keep their existing weight.
+    - Label-once pattern: the row label owns the noun and the qualifier;
+      values are bare. Exact transforms (apply in both tables wherever the
+      row exists):
+      - Row `Number of glossaries` → rename label to `Glossaries`; values
+        `1 glossary / 1 glossary / 2,000 glossaries / 2,000 glossaries` →
+        `1 / 1 / 2,000 / 2,000`
+      - Row `Entries per glossary`: values `10 entries / Unlimited / …` →
+        `10 / Unlimited / …`
+      - Row `Monthly file translations` → rename label to
+        `File translations (per user/month)`; values
+        `3 per user / 5 per user / 20 per user / 100 per user` →
+        `3 / 5 / 20 / 100`
+      - Row `Monthly characters` → rename label to
+        `Characters (per user/month)`; values `Daily limit /
+        1 million per user / Unlimited / Unlimited` → `Daily limit /
+        1 million / Unlimited / Unlimited` (both the Text translation and
+        Text improvements sections where present)
+    - `Maximum file size` values (`5 MB`, `10 MB`, …) keep their units —
+      units are not label repetition — but lose their bold.
+    - Check every remaining row for the same pattern; if a value repeats
+      its label's noun or a per-user qualifier, strip it and log the row.
 
 ## Cluster D — Bundle-era page, cleaned (the "beginning")
 
 Base: the existing `EXHIBIT — Bundle era pricing (refined)` frame
 (originally duplicated from the bundle-era full page in `Pricing Pages`).
-Checkpoints: `rev6 cluster D start` / `rev6 cluster D done`.
+Checkpoints: `rev7 cluster D start` / `rev7 cluster D done`.
 
 This page has no `Main Navigation` layer — nothing to hide. Keep the full
 page: hero, toggle bar, cards, logo strip, quotes, "DeepL Pro for large
@@ -310,8 +343,11 @@ Every card list in this cluster follows rule 5: regular weight throughout,
 - CTA stays `Buy now`.
 
 **Enterprise**
-- Add header `Tailor to your enterprise needs:`; keep all five lines
-  (regular weight, no wraps) and the account-executive footer.
+- Header `Tailor to your enterprise needs:` (added in rev 6); keep all five
+  lines (regular weight, no wraps) and the account-executive footer.
+- **Rev 7:** replace `Multilingual AI-powered business writing at scale`
+  with `AI-powered business writing at scale` — the old string runs into
+  the card's right edge.
 
 ### Below the grid
 
@@ -329,6 +365,8 @@ Every card list in this cluster follows rule 5: regular weight throughout,
   - Ultimate column CTA `Contact Sales` → `Buy now` (must match the card)
   - Team size row, Ultimate column: `For individuals and teams` →
     `For teams and businesses` (match the card)
+- **Rev 7:** apply rule 16 to the whole table — unbold every value and
+  apply the label-once transforms.
 - FAQ: delete the two placeholder subsections whose rows are all titled
   `Question` (`Changes to your plan` and `Using DeepL`); keep the real
   `Trials and purchases` questions. Do not write replacement questions.
@@ -338,7 +376,7 @@ Every card list in this cluster follows rule 5: regular weight throughout,
 
 Base: the existing `EXHIBIT — Translator cumulative (refined)` frame
 (originally duplicated from `13:17289`).
-Checkpoints: `rev6 cluster A start` / `rev6 cluster A done`.
+Checkpoints: `rev7 cluster A start` / `rev7 cluster A done`.
 
 Keep: product tab bar, hero, chips, currency selector, card titles,
 Recommended badge, all four descriptions. Delete the blue account banner
@@ -373,9 +411,13 @@ Header `Everything in Advanced, plus:`. Only:
 
 **Enterprise** — audience `Available from 1,000 users` keep. Header
 `Tailor to your enterprise needs:`. Keep all lines (regular weight, no
-wraps) and footer.
+wraps) and footer. **Rev 7:** replace `Multilingual AI-powered business
+writing at scale` with `AI-powered business writing at scale` — the old
+string runs into the card's right edge.
 
 ## Cluster B — Write add-on page, cleaned
+
+**Rev 7: approved as exported — no action. Spec kept for reference only.**
 
 Base: the existing `EXHIBIT — Write add-on (refined)` frame
 (originally duplicated from `13:17485`).
@@ -433,6 +475,8 @@ Keep the polished wording `Set terms to never edit`.
 
 ## Cluster C — Voice page, cleaned
 
+**Rev 7: approved as exported — no action. Spec kept for reference only.**
+
 Base: the existing `EXHIBIT — Voice add-on (refined)` frame
 (originally duplicated from the true Voice frame; log its node ID).
 Checkpoints: `rev6 cluster C start` / `rev6 cluster C done`.
@@ -477,6 +521,8 @@ line at the card's content width, the authorized shorter string is
 
 ## Cluster E — API page, light touch (the end-state fourth tab)
 
+**Rev 7: approved as exported — no action. Spec kept for reference only.**
+
 Base: the existing `EXHIBIT — API pricing (refined)` frame (originally
 duplicated from the API-content frame — whichever of `13:17681` / `13:17852`
 shows "Scale multilingual workflows with the DeepL API").
@@ -510,15 +556,15 @@ wraps (rule 5).
   plus:` (this card is the one place the cumulative pattern already existed
   — do not restyle it away). All five lines regular weight.
 
-## Cluster F — Translator transition page, cleaned (new in rev 6)
+## Cluster F — Translator transition page, cleaned (built in rev 6)
 
-Base: fresh duplicate of the transition-era Translator full page in
-`Pricing Pages` — the page matching `Monetization/Translator@2x.png`: hero
+Base: the existing `EXHIBIT — Translator transition (refined)` frame built
+in rev 6 from the transition-era Translator full page in `Pricing Pages`
+(the page matching `Monetization/Translator@2x.png`): hero
 "Fast, accurate, and secure translations", `Add DeepL Write Pro` toggle set
 OFF, Translator cards with real prices and CTAs, complete comparison table,
-FAQ, footer. Rename it `EXHIBIT — Translator transition (refined)` and log
-its source node ID.
-Checkpoints: `rev6 cluster F start` / `rev6 cluster F done`.
+FAQ, footer.
+Checkpoints: `rev7 cluster F start` / `rev7 cluster F done`.
 
 This is the Act 2 pivot exhibit: the add-on model emerging on the grid
 itself. Keep the full page — nav, tab bar, hero, toggle bar, cards, logo
@@ -533,10 +579,13 @@ density problem and must stay.
   (Start free trial / Start free trial / Buy now / Contact Sales).
 - Resolve every red line to standard styling, adopting Mason's wording.
 - Apply rule 5 styling to all card lists: regular weight, `per month`
-  phrasing, no wrapped lines. Make no other list content change.
+  phrasing, no wrapped lines. Make no other list content change except the
+  rev-7 Enterprise fix: replace `Multilingual AI-powered business writing
+  at scale` with `AI-powered business writing at scale`.
 - Comparison table: recolor all red text to the color and weight of its
   black siblings, wording preserved. Table and cards must agree on plan
-  names, prices and CTAs.
+  names, prices and CTAs. **Rev 7:** apply rule 16 to the whole table —
+  unbold every value and apply the label-once transforms.
 - FAQ: delete placeholder subsections whose rows are all titled `Question`;
   keep the real questions. Footer stays.
 - Export as `pricing-translator-transition-clean.png` (full page).
@@ -570,6 +619,12 @@ readable zoom and record pass/fail per check:
 - Cluster F additionally: toggle OFF with `Save 16% with annual`, full
   per-card lists retained (no cumulative headers), comparison table fully
   recolored and consistent with the cards, FAQ placeholders gone.
+- Rev-7 checks (A, D, F): Enterprise card reads `AI-powered business
+  writing at scale` with visible breathing room to the card edge; no bold
+  anywhere inside a comparison-table value; no table value repeats its row
+  label's noun or a per-user qualifier (rule 16 transforms applied —
+  `Glossaries` row shows bare `1 / 1 / 2,000 / 2,000`, file-translation and
+  character rows show bare values under qualified labels).
 
 A failed check blocks that export from being listed as complete; fix the
 frame and re-export instead of logging the failure as done.
@@ -578,14 +633,15 @@ Before-evidence: **already covered by Mason's own exports** in
 `~/Projects/Mason Portfolio/Monetization/` and `figma screenshots/` — do not
 re-export the originals unless a specific file below fails.
 
-| File | Source |
-|---|---|
-| `pricing-bundle-era-clean.png` | Cluster D exhibit (full page) |
-| `pricing-translator-transition-clean.png` | Cluster F exhibit (full page) |
-| `pricing-translator-cumulative.png` | Cluster A exhibit |
-| `pricing-write-addon-clean.png` | Cluster B exhibit |
-| `pricing-voice-clean.png` | Cluster C exhibit |
-| `pricing-api-clean.png` | Cluster E exhibit |
+| File | Source | Rev 7 action |
+|---|---|---|
+| `pricing-bundle-era-clean.png` | Cluster D exhibit (full page) | **Re-export** after fixes |
+| `pricing-translator-transition-clean.png` | Cluster F exhibit (full page) | **Re-export** after fixes |
+| `pricing-translator-cumulative.png` | Cluster A exhibit | **Re-export** after fixes |
+| `pricing-write-addon-clean.png` | Cluster B exhibit | Approved — leave as-is |
+| `pricing-voice-clean.png` | Cluster C exhibit | Approved — leave as-is |
+| `pricing-api-clean.png` | Cluster E exhibit | Approved — leave as-is |
+| `pricing-bundle-tabs.png` | Bundle Tab grid region (shipped rollout) | Already in repo — no Figma action |
 
 Final consistency check across A, B, C, E exports: same 1512px family,
 product tab bar at top, no main navigation, real prices and CTAs per rules
@@ -598,7 +654,7 @@ anywhere, tables and cards use identical plan names, prices and CTAs.
 Create or update `export-log.md` in the destination folder:
 
 - Node IDs: Cluster D base within `Pricing Pages`; which `Pro on Voice` node
-  is Voice vs API; all five exhibit frames; the section.
+  is Voice vs API; all six exhibit frames; the section.
 - Reconstruction decisions applied (Ultimate audience rows, merged glossary
   lines, Voice list rebuild with split lines and SSO threshold, Write Pro
   delta tightened to four lines with `Set terms to never edit` on Free,
@@ -611,6 +667,9 @@ Create or update `export-log.md` in the destination folder:
   blocks with their attested values and sources, Voice and Enterprise
   `Let's talk` blocks, banner removals, shared CTA baselines) and the
   Cluster F source node ID.
+- Rev-7 decisions applied: the Enterprise string replacement on A, D and F;
+  table-value unbolding; every rule-16 label-once transform, including any
+  additional rows found repeating their label and logged per rule 16.
 - Checkpoint names; exported files with pixel dimensions and source node IDs;
   override-vs-detach decisions; anything not completed exactly as specified.
 

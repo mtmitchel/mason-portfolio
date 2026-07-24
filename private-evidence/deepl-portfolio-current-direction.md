@@ -1,6 +1,6 @@
 # Current portfolio direction
 
-**Updated:** 2026-07-23
+**Updated:** 2026-07-24
 
 **Status:** Current-decision owner
 
@@ -117,7 +117,23 @@ notation makes a change explicit.
   `Bundle Tab` frames are not exhibit bases and their clipped comparison
   tables must never be exported as table evidence; complete tables exist in
   the bundle-era full page and node `12:13311` inside
-  `Pages / 1512px Translator`.
+  `Pages / 1512px Translator`. The Bundle Tab **grid region** (tabs plus
+  cards, above the clipped table) is legitimate shipped-era before-evidence
+  and is already exported as `pricing-bundle-tabs.png` (3840x2826, clean
+  edges, real prices, discounts as price subtext) — promoted back from
+  `superseded/` on 2026-07-24.
+- **Bundle-era history correction (Mason, 2026-07-24):** the shipped bundle
+  rollout used the "Find your perfect plan" **three-tab selector** — DeepL
+  Translator / DeepL Translator + DeepL Write / DeepL API — attested by
+  `figma screenshots/1920px.png`, `1440px.png` and the research's June 2024
+  `Starter/Advanced/Ultimate + Write` plan types in the live pricing code.
+  The "Add DeepL Write Pro" toggle pages are **not** the rollout state:
+  their four-product tab bar includes DeepL Voice, which postdates the
+  bundle rollout, and Mason confirms they are the later internal
+  simplification direction (Write still a separate product; the team wanted
+  a cleaner way to sell it as an add-on). The toggle pages therefore slot
+  as the pivot beat between the shipped bundle era and the add-on era —
+  never presented as the bundle rollout itself.
 - Provenance (updated 2026-07-23): the full bundle-era pricing pages
   originated in the main Monetization Figma file and were moved by Mason into
   the Pricing Grid file (`fdxAxs14RUKijGsznWusF3`), section `Pricing Pages`.
@@ -173,6 +189,22 @@ notation makes a change explicit.
   - CTA logic applies to every exhibit: Start free trial (trial-eligible),
     Buy now (highest self-serve), Contact Sales (sales-led), Sign up for
     free (API Free), no CTA on Write Free (source-attested).
+  - **Comparison-table style (Mason, 2026-07-24):** table values carry no
+    bold — same reasoning as the bullets. Row labels own the qualifiers and
+    values never repeat the label's noun or unit, matching DeepL's current
+    public table pattern: `Glossaries` → `1 / 1 / 2,000 / 2,000` (not
+    "1 glossary / 2,000 glossaries"); `Entries per glossary` → `10 /
+    Unlimited / …`; `File translations (per user/month)` → `3 / 5 / 20 /
+    100`; `Characters (per user/month)` → `Daily limit / 1 million /
+    Unlimited / Unlimited`. Applies to both toggle-page tables (bundle and
+    transition) — they are one internal design direction whose point was
+    simplification; the verbose "before" lives in the shipped-era tabbed
+    asset.
+  - **Enterprise bullet fix (Mason, 2026-07-24):** `Multilingual AI-powered
+    business writing at scale` runs to the card edge as one line; the
+    approved string is `AI-powered business writing at scale` wherever the
+    Enterprise card appears (Translator cumulative, bundle page, transition
+    page).
 - Figma execution instructions live in
   `private-evidence/figma-pricing-exhibit-brief.md` (single execution owner
   for all exhibit edits and exports; the older Chrome-profile export queue is
@@ -211,18 +243,25 @@ Build the robust, complete set first; Mason cuts back later if he wants.
 - **Act 1 (2023) — narrative only, no exhibit:** one Translator grid, API
   priced separately, Write free. Pricing was simple because the product was.
   No 2023-era artifact exists in the working files; Act 1 stays prose.
-- **Act 2 (the problem) — five exhibits:** the three existing public grids
-  (`pricing-translator.png`, `pricing-write-pro.png`, `pricing-bundle.png`,
-  originally exported from Monetization file `0JYwhKhRAliGBhyl2kBnEu`
-  nodes `5:269713`, the matching Write Pro grid, and `5:271012`) presented
-  as coexisting grids; the cleaned full bundle page
-  (`pricing-bundle-era-clean.png`) as the density centerpiece — the same
-  Write Pro block repeated across three tiers, three ways to buy one
-  product; and the cleaned transition-era Translator full page
-  (`pricing-translator-transition-clean.png`, new Cluster F) with the
-  "Add DeepL Write Pro" toggle — the pivot artifact where the add-on model
-  emerged on the grid itself, with real prices and its complete comparison
-  table.
+- **Act 2 (the problem) — six exhibits in two beats (re-slotted
+  2026-07-24 per the bundle-era history correction):**
+  - *Shipped bundle era:* the three existing public grids
+    (`pricing-translator.png`, `pricing-write-pro.png`,
+    `pricing-bundle.png`, originally exported from Monetization file
+    `0JYwhKhRAliGBhyl2kBnEu` nodes `5:269713`, the matching Write Pro grid,
+    and `5:271012`) presented as coexisting grids, plus
+    `pricing-bundle-tabs.png` — the shipped "Find your perfect plan"
+    three-tab selector with the bundle tab active. This beat carries the
+    multiplicity story: three tabs, three ways to buy, verbose period copy
+    left verbatim as before-evidence.
+  - *Internal simplification direction (the pivot):* the cleaned full
+    bundle page (`pricing-bundle-era-clean.png`, toggle ON) as the density
+    centerpiece — the same Write Pro block repeated across three tiers —
+    and the cleaned transition-era Translator full page
+    (`pricing-translator-transition-clean.png`, Cluster F, toggle OFF).
+    One design direction, polished as Mason's work: the add-on model
+    emerging on the grid itself, real prices, complete label-once
+    comparison tables.
 - **Act 3 (the simplification) — four exhibits:** the cleaned 1512px add-on
   era frames — Translator cumulative, Write add-on, Voice, API — one page
   per product, cumulative tiers, add-ons, real prices and CTAs restored
