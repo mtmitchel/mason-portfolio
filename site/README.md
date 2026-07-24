@@ -1,6 +1,9 @@
 # Mason Mitchel portfolio
 
-A calm, evidence-led portfolio for Mason's UX copywriting and content design work.
+A calm, evidence-led portfolio for Mason's UX copywriting and content design
+work. The homepage uses media-first, naturally sized project cards; three
+homepage covers use silent loops that play only while visible and fall back to
+their poster frames when reduced motion is enabled.
 
 For a self-contained project and review overview, see
 [`docs/claude-fable-review-brief.md`](docs/claude-fable-review-brief.md).
@@ -58,7 +61,8 @@ actually being reviewed.
   metaphors, faux drama, or promotional hooks.
 - Keep the header to one short role line and do not repeat it beside “Selected
   work.”
-- Stack short factual metadata beneath 18px card titles. Keep all visible text at
+- Put each card's media before its title, let cards keep their natural height and
+  stack short factual metadata beneath 18px titles. Keep all visible text at
   14px or larger.
 - Keep `Selected work` and `Writing` as underlined route-backed text links in
   the section-heading row. Use colour and weight for active state; do not add an
@@ -70,8 +74,10 @@ actually being reviewed.
 
 ## Evidence assets
 
-Selected case-study images live in `public/work/<case>/`. Evidence retained only
-for retired routes lives in ignored private evidence and is not deployable.
+Selected case-study images live in `public/work/<case>/`; selected homepage
+covers live in `public/work/home-covers/`. Unselected cover experiments remain
+outside `public/` as tracked working material. Evidence retained only for
+retired routes is not deployable.
 `../private-evidence/portfolio-asset-manifest.json` records source, permission,
 privacy, crop, caption and text-alternative decisions for the selected visuals.
 

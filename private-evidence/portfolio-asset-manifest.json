@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "assets": [
     {
       "id": "DEEPL-UPGRADE-PROMPTS",
@@ -48,6 +48,14 @@
           "dimensions": "1648x1504"
         }
       ],
+      "homepage_media": {
+        "source_type": "DeepL marketing illustration",
+        "source_notes": "Selected during the 2026-07-24 homepage review. The original download URL was not retained; the tracked 1728x1728 working file is the provenance source.",
+        "crop_notes": "Use the complete square illustration as a homepage cover. The case page retains the product-interface evidence.",
+        "public_path": "site/public/work/home-covers/deepl-upgrade-to-pro.png",
+        "dimensions": "1728x1728",
+        "sha256": "6ba05a23bd8b43effe3b09e331faa0170c95e1d641e4a939f89e9d1670c848e6"
+      },
       "relocated_files": [
         "private-evidence/retired-public-assets-2026-07-22/work/hard-blockers/write-pro-free.png",
         "private-evidence/retired-public-assets-2026-07-22/work/hard-blockers/write-pro-existing-translator-pro.png"
@@ -62,11 +70,17 @@
       "publication_permission": "unknown",
       "contains_sensitive_data": false,
       "redaction_notes": "The selected product-frame exports contain no private identifiers, comments, tickets, Figma chrome, account avatars or private links. Proposal styling and placeholder values were resolved before export.",
-      "crop_notes": "Use the three launch grids and the three-tab selector for the bundle-launch beat. The two 3024px full pages stay private; each is represented publicly by a complete grid crop and a complete comparison-table crop. Use the four complete product-page card regions for the cumulative four-product system. Eight detail crops support chapter moments and before/after comparisons. feature-awareness-security.png was removed from the public folder on 2026-07-24; the 2x original remains under private-evidence/figma-exports-2026-07-22/write-pro-launch/.",
+      "crop_notes": "Use the three launch grids and the three-tab selector for the bundle-launch beat. The two 3024px full pages stay private; each is represented publicly by a complete grid crop and a complete comparison-table crop. Use the four complete product-page card regions for the cumulative four-product system. Eight detail crops support chapter moments and before/after comparisons. feature-awareness-security.png was removed from the public folder on 2026-07-24; the 2x original remains under private-evidence/figma-exports-2026-07-22/write-pro-launch/. The 2023 single-grid page exists only in web archives with its dynamic plan grid unloaded; pricing-2023-pro-page.png is a dated Arquivo.pt replay capture (11 March 2023) of the live DeepL Pro page above the grid.",
       "caption": "Captions identify the visible commercial choice and the content-design decision: separate grids and tabs, repeated bundle content, label-once tables, cumulative tiers, parallel Voice offers or detail comparisons.",
       "text_alternative": "Describe the visible product, plan or add-on choices; whether a toggle is on or off; the plan tiers or parallel offers shown; and the purpose of each complete grid, table or feature module.",
       "export_ready": false,
       "files": [
+        {
+          "path": "pricing-2023-pro-page.png",
+          "source_path": "https://arquivo.pt/noFrame/replay/20230311235206/https://www.deepl.com/pro",
+          "dimensions": "2650x1760",
+          "sha256": "296ef60142f1ff7e8a201dca65383e04f8ac29f6c68e0c7823c247f8d9787574"
+        },
         {
           "path": "pricing-translator.png",
           "source_path": "site/public/work/write-pro-launch/pricing-translator.png",
@@ -209,6 +223,16 @@
         "private-evidence/figma-exports-pricing-2026-07/site-display/"
       ],
       "private_source_archive": "private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-source.zip",
+      "homepage_media": {
+        "source_path": "hovering-cubes-loop-gemini-omni-ai-playground-220772.mp4",
+        "source_type": "user-provided AI-generated animation",
+        "crop_notes": "Use the centered 588x588 square crop at x=346 and y=66, scaled to 1280x1280 with light sharpening. This removes the source's baked-in white frame so the blue field meets the card edge cleanly. The audio track is removed. The motion plays forward and then reverses so the final frame flows back into the first without a reset.",
+        "public_path": "site/public/work/home-covers/pricing-language-cubes-loop.mp4",
+        "dimensions": "1280x1280",
+        "sha256": "7bbed134b135b694c9bd2972bab36b11b636ee08bba559daaa8e718b2cdbeb27",
+        "poster_path": "site/public/work/home-covers/pricing-language-cubes-loop-poster.png",
+        "poster_sha256": "243e51321e0be12c91d25172a52a189c3994fafc0fbf7e0f4830064bad94435d"
+      },
       "relocated_files": [
         "private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-2x.png"
       ],
@@ -269,6 +293,16 @@
         }
       ],
       "private_originals": "private-evidence/retired-public-assets-2026-07-22/work/multi-factor-authentication/ and private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/",
+      "homepage_media": {
+        "source_path": "isometric-cards-loop-gemini-omni-ai-playground-323410.mp4",
+        "source_type": "user-provided AI-generated animation",
+        "crop_notes": "Use the centered 560x560 square crop at source position x336 y88, scaled to 1280x1280 with light sharpening. The tighter crop removes the unrelated horizontal source line and centers the complete lock-and-cards shape. The audio track is removed. The motion plays forward and then reverses so the final frame flows back into the first without a reset.",
+        "public_path": "site/public/work/home-covers/account-security-cards-loop.mp4",
+        "dimensions": "1280x1280",
+        "sha256": "7af962f0e734336ae4433c7166d81dfc9707ca69b2ee03e576d93913dba45aa5",
+        "poster_path": "site/public/work/home-covers/account-security-cards-loop-poster.png",
+        "poster_sha256": "6e62e774456d20e5937167ddcc8c86ada80a59169ddc6cdc26446cf179b0ee55"
+      },
       "relocated_files": [
         "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-01-scope.png",
         "private-evidence/retired-public-assets-2026-07-22/work/bulk-administration/complete-flow/bulk-delete-02-filter-scope.png",
@@ -312,7 +346,15 @@
           "dimensions": "3024x2738",
           "sha256": "387b33b914237dfab4fa85c941803fef4b7dafff104ca5089c40d274d2fd9f66"
         }
-      ]
+      ],
+      "homepage_media": {
+        "source_path": "work/deepl-cover-candidates/retail-ecommerce-hero.svg",
+        "source_type": "DeepL marketing illustration",
+        "crop_notes": "Use the complete square illustration as a homepage cover. The case page retains the checkout-interface evidence.",
+        "public_path": "site/public/work/home-covers/deepl-retail-ecommerce.svg",
+        "dimensions": "575x575",
+        "sha256": "12b113801ffe48008b05b81e8b0acd1fbe989f13b8d12bb1b083259fcba6cd4c"
+      }
     },
     {
       "id": "DEEPL-LOCALIZATION-CAMPAIGN",
@@ -323,14 +365,15 @@
       "publication_permission": "unknown",
       "contains_sensitive_data": false,
       "redaction_notes": "The published report and article pages contain no private comments, source links, participant data or internal identifiers.",
-      "crop_notes": "Use the report cover as the card image. The restored ai-content-generation.png page shows the article adaptation. Body text remains selectable HTML so the page images are supporting evidence rather than the only readable source.",
+      "crop_notes": "Use the full report cover as the card image. The restored ai-content-generation.png page shows the article adaptation. Body text remains selectable HTML so the page images are supporting evidence rather than the only readable source.",
       "caption": "Captions explain whether a frame belongs to the report, article adaptation or customer-story sequence.",
       "text_alternative": "Describe each page's editorial function and keep its essential claim available as nearby HTML text.",
       "export_ready": false,
       "files": [
         {
           "path": "localization-report/report-cover.png",
-          "dimensions": "1488x1100"
+          "dimensions": "978x1369",
+          "sha256": "d261736f273ecb4875baa90ad716e46e8a13fd142f337cbe6f4374039bf64c61"
         },
         {
           "path": "localization-report/key-findings.png",
@@ -356,21 +399,23 @@
       ]
     },
     {
-      "id": "LOCALYZE-FORBES-GHOSTWRITING-COVER",
+      "id": "LOCALYZE-PASSPORT-LOOP",
       "project_id": "LOCALYZE-EXECUTIVE-GHOSTWRITING",
-      "source_path": "https://media.journoportfolio.com/users/48175/images/652baf75-74a4-4eab-b45d-ad2419ac9db2.jpg",
-      "source_type": "photo",
-      "editability": "flattened",
+      "source_path": "airplane-passport-loop-gemini-omni-ai-playground-986177.mp4",
+      "source_type": "user-provided AI-generated animation",
+      "editability": "derived media",
       "publication_permission": "unknown",
       "contains_sensitive_data": false,
-      "redaction_notes": "The public Forbes article artwork contains no private identifiers or account data.",
-      "crop_notes": "Keep the complete 1024x682 archive thumbnail on the homepage only. The case page uses the published headlines and excerpts as its evidence and does not display the oversized stock-art cover.",
-      "caption": "Public article artwork from Mason's existing Localyze writing archive.",
-      "text_alternative": "Forbes Council article photograph of a professional working beside the Arno in Florence.",
+      "redaction_notes": "The generated animation contains no private identifiers or account data.",
+      "crop_notes": "Use the centered square card crop on the homepage only. It removes empty space around the passport, scales the 600x600 source crop to 1280x1280 and applies light sharpening. The ending is blended into the beginning for a smooth loop, the audio track is removed and the first playback frame is retained as the poster. The case page uses published headlines and excerpts as its evidence and does not display the animation.",
+      "caption": "Passport and travel animation used as the homepage cover; the case page contains the published writing evidence.",
+      "text_alternative": "Line illustration of a passport, airplane route and clouds.",
       "export_ready": false,
-      "public_path": "site/public/work/editorial/localyze-forbes-ghostwriting.jpg",
-      "dimensions": "1024x682",
-      "sha256": "95594d7f22adb75418d71cba734deab9c4987e4d7d5f5a4b113729dfe351bcc2",
+      "public_path": "site/public/work/home-covers/localyze-passport-loop.mp4",
+      "dimensions": "1280x1280",
+      "sha256": "afe8f4b44451755f6a6a4a7d938fd590082c417b8d4196cea0b2e11d1a72dba2",
+      "poster_path": "site/public/work/home-covers/localyze-passport-loop-poster.png",
+      "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428",
       "relocated_files": [
         "private-evidence/retired-public-assets-2026-07-22/work/editorial/smartrecruiters-hiring-success.jpg"
       ]

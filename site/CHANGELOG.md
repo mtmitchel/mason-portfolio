@@ -42,6 +42,36 @@ checkpoints remain distinct from public site publication and deployment.
 
 ### Changed
 
+- Replaced the Localyze homepage still with a sharper, square
+  passport-and-travel animation so its subject matches the visual size of the
+  other covers. Its ending blends into its beginning, it plays only while
+  visible, and it stays on the poster frame when reduced motion is enabled.
+- Replaced the pricing and account-security homepage stills with silent square
+  animations. Both play forward and then reverse for a calm loop without a
+  visible reset, and they reuse the same visible-only and reduced-motion
+  behavior as the Localyze cover. The account-security crop removes a stray
+  source line and centers the complete lock-and-cards shape. The pricing crop
+  removes the source's white frame so the blue field meets the card edge
+  cleanly.
+- Refined the homepage into media-first, natural-height project cards while
+  preserving row-major navigation. The four DeepL cards use current DeepL
+  artwork as topic-matching covers; their case pages retain the complete,
+  uncropped interface evidence. Increased the card metadata to 16px for easier
+  reading, and gave mouse hover and keyboard focus the same clear green colour
+  change.
+
+- Recomposed `/work/pricing-evolution` on a single left rail inside the 1120px
+  site measure: prose holds a 740px measure and evidence renders edge-to-edge
+  at full width, all aligned to the same left edge. The scrolling filmstrip
+  became a stacked sequence of full-width figures; side-by-side decision
+  moments stack above their evidence; the toggle states form a clean pair with
+  the Translator-only page behind a text link; comparison tables stack
+  vertically at readable size; captions are plain muted text without the accent
+  bar; the boxed era diagram is a quiet text timeline; and the role meta block
+  left the hero. The 2023 chapter gains a dated Arquivo.pt capture of the
+  pre-Write DeepL Pro page as its exhibit. Wide figures also fetch
+  retina-appropriate image sizes.
+
 - Rebalanced the homepage to six selected entries in this order: upgrade
   prompts; pricing evolution across four products; subscription checkout;
   account, team and security writing; localization report campaign; and

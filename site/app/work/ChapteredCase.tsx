@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import ImageLightbox from "../components/ImageLightbox";
 import { SiteFooter, SiteHeader } from "../components/PortfolioChrome";
-import ChapterFilmstrip from "./ChapterFilmstrip";
 import EraDiagram from "./pricing-evolution/EraDiagram";
 
 export type CaseImage = {
@@ -25,11 +24,8 @@ export type ChapterBlock =
       beforeTag: string;
       afterTag: string;
       note?: string;
-    }
-  | {
-      kind: "stack";
-      rows: Array<{ tag: string; image: CaseImage }>;
-      note?: string;
+      /** "vertical" stacks the pair at full media width instead of two columns. */
+      orientation?: "vertical";
     }
   | {
       kind: "moment";
@@ -52,11 +48,6 @@ export type ChapteredCaseStory = {
   context: string;
   title: string;
   synopsis: string[];
-  facts: {
-    role: string;
-    collaborators: string;
-    stakes: string;
-  };
   chapters: Chapter[];
   closing: {
     heading: string;
@@ -71,6 +62,12 @@ export type ChapteredCaseStory = {
   next: { href: string; label: string };
 };
 
+/** Preview fetch hint matching the chapter media column (1120px max). */
+const chapterImageSizes = "(max-width: 1160px) 100vw, 1120px";
+
+/** Images wider than this render on the wide media tier; smaller ones stay with the text column. */
+const wideMomentThreshold = 740;
+
 function imageStyle(image: CaseImage): CSSProperties | undefined {
   if (!image.displayWidth) return undefined;
   return { ["--chapter-img-max" as string]: `${image.displayWidth}px` };
@@ -79,17 +76,12 @@ function imageStyle(image: CaseImage): CSSProperties | undefined {
 function ChapterFigure({
   image,
   showCaption = true,
-  variant = "plate",
 }: {
   image: CaseImage;
   showCaption?: boolean;
-  variant?: "plate" | "compare" | "moment" | "stack" | "strip";
 }) {
   return (
-    <div
-      className={`chapter-figure chapter-figure--${variant}`}
-      style={imageStyle(image)}
-    >
+    <div className="chapter-figure" style={imageStyle(image)}>
       <ImageLightbox
         chrome="image"
         label={image.alt}
@@ -99,6 +91,7 @@ function ChapterFigure({
         alt={image.alt}
         caption={image.caption}
         showCaption={showCaption && Boolean(image.caption)}
+        sizes={chapterImageSizes}
       />
     </div>
   );
@@ -132,7 +125,16 @@ function ChapterBlockView({ block }: { block: ChapterBlock }) {
   }
 
   if (block.kind === "strip") {
-    return <ChapterFilmstrip items={block.items} label={block.label} />;
+    return (
+      <div className="chapter-media">
+        <div className="chapter-strip" role="group" aria-label={block.label}>
+          <p className="chapter-strip-label">{block.label}</p>
+          {block.items.map((image) => (
+            <ChapterFigure key={image.src} image={image} />
+          ))}
+        </div>
+      </div>
+    );
   }
 
   if (block.kind === "tableLink") {
@@ -155,35 +157,23 @@ function ChapterBlockView({ block }: { block: ChapterBlock }) {
     );
   }
 
-  if (block.kind === "stack") {
-    return (
-      <div className="chapter-media">
-        <div className="chapter-stack">
-          {block.rows.map((row) => (
-            <div className="chapter-stack-row" key={row.tag}>
-              <p className="chapter-comparison-tag">{row.tag}</p>
-              <ChapterFigure image={row.image} showCaption={false} variant="stack" />
-            </div>
-          ))}
-        </div>
-        {block.note && <p className="chapter-caption">{block.note}</p>}
-      </div>
-    );
-  }
-
   if (block.kind === "comparison") {
     const note = block.note ?? block.before.caption;
     return (
       <div className="chapter-media">
-        <div className="chapter-comparison">
+        <div
+          className={`chapter-comparison${
+            block.orientation === "vertical" ? " chapter-comparison--vertical" : ""
+          }`}
+        >
           <div className="chapter-comparison-grid">
             <div>
               <p className="chapter-comparison-tag">{block.beforeTag}</p>
-              <ChapterFigure image={block.before} showCaption={false} variant="compare" />
+              <ChapterFigure image={block.before} showCaption={false} />
             </div>
             <div>
               <p className="chapter-comparison-tag">{block.afterTag}</p>
-              <ChapterFigure image={block.after} showCaption={false} variant="compare" />
+              <ChapterFigure image={block.after} showCaption={false} />
             </div>
           </div>
           {note && <p className="chapter-caption">{note}</p>}
@@ -204,16 +194,14 @@ function ChapterBlockView({ block }: { block: ChapterBlock }) {
       return <div className="chapter-moment chapter-moment--text">{copy}</div>;
     }
 
-    const stacked = (block.image.displayWidth ?? 0) > 460;
+    const wide = (block.image.displayWidth ?? Infinity) > wideMomentThreshold;
 
     return (
-      <div
-        className={`chapter-media chapter-moment ${
-          stacked ? "chapter-moment--stacked" : "chapter-moment--split"
-        }`}
-      >
+      <div className={`chapter-moment${wide ? "" : " chapter-moment--text"}`}>
         {copy}
-        <ChapterFigure image={block.image} variant={stacked ? "plate" : "moment"} />
+        <div className="chapter-media">
+          <ChapterFigure image={block.image} />
+        </div>
       </div>
     );
   }
@@ -236,20 +224,6 @@ export default function ChapteredCase({ story }: { story: ChapteredCaseStory }) 
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <dl className="chapter-facts">
-            <div>
-              <dt>My role</dt>
-              <dd>{story.facts.role}</dd>
-            </div>
-            <div>
-              <dt>Worked with</dt>
-              <dd>{story.facts.collaborators}</dd>
-            </div>
-            <div>
-              <dt>Why it mattered</dt>
-              <dd>{story.facts.stakes}</dd>
-            </div>
-          </dl>
         </header>
 
         {story.chapters.map((chapter) => (

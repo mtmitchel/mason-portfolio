@@ -15,6 +15,8 @@ type ImageLightboxProps = {
   linkLabel?: string;
   previewClassName?: string;
   previewSrc: string;
+  /** Fetch hint for the preview image; defaults to the legacy 760px story column. */
+  sizes?: string;
   /** When true, the dialog image pane scrolls tall sources inside a capped viewport. */
   tallDialog?: boolean;
   triggerClassName?: string;
@@ -35,6 +37,7 @@ export default function ImageLightbox({
   previewClassName = "",
   previewSrc,
   showCaption = true,
+  sizes = "(max-width: 760px) 100vw, 760px",
   tallDialog = false,
   triggerClassName = "",
   width,
@@ -100,7 +103,7 @@ export default function ImageLightbox({
           <>
             {showChrome && <span className="evidence-label">{label}</span>}
             <span className={`evidence-preview ${previewClassName}`.trim()}>
-              <Image src={previewSrc} alt={alt} width={width} height={height} sizes="(max-width: 760px) 100vw, 760px" />
+              <Image src={previewSrc} alt={alt} width={width} height={height} sizes={sizes} />
             </span>
             {showChrome && <span className="evidence-action">View larger</span>}
           </>

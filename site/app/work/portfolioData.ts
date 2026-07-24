@@ -6,86 +6,87 @@ import type {
 } from "./portfolioTypes";
 
 const upgradePromptsCover = {
-  label: "Usage-limit offer",
-  src: "/work/hard-blockers/usage-limit.png",
-  width: 1092,
-  height: 1500,
-  alt: "DeepL Translator usage-limit prompt with an offer-first headline, explanatory body copy, paid benefits and a trial action",
-  caption: "The headline carries the offer; the body names the usage limit and its 24-hour reset before the benefit list.",
+  label: "Upgrade to DeepL Pro",
+  src: "/work/home-covers/deepl-upgrade-to-pro.png",
+  width: 1728,
+  height: 1728,
+  alt: "DeepL illustration of a person approaching an Upgrade to DeepL Pro sign across a multilingual language platform",
+  caption: "DeepL upgrade illustration used as a homepage cover; the case page contains the upgrade-prompt evidence.",
 };
 
 const accountTeamSecurityCover = {
-  label: "Protection restored",
-  src: "/work/account-team-security/account-security-protection-restored.png",
-  width: 2360,
-  height: 734,
-  alt: "DeepL account settings showing personal multi-factor authentication with Active status",
-  caption: "The account state makes restored protection visible as an explicit status.",
+  label: "Account security illustration",
+  src: "/work/home-covers/account-security-cards-loop-poster.png",
+  width: 1280,
+  height: 1280,
+  alt: "Isometric lock beside stacked cards for account and security features",
+  caption: "Animated account-security illustration used as a homepage cover; the case page contains the account and team-writing evidence.",
 };
 
-const accountTeamSecurityPreview = [
-  accountTeamSecurityCover,
-  {
-    label: "Reset acknowledgement",
-    src: "/work/account-team-security/account-security-reset-required.png",
-    width: 1176,
-    height: 720,
-    alt: "Dialog explaining that multi-factor authentication was reset and must be set up again",
-    caption: "The acknowledgement explains what changed and what the account holder needs to do next.",
-  },
-  {
-    label: "Team administration",
-    src: "/work/bulk-administration/bulk-delete-confirmation-card.png",
-    width: 2000,
-    height: 1500,
-    alt: "Bulk-delete confirmation over selected fictional user rows",
-    caption: "The confirmation names the access consequence before a high-impact team action.",
-  },
-];
+const accountTeamSecurityVideo = {
+  src: "/work/home-covers/account-security-cards-loop.mp4",
+  poster: accountTeamSecurityCover.src,
+  width: accountTeamSecurityCover.width,
+  height: accountTeamSecurityCover.height,
+};
 
 const pricingEvolutionCover = {
-  label: "Translator pricing",
-  src: "/work/pricing-evolution/pricing-translator-cumulative.png",
-  width: 3024,
-  height: 2392,
-  alt: "DeepL Translator pricing page comparing four plans with cumulative feature descriptions",
-  caption: "Four Translator plans use cumulative descriptions to show what each tier adds.",
+  label: "Language cube illustration",
+  src: "/work/home-covers/pricing-language-cubes-loop-poster.png",
+  width: 1280,
+  height: 1280,
+  alt: "Blue language-symbol cubes hovering above a stacked group",
+  caption: "Animated language-cube illustration used as a homepage cover; the case page contains the pricing-system evidence.",
+};
+
+const pricingEvolutionVideo = {
+  src: "/work/home-covers/pricing-language-cubes-loop.mp4",
+  poster: pricingEvolutionCover.src,
+  width: pricingEvolutionCover.width,
+  height: pricingEvolutionCover.height,
 };
 
 const checkoutCover = {
-  label: "Bundle checkout",
-  src: "/work/subscription-checkout/fresh/bundle-checkout.png",
-  width: 3024,
-  height: 2864,
-  alt: "DeepL checkout for a Translator and Write Pro bundle with plan, billing, payment and order summary",
-  caption: "The bundle state keeps both products, the combined price, trial timing and final commitment in one summary.",
+  label: "Global ecommerce",
+  src: "/work/home-covers/deepl-retail-ecommerce.svg",
+  width: 575,
+  height: 575,
+  alt: "DeepL illustration of a shopping cart, payment card and multilingual buy labels",
+  caption: "Current DeepL ecommerce artwork used as a homepage cover; the case page contains the checkout evidence.",
 };
 
 const reportCover = {
   label: "Report cover",
   src: "/work/localization-report/report-cover.png",
-  width: 1488,
-  height: 1100,
-  alt: "Cover of DeepL's state of translation and localization report for 2023 and 2024",
-  caption: "The cover frames localization as a business question for marketing leaders.",
+  width: 978,
+  height: 1369,
+  alt: "Full cover of DeepL's state of translation and localization report for 2023 and 2024",
+  caption: "The full report cover frames localization as a business question for marketing leaders.",
 };
 
 const localyzeCover = {
-  label: "Forbes Council article artwork",
-  src: "/work/editorial/localyze-forbes-ghostwriting.jpg",
-  width: 1024,
-  height: 682,
-  alt: "Forbes Council article photograph of a professional working beside the Arno in Florence",
-  caption: "Public article artwork from Mason's existing Localyze writing archive.",
+  label: "Passport and travel illustration",
+  src: "/work/home-covers/localyze-passport-loop-poster.png",
+  width: 1280,
+  height: 1280,
+  alt: "Line illustration of a passport, airplane route and clouds",
+  caption: "Passport and travel animation used as a homepage cover; the case page contains the published writing evidence.",
+};
+
+const localyzeVideo = {
+  src: "/work/home-covers/localyze-passport-loop.mp4",
+  poster: localyzeCover.src,
+  width: localyzeCover.width,
+  height: localyzeCover.height,
 };
 
 export const selectedWorkCards: PortfolioCard[] = [
   { href: "/work/upgrade-prompts", title: "Upgrade prompts across Translator and Write", meta: "DeepL · Monetization", image: upgradePromptsCover },
-  { href: "/work/pricing-evolution", title: "Simplifying pricing across four products", meta: "DeepL · Pricing evolution", image: pricingEvolutionCover },
+  { href: "/work/pricing-evolution", title: "Simplifying pricing across four products", meta: "DeepL · Pricing evolution", image: pricingEvolutionCover, video: pricingEvolutionVideo },
   { href: "/work/checkout", title: "Subscription checkout", meta: "DeepL · Purchase journeys", image: checkoutCover },
-  { href: "/work/account-team-security", title: "Account, team and security writing", meta: "DeepL · Account and team journeys", image: accountTeamSecurityCover, previewImages: accountTeamSecurityPreview },
+  { href: "/work/account-team-security", title: "Account, team and security writing", meta: "DeepL · Account and team journeys", image: accountTeamSecurityCover, video: accountTeamSecurityVideo },
   { href: "/work/report-campaign", title: "Localization report campaign", meta: "DeepL · Research and editorial", image: reportCover },
-  { href: "/work/localyze-executive-ghostwriting", title: "Executive ghostwriting", meta: "Localyze · CEO thought leadership", image: localyzeCover },
+  { href: "/work/localyze-executive-ghostwriting", title: "Executive ghostwriting", meta: "Localyze · CEO thought leadership", image: localyzeCover, video: localyzeVideo },
 ];
 
 export const accountTeamSecurityCollection: ArtifactCollection = {

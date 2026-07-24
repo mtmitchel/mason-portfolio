@@ -7,11 +7,6 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
     "DeepL pricing started as one Translator grid. When Write Pro launched, that simple structure opened into standalone products plus bundles — three ways to buy, with the same Write Pro story repeated on every tier. I wrote the pricing content as the offer moved toward one page per product across Translator, Write, Voice and API, with cumulative tiers and add-ons.",
     "This case follows that arc: what buying looked like when the catalog was small, where the language got tangled, and how the content settled into a clearer system.",
   ],
-  facts: {
-    role: "UX copywriter and content designer for pricing pages",
-    collaborators: "Product marketing, design and product stakeholders",
-    stakes: "People needed to see which product they were buying, what each tier added and whether Write Pro was included or available as an add-on.",
-  },
   chapters: [
     {
       id: "one-product",
@@ -23,6 +18,16 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
           paragraphs: [
             "At the start of 2023, DeepL pricing centered on Translator: Starter, Advanced and Ultimate in a single grid. API sat on its own path. Write was free. Pricing read as simple because the product family was simple — one commercial choice, described once.",
           ],
+        },
+        {
+          kind: "figure",
+          image: {
+            src: "/work/pricing-evolution/pricing-2023-pro-page.png",
+            width: 2650,
+            height: 1760,
+            alt: "DeepL Pro page from March 2023, before Write Pro: a single Translator offer with four product benefits above the plan grid",
+            caption: "The 2023 pricing page, captured 11 March 2023: one Translator offer — no tabs, no bundles, no Write Pro.",
+          },
         },
         { kind: "diagram" },
       ],
@@ -83,7 +88,6 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
             src: "/work/pricing-evolution/detail-bundle-repetition.png",
             width: 2080,
             height: 465,
-            displayWidth: 1040,
             alt: "Three side-by-side DeepL Write Pro feature groups with identical headings and bullets",
             caption: "Identical Write Pro groups on Starter, Advanced and Ultimate bundles — repetition with no new information.",
           },
@@ -115,52 +119,45 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
           ],
         },
         {
-          kind: "stack",
-          rows: [
-            {
-              tag: "Write Pro added",
-              image: {
-                src: "/work/pricing-evolution/detail-toggle-on.png",
-                width: 830,
-                height: 150,
-                displayWidth: 415,
-                alt: "Add DeepL Write Pro toggle switched on, shown in teal",
-                caption: "Write Pro added with the toggle on.",
-              },
-            },
-            {
-              tag: "Translator only",
-              image: {
-                src: "/work/pricing-evolution/detail-toggle-off.png",
-                width: 830,
-                height: 150,
-                displayWidth: 415,
-                alt: "Add DeepL Write Pro toggle switched off, shown in gray",
-                caption: "Translator only with the toggle off.",
-              },
-            },
-          ],
-          note: "One control replaces the bundle tab: Write Pro is present or not, on the same Translator page.",
-        },
-        {
           kind: "comparison",
           beforeTag: "Write Pro added",
           afterTag: "Translator only",
           before: {
+            src: "/work/pricing-evolution/detail-toggle-on.png",
+            width: 830,
+            height: 150,
+            alt: "Add DeepL Write Pro toggle switched on, shown in teal",
+            caption: "Write Pro added with the toggle on.",
+          },
+          after: {
+            src: "/work/pricing-evolution/detail-toggle-off.png",
+            width: 830,
+            height: 150,
+            alt: "Add DeepL Write Pro toggle switched off, shown in gray",
+            caption: "Translator only with the toggle off.",
+          },
+          note: "One control replaces the bundle tab: Write Pro is present or not, on the same Translator page.",
+        },
+        {
+          kind: "figure",
+          image: {
             src: "/work/pricing-evolution/pricing-bundle-era-grid.png",
             width: 3024,
             height: 3300,
             alt: "DeepL pricing page with Add DeepL Write Pro toggle on and three Translator plus Write Pro plan cards",
-            caption: "With the toggle on, the page still shows how dense a combined offer can get.",
+            caption: "One Translator page serves both states — Write Pro added or Translator only — without a separate bundle route.",
           },
-          after: {
+        },
+        {
+          kind: "tableLink",
+          linkLabel: "Open the same page with Translator only",
+          image: {
             src: "/work/pricing-evolution/pricing-translator-transition-grid.png",
             width: 3024,
             height: 2790,
             alt: "DeepL pricing page with Add DeepL Write Pro toggle off and three Translator plan cards",
             caption: "Toggle off, and the same page shows Translator alone.",
           },
-          note: "One Translator page serves both states — Write Pro added or Translator only — without a separate bundle route.",
         },
         {
           kind: "moment",
@@ -183,7 +180,6 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
             src: "/work/pricing-evolution/detail-table-before.png",
             width: 2864,
             height: 1335,
-            displayWidth: 1432,
             alt: "Comparison table File translation and Glossary sections with bold values such as 3 per user and 1 glossary",
             caption: "Table cells repeat units inside every value.",
           },
@@ -191,11 +187,11 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
             src: "/work/pricing-evolution/detail-table-after.png",
             width: 2864,
             height: 1335,
-            displayWidth: 1432,
             alt: "Comparison table File translation and Glossary sections with bare values such as 3, 5, 20, 100 and 1, 1, 2,000, 2,000",
             caption: "Row labels carry the units; cells stay bare.",
           },
           note: "Qualifiers move into the row label so each cell states the value once — no bold noise, no repeated units.",
+          orientation: "vertical",
         },
         {
           kind: "tableLink",
@@ -238,26 +234,15 @@ export const pricingEvolutionCase: ChapteredCaseStory = {
           text: "Starter opens with “What’s included.” Advanced answers with “Everything in Starter, plus.” The reader builds a picture instead of re-reading the same checklist.",
         },
         {
-          kind: "comparison",
-          beforeTag: "Repeated Write Pro block",
-          afterTag: "Cumulative tiers",
-          before: {
-            src: "/work/pricing-evolution/detail-bundle-repetition.png",
-            width: 2080,
-            height: 465,
-            displayWidth: 1040,
-            alt: "Three identical DeepL Write Pro feature groups from the bundle grid",
-            caption: "The same Write Pro block on every bundle tier.",
-          },
-          after: {
+          kind: "figure",
+          image: {
             src: "/work/pricing-evolution/detail-cumulative-pair.png",
             width: 1480,
             height: 1415,
-            displayWidth: 740,
+            displayWidth: 880,
             alt: "Starter and Advanced cards using cumulative What's included and Everything in Starter, plus headers",
-            caption: "Each tier lists only what it adds.",
+            caption: "Repetition across bundle cards gives way to a single progression: each tier names only its delta.",
           },
-          note: "Repetition across bundle cards gives way to a single progression: each tier names only its delta.",
         },
         {
           kind: "figure",

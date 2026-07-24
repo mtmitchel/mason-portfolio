@@ -7,6 +7,13 @@ export type StoryImage = {
   width: number;
 };
 
+export type StoryVideo = {
+  height: number;
+  poster: string;
+  src: string;
+  width: number;
+};
+
 export type StoryFlowItem = {
   label: string;
   text: string;
@@ -35,8 +42,8 @@ export type PortfolioCard = {
   href: string;
   image: StoryImage;
   meta: string;
-  previewImages?: StoryImage[];
   title: string;
+  video?: StoryVideo;
 };
 
 export type ArtifactCollectionSection = {

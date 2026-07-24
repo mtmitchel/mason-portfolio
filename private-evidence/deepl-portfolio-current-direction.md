@@ -240,9 +240,12 @@ notation makes a change explicit.
 
 Build the robust, complete set first; Mason cuts back later if he wants.
 
-- **Act 1 (2023) — narrative only, no exhibit:** one Translator grid, API
-  priced separately, Write free. Pricing was simple because the product was.
-  No 2023-era artifact exists in the working files; Act 1 stays prose.
+- **Act 1 (2023) — one exhibit:** one Translator grid, API priced separately,
+  Write free. Pricing was simple because the product was. No 2023-era artifact
+  exists in the working files or Figma, and web archives never preserved the
+  dynamic plan grid; the chapter uses `pricing-2023-pro-page.png`, a dated
+  Arquivo.pt replay capture (11 March 2023) of the live DeepL Pro page above
+  the grid, added 2026-07-24.
 - **Act 2 (the problem) — six exhibits in two beats (re-slotted
   2026-07-24 per the bundle-era history correction):**
   - *Shipped bundle era:* the three existing public grids

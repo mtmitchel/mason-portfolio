@@ -125,13 +125,15 @@ const selectedAssets = [
   ["work/subscription-checkout/fresh/bundle-checkout.png", 3024, 2864],
   ["work/subscription-checkout/fresh/team-license-checkout.png", 3024, 2864],
   ["work/subscription-checkout/fresh/no-trial-ultimate-checkout.png", 3024, 2738],
-  ["work/localization-report/report-cover.png", 1488, 1100],
+  ["work/localization-report/report-cover.png", 978, 1369],
   ["work/localization-report/key-findings.png", 1488, 2105],
   ["work/localization-report/recommendations.png", 1488, 2105],
   ["work/report-campaign/ai-content-generation.png", 1488, 1100],
   ["work/report-campaign/hubspot-case-study.png", 1488, 2105],
   ["work/report-campaign/phrase-case-study.png", 1488, 2105],
-  ["work/editorial/localyze-forbes-ghostwriting.jpg", 1024, 682],
+  ["work/home-covers/pricing-language-cubes-loop-poster.png", 1280, 1280],
+  ["work/home-covers/account-security-cards-loop-poster.png", 1280, 1280],
+  ["work/home-covers/localyze-passport-loop-poster.png", 1280, 1280],
 ];
 
 const exactQuotes = [
@@ -158,6 +160,16 @@ test("homepage renders exactly six projects in row-major content order", async (
   }
   assert.doesNotMatch(html, /Hiring Success methodology|Writing collection|Airy/);
   assert.doesNotMatch(html, /href="\/work\/bulk-administration"/);
+  for (const asset of ["home-covers/deepl-upgrade-to-pro.png", "home-covers/deepl-retail-ecommerce.svg"]) {
+    assert.match(html, new RegExp(asset));
+  }
+  for (const asset of ["pricing-language-cubes-loop", "account-security-cards-loop", "localyze-passport-loop"]) {
+    assert.match(html, new RegExp(`home-covers/${asset}\\.mp4`));
+    assert.match(html, new RegExp(`home-covers/${asset}-poster\\.png`));
+  }
+  assert.equal((html.match(/class="project-entry-video"/g) ?? []).length, 3);
+  assert.doesNotMatch(html, /deepl-language-stack\.svg|deepl-security\.svg/);
+  assert.doesNotMatch(html, /project-entry-montage/);
 });
 
 test("selected work and writing retain the identical shared shell", async () => {
@@ -243,7 +255,6 @@ test("pricing evolution uses the chaptered case structure and copy boundaries", 
   assert.match(html, /class="chapter-era"[^>]*>The system</);
   assert.match(html, /class="chapter-comparison"/);
   assert.match(html, /class="chapter-strip"/);
-  assert.match(html, /class="chapter-stack"/);
   assert.match(html, /Open the full Write Pro comparison table/);
   assert.match(html, /Open the full Translator comparison table/);
   assert.doesNotMatch(html, /View larger/);
@@ -259,6 +270,7 @@ test("pricing evolution uses the chaptered case structure and copy boundaries", 
   }
 
   for (const asset of [
+    "pricing-2023-pro-page.png",
     "pricing-translator.png",
     "pricing-write-pro.png",
     "pricing-bundle.png",
@@ -305,10 +317,8 @@ test("upgrade prompts keep the wave result and accurate visible-state copy", asy
 
 test("account, team and security writing leads with security and contains bulk deletion as one section", async () => {
   const [home, html] = await Promise.all([htmlFor("/"), htmlFor("/work/account-team-security")]);
-  for (const asset of ["account-security-protection-restored.png", "account-security-reset-required.png", "bulk-delete-confirmation-card.png"]) {
-    assert.match(home, new RegExp(asset));
-  }
-  assert.doesNotMatch(home, /account-security-authentication-error\.png/);
+  assert.match(home, /work\/home-covers\/account-security-cards-loop\.mp4/);
+  assert.doesNotMatch(home, /account-security-protection-restored\.png|account-security-reset-required\.png|bulk-delete-confirmation-card\.png/);
   assert.match(home, /Account, team and security writing/);
   assert.doesNotMatch(home, /Bulk user deletion/);
   assert.doesNotMatch(home, /href="\/work\/bulk-administration"/);
@@ -411,7 +421,7 @@ test("selected assets retain truthful dimensions and unique contents", async () 
 
 test("derivatives and restored assets match their private provenance records", async () => {
   const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
-  assert.equal(manifest.version, "1.3");
+  assert.equal(manifest.version, "1.4");
   assert.equal(manifest.assets.length, 6);
   for (const asset of manifest.assets) {
     for (const field of ["id", "project_id", "source_path", "source_type", "publication_permission", "crop_notes", "caption", "text_alternative"]) {
@@ -426,7 +436,7 @@ test("derivatives and restored assets match their private provenance records", a
   assert.equal(pricing.source_path, "site/public/work/pricing-evolution/");
   assert.equal(pricing.publication_permission, "unknown");
   assert.equal(pricing.export_ready, false);
-  assert.equal(pricing.files.length, 20);
+  assert.equal(pricing.files.length, 21);
   for (const file of pricing.files) {
     assert.equal(typeof file.source_path, "string");
     assert.ok(file.source_path.length > 0);
@@ -490,17 +500,34 @@ test("active DeepL case data keeps upgrade prompts and checkout distinct from th
 });
 
 test("layout is row-major, responsive, naturally sized and keeps mobile About", async () => {
-  const [css, grid, chrome] = await Promise.all([
+  const [css, grid, chrome, loopingVideo] = await Promise.all([
     readFile(new URL("app/globals.css", root), "utf8"),
     readFile(new URL("app/components/PortfolioProjectGrid.tsx", root), "utf8"),
     readFile(new URL("app/components/PortfolioChrome.tsx", root), "utf8"),
+    readFile(new URL("app/components/LoopingCardVideo.tsx", root), "utf8"),
   ]);
   assert.match(css, /\.project-list\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(3,/s);
+  assert.match(css, /\.project-list\s*\{[^}]*align-items:\s*start;/s);
   assert.match(css, /@media \(max-width: 820px\)[\s\S]*\.project-list \{ grid-template-columns: repeat\(2,/);
   assert.match(css, /@media \(max-width: 600px\)[\s\S]*\.project-list \{ grid-template-columns: 1fr; \}/);
+  assert.doesNotMatch(css, /\.project-card\s*\{[^}]*height:\s*100%;/s);
   assert.doesNotMatch(css, /(?:^|[;{])\s*columns?\s*:/m);
   assert.doesNotMatch(css, /object-fit\s*:\s*cover|aspect-ratio|translateY\s*\(/);
+  assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
+  assert.match(css, /\.project-entry-heading p\s*\{[^}]*font-size:\s*16px;/s);
+  assert.match(css, /\.project-card:hover,\s*\.project-card:focus-visible\s*\{[^}]*background:\s*#e5efeb;[^}]*border-color:\s*#9fb9b0;[^}]*color:\s*var\(--accent\);/s);
   assert.match(grid, /sizes="\(max-width: 600px\) 100vw, \(max-width: 820px\) 50vw, 33vw"/);
+  assert.ok(
+    grid.indexOf('className="project-entry-image"') < grid.indexOf('className="project-entry-heading"'),
+    "project media should precede the title block",
+  );
+  assert.match(loopingVideo, /prefers-reduced-motion: reduce/);
+  assert.match(loopingVideo, /IntersectionObserver/);
+  assert.match(loopingVideo, /video\.pause\(\)/);
+  assert.match(loopingVideo, /\bmuted\b/);
+  assert.match(loopingVideo, /\bloop\b/);
+  assert.match(loopingVideo, /\bplaysInline\b/);
+  assert.match(loopingVideo, /preload="none"/);
   assert.doesNotMatch(css, /site-header nav a:nth-child\(2\)[^{]*\{[^}]*display:\s*none/s);
   assert.match(chrome, />About<\/Link>/);
 });
