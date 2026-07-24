@@ -1,7 +1,12 @@
 import Link from "next/link";
 import ImageLightbox from "../components/ImageLightbox";
 import { SiteFooter, SiteHeader } from "../components/PortfolioChrome";
-import type { ProductCaseStory, StoryImage } from "./portfolioTypes";
+import type {
+  ProductCaseStory,
+  StoryEvidenceSection,
+  StoryFlowItem,
+  StoryImage,
+} from "./portfolioTypes";
 
 export type { ProductCaseStory, StoryImage } from "./portfolioTypes";
 
@@ -18,6 +23,56 @@ function EvidenceFigure({ image }: { image: StoryImage }) {
       alt={image.alt}
       caption={image.caption}
     />
+  );
+}
+
+function FlowItems({
+  ariaLabel,
+  flow,
+  ordered = true,
+}: {
+  ariaLabel: string;
+  flow: StoryFlowItem[];
+  ordered?: boolean;
+}) {
+  const FlowList = ordered ? "ol" : "ul";
+
+  return (
+    <div className="evidence-section-flow" aria-label={ariaLabel}>
+      <FlowList>
+        {flow.map((step) => (
+          <li key={step.label}><span>{step.label}</span><h3>{step.title}</h3><p>{step.text}</p></li>
+        ))}
+      </FlowList>
+    </div>
+  );
+}
+
+function EvidenceSection({ section }: { section: StoryEvidenceSection }) {
+  return (
+    <section className="story-evidence story-evidence-section" id={section.id}>
+      <div className="story-section-heading">
+        <p>{section.label}</p>
+        <h2>{section.title}</h2>
+      </div>
+      {section.intro && (
+        <div className="story-copy story-section-intro">
+          {section.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
+      )}
+      {section.images.length > 0 && (
+        <div className="story-evidence-grid">
+          {section.images.map((image) => <EvidenceFigure image={image} key={image.src} />)}
+        </div>
+      )}
+      {section.flow && (
+        <FlowItems
+          ariaLabel={section.flowAriaLabel ?? section.title}
+          flow={section.flow}
+          ordered={section.flowIsOrdered}
+        />
+      )}
+    </section>
   );
 }
 
@@ -88,7 +143,7 @@ export default function DeepLProjectCase({ project }: { project: ProductCaseStor
           <p className="tradeoff"><strong>The trade-off:</strong> {project.tradeoff}</p>
         </section>
 
-        {project.flow && (
+        {!project.evidenceSections && project.flow && (
           <section className="state-sequence" aria-label={project.flowAriaLabel ?? "Content sequence"}>
             <div className="story-section-heading">
               <p>{project.flowSectionLabel ?? "The sequence"}</p>
@@ -102,7 +157,7 @@ export default function DeepLProjectCase({ project }: { project: ProductCaseStor
           </section>
         )}
 
-        {project.sequence.length > 0 && (
+        {!project.evidenceSections && project.sequence.length > 0 && (
           <section className="story-evidence">
             <div className="story-section-heading">
               <p>{project.evidenceSectionLabel ?? "The interface"}</p>
@@ -114,16 +169,30 @@ export default function DeepLProjectCase({ project }: { project: ProductCaseStor
           </section>
         )}
 
-        <section className="story-outcome">
-          <div className="story-section-heading">
-            <p>The outcome</p>
-            <h2>{project.outcomeTitle ?? "The result of the content system"}</h2>
-          </div>
-          <div className="story-copy">
-            {project.outcome.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            <p className="integrated-evidence-note">{project.evidenceNote}</p>
-          </div>
-        </section>
+        {project.evidenceSections?.map((section) => <EvidenceSection key={section.id} section={section} />)}
+
+        {project.outcome && project.outcome.length > 0 && (
+          <section className="story-outcome">
+            <div className="story-section-heading">
+              <p>The outcome</p>
+              <h2>{project.outcomeTitle ?? "The result of the content system"}</h2>
+            </div>
+            <div className="story-copy">
+              {project.outcome.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {project.evidenceNote && <p className="integrated-evidence-note">{project.evidenceNote}</p>}
+            </div>
+          </section>
+        )}
+
+        {project.coda && (
+          <section className="story-coda">
+            <p>
+              {project.coda.prefix}
+              <a href={project.coda.href}>{project.coda.linkLabel}</a>
+              {project.coda.suffix}
+            </p>
+          </section>
+        )}
 
         <nav className="next-project" aria-label="Next project">
           <span>Next project</span>

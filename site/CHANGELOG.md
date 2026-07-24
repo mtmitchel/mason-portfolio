@@ -5,19 +5,25 @@ work from publication state.
 
 ## Unreleased
 
-Status: the six-entry information architecture, combined account collection,
-current feature-awareness evidence and reviewed Translator pricing evidence
-are implemented and validated. Repository checkpoints remain distinct from
-public site publication and deployment.
+Status: the six-entry information architecture, combined account collection
+and four-product pricing-evolution case are implemented locally. Repository
+checkpoints remain distinct from public site publication and deployment.
 
 ### Added
 
+- Rebuilt `/work/pricing-evolution` as a chaptered case with a synopsis, four
+  era chapters, comparison blocks, an inline offer-architecture diagram and
+  eight detail crops; removed feature-awareness from the public page and parked
+  its copy and 2x original for later.
 - Canonical, indexable `/work/upgrade-prompts` case for the Translator and Write
   experiment wave.
 - Restored `/work/checkout` case with sign-up, bundle, team and no-trial states.
-- Added a distinct Write Pro launch, pricing and feature-awareness case with
-  fresh 2x feature-module and Translator pricing exports and an explicit
-  no-metric boundary.
+- Added a three-act pricing-evolution case covering the 2023 starting point,
+  the Write Pro bundle launch, the add-on direction and the four-product
+  pricing family, with an explicit no-metric boundary.
+- Added nine approved pricing exhibits to the deployable surface: the
+  three-tab bundle selector, two complete grid/table crop pairs and one page
+  each for Translator, Write, Voice and API.
 - Added all five finalized feature-awareness messages as selectable HTML; the
   unordered feature set uses responsive five-, two- and
   one-column layouts instead of implying a step-by-step sequence.
@@ -37,9 +43,15 @@ public site publication and deployment.
 ### Changed
 
 - Rebalanced the homepage to six selected entries in this order: upgrade
-  prompts; Write Pro launch, pricing and feature awareness; subscription
-  checkout; account, team and security writing; localization report campaign;
-  and executive ghostwriting.
+  prompts; pricing evolution across four products; subscription checkout;
+  account, team and security writing; localization report campaign; and
+  executive ghostwriting.
+- Replaced `/work/write-pro-launch` with the canonical
+  `/work/pricing-evolution` case and retained the old URL as a one-hop
+  redirect.
+- Extended the shared product-case renderer with ordered evidence sections and
+  an optional linked coda while preserving the existing upgrade-prompt and
+  checkout layouts.
 - Removed count-based homepage framing so the selected index does not imply
   that Mason's broader work is reducible to a fixed number of artifact types.
 - Replaced the sparse authentication-error homepage thumbnail with an
@@ -101,8 +113,9 @@ public site publication and deployment.
 
 - The approved feature-awareness copy edits and exact frame export were made in
   Mason's logged-in Chrome/Figma session. No other Figma changes were made.
-- The three new pricing exhibits remain private evidence and are not wired into
-  deployable site routes or public assets.
+- The pricing exhibits are integrated into the local deployable surface, but
+  publication permission remains unresolved and no publication or deployment
+  has occurred.
 - The GitHub repository is private. A commit or push is a source-control
   checkpoint only; it does not publish or deploy the site.
 - No public site publication, deployment or access change has occurred.

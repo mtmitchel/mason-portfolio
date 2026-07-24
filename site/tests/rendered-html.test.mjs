@@ -59,7 +59,7 @@ function contrastRatio(foreground, background) {
 
 const selectedRoutes = [
   ["/work/upgrade-prompts", "Upgrade prompts across Translator and Write"],
-  ["/work/write-pro-launch", "Write Pro launch, pricing and feature awareness"],
+  ["/work/pricing-evolution", "Simplifying pricing across four products"],
   ["/work/checkout", "Subscription checkout"],
   ["/work/account-team-security", "Account, team and security writing"],
   ["/work/report-campaign", "Localization report campaign"],
@@ -70,6 +70,7 @@ const retiredRoutes = [
   ["/work/pro-driver-experiments", "/work/upgrade-prompts"],
   ["/work/translator-upgrade", "/work/upgrade-prompts"],
   ["/work/write-pro", "/work/upgrade-prompts"],
+  ["/work/write-pro-launch", "/work/pricing-evolution"],
   ["/work/trial-eligibility", "/work/checkout"],
   ["/work/global-pricing", "/work/checkout"],
   ["/work/localization-report", "/work/report-campaign"],
@@ -94,10 +95,26 @@ const selectedAssets = [
   ["work/hard-blockers/network-usage-limit.png", 1092, 1600],
   ["work/hard-blockers/write-pro-illustrated-free.png", 1648, 1504],
   ["work/hard-blockers/write-pro-illustrated-translator-pro.png", 1648, 1504],
-  ["work/write-pro-launch/feature-awareness-security.png", 3024, 1431],
-  ["work/write-pro-launch/pricing-translator.png", 3840, 1459],
-  ["work/write-pro-launch/pricing-write-pro.png", 2482, 1233],
-  ["work/write-pro-launch/pricing-bundle.png", 2880, 2099],
+  ["work/pricing-evolution/pricing-translator.png", 3840, 1459],
+  ["work/pricing-evolution/pricing-write-pro.png", 2482, 1233],
+  ["work/pricing-evolution/pricing-bundle.png", 2880, 2099],
+  ["work/pricing-evolution/pricing-bundle-tabs.png", 3840, 2826],
+  ["work/pricing-evolution/pricing-bundle-era-grid.png", 3024, 3300],
+  ["work/pricing-evolution/pricing-bundle-era-table.png", 3024, 5300],
+  ["work/pricing-evolution/pricing-translator-transition-grid.png", 3024, 2790],
+  ["work/pricing-evolution/pricing-translator-transition-table.png", 3024, 4800],
+  ["work/pricing-evolution/pricing-translator-cumulative.png", 3024, 2392],
+  ["work/pricing-evolution/pricing-write-addon-clean.png", 3024, 2208],
+  ["work/pricing-evolution/pricing-voice-clean.png", 3024, 2654],
+  ["work/pricing-evolution/pricing-api-clean.png", 3024, 2776],
+  ["work/pricing-evolution/detail-cumulative-pair.png", 1480, 1415],
+  ["work/pricing-evolution/detail-bundle-repetition.png", 2080, 465],
+  ["work/pricing-evolution/detail-toggle-on.png", 830, 150],
+  ["work/pricing-evolution/detail-toggle-off.png", 830, 150],
+  ["work/pricing-evolution/detail-table-before.png", 2864, 1335],
+  ["work/pricing-evolution/detail-table-after.png", 2864, 1335],
+  ["work/pricing-evolution/detail-price-block.png", 700, 520],
+  ["work/pricing-evolution/detail-wordy-bullets.png", 650, 800],
   ["work/account-team-security/account-security-login.png", 2880, 1950],
   ["work/account-team-security/account-security-authentication-error.png", 2880, 1938],
   ["work/account-team-security/account-security-reset-required.png", 1176, 720],
@@ -184,6 +201,14 @@ test("the flagship uses one canonical, indexable URL", async () => {
   assert.match(html, /Writing upgrade prompts across DeepL Translator and Write/);
 });
 
+test("pricing evolution uses one canonical, indexable URL", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  assert.equal((html.match(/rel="canonical"/g) ?? []).length, 1);
+  assert.match(html, /<link rel="canonical" href="\/work\/pricing-evolution"\/>/);
+  assert.doesNotMatch(html, /noindex|nofollow/);
+  assert.match(html, /Simplifying pricing across four products/);
+});
+
 for (const [pathname, destination] of retiredRoutes) {
   test(`${pathname} redirects once to ${destination}`, async () => {
     const response = await render(pathname);
@@ -197,8 +222,8 @@ for (const [pathname, destination] of retiredRoutes) {
 
 test("case-to-case navigation follows the homepage order", async () => {
   for (const [route, next] of [
-    ["/work/upgrade-prompts", "/work/write-pro-launch"],
-    ["/work/write-pro-launch", "/work/checkout"],
+    ["/work/upgrade-prompts", "/work/pricing-evolution"],
+    ["/work/pricing-evolution", "/work/checkout"],
     ["/work/checkout", "/work/account-team-security"],
     ["/work/account-team-security", "/work/report-campaign"],
     ["/work/report-campaign", "/work/localyze-executive-ghostwriting"],
@@ -206,27 +231,66 @@ test("case-to-case navigation follows the homepage order", async () => {
   ]) assert.match(await htmlFor(route), new RegExp(`class="next-project"[\\s\\S]*href="${escapeRegExp(next)}"`));
 });
 
-test("Write Pro launch keeps pricing and feature awareness separate from experiment results", async () => {
-  const html = await htmlFor("/work/write-pro-launch");
-  assert.match(html, /Explaining DeepL Write Pro across pricing and feature awareness/);
-  assert.match(html, /feature-awareness-security\.png/);
-  assert.match(html, /pricing-translator\.png/);
-  assert.match(html, /pricing-write-pro\.png/);
-  assert.match(html, /pricing-bundle\.png/);
-  assert.match(html, /Historical plan names and prices remain; features that also appear on the current pricing page use the current wording/);
-  assert.match(html, /Translator, Write Pro and bundles/);
-  assert.match(html, /No conversion or revenue result is attributed to this pricing or feature-awareness work/);
+test("pricing evolution uses the chaptered case structure and copy boundaries", async () => {
+  const [home, html] = await Promise.all([htmlFor("/"), htmlFor("/work/pricing-evolution")]);
+  assert.match(home, /href="\/work\/pricing-evolution"/);
+  assert.match(home, /Simplifying pricing across four products/);
+  assert.match(home, /DeepL · Pricing evolution/);
+  assert.match(html, /DeepL pricing started as one Translator grid/);
+  assert.match(html, /class="chapter-era"[^>]*>2023</);
+  assert.match(html, /class="chapter-era"[^>]*>2024</);
+  assert.match(html, /class="chapter-era"[^>]*>2024–2025</);
+  assert.match(html, /class="chapter-era"[^>]*>The system</);
+  assert.match(html, /class="chapter-comparison"/);
+  assert.match(html, /class="chapter-strip"/);
+  assert.match(html, /class="chapter-stack"/);
+  assert.match(html, /Open the full Write Pro comparison table/);
+  assert.match(html, /Open the full Translator comparison table/);
+  assert.doesNotMatch(html, /View larger/);
+  assert.doesNotMatch(html, /Constraint/);
   assert.doesNotMatch(html, /paid conversion rose 12%|seven figures/);
-  for (const copy of [
-    "Keep your sensitive information protected. DeepL Pro safeguards your data with enterprise-grade encryption, and your texts are never stored without your consent.",
-    "Clarify improves translations by asking questions when your text is ambiguous, then adjusting based on your answers. Currently available for German ↔ English translations.",
-    "Say goodbye to endless copy and paste. Translate entire files in just a few clicks — formatting included.",
-    "Not every conversation sounds the same. Set your translation to formal or informal to match the situation.",
-    "Consistency matters in translation. Create and manage a personal glossary so key terms are translated your way, every time. With DeepL Pro, upload glossaries of up to 10 MB.",
-  ]) assert.match(html, new RegExp(escapeRegExp(copy)));
-  assert.match(html, /Translate entire files in a single click/);
-  assert.match(html, /aria-label="Finalized feature-awareness copy"[\s\S]*<ul>/);
-  assert.doesNotMatch(html, /single-click|organisation|personalized glossary|always accurate/);
+  assert.doesNotMatch(html, /feature-awareness-security\.png/);
+
+  let previousSection = -1;
+  for (const id of ["one-product", "write-pro-arrival", "folding-the-choice", "the-system"]) {
+    const index = html.indexOf(`id="${id}"`);
+    assert.ok(index > previousSection, `${id} should follow the previous pricing chapter`);
+    previousSection = index;
+  }
+
+  for (const asset of [
+    "pricing-translator.png",
+    "pricing-write-pro.png",
+    "pricing-bundle.png",
+    "pricing-bundle-tabs.png",
+    "pricing-bundle-era-grid.png",
+    "pricing-bundle-era-table.png",
+    "pricing-translator-transition-grid.png",
+    "pricing-translator-transition-table.png",
+    "pricing-translator-cumulative.png",
+    "pricing-write-addon-clean.png",
+    "pricing-voice-clean.png",
+    "pricing-api-clean.png",
+    "detail-cumulative-pair.png",
+    "detail-bundle-repetition.png",
+    "detail-toggle-on.png",
+    "detail-toggle-off.png",
+    "detail-table-before.png",
+    "detail-table-after.png",
+    "detail-price-block.png",
+    "detail-wordy-bullets.png",
+  ]) assert.match(html, new RegExp(escapeRegExp(asset)));
+
+  assert.match(html, /One product, one grid/);
+  assert.match(html, /A second product made buying complicated/);
+  assert.match(html, /Folding the choice into the page/);
+  assert.match(html, /One page per product, cumulative tiers/);
+  assert.match(html, /class="story-coda"[\s\S]*href="https:\/\/www\.deepl\.com\/pro"[\s\S]*deepl\.com\/pro/);
+  assert.doesNotMatch(
+    html,
+    /\b(reconstruction|recreated|historical|internal|WIP|work-in-progress|working file|not shipped|proof|mockup)\b/i,
+  );
+  assert.doesNotMatch(html, /single-click|organisation|personalized glossary|always accurate|resulted in|led to|caused/i);
 });
 
 test("upgrade prompts keep the wave result and accurate visible-state copy", async () => {
@@ -357,6 +421,23 @@ test("derivatives and restored assets match their private provenance records", a
     assert.equal(asset.contains_sensitive_data, false);
     assert.equal(asset.export_ready, false);
   }
+  const pricing = manifest.assets.find((asset) => asset.id === "DEEPL-PRICING-EVOLUTION");
+  assert.ok(pricing);
+  assert.equal(pricing.source_path, "site/public/work/pricing-evolution/");
+  assert.equal(pricing.publication_permission, "unknown");
+  assert.equal(pricing.export_ready, false);
+  assert.equal(pricing.files.length, 20);
+  for (const file of pricing.files) {
+    assert.equal(typeof file.source_path, "string");
+    assert.ok(file.source_path.length > 0);
+    const buffer = await readFile(new URL(`work/pricing-evolution/${file.path}`, publicRoot));
+    assert.deepEqual(pngDimensions(buffer), {
+      width: Number(file.dimensions.split("x")[0]),
+      height: Number(file.dimensions.split("x")[1]),
+    });
+    assert.equal(createHash("sha256").update(buffer).digest("hex"), file.sha256);
+  }
+  assert.ok(pricing.removed_public_files?.some((file) => file.path === "feature-awareness-security.png"));
   const records = JSON.stringify(manifest);
   for (const hash of [
     "d8f0ac76dbe7990f01ac5383776a35e8abf20c2af6a7fd12cf154f4ec5d6f6b0",
@@ -386,14 +467,24 @@ test("retired galleries, weak public assets and dead source modules are absent",
     "work/bulk-administration/bulk-delete-05-confirmation.png",
     "work/editorial/smartrecruiters-hiring-success.jpg",
   ]) await assert.rejects(access(new URL(file, publicRoot)), `${file} should not be public`);
+  for (const file of [
+    "work/pricing-evolution/pricing-bundle-era-clean.png",
+    "work/pricing-evolution/pricing-translator-transition-clean.png",
+    "work/pricing-evolution/feature-awareness-security.png",
+  ]) await assert.rejects(access(new URL(file, publicRoot)), `${file} should remain private`);
+  await assert.rejects(access(new URL("work/write-pro-launch/", publicRoot)));
   await assert.rejects(access(new URL("app/work/teamAdministrationCompleteSource.ts", root)));
   await assert.rejects(access(new URL("app/components/DeepLProjectGrid.tsx", root)));
 });
 
-test("active DeepL case data keeps upgrade prompts, Write Pro launch and checkout distinct", async () => {
+test("active DeepL case data keeps upgrade prompts and checkout distinct from the chaptered pricing case", async () => {
   const source = await readFile(new URL("app/work/deeplProjectData.ts", root), "utf8");
-  assert.equal((source.match(/export const [a-zA-Z]+Project: ProductCaseStory =/g) ?? []).length, 3);
-  for (const route of ["upgrade-prompts", "write-pro-launch", "checkout"]) assert.match(source, new RegExp(`href: "/work/${route}"`));
+  const pricingCase = await readFile(new URL("app/work/pricingEvolutionCase.ts", root), "utf8");
+  assert.equal((source.match(/export const [a-zA-Z]+Project: ProductCaseStory =/g) ?? []).length, 2);
+  for (const route of ["upgrade-prompts", "checkout"]) assert.match(source, new RegExp(`href: "/work/${route}"`));
+  assert.match(source, /href: "\/work\/pricing-evolution"/);
+  assert.match(pricingCase, /export const pricingEvolutionCase/);
+  assert.doesNotMatch(source, /pricingEvolutionProject/);
   assert.doesNotMatch(source, /bulkAdministrationProject/);
   assert.doesNotMatch(source, /csvImport|customDomain|customLogo|teamAdministrationCompleteSource|marketingProjects|homepageProjects/);
 });

@@ -278,6 +278,65 @@ Build the robust, complete set first; Mason cuts back later if he wants.
   `Simplifying pricing across four products`; `/work/write-pro-launch`
   becomes a redirect stub following the existing retired-route pattern.
 
+#### Phase 2 implementation decisions (Mason approved scope, 2026-07-24)
+
+- **Full pages are not shipped to the site.** The bundle page (3024x15231)
+  and transition page (3024x14159) are unusable as inline `StoryImage`s and
+  the site rules ban aspect-ratio tricks that hide evidence. Each full page
+  ships as two display crops cut on verified blank bands (generated
+  2026-07-24, in `private-evidence/figma-exports-pricing-2026-07/
+  site-display/`): a grid crop (nav, hero, toggle, complete card row) and a
+  complete "Find the right plan" comparison-table crop. The full-page PNGs
+  remain repository evidence.
+- **Public asset mapping** — new folder `site/public/work/pricing-evolution/`;
+  the old `write-pro-launch/` assets that stay in use move there and the
+  folder retires with the redirect stub:
+
+  | Public file | Source | Size |
+  |---|---|---|
+  | `pricing-translator.png` | existing site asset (moves) | 3840x1459 |
+  | `pricing-write-pro.png` | existing site asset (moves) | 2482x1233 |
+  | `pricing-bundle.png` | existing site asset (moves) | 2880x2099 |
+  | `pricing-bundle-tabs.png` | exports folder | 3840x2826 |
+  | `pricing-bundle-era-grid.png` | `site-display/` | 3024x3300 |
+  | `pricing-bundle-era-table.png` | `site-display/` | 3024x5300 |
+  | `pricing-translator-transition-grid.png` | `site-display/` | 3024x2790 |
+  | `pricing-translator-transition-table.png` | `site-display/` | 3024x4800 |
+  | `pricing-translator-cumulative.png` | exports folder | 3024x2392 |
+  | `pricing-write-addon-clean.png` | exports folder | 3024x2208 |
+  | `pricing-voice-clean.png` | exports folder | 3024x2654 |
+  | `pricing-api-clean.png` | exports folder | 3024x2776 |
+  | `feature-awareness-security.png` | existing site asset (moves) | 3024x1431 |
+
+- **Cover proposal:** the Translator cumulative grid (Act 3) — the cleanest
+  single expression of the craft. Mason judges on the built page and may
+  swap it.
+- **Case context line:** `DeepL · Pricing evolution`.
+- **Next-chain updates:** `upgradePromptsProject.next` →
+  `/work/pricing-evolution`; the pricing case's `next` stays
+  `/work/checkout`.
+- **Exhibit order on the page** follows the three acts: Act 2 beat one
+  (three grids + tabbed view), Act 2 beat two (bundle grid/table +
+  transition grid/table crops), Act 3 (four product pages), then the
+  feature-awareness secondary section, then the coda link.
+
+#### Feature awareness parked (Mason, 2026-07-24)
+
+Cut from the `/work/pricing-evolution` case on 2026-07-24 (Mason's decision).
+The five flow strings are preserved here verbatim for a future home:
+
+1. **Maximum data security** — Keep your sensitive information protected. DeepL Pro safeguards your data with enterprise-grade encryption, and your texts are never stored without your consent.
+2. **Clarify** — Clarify improves translations by asking questions when your text is ambiguous, then adjusting based on your answers. Currently available for German ↔ English translations.
+3. **Translate entire files in a single click** — Say goodbye to endless copy and paste. Translate entire files in just a few clicks — formatting included.
+4. **Set the right tone for every message** — Not every conversation sounds the same. Set your translation to formal or informal to match the situation.
+5. **Glossaries** — Consistency matters in translation. Create and manage a personal glossary so key terms are translated your way, every time. With DeepL Pro, upload glossaries of up to 10 MB.
+
+The single exported visual previously published as
+`site/public/work/pricing-evolution/feature-awareness-security.png` was
+removed from the public folder; the 2x original remains at
+`private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-2x.png`.
+Figma node `5:313906` holds four unexported expanded states for a future home.
+
 ### Account, team and security writing
 
 - Lead with account access and MFA recovery, not bulk deletion.

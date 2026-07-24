@@ -52,108 +52,7 @@ export const upgradePromptsProject: ProductCaseStory = {
   ],
   outcomeTitle: "A reusable system with a wave-level result",
   evidenceNote: "The selected frames document the writing pattern across Translator and Write. The conversion and ARR result is recorded at the scope of the complete experiment wave.",
-  next: { href: "/work/write-pro-launch", label: "Write Pro launch and pricing" },
-};
-
-export const writeProLaunchProject: ProductCaseStory = {
-  context: "DeepL · Write Pro launch and website",
-  href: "/work/write-pro-launch",
-  cardTitle: "Write Pro launch, pricing and feature awareness",
-  title: "Explaining DeepL Write Pro across pricing and feature awareness",
-  hook: "When DeepL Write Pro launched, customers could buy Translator, Write Pro or both. I worked on website copy that distinguished those choices and turned paid capabilities into concise, reusable feature descriptions.",
-  role: "UX copywriter for launch and monetization messaging",
-  collaborators: "UX writing, product marketing, design and product stakeholders",
-  stakes: "People needed to understand which product they were buying, what a bundle contained and why each paid capability mattered.",
-  problemTitle: "A second paid product created a naming and comparison problem",
-  constraints: "The historical source contains evolving terminology, obsolete prices and work-in-progress variants. The selected frames avoid red proposal text and are presented as design evidence, not proof that every treatment shipped.",
-  experienceTitle: "Five paid capabilities in one scannable feature system",
-  experienceSectionLabel: "Feature awareness",
-  cover: {
-    label: "Feature-awareness system",
-    src: "/work/write-pro-launch/feature-awareness-security.png",
-    width: 3024,
-    height: 1431,
-    alt: "DeepL Pro feature-awareness section with five feature headings and the data-security description expanded",
-    caption: "The shared module keeps five product capabilities scannable while opening one concise explanation at a time.",
-  },
-  problem: [
-    "The launch placed DeepL Translator, DeepL Write Pro and bundles on the same pricing surface. A bundle described products sold together; it was not another plan, and Pro alone could be ambiguous.",
-    "Elsewhere on the website, feature-awareness modules had a different job: explain one paid capability quickly enough to work on landing pages and pricing surfaces without overclaiming or repeating the same sentence pattern.",
-  ],
-  decisions: [
-    { title: "Distinguish products, plans and bundles", text: "The pricing language names Translator, Write Pro and the plans sold together instead of using Pro as an imprecise umbrella term." },
-    { title: "Lead with the user's outcome", text: "Feature headings describe the result—protect data, clarify ambiguity, translate files, set tone and personalize terminology—before the supporting detail." },
-    { title: "Remove repetition and overclaiming", text: "The descriptions cut duplicate benefits, avoid absolute accuracy claims and use one consistent term for each capability." },
-    { title: "Keep the system reusable", text: "Concise wording and varied sentence openings make the same modules easier to place across different website contexts." },
-  ],
-  decisionsTitle: "Four decisions that made the launch offer easier to compare",
-  tradeoff: "Explicit product names and accurate qualifiers take more space than a generic Pro label. The extra words make the commercial promise clearer.",
-  flowAriaLabel: "Finalized feature-awareness copy",
-  flowIsOrdered: false,
-  flowSectionLabel: "Feature copy",
-  flowTitle: "Five concise feature explanations",
-  flow: [
-    {
-      label: "Data security",
-      title: "Maximum data security",
-      text: "Keep your sensitive information protected. DeepL Pro safeguards your data with enterprise-grade encryption, and your texts are never stored without your consent.",
-    },
-    {
-      label: "Ambiguity",
-      title: "Clarify",
-      text: "Clarify improves translations by asking questions when your text is ambiguous, then adjusting based on your answers. Currently available for German ↔ English translations.",
-    },
-    {
-      label: "Documents",
-      title: "Translate entire files in a single click",
-      text: "Say goodbye to endless copy and paste. Translate entire files in just a few clicks — formatting included.",
-    },
-    {
-      label: "Formality",
-      title: "Set the right tone for every message",
-      text: "Not every conversation sounds the same. Set your translation to formal or informal to match the situation.",
-    },
-    {
-      label: "Terminology",
-      title: "Glossaries",
-      text: "Consistency matters in translation. Create and manage a personal glossary so key terms are translated your way, every time. With DeepL Pro, upload glossaries of up to 10 MB.",
-    },
-  ],
-  sequence: [
-    {
-      label: "Translator pricing",
-      src: "/work/write-pro-launch/pricing-translator.png",
-      width: 3840,
-      height: 1459,
-      alt: "Historical DeepL Translator pricing grid comparing Free, Starter, Advanced, Ultimate and Enterprise plans",
-      caption: "The Translator tab keeps one comparison structure from Free through Enterprise. Historical plan names and prices remain; features that also appear on the current pricing page use the current wording.",
-    },
-    {
-      label: "Write Pro pricing",
-      src: "/work/write-pro-launch/pricing-write-pro.png",
-      width: 2482,
-      height: 1233,
-      alt: "Historical DeepL Write pricing grid comparing Free, Write Pro and Enterprise offers",
-      caption: "The Write tab separates the free writing experience, the paid Write Pro offer and the enterprise route.",
-    },
-    {
-      label: "Translator and Write Pro bundles",
-      src: "/work/write-pro-launch/pricing-bundle.png",
-      width: 2880,
-      height: 2099,
-      alt: "Historical DeepL bundle pricing grid comparing Starter plus Write, Advanced plus Write and Ultimate plus Write",
-      caption: "The bundle grid presents Translator and Write Pro as two products sold together at three plan levels.",
-    },
-  ],
-  evidenceSectionLabel: "Pricing",
-  evidenceSectionTitle: "Translator, Write Pro and bundle choices on one page",
-  outcome: [
-    "The selected artifacts document two complementary website jobs: compare the available paid products on pricing, then explain individual capabilities wherever people encounter them.",
-    "No conversion or revenue result is attributed to this pricing or feature-awareness work.",
-  ],
-  outcomeTitle: "A clearer website path into the paid products",
-  evidenceNote: "The feature-awareness frame and three pricing grids document the historical Translator, Write Pro and bundle choices. Prices are historical, and no performance result is attributed to these frames.",
-  next: { href: "/work/checkout", label: "Subscription checkout" },
+  next: { href: "/work/pricing-evolution", label: "Pricing evolution" },
 };
 
 export const checkoutProject: ProductCaseStory = {
@@ -206,7 +105,6 @@ export const checkoutProject: ProductCaseStory = {
 
 export const projects: ProductCaseStory[] = [
   upgradePromptsProject,
-  writeProLaunchProject,
   checkoutProject,
 ];
 

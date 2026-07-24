@@ -12,7 +12,7 @@ The ordered PDF captures for that review are indexed in
 - `/` — six selected portfolio entries and about
 - `/writing` — five selected writing samples across product, methodology, instructional, press-release and consumer formats
 - `/work/upgrade-prompts` — upgrade prompts across Translator and Write
-- `/work/write-pro-launch` — Write Pro launch, pricing and feature awareness
+- `/work/pricing-evolution` — pricing evolution across Translator, Write, Voice and API
 - `/work/checkout` — trial, no-trial, bundle and team-purchase checkout
 - `/work/account-team-security` — account access, recovery and team-administration writing collection
 - `/work/report-campaign` — merged localization report campaign
@@ -21,8 +21,9 @@ The ordered PDF captures for that review are indexed in
 
 Retired candidate-review and unselected case-study URLs redirect once to their
 final retained destination. The previous upgrade aliases lead directly to
-`/work/upgrade-prompts`; account-security and team-administration aliases lead
-to the combined collection; Hiring Success leads to its anchored writing entry.
+`/work/upgrade-prompts`; `/work/write-pro-launch` leads to the pricing-evolution
+case; account-security and team-administration aliases lead to the combined
+collection; Hiring Success leads to its anchored writing entry.
 
 ## Local development
 

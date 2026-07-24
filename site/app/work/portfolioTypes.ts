@@ -7,6 +7,30 @@ export type StoryImage = {
   width: number;
 };
 
+export type StoryFlowItem = {
+  label: string;
+  text: string;
+  title: string;
+};
+
+export type StoryEvidenceSection = {
+  flow?: StoryFlowItem[];
+  flowAriaLabel?: string;
+  flowIsOrdered?: boolean;
+  id: string;
+  images: StoryImage[];
+  intro?: string[];
+  label: string;
+  title: string;
+};
+
+export type StoryCoda = {
+  href: string;
+  linkLabel: string;
+  prefix: string;
+  suffix?: string;
+};
+
 export type PortfolioCard = {
   href: string;
   image: StoryImage;
@@ -41,14 +65,16 @@ export type ProductCaseStory = {
   constraints: string;
   context: string;
   cover: StoryImage;
+  coda?: StoryCoda;
   decisions: Array<{ title: string; text: string }>;
   decisionsTitle?: string;
-  evidenceNote: string;
+  evidenceNote?: string;
+  evidenceSections?: StoryEvidenceSection[];
   evidenceSectionLabel?: string;
   evidenceSectionTitle?: string;
   experienceTitle: string;
   experienceSectionLabel?: string;
-  flow?: Array<{ label: string; title: string; text: string }>;
+  flow?: StoryFlowItem[];
   flowAriaLabel?: string;
   flowIsOrdered?: boolean;
   flowSectionLabel?: string;
@@ -56,7 +82,7 @@ export type ProductCaseStory = {
   hook: string;
   href: string;
   next: { href: string; label: string };
-  outcome: string[];
+  outcome?: string[];
   outcomeTitle?: string;
   problem: string[];
   problemTitle?: string;

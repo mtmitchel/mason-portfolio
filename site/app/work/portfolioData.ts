@@ -43,13 +43,13 @@ const accountTeamSecurityPreview = [
   },
 ];
 
-const writeProLaunchCover = {
-  label: "Feature-awareness system",
-  src: "/work/write-pro-launch/feature-awareness-security.png",
+const pricingEvolutionCover = {
+  label: "Translator pricing",
+  src: "/work/pricing-evolution/pricing-translator-cumulative.png",
   width: 3024,
-  height: 1431,
-  alt: "DeepL Pro feature-awareness section with five feature headings and the data-security description expanded",
-  caption: "Five paid capabilities share one scannable website module.",
+  height: 2392,
+  alt: "DeepL Translator pricing page comparing four plans with cumulative feature descriptions",
+  caption: "Four Translator plans use cumulative descriptions to show what each tier adds.",
 };
 
 const checkoutCover = {
@@ -81,7 +81,7 @@ const localyzeCover = {
 
 export const selectedWorkCards: PortfolioCard[] = [
   { href: "/work/upgrade-prompts", title: "Upgrade prompts across Translator and Write", meta: "DeepL · Monetization", image: upgradePromptsCover },
-  { href: "/work/write-pro-launch", title: "Write Pro launch, pricing and feature awareness", meta: "DeepL · Website launch", image: writeProLaunchCover },
+  { href: "/work/pricing-evolution", title: "Simplifying pricing across four products", meta: "DeepL · Pricing evolution", image: pricingEvolutionCover },
   { href: "/work/checkout", title: "Subscription checkout", meta: "DeepL · Purchase journeys", image: checkoutCover },
   { href: "/work/account-team-security", title: "Account, team and security writing", meta: "DeepL · Account and team journeys", image: accountTeamSecurityCover, previewImages: accountTeamSecurityPreview },
   { href: "/work/report-campaign", title: "Localization report campaign", meta: "DeepL · Research and editorial", image: reportCover },
