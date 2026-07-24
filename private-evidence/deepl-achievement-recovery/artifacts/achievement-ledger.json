@@ -2,9 +2,9 @@
   "generated_from": "ChatGPT data export in /home/mason/Downloads/gptexport",
   "supplemental_sources": [
     {
-      "repo_path": "private-evidence/more deepl",
+      "repo_path": "private-evidence",
       "reviewed_on": "2026-07-21",
-      "master": "private-evidence/more deepl/deepl-performance-review-master.md",
+      "master": "private-evidence/performance-review.md",
       "policy": "Original HiBob PDFs are primary self-reports. Derivative Markdown drafts and general DKH guides are not independent achievement evidence."
     }
   ],
@@ -230,7 +230,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/1st half bob.pdf",
           "source_type": "local_pdf",
           "pages": [2],
           "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
@@ -238,7 +238,7 @@
           "note": "First-half 2024 HiBob self-reflection; corroborates desktop-promotion contribution but not platform-metric attribution."
         },
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/Bob.pdf",
           "source_type": "local_pdf",
           "pages": [2],
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
@@ -285,7 +285,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/1st half bob.pdf",
           "source_type": "local_pdf",
           "pages": [1, 2],
           "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
@@ -293,7 +293,7 @@
           "note": "First-half 2024 HiBob self-reflection; supports contribution and 25+ page scope, not the underlying analytics."
         },
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/Bob.pdf",
           "source_type": "local_pdf",
           "pages": [1, 2],
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
@@ -350,7 +350,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/1st half bob.pdf",
           "source_type": "local_pdf",
           "pages": [3, 4],
           "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
@@ -400,7 +400,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/1st half bob.pdf",
           "source_type": "local_pdf",
           "pages": [2],
           "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
@@ -408,7 +408,7 @@
           "note": "Repeats the team-level SEO and landing-page outcome claims without supplying analytics or individual attribution."
         },
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/Bob.pdf",
           "source_type": "local_pdf",
           "pages": [2, 3],
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
@@ -450,7 +450,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/1st half bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/1st half bob.pdf",
           "source_type": "local_pdf",
           "pages": [2],
           "sha256": "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98",
@@ -458,7 +458,7 @@
           "note": "Contains the conflicting 12% conversion and €1.2M ARR formulation; it is not the experiment readout."
         },
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/Bob.pdf",
           "source_type": "local_pdf",
           "pages": [2, 3],
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
@@ -562,7 +562,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/Bob.pdf",
           "source_type": "local_pdf",
           "pages": [3],
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
@@ -740,7 +740,7 @@
       ],
       "artifact_sources": [
         {
-          "repo_path": "private-evidence/more deepl/original-self-reflections/Bob.pdf",
+          "repo_path": "private-evidence/source-documents/performance-review/Bob.pdf",
           "source_type": "local_pdf",
           "pages": [4],
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",

@@ -3,7 +3,8 @@ import WorkIndexPage from "../components/WorkIndexPage";
 
 export const metadata: Metadata = {
   title: "Writing — Mason Mitchel",
-  description: "Selected B2B, technical, executive, data-led and consumer writing by Mason Mitchel.",
+  description: "Five published examples across product announcements, methodology, instruction, data-led press releases and consumer writing.",
+  alternates: { canonical: "/writing" },
 };
 
 export default function WritingPage() {

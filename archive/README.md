@@ -1,23 +1,34 @@
 # Archive
 
-Historical and superseded workspace artifacts moved here on 2026-07-21. Files
-were preserved, not deleted. This directory is not a source of current product,
-claim, or publication truth.
+This directory preserves completed and superseded work. Nothing here is a
+current product, claim, source-selection, or publication owner.
 
 ## Contents
 
-- [`handoffs/`](handoffs/) — completed or superseded task handoffs. The archived
-  candidate-review handoff was fulfilled by
-  [`../private-evidence/deepl-portfolio-candidate-shortlist.md`](../private-evidence/deepl-portfolio-candidate-shortlist.md).
-  Its dated recommendation layer is now superseded by
-  [`../private-evidence/deepl-portfolio-current-direction.md`](../private-evidence/deepl-portfolio-current-direction.md).
-- [`site-snapshots/`](site-snapshots/) — four historical compressed portfolio
-  bundles from 2026-07-17. The live source is [`../site/`](../site/).
-- [`previews/`](previews/) — unreferenced historical portfolio preview images
-  from 2026-07-17.
-- [`review-artifacts/`](review-artifacts/) — generated CV and portfolio-review
-  renders formerly kept under `tmp/`.
-- [`research/`](research/) — completed background research retained for future
-  CV- and portfolio-skill maintenance, not current site direction.
+- [`handoffs/`](handoffs/) — completed task handoffs.
+- [`previews/`](previews/) — old portfolio preview images.
+- [`research/`](research/) — completed claim reviews, pricing research,
+  candidate selection, prior direction, and supplemental performance-review
+  material.
+- [`review-artifacts/`](review-artifacts/) — old review packets, rendered PDFs,
+  page captures, and generated comparison output.
+- [`retired/code/`](retired/code/) — replaced components, data, tests, styles,
+  and route-only redirect folders.
+- [`retired/documentation/`](retired/documentation/) — superseded current-owner
+  documents and changelogs.
+- [`retired/figma-exports/`](retired/figma-exports/) — superseded export
+  attempts.
+- [`retired/public-assets/`](retired/public-assets/) — assets removed from the
+  deployable site.
+- [`retired/working-assets/`](retired/working-assets/) — rejected homepage
+  cover candidates and other completed explorations.
+- [`site-snapshots/`](site-snapshots/) — compressed historical site bundles.
 
-Keep these files private unless they are individually reviewed and cleared.
+The current application is [`../site/`](../site/). Current private guidance is
+indexed in [`../private-evidence/README.md`](../private-evidence/README.md).
+
+Archive contents may retain historical wording and original filenames because
+they record past work. Do not add forwarding stubs or links from current code
+to archived files. When a current document replaces an old one, move the whole
+old document here and keep one clear current owner. Exact copies already kept
+in a current private source package are not repeated here.

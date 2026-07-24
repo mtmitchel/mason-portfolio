@@ -1,32 +1,37 @@
 # Mason Mitchel portfolio
 
-A calm, evidence-led portfolio for Mason's UX copywriting and content design
-work. The homepage uses media-first, naturally sized project cards; three
-homepage covers use silent loops that play only while visible and fall back to
-their poster frames when reduced motion is enabled.
+A restrained, image-led portfolio for Mason's UX copywriting and content design
+work. Shared code handles the site shell, typography, image viewer, comparisons,
+and switchers. Each case page controls its own story order.
 
-For a self-contained project and review overview, see
-[`docs/claude-fable-review-brief.md`](docs/claude-fable-review-brief.md).
-The ordered PDF captures for that review are indexed in
-[`docs/review-assets/claude-fable/`](docs/review-assets/claude-fable/README.md).
+## Live routes
 
-## Routes
+- `/` — six selected projects and About
+- `/writing` — five published writing examples
+- `/work/upgrade-prompts`
+- `/work/pricing-evolution`
+- `/work/checkout`
+- `/work/account-team-security`
+- `/work/report-campaign`
+- `/work/localyze-executive-ghostwriting`
+- `/mason-cv.pdf`
 
-- `/` — six selected portfolio entries and about
-- `/writing` — five selected writing samples across product, methodology, instructional, press-release and consumer formats
-- `/work/upgrade-prompts` — upgrade prompts across Translator and Write
-- `/work/pricing-evolution` — pricing evolution across Translator, Write, Voice and API
-- `/work/checkout` — trial, no-trial, bundle and team-purchase checkout
-- `/work/account-team-security` — account access, recovery and team-administration writing collection
-- `/work/report-campaign` — merged localization report campaign
-- `/work/localyze-executive-ghostwriting` — Localyze executive ghostwriting
-- `/mason-cv.pdf` — résumé
+There are no retired-route placeholders or redirect-only case folders in the
+live application.
 
-Retired candidate-review and unselected case-study URLs redirect once to their
-final retained destination. The previous upgrade aliases lead directly to
-`/work/upgrade-prompts`; `/work/write-pro-launch` leads to the pricing-evolution
-case; account-security and team-administration aliases lead to the combined
-collection; Hiring Success leads to its anchored writing entry.
+## Application structure
+
+- `app/components/` — shared presentation and interaction
+- `app/work/<case>/` — route-owned case copy, data, and rendering
+- `app/work/portfolioData.ts` — homepage cards and writing entries
+- `app/work/portfolioTypes.ts` — shared image, video, card, switcher, and
+  writing-sample types
+- `public/work/` — selected public evidence and homepage media
+- `tests/rendered-html.test.mjs` — route, copy, asset, claim, and accessibility
+  checks
+
+The site is intentionally static. It has no database, authentication, Tailwind,
+or external runtime state.
 
 ## Local development
 
@@ -35,66 +40,46 @@ npm install
 npm run dev
 ```
 
-Use these checks before review:
+## Required checks
 
 ```bash
-./node_modules/.bin/eslint app tests vite.config.ts worker --no-cache
-WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vite build --emptyOutDir=false
+./node_modules/.bin/eslint . --ignore-pattern dist --ignore-pattern .next
+WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vinext build
 node --test tests/rendered-html.test.mjs
-git diff --check
 ```
 
-The production build is the primary type-integration check. A standalone
-`tsc --noEmit` also requires Cloudflare worker ambient types that this project
-does not currently declare.
+The production build is the type-integration check. Standalone `tsc --noEmit`
+is not authoritative because the Cloudflare worker ambient types are not
+declared.
 
-The application is intentionally static. It does not use a database,
-authentication or Tailwind; historical starter scaffolding for those
-capabilities has been removed so the repository reflects the portfolio that is
-actually being reviewed.
+## Current presentation rules
 
-## Writing and layout direction
+- Keep the concise header, selected-work grid, writing route, About copy, and
+  footer visually quiet.
+- Use literal project titles and direct prose.
+- Keep each important claim beside the image or excerpt that supports it.
+- Let each case use the story shape its evidence needs.
+- Keep homepage cards at their natural media height. The localization-report
+  card must show the complete `978 × 1369` cover and must never crop it.
+- Keep the three homepage loops silent, visibility-aware, and safe for reduced
+  motion.
+- Do not add tags, badges, card summaries, extra filters, or public evidence
+  disclaimers.
+- Use `ImageComparison` only for two real states.
+- Preserve the accessible Checkout and pricing switchers.
 
-- Use <https://fredrika.dev/> as the composition reference: one concise
-  introduction, one image-led project index, and one focused page per project.
-- Use literal project names and direct case-study headlines. Do not use slogans,
-  metaphors, faux drama, or promotional hooks.
-- Keep the header to one short role line and do not repeat it beside “Selected
-  work.”
-- Put each card's media before its title, let cards keep their natural height and
-  stack short factual metadata beneath 18px titles. Keep all visible text at
-  14px or larger.
-- Keep `Selected work` and `Writing` as underlined route-backed text links in
-  the section-heading row. Use colour and weight for active state; do not add an
-  `All` view, boxed control or client-side tab state.
-- Use the shared page shell on `/` and `/writing`; switching routes changes only
-  the index content, not the header, About section or footer.
-- Treat writing samples as readable text and external links, not as case studies
-  or screenshot galleries.
+## Evidence
 
-## Evidence assets
+Selected public visuals live under `public/work/<case>/`. Their private source,
+crop, caption, dimensions, alternative text, and permission state are recorded
+in
+[`../private-evidence/portfolio-asset-manifest.json`](../private-evidence/portfolio-asset-manifest.json).
 
-Selected case-study images live in `public/work/<case>/`; selected homepage
-covers live in `public/work/home-covers/`. Unselected cover experiments remain
-outside `public/` as tracked working material. Evidence retained only for
-retired routes is not deployable.
-`../private-evidence/portfolio-asset-manifest.json` records source, permission,
-privacy, crop, caption and text-alternative decisions for the selected visuals.
+Source images stay unchanged. Public crops must be truthful, documented, and
+limited to the part of the interface being discussed. Historical screens must
+not be redesigned to look current.
 
-- Export the product frame itself from the historical Figma file at 2x or 3x.
-- Keep source Figma files read-only.
-- Do not include canvas headings, sticky notes, comments or private Figma links.
-- Preserve complete historical frames privately. Any public detail crop must be
-  labelled, documented in the manifest and limited to a truthful part of the
-  original interface.
-- Record dimensions, descriptive alt text and an evidence-based caption where each image is used.
-- Do not redesign historical screens to resemble the current product.
+## Publication state
 
-## Publication gate
-
-The site remains unpublished. The GitHub repository is private, and a commit or
-push is a source-control checkpoint only; it does not publish or deploy the
-site. Public release requires Mason's explicit approval for claims, employer
-rights, redactions, public-access change and deployment. The deployed Sites
-version must be tied to the exact approved commit and verified anonymously
-after deployment.
+The site is not published. The repository is private. Commit and push do not
+authorize access changes, a saved hosting version, or deployment.

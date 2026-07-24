@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import EditorialMiniCase from "../../components/EditorialMiniCase";
-import { localyzeGhostwritingCase } from "../portfolioData";
+import LocalyzeGhostwritingCase from "./LocalyzeGhostwritingCase";
 
 export const metadata: Metadata = {
-  title: "Executive ghostwriting for Localyze — Mason Mitchel",
-  description: "An artifact-led editorial case about ghostwriting global-mobility perspectives for Localyze's CEO.",
+  title: "Executive ghostwriting on global mobility — Mason Mitchel",
+  description: "Three Forbes Business Council articles ghostwritten for Localyze co-founder and CEO Hanna Marie Asmussen.",
+  alternates: { canonical: "/work/localyze-executive-ghostwriting" },
 };
 
 export default function LocalyzeExecutiveGhostwritingPage() {
-  return <EditorialMiniCase project={localyzeGhostwritingCase} />;
+  return <LocalyzeGhostwritingCase />;
 }

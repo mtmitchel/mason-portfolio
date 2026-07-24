@@ -12,18 +12,25 @@ The raw ChatGPT export remains at:
 /home/mason/Downloads/gptexport
 ```
 
-It was deliberately not moved here because the 278 MB export contains thousands of unrelated private conversations. The raw export remains the source of truth for the chat-derived recovery. The original files under `../more deepl/` are the source of truth for the supplemental performance-review artifacts, and this directory contains the combined DeepL-focused recovery work.
+It was deliberately not moved here because the 278 MB export contains
+thousands of unrelated private conversations. The raw export remains the source
+of truth for the chat-derived recovery. The original HiBob files under
+[`../source-documents/performance-review/`](../source-documents/performance-review/)
+are the primary supplemental sources. Their synthesis is
+[`../performance-review.md`](../performance-review.md).
 
 ## Start here
 
-- [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md) — current owner for portfolio scope, metric framing, writing hierarchy, and publication boundaries established with Mason on 2026-07-21.
+- [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md) — current owner for portfolio scope, metric framing, writing hierarchy, and publication boundaries, updated with Mason's decisions through 2026-07-24.
 - [`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md) — canonical paired CV and portfolio language covering every recovery record exactly once.
 - [`artifacts/outcome-evidence.md`](artifacts/outcome-evidence.md) — strongest positive outcomes, growth and revenue candidates, evidence quality, and missing-source warnings.
 - [`artifacts/career-inventory.md`](artifacts/career-inventory.md) — chronological reconstruction across Marketing, Apps & Integrations, Content Experience, Monetization, IAM, ATE, and content tooling.
 - [`artifacts/linkedin-bullets.md`](artifacts/linkedin-bullets.md) — dated evidence variants; use the current-direction file and final achievements document for current metric scope and career wording.
 - [`artifacts/achievement-ledger.json`](artifacts/achievement-ledger.json) — structured record of every curated achievement, contribution, outcome, confidence decision, and source reference.
 - [`artifacts/extraction-summary.md`](artifacts/extraction-summary.md) — extraction coverage and highest-ranked candidate conversations.
-- [`../more deepl/deepl-performance-review-master.md`](../more%20deepl/deepl-performance-review-master.md) — deduplicated source inventory and synthesis of the recovered HiBob reflections, derivative drafts, and DeepL guidance files.
+- [`../performance-review.md`](../performance-review.md) — deduplicated source
+  inventory and synthesis of the recovered HiBob reflections, derivative
+  drafts, and DeepL guidance files.
 
 ## Current findings
 
@@ -66,11 +73,16 @@ The supplemental performance-review review completed on 2026-07-21 added page-le
 
 ### Supplemental local evidence
 
-- `../more deepl/deepl-performance-review-master.md` — canonical synthesis and source disposition for all eight supplemental files.
-- `../more deepl/original-self-reflections/1st half bob.pdf` — original first-half 2024 HiBob self-reflection.
-- `../more deepl/original-self-reflections/Bob.pdf` — original full-year 2024 HiBob self-reflection.
+- `../performance-review.md` — canonical synthesis and source disposition for
+  all eight supplemental files.
+- `../source-documents/performance-review/1st half bob.pdf` — original
+  first-half 2024 HiBob self-reflection.
+- `../source-documents/performance-review/Bob.pdf` — original full-year 2024
+  HiBob self-reflection.
 
-The four Markdown reflection files in `../more deepl/derivative-drafts/` are derivative drafts, and the two DKH PDFs in `../more deepl/guidance/` are general process guidance. They are inventoried in the master but are not independent achievement evidence.
+The four Markdown reflection drafts and two general DKH guidance PDFs are
+preserved under `archive/research/performance-review-supplemental/`. They are
+inventoried in the master but are not independent achievement evidence.
 
 ### Machine-generated evidence indexes
 
@@ -119,10 +131,13 @@ or experiment-wave scope:
 
 ## Publication rule
 
-Use `artifacts/final-achievements-and-talking-points.md` as the canonical
-career-language source and `../deepl-portfolio-current-direction.md` as the
-current portfolio-decision owner. Mason-confirmed business-intelligence outcomes
-may be used in CV and private portfolio copy when the wording accurately
+Use
+[`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md)
+as the canonical career-language source and
+[`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md)
+as the current portfolio-decision owner. Mason-confirmed
+business-intelligence outcomes may be used in CV and private portfolio copy
+when the wording accurately
 separates Mason's contribution from the team, program, campaign, platform, or
 experiment-wave result. Do not attribute an aggregate result to one screen,
 copy variant, or sole personal causation. Raw dashboards remain private and are

@@ -1,35 +1,66 @@
 # Mason Portfolio workspace
 
-This Git repository keeps the active portfolio, private evidence, and historical
-artifacts separate. Material under `private-evidence/`, `archive/`, `tmp/`,
-`claim-review.md`, and the root CV stays local and is ignored by Git.
+This private Git repository contains Mason Mitchel's portfolio application,
+the source evidence used to check its claims, and a separate archive of retired
+work. The deployable application lives in [`site/`](site/).
 
-## Active work
+## Start here
 
-- [`site/`](site/) — versioned portfolio application inside this repository.
-  Preserve unrelated work whenever the repository is dirty.
-- [`mason cv.pdf`](mason%20cv.pdf) — current CV source.
-- [`claim-review.md`](claim-review.md) — private publication and claim-ceiling
-  review for DeepL work.
+- [`site/README.md`](site/README.md) — live routes, application structure,
+  local commands, and publication state.
 - [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
-  — current portfolio selection, metric, writing, and layout decisions.
-- [`private-evidence/`](private-evidence/) — canonical recovery, Figma crosswalk,
-  candidate review, and source evidence. Start with its README.
+  — current page titles, story order, writing rules, and homepage decisions.
+- [`private-evidence/claim-review.md`](private-evidence/claim-review.md) —
+  current claim limits for every public case.
+- [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
+  — source, crop, dimensions, caption, alternative text, and permission state
+  for selected visuals.
+- [`private-evidence/README.md`](private-evidence/README.md) — private evidence
+  and source-material index.
+- [`archive/README.md`](archive/README.md) — index of retired code, old reviews,
+  completed research, and historical snapshots.
 
-## Supporting areas
+## Repository layout
 
-- [`tmp/`](tmp/) — scratch space for new temporary outputs only.
-- [`archive/`](archive/) — historical snapshots, superseded handoffs, old
-  previews, and completed review renders. Start with its README.
-- [`private-evidence/product-surface-captures/`](private-evidence/product-surface-captures/)
-  — private full-page captures used to check the breadth of DeepL product and
-  integration surfaces named in the CV.
+| Path | Purpose |
+| --- | --- |
+| [`site/`](site/) | The only deployable portfolio source. |
+| [`private-evidence/`](private-evidence/) | Current private decision owners, claim review, evidence maps, and source exports. |
+| [`docs/`](docs/) | Current repository-wide operating guidance. |
+| [`archive/`](archive/) | Preserved history that is not current product or claim truth. |
+| `tmp/` | Ignored scratch space. Nothing here is a deliverable or source of truth. |
 
-## Safety boundary
+The repository root intentionally contains no loose exports, screenshots,
+videos, PDFs, review packets, or working folders.
 
-Do not publish private employment evidence, raw Figma links, confidential
-operational detail, or archived working artifacts. User-approved aggregated
-business outcomes may be used at their documented program or experiment-wave
-scope; never attach them to an individual screen without support. Use the
-current-direction file, claim review, and canonical final achievement list
-before adapting material for the CV or portfolio.
+## Checks
+
+Run the repository check from this directory:
+
+```bash
+node scripts/check-repository.mjs
+```
+
+Run application checks from `site/`:
+
+```bash
+./node_modules/.bin/eslint . --ignore-pattern dist --ignore-pattern .next
+WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vinext build
+node --test tests/rendered-html.test.mjs
+```
+
+Then run the final whitespace check from this directory:
+
+```bash
+git diff --check
+```
+
+## Privacy and publication
+
+Private evidence is tracked so the complete working context can be recovered on
+another machine. The repository must remain private. A commit or push is only a
+source-control checkpoint; it does not publish or deploy the site.
+
+Public release still requires Mason's separate approval for the final wording,
+employer rights, redactions, repository access, and deployment. Unsupported
+claims are omitted from the site instead of explained with a public disclaimer.

@@ -1,37 +1,46 @@
-# Private evidence index
+# Private evidence
 
-Private source material and working documentation for the DeepL portfolio.
-Nothing in this directory is cleared for public release by default.
+This directory contains the current private owners and source material used to
+check the portfolio. Nothing here is cleared for public release by default.
 
-## Canonical documents
+## Current owners
 
 - [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md)
-  — current owner for portfolio selection, metric scope, writing, layout, and
-  implementation decisions.
-- [`deepl-achievement-recovery/artifacts/final-achievements-and-talking-points.md`](deepl-achievement-recovery/artifacts/final-achievements-and-talking-points.md)
-  — canonical CV and portfolio language.
-- [`deepl-achievement-recovery/README.md`](deepl-achievement-recovery/README.md)
-  — recovery package scope, evidence levels, scripts, and privacy boundary.
+  — current page titles, story order, writing rules, and homepage decisions.
+- [`claim-review.md`](claim-review.md) — current claim ceilings and publication
+  decisions.
+- [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
+  public visuals and their private sources, crops, dimensions, captions,
+  alternative text, and permission state.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — bidirectional
   achievement-to-Figma crosswalk.
-- [`deepl-portfolio-candidate-shortlist.md`](deepl-portfolio-candidate-shortlist.md)
-  — dated evidence ranking retained for provenance; its recommendations and next
-  action are superseded by the current-direction file where they conflict.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
-  — binding product and navigation correction.
-- [`more deepl/deepl-performance-review-master.md`](more%20deepl/deepl-performance-review-master.md)
-  — deduplicated synthesis of the supplemental performance-review files.
+  — binding product and navigation correction for the copied Figma files.
+- [`deepl-achievement-recovery/README.md`](deepl-achievement-recovery/README.md)
+  — recovery package, evidence levels, scripts, and canonical career language.
+- [`performance-review.md`](performance-review.md) — deduplicated performance
+  review synthesis.
 
-## Source groups
+## Source material
 
-- [`more deepl/original-self-reflections/`](more%20deepl/original-self-reflections/)
-  — original first-half and full-year HiBob self-reflection PDFs.
-- [`more deepl/derivative-drafts/`](more%20deepl/derivative-drafts/) — superseded
-  Markdown drafts retained for provenance.
-- [`more deepl/guidance/`](more%20deepl/guidance/) — general DeepL performance
-  and goal-setting guidance; not Mason-specific achievement evidence.
-- [`checkout/`](checkout/) and [`mfa/`](mfa/) — private source images used for
-  focused portfolio evidence.
-- [`product-surface-captures/`](product-surface-captures/) — full-page captures
-  of public DeepL product, app and integration pages used as private breadth
-  references. These are not portfolio-ready product-design artifacts.
+- [`source-documents/`](source-documents/) — current CV source and original
+  performance-review PDFs.
+- [`source-media/homepage-loops/`](source-media/homepage-loops/) — original
+  generated MP4 files behind the selected homepage loops.
+- [`source-exports/figma/`](source-exports/figma/) — Checkout, MFA, pricing,
+  Write Pro, and team-administration exports and source batches.
+- [`source-exports/public-product-pages/`](source-exports/public-product-pages/)
+  — private reference captures and selected source illustrations from public
+  DeepL product surfaces.
+- [`deepl-achievement-recovery/artifacts/`](deepl-achievement-recovery/artifacts/)
+  — structured recovery records and final talking points.
+
+Source exports are evidence, not deployable site assets. Selected public copies
+live only under `site/public/` and are recorded in the asset manifest.
+
+## Archive boundary
+
+Superseded reviews, old code, retired public assets, obsolete route files,
+earlier export attempts, completed research, and review renders live under
+[`../archive/`](../archive/). They are not current instructions and should not
+be linked from the public site.

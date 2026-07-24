@@ -1,89 +1,89 @@
 # Mason Portfolio repository instructions
 
-This directory is the Git and instruction root for the portfolio workspace.
-`/home/mason/.codex/AGENTS.md` owns universal workflow and
-`/home/mason/AGENTS.md` owns workstation safety. This file owns repository-wide
-portfolio routing, evidence safety, permissions, and completion. The closest
-nested `AGENTS.md` owns implementation details inside its subtree.
+This directory is the Git and instruction root. The global Codex instructions
+apply first. This file owns repository-wide routing, evidence safety,
+permissions, and completion. [`site/AGENTS.md`](site/AGENTS.md) adds rules for
+the application.
 
-## Repository shape
+## Canonical structure
 
-- `site/` is the versioned portfolio application. Read `site/AGENTS.md` before
-  changing its code, copy, routes, tests, or public assets.
-- `private-evidence/`, `claim-review.md`, `archive/`, `Monetization/`,
-  `figma screenshots/`, and the root CV are working material and reference
-  evidence. Everything except `tmp/` scratch is tracked so any machine can
-  pull the full context.
-- `private-evidence/deepl-portfolio-current-direction.md` owns the current DeepL
-  portfolio selection, metric, writing, and layout decisions. Do not duplicate
-  changing task state in this file.
-- Current disk evidence outranks old handovers, chat summaries, transient SHA
-  references, and stale documentation.
+- [`site/`](site/) is the only deployable portfolio application.
+- [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
+  owns current public titles, story order, writing rules, and homepage choices.
+- [`private-evidence/claim-review.md`](private-evidence/claim-review.md) owns
+  current claim ceilings.
+- [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
+  owns selected-asset source and crop records.
+- [`private-evidence/deepl-figma-evidence-map.md`](private-evidence/deepl-figma-evidence-map.md)
+  owns the achievement-to-Figma crosswalk.
+- [`docs/figma-workflow.md`](docs/figma-workflow.md) owns Figma access, edit,
+  and export procedure.
+- [`archive/`](archive/) contains preserved history only. It is never current
+  product, claim, or publication truth.
+- `tmp/` is ignored scratch space.
+
+Current disk evidence outranks chat summaries, handovers, transient commit
+references, and archived plans.
 
 ## Task routing
 
-Read only the owners required by the current task:
+Read only the owners required by the task:
 
-- Site implementation or review: `site/AGENTS.md`, then `site/README.md`.
-- DeepL selection, case-study framing, or claim-bearing copy:
-  `private-evidence/deepl-portfolio-current-direction.md`, then the relevant
-  section of `claim-review.md`.
-- Achievement-to-Figma mapping or source classification:
-  `private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md`,
-  the relevant section of `private-evidence/deepl-figma-evidence-map.md`, and
-  `private-evidence/deepl-achievement-recovery/README.md`.
-- Figma inspection, export, recovery, or an explicitly authorized Figma edit:
-  `docs/figma-workflow.md` plus the task-specific evidence owner above.
-- Historical material under `archive/`: read only when Mason explicitly asks to
-  inspect that history or a current owner points to one exact artifact.
+- Site implementation or review: [`site/AGENTS.md`](site/AGENTS.md), then
+  [`site/README.md`](site/README.md).
+- Public case framing or claim-bearing copy:
+  [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md),
+  then the relevant section of
+  [`private-evidence/claim-review.md`](private-evidence/claim-review.md).
+- Achievement-to-Figma mapping:
+  [`private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md`](private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md),
+  the relevant section of
+  [`private-evidence/deepl-figma-evidence-map.md`](private-evidence/deepl-figma-evidence-map.md),
+  and
+  [`private-evidence/deepl-achievement-recovery/README.md`](private-evidence/deepl-achievement-recovery/README.md).
+- Figma inspection, export, recovery, or an explicitly approved Figma edit:
+  [`docs/figma-workflow.md`](docs/figma-workflow.md) plus the task-specific
+  evidence owner.
+- Historical material: read one exact archived item only when Mason asks for
+  that history or a current owner points to it.
 
-Do not read every private evidence file by default. Narrow context to the
-selected project, claim, frame, or acceptance outcome.
+Do not scan every private source file by default. Narrow evidence work to the
+selected case, claim, frame, or acceptance result.
 
-## Execution and finish line
+## Working rules
 
-- Treat Mason's request as the objective and its requested outcomes as the
-  acceptance criteria. For ordinary work, do not create a separate plan or task
-  artifact unless one is needed to resolve real ambiguity.
-- Continue through live-state inspection, in-scope implementation, focused
-  verification, and final diff review. Do not stop after a proposal, inventory,
-  partial edit, or status update while the next required step is authorized and
-  safe.
-- Use the smallest durable solution that fully meets the request. Preserve all
-  unrelated and pre-existing work in the dirty repository.
-- `COMPLETE` means every requested outcome passed its applicable proof.
-  `PARTIAL` means useful work exists but an acceptance outcome remains unmet and
-  authority has ended. `BLOCKED` means an external decision, capability, or
-  protected phase prevents a safe candidate.
-- Never describe unverified behavior as complete. Name the exact unmet outcome
-  and one concrete next action when work remains.
+- Treat Mason's request as the objective and finish every safe, authorized
+  step through focused verification and final diff review.
+- Preserve unrelated dirty work.
+- Keep one current source of truth for each decision. Move superseded work into
+  the archive instead of leaving active stubs, duplicate instructions, or
+  placeholder links.
+- Never publish private employment evidence, raw Figma links, internal
+  identifiers, or archived review material.
+- Aggregated business results may appear only at the documented program,
+  experiment-wave, or campaign level.
+- Do not create screenshots, recordings, PDFs, or visual-diff files unless
+  Mason requests that exact artifact.
+- Permanent deletion is prohibited. When cleanup is approved, preserve useful
+  material in the archive and use the workstation Trash route for disposable
+  empty or generated paths.
 
-## Protected phases and artifacts
+## Protected phases
 
-- Figma is read-only unless Mason explicitly authorizes an edit in the current
-  task. Use Mason's logged-in Chrome profile when accessing Figma directly.
-  Non-official Figma MCP servers and their required local desktop or plugin
-  bridges are allowed, but Figma's official native MCP server is prohibited.
-  Never use direct Figma APIs, unrelated plugins, Playwright, or another
-  browser. MCP access does not authorize a Figma write.
-- Do not create screenshots, recordings, browser captures, visual diffs, PDFs,
-  or other visual QA artifacts unless Mason requests that exact artifact.
-- Local inspection, requested repository edits, and focused verification are
-  allowed. Commit, push, publication, deployment, access changes, Figma writes,
-  and deletion each require their own explicit authorization.
-- Permanent deletion is prohibited. Preserve immutable provenance sources and
-  use the workstation-approved Trash route only when removal is authorized.
-- Detailed Figma evidence, edit, recovery, and export procedure lives only in
-  `docs/figma-workflow.md` and loads for matching tasks.
+Figma is read-only unless Mason explicitly approves an edit in the current
+task. Use Mason's logged-in Chrome profile when direct Figma access is required.
+The official native Figma MCP server, direct Figma APIs, unrelated plugins,
+Playwright, and other browsers are prohibited.
+
+Commit, push, publication, deployment, access changes, Figma writes, and
+destructive actions each require explicit approval. Approval for one phase does
+not approve another.
 
 ## Verification and closeout
 
-- Evidence or documentation changes: verify affected links and
-  `git diff --check` on the changed paths.
-- Site changes: follow the change-to-proof matrix in `site/AGENTS.md` and review
-  the final diff from this repository root.
-- A handover is created only when Mason asks for one. It must be rebuilt from
-  final live state, contain one concrete next action, and end the task.
-- Routine closeouts use `TL;DR:` and at most five bullets: result, most important
-  change, strongest verification, material remaining risk, and `Next` when work
-  remains.
+- Documentation or evidence changes: run `node scripts/check-repository.mjs`
+  and `git diff --check`.
+- Site changes: follow the proof table in [`site/AGENTS.md`](site/AGENTS.md),
+  then review the full diff from this repository root.
+- A handover is written only when Mason asks for one. Rebuild it from final live
+  state, give one concrete next action, and stop after delivering it.

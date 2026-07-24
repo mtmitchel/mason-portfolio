@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import DeepLProjectCase from "../DeepLProjectCase";
-import { checkoutProject } from "../deeplProjectData";
+import CheckoutCase from "./CheckoutCase";
 
 export const metadata: Metadata = {
-  title: "Subscription checkout — Mason Mitchel",
+  title: "Checkout across four purchase states — Mason Mitchel",
   description: "A content-design case study about trial, no-trial, bundle and team-purchase checkout states.",
+  alternates: { canonical: "/work/checkout" },
 };
 
 export default function CheckoutPage() {
-  return <DeepLProjectCase project={checkoutProject} />;
+  return <CheckoutCase />;
 }

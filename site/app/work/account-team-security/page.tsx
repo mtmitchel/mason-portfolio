@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import ArtifactCollectionCase from "../../components/ArtifactCollectionCase";
-import { accountTeamSecurityCollection } from "../portfolioData";
+import AccountTeamSecurityCase from "./AccountTeamSecurityCase";
 
 export const metadata: Metadata = {
-  title: "Account, team and security writing — Mason Mitchel",
-  description: "A collection of UX writing across DeepL account administration, team management and account security.",
+  title: "Account recovery and team administration — Mason Mitchel",
+  description: "UX writing for multi-factor authentication recovery and high-impact team administration at DeepL.",
   alternates: { canonical: "/work/account-team-security" },
 };
 
 export default function AccountTeamSecurityPage() {
-  return <ArtifactCollectionCase collection={accountTeamSecurityCollection} />;
+  return <AccountTeamSecurityCase />;
 }

@@ -2,9 +2,9 @@
 
 Private working document. Do not publish this file or expose its Figma URLs.
 
-Last audited: 2026-07-21
+Last audited: 2026-07-24
 
-## Current claim-direction overlay — 2026-07-21
+## Current claim-direction overlay — 2026-07-24
 
 This map remains authoritative for Figma provenance and for what a visible frame
 can prove. Mason subsequently confirmed that the figures and KPIs he supplied
@@ -13,15 +13,17 @@ raw dashboards do not, by themselves, block scope-accurate CV use. The 12%
 paid-conversion lift and seven-figure ARR uplift belong only to the overall Pro
 Driver/free-to-paid experiment wave, whose featured Translator and Write prompts
 may be presented together. No Figma frame proves the aggregate result or may be
-labeled as its sole cause. `deepl-portfolio-current-direction.md` governs current
-career and portfolio use where older metric-hold language below conflicts.
+labeled as its sole cause.
+[`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md)
+governs current career and portfolio use where older metric-hold language below
+conflicts.
 
-## Current portfolio export selections — 2026-07-21
+## Current portfolio export selections — 2026-07-24
 
-These are the exact, freshly exported product-frame selections used by the two
-current account-security and administration portfolio candidates. They add a
-public-selection overlay to the canonical inventory below; they do not change
-the source files or upgrade any contribution, lifecycle or outcome claim.
+These are the exact source selections behind the current combined
+account-recovery and team-administration case. They add a current-use overlay to
+the canonical inventory below; they do not change the source files or upgrade
+any contribution, lifecycle or outcome claim.
 
 ### MFA account recovery
 
@@ -68,12 +70,12 @@ the source files or upgrade any contribution, lifecycle or outcome claim.
 The account-recovery selections above now lead the combined local portfolio
 route `/work/account-team-security`. Their publication-safe copies are:
 
-- `site/public/work/account-team-security/account-security-login.png`
-  (`2880 × 1950`, SHA-256
-  `cf3f63266085d3f8d0fc6e687f560d71d93c96ac7b144ce7839da911d8bb9c17`)
-- `site/public/work/account-team-security/account-security-authentication-error.png`
-  (`2880 × 1938`, SHA-256
-  `880e9c685c46b0d03ecf0b08096bd1ebacebffb9d67107ba486c15854e976dd0`)
+- `site/public/work/account-team-security/account-security-login-detail.png`
+  (`1080 × 1250`, SHA-256
+  `c08c935898423a96cbc3bf5be3e5ef59ae68ef65d1432da828062d63adffee60`)
+- `site/public/work/account-team-security/account-security-authentication-error-detail.png`
+  (`1080 × 1250`, SHA-256
+  `2d90e9800dc578ce806d74e2b6a2808091133037e9e4b470c9053994e011870c`)
 - `site/public/work/account-team-security/account-security-reset-required.png`
   (`1176 × 720`, SHA-256
   `d6ad4ffbf551cb626ae128e83fe4907b9bc30d9e847f25a1748ec280eac4a822`)
@@ -83,7 +85,7 @@ route `/work/account-team-security`. Their publication-safe copies are:
 
 Bulk deletion is one two-frame team-administration section inside that
 collection, not a standalone homepage case. The complete six-state bulk flow
-and original result frame remain under ignored private evidence. This
+and original result frame remain in tracked private evidence. This
 presentation change does not alter the existing artifact, contribution,
 lifecycle or outcome ceilings; MFA remains separate from SSO evidence.
 
@@ -95,12 +97,11 @@ provided the exact complete `feature-awareness` product frame with the security
 description expanded. It was exported at 2x as a product frame, not as a
 browser capture or canvas screenshot.
 
-- Public destination:
-  `site/public/work/write-pro-launch/feature-awareness-security.png`
+- Current disposition: private only; no public destination.
 - Private immutable export:
-  `private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-2x.png`
+  `private-evidence/source-exports/figma/write-pro-launch/feature-awareness-security-2x.png`
 - Private source ZIP:
-  `private-evidence/figma-exports-2026-07-22/write-pro-launch/feature-awareness-security-source.zip`
+  `private-evidence/source-exports/figma/write-pro-launch/feature-awareness-security-source.zip`
 - Dimensions: `3024 × 1431`
 - SHA-256:
   `8567b050cb463973483aa22fd3184f40c9436225e122b5c6cf0eb8bc11e80cda`
@@ -171,7 +172,7 @@ is comparison/provenance only.
 | `01 — MFA setup`; `2:139549`, `2:140341`, `2:139090` | Canonical plus distinct variants | `IAM-01`, `IAM-02`, `IAM-03`, `MFA Phrase Replacement` | Full-case journey evidence | Check account data and comments; MFA is not SSO evidence |
 | `02 — Login & authentication`; `2:139889`, `2:138588`, `2:139885` | Canonical; exact collection copies are link-only duplicates | Same MFA evidence family | Full-case login/enforcement transition | Remove emails, names, comments, and internal URLs |
 | `03 — Recovery & disable flows`; `2:138949`, `2:138955`, `2:137609` | Canonical plus historical variants | `IAM-01` to `IAM-03` | Full-case recovery and consequence copy | Recovery email artifacts require direct privacy review |
-| `04 — Admin enforcement`; `2:139900` | Canonical | `IAM-02`; `private-evidence/mfa/admin-enforcement-source.png` | Full-case admin journey | Long admin source is private-only unless safely cropped/redacted |
+| `04 — Admin enforcement`; `2:139900` | Canonical | `IAM-02`; `private-evidence/source-exports/figma/mfa/admin-enforcement-source.png` | Full-case admin journey | Long admin source is private-only unless safely cropped/redacted |
 | `80 — Copy & components`; `2:140368`, `2:139116`, `2:138932`, `2:138658`, `1:6094`, `1:6033` | Canonical copy/component references | Figma-supported unless separately matched | Copy-system and component-process support | Do not export canvas notes/comments |
 | `81 — Historical visual references`; current [`6015:86607`](https://www.figma.com/design/RvJJvJNBLl8XlrWD9Q6fWt/DeepL-%E2%80%94-Account-Security-%E2%80%94-Canonical?node-id=6015-86607), prior working destination `6003:7166` | Reference-only mixed/flattened evidence | Figma-only/unresolved | Provenance only; not active-design proof | Not an export page without separate privacy review |
 | `82 — Other component references`; source `2:139102`, current [`6003:6683`](https://www.figma.com/design/RvJJvJNBLl8XlrWD9Q6fWt/DeepL-%E2%80%94-Account-Security-%E2%80%94-Canonical?node-id=6003-6683) | Editable reference explicitly outside the copy-page purpose | Figma-only/unresolved | Component-reference provenance only | Private reference page; do not infer lifecycle, ownership, or outcome |
@@ -2095,7 +2096,7 @@ public sequence.
 | Canonical page / source node | Disposition | Evidence | Portfolio use | Confidentiality |
 | --- | --- | --- | --- | --- |
 | `01 — Pricing & packaging`; `5:176750`, `5:196049`, `5:195920`, `5:195868`, `5:195702`, `5:196128`, `5:196803` | Canonical with responsive/market variants | `MON-04`, `SYS-03`, pricing research conversations | Full-case conditional-content evidence | Market variants do not prove user testing or launch |
-| `02 — Purchase & order summary` | Canonical | `MON-02`; `private-evidence/checkout/final-action-source.png` | Purchase-content evidence; separate from Checkout experiment case | Tax, country, account, and payment data require review |
+| `02 — Purchase & order summary` | Canonical | `MON-02`; `private-evidence/source-exports/figma/checkout/final-action-source.png` | Purchase-content evidence; separate from Checkout experiment case | Tax, country, account, and payment data require review |
 | `03 — Plans, trials & eligibility` | Canonical | `SYS-01`, `SYS-02`, `SYS-03` | Conditional-plan logic | Do not expose subscription/account identifiers |
 | `04 — Translation limits & bundles` | Canonical | `UX Copy Upgrade Suggestions` and related conversations | Focused UX-copy example | Inspect plan and account details |
 | `05 — Upgrade prompts & Pro drivers` | Canonical variants | `MON-01`, `MON-03` | Pro Driver wave evidence; featured Translator and Write prompts may be grouped | Use only the approved 12% paid-conversion lift and seven-figure ARR uplift at overall wave level; retire conflicting granular formulations |
@@ -2145,8 +2146,9 @@ be discarded.
 | `SEO-01` / `supported_missing_attachment` | `conversations-049.json`; `cedab5a9-0ff7-4d55-96bc-72296ad522f9`; message `aaa288dd-14f6-4071-b47d-c0d1a17d8e3a`; `conversations-015.json`; `6793425e-2340-8006-a7d3-3ea84fac6d1e`; messages `0de9888c-e876-472a-8277-898dc25a1f84` and `b4f33387-3d0b-4dee-abb5-01c97f4af69d` | `unresolved`; no exact SEO landing-page node recorded yet | Contribution/process context is supported. Mason's BI confirmation permits traffic, conversion, and revenue figures as program context in career materials; exact page attribution, individual causation, and any Figma-based outcome claim remain withheld. |
 
 - Checkout, soft-block, enterprise, SEO, and app-growth metrics remain governed
-  by `claim-review.md` and `deepl-portfolio-current-direction.md`; canonical
-  Figma files do not independently prove those outcomes.
+  by [`claim-review.md`](claim-review.md) and
+  [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md);
+  canonical Figma files do not independently prove those outcomes.
 - The missing Pro Driver source attachment remains unresolved, but the approved
   12%/seven-figure result may be used only at overall wave level. Conflicting
   granular formulations remain retired.

@@ -9,7 +9,14 @@ export default function PortfolioProjectGrid({ projects }: { projects: Portfolio
       {projects.map((project) => (
         <article className="project-entry" key={project.href}>
           <Link className="project-card" href={project.href} aria-label={`Read ${project.title}`}>
-            <div className="project-entry-image">
+            <div
+              className={[
+                "project-entry-image",
+                project.imageDisplay === "full-document"
+                  ? "project-entry-image--full-document"
+                  : "",
+              ].filter(Boolean).join(" ")}
+            >
               {project.video ? (
                 <LoopingCardVideo {...project.video} />
               ) : (

@@ -17,8 +17,8 @@ function AboutSection() {
     <section className="home-section about" id="about">
       <h2>About</h2>
       <div>
-        <p>I write the words inside products—the explanations, limits, confirmations and prices—so people understand what happened, what to do next and what a decision means.</p>
-        <p>At DeepL, I worked across Translator and Write, subscriptions and enterprise administration. Earlier, I wrote product and editorial content for Localyze and SmartRecruiters, data-led press releases for Joblift and consumer food stories for Kitchen Stories.</p>
+        <p>I write explanations, limits, prices and confirmations so people understand what happened, what to do next and what a decision means.</p>
+        <p>At DeepL, I worked across Translator, Write, subscriptions, pricing and enterprise accounts. Earlier, I worked on product and editorial writing for Localyze, SmartRecruiters, Joblift and Kitchen Stories.</p>
       </div>
     </section>
   );
@@ -35,15 +35,22 @@ function WritingCollection() {
           </header>
           <div className="writing-entry-body">
             <p>{entry.context}</p>
-            {entry.sample.kind === "quote" ? (
-              <blockquote>{entry.sample.text}</blockquote>
-            ) : (
-              <p className={`writing-sample writing-sample--${entry.sample.kind}`}>
-                <span>{entry.sample.kind === "headline" ? "Headline:" : "Structure:"}</span>{" "}
-                {entry.sample.text}
+            {entry.samples.map((sample) => (
+              sample.kind === "quote" ? (
+                <blockquote key={sample.text}>{sample.text}</blockquote>
+              ) : (
+                <p className={`writing-sample writing-sample--${sample.kind}`} key={sample.text}>
+                  <span>{sample.kind === "headline" ? "Headline:" : "Structure:"}</span>{" "}
+                  {sample.text}
+                </p>
+              )
+            ))}
+            <p className="writing-observation">{entry.decision}</p>
+            {entry.publicationContext && (
+              <p className="writing-publication-context">
+                <strong>Publication context:</strong> {entry.publicationContext}
               </p>
             )}
-            <p className="writing-observation">{entry.observation}</p>
             {entry.links.length > 0 && (
               <div className="writing-links">
                 {entry.links.map((link) => (
@@ -51,7 +58,6 @@ function WritingCollection() {
                 ))}
               </div>
             )}
-            <p className="writing-evidence-note">{entry.evidenceNote}</p>
           </div>
         </article>
       ))}
@@ -70,7 +76,11 @@ export default function WorkIndexPage({ active }: { active: "selected" | "writin
         <h2 className="visually-hidden" id="work-view-title">{isSelected ? "Selected work" : "Writing"}</h2>
         <div className="portfolio-section-heading">
           <WorkSwitcher active={active} />
-          <p>{isSelected ? "Product, growth, account and editorial work" : "Five selected pieces across formats"}</p>
+          <p>
+            {isSelected
+              ? "Product, growth, account and editorial work"
+              : "Five published examples show how I change structure, tone, and level of detail for product announcements, methodology, instruction, data-led press releases, and consumer writing."}
+          </p>
         </div>
         {isSelected ? <PortfolioProjectGrid projects={selectedWorkCards} /> : <WritingCollection />}
       </section>

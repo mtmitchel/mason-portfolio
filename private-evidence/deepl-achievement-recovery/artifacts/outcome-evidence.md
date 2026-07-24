@@ -8,8 +8,11 @@ Mason confirmed that the metrics and KPIs he supplied came from DeepL
 business-intelligence reporting available to employees. Use the approved
 figures at their honest team, program, campaign, platform, or experiment-wave
 scope; never turn them into sole personal causation or an outcome of one visible
-screen. See `../../deepl-portfolio-current-direction.md` and
-`final-achievements-and-talking-points.md` for current wording.
+screen. See
+[`../../deepl-portfolio-current-direction.md`](../../deepl-portfolio-current-direction.md)
+and
+[`final-achievements-and-talking-points.md`](final-achievements-and-talking-points.md)
+for current wording.
 
 ## Best-supported outcomes
 

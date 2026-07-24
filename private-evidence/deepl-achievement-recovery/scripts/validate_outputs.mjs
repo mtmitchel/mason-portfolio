@@ -124,19 +124,19 @@ for (const achievement of ledger.achievements) {
 if (missingFinalListIds.length) failures.push(`final list missing achievement IDs: ${missingFinalListIds.join(", ")}`);
 if (duplicateFinalListIds.length) failures.push(`final list repeats achievement IDs: ${duplicateFinalListIds.join(", ")}`);
 
-const masterPath = "private-evidence/more deepl/deepl-performance-review-master.md";
+const masterPath = "private-evidence/performance-review.md";
 const masterText = await fs.readFile(path.join(repoRoot, masterPath), "utf8");
 if (!masterText.trim()) failures.push(`${masterPath}: empty file`);
 
 const masterSourceManifest = [
-  ["private-evidence/more deepl/original-self-reflections/1st half bob.pdf", "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98"],
-  ["private-evidence/more deepl/original-self-reflections/Bob.pdf", "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799"],
-  ["private-evidence/more deepl/derivative-drafts/2024-reflection.md", "7a4c46cc39af8810bd3d9e4a4d8f955e5e8594bd5b624b11eb51dabb62a7d618"],
-  ["private-evidence/more deepl/derivative-drafts/2024-reflection (1).md", "ad7473b5e5304ba2f2aacdd001bcc682d9a03c0d24112a097b5294106d1817eb"],
-  ["private-evidence/more deepl/derivative-drafts/2024-reflection (2).md", "305e46903b46c898195793cb172b042ccf3aa8944584e8cf3c3718e1a7cd4083"],
-  ["private-evidence/more deepl/derivative-drafts/2024-reflection (3).md", "97737600bda8a2fe0eb936cd613f383ba7df001e9fed820c6fa9b06f053d37a3"],
-  ["private-evidence/more deepl/guidance/DKHGoal checkins and individual goals at DeepL240125063929.pdf", "8c31d1f6cb5ecc42c6a55836f5a77e4e729a8b7d6abb9fe2aa82dcc7544ae683"],
-  ["private-evidence/more deepl/guidance/DKHPerformance Reflections for Individuals240125061015.pdf", "009ad4920aadda74de4b4445d9b86301b5762007fc87dc3778df3b2944cfc6ca"],
+  ["private-evidence/source-documents/performance-review/1st half bob.pdf", "b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98"],
+  ["private-evidence/source-documents/performance-review/Bob.pdf", "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799"],
+  ["archive/research/performance-review-supplemental/derivative-drafts/2024-reflection.md", "7a4c46cc39af8810bd3d9e4a4d8f955e5e8594bd5b624b11eb51dabb62a7d618"],
+  ["archive/research/performance-review-supplemental/derivative-drafts/2024-reflection (1).md", "ad7473b5e5304ba2f2aacdd001bcc682d9a03c0d24112a097b5294106d1817eb"],
+  ["archive/research/performance-review-supplemental/derivative-drafts/2024-reflection (2).md", "305e46903b46c898195793cb172b042ccf3aa8944584e8cf3c3718e1a7cd4083"],
+  ["archive/research/performance-review-supplemental/derivative-drafts/2024-reflection (3).md", "97737600bda8a2fe0eb936cd613f383ba7df001e9fed820c6fa9b06f053d37a3"],
+  ["archive/research/performance-review-supplemental/guidance/DKHGoal checkins and individual goals at DeepL240125063929.pdf", "8c31d1f6cb5ecc42c6a55836f5a77e4e729a8b7d6abb9fe2aa82dcc7544ae683"],
+  ["archive/research/performance-review-supplemental/guidance/DKHPerformance Reflections for Individuals240125061015.pdf", "009ad4920aadda74de4b4445d9b86301b5762007fc87dc3778df3b2944cfc6ca"],
 ];
 for (const [repoPath, expectedHash] of masterSourceManifest) {
   await validateArtifact(repoPath, expectedHash, "master source manifest");
