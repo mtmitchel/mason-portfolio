@@ -14,8 +14,8 @@ export function SiteHeader({ homeHeading = false, summary }: { homeHeading?: boo
       <nav aria-label="Primary navigation">
         <Link href={homeHeading ? "#work" : "/#work"}>Work</Link>
         <Link href={homeHeading ? "#about" : "/#about"}>About</Link>
-        <a href="/mason-cv.pdf" target="_blank" rel="noreferrer">
-          Résumé
+        <a href="https://www.linkedin.com/in/mtmitchel" target="_blank" rel="noreferrer">
+          LinkedIn
         </a>
       </nav>
     </header>
