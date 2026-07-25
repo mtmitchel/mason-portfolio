@@ -9,9 +9,12 @@ the application.
 
 - [`site/`](site/) is the only deployable portfolio application.
 - [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
-  owns current public titles, story order, writing rules, and homepage choices.
+  records the current public direction, including titles, candidate story
+  order, writing rules, and homepage choices. Its narrative choices remain
+  revisable after explicit user criticism or a failed reader review.
 - [`private-evidence/claim-review.md`](private-evidence/claim-review.md) owns
-  current claim ceilings.
+  factual and publication ceilings only. It does not own story structure,
+  emphasis, tone, or supported statements of intent and rationale.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
   owns selected-asset source and crop records.
 - [`private-evidence/deepl-figma-evidence-map.md`](private-evidence/deepl-figma-evidence-map.md)
@@ -19,7 +22,9 @@ the application.
 - [`docs/figma-workflow.md`](docs/figma-workflow.md) owns Figma access, edit,
   and export procedure.
 - [`archive/`](archive/) contains preserved history only. It is never current
-  product, claim, or publication truth.
+  product, claim, or publication truth, but targeted historical material may
+  support chronology, intent, and narrative reconstruction after it is checked
+  against current owners.
 - `tmp/` is ignored scratch space.
 
 Current disk evidence outranks chat summaries, handovers, transient commit
@@ -31,10 +36,14 @@ Read only the owners required by the task:
 
 - Site implementation or review: [`site/AGENTS.md`](site/AGENTS.md), then
   [`site/README.md`](site/README.md).
-- Public case framing or claim-bearing copy:
+- Public case framing, structural rewriting, or narrative critique: use
+  `build-content-design-portfolio` and `narrative-writer`, then read
   [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md),
-  then the relevant section of
-  [`private-evidence/claim-review.md`](private-evidence/claim-review.md).
+  the relevant section of
+  [`private-evidence/claim-review.md`](private-evidence/claim-review.md), and
+  only the targeted project or reconstruction evidence needed for the story.
+  Do not limit the narrative to the currently selected screenshots or route
+  implementation.
 - Achievement-to-Figma mapping:
   [`private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md`](private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md),
   the relevant section of
@@ -45,7 +54,8 @@ Read only the owners required by the task:
   [`docs/figma-workflow.md`](docs/figma-workflow.md) plus the task-specific
   evidence owner.
 - Historical material: read one exact archived item only when Mason asks for
-  that history or a current owner points to it.
+  that history, a current owner points to it, or a narrative task needs a
+  targeted reconstruction of chronology, intent, or tradeoffs.
 
 Do not scan every private source file by default. Narrow evidence work to the
 selected case, claim, frame, or acceptance result.
@@ -67,6 +77,31 @@ selected case, claim, frame, or acceptance result.
 - Permanent deletion is prohibited. When cleanup is approved, preserve useful
   material in the archive and use the workstation Trash route for disposable
   empty or generated paths.
+
+## Editorial judgment and evidence safety
+
+- A public case must work for a hiring reader. It needs a complete problem,
+  pressure or consequence, Mason's role and judgment, meaningful decisions or
+  tradeoffs, evidence that advances the story, and an ending that explains
+  what changed or what the work demonstrates. An inventory of screens, strings,
+  and rules does not meet this bar.
+- Distinguish verified fact, documented account or recollection, intent,
+  rationale, reasonable interpretation, and measured outcome. Missing metrics
+  or user-testing records prevent validation claims; they do not erase
+  supported intent, rationale, contribution, or artifact-level change.
+- Claim ceilings qualify or remove unsupported factual assertions. They must
+  not force a flat chronology, neutralize the candidate's judgment, or dictate
+  sentence rhythm and case structure.
+- The current implementation, story spec, and tests are candidates—not proof
+  of editorial quality. Explicit user rejection or a failed reader review
+  reopens the subject, framing, section order, prose, evidence selection, and
+  visual pacing.
+- Do not declare public copy or a story order final before reader review. Do
+  not encode chapter count, paragraph count, sentence length, exact prose, or
+  generic strategic vocabulary as automated acceptance criteria.
+- Update current-direction and case-specific specs after the revised narrative
+  has passed reader review. Do not use those documents to preserve a rejected
+  draft.
 
 ## Protected phases
 

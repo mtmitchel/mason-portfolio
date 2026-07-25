@@ -9,9 +9,10 @@ work. The deployable application lives in [`site/`](site/).
 - [`site/README.md`](site/README.md) — live routes, application structure,
   local commands, and publication state.
 - [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
-  — current page titles, story order, writing rules, and homepage decisions.
+  — current page titles, candidate story direction, writing rules, and homepage
+  decisions.
 - [`private-evidence/claim-review.md`](private-evidence/claim-review.md) —
-  current claim limits for every public case.
+  factual and publication limits for every public case.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
   — source, crop, dimensions, caption, alternative text, and permission state
   for selected visuals.
@@ -64,3 +65,7 @@ source-control checkpoint; it does not publish or deploy the site.
 Public release still requires Mason's separate approval for the final wording,
 employer rights, redactions, repository access, and deployment. Unsupported
 claims are omitted from the site instead of explained with a public disclaimer.
+
+Evidence rules protect factual integrity; they do not determine case-study
+structure or prose. A story spec or passing test suite remains provisional
+until the complete page works for a first-time hiring reader.

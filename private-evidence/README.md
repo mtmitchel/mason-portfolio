@@ -6,15 +6,17 @@ check the portfolio. Nothing here is cleared for public release by default.
 ## Current owners
 
 - [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md)
-  — current page titles, story order, writing rules, and homepage decisions.
-- [`claim-review.md`](claim-review.md) — current claim ceilings and publication
+  — current page titles, candidate story direction, writing rules, and homepage
   decisions.
+- [`claim-review.md`](claim-review.md) — factual claim ceilings and publication
+  decisions; it does not own narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visuals and their private sources, crops, dimensions, captions,
   alternative text, and permission state.
 - [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) — build
-  spec for the pricing case: chapter order, final published copy, evidence
-  selection, crop geometry, and the claim behind each sentence.
+  candidate for the pricing case: proposed chapter order and copy,
+  claim-to-evidence relationships, and presentation notes. It remains
+  revisable until the full case passes reader review.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — bidirectional
   achievement-to-Figma crosswalk.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
@@ -40,6 +42,11 @@ check the portfolio. Nothing here is cleared for public release by default.
 
 Source exports are evidence, not deployable site assets. Selected public copies
 live only under `site/public/` and are recorded in the asset manifest.
+
+Evidence owners establish what can be said and shown. They do not make a
+rejected draft final, and they do not replace narrative judgment. Targeted
+historical and reconstruction records may support chronology, intent,
+rationale, and tradeoffs when their source status remains clear.
 
 ## Archive boundary
 

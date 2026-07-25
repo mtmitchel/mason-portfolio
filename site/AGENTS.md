@@ -14,7 +14,10 @@ application implementation and validation.
 - State Mason's role in normal prose.
 - Keep source handling, claim limits, and publication notes out of public copy.
 - The current case order and section order live in
-  [`../private-evidence/deepl-portfolio-current-direction.md`](../private-evidence/deepl-portfolio-current-direction.md).
+  [`../private-evidence/deepl-portfolio-current-direction.md`](../private-evidence/deepl-portfolio-current-direction.md)
+  as the current candidate. When Mason rejects the story or a reader review
+  fails, use the repository's portfolio and narrative-writing route and reopen
+  the structure.
 
 ## Current implementation
 
@@ -75,6 +78,31 @@ node --test tests/rendered-html.test.mjs
 
 Use browser inspection for behavior that static checks cannot prove. Do not
 create screenshots or recordings unless Mason asks for them.
+
+## Narrative and visual acceptance
+
+Before treating a case as editorially complete, a first-time hiring reader
+should be able to answer:
+
+- What problem or change created pressure?
+- What did Mason contribute, decide, or make clearer?
+- Why did the important decisions follow from the problem?
+- What does each selected artifact add to the story?
+- What changed, or what does the work demonstrate by the end?
+
+Every section must change the reader's understanding. Let the narrative
+determine layout, media scale, comparison treatment, and pacing; do not preserve
+a section because a component, owner document, or existing test expects it.
+Review the rendered page as a complete reading experience before or alongside
+mechanical checks.
+
+Automated tests may protect routes, privacy boundaries, asset integrity,
+accessibility contracts, exact quotations from interfaces, and narrow
+prohibitions on known false claims. They must not require a chapter count or
+order, paragraph count, word or sentence limit, number of first-person
+statements, exact portfolio prose, or generic strategy vocabulary. Passing
+tests proves conformance, not narrative or design quality. Explicit user
+rejection reopens both.
 
 ## Completion
 

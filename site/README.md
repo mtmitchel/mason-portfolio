@@ -27,8 +27,8 @@ live application.
 - `app/work/portfolioTypes.ts` — shared image, video, card, switcher, and
   writing-sample types
 - `public/work/` — selected public evidence and homepage media
-- `tests/rendered-html.test.mjs` — route, copy, asset, claim, and accessibility
-  checks
+- `tests/rendered-html.test.mjs` — route, asset, narrow claim-safety, and
+  accessibility checks
 
 The site is intentionally static. It has no database, authentication, Tailwind,
 or external runtime state.
@@ -61,6 +61,9 @@ declared.
 - Use literal project titles and direct prose.
 - Keep each important claim beside the image or excerpt that supports it.
 - Let each case use the story shape its evidence needs.
+- Make the reader understand the pressure, Mason's judgment and contribution,
+  the meaningful decisions, and the change by the end. Do not treat an
+  inventory of screens and copy rules as a complete story.
 - Keep homepage cards at their natural media height. The localization-report
   card must show the complete `978 × 1369` cover and must never crop it.
 - Keep the three homepage loops silent, visibility-aware, and safe for reduced
@@ -69,6 +72,10 @@ declared.
   disclaimers.
 - Use `ImageComparison` only for two real states.
 - Preserve the accessible Checkout and pricing switchers.
+
+Automated checks must not freeze case-study chapter order, paragraph count,
+sentence length, exact editorial prose, or generic strategic vocabulary.
+Passing checks does not establish that the narrative or visual pacing works.
 
 ## Evidence
 
