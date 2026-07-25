@@ -1,43 +1,27 @@
 import Link from "next/link";
-import type { CSSProperties } from "react";
 import EvidenceSwitcher from "../../components/EvidenceSwitcher";
 import ImageComparison from "../../components/ImageComparison";
 import ImageLightbox from "../../components/ImageLightbox";
 import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
-import type { StoryEvidenceView } from "../portfolioTypes";
-
-type PricingImage = {
-  alt: string;
-  caption: string;
-  /** Rendered CSS max-width in px (typically half the 2x source width). */
-  displayWidth?: number;
-  height: number;
-  src: string;
-  width: number;
-};
+import type { StoryEvidenceView, StoryImage } from "../portfolioTypes";
 
 type PricingBlock =
   | { kind: "prose"; paragraphs: string[] }
-  | { kind: "figure"; image: PricingImage }
-  | {
-      kind: "comparison";
-      before: PricingImage;
-      after: PricingImage;
-      beforeTag: string;
-      afterTag: string;
-      note?: string;
-    }
-  | { kind: "strip"; label: string; items: PricingImage[] }
-  | {
-      kind: "stack";
-      ariaLabel: string;
-      items: Array<{ image: PricingImage; label: string }>;
-    }
+  | { kind: "figure"; image: StoryImage }
   | {
       kind: "switcher";
       ariaLabel: string;
       initialId?: string;
+      showCaption?: boolean;
+      showDialogCaption?: boolean;
       views: StoryEvidenceView[];
+    }
+  | {
+      kind: "comparison";
+      layout?: "stacked";
+      ariaLabel: string;
+      before: { tag: string; image: StoryImage };
+      after: { tag: string; image: StoryImage };
     };
 
 type PricingSection = {
@@ -47,7 +31,6 @@ type PricingSection = {
 };
 
 export type PricingCaseStory = {
-  context: string;
   title: string;
   synopsis: string[];
   chapters: PricingSection[];
@@ -55,71 +38,8 @@ export type PricingCaseStory = {
     heading: string;
     paragraphs: string[];
   };
-  coda: {
-    prefix: string;
-    href: string;
-    linkLabel: string;
-    suffix?: string;
-  };
   next: { href: string; label: string };
 };
-
-/** Preview fetch hint matching the chapter media column (1120px max). */
-const chapterImageSizes = "(max-width: 1160px) 100vw, 1120px";
-
-function imageStyle(image: PricingImage): CSSProperties | undefined {
-  if (!image.displayWidth) return undefined;
-  return { ["--chapter-img-max" as string]: `${image.displayWidth}px` };
-}
-
-function PricingFigure({
-  image,
-  showCaption = true,
-}: {
-  image: PricingImage;
-  showCaption?: boolean;
-}) {
-  return (
-    <div className="chapter-figure" style={imageStyle(image)}>
-      <ImageLightbox
-        chrome="image"
-        label={image.alt}
-        previewSrc={image.src}
-        width={image.width}
-        height={image.height}
-        alt={image.alt}
-        caption={image.caption}
-        showCaption={showCaption && Boolean(image.caption)}
-        sizes={chapterImageSizes}
-      />
-    </div>
-  );
-}
-
-function PricingLabeledFigure({
-  image,
-  label,
-}: {
-  image: PricingImage;
-  label: string;
-}) {
-  return (
-    <div className="chapter-figure" style={imageStyle(image)}>
-      <p className="chapter-strip-label">{label}</p>
-      <ImageLightbox
-        chrome="image"
-        label={image.alt}
-        previewSrc={image.src}
-        width={image.width}
-        height={image.height}
-        alt={image.alt}
-        caption={image.caption}
-        showCaption={Boolean(image.caption)}
-        sizes={chapterImageSizes}
-      />
-    </div>
-  );
-}
 
 function PricingBlockView({ block }: { block: PricingBlock }) {
   if (block.kind === "prose") {
@@ -135,32 +55,17 @@ function PricingBlockView({ block }: { block: PricingBlock }) {
   if (block.kind === "figure") {
     return (
       <div className="chapter-media">
-        <PricingFigure image={block.image} />
-      </div>
-    );
-  }
-
-  if (block.kind === "strip") {
-    return (
-      <div className="chapter-media">
-        <div className="chapter-strip" role="group" aria-label={block.label}>
-          <p className="chapter-strip-label">{block.label}</p>
-          {block.items.map((image) => (
-            <PricingFigure key={image.src} image={image} />
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  if (block.kind === "stack") {
-    return (
-      <div className="chapter-media">
-        <div className="chapter-strip" role="group" aria-label={block.ariaLabel}>
-          {block.items.map((item) => (
-            <PricingLabeledFigure image={item.image} key={item.label} label={item.label} />
-          ))}
-        </div>
+        <ImageLightbox
+          alt={block.image.alt}
+          caption={block.image.caption}
+          chrome="overlay"
+          dialogPresentation="minimal"
+          height={block.image.height}
+          label={block.image.label}
+          previewSrc={block.image.src}
+          sizes="(max-width: 1160px) 100vw, 1120px"
+          width={block.image.width}
+        />
       </div>
     );
   }
@@ -170,7 +75,11 @@ function PricingBlockView({ block }: { block: PricingBlock }) {
       <div className="chapter-media">
         <EvidenceSwitcher
           ariaLabel={block.ariaLabel}
+          dialogPresentation="minimal"
           initialId={block.initialId}
+          presentation="quiet"
+          showCaption={block.showCaption}
+          showDialogCaption={block.showDialogCaption}
           views={block.views}
         />
       </div>
@@ -178,22 +87,22 @@ function PricingBlockView({ block }: { block: PricingBlock }) {
   }
 
   if (block.kind === "comparison") {
+    const mediaClassName =
+      block.layout === "stacked"
+        ? "chapter-media chapter-media--comparison-stacked"
+        : "chapter-media";
+
     return (
-      <div className="chapter-media">
+      <div className={mediaClassName}>
         <ImageComparison
-          ariaLabel={`${block.beforeTag} compared with ${block.afterTag}`}
+          ariaLabel={block.ariaLabel}
+          chrome="overlay"
+          dialogPresentation="minimal"
           items={[
-            {
-              label: block.beforeTag,
-              image: { ...block.before, label: block.beforeTag },
-            },
-            {
-              label: block.afterTag,
-              image: { ...block.after, label: block.afterTag },
-            },
+            { label: block.before.tag, image: block.before.image },
+            { label: block.after.tag, image: block.after.image },
           ]}
         />
-        {block.note && <p className="chapter-caption">{block.note}</p>}
       </div>
     );
   }
@@ -205,11 +114,15 @@ export default function PricingCase({ story }: { story: PricingCaseStory }) {
   return (
     <main className="site-shell case-shell">
       <SiteHeader />
-      <article className="chapter-page">
-        <Link className="back-link" href="/">Back to selected work</Link>
+      <article className="chapter-page pricing-page">
+        <Link className="back-link" href="/">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+            <path d="M20 12H5m6-6-6 6 6 6" />
+          </svg>
+          <span>Back</span>
+        </Link>
 
         <header className="chapter-hero">
-          <p className="chapter-context">{story.context}</p>
           <h1>{story.title}</h1>
           <div className="chapter-synopsis">
             {story.synopsis.map((paragraph) => (
@@ -238,14 +151,6 @@ export default function PricingCase({ story }: { story: PricingCaseStory }) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-        </section>
-
-        <section className="story-coda">
-          <p>
-            {story.coda.prefix}
-            <a href={story.coda.href}>{story.coda.linkLabel}</a>
-            {story.coda.suffix}
-          </p>
         </section>
 
         <nav className="next-project" aria-label="Next project">

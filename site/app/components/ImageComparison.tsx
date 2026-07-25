@@ -10,10 +10,22 @@ type ComparisonItem = {
 
 type ImageComparisonProps = {
   ariaLabel: string;
+  /** "image" shows only the preview; "overlay" adds the expand indicator. */
+  chrome?: "image" | "overlay";
+  dialogPresentation?: "default" | "minimal";
   items: [ComparisonItem, ComparisonItem];
+  showCaptions?: boolean;
+  showDialogCaptions?: boolean;
 };
 
-export default function ImageComparison({ ariaLabel, items }: ImageComparisonProps) {
+export default function ImageComparison({
+  ariaLabel,
+  chrome = "image",
+  dialogPresentation = "default",
+  items,
+  showCaptions = true,
+  showDialogCaptions = true,
+}: ImageComparisonProps) {
   return (
     <div className="story-comparison" role="group" aria-label={ariaLabel}>
       {items.map(({ image, label, previewClassName, tallDialog }) => (
@@ -22,11 +34,14 @@ export default function ImageComparison({ ariaLabel, items }: ImageComparisonPro
           <ImageLightbox
             alt={image.alt}
             caption={image.caption}
-            chrome="image"
+            chrome={chrome}
+            dialogPresentation={dialogPresentation}
             height={image.height}
             label={image.label}
             previewClassName={previewClassName}
             previewSrc={image.src}
+            showCaption={showCaptions}
+            showDialogCaption={showDialogCaptions}
             tallDialog={tallDialog}
             width={image.width}
           />

@@ -12,6 +12,9 @@ check the portfolio. Nothing here is cleared for public release by default.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visuals and their private sources, crops, dimensions, captions,
   alternative text, and permission state.
+- [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) — build
+  spec for the pricing case: chapter order, final published copy, evidence
+  selection, crop geometry, and the claim behind each sentence.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — bidirectional
   achievement-to-Figma crosswalk.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)

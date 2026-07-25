@@ -7,13 +7,21 @@ import ImageLightbox from "./ImageLightbox";
 
 type EvidenceSwitcherProps = {
   ariaLabel: string;
+  dialogPresentation?: "default" | "minimal";
   initialId?: string;
+  presentation?: "default" | "quiet";
+  showCaption?: boolean;
+  showDialogCaption?: boolean;
   views: StoryEvidenceView[];
 };
 
 export default function EvidenceSwitcher({
   ariaLabel,
+  dialogPresentation = "default",
   initialId,
+  presentation = "default",
+  showCaption = true,
+  showDialogCaption = true,
   views,
 }: EvidenceSwitcherProps) {
   const initialIndex = Math.max(0, views.findIndex((view) => view.id === initialId));
@@ -40,7 +48,7 @@ export default function EvidenceSwitcher({
   };
 
   return (
-    <div className="evidence-switcher">
+    <div className={`evidence-switcher${presentation === "quiet" ? " evidence-switcher--quiet" : ""}`}>
       <div className="evidence-switcher-tabs" role="tablist" aria-label={ariaLabel}>
         {views.map((view, index) => {
           const selected = index === activeIndex;
@@ -79,14 +87,18 @@ export default function EvidenceSwitcher({
           >
             {selected && (
               <>
-                <p className="evidence-switcher-summary">{view.summary}</p>
+                {view.summary ? <p className="evidence-switcher-summary">{view.summary}</p> : null}
                 <ImageLightbox
+                  chrome={presentation === "quiet" ? "overlay" : "full"}
                   label={view.image.label}
                   previewSrc={view.image.src}
                   width={view.image.width}
                   height={view.image.height}
                   alt={view.image.alt}
                   caption={view.image.caption}
+                  dialogPresentation={dialogPresentation}
+                  showCaption={showCaption}
+                  showDialogCaption={showDialogCaption}
                   sizes="(max-width: 820px) calc(100vw - 32px), 1120px"
                 />
               </>

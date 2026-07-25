@@ -73,18 +73,6 @@ const selectedAssets = [
   ["work/upgrade-prompts/glossaries.png", 1092, 1388],
   ["work/upgrade-prompts/write-free-account-detail.png", 1520, 800],
   ["work/upgrade-prompts/write-translator-pro-account-detail.png", 1520, 800],
-  ["work/pricing-evolution/pricing-bundle-tabs.png", 3840, 2826],
-  ["work/pricing-evolution/pricing-write-pro.png", 2482, 1233],
-  ["work/pricing-evolution/pricing-bundle-era-grid.png", 3024, 3300],
-  ["work/pricing-evolution/pricing-translator-transition-grid.png", 3024, 2790],
-  ["work/pricing-evolution/detail-table-before.png", 2864, 1335],
-  ["work/pricing-evolution/detail-table-after.png", 2864, 1335],
-  ["work/pricing-evolution/detail-bundle-repetition.png", 2080, 465],
-  ["work/pricing-evolution/detail-cumulative-pair.png", 1480, 1415],
-  ["work/pricing-evolution/pricing-translator-cumulative.png", 3024, 2392],
-  ["work/pricing-evolution/pricing-write-addon-clean.png", 3024, 2208],
-  ["work/pricing-evolution/pricing-voice-clean.png", 3024, 2654],
-  ["work/pricing-evolution/pricing-api-clean.png", 3024, 2776],
   ["work/checkout/trial-sign-up-detail.png", 1200, 1220],
   ["work/checkout/bundle-checkout-detail.png", 2500, 1500],
   ["work/checkout/team-purchase-detail.png", 2500, 1500],
@@ -110,6 +98,95 @@ const selectedAssets = [
   ["work/home-covers/account-security-cards-loop-poster.png", 1280, 1280],
   ["work/home-covers/localyze-passport-loop-poster.png", 1280, 1280],
 ];
+
+const pricingChapterIds = [
+  "one-product",
+  "three-routes",
+  "card-problems",
+  "addon-control",
+  "cumulative-tiers",
+  "table-labels",
+  "product-patterns",
+];
+
+const pricingChapterTitles = [
+  "When there was one product to buy",
+  "A second paid product opened three ways to buy",
+  "Two problems inside every bundle card",
+  "Put the add-on choice on the Translator page",
+  "Replace repetition with progression",
+  "Move qualifiers into row labels",
+  "Three products the ladder did not fit",
+];
+
+const pricingCurrentFiles = [
+  "legacy-two-tab-grid.png",
+  "bundle-era-selector-in-context.png",
+  "bundle-era-translator-grid.png",
+  "bundle-era-write-grid.png",
+  "bundle-era-repeated-write-block.png",
+  "bundle-era-limits-in-sentences.png",
+  "addon-on-cards.png",
+  "addon-off-cards.png",
+  "cards-bundle-repeated.png",
+  "cards-cumulative-tiers.png",
+  "table-values-repeat-label.png",
+  "table-labels-own-qualifier.png",
+  "product-write-cards.png",
+  "product-voice-cards.png",
+  "product-api-cards.png",
+];
+
+const pricingRetiredPublicFiles = [
+  "pro-page-2023.png",
+  "bundle-era-tab-selector.png",
+  "product-translator.png",
+  "product-write.png",
+  "product-voice.png",
+  "product-api.png",
+  "detail-bundle-repetition.png",
+  "detail-cumulative-pair.png",
+  "detail-table-before.png",
+  "detail-table-after.png",
+  "pricing-bundle-tabs.png",
+  "pricing-bundle-era-grid.png",
+  "pricing-translator-transition-grid.png",
+  "pricing-translator-cumulative.png",
+  "pricing-write-addon-clean.png",
+  "pricing-voice-clean.png",
+  "pricing-api-clean.png",
+  "pricing-write-pro.png",
+  "detail-table-before-viewer.png",
+  "detail-table-after-viewer.png",
+  "detail-bundle-repetition-viewer.png",
+  "detail-cumulative-pair-viewer.png",
+  "pricing-bundle-era-grid-viewer.png",
+  "pricing-translator-transition-grid-viewer.png",
+  "pricing-write-addon-clean-viewer.png",
+  "pricing-voice-clean-viewer.png",
+  "pricing-api-clean-viewer.png",
+  "pricing-bundle-tabs-viewer.png",
+  "pricing-write-pro-viewer.png",
+];
+
+function stripTags(html) {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function chapterProseHtml(html, id) {
+  const sectionMatch = html.match(
+    new RegExp(`<section class="chapter-section" id="${escapeRegExp(id)}">([\\s\\S]*?)</section>`),
+  );
+  assert.ok(sectionMatch, `chapter ${id} should render as a chapter-section`);
+  const proseMatch = sectionMatch[1].match(/<div class="chapter-prose">([\s\S]*?)<\/div>/);
+  assert.ok(proseMatch, `chapter ${id} should contain chapter-prose`);
+  return proseMatch[1];
+}
+
+function pricingAssetsFromData(data) {
+  return [...data.matchAll(/src:\s*"(\/work\/pricing-evolution\/[^"]+)"[\s\S]*?width:\s*(\d+)[\s\S]*?height:\s*(\d+)/g)]
+    .map(([, src, width, height]) => [src.replace(/^\//, ""), Number(width), Number(height)]);
+}
 
 const exactQuotes = [
   "We didn't choose to refashion our platform simply because we thought it needed a new look or wanted to strengthen our position in the marketplace.",
@@ -164,7 +241,15 @@ for (const [pathname, title] of selectedRoutes) {
   test(`${pathname} uses the same title as its homepage card`, async () => {
     const html = await htmlFor(pathname);
     assert.match(html, new RegExp(`<h1>${escapeRegExp(title)}</h1>`));
-    assert.match(html, /Back to selected work/);
+    if (pathname === "/work/pricing-evolution") {
+      assert.match(
+        html,
+        /<a(?=[^>]*href="\/")(?=[^>]*class="back-link")[^>]*><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"><\/path><\/svg><span>Back<\/span><\/a>/,
+      );
+      assert.doesNotMatch(html, /Back to selected work/);
+    } else {
+      assert.match(html, /Back to selected work/);
+    }
     assert.doesNotMatch(html, /noindex/);
   });
 }
@@ -214,35 +299,208 @@ test("upgrade prompts follow the approved evidence-led order and scope the resul
   assert.doesNotMatch(html, /network-usage-limit|\{5\}|\{1\}|\{16\}|Upgrade to Pro<\/p>[\s\S]*Before/);
 });
 
-test("pricing follows its six-part story and exposes four complete product states", async () => {
+test("pricing chapters keep the initial condition before the complication", async () => {
   const html = await htmlFor("/work/pricing-evolution");
+  assert.equal((html.match(/class="chapter-section"/g) ?? []).length, 7);
   assertOrder(html, [
-    "A tabbed pricing page plus a separate Write offer",
-    "Put the add-on choice on the Translator page",
-    "Move qualifiers into labels",
-    "Replace repetition with progression",
-    "Give each product its own offer pattern",
+    ...pricingChapterTitles,
     "One page per product, one job for each line",
-  ], "pricing sections");
-  for (const label of ["Write Pro added", "Translator only", "Repeated in every bundle", "Each tier states its addition"]) {
-    assert.match(html, new RegExp(escapeRegExp(label)));
+  ], "pricing chapter order");
+
+  // Initial-condition-before-complication: one-product must precede three-routes,
+  // and three-routes must precede every later chapter section.
+  const oneProduct = html.indexOf('id="one-product"');
+  const threeRoutes = html.indexOf('id="three-routes"');
+  assert.ok(oneProduct > -1 && oneProduct < threeRoutes, "one-product should precede three-routes");
+  for (const id of pricingChapterIds.slice(2)) {
+    assert.ok(threeRoutes < html.indexOf(`id="${id}"`), `three-routes should precede ${id}`);
   }
-  for (const asset of [
-    "pricing-bundle-tabs.png",
-    "pricing-write-pro.png",
-    "pricing-bundle-era-grid.png",
-    "pricing-translator-transition-grid.png",
-    "detail-table-before.png",
-    "detail-table-after.png",
-    "detail-bundle-repetition.png",
-    "detail-cumulative-pair.png",
-  ]) assert.match(html, new RegExp(escapeRegExp(asset)));
-  assert.match(html, /role="tablist"/);
-  for (const label of ["Translator", "Write", "Voice", "API"]) assert.match(html, new RegExp(`>${label}<`));
-  assert.match(html, /discounts sit beside prices/);
-  assert.match(html, /actions sit beside the commitment/);
-  assert.doesNotMatch(html, /pricing-2023-pro-page|detail-wordy-bullets|detail-price-block|detail-toggle|pricing-bundle-era-table|pricing-translator-transition-table/);
-  assert.doesNotMatch(html, /12%|ARR|six-figure|conversion/);
+});
+
+test("pricing chapter prose stays substantial enough to explain each turn", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  for (const id of pricingChapterIds) {
+    const prose = chapterProseHtml(html, id);
+    assert.ok((prose.match(/<p>/g) ?? []).length >= 2, `${id} should contain at least two paragraphs`);
+    const words = stripTags(prose).split(/\s+/).filter(Boolean);
+    assert.ok(words.length >= 90, `${id} prose should be at least 90 words (got ${words.length})`);
+  }
+});
+
+test("pricing contribution is explicit in first person", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  const firstPerson = /\bI\s+[a-z]/;
+  const chaptersWithContribution = pricingChapterIds.filter((id) => firstPerson.test(stripTags(chapterProseHtml(html, id))));
+  assert.ok(
+    chaptersWithContribution.length >= 3,
+    `at least three chapters should contain a first-person statement (found ${chaptersWithContribution.length})`,
+  );
+
+  const synopsis = html.match(/<div class="chapter-synopsis">([\s\S]*?)<\/div>/)?.[1] ?? "";
+  assert.match(stripTags(synopsis), firstPerson, "synopsis should contain a first-person statement");
+});
+
+test("pricing evidence uses one unique crop per instance", async () => {
+  const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
+  assert.doesNotMatch(data, /fullSrc|fullWidth|fullHeight/);
+
+  const srcs = [...data.matchAll(/src:\s*"([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(
+    new Set(srcs).size,
+    srcs.length,
+    `each src value should appear only once (found ${srcs.length} entries, ${new Set(srcs).size} unique)`,
+  );
+  for (const src of srcs) {
+    assert.ok(!src.includes("?"), `${src} should not carry a query string`);
+  }
+});
+
+test("pricing paired evidence shares equivalent crop scope", async () => {
+  const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
+  const pricing = manifest.assets.find((asset) => asset.id === "DEEPL-PRICING-EVOLUTION");
+  assert.ok(pricing, "DEEPL-PRICING-EVOLUTION should be recorded");
+  const byPath = Object.fromEntries((pricing.files ?? []).map((file) => [file.path, file]));
+
+  for (const path of ["cards-bundle-repeated.png", "cards-cumulative-tiers.png"]) {
+    assert.equal(byPath[path]?.crop_scope, "plan-card-row", `${path} should use plan-card-row`);
+  }
+
+  for (const path of ["addon-on-cards.png", "addon-off-cards.png"]) {
+    assert.equal(byPath[path]?.crop_scope, "addon-state", `${path} should use addon-state`);
+  }
+  assert.equal(
+    byPath["addon-on-cards.png"].dimensions.split("x")[0],
+    byPath["addon-off-cards.png"].dimensions.split("x")[0],
+    "addon states should share width 2832",
+  );
+  assert.equal(byPath["addon-on-cards.png"].dimensions.split("x")[0], "2832");
+
+  for (const path of ["table-values-repeat-label.png", "table-labels-own-qualifier.png"]) {
+    assert.equal(byPath[path]?.crop_scope, "table-section", `${path} should use table-section`);
+  }
+  assert.equal(
+    byPath["table-values-repeat-label.png"].dimensions,
+    byPath["table-labels-own-qualifier.png"].dimensions,
+    "table sections should share identical dimensions",
+  );
+  assert.equal(byPath["table-values-repeat-label.png"].dimensions, "2768x1167");
+
+  for (const path of ["bundle-era-repeated-write-block.png", "bundle-era-limits-in-sentences.png"]) {
+    assert.equal(byPath[path]?.crop_scope, "feature-group-row", `${path} should use feature-group-row`);
+  }
+  assert.equal(
+    byPath["bundle-era-repeated-write-block.png"].dimensions.split("x")[0],
+    byPath["bundle-era-limits-in-sentences.png"].dimensions.split("x")[0],
+    "feature-group rows should share width 2048",
+  );
+  assert.equal(byPath["bundle-era-repeated-write-block.png"].dimensions.split("x")[0], "2048");
+
+  for (const path of ["bundle-era-translator-grid.png", "bundle-era-write-grid.png"]) {
+    assert.equal(byPath[path]?.crop_scope, "plan-grid", `${path} should use plan-grid`);
+  }
+
+  const productRows = (pricing.files ?? []).filter((file) => file.crop_scope === "product-card-row");
+  assert.equal(productRows.length, 3);
+  assert.deepEqual(
+    productRows.map((file) => file.path).sort(),
+    ["product-api-cards.png", "product-voice-cards.png", "product-write-cards.png"],
+  );
+  assert.equal(byPath["product-write-cards.png"].dimensions.split("x")[0], "2244");
+  assert.equal(byPath["product-api-cards.png"].dimensions.split("x")[0], "2244");
+  assert.equal(
+    byPath["product-voice-cards.png"].dimensions.split("x")[0],
+    "1790",
+    "Voice is intentionally narrower because it has two cards, not three",
+  );
+});
+
+test("pricing cumulative comparison names every tier", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  // vinext may rewrite src; take the alt from the img that references the cumulative file.
+  const img = html.match(/<img\b[^>]*cards-cumulative-tiers\.png[^>]*>/)?.[0] ?? "";
+  const alt = img.match(/\balt="([^"]+)"/)?.[1] ?? "";
+  assert.ok(alt, "cards-cumulative-tiers.png should expose alternative text");
+  for (const tier of ["Starter", "Advanced", "Ultimate", "Enterprise"]) {
+    assert.match(alt, new RegExp(escapeRegExp(tier)), `cumulative alt should name ${tier}`);
+  }
+});
+
+test("pricing presentation counts stay complete", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
+  // Measured against revision 2: five quiet switchers (2+2+2+2+3 tabs),
+  // one stacked comparison with two items, two standalone figures,
+  // nine expand indicators. Switchers SSR only the active view, so the
+  // fifteen-image inventory is asserted from case data rather than HTML.
+  assert.equal((html.match(/class="chapter-section"/g) ?? []).length, 7);
+  assert.equal((html.match(/class="evidence-switcher evidence-switcher--quiet">/g) ?? []).length, 5);
+  assert.equal((html.match(/role="tab"/g) ?? []).length, 11);
+  assert.equal((html.match(/class="story-comparison"/g) ?? []).length, 1);
+  assert.equal((html.match(/class="story-comparison-item"/g) ?? []).length, 2);
+  assert.equal((html.match(/class="evidence-expand-indicator" aria-hidden="true"/g) ?? []).length, 9);
+
+  const dataSrcs = [...data.matchAll(/src:\s*"(\/work\/pricing-evolution\/[^"]+)"/g)].map((match) => match[1]);
+  assert.equal(dataSrcs.length, 15, "pricing case data should declare fifteen images");
+  assert.equal(new Set(dataSrcs).size, 15, "every pricing image src should be unique");
+  for (const src of dataSrcs) {
+    assert.ok(!src.includes("?"), `${src} should not carry a query string`);
+  }
+  assert.doesNotMatch(data, /fullSrc/);
+  assert.equal(
+    (data.match(/bundle-era-translator-grid\.png/g) ?? []).length,
+    1,
+    "bundle-era-translator-grid.png should appear exactly once",
+  );
+  assert.equal(
+    (data.match(/cards-cumulative-tiers\.png/g) ?? []).length,
+    1,
+    "cards-cumulative-tiers.png should appear exactly once",
+  );
+
+  // Two standalone figures: chapter 1 and chapter 2, outside switchers/comparisons.
+  assert.match(html, /legacy-two-tab-grid\.png/);
+  assert.match(html, /bundle-era-selector-in-context\.png/);
+});
+
+test("pricing page carries no business-outcome metric", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  // Product labels such as "Save 20%" are offer content, not performance claims, and are allowed.
+  assert.doesNotMatch(html, /12%/);
+  assert.doesNotMatch(html, /\bARR\b/);
+  assert.doesNotMatch(html, /six-figure/);
+  assert.doesNotMatch(html, /seven-figure/);
+  assert.doesNotMatch(html, /\bpaid conversion\b/i);
+});
+
+test("pricing page references no retired assets", async () => {
+  const html = await htmlFor("/work/pricing-evolution");
+  assert.doesNotMatch(html, /-viewer\.png/);
+  for (const name of [
+    "pro-page-2023",
+    "bundle-era-tab-selector",
+    "product-translator",
+    "product-write.png",
+    "product-voice.png",
+    "product-api.png",
+    "detail-bundle-repetition",
+    "detail-cumulative-pair",
+    "detail-table-before",
+    "detail-table-after",
+    "pricing-bundle-tabs",
+    "pricing-bundle-era-grid",
+    "pricing-translator-transition-grid",
+    "pricing-translator-cumulative",
+    "pricing-write-addon-clean",
+    "pricing-voice-clean",
+    "pricing-api-clean",
+    "pricing-write-pro",
+    "pricing-2023-pro-page",
+    "detail-toggle",
+    "detail-price-block",
+    "detail-wordy-bullets",
+  ]) {
+    assert.doesNotMatch(html, new RegExp(escapeRegExp(name)));
+  }
 });
 
 test("checkout leads with four focused states and keeps the accessible full-frame switcher", async () => {
@@ -263,6 +521,9 @@ test("checkout leads with four focused states and keeps the accessible full-fram
   ]) assert.match(html, new RegExp(escapeRegExp(asset)));
   assert.match(html, /role="tablist"/);
   assert.equal((html.match(/role="tab"/g) ?? []).length, 4);
+  assert.match(html, /class="evidence-label"/);
+  assert.match(html, /class="evidence-action"/);
+  assert.doesNotMatch(html, /evidence-switcher--quiet|evidence-expand-indicator/);
   for (const label of ["Bundle", "Trial sign-up", "Team", "No trial"]) assert.match(html, new RegExp(`>${label}<`));
   assert.match(html, /€0 due today/);
   assert.doesNotMatch(html, /3\.02%|€2\.4M|100 purchases|conversion/);
@@ -369,8 +630,12 @@ test("selected public pages contain no private audit language or fake transforma
 });
 
 test("selected assets retain their declared dimensions and unique contents", async () => {
+  const pricingData = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
+  const pricingAssets = pricingAssetsFromData(pricingData);
+  assert.equal(pricingAssets.length, 15, "pricing case should declare fifteen images");
+
   const hashes = new Set();
-  for (const [asset, width, height] of selectedAssets) {
+  for (const [asset, width, height] of [...selectedAssets, ...pricingAssets]) {
     const buffer = await readFile(new URL(asset, publicRoot));
     assert.deepEqual(pngDimensions(buffer), { width, height }, `${asset} dimensions should match`);
     const hash = createHash("sha256").update(buffer).digest("hex");
@@ -382,7 +647,7 @@ test("selected assets retain their declared dimensions and unique contents", asy
 test("the private manifest records every new crop and the corrected report cover", async () => {
   const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
   assert.equal(manifest.version, "2.0");
-  assert.equal(manifest.updated, "2026-07-24");
+  assert.equal(manifest.updated, "2026-07-25");
   const files = manifest.assets.flatMap((asset) => asset.files ?? []);
   const cropPaths = [
     "upgrade-prompts/write-free-account-detail.png",
@@ -404,6 +669,21 @@ test("the private manifest records every new crop and the corrected report cover
     for (const field of ["public_path", "source_path", "crop", "dimensions", "caption", "text_alternative", "sha256"]) {
       assert.equal(typeof file[field], "string", `${path}.${field} should be recorded`);
       assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
+    }
+  }
+  for (const path of pricingCurrentFiles) {
+    const file = files.find((candidate) => candidate.path === path);
+    assert.ok(file, `${path} should be recorded`);
+    for (const field of ["public_path", "source_path", "crop_notes", "crop_scope", "dimensions", "sha256"]) {
+      assert.equal(typeof file[field], "string", `${path}.${field} should be recorded`);
+      assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
+    }
+    // 24px ceiling at 2x is the dead-space budget.
+    assert.equal(typeof file.trim_margin, "object", `${path}.trim_margin should be recorded`);
+    assert.ok(file.trim_margin, `${path}.trim_margin should not be empty`);
+    for (const edge of ["left", "top", "right", "bottom"]) {
+      assert.equal(typeof file.trim_margin[edge], "number", `${path}.trim_margin.${edge} should be a number`);
+      assert.ok(file.trim_margin[edge] <= 24, `${path}.trim_margin.${edge} should be at most 24`);
     }
   }
   const reportCover = files.find((file) => file.path === "report-campaign/report-cover.png");
@@ -441,6 +721,7 @@ test("retired templates, universal case data and cut public assets are absent", 
     "work/pricing-evolution/detail-toggle-off.png",
     "work/pricing-evolution/detail-price-block.png",
     "work/pricing-evolution/detail-wordy-bullets.png",
+    ...pricingRetiredPublicFiles.map((name) => `work/pricing-evolution/${name}`),
     "work/localization-report/recommendations.png",
     "work/report-campaign/hubspot-case-study.png",
     "work/report-campaign/phrase-case-study.png",
@@ -466,7 +747,62 @@ test("layout stays row-major, responsive and naturally sized", async () => {
   assert.doesNotMatch(css, /object-fit\s*:\s*cover|aspect-ratio|translateY\s*\(/);
   assert.match(css, /\.project-entry-image--full-document img\s*\{[^}]*height:\s*auto !important;[^}]*object-fit:\s*contain;/s);
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
-  assert.match(css, /\.project-entry-heading p\s*\{[^}]*font-size:\s*16px;/s);
+  assert.match(css, /\.project-entry-heading p\s*\{[^}]*font-size:\s*18px;/s);
+  assert.match(css, /\.site-header nav a\s*\{[^}]*font-size:\s*20px;/s);
+  assert.match(
+    css,
+    /\.chapter-page > \.back-link\s*\{[^}]*font-size:\s*20px;[^}]*text-decoration:\s*none;/s,
+  );
+  assert.match(
+    css,
+    /\.chapter-page > \.back-link > svg\s*\{[^}]*width:\s*26px;[^}]*height:\s*26px;[^}]*stroke:\s*currentColor;[^}]*stroke-width:\s*1\.5;/s,
+  );
+  assert.match(
+    css,
+    /\.chapter-hero \+ \.chapter-section \.chapter-heading\s*\{[^}]*margin-top:\s*88px;/s,
+  );
+  assert.match(
+    css,
+    /@media \(max-width: 720px\)[\s\S]*\.chapter-hero \+ \.chapter-section \.chapter-heading\s*\{[^}]*margin-top:\s*72px;/s,
+  );
+  assert.match(css, /\.evidence-switcher--quiet\s*\{[^}]*border-top:\s*0;/s);
+  assert.match(
+    css,
+    /\.evidence-switcher--quiet \.evidence-switcher-tabs\s*\{[^}]*border-bottom:\s*0;/s,
+  );
+  assert.match(
+    css,
+    /\.evidence-expand-indicator\s*\{[^}]*width:\s*32px;[^}]*height:\s*32px;[^}]*pointer-events:\s*none;/s,
+  );
+  assert.match(
+    css,
+    /\.pricing-page \.evidence-preview(?:,\s*\.pricing-page \.story-comparison-item \.evidence-preview)?\s*\{[^}]*padding:\s*([1-9]\d*)px;[^}]*overflow:\s*hidden;[^}]*background:\s*var\(--surface\);/s,
+  );
+  const pricingPreviewPadding = css.match(
+    /\.pricing-page \.evidence-preview(?:,\s*\.pricing-page \.story-comparison-item \.evidence-preview)?\s*\{[^}]*padding:\s*([1-9]\d*)px;/s,
+  )?.[1];
+  assert.ok(pricingPreviewPadding, "pricing evidence-preview should declare non-zero padding");
+  assert.ok(Number(pricingPreviewPadding) > 0, "pricing evidence-preview padding must be non-zero");
+  assert.match(
+    css,
+    /\.pricing-page \.evidence-preview img\s*\{[^}]*width:\s*100%;[^}]*height:\s*auto;[^}]*max-height:\s*none;/s,
+  );
+  assert.match(
+    css,
+    /\.lightbox-panel--minimal\s*\{[^}]*width:\s*min\(94vw,\s*1320px\);[^}]*padding:\s*16px;[^}]*background:\s*var\(--surface\);/s,
+  );
+  assert.match(
+    css,
+    /\.lightbox-panel--minimal \.lightbox-header\s*\{[^}]*min-height:\s*44px;[^}]*background:\s*var\(--surface\);/s,
+  );
+  assert.match(
+    css,
+    /\.lightbox-panel--minimal \.lightbox-image\s*\{[^}]*padding:\s*0;[^}]*background:\s*var\(--surface\);/s,
+  );
+  assert.match(
+    css,
+    /\.chapter-page \.evidence-switcher--quiet \.evidence-figure figcaption\s*\{[^}]*max-width:\s*740px;[^}]*margin-top:\s*16px;[^}]*text-align:\s*left;/s,
+  );
   assert.match(css, /\.project-card:hover,\s*\.project-card:focus-visible\s*\{[^}]*background:\s*#e5efeb;[^}]*border-color:\s*#9fb9b0;[^}]*color:\s*var\(--accent\);/s);
   assert.match(grid, /sizes="\(max-width: 600px\) 100vw, \(max-width: 820px\) 50vw, 33vw"/);
   assert.match(grid, /project\.imageDisplay === "full-document"/);
@@ -477,6 +813,54 @@ test("layout stays row-major, responsive and naturally sized", async () => {
   assert.match(loopingVideo, /\bloop\b/);
   assert.match(loopingVideo, /\bplaysInline\b/);
   assert.match(chrome, />About<\/Link>/);
+  assert.match(
+    chrome,
+    /href="https:\/\/www\.linkedin\.com\/in\/mtmitchel" target="_blank" rel="noreferrer">\s*LinkedIn\s*<\/a>/,
+  );
+  assert.doesNotMatch(chrome, /Résumé|href="\/mason-cv\.pdf"/);
+});
+
+test("public text never drops below 18px", async () => {
+  const css = await readFile(new URL("app/globals.css", root), "utf8");
+  const declarations = [...css.matchAll(/font-size:\s*([^;]+);/g)].map((match) => match[1].trim());
+
+  assert.ok(declarations.length > 0);
+  for (const value of declarations) {
+    const pixels = value.match(/^(\d+(?:\.\d+)?)px$/);
+    if (pixels) {
+      assert.ok(Number(pixels[1]) >= 18, `${value} is below the 18px minimum`);
+      continue;
+    }
+
+    const rems = value.match(/^(\d+(?:\.\d+)?)rem$/);
+    if (rems) {
+      assert.ok(Number(rems[1]) >= 1.125, `${value} is below the 18px minimum`);
+      continue;
+    }
+
+    const clampMinimum = value.match(/^clamp\(\s*(\d+(?:\.\d+)?)(px|rem)\s*,/);
+    assert.ok(clampMinimum, `${value} does not expose an enforceable minimum`);
+    const minimum = Number(clampMinimum[1]);
+    const minimumInPixels = clampMinimum[2] === "rem" ? minimum * 16 : minimum;
+    assert.ok(minimumInPixels >= 18, `${value} is below the 18px minimum`);
+  }
+});
+
+test("long-form body copy stays at 20px or larger", async () => {
+  const css = await readFile(new URL("app/globals.css", root), "utf8");
+  for (const selector of [
+    "\\.site-identity p",
+    "\\.about p",
+    "\\.story-hook",
+    "\\.story-copy > p",
+    "\\.evidence-switcher-summary",
+    "\\.language-comparison p",
+    "\\.writing-entry-body",
+    "\\.chapter-synopsis p",
+    "\\.chapter-prose > p",
+  ]) {
+    assert.match(css, new RegExp(`${selector}\\s*\\{[^}]*font-size:\\s*20px;`, "s"), selector);
+  }
 });
 
 test("quiet text meets WCAG AA contrast against paper", async () => {
@@ -496,6 +880,9 @@ test("selected evidence retains accessible lightbox behavior", async () => {
     /event\.key !== "Tab"/,
     /document\.body\.style\.overflow = "hidden"/,
     /triggerElement\?\.focus\(\)/,
+    /aria-describedby=\{showDialogCaption \? captionId : undefined\}/,
+    /aria-label=\{minimalDialog \? "Close image viewer" : undefined\}/,
+    /showDialogCaption \? <p id=\{captionId\}>\{caption\}<\/p> : null/,
   ]) assert.match(lightbox, behavior);
 });
 

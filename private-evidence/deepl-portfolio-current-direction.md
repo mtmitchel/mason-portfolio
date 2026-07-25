@@ -64,15 +64,31 @@ belong to the wider experiment wave.
 
 ### Simplifying pricing across four products
 
-1. A tabbed pricing page plus a separate Write offer.
-2. Put the add-on choice on the Translator page.
-3. Move qualifiers into labels.
-4. Replace repetition with progression.
-5. Give each product its own offer pattern.
-6. One page per product, one job for each line.
+1. When there was one product to buy.
+2. A second paid product opened three ways to buy.
+3. Two problems inside every bundle card.
+4. Put the add-on choice on the Translator page.
+5. Replace repetition with progression.
+6. Move qualifiers into row labels.
+7. Three products the ladder did not fit.
+8. One page per product, one job for each line.
 
-The four complete product pages remain available through the accessible
-switcher. The case contains no conversion or revenue claim.
+The case opens on the single-product condition so the complication has
+something to complicate, then names the three buying routes, the content those
+routes produced, the add-on pivot, the cumulative rewrite, the table rewrite,
+and the three products the cumulative ladder did not fit. Repetition to
+progression is the only Before-and-After comparison; every other pair is a
+neutral two-state switcher. Each evidence image is one intentional crop, and
+the dialog opens that same crop. Paired evidence shares a recorded crop scope,
+the cumulative comparison shows every tier in its grid, and the three remaining
+product states use one consistent card-row crop. Translator's grid appears once,
+in the repetition-to-progression comparison, and is deliberately not shown
+again in the final chapter. Every crop is trimmed flush to its own content and
+the page frame supplies the surrounding space, so no image carries baked-in
+padding or dead margin. Chapter copy, captions, alternative text, and
+claim limits are owned by
+[`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md). The case
+contains no conversion or revenue claim.
 
 ### Checkout across four purchase states
 

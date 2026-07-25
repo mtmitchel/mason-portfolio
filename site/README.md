@@ -56,6 +56,8 @@ declared.
 
 - Keep the concise header, selected-work grid, writing route, About copy, and
   footer visually quiet.
+- Keep every piece of public-facing text at 18px or larger at every breakpoint.
+- Keep long-form body copy at 20px or larger with a comfortable reading width.
 - Use literal project titles and direct prose.
 - Keep each important claim beside the image or excerpt that supports it.
 - Let each case use the story shape its evidence needs.
@@ -78,6 +80,12 @@ in
 Source images stay unchanged. Public crops must be truthful, documented, and
 limited to the part of the interface being discussed. Historical screens must
 not be redesigned to look current.
+
+A crop is trimmed flush to its own content and the preview frame supplies the
+surrounding space. Do not bake padding, borders, or margin into an asset to make
+it sit better on the page; change the frame instead. `-trim` is not always
+idempotent, so repeat it until the result stops changing, and record the
+resulting zero margins in the manifest.
 
 ## Publication state
 

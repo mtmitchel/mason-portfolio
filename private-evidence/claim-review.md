@@ -43,7 +43,8 @@ result.
 
 - Include observable differences between the tabbed bundle offer, add-on
   states, shorter comparison values, cumulative tiers, and the four product
-  offer patterns.
+  offer patterns, evidenced for the three products that do not use the
+  cumulative ladder.
 - Use before and after only for the real repetition-to-progression comparison.
 - Do not claim that a specific version shipped, improved conversion, caused
   revenue, or was later adopted.

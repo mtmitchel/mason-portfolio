@@ -85,111 +85,253 @@
       "publication_permission": "unknown",
       "contains_sensitive_data": false,
       "redaction_notes": "The selected product-frame exports contain no private identifiers, comments, tickets, Figma chrome, account avatars or private links. Proposal styling and placeholder values were resolved before export.",
-      "crop_notes": "The public story uses the three-tab bundle page, the separate Write offer, two add-on states, two real comparison pairs and one complete page for each product. The dated capture, unused large grids, full-table crops and small detail crops removed from the story are preserved privately.",
-      "caption": "Captions identify the visible commercial choice and the content-design decision: separate grids and tabs, repeated bundle content, label-once tables, cumulative tiers, parallel Voice offers or detail comparisons.",
-      "text_alternative": "Describe the visible product, plan or add-on choices; whether a toggle is on or off; the plan tiers or parallel offers shown; and the purpose of each complete grid, table or feature module.",
+      "crop_notes": "Every public file is one crop trimmed to its own content, and the image dialog opens that same file; breathing room is supplied by the page frame, never baked into an asset. The story runs from the one-product Translate Pro grid through the three buying routes, the content those routes produced, the add-on pivot, the cumulative card rewrite, the label-once table rewrite, and the three products the cumulative ladder did not fit.",
+      "caption": "Captions name the visible commercial choice and the content-design decision behind it: one subscription and a developer tab, three buying routes, repeated and sentence-bound feature content, the add-on toggle states, cumulative tier additions, label-once table values, and one complete card row per remaining product.",
+      "text_alternative": "Describe the visible product, plan and add-on choices; whether the add-on toggle is on or off; which tiers or parallel offers are shown; and whether feature content repeats, states only its additions, or carries its qualifier in the row label.",
       "export_ready": false,
       "files": [
         {
-          "path": "pricing-write-pro.png",
-          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
-          "dimensions": "2482x1233",
-          "sha256": "27aa96e69d50848228d328382d3cd9de78052e3044f9b30921d7305f4fc861c8",
-          "public_path": "site/public/work/pricing-evolution/pricing-write-pro.png"
+          "path": "legacy-two-tab-grid.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
+          "crop_notes": "-crop 1650x1025+140+25 +repage -trim +repage — Translate Pro and Translate API two-tab pricing grid with Free, Starter, Advanced, Ultimate and Enterprise cards",
+          "crop_scope": "plan-grid",
+          "dimensions": "1650x904",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "93c78e40f3c418fe1da8755a36aec7a8e35373e11e3b264e8d3b431fafcb6483",
+          "public_path": "site/public/work/pricing-evolution/legacy-two-tab-grid.png"
         },
         {
-          "path": "pricing-bundle-tabs.png",
+          "path": "bundle-era-selector-in-context.png",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
-          "dimensions": "3840x2826",
-          "sha256": "6c3e5efba8f9bfa0eb1a649341b5ed638fc09900c681566e7ce05e6fe22bbbe6",
-          "public_path": "site/public/work/pricing-evolution/pricing-bundle-tabs.png"
+          "crop_notes": "-crop 3280x1260+280+40 +repage -trim +repage — Find your perfect plan heading, three buying-route tabs, and the top of the bundle card grid the selector controls",
+          "crop_scope": "selector-in-context",
+          "dimensions": "3280x1208",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "d8313ea369387660737c2a6204370bf87941a10cc86ff52b1231433f8403d59b",
+          "public_path": "site/public/work/pricing-evolution/bundle-era-selector-in-context.png"
         },
         {
-          "path": "pricing-bundle-era-grid.png",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
-          "dimensions": "3024x3300",
-          "sha256": "879fae09f6b0a7b94638b02e072afff3079dd8bc148a5e8066f4cf576927578a",
-          "public_path": "site/public/work/pricing-evolution/pricing-bundle-era-grid.png"
+          "path": "bundle-era-translator-grid.png",
+          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-translator-2x.png",
+          "crop_notes": "-trim +repage — standalone Translator plan grid with Free, Starter, Advanced, Ultimate and Enterprise",
+          "crop_scope": "plan-grid",
+          "dimensions": "3216x1458",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "4351d7f262190359df964c003c6b19e359e02d8f209678dbbe243b67b41a9354",
+          "public_path": "site/public/work/pricing-evolution/bundle-era-translator-grid.png"
         },
         {
-          "path": "pricing-translator-transition-grid.png",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
-          "dimensions": "3024x2790",
-          "sha256": "20d8b250c78715afaaaab1b5b3f4075b29d720eecb1aa0718217ced6664204c2",
-          "public_path": "site/public/work/pricing-evolution/pricing-translator-transition-grid.png"
+          "path": "bundle-era-write-grid.png",
+          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
+          "crop_notes": "-trim +repage — standalone Write pricing page with Free, Write Pro and Enterprise cards plus the account-page add-on banner",
+          "crop_scope": "plan-grid",
+          "dimensions": "2482x1219",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "015b5638e51fd86f26a27eddc530565b8ce9b0c667cf6bfa707ff1eb9037d8b6",
+          "public_path": "site/public/work/pricing-evolution/bundle-era-write-grid.png"
         },
         {
-          "path": "pricing-translator-cumulative.png",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
-          "dimensions": "3024x2392",
-          "sha256": "2de075cc95acfd49f0bf47a444a2a2203714d1e5886bff61673fedda494c7aa9",
-          "public_path": "site/public/work/pricing-evolution/pricing-translator-cumulative.png"
-        },
-        {
-          "path": "pricing-write-addon-clean.png",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
-          "dimensions": "3024x2208",
-          "sha256": "dd0e4492250f8738a1ee121e3aa8a137ca4444c1b9b2960b3ce072b3a396fe46",
-          "public_path": "site/public/work/pricing-evolution/pricing-write-addon-clean.png"
-        },
-        {
-          "path": "pricing-voice-clean.png",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
-          "dimensions": "3024x2654",
-          "sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9",
-          "public_path": "site/public/work/pricing-evolution/pricing-voice-clean.png"
-        },
-        {
-          "path": "pricing-api-clean.png",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
-          "dimensions": "3024x2776",
-          "sha256": "d68405c08e79136a5979308cab6f75e516fbff3c190cbf3f7d48b9a2a90d3dc9",
-          "public_path": "site/public/work/pricing-evolution/pricing-api-clean.png"
-        },
-        {
-          "path": "detail-cumulative-pair.png",
-          "source_path": "site/public/work/pricing-evolution/pricing-translator-cumulative.png",
-          "dimensions": "1480x1415",
-          "sha256": "9621480bb176ddbc09fd3aaa13003e33035fa3312fa6e5f9e3dfd71bb0909136",
-          "crop_notes": "xyxy [30,870,1510,2285] — Starter and Advanced full cards with cumulative headers",
-          "public_path": "site/public/work/pricing-evolution/detail-cumulative-pair.png"
-        },
-        {
-          "path": "detail-bundle-repetition.png",
+          "path": "bundle-era-repeated-write-block.png",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
-          "dimensions": "2080x465",
-          "sha256": "86ef51ed018feb068a3e570984f02f6c2f022d2c7b3f903f8a3112992c85f6b1",
-          "crop_notes": "xyxy [60,1585,2140,2050] — three identical DeepL Write Pro feature groups from the shipped bundle grid (pricing-bundle-era-grid.png Advanced/Ultimate already use cumulative lists and lack the repeated Write Pro block)",
-          "public_path": "site/public/work/pricing-evolution/detail-bundle-repetition.png"
+          "crop_notes": "-crop 2058x485+72+1575 +repage -trim +repage — identical DeepL Write Pro feature groups repeated under the Starter, Advanced and Ultimate bundle cards",
+          "crop_scope": "feature-group-row",
+          "dimensions": "2048x485",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "6625e5ad476eddb3119ee565f2fd3e59509de4202e0af432f3b69be50c87ad40",
+          "public_path": "site/public/work/pricing-evolution/bundle-era-repeated-write-block.png"
         },
         {
-          "path": "detail-table-before.png",
+          "path": "bundle-era-limits-in-sentences.png",
+          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
+          "crop_notes": "-crop 2058x570+72+820 +repage -trim +repage — Translator feature groups on the same three bundle cards with limits written inside sentences",
+          "crop_scope": "feature-group-row",
+          "dimensions": "2048x570",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "1a0916b10591b50a240dd245b1920403fee41855df578c4d798783d295411cc6",
+          "public_path": "site/public/work/pricing-evolution/bundle-era-limits-in-sentences.png"
+        },
+        {
+          "path": "addon-on-cards.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
+          "crop_notes": "-crop 2832x2224+96+836 +repage -trim +repage — Translator pricing cards with the Add DeepL Write Pro toggle on and combined plan names and prices",
+          "crop_scope": "addon-state",
+          "dimensions": "2832x2187",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "655217e5a35136395805a077c03fc579270e422c1f2cfcf008b63ef83a50db59",
+          "public_path": "site/public/work/pricing-evolution/addon-on-cards.png"
+        },
+        {
+          "path": "addon-off-cards.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
+          "crop_notes": "-crop 2832x1707+96+838 +repage -trim +repage — the same Translator pricing grid with the Add DeepL Write Pro toggle off",
+          "crop_scope": "addon-state",
+          "dimensions": "2832x1675",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "ca4f6321f139085bcb6d02e5fe650de78549555970be9c4c71e91530c0626d45",
+          "public_path": "site/public/work/pricing-evolution/addon-off-cards.png"
+        },
+        {
+          "path": "cards-bundle-repeated.png",
+          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
+          "crop_notes": "-crop 2736x1953+72+145 +repage -trim +repage — complete four-card bundle row where every tier lists a full Translator group and an identical Write Pro group",
+          "crop_scope": "plan-card-row",
+          "dimensions": "2736x1953",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "8d850ef9e4a2ab2593fc46d6fb38cccc9087d913e8e5b0b218f1e5d82773f5ff",
+          "public_path": "site/public/work/pricing-evolution/cards-bundle-repeated.png"
+        },
+        {
+          "path": "cards-cumulative-tiers.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
+          "crop_notes": "-crop 2976x1388+24+900 +repage -trim +repage — complete four-card Translator row using cumulative headers so each paid tier states only its additions",
+          "crop_scope": "plan-card-row",
+          "dimensions": "2976x1350",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "391802bee447d7bb5f85aa141986a3c7264c0661afe04a861b5bd613e8cecc37",
+          "public_path": "site/public/work/pricing-evolution/cards-cumulative-tiers.png"
+        },
+        {
+          "path": "table-values-repeat-label.png",
           "source_path": "archive/retired/figma-exports/pricing-evolution-superseded-2026-07/rev6-round3-pricing-translator-transition-clean.png",
-          "dimensions": "2864x1335",
-          "sha256": "cf5232f7d4634979c306237ec3c1f7853bde41ed62b6f4d59127210579ab6663",
-          "crop_notes": "xyxy [80,8305,2944,9640] — File translation and Glossary sections with values repeating units",
-          "public_path": "site/public/work/pricing-evolution/detail-table-before.png"
+          "crop_notes": "-crop 2864x1335+80+8305 +repage -trim +repage — comparison-table File translation and Glossary sections where values repeat the noun or qualifier from the row label The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
+          "crop_scope": "table-section",
+          "dimensions": "2768x1167",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "1caa690720ca8e30feac384d9527f4ff38aa40675b6d8005f2e78a5cf508d847",
+          "public_path": "site/public/work/pricing-evolution/table-values-repeat-label.png"
         },
         {
-          "path": "detail-table-after.png",
+          "path": "table-labels-own-qualifier.png",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png",
-          "dimensions": "2864x1335",
-          "sha256": "d614ef899cc35ebad8c5abb4bc6c8db3c11ba9d1239e1852fcd137635bee7219",
-          "crop_notes": "xyxy [80,8305,2944,9640] — same sections with qualifiers in row labels and bare values",
-          "public_path": "site/public/work/pricing-evolution/detail-table-after.png"
+          "crop_notes": "-crop 2864x1335+80+8305 +repage -trim +repage — the same comparison-table sections with qualifiers in the row labels and bare numeric values The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
+          "crop_scope": "table-section",
+          "dimensions": "2768x1167",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "52241a907725c8814356f90ccb001d055e9b2fa5733b62cb2bfa5b343dc3237a",
+          "public_path": "site/public/work/pricing-evolution/table-labels-own-qualifier.png"
+        },
+        {
+          "path": "product-write-cards.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
+          "crop_notes": "-crop 2320x1230+355+880 +repage -trim +repage — Write Free, Write Pro and DeepL Write for Business card row cropped to the cards themselves The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
+          "crop_scope": "product-card-row",
+          "dimensions": "2244x1166",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "b957dfdac7c590c0b2bc29997940bf63c03a248e356a968e1b18106ae43ee53a",
+          "public_path": "site/public/work/pricing-evolution/product-write-cards.png"
+        },
+        {
+          "path": "product-voice-cards.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
+          "crop_notes": "-crop 1790x1840+620+720 +repage -trim +repage — Voice for Meetings and Voice for Conversations card row cropped to the cards themselves The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
+          "crop_scope": "product-card-row",
+          "dimensions": "1790x1780",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "4550577fa623495398d9d41bfec35348817c434d0ad27db7ca7f5b6f10e8924b",
+          "public_path": "site/public/work/pricing-evolution/product-voice-cards.png"
+        },
+        {
+          "path": "product-api-cards.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
+          "crop_notes": "-crop 2320x1380+355+1305 +repage -trim +repage — API Free, API Pro and API for Business card row cropped to the cards themselves",
+          "crop_scope": "product-card-row",
+          "dimensions": "2244x1312",
+          "trim_margin": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "64738df0fdcee1cf7ca59a082d4dd701e6861e7333013cbd71e973d1f7f42ad9",
+          "public_path": "site/public/work/pricing-evolution/product-api-cards.png"
         }
       ],
       "private_originals": [
-        "private-evidence/source-exports/figma/write-pro-launch/feature-awareness-security-2x.png",
-        "private-evidence/source-exports/figma/write-pro-launch/pricing-translator-2x.png",
-        "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
-        "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-era-clean.png",
-        "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png",
-        "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
-        "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
-        "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
+        "archive/retired/figma-exports/pricing-evolution-superseded-2026-07/rev6-round3-pricing-translator-transition-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
-        "private-evidence/source-exports/figma/pricing-evolution/site-display/"
+        "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-era-clean.png",
+        "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
+        "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
+        "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png",
+        "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
+        "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
+        "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
+        "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
+        "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
+        "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
+        "private-evidence/source-exports/figma/write-pro-launch/pricing-translator-2x.png",
+        "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
+        "private-evidence/source-exports/web-archive/deepl-pricing/pro-page-2023-03-11.png"
       ],
       "private_source_archive": "private-evidence/source-exports/figma/write-pro-launch/feature-awareness-security-source.zip",
       "homepage_media": {
@@ -462,5 +604,5 @@
       "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428"
     }
   ],
-  "updated": "2026-07-24"
+  "updated": "2026-07-25"
 }

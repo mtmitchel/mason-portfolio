@@ -18,7 +18,7 @@ export type StoryEvidenceView = {
   id: string;
   image: StoryImage;
   label: string;
-  summary: string;
+  summary?: string;
 };
 
 export type PortfolioCard = {

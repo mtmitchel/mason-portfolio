@@ -35,8 +35,11 @@ every story into the same sections. Do not add retired-route placeholders.
 
 - Use <https://fredrika.dev/> as a reference for restraint, pacing, generous
   space, and confident image handling—not for copied content or identity.
-- Keep all visible text at 14px or larger.
-- Keep body text near 17–18px with a readable prose width.
+- Never render public-facing text below 18px at any breakpoint. This includes
+  navigation, buttons, labels, metadata, captions, card text, and footer links.
+  Treat this as a blocking acceptance rule and keep its automated CSS check.
+- Render long-form body copy at 20px or larger. Keep it near 60–75 characters
+  per line and adjust line height and paragraph spacing with any size change.
 - Use neutral backgrounds, dark text, and one restrained accent.
 - Do not add tags, pills, decorative numbering, oversized display type, or
   unnecessary controls.

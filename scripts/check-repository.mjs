@@ -58,6 +58,35 @@ function pngDimensions(buffer) {
   };
 }
 
+export function parseTrimGeometry(output, fileWidth, fileHeight) {
+  const match = String(output).trim().match(/^(\d+)x(\d+)\+(\d+)\+(\d+)$/);
+  if (!match) {
+    throw new Error(`unexpected ImageMagick trim geometry: ${output}`);
+  }
+  const width = Number(match[1]);
+  const height = Number(match[2]);
+  const x = Number(match[3]);
+  const y = Number(match[4]);
+  return {
+    left: x,
+    top: y,
+    right: fileWidth - (x + width),
+    bottom: fileHeight - (y + height),
+  };
+}
+
+function resolveMagickBinary() {
+  for (const candidate of ["magick", "/usr/sbin/magick"]) {
+    try {
+      execFileSync(candidate, ["-version"], { stdio: "ignore" });
+      return candidate;
+    } catch {
+      // Try the next candidate.
+    }
+  }
+  return null;
+}
+
 const allowedRootEntries = new Set([
   ".git",
   ".gitignore",
@@ -192,7 +221,7 @@ for (const file of markdownFiles) {
 const manifestPath = path.join(root, "private-evidence/portfolio-asset-manifest.json");
 const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
 record(manifest.version === "2.0", "asset manifest version should be 2.0");
-record(manifest.updated === "2026-07-24", "asset manifest update date should be current");
+record(manifest.updated === "2026-07-25", "asset manifest update date should be current");
 record(Array.isArray(manifest.assets) && manifest.assets.length === 6, "asset manifest should contain six project records");
 
 const manifestPublicPaths = new Set();
@@ -340,6 +369,71 @@ for (const entry of topLevelFiles) {
     !/\.(?:gif|jpe?g|mp4|pdf|png|svg|zip)$/i.test(entry.name),
     `loose binary remains at repository root: ${entry.name}`,
   );
+}
+
+const trimMarginEntries = [];
+for (const asset of manifest.assets) {
+  for (const file of asset.files ?? []) {
+    if (file.trim_margin) trimMarginEntries.push({ assetId: asset.id, file });
+  }
+}
+
+const magickBinary = resolveMagickBinary();
+if (!magickBinary) {
+  console.log(
+    "Image dead-space check could not be run because ImageMagick was not found; trim_margin entries are unverified.",
+  );
+} else {
+  for (const { assetId, file } of trimMarginEntries) {
+    const publicPath = file.public_path ?? `site/public/work/${file.path}`;
+    const absolutePublicPath = path.join(root, publicPath);
+    if (!await exists(absolutePublicPath)) {
+      record(false, `${assetId}: public file missing for dead-space check: ${publicPath}`);
+      continue;
+    }
+
+    const buffer = await readFile(absolutePublicPath);
+    const dimensions = pngDimensions(buffer);
+    if (!dimensions) {
+      record(false, `${assetId}: PNG dimensions unavailable for dead-space check: ${publicPath}`);
+      continue;
+    }
+
+    let geometry;
+    try {
+      geometry = execFileSync(
+        magickBinary,
+        ["identify", "-format", "%@", absolutePublicPath],
+        { encoding: "utf8" },
+      );
+    } catch {
+      record(false, `${assetId}: ImageMagick identify failed for ${publicPath}`);
+      continue;
+    }
+
+    let measured;
+    try {
+      measured = parseTrimGeometry(geometry, dimensions.width, dimensions.height);
+    } catch (error) {
+      record(false, `${assetId}: ${error.message} (${publicPath})`);
+      continue;
+    }
+
+    const recorded = file.trim_margin;
+    record(
+      measured.left === recorded.left
+        && measured.top === recorded.top
+        && measured.right === recorded.right
+        && measured.bottom === recorded.bottom,
+      `${assetId}: trim_margin mismatch for ${publicPath}: measured ${JSON.stringify(measured)}, recorded ${JSON.stringify(recorded)}`,
+    );
+    for (const edge of ["left", "top", "right", "bottom"]) {
+      record(
+        measured[edge] <= 24,
+        `${assetId}: measured ${edge} trim margin exceeds 24px for ${publicPath}: ${measured[edge]}`,
+      );
+    }
+  }
 }
 
 if (failures.length) {
