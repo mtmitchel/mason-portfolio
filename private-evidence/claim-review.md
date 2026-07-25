@@ -7,6 +7,10 @@ This file states what the current portfolio may say. The
 [full historical audit](../archive/research/claim-review-full-2026-07-24.md)
 is preserved in the archive.
 
+It owns factual and publication limits only. It does not prescribe case-study
+structure, tone, emphasis, sentence style, or how supported intent, rationale,
+and interpretation should be narrated.
+
 ## Public rule
 
 If a claim is unsupported, omit it. Do not show a public disclaimer, evidence

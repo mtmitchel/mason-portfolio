@@ -64,6 +64,11 @@ belong to the wider experiment wave.
 
 ### Simplifying pricing across four products
 
+**Narrative status, 2026-07-25:** Rejected. The sequence and notes below record
+the current implementation candidate for recovery only; they do not direct the
+next rewrite. Rebuild the case from the broader project evidence, hiring-reader
+needs, and current factual claim limits.
+
 1. When there was one product to buy.
 2. A second paid product opened three ways to buy.
 3. Two problems inside every bundle card.

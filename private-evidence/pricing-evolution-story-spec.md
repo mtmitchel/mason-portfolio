@@ -1,6 +1,11 @@
 # Pricing evolution story spec
 
 **Created:** 2026-07-25
+
+> **Current direction:** Mason rejected this narrative on 2026-07-25. Treat
+> the chapter order, public copy, evidence selection, and mechanical acceptance
+> rules below as a recovery record, not instructions for the next draft.
+
 **Revised:** 2026-07-25 (revision 3, WIP — presentation still under review)
 **Status:** WORK IN PROGRESS. Copy and evidence are settled; the presentation
 layer is mid-revision and Mason has not accepted it.
