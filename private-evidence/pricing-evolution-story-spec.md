@@ -1,8 +1,9 @@
 # Pricing evolution story spec
 
 **Created:** 2026-07-25
-**Revised:** 2026-07-25 (revision 2, after Mason's review of the rendered page)
-**Status:** Current build spec for `/work/pricing-evolution`
+**Revised:** 2026-07-25 (revision 3, WIP — presentation still under review)
+**Status:** WORK IN PROGRESS. Copy and evidence are settled; the presentation
+layer is mid-revision and Mason has not accepted it.
 **Owners it obeys:** [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md),
 [`claim-review.md`](claim-review.md), [`../site/AGENTS.md`](../site/AGENTS.md)
 
@@ -10,6 +11,51 @@ This file is the source of truth for the pricing case: chapter order, final
 public copy, evidence selection, crop geometry, and the claim behind every
 sentence. The implementation follows this file. If the implementation and this
 file disagree, this file wins and the implementation changes.
+
+## Revision 3 — WIP state, 2026-07-25
+
+Landed and verified (lint, production build, 38/38 rendered-HTML tests):
+
+- **Route count made consistent.** The Write-alone caption called the account
+  page banner a `fourth way in` while the title, synopsis and prose all counted
+  three. The banner is no longer presented as a route.
+- **Synopsis cut to two sentences**, from 370 and 300 characters to 105 and 98.
+  It previewed the payoff of chapters 4, 5 and 6, which is why chapters 1 and 2
+  read as repetition.
+- **`sold itself` removed.** It is an idiom meaning "needed no persuasion",
+  which inverts the point.
+- **Column narrowed 1120px to 880px**, header and footer included via
+  `pricing-shell`. Prose ended 380px short of the media edge, marooning every
+  paragraph left of a wide container.
+- **Caption widths unified at 740px.** `.chapter-figure` belongs to the
+  checkout and upgrade-prompts cases and never matched this page, so two of the
+  nine captions fell through to a 760px base rule.
+- **Evidence frame removed.** Its 24px pad and near-invisible border read as
+  dead space, and full-width crops appeared to collide with it.
+- **All 15 crops re-trimmed flush**; manifest dimensions, sha256 and
+  `trim_margin` updated to match.
+- **Repetition-to-progression is now a two-state switcher**, on Mason's
+  explicit instruction, keeping its Before and After labels. This is a
+  presentation change only and does not touch the claim.
+
+Open, not accepted:
+
+- **Voice sizing in the product switcher.** Voice is two cards where Write and
+  API are three. At the full measure its cards render ~430px against API's
+  ~293px; the panel is currently held to 587px so a Voice card lands near
+  295px. Mason has not confirmed this reads correctly.
+- **Two failed attempts, recorded so they are not retried.** Vertical-only
+  frame padding put full-width crop text against the border. Height-capping the
+  image (`width: auto` plus `max-height`) sizes from the delivered bitmap, so
+  short crops rendered below the measure and unloaded images collapsed to zero
+  and reserved no space.
+
+Known consequence of the switcher change: a switcher server-renders only its
+active view, so the cumulative "after" image is no longer in the rendered HTML.
+Its alternative text is asserted from case data instead.
+
+Still unverified: narrow-viewport layout, and keyboard operation of the
+switchers.
 
 ## What revision 2 fixes
 
@@ -92,18 +138,18 @@ Title: `Simplifying pricing across four products`
 
 Synopsis paragraph 1:
 
-> DeepL's pricing page had to keep selling while the catalogue underneath it
-> changed shape. Write became a paid product, then Voice arrived, and each
-> addition was absorbed the same way: by bolting on another way to buy rather
-> than by rethinking what the page said. By mid-2024 a single writing product was on
-> sale in three places and described three different ways.
+> By mid-2024 DeepL was selling one writing product in three places and
+> describing it three different ways.
 
 Synopsis paragraph 2:
 
-> I wrote the pricing content across those releases. This case follows the
-> decisions that stopped the page repeating itself — what a tier is allowed to
-> say, where a discount belongs, which words live in a row label instead of in
-> every cell — and why four products ended up in four shapes rather than one.
+> I wrote the pricing content through those releases. This is how the page
+> stopped repeating itself.
+
+The synopsis states the problem and the role and stops. It does not preview
+chapter payoffs: naming what a tier may say, where a discount belongs, and
+which words live in a row label told the reader every conclusion before the
+first image, which is what made chapters 1 and 2 read as repetition.
 
 ## Chapter 1 — When there was one product to buy
 
@@ -179,8 +225,16 @@ Evidence B: two-state switcher, scope `plan-grid`.
   `bundle-era-write-grid.png`.
   Alt: `DeepL Write pricing page with Free, Write Pro and Enterprise cards below
   a banner offering to add Write Pro from the account page.`
-  Caption: `Write sold itself separately, and a banner offered a fourth way in,
-  through the account page.`
+  Caption: `Write, priced on its own page, under a banner offering the same
+  upgrade from the account page.`
+
+  Not `Write sold itself separately`. `Sold itself` is an idiom meaning it
+  needed no persuasion, which inverts the point the chapter is making.
+
+  The caption must not present the account-page banner as an additional route.
+  The title, the synopsis, and the chapter prose all count three buying routes;
+  calling the banner a `fourth way in` contradicted all three on the one page
+  that argues each fact should be stated once.
 
 ## Chapter 3 — Two problems inside every bundle card
 

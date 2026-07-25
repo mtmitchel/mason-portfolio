@@ -76,9 +76,10 @@ belong to the wider experiment wave.
 The case opens on the single-product condition so the complication has
 something to complicate, then names the three buying routes, the content those
 routes produced, the add-on pivot, the cumulative rewrite, the table rewrite,
-and the three products the cumulative ladder did not fit. Repetition to
-progression is the only Before-and-After comparison; every other pair is a
-neutral two-state switcher. Each evidence image is one intentional crop, and
+and the three products the cumulative ladder did not fit. Every pair on the
+page, repetition to progression included, is a two-state switcher; the
+repetition pair keeps Before and After labels because it is the one real
+change of state. Each evidence image is one intentional crop, and
 the dialog opens that same crop. Paired evidence shares a recorded crop scope,
 the cumulative comparison shows every tier in its grid, and the three remaining
 product states use one consistent card-row crop. Translator's grid appears once,

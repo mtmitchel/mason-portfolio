@@ -371,9 +371,10 @@ test("pricing paired evidence shares equivalent crop scope", async () => {
   assert.equal(
     byPath["addon-on-cards.png"].dimensions.split("x")[0],
     byPath["addon-off-cards.png"].dimensions.split("x")[0],
-    "addon states should share width 2832",
+    "addon states should share one width",
   );
-  assert.equal(byPath["addon-on-cards.png"].dimensions.split("x")[0], "2832");
+  // 2772 after re-trimming flush; was 2832 with 30px of dead margin each side.
+  assert.equal(byPath["addon-on-cards.png"].dimensions.split("x")[0], "2772");
 
   for (const path of ["table-values-repeat-label.png", "table-labels-own-qualifier.png"]) {
     assert.equal(byPath[path]?.crop_scope, "table-section", `${path} should use table-section`);
@@ -409,17 +410,19 @@ test("pricing paired evidence shares equivalent crop scope", async () => {
   assert.equal(byPath["product-api-cards.png"].dimensions.split("x")[0], "2244");
   assert.equal(
     byPath["product-voice-cards.png"].dimensions.split("x")[0],
-    "1790",
+    "1700",
     "Voice is intentionally narrower because it has two cards, not three",
   );
 });
 
 test("pricing cumulative comparison names every tier", async () => {
-  const html = await htmlFor("/work/pricing-evolution");
-  // vinext may rewrite src; take the alt from the img that references the cumulative file.
-  const img = html.match(/<img\b[^>]*cards-cumulative-tiers\.png[^>]*>/)?.[0] ?? "";
-  const alt = img.match(/\balt="([^"]+)"/)?.[1] ?? "";
-  assert.ok(alt, "cards-cumulative-tiers.png should expose alternative text");
+  // The repetition pair is now a switcher, and a switcher server-renders only
+  // its active view, so the cumulative "after" image is no longer in the
+  // rendered HTML. Its alternative text is asserted from case data instead.
+  const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
+  const block = data.match(/cards-cumulative-tiers\.png[\s\S]{0,600}?alt:\s*"([^"]+)"/);
+  const alt = block?.[1] ?? "";
+  assert.ok(alt, "cards-cumulative-tiers.png should declare alternative text");
   for (const tier of ["Starter", "Advanced", "Ultimate", "Enterprise"]) {
     assert.match(alt, new RegExp(escapeRegExp(tier)), `cumulative alt should name ${tier}`);
   }
@@ -428,16 +431,16 @@ test("pricing cumulative comparison names every tier", async () => {
 test("pricing presentation counts stay complete", async () => {
   const html = await htmlFor("/work/pricing-evolution");
   const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
-  // Measured against revision 2: five quiet switchers (2+2+2+2+3 tabs),
-  // one stacked comparison with two items, two standalone figures,
-  // nine expand indicators. Switchers SSR only the active view, so the
-  // fifteen-image inventory is asserted from case data rather than HTML.
+  // Six quiet switchers (2+2+2+2+2+3 tabs) and two standalone figures. The
+  // repetition pair became a switcher too, so no stacked comparison remains
+  // and eight images render rather than nine. Switchers SSR only the active
+  // view, so the fifteen-image inventory is asserted from case data.
   assert.equal((html.match(/class="chapter-section"/g) ?? []).length, 7);
-  assert.equal((html.match(/class="evidence-switcher evidence-switcher--quiet">/g) ?? []).length, 5);
-  assert.equal((html.match(/role="tab"/g) ?? []).length, 11);
-  assert.equal((html.match(/class="story-comparison"/g) ?? []).length, 1);
-  assert.equal((html.match(/class="story-comparison-item"/g) ?? []).length, 2);
-  assert.equal((html.match(/class="evidence-expand-indicator" aria-hidden="true"/g) ?? []).length, 9);
+  assert.equal((html.match(/class="evidence-switcher evidence-switcher--quiet">/g) ?? []).length, 6);
+  assert.equal((html.match(/role="tab"/g) ?? []).length, 13);
+  assert.equal((html.match(/class="story-comparison"/g) ?? []).length, 0);
+  assert.equal((html.match(/class="story-comparison-item"/g) ?? []).length, 0);
+  assert.equal((html.match(/class="evidence-expand-indicator" aria-hidden="true"/g) ?? []).length, 8);
 
   const dataSrcs = [...data.matchAll(/src:\s*"(\/work\/pricing-evolution\/[^"]+)"/g)].map((match) => match[1]);
   assert.equal(dataSrcs.length, 15, "pricing case data should declare fifteen images");
@@ -774,15 +777,16 @@ test("layout stays row-major, responsive and naturally sized", async () => {
     css,
     /\.evidence-expand-indicator\s*\{[^}]*width:\s*32px;[^}]*height:\s*32px;[^}]*pointer-events:\s*none;/s,
   );
+  // No frame around pricing evidence. The pad plus a near-invisible border read
+  // as dead space and full-width crops appeared to collide with it, so the crop
+  // supplies its own boundary and the image edge lines up with the text edge.
   assert.match(
     css,
-    /\.pricing-page \.evidence-preview(?:,\s*\.pricing-page \.story-comparison-item \.evidence-preview)?\s*\{[^}]*padding:\s*([1-9]\d*)px;[^}]*overflow:\s*hidden;[^}]*background:\s*var\(--surface\);/s,
+    /\.pricing-page \.evidence-preview(?:,\s*\.pricing-page \.story-comparison-item \.evidence-preview)?\s*\{[^}]*padding:\s*0;[^}]*background:\s*none;[^}]*border:\s*0;/s,
   );
-  const pricingPreviewPadding = css.match(
-    /\.pricing-page \.evidence-preview(?:,\s*\.pricing-page \.story-comparison-item \.evidence-preview)?\s*\{[^}]*padding:\s*([1-9]\d*)px;/s,
-  )?.[1];
-  assert.ok(pricingPreviewPadding, "pricing evidence-preview should declare non-zero padding");
-  assert.ok(Number(pricingPreviewPadding) > 0, "pricing evidence-preview padding must be non-zero");
+  // Sizing is width-driven. Height-driven sizing reads from the delivered
+  // bitmap, so short crops render below the measure and unloaded images
+  // collapse to zero height and reserve no space.
   assert.match(
     css,
     /\.pricing-page \.evidence-preview img\s*\{[^}]*width:\s*100%;[^}]*height:\s*auto;[^}]*max-height:\s*none;/s,

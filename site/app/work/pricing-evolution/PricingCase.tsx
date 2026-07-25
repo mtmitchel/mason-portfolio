@@ -112,7 +112,7 @@ function PricingBlockView({ block }: { block: PricingBlock }) {
 
 export default function PricingCase({ story }: { story: PricingCaseStory }) {
   return (
-    <main className="site-shell case-shell">
+    <main className="site-shell case-shell pricing-shell">
       <SiteHeader />
       <article className="chapter-page pricing-page">
         <Link className="back-link" href="/">

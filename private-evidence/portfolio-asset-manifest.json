@@ -95,14 +95,14 @@
           "source_path": "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
           "crop_notes": "-crop 1650x1025+140+25 +repage -trim +repage — Translate Pro and Translate API two-tab pricing grid with Free, Starter, Advanced, Ultimate and Enterprise cards",
           "crop_scope": "plan-grid",
-          "dimensions": "1650x904",
+          "dimensions": "1602x900",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "93c78e40f3c418fe1da8755a36aec7a8e35373e11e3b264e8d3b431fafcb6483",
+          "sha256": "e56285f8030003e84685abe9fe5aa9b18cab82146ced119788fb9c2e54626a57",
           "public_path": "site/public/work/pricing-evolution/legacy-two-tab-grid.png"
         },
         {
@@ -110,14 +110,14 @@
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
           "crop_notes": "-crop 3280x1260+280+40 +repage -trim +repage — Find your perfect plan heading, three buying-route tabs, and the top of the bundle card grid the selector controls",
           "crop_scope": "selector-in-context",
-          "dimensions": "3280x1208",
+          "dimensions": "3204x1208",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "d8313ea369387660737c2a6204370bf87941a10cc86ff52b1231433f8403d59b",
+          "sha256": "c2f42ad100b45e0b5f07259bb203b721a28ba8f5553a87508d98f3d72db8a13d",
           "public_path": "site/public/work/pricing-evolution/bundle-era-selector-in-context.png"
         },
         {
@@ -185,14 +185,14 @@
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
           "crop_notes": "-crop 2832x2224+96+836 +repage -trim +repage — Translator pricing cards with the Add DeepL Write Pro toggle on and combined plan names and prices",
           "crop_scope": "addon-state",
-          "dimensions": "2832x2187",
+          "dimensions": "2772x2147",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "655217e5a35136395805a077c03fc579270e422c1f2cfcf008b63ef83a50db59",
+          "sha256": "fbbcfa4823799fa0fbc02ccc7bdc1b8c9380ab415f953b6cf00f0fb67d2277fc",
           "public_path": "site/public/work/pricing-evolution/addon-on-cards.png"
         },
         {
@@ -200,14 +200,14 @@
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
           "crop_notes": "-crop 2832x1707+96+838 +repage -trim +repage — the same Translator pricing grid with the Add DeepL Write Pro toggle off",
           "crop_scope": "addon-state",
-          "dimensions": "2832x1675",
+          "dimensions": "2772x1635",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "ca4f6321f139085bcb6d02e5fe650de78549555970be9c4c71e91530c0626d45",
+          "sha256": "1315ca3ff72d8743fb27e7ffd9dee580ae110d1e119d49603188d73e3ce8d234",
           "public_path": "site/public/work/pricing-evolution/addon-off-cards.png"
         },
         {
@@ -230,14 +230,14 @@
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
           "crop_notes": "-crop 2976x1388+24+900 +repage -trim +repage — complete four-card Translator row using cumulative headers so each paid tier states only its additions",
           "crop_scope": "plan-card-row",
-          "dimensions": "2976x1350",
+          "dimensions": "2948x1350",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "391802bee447d7bb5f85aa141986a3c7264c0661afe04a861b5bd613e8cecc37",
+          "sha256": "a45d6aefc8161ab4b872512e4aa7f3c92e9b58b36e4a73b5934e7da01405e774",
           "public_path": "site/public/work/pricing-evolution/cards-cumulative-tiers.png"
         },
         {
@@ -290,14 +290,14 @@
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
           "crop_notes": "-crop 1790x1840+620+720 +repage -trim +repage — Voice for Meetings and Voice for Conversations card row cropped to the cards themselves The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
           "crop_scope": "product-card-row",
-          "dimensions": "1790x1780",
+          "dimensions": "1700x1780",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "4550577fa623495398d9d41bfec35348817c434d0ad27db7ca7f5b6f10e8924b",
+          "sha256": "fbf9a16343222cda108df0886de3c4b453b6a76eda58b81a1e2487f663bd4aca",
           "public_path": "site/public/work/pricing-evolution/product-voice-cards.png"
         },
         {

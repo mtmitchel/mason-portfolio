@@ -3,8 +3,8 @@ import type { PricingCaseStory } from "./PricingCase";
 export const pricingEvolutionCase: PricingCaseStory = {
   title: "Simplifying pricing across four products",
   synopsis: [
-    "DeepL's pricing page had to keep selling while the catalogue underneath it changed shape. Write became a paid product, then Voice arrived, and each addition was absorbed the same way: by bolting on another way to buy rather than by rethinking what the page said. By mid-2024 a single writing product was on sale in three places and described three different ways.",
-    "I wrote the pricing content across those releases. This case follows the decisions that stopped the page repeating itself — what a tier is allowed to say, where a discount belongs, which words live in a row label instead of in every cell — and why four products ended up in four shapes rather than one.",
+    "By mid-2024 DeepL was selling one writing product in three places and describing it three different ways.",
+    "I wrote the pricing content through those releases. This is how the page stopped repeating itself.",
   ],
   chapters: [
     {
@@ -23,8 +23,8 @@ export const pricingEvolutionCase: PricingCaseStory = {
           image: {
             label: "The one-product pricing grid",
             src: "/work/pricing-evolution/legacy-two-tab-grid.png",
-            width: 1650,
-            height: 904,
+            width: 1602,
+            height: 900,
             alt: "DeepL pricing page with two tabs, Translate Pro for individuals and teams and Translate API for developers, above Free, Starter, Advanced, Ultimate and Enterprise plan cards.",
             caption: "One subscription for individuals and teams, with the developer API on its own tab. Everything a buyer had to weigh sat in a single row of cards.",
           },
@@ -47,7 +47,7 @@ export const pricingEvolutionCase: PricingCaseStory = {
           image: {
             label: "The selector that opened a third route",
             src: "/work/pricing-evolution/bundle-era-selector-in-context.png",
-            width: 3280,
+            width: 3204,
             height: 1208,
             alt: "DeepL pricing page headed Find your perfect plan with three tabs, DeepL Translator, DeepL Translator plus DeepL Write, and DeepL API, above the top of the Starter, Advanced, Ultimate and Enterprise bundle cards.",
             caption: "Choosing the middle tab swapped the Translator grid for a bundle grid, so Write was now sold here as well as on its own page.",
@@ -79,7 +79,7 @@ export const pricingEvolutionCase: PricingCaseStory = {
                 width: 2482,
                 height: 1219,
                 alt: "DeepL Write pricing page with Free, Write Pro and Enterprise cards below a banner offering to add Write Pro from the account page.",
-                caption: "Write sold itself separately, and a banner offered a fourth way in, through the account page.",
+                caption: "Write, priced on its own page, under a banner offering the same upgrade from the account page.",
               },
             },
           ],
@@ -152,8 +152,8 @@ export const pricingEvolutionCase: PricingCaseStory = {
               image: {
                 label: "Write Pro added",
                 src: "/work/pricing-evolution/addon-on-cards.png",
-                width: 2832,
-                height: 2187,
+                width: 2772,
+                height: 2147,
                 alt: "DeepL pricing cards with the Add DeepL Write Pro toggle on, showing Starter plus Write Pro at 15.49 euros with a Save 20 percent badge, Advanced plus Write Pro, Ultimate plus Write Pro and Enterprise.",
                 caption: "Toggle on: each card names both products, and the saving sits beside the price it reduces.",
               },
@@ -164,8 +164,8 @@ export const pricingEvolutionCase: PricingCaseStory = {
               image: {
                 label: "Translator only",
                 src: "/work/pricing-evolution/addon-off-cards.png",
-                width: 2832,
-                height: 1675,
+                width: 2772,
+                height: 1635,
                 alt: "The same DeepL pricing grid with the Add DeepL Write Pro toggle off, showing Starter, Advanced, Ultimate and Enterprise Translator plans.",
                 caption: "Toggle off: one grid, no second route, and nothing about Write left on the card.",
               },
@@ -186,31 +186,35 @@ export const pricingEvolutionCase: PricingCaseStory = {
           ],
         },
         {
-          kind: "comparison",
-          layout: "stacked",
+          kind: "switcher",
           ariaLabel: "Compare repeated bundle cards with cumulative tiers",
-          before: {
-            tag: "Before — every card repeats",
-            image: {
+          initialId: "before-repeated",
+          views: [
+            {
+              id: "before-repeated",
               label: "Before — every card repeats",
-              src: "/work/pricing-evolution/cards-bundle-repeated.png",
-              width: 2736,
-              height: 1953,
-              alt: "Four bundle cards, Starter plus Write Pro, Advanced plus Write Pro, Ultimate plus Write Pro and Enterprise, each listing a full Translator group and an identical Write Pro group.",
-              caption: "Every bundle card states the whole offer, so two tiers can only be told apart line by line.",
+              image: {
+                label: "Before — every card repeats",
+                src: "/work/pricing-evolution/cards-bundle-repeated.png",
+                width: 2736,
+                height: 1953,
+                alt: "Four bundle cards, Starter plus Write Pro, Advanced plus Write Pro, Ultimate plus Write Pro and Enterprise, each listing a full Translator group and an identical Write Pro group.",
+                caption: "Every bundle card states the whole offer, so two tiers can only be told apart line by line.",
+              },
             },
-          },
-          after: {
-            tag: "After — each tier states its addition",
-            image: {
+            {
+              id: "after-cumulative",
               label: "After — each tier states its addition",
-              src: "/work/pricing-evolution/cards-cumulative-tiers.png",
-              width: 2976,
-              height: 1350,
-              alt: "Four Translator cards, Starter, Advanced, Ultimate and Enterprise, using What's included, Everything in Starter plus, Everything in Advanced plus, and Tailor to your enterprise needs.",
-              caption: "Starter states what is included, Advanced and Ultimate state only what they add, and Enterprise steps out of the ladder.",
+              image: {
+                label: "After — each tier states its addition",
+                src: "/work/pricing-evolution/cards-cumulative-tiers.png",
+                width: 2948,
+                height: 1350,
+                alt: "Four Translator cards, Starter, Advanced, Ultimate and Enterprise, using What's included, Everything in Starter plus, Everything in Advanced plus, and Tailor to your enterprise needs.",
+                caption: "Starter states what is included, Advanced and Ultimate state only what they add, and Enterprise steps out of the ladder.",
+              },
             },
-          },
+          ],
         },
       ],
     },
@@ -292,7 +296,7 @@ export const pricingEvolutionCase: PricingCaseStory = {
               image: {
                 label: "Voice",
                 src: "/work/pricing-evolution/product-voice-cards.png",
-                width: 1790,
+                width: 1700,
                 height: 1780,
                 alt: "DeepL Voice cards for Voice for Meetings and Voice for Conversations, side by side, both routing to sales with no self-serve price.",
                 caption: "Voice presents two parallel use cases rather than a ladder, because neither one is an upgrade of the other.",

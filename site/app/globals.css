@@ -980,10 +980,20 @@ img {
 
 /* Pricing case layout. */
 
+/* The page is a single column with slightly wider figures, not a wide container
+   holding a narrow text block. At 1120px the prose ended 380px short of the
+   media edge, which marooned every paragraph on the left and let the evidence
+   dominate the reading column. The header and footer follow the same measure,
+   or the site chrome hangs 120px outside the column it sits above. */
 .chapter-page {
-  width: min(100% - 48px, 1120px);
+  width: min(100% - 48px, 880px);
   margin-inline: auto;
   padding: 0 0 76px;
+}
+
+.pricing-shell .site-header,
+.pricing-shell .site-footer {
+  width: min(100% - 48px, 880px);
 }
 
 .chapter-page > .back-link {
@@ -1071,7 +1081,16 @@ img {
 }
 
 .chapter-blocks > .chapter-media {
-  width: min(100%, 1120px);
+  width: min(100%, 880px);
+}
+
+/* Voice is two cards where Write and API are three. Given the full 880px
+   measure its two cards blow up to ~430px each against API's ~293px, and the
+   block runs ~873px tall. Match the card, not the block: two thirds of the
+   measure puts a Voice card at ~295px, level with API's. Width-driven on
+   purpose — capping image height collapses images that have not loaded. */
+#product-patterns [id$="-panel-voice"] .evidence-preview {
+  width: min(100%, 587px);
 }
 
 .chapter-page .chapter-media--comparison-stacked .story-comparison {
@@ -1135,21 +1154,29 @@ img {
   text-align: left;
 }
 
+/* No frame. The 24px pad and its near-invisible #dde2dd border read as dead
+   space rather than as a mat, and the same border is what full-width crops
+   appeared to collide with. Screenshots now sit directly on the page, so the
+   image edge is the text edge and the crop supplies its own boundary. */
 .pricing-page .evidence-preview,
 .pricing-page .story-comparison-item .evidence-preview {
-  padding: 24px;
+  padding: 0;
   overflow: hidden;
-  background: var(--surface);
-  border: 1px solid #dde2dd;
-  border-radius: 4px;
+  background: none;
+  border: 0;
+  border-radius: 0;
 }
 
-/* Crops are trimmed flush to their content, so the expanded view has to
-   supply the same inset the preview frame does. */
+/* The dialog floats free of the page grid, so it keeps inset on all four sides. */
 .pricing-page .lightbox-panel--minimal .lightbox-image {
   padding: 24px;
 }
 
+/* Width-driven, never height-driven. `width: auto` with a max-height was tried
+   to even out the switcher's differing proportions and reverted: it sizes from
+   the delivered bitmap rather than the column, so a short crop rendered at its
+   own 597px instead of filling the measure, and an image that had not loaded
+   yet collapsed to zero and reserved no space at all. */
 .pricing-page .evidence-preview img {
   display: block;
   width: 100%;
@@ -1166,8 +1193,12 @@ img {
   align-items: stretch;
 }
 
-.pricing-page .evidence-switcher--quiet .evidence-figure figcaption,
-.pricing-page .story-comparison-item .evidence-figure figcaption {
+/* Every caption on this page shares the prose measure, whichever component
+   renders it. Figures otherwise fall through to the 760px base rule, because
+   `.chapter-figure` belongs to the checkout and upgrade-prompts cases and never
+   matches this page's markup — which left two of the nine captions 20px wider
+   than the other seven. */
+.pricing-page .chapter-media .evidence-figure figcaption {
   max-width: 740px;
   width: 100%;
   margin: 14px 0 0;
