@@ -20,6 +20,9 @@ check the portfolio. Nothing here is cleared for public release by default.
 - [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md) —
   active work-status plan for evidence organization, Figwright coverage,
   portfolio decisions, and the eventual pricing rebuild.
+- [`pricing-evolution-recovery-audit-2026-07-26.md`](pricing-evolution-recovery-audit-2026-07-26.md)
+  — private audit findings, direct-source recovery leads, known repository
+  defects, and exact continuation context for the active plan.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — bidirectional
   achievement-to-Figma crosswalk.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)

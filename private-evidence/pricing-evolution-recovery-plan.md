@@ -9,6 +9,10 @@ the pricing and Write Pro evidence. It does not own public claims, narrative
 decisions, or asset provenance. Those remain with the claim review, current
 direction, story brief, achievement recovery package, and asset manifest.
 
+The evidence, repository, and continuation context behind this plan is recorded
+in
+[`pricing-evolution-recovery-audit-2026-07-26.md`](pricing-evolution-recovery-audit-2026-07-26.md).
+
 Update this file whenever work begins, finishes, changes order, or becomes
 blocked:
 
