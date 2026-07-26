@@ -42,6 +42,12 @@ untouchable, or the ultimate source of truth.
 | Monetization | [`projects/monetization/figma-evidence-crosswalk.md`](projects/monetization/figma-evidence-crosswalk.md) | Pricing, purchase, eligibility, limits, bundles, and Pro Driver surfaces across products. |
 | Pricing evolution overlay | [`projects/pricing-evolution/figma-evidence-crosswalk.md`](projects/pricing-evolution/figma-evidence-crosswalk.md) | Current relationship between the recovered pricing workstreams and the Write Pro and Monetization source domains. |
 
+The pricing-evolution
+[`running Figwright inventory`](projects/pricing-evolution/figwright-inventory.md)
+is the page-and-batch coverage owner for recovery steps 15–20. Its structure is
+ready, but zero pages and zero batches have been reviewed; step 16 has not
+started.
+
 The
 [`achievement ledger`](deepl-achievement-recovery/artifacts/achievement-ledger.json)
 owns recovery IDs, exact raw-message references, confidence, and claim ceilings.

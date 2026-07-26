@@ -1,6 +1,7 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; phase 4 complete; public pricing implementation frozen
+Status: Active; phase 5 inventory structure ready; public pricing
+implementation frozen
 
 Last updated: 2026-07-26
 
@@ -208,10 +209,14 @@ Coverage must therefore proceed page by page and, when necessary, in multiple
 frame batches. Do not select final portfolio evidence until every relevant page
 has been reviewed.
 
-- [ ] 15. Create one running Figwright inventory with fields for Figma file,
+- [x] 15. Create one running Figwright inventory with fields for Figma file,
   page, batch, selected frame range, frame/node ID, visual description, likely
   project, chronology, contribution relationship, editability, provenance,
   provisional value, and follow-up need.
+
+  Completed 2026-07-26. The inventory structure now records page-and-batch
+  coverage and every required candidate-frame field. No Figma page or batch
+  was reviewed; step 16 has not started.
 - [ ] 16. For each relevant Figma page, have Mason select the largest practical
   frame batch and run Figwright. Inspect the exposed frames and append
   candidates to the inventory without making final selection decisions.
@@ -235,12 +240,13 @@ has been reviewed.
 
 ### Figwright coverage tracker
 
-Create the detailed inventory during step 15. Until then, keep page coverage
-here at summary level.
+The detailed running inventory is
+[`projects/pricing-evolution/figwright-inventory.md`](projects/pricing-evolution/figwright-inventory.md).
+Step 16 has not started, so page coverage remains at zero reviewed batches.
 
 | Figma file | Page | Batches reviewed | Coverage status | Notes |
 | --- | --- | ---: | --- | --- |
-| To inventory | To inventory | 0 | Not started | Final decisions deferred |
+| To inventory | To inventory | 0 | Not started | Inventory structure ready; step 16 has not started; final decisions deferred |
 
 Gate: all relevant pages have recorded coverage, and finalists have been judged
 against the complete inventory rather than the order in which they were found.

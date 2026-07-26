@@ -1,6 +1,6 @@
 # Pricing evolution project evidence
 
-Status: Recovery plan steps 1–14 complete; public case and current private
+Status: Recovery plan steps 1–15 complete; public case and current private
 drafts paused
 
 This is the active private index for the pricing evolution and Write Pro
@@ -15,9 +15,9 @@ preserved rejected candidate, not accepted narrative truth. Do not resume the
 case until the recovery plan reaches the later evidence, reader-review, and
 implementation gates.
 
-Phase 5 has not started. The next plan item is step 15: create the running
-Figwright inventory structure. That step does not itself authorize Figma
-inspection, editing, export, final evidence selection, or public-site work.
+The phase 5 inventory structure is ready, but no Figma pages or frame batches
+have been reviewed. Step 16 has not started. Page-by-page inspection, editing,
+export, final evidence selection, and public-site work remain unauthorized.
 
 ## Owners and supporting records
 
@@ -28,6 +28,7 @@ inspection, editing, export, final evidence selection, or public-site work.
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July grid proposal, naming, repeatable review tooling, and Pricing Page V2. The ledger now contains their source references and claim ceilings. |
 | Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual and publication ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
 | Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Active, revisable pricing relationship map. `Canonical` means an organizing destination only; every Figma state retains a margin of error. Final selection waits for the complete later Figwright inventory. |
+| Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) | Structure ready. Zero pages and zero batches reviewed; step 16 has not started. |
 | Asset provenance | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current selected-asset source, crop, hash, caption, alternative-text, permission, and exact-duplicate records. Missing independent sources are marked honestly; duplicate files remain preserved by classification. |
 | Sources | [Pricing source locations](#pricing-source-locations) | Current private source exports, the active reconstruction, and the curated GPT register. The full raw export remains outside the repository. |
 | Paused and archived drafts | [Paused and archived records](#paused-and-archived-records) | Preserved for recovery and comparison only; none is an accepted public story. |
