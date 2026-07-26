@@ -13,15 +13,21 @@ and interpretation should be narrated.
 
 ## Public rule
 
-If a claim is unsupported, omit it. Do not show a public disclaimer, evidence
-boundary, provenance note, reconstruction note, or explanation of what the
-portfolio cannot prove.
+Mason's current account is valid evidence for his own role, participation,
+contribution, intent, and rationale. State a proportionate collaborative claim
+in normal prose; do not require independent corroboration or display a public
+disclaimer, evidence boundary, provenance argument, or explanation of what the
+portfolio cannot prove. Qualify or omit a factual assertion only when it
+materially conflicts with Mason's account or would add unsupported sole
+ownership, lifecycle, causation, or outcome.
 
 Visual evidence proves only what is visible in the selected state. It does not
-by itself prove launch, ownership, causation, research, adoption, or a business
-result. Every Figma frame, page, component, or mockup retains a margin of error,
-even when it resembles production. `Canonical` means a current organizing
-destination, not final, untouchable, or ultimate truth.
+by itself identify exact contributors or prove launch, sole ownership,
+causation, research, adoption, or a business result. That file-level limit does
+not override Mason's account of collaborative involvement. Every Figma frame,
+page, component, or mockup retains a margin of error, even when it resembles
+production. `Canonical` means a current organizing destination, not final,
+untouchable, or ultimate truth.
 
 ## Portfolio-wide claims
 
@@ -63,21 +69,22 @@ destination, not final, untouchable, or ultimate truth.
 - Use only the named Translator + Write bundles established by the dated
   launch or archived pricing source. Do not generalize one locale, channel, or
   date to every offer or to Enterprise.
-- Treat feedback, rewrite, and variant conversations as workshop or
-  brainstorming evidence by default. They support Mason's user-authored
-  constraints, corrections, selections, and working artifacts; they do not
-  make assistant suggestions Mason-authored copy.
-- State Mason's Write Pro contribution as workshopping launch-related benefit
+- Treat feedback, rewrite, and variant conversations as collaborative working
+  records. They support Mason's conception, direction, constraints, editing,
+  selection, application, and resulting artifacts. Do not assume that every
+  tool-generated sentence is his verbatim prose, but do not use that wording
+  distinction to erase his contribution.
+- State Mason's Write Pro contribution as helping shape launch-related benefit
   framing, product-page content, explicit limit states, trial prompts, and
-  terminology, with specific user-authored constraints and corrections. Do not
-  imply authorship of generated suggestions, launch ownership, final approval,
-  shipment, adoption, conversion, or measured impact.
+  terminology through iterative writing and content-design work. Do not imply
+  sole launch ownership, final approval, shipment, adoption, conversion, or
+  measured impact.
 - State Mason's June-July 2024 Translator work as a workshop and working
   proposal for clearer grid content, concise-versus-detailed information
-  layers, and cumulative headings. A before-and-after comparison is allowed
-  only for that genuine same-offer working sequence and must be labelled as a
-  proposal, not a production change or proof that Mason authored generated
-  wording.
+  layers, and cumulative headings. Mason's account supports describing this as
+  his collaborative content-design contribution. A before-and-after comparison
+  is allowed only for that genuine same-offer working sequence and must be
+  labelled as a working proposal, not a production change.
 - Keep the 2024 grid proposal separate from Pricing Page V2 in 2024 Q4-2025 Q1.
   Pricing Page V2 supports research, messaging analysis, concepts, and
   test-ready copy only; final rollout and results are not present.
@@ -87,11 +94,14 @@ destination, not final, untouchable, or ultimate truth.
   work caused, shipped as, or was adopted in either later public state.
 - State Mason's naming contribution as participation in and workshopping of a
   terminology system owned by UX Writing and reviewed with Product Marketing.
-  Attribute his direct corrections, not assistant suggestions. Do not claim
-  sole creation, sole ownership, or organization-wide adoption.
-- Voice and API artifacts may establish product or pricing architecture only.
-  No recovered achievement currently supports presenting either as a
-  Mason-owned pricing contribution.
+  His account and the working record support collaborative conception,
+  drafting, correction, and extension of the system. Do not claim sole
+  creation, sole ownership, or organization-wide adoption.
+- Mason's account supports broader collaborative involvement in the Voice and
+  API work represented in the recovered product-design context. They may be
+  used when they have a clear narrative job. Their omission from a case must be
+  an editorial decision about focus and overlap, not a penalty for missing
+  independent contribution proof.
 - Do not claim that a specific version shipped, improved comparison, increased
   conversion, caused revenue, became the current architecture, or was later
   adopted.

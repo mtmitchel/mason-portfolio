@@ -9,5 +9,5 @@
   "extracted_source_messages": 1265,
   "metric_candidates": 2587,
   "correction_statements": 96,
-  "methodology": "Only user-authored messages are retained as evidence. Assistant responses are excluded from the source index."
+  "methodology": "This bounded direct-message index retains only Mason-authored messages. Assistant responses are excluded from this locator index, not automatically excluded from collaborative project interpretation."
 }

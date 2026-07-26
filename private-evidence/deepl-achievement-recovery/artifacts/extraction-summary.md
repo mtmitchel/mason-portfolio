@@ -2,7 +2,9 @@
 
 Generated: 2026-07-18T13:16:25.209Z
 
-This extraction deliberately indexes only Mason's user-authored messages. ChatGPT responses are excluded from the evidence source set.
+This extraction deliberately indexes only Mason's user-authored messages as
+direct-message locators. ChatGPT responses are excluded from this bounded
+index, not declared irrelevant to collaborative project interpretation.
 
 ## Coverage
 

@@ -51,6 +51,14 @@ rejected draft final, and they do not replace narrative judgment. Targeted
 historical and reconstruction records may support chronology, intent,
 rationale, and tradeoffs when their source status remains clear.
 
+Mason's current account is the primary source for his own role, participation,
+contribution, intent, and rationale. Missing contributor metadata or a missing
+second source is not a reason to exclude work he identifies as his
+collaborative experience. Artifact, lifecycle, outcome, causation, and
+publication questions remain separate; none may be used as a substitute
+notary test for his contribution. Historical files that say otherwise record
+an older method and do not override the repository-root rule.
+
 ## Archive boundary
 
 Superseded reviews, old code, retired public assets, obsolete route files,

@@ -13,6 +13,7 @@ The homepage contains six cards in this order:
 
 1. **Upgrade prompts across Translator and Write** — `/work/upgrade-prompts`
 2. **Simplifying pricing across four products** — `/work/pricing-evolution`
+   (frozen public candidate; not the approved next title)
 3. **Checkout across four purchase states** — `/work/checkout`
 4. **Account recovery and team administration** — `/work/account-team-security`
 5. **Turning localization research into a multi-format campaign** — `/work/report-campaign`
@@ -62,39 +63,29 @@ About stays at two short paragraphs:
 The 12% paid-conversion lift and seven-figure ARR increase appear once and
 belong to the wider experiment wave.
 
-### Simplifying pricing across four products
+### Pricing evolution
 
-**Narrative status, 2026-07-26:** Accepted after page-only first-reader
-review. The case uses four movements:
+**Narrative status, 2026-07-26:** Reopened. The live four-product title, page,
+and previous four-movement direction are frozen rejected candidates, not
+current editorial truth.
 
-1. One grid became several buying systems.
-2. Define the relationship before writing the card.
-3. State shared information once.
-4. Let each commercial model use the right pattern.
+The Phase 6 working direction is a focused Translator story provisionally
+titled **Cutting the pricing grid down to what changes**. Write supplies brief
+pressure and context because the pricing page had more paid-product
+relationships to explain. Voice and API are omitted because they dilute this
+case, not because Mason's collaborative involvement lacks outside proof.
 
-The pressure is the expansion from Translator's individual-and-team grid and
-API's developer route into combined, standalone, and account-upgrade routes for
-Write. Mason's supported contribution is competitor research, messaging
-analysis, value-proposition exploration, naming, pricing writing, content
-structure, headline concepts, and copy variations prepared for testing.
+The narrative spine is the genuine June–July 2024 `MON-06` working sequence:
+Mason helped reduce repeated wording, separate scannable card benefits from
+detailed comparison content, and move plan differences toward cumulative
+headings. The clean repeated-list and revised cumulative working images are the
+preferred evidence pair. The red hand-annotated image stays private at Mason's
+editorial direction.
 
-The pivotal content judgment is to define whether an offer is a cumulative
-tier, parallel choice, add-on, or usage-based product before writing the card.
-Shared information then gets one place while changing information follows a
-consistent pattern. The add-on control is a project-level structural turn that
-Mason's content supported, not an interaction decision attributed to him.
-
-The repeated combined cards and cumulative Translator cards are separate
-descriptive states. They are not a Before and After pair because the recovered
-record does not establish comparable same-offer chronology. The table pair and
-add-on pair also use descriptive state labels.
-
-The final movement resolves the four-product promise: Translator uses a
-cumulative ladder; Write combines self-serve and separately named business
-offers; Voice uses parallel offers; API combines subscription, usage, and
-custom pricing. The ending states what the selected work demonstrates without
-claiming shipment, adoption, testing results, causation, customer behaviour, or
-measured outcomes.
+This is a Step 22 diagnosis, not an approved narrative. Do not replace the
+live title or update a new story specification until the Step 23 draft passes
+reader review. The allocation owner is
+[`projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md`](projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md).
 
 ### Checkout across four purchase states
 

@@ -17,10 +17,12 @@ The curated set contains:
 - 13 short, redacted user-authored excerpts tied to exact message IDs;
 - 17 byte-for-byte attachment copies tied to exact asset and message IDs.
 
-Assistant responses are not direct evidence of Mason's authorship or
-contribution. A user-authored message that explicitly reuses, corrects, or
-applies a suggestion may support only Mason's direction and the resulting
-working state, subject to the limits below.
+Mason's current account is the primary evidence for his own role and
+collaborative contribution. Assistant responses do not by themselves prove
+that Mason wrote every line verbatim, but the complete exchange and its
+artifacts can support his conception, direction, editing, selection,
+application, and resulting working state. Missing independent corroboration is
+not a reason to exclude or downgrade that work.
 
 ## Workshop-default rule
 
@@ -28,15 +30,17 @@ Feedback, rewrite, review, and variant requests are workshop or brainstorming
 records by default.
 
 - They may establish the problem Mason was exploring, the constraints he set,
-  a working artifact he supplied, and his own corrections or selections.
-- They do not establish that assistant suggestions were Mason-authored copy,
-  that a generated variant became a project deliverable, or that it was
-  approved, shipped, adopted, tested, or effective.
-- Even when Mason asks to apply an earlier option, attribute only that
-  user-authored direction and the resulting working state. Do not silently
-  assign authorship of the generated wording.
-- A stronger contribution or lifecycle claim requires independent project,
-  artifact, approval, release, or collaborator evidence.
+  ideas he conceived or developed, the writing he supplied or directed, a
+  working artifact he brought into the exchange, and his corrections,
+  selections, editing, or application.
+- They do not automatically establish that every generated sentence was
+  Mason's verbatim prose, that a variant became the final deliverable, or that
+  it was approved, shipped, adopted, tested, or effective.
+- When Mason asks to apply an earlier option, the direction, decision, and
+  resulting working state are part of his collaborative contribution.
+- A stronger lifecycle, outcome, sole-ownership, or exact-verbatim claim may
+  need more detail. A stronger contribution claim does not require an outside
+  certificate when Mason has identified the work as his own experience.
 
 ## Source-shard identity
 
@@ -90,8 +94,10 @@ repository.
 | 2025-01-10 | `P&P Redesign Competitor Analysis` | `67813aac-829c-8006-a341-a6aedb1ff4d4` | `conversations-014.json` | `MON-04` workshop context; competitor and messaging analysis |
 | 2025-02-13 | `DeepL Pricing Headlines` | `67ade857-c3ac-8006-9ef6-9377f8bcda18` | `conversations-016.json` | `MON-04` workshop context; headline exploration and test preparation |
 
-The supporting leads are retained for discovery. They do not create new
-achievement records or raise a lifecycle, outcome, or permission ceiling.
+The supporting leads are retained for discovery. They may add collaborative
+contribution context under Mason's account, but they do not automatically
+create a new achievement family or raise a lifecycle, outcome, or permission
+ceiling.
 
 ## Redacted direct excerpts
 

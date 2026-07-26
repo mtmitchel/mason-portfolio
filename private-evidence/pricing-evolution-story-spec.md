@@ -1,19 +1,25 @@
 # Pricing evolution evidence brief
 
-**Status:** Current accepted story brief
+**Status:** Preserved rejected candidate; not a current story owner
 **Updated:** 2026-07-26
 
-The previous implementation contract was rejected as a narrative. It is
+An earlier implementation contract was rejected as a narrative. It is
 preserved at
 [`../archive/research/pricing-evolution/pricing-evolution-story-spec-rejected-2026-07-25.md`](../archive/research/pricing-evolution/pricing-evolution-story-spec-rejected-2026-07-25.md).
 That file may supply exact interface wording and artifact relationships. It
-does not override the accepted story below.
+does not override current evidence owners.
+
+The four-product candidate in this file was also rejected after its recorded
+reader review. Keep it only for comparison while the public route remains
+frozen. The current Step 22 decision is in
+[`projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md`](projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md).
+Step 23 has not drafted its replacement.
 
 ## What this brief owns
 
-This file records the accepted narrative, evidence role, and factual boundaries
-for the pricing case. Public prose may continue to change within those bounds
-after a later reader review.
+This file records a rejected narrative candidate and its former evidence
+choices. It does not own the next pricing case's subject, order, title, or
+visual sequence.
 
 Use the portfolio and narrative-writing skills together for later editorial
 changes. Evidence integrity remains separate from reader value.
@@ -32,11 +38,12 @@ changes. Evidence integrity remains separate from reader value.
   value-proposition exploration, product and plan naming, pricing writing,
   content structure, headline concepts, and copy variations prepared for
   testing.
-- The add-on control is project evidence. No recovered source supports
-  attributing the interaction decision to Mason.
-- Recovered records and Mason's recollection may support intent, rationale,
-  chronology, and tradeoffs when their status is kept clear. Missing testing
-  records do not erase supported design intent.
+- The add-on control is project evidence. Mason's account supports his
+  collaborative involvement in the surrounding product-design work; do not
+  inflate that into sole ownership of the interaction.
+- Recovered records and Mason's account support intent, rationale, chronology,
+  tradeoffs, and contribution when their status is kept clear. Missing testing
+  records do not erase supported design intent or collaborative work.
 
 ## Current claim limits
 
@@ -50,7 +57,7 @@ visible offer content. Apply the current factual decisions in
 [`claim-review.md`](claim-review.md) to individual assertions; do not use that
 review to choose the narrative structure.
 
-## Accepted narrative
+## Rejected candidate narrative
 
 > As DeepL's pricing expanded from one Translator plan grid into four product
 > and packaging models, Mason turned competitor research and messaging analysis
@@ -113,15 +120,13 @@ Start narrow, then expand only where the story needs it:
 - the current route implementation for the accepted public candidate. Passing
   tests prove integrity and safety, not editorial quality.
 
-## Reader review
+## Historical reader review
 
-The 2026-07-26 page-only review passed. The rendered page explains the pressure,
-Mason's bounded contribution, the pivotal judgment, the research-to-rules
-chain, the role of each evidence group, and how Translator, Write, Voice, and
-API fulfil the title. It does so without relying on private provenance notes or
-unsupported outcomes. One presentation repair prevented expanded images from
-shrinking or stretching inside the scroll pane; the narrative structure did
-not change.
+The 2026-07-26 page-only review initially passed this candidate. Mason's later
+editorial rejection supersedes that qualitative acceptance and reopens the
+subject, title, structure, and visual sequence. The earlier mechanical and
+presentation findings remain historical facts; they do not make the story
+current or approved.
 
 Do not automate movement order, paragraph count, sentence length, first-person
 count, exact editorial prose, asset count, or CSS dimensions as proxies for a

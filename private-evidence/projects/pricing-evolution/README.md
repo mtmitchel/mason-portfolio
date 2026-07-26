@@ -1,7 +1,7 @@
 # Pricing evolution project evidence
 
-Status: Recovery plan steps 1–20 complete; public case and
-current private drafts paused
+Status: Recovery plan steps 1–22 complete after contribution-model correction;
+public case and current private drafts paused
 
 This is the active private index for the pricing evolution and Write Pro
 recovery work. It routes readers to the records that own or support each part
@@ -38,17 +38,27 @@ manifest positions or page lists, and one unsupported feature-awareness
 lineage was removed. The audit did not change the raw ledger, Figma, public
 assets, or the site.
 
+Mason then corrected the recovery's evidence model: his account is valid
+evidence of his role, participation, judgment, and collaborative contribution.
+Missing outside corroboration cannot be used to demote or exclude work he says
+he helped conceive, write, edit, shape, or review. Steps 4–7, the Step 18
+classification interpretation, and Steps 20–22 were revalidated under that
+rule without rescanning Figma or changing raw evidence. Step 12 was also
+clarified so the asset manifest distinguishes recovered historical artifacts
+from portfolio reconstructions created in 2026.
+
 ## Owners and supporting records
 
 | Area | Owner or supporting record | Current status |
 | --- | --- | --- |
 | Work status | [`pricing-evolution-recovery-plan.md`](../../pricing-evolution-recovery-plan.md) | Canonical plan, phase order, gates, and completion state. |
+| Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Phase 6 owner. Every recovered family has one portfolio job or private/hold disposition. The next pricing candidate is `Cutting the pricing grid down to what changes`, centered on the `MON-06` Translator working sequence with Write as brief pressure and context. |
 | Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. The Write Pro reconstruction and dated audit remain supporting records. |
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July grid proposal, naming, repeatable review tooling, and Pricing Page V2. The ledger now contains their source references and claim ceilings. |
 | Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual and publication ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
 | Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Step 20 complete. Exact surviving private nodes are allocated with separate artifact, contribution, lifecycle, outcome, and permission ceilings. `Canonical` remains an organizing destination only. |
 | Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) and [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz) | Steps 18–20 complete: 69 pages, 1,190 roots, 99 of 99 review batches, 12 of 12 zero-root dispositions, every candidate family classified, all routed live checks dispositioned, and final records allocation documented. |
-| Asset provenance | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current selected-asset source, crop, hash, caption, alternative-text, permission, and exact-duplicate records. Three source-equivalent Figma frames are recorded as candidates, but the current PNGs correctly retain `missing` provenance because export lineage is unproved. |
+| Asset provenance and genesis | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current source, crop, hash, caption, alternative-text, permission, exact-duplicate, and artifact-genesis records. Pricing files now distinguish historical-artifact crops from 2026 portfolio reconstructions. Three source-equivalent Figma frames are recorded as candidates, but the current upgrade-prompt PNGs correctly retain `missing` provenance because export lineage is unproved. |
 | Sources | [Pricing source locations](#pricing-source-locations) | Current private source exports, the active reconstruction, and the curated GPT register. The full raw export remains outside the repository. |
 | Paused and archived drafts | [Paused and archived records](#paused-and-archived-records) | Preserved for recovery and comparison only; none is an accepted public story. |
 
@@ -59,6 +69,9 @@ assets, or the site.
 - [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md)
   — current workstream, contribution, lifecycle, outcome, and publication
   boundaries.
+- [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md)
+  — current Phase 6 portfolio jobs and the evidence-safe subject, scope, title,
+  one-sentence diagnosis, and visual direction for the next pricing candidate.
 - [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md) — current
   pricing-to-Figma relationship and claim boundaries.
 - [`figwright-inventory.md`](figwright-inventory.md) — page, batch, Step 18
@@ -91,8 +104,9 @@ private material and must remain outside this repository.
 Current but paused:
 
 - [`deepl-portfolio-current-direction.md`](../../deepl-portfolio-current-direction.md)
-  — its pricing direction is rejected and paused until a rebuilt story passes
-  reader review.
+  — the live four-product pricing direction is rejected and paused. It points
+  to the focused Translator Step 22 direction without treating it as an
+  approved narrative.
 - [`pricing-evolution-story-spec.md`](../../pricing-evolution-story-spec.md)
   — preserved rejected candidate, not an accepted pricing-story owner.
 

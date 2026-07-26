@@ -18,10 +18,13 @@ Each achievement family has one evidence-backed fact set and two applications:
 - **Portfolio use** identifies the strongest story angle and its relationship to the current evidence review. It is not permission to publish confidential material.
 
 Evidence labels retain the recovery package meanings: `confirmed`, `strong`,
-`supported_missing_attachment`, and `lead`. Mason's direct corrections govern CV
-and portfolio framing when raw analytics or attachment recovery is incomplete.
-That allows scope-accurate organizational outcomes without claiming that one
-screen or one copy change caused them.
+`supported_missing_attachment`, and `lead`. Mason's current account governs his
+own role, participation, contribution, intent, and rationale. Missing outside
+corroboration does not exclude work he identifies as collaborative experience.
+His direct corrections also govern CV and portfolio framing when raw analytics
+or attachment recovery is incomplete. This allows normal, scope-accurate
+contribution and organizational outcomes without claiming sole ownership or
+that one screen or one copy change caused them.
 
 ## Recommended six-bullet CV set
 
@@ -176,31 +179,33 @@ individual-variant causation.
 **Evidence:** Confirmed contribution; exact approval, shipment, and results are
 not established
 
-**Canonical achievement:** Workshopped launch-related UX and product content
-for Write Pro across benefit framing, product pages, explicit character- and
-usage-limit states, trial prompts, and enterprise messaging, supplying specific
-constraints and corrections. Separately, workshopped a clearer proposed content
+**Canonical achievement:** Helped conceive, write, edit, and shape
+launch-related UX and product content for Write Pro across benefit framing,
+product pages, explicit character- and usage-limit states, trial prompts, and
+enterprise messaging. Separately, helped develop a clearer proposed content
 structure for the Translator pricing grid, including concise-versus-detailed
 information layers and cumulative headings.
 
-**Supported result:** Direct workshop messages and surviving working images
-establish Mason's constraints, corrections, selections, and the working
-artifacts. They do not make assistant suggestions Mason-authored copy. DeepL
-publicly made Write Pro available in April 2024, but the record does not
-establish which variants shipped. The June-July grid sequence is a working
-proposal, not a production before-and-after.
+**Supported result:** Mason's account, direct workshop messages, and surviving
+working images establish his collaborative contribution and the working
+artifacts. The record does not identify the verbatim author of every
+tool-generated line. DeepL publicly made Write Pro available in April 2024,
+but the record does not establish which variants shipped. The June-July grid
+sequence is a genuine working before-and-after proposal, not a production
+before-and-after.
 
-**CV wording:** Workshopped launch-related Write Pro content and a proposed
+**CV wording:** Helped shape launch-related Write Pro content and a proposed
 Translator pricing-grid structure across comparison levels and cumulative plan
-headings, supplying specific constraints and corrections.
+headings.
 
 **Portfolio use:** Factual substrate for later portfolio allocation. Keep the
 Write Pro launch work and the grid proposal distinct from Pricing Page V2 and
 from the later public cumulative page.
 
-**Withhold:** Authorship of assistant suggestions, launch ownership, final
-approval, shipment, adoption, usability improvement, conversion or revenue
-impact, and any claim that the 2024 grid proposal caused the 2025 public page.
+**Withhold:** Sole launch ownership, verbatim authorship of every
+tool-generated line, final approval, shipment, adoption, measured usability
+improvement, conversion or revenue impact, and any claim that the 2024 grid
+proposal caused the 2025 public page.
 
 ## 9. Authentication and account security
 
@@ -244,11 +249,11 @@ criteria, contributed direct corrections to product and plan naming guidance,
 prototyped and documented a Figma-native content-review tool, and built
 filtering/categorization logic for roughly 9,000 English Phrase keys.
 
-**Supported result:** Working materials, Mason's naming and review constraints,
-prototype development, documentation, and a reusable dynamic-content audit
-dataset are supported. Assistant-generated suggestions are not Mason-authored
-content. Production deployment, team-wide adoption, remediation, and time
-savings are not.
+**Supported result:** Working materials, Mason's conception, direction,
+editing, naming and review decisions, prototype development, documentation, and
+a reusable dynamic-content audit dataset are supported. The record does not
+identify the verbatim author of every tool-generated line. Production
+deployment, team-wide adoption, remediation, and time savings are not.
 
 **CV wording:** Built content-design tools and structured guidance, including a Figma review prototype and a dynamic-content inventory covering roughly 9,000 English Phrase keys.
 

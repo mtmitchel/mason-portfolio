@@ -25,6 +25,11 @@ state retains a margin of error and may be revised by stronger evidence.
 - Recovery records: `MON-01`, `MON-05`, `SYS-01`, and `SYS-04` in the
   [`achievement ledger`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json).
 
+Mason's account establishes his collaborative involvement in this recovered
+work. Direct messages and attachments add detail, but they are not a
+prerequisite for accepting the contribution. Figma alone still cannot identify
+his verbatim wording, sole ownership, lifecycle, or outcomes.
+
 ## Current page map
 
 | Canonical area | Disposition | Supported use | Boundary |
@@ -39,10 +44,10 @@ state retains a margin of error and may be revised by stronger evidence.
 
 | Recovery record | Figma relationship | Ceiling |
 | --- | --- | --- |
-| `MON-05` — Write Pro launch and monetization content | Correlated private artifact candidates at preserved-source nodes `4:184736` and `5:314534`; `4:186544` supplies contribution context only. Direct GPT attachments prove Mason's workshop contribution more precisely than the Figma nodes do. | Mason workshopped launch-related content and supplied specific constraints and corrections. The nodes do not prove authorship, approval, shipment, launch ownership, adoption, outcomes, or publication permission. |
+| `MON-05` — Write Pro launch and monetization content | Correlated private artifact candidates at preserved-source nodes `4:184736` and `5:314534`; `4:186544` adds review context. Direct GPT attachments describe the work more precisely than the Figma nodes do. | Mason's account and the project record support collaborative launch-content work, including conception, writing, editing, constraints, and corrections. The nodes do not by themselves prove verbatim authorship, approval, shipment, sole launch ownership, adoption, outcomes, or publication permission. |
 | `MON-01` — Pro Driver experiment wave | Correlated candidate across pricing/upgrade and experiment pages; exact winning frame unresolved | The [current claim-review owner](../../claim-review.md#upgrade-prompts-across-translator-and-write) permits Mason's confirmed 12% paid-conversion lift and seven-figure ARR uplift only at overall wave scope. Figma does not substantiate the result, and the retired granular formulations must not be used. |
-| `SYS-01` — repeatable review workflow | Contextual to variant and content-pattern pages | Mason's workshop criteria are supported; generated instructions, production deployment, team adoption, and measured improvement are not. |
-| `SYS-04` — naming guidance | Contextual across product, pricing, and content-pattern pages | Participation and direct corrections within the team-owned naming system are supported; generated suggestions, exact implementation, and universal adoption are not. |
+| `SYS-01` — repeatable review workflow | Contextual to variant and content-pattern pages | Mason's account supports his conception, criteria, editing, direction, and application of the AI-assisted approach. Production deployment, team adoption, and measured improvement remain separate and unproved. |
+| `SYS-04` — naming guidance | Contextual across product, pricing, and content-pattern pages | Mason's collaborative conception, drafting, editing, and correction within the team-owned naming system are supported. Exact verbatim authorship varies; implementation and universal adoption remain separate. |
 
 The historical Monetization source node
 [`5:315615`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=5-315615)
@@ -64,9 +69,10 @@ and performance remain unproved.
   Any visual or content relationship between the two sections remains
   unresolved without another focused Figma check.
 - [`4:186544`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=4-186544)
-  is contribution-context evidence only. The adjacent `4:186560` note says
-  `For Ana to review with Mason`, which does not establish authorship,
-  selection, approval, or implementation.
+  is a collaborative review-context artifact. The adjacent `4:186560` note says
+  `For Ana to review with Mason`; Mason's account supplies the wider
+  contribution relationship, while the note alone does not establish exact
+  wording, selection, approval, or implementation.
 
 These dispositions do not select a public visual or authorize a Figma edit,
 export, publication, or site change.

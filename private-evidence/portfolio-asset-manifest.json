@@ -5,6 +5,11 @@
     "derived": "The public asset was derived from another manifest-listed public asset whose hash and relationship are recorded.",
     "missing": "No independent source file is retained. The public file is not treated as its own provenance."
   },
+  "artifact_genesis_categories": {
+    "recovered_historical_export": "A retained export of a historical working or product artifact, not created for the 2026 portfolio.",
+    "crop_of_recovered_historical_export": "A portfolio crop made from a retained historical working or product artifact.",
+    "portfolio_reconstruction_2026": "A frame or crop created or materially reconstructed in 2026 to demonstrate a portfolio idea; it is not historical product evidence."
+  },
   "duplicate_classification": "private-evidence/asset-duplicate-classification.md",
   "assets": [
     {
@@ -119,14 +124,16 @@
       "editability": "flattened",
       "publication_permission": "unknown",
       "contains_sensitive_data": false,
-      "redaction_notes": "The selected product-frame exports contain no private identifiers, comments, tickets, Figma chrome, account avatars or private links. Proposal styling and placeholder values were resolved before export.",
-      "crop_notes": "The public crops keep only the text and controls needed for four story movements: the original Translator grid, the multiplication of buying routes, the commercial relationship behind add-on states, shared versus changing information, and product-specific patterns. The repeated bundle row and cumulative Translator row are descriptive states from different offer scopes; they are not a chronological comparison.",
-      "caption": "Captions identify what each artifact adds without claiming that Mason designed the add-on interaction, that two different offers form a before-and-after pair, or that the selected work shipped or changed customer behaviour.",
-      "text_alternative": "Describe the visible product, route, name, tier relationship, add-on state, price pattern, or table-label distinction. Do not infer ownership, chronology, testing, shipment, adoption, or outcomes from a crop.",
+      "redaction_notes": "The selected frames contain no private identifiers, comments, tickets, Figma chrome, account avatars or private links. Four public files are crops of retained historical artifacts; eight are crops of portfolio exhibits created or materially reconstructed in 2026.",
+      "crop_notes": "The frozen public candidate mixes historical-artifact crops with 2026 portfolio reconstructions. Artifact genesis is recorded per file below. The repeated bundle row and reconstructed cumulative Translator row are different evidence types and must not be presented as an unlabelled historical before-and-after.",
+      "caption": "Any later caption must identify whether the image is a historical artifact or a 2026 portfolio reconstruction, then state the content-design idea it demonstrates without implying shipment, adoption, testing, or measured impact.",
+      "text_alternative": "Describe the visible product, route, name, tier relationship, add-on state, price pattern, or table-label distinction. If the image is a 2026 reconstruction, say so in the surrounding public caption; do not present it as historical product evidence.",
       "export_ready": false,
       "files": [
         {
           "path": "legacy-two-tab-grid.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Portfolio crop of a retained historical two-tab Translator and API pricing-page screenshot.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
           "source_sha256": "db460df886993402ef0440a7322ed0b1323bae3343dd5ee94817fdc2526a81a1",
@@ -146,6 +153,8 @@
         },
         {
           "path": "bundle-era-selector-in-context.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Portfolio crop of the retained historical three-route bundle-rollout artifact; the 2026 exhibit repair did not alter its source.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
           "source_sha256": "6c3e5efba8f9bfa0eb1a649341b5ed638fc09900c681566e7ce05e6fe22bbbe6",
@@ -165,6 +174,8 @@
         },
         {
           "path": "bundle-era-write-grid.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Portfolio crop of a retained historical Write Pro pricing export.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
           "source_sha256": "27aa96e69d50848228d328382d3cd9de78052e3044f9b30921d7305f4fc861c8",
@@ -184,6 +195,8 @@
         },
         {
           "path": "addon-on-cards.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of the 2026 portfolio reconstruction of the later internal toggle-on direction; not a historical product screenshot.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
           "source_sha256": "879fae09f6b0a7b94638b02e072afff3079dd8bc148a5e8066f4cf576927578a",
@@ -203,6 +216,8 @@
         },
         {
           "path": "addon-off-cards.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of the 2026 styling reconstruction of the toggle-off direction; not a historical product screenshot.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
           "source_sha256": "20d8b250c78715afaaaab1b5b3f4075b29d720eecb1aa0718217ced6664204c2",
@@ -222,6 +237,8 @@
         },
         {
           "path": "cards-bundle-repeated.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Portfolio crop of a retained historical bundle-pricing export with repeated Write Pro groups.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
           "source_sha256": "3b3773e66cd6d4dfd3a545c30b9ae98032e1d2c207c3edbebe5793fb4fd35160",
@@ -241,6 +258,8 @@
         },
         {
           "path": "cards-cumulative-tiers.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of the 2026 portfolio reconstruction demonstrating cumulative Translator tier headings.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
           "source_sha256": "2de075cc95acfd49f0bf47a444a2a2203714d1e5886bff61673fedda494c7aa9",
@@ -260,6 +279,8 @@
         },
         {
           "path": "table-values-repeat-label.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of a 2026 portfolio reconstruction showing the pre-transform repeated-label table state.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/historical/rev6-round3-pricing-translator-transition-clean.png",
           "source_sha256": "77df029a7885d429857972e1df26c330a21b75b94ee0e9071818602fd859e791",
@@ -279,6 +300,8 @@
         },
         {
           "path": "table-labels-own-qualifier.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of the 2026 portfolio reconstruction demonstrating the label-once table transform.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png",
           "source_sha256": "51baebbd05e88347fd229133d163445793639c97d9ae614d95886d127c48b2c4",
@@ -298,6 +321,8 @@
         },
         {
           "path": "product-write-cards.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of a Write offer pattern refined for the 2026 portfolio exhibit; not historical product evidence.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
           "source_sha256": "dd0e4492250f8738a1ee121e3aa8a137ca4444c1b9b2960b3ce072b3a396fe46",
@@ -317,6 +342,8 @@
         },
         {
           "path": "product-voice-cards.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of a Voice offer pattern refined for the 2026 portfolio exhibit; not historical product evidence.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
           "source_sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9",
@@ -336,6 +363,8 @@
         },
         {
           "path": "product-api-cards.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Crop of an API offer pattern refined for the 2026 portfolio exhibit; not historical product evidence.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
           "source_sha256": "d68405c08e79136a5979308cab6f75e516fbff3c190cbf3f7d48b9a2a90d3dc9",

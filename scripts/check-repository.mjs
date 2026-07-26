@@ -229,6 +229,11 @@ const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
 const currentDate = new Date().toISOString().slice(0, 10);
 const manifestAssets = Array.isArray(manifest.assets) ? manifest.assets : [];
 const sha256Pattern = /^[a-f0-9]{64}$/;
+const allowedArtifactGenesis = new Set([
+  "recovered_historical_export",
+  "crop_of_recovered_historical_export",
+  "portfolio_reconstruction_2026",
+]);
 const parsedManifestDate = typeof manifest.updated === "string"
   ? Date.parse(`${manifest.updated}T00:00:00.000Z`)
   : Number.NaN;
@@ -242,6 +247,14 @@ record(validManifestDate, "asset manifest update date should be a valid ISO date
 record(!validManifestDate || manifest.updated <= currentDate, "asset manifest update date should not be in the future");
 record(Array.isArray(manifest.assets), "asset manifest assets should be an array");
 record(manifestAssets.length > 0, "asset manifest should contain at least one project record");
+record(
+  manifest.artifact_genesis_categories
+    && [...allowedArtifactGenesis].every(
+      (category) => typeof manifest.artifact_genesis_categories[category] === "string"
+        && manifest.artifact_genesis_categories[category].trim().length > 0,
+    ),
+  "asset manifest should define every artifact-genesis category",
+);
 
 const assetIds = manifestAssets.map((asset) => asset.id);
 const projectIds = manifestAssets.map((asset) => asset.project_id);
@@ -382,6 +395,22 @@ async function validatePublicRecord(recordValue, label, publicPath) {
   }
 
   await validateProvenance(recordValue, label, publicPath);
+}
+
+const pricingEvolutionAsset = manifestAssets.find(
+  (asset) => asset.id === "DEEPL-PRICING-EVOLUTION",
+);
+record(Boolean(pricingEvolutionAsset), "asset manifest should contain DEEPL-PRICING-EVOLUTION");
+for (const file of pricingEvolutionAsset?.files ?? []) {
+  record(
+    allowedArtifactGenesis.has(file.artifact_genesis),
+    `DEEPL-PRICING-EVOLUTION: ${file.path}: a valid artifact_genesis is required`,
+  );
+  record(
+    typeof file.artifact_genesis_notes === "string"
+      && file.artifact_genesis_notes.trim().length > 0,
+    `DEEPL-PRICING-EVOLUTION: ${file.path}: artifact_genesis_notes are required`,
+  );
 }
 
 for (const asset of manifestAssets) {

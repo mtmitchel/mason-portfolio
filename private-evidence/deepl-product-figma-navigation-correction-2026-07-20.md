@@ -33,6 +33,13 @@ direct project, approval, release, public-product, and Mason correction evidence
 before making lifecycle, authorship, or exact-production claims. New evidence
 may revise any current mapping.
 
+Figma contributor metadata is not the authority for Mason's role. Mason's
+current account establishes his collaborative involvement in recovered work he
+identifies as his own project context. Use the file and project record to infer
+a proportionate scope; do not exclude a family merely because the node itself
+does not name him. Exact verbatim authorship, sole ownership, lifecycle,
+causation, and outcomes remain separate questions.
+
 ## Product model: historical truth and current truth
 
 During the period represented by the recovered work, DeepL Translator, DeepL
@@ -170,8 +177,10 @@ candidates.
 - Keep checkout as a separate visual option unless it is deliberately used as
   supporting infrastructure inside the selected Pro Driver story.
 - Voice and API belong in the product/pricing architecture inventory because
-  the Figma contains their plan surfaces. No recovered Mason achievement
-  currently supports promoting either to a Mason-owned case study.
+  the Figma contains their plan surfaces. Mason's account supports
+  collaborative involvement across this wider product-design context. Whether
+  either appears in a case is an editorial question about story value and
+  overlap, not a missing-contribution veto.
 - Trial eligibility, plan routing, bundles, account state, and checkout are
   shared commercial infrastructure. They can support product-specific stories
   or become focused system mini cases, but they are not a fifth product.
@@ -190,9 +199,10 @@ candidates.
   came from DeepL business-intelligence reporting and apply to the overall Pro
   Driver/free-to-paid experiment wave. They may be used at that scope in career
   materials; do not attach them to any visible screen or variant.
-- Voice and API plan frames prove artifact existence only. They do not prove
-  Mason's contribution, experiment participation, shipment, lifecycle, or
-  outcome.
+- Voice and API plan frames prove artifact existence only when read in
+  isolation. Mason's account may establish collaborative involvement; the
+  frames still do not by themselves establish his exact wording, sole
+  ownership, experiment role, shipment, lifecycle, or outcome.
 - Figma proves artifact/state. Recovery evidence may prove contribution,
   initiative context, or an outcome. Neither source upgrades the other
   automatically.

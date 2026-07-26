@@ -92,6 +92,31 @@ selected case, claim, frame, or acceptance result.
 - Claim ceilings qualify or remove unsupported factual assertions. They must
   not force a flat chronology, neutralize the candidate's judgment, or dictate
   sentence rhythm and case structure.
+- Mason is the primary source for his own role, participation, contribution,
+  intent, rationale, and recollection. His explicit current account is valid
+  contribution evidence and outranks an absence of contributor metadata,
+  older reconstruction language, and automated extraction limits.
+- For recovered DeepL material that Mason identifies as work he participated
+  in, treat his collaborative involvement as established. Use the surrounding
+  project record and artifacts to infer a reasonable, interview-defensible
+  scope. Lack of independent corroboration alone must never downgrade, omit,
+  hold, or exclude an experience, and it must never be used as a portfolio
+  selection criterion. Mason decides whether the resulting account overreaches
+  what he can defend in an interview.
+- State supported collaborative contribution in normal public prose. Do not
+  expose a provenance argument or qualify it as merely "Mason says." An
+  AI-assisted workshop output is a collaborative working artifact when Mason's
+  account and the project context connect him to it. Do not erase his
+  conception, direction, selection, editing, or application merely because a
+  tool generated some wording.
+- Keep the remaining dimensions separate. Mason's account of participation
+  does not make every visible string his verbatim prose, turn collaboration
+  into sole ownership or leadership, prove approval or shipment, or assign an
+  aggregate outcome to one person or artifact. Preserve his explicit
+  corrections and genuine source conflicts. Ask only when a proposed claim
+  materially contradicts his current account or asserts sole ownership,
+  lifecycle, causation, or an outcome beyond it—not because an outside
+  certificate of contribution is missing.
 - The current implementation, story spec, and tests are candidates—not proof
   of editorial quality. Explicit user rejection or a failed reader review
   reopens the subject, framing, section order, prose, evidence selection, and

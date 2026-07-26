@@ -29,6 +29,11 @@ Figma supports visible artifact and state evidence. Recovery supports
 contribution and initiative context. Exact authorship, shipment, adoption,
 reduced errors, and measured outcomes remain unproved.
 
+Mason's current account establishes his collaborative involvement in the
+recovered project family. A node that does not name a contributor may still
+support the portfolio when its story job is clear; it simply cannot establish
+verbatim authorship, sole ownership, lifecycle, or outcomes by itself.
+
 ## Current crosswalk
 
 | Canonical area | Current relationship | Supported use | Boundary |

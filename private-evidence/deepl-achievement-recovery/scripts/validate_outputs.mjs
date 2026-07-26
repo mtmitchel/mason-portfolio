@@ -24,6 +24,11 @@ const artifactRefKeys = new Set();
 const duplicateArtifactRefs = new Set();
 const artifactHashCache = new Map();
 
+// `sources[].message_id` is intentionally a direct-message locator schema.
+// Validating that locator as user-authored does not make this index the full
+// contribution model; current Mason accounts and collaborative artifacts are
+// interpreted by the active evidence owners.
+
 async function artifactHash(repoPath) {
   if (!artifactHashCache.has(repoPath)) {
     const bytes = await fs.readFile(path.join(repoRoot, repoPath));

@@ -8,9 +8,16 @@ This document reconstructs the DeepL Write Pro launch-related work preserved in 
 
 The export is strong evidence that the work happened, but it is not an approval log. ChatGPT suggestions, screenshots, internal-document extracts, and Mason's corrections appear together. Accordingly:
 
+- Mason's current account is primary evidence of his own collaborative role.
+  Read the complete exchanges and artifacts as evidence of his conception,
+  direction, writing, editing, selection, and application. Do not require an
+  outside source before accepting that contribution.
 - **Confirmed project evidence** means the export contains a user prompt, screenshot, attachment record, or extracted source text.
 - **Candidate copy** means wording visible in a screenshot or produced during an iterative conversation; it is not necessarily approved or shipped.
 - **Inferred intent** means the purpose is clear from repeated instructions, but the export does not contain a formal project charter.
+- A tool-generated line is not automatically Mason's verbatim prose. That
+  narrow wording distinction does not erase the collaborative work that
+  produced, selected, edited, or applied it.
 - Product details and terminology are historical snapshots from 2024. They should not be treated as current without checking a live DeepL source.
 
 ## Executive summary

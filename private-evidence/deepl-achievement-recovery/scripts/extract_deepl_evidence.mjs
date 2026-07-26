@@ -270,7 +270,7 @@ const summary = {
   extracted_source_messages: sourceMessages.length,
   metric_candidates: metrics.length,
   correction_statements: corrections.length,
-  methodology: "Only user-authored messages are retained as evidence. Assistant responses are excluded from the source index.",
+  methodology: "This bounded direct-message index retains only Mason-authored messages. Assistant responses are excluded from this locator index, not automatically excluded from collaborative project interpretation.",
 };
 
 await Promise.all([
@@ -288,7 +288,9 @@ const markdown = `# DeepL evidence extraction summary
 
 Generated: ${summary.generated_at}
 
-This extraction deliberately indexes only Mason's user-authored messages. ChatGPT responses are excluded from the evidence source set.
+This extraction deliberately indexes only Mason's user-authored messages as
+direct-message locators. ChatGPT responses are excluded from this bounded
+index, not declared irrelevant to collaborative project interpretation.
 
 ## Coverage
 

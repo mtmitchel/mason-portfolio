@@ -61,10 +61,16 @@ The crosswalks record what Figma adds or does not add to those records.
 - Check both directions: achievement to Figma and Figma to achievement.
 - Keep artifact, contribution, lifecycle, outcome, and publication permission
   independent.
+- Figma metadata alone may not identify an exact contributor. That narrow
+  limitation does not override Mason's account of his collaborative work.
+  When Mason connects himself to a recovered project or artifact family, use
+  that account plus the surrounding project context to establish a reasonable
+  contribution scope. Do not require a second source before the work can be
+  considered or selected.
 - Use `direct`, `correlated`, `contextual`, `conflicting`, `recovery-only`,
   `Figma-only`, or `unresolved`; do not force an exact match.
-- A visible frame does not prove authorship, shipment, selection, adoption,
-  causation, or a result.
+- A visible frame alone does not prove verbatim authorship, shipment,
+  selection, adoption, causation, or a result.
 - Visual resemblance to a shipped experience does not eliminate the margin of
   error or establish exact production equivalence.
 - A recovery record does not prove that a visible Figma variant was approved or

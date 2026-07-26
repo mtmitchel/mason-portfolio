@@ -19,6 +19,13 @@ portfolio decisions, use
 and
 [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md).
 
+Mason's current account is sufficient evidence for his own role,
+participation, contribution, intent, and rationale. The independent-source
+language in this master describes what the eight files add; it is not a
+prerequisite for using work Mason identifies as his collaborative experience.
+Continue to separate that contribution from sole ownership, exact lifecycle,
+and personal causation.
+
 ## Purpose
 
 This master removes repeated wording, AI-expanded claims, duplicated metrics, and future-development material from the recovered performance-review files. It preserves the useful facts once, identifies the strongest source for each fact, and records what the files do and do not prove.

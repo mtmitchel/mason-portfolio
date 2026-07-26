@@ -9,10 +9,11 @@
     }
   ],
   "evidence_policy": {
-    "confirmed": "Direct contemporaneous user-authored project material identifies Mason's work or deliverable.",
-    "strong": "The contribution is repeated in review material and supported by project records or manager feedback.",
+    "candidate_account": "Mason's explicit current account is valid evidence for his own role, participation, contribution, intent, and rationale. Missing independent corroboration may not exclude or downgrade work he identifies as collaborative experience.",
+    "confirmed": "Mason's explicit account or direct contemporaneous project material identifies his work or deliverable.",
+    "strong": "Mason's account is reinforced by review material, project records, or manager feedback.",
     "supported_missing_attachment": "The claim was extracted from an uploaded source and repeated in review material, but the uploaded source file is absent from the export.",
-    "lead": "The chat establishes likely work or planning, but completion or impact needs another source.",
+    "lead": "The contribution or plan is credible, but a specific lifecycle or impact claim still needs clarification.",
     "excluded": "A claim contradicted by Mason or traceable only to assistant invention. Excluded from career bullets."
   },
   "achievements": [
@@ -577,12 +578,12 @@
       "period": "2024-Q1 to 2024-Q2",
       "team": "Monetization / Content Design",
       "initiative": "DeepL Write Pro launch and monetization content",
-      "achievement": "Workshopped launch-related UX and product copy across Write Pro benefit framing, product-page structure, free-to-paid limit states, trial prompts, and enterprise messaging.",
-      "contribution": "Brought working copy and artifacts into iterative review; set criteria for B2B benefit hierarchy, product-led page content, character-limit clarity, and the separate jobs of headline, explanation, and CTA; and directly corrected misleading or unsupported wording.",
-      "outcome": "Contemporaneous workshop records and surviving screenshots establish the exploration, Mason's constraints, and his direct corrections. They do not establish authorship of assistant suggestions or which variants were approved or shipped. DeepL made Write Pro available for purchase in April 2024.",
+      "achievement": "Helped shape launch-related UX and product content across Write Pro benefit framing, product-page structure, free-to-paid limit states, trial prompts, and enterprise messaging.",
+      "contribution": "Conceived, wrote, directed, edited, selected, and applied content through iterative review; set criteria for B2B benefit hierarchy, product-led page content, character-limit clarity, and the separate jobs of headline, explanation, and CTA; and corrected misleading or unsupported wording.",
+      "outcome": "Mason's account, contemporaneous workshop records, and surviving screenshots establish collaborative launch-content work and its working artifacts. The record does not identify the verbatim author of every generated line or which variants were approved or shipped. DeepL made Write Pro available for purchase in April 2024.",
       "metrics": [],
       "confidence": "confirmed",
-      "claim_ceiling": "Workshopped launch-related UX and product content for DeepL Write Pro. Attribute only Mason's user-authored constraints, corrections, selections, and independently supported work; do not attribute assistant suggestions to him or claim launch ownership, final approval, shipment, adoption, conversion, or measured impact.",
+      "claim_ceiling": "Helped conceive, write, edit, and shape launch-related UX and product content for DeepL Write Pro. Do not claim sole launch ownership, verbatim authorship of every tool-generated line, final approval, shipment, adoption, conversion, or measured impact.",
       "sources": [
         {
           "title": "Upgrade to DeepL Write.",
@@ -612,12 +613,12 @@
       "period": "2024-06 to 2024-07",
       "team": "Monetization / Content Design",
       "initiative": "Translator pricing-grid scannability and cumulative structure",
-      "achievement": "Workshopped a clearer proposed content structure for the Translator pricing grid and its relationship to the detailed comparison table.",
+      "achievement": "Helped develop a clearer proposed content structure for the Translator pricing grid and its relationship to the detailed comparison table.",
       "contribution": "Set goals for shorter, more consistent benefit wording; identified editable files and shared glossaries as distinct benefits; retained relevant team-administration information; distinguished concise grid content from detailed comparison content; and explicitly requested cumulative headings in a connected revision.",
-      "outcome": "Direct user-authored workshop messages and four hash-verified working images establish a same-offer exploration and Mason's constraints and corrections. They do not establish authorship of assistant suggestions, production use, later adoption, usability improvement, or commercial impact.",
+      "outcome": "Mason's account, direct workshop messages, and four hash-verified working images establish his collaborative role in a same-offer exploration and working proposal. They do not establish verbatim authorship of every generated line, production use, later adoption, usability improvement, or commercial impact.",
       "metrics": [],
       "confidence": "confirmed",
-      "claim_ceiling": "Workshopped a clearer proposed pricing-grid content structure and cumulative working sequence. Attribute only Mason's user-authored constraints, corrections, and selections; do not call assistant suggestions his authored copy, call the images a production before/after, or claim shipment, later adoption, causation, faster comparison, conversion, or revenue impact.",
+      "claim_ceiling": "Helped develop a clearer proposed pricing-grid content structure and cumulative working sequence. The genuine images may be presented as a working before-and-after proposal; do not call them production states or claim shipment, later adoption, causation, measured comparison improvement, conversion, or revenue impact.",
       "sources": [
         {
           "title": "Enhance Pricing Grid Readability",
@@ -769,7 +770,7 @@
       "outcome": "Produced structured reference material used in tooling prototypes; organization-wide adoption is not proven.",
       "metrics": [],
       "confidence": "confirmed",
-      "claim_ceiling": "Created structured guidance and explored or workshopped repeatable AI-assisted review approaches. Do not attribute assistant-generated instructions to Mason or claim production deployment, organization-wide adoption, automated quality gains, conversion impact, or measured time savings.",
+      "claim_ceiling": "Created structured guidance and helped design repeatable AI-assisted review approaches. Mason may describe his conception, direction, editing, selection, and application of the resulting workflow; do not claim production deployment, organization-wide adoption, automated quality gains, conversion impact, or measured time savings.",
       "sources": [
         {
           "title": "Custom GPT Copy Improvement",
@@ -880,10 +881,10 @@
       "initiative": "Product and plan naming guidance",
       "achievement": "Contributed to and workshopped naming guidance across DeepL products, paid plans, bundles, shortened forms, and space-constrained UI contexts.",
       "contribution": "Worked on naming-principles material with coworkers and made direct corrections to distinctions among product names, plan names, free-version language, bundles, subscriptions, collective DeepL Pro usage, and contextual Write Pro shorthand.",
-      "outcome": "Direct project messages establish Mason's participation, constraints, and corrections, not authorship of assistant suggestions or every draft. The embedded paid-plan source says the terminology record was owned by UX Writing and reviewed with Product Marketing; organization-wide adoption is not established.",
+      "outcome": "Mason's account and direct project messages establish collaborative conception, drafting, constraints, and corrections. They do not identify the verbatim author of every generated line or every draft. The embedded paid-plan source says the terminology record was owned by UX Writing and reviewed with Product Marketing; organization-wide adoption is not established.",
       "metrics": [],
       "confidence": "confirmed",
-      "claim_ceiling": "Contributed to and workshopped product and plan naming guidance. Attribute only Mason's direct corrections and independently supported contribution; do not attribute assistant suggestions to him or claim sole creation, sole ownership, universal adoption, or that every recovered draft became the final standard.",
+      "claim_ceiling": "Helped conceive, draft, edit, and extend product and plan naming guidance within a team-owned system. Do not claim sole creation, sole ownership, universal adoption, verbatim authorship of every tool-generated line, or that every recovered draft became the final standard.",
       "sources": [
         {
           "title": "Naming Principles for DeepL",

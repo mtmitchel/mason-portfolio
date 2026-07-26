@@ -1,7 +1,7 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; Steps 1–20 complete; public pricing
-implementation frozen
+Status: Active; Steps 1–22 complete after targeted contribution-model and
+artifact-genesis correction; public pricing implementation frozen
 
 Last updated: 2026-07-26
 
@@ -13,6 +13,23 @@ direction, story brief, achievement recovery package, and asset manifest.
 The evidence, repository, and continuation context behind this plan is recorded
 in
 [`pricing-evolution-recovery-audit-2026-07-26.md`](pricing-evolution-recovery-audit-2026-07-26.md).
+
+## 2026-07-26 correction and rollback decision
+
+Mason clarified that his account is valid evidence of his own role,
+participation, judgment, and collaborative contribution. The earlier recovery
+incorrectly treated missing outside corroboration as a veto in several active
+owners. The earliest numbered step affected was **Step 4**, because the
+chronology had already begun narrowing contribution on that basis.
+
+This did not require a restart. Steps 1–3 and the source recovery remain valid.
+Steps 4–7 were corrected and revalidated under Mason's account. Step 12 was
+reopened only to distinguish historical artifacts from 2026 portfolio
+reconstructions. Step 18's saved-ledger coverage remains complete; only its
+contribution interpretation and final routing summaries were corrected.
+Step 20 records and Steps 21–22 were then revalidated. No GPT-export
+re-curation, raw-ledger rewrite, batch review, Figma inspection, source export,
+public asset, or site change was required.
 
 Update this file whenever work begins, finishes, changes order, or becomes
 blocked:
@@ -32,7 +49,8 @@ blocked:
 - The paused pricing candidate is preserved on
   `pricing-case-presentation-wip` at `05df5d0`. Evidence recovery proceeds on
   `pricing-evidence-recovery` without changing that candidate or its linked
-  signoff worktree.
+  signoff worktree. The contribution-model correction began from
+  `2493d6188f8b0c49924eebad49a3fd0f468fa57b` on that recovery branch.
 - Mason separately approved committing and pushing the Steps 18–20 checkpoint.
   Commit `b1d7552` is preserved on the private `origin/pricing-evidence-recovery`
   branch. That approval does not authorize any later commit or push.
@@ -107,29 +125,38 @@ pricing owner from one index.
 
   Completed 2026-07-26. The active chronology now separates public product
   states, private work evidence, later page changes, and bounded unknowns.
+  Revalidated after Mason's correction: his account now governs collaborative
+  contribution where Figma or message metadata does not name every exact
+  author.
 - [x] 5. Build a contribution map separating Write Pro launch work, June/July
   2024 grid simplification, naming and terminology work, repeatable review
   tooling, and 2025 Pricing Page V2 work.
 
-  Completed 2026-07-26. Each workstream now has independent artifact,
-  contribution, lifecycle, outcome, publication, and claim boundaries.
+  Completed 2026-07-26. Each workstream now has separate artifact,
+  contribution, lifecycle, outcome, publication, and claim boundaries. Mason's
+  account is the primary contribution source; missing outside corroboration is
+  not a downgrade.
 - [x] 6. Add the missing achievement records and claim ceilings to the recovery
   ledger without implying sole ownership, shipment, adoption, testing,
   causation, or measured results.
 
   Completed 2026-07-26. The ledger now adds `MON-05`, `MON-06`, and `SYS-04`,
   strengthens the `SYS-01` source trail, and gives every pricing-related
-  workstream an explicit claim ceiling.
+  workstream an explicit claim ceiling. The corrected ceilings recognize
+  Mason's conception, writing, editing, direction, and collaborative work while
+  keeping exact verbatim authorship, sole ownership, lifecycle, outcome, and
+  causation separate.
 - [x] 7. Correct the current claim review where it conflates chronological
   product names, buying routes, and tiers. Preserve superseded wording in the
   archive.
 
   Completed 2026-07-26. The current claim owner now distinguishes dated product
   states and contributions; the replaced pricing section is preserved in the
-  pricing research archive.
+  pricing research archive. The current owner now states explicitly that
+  Mason's account is valid contribution evidence.
 
-Gate: every proposed public contribution has a direct source, evidence class,
-chronological position, and factual ceiling.
+Gate: every proposed public contribution has a candidate account or supporting
+source, evidence class, chronological position, and factual ceiling.
 
 ## Phase 3: Consolidate documents and selected raw evidence
 
@@ -168,8 +195,10 @@ chronological position, and factual ceiling.
   provenance index, 13 redacted user-authored excerpts, and 17 byte-for-byte
   private attachment copies. The full export and broader internal source
   documents remain outside the repository. Feedback, rewrite, and variant
-  conversations are classified as workshop evidence by default; assistant
-  suggestions are not attributed to Mason.
+  conversations are classified as collaborative workshop evidence. Tool output
+  is not automatically treated as Mason's exact verbatim prose, but the
+  exchanges can support his conception, direction, writing, editing, selection,
+  and application.
 
 Gate: current evidence is discoverable without treating archived research,
 execution logs, or the raw GPT export as active owners.
@@ -183,7 +212,10 @@ execution logs, or the raw GPT export as active owners.
   Completed 2026-07-26. Eight selected originals moved into active private
   source folders. The current manifest has 44 public-file records with verified
   hashes and an explicit source status: 24 verified private sources, five
-  recorded derivatives, and 15 honestly missing independent sources.
+  recorded derivatives, and 15 honestly missing independent sources. Reopened
+  and repaired on 2026-07-26 to classify the 12 pricing files by artifact
+  genesis: historical-artifact crops versus portfolio reconstructions made in
+  2026.
 - [x] 13. Classify exact duplicates as intentional copies, source-internal
   duplicates, superseded history, or archive-cleanup candidates. Preserve
   material and request separate approval before destructive cleanup.
@@ -274,6 +306,12 @@ relevant page.
   repaired to assign all 174 Pricing roots and all 64 Checkout page records
   exactly once at family or page level, remove overlapping ranges, and retain
   the original evidence ceilings. No raw ledger or Figma change was required.
+
+  The contribution interpretation was corrected again after Mason clarified
+  his role. Historical `unknown contributor` language now means only that Figma
+  metadata does not attribute an exact layer or string; it cannot overrule
+  Mason's account or exclude the work. Coverage, root assignments, and
+  classifications did not require a rescan.
 - [x] 19. Run focused second Figwright passes only on finalists or unresolved
   clusters to verify exact frame relationships, chronology, readable text,
   editability, and whether they improve on current portfolio assets.
@@ -306,6 +344,10 @@ relevant page.
   unproved. No Figma edit, export, public selection, asset replacement, or site
   change was made.
 
+  Revalidated after the contribution-model correction. The crosswalks now keep
+  Figma-only attribution limits separate from Mason's account of his wider
+  collaborative contribution.
+
 ### Figwright coverage tracker
 
 The detailed running inventory is
@@ -333,16 +375,37 @@ exports, public selection, and public-page work have not started.
 
 ## Phase 6: Allocate the recovered work across the portfolio
 
-- [ ] 21. Allocate recovered material across the pricing narrative,
+- [x] 21. Allocate recovered material across the pricing narrative,
   upgrade-prompts improvements, a possible Write Pro launch sample,
   naming/content-system evidence, CV or achievement support, and private-only
   records. Avoid overlapping cases.
-- [ ] 22. Reconsider the pricing case's subject, title, and scope from the
+
+  Completed and revalidated 2026-07-26. Every recovered workstream and all 35
+  final Step 18 families now have one portfolio job, project route, reserve
+  decision, or explicit private/hold disposition. Limit-state work belongs to
+  the existing upgrade-prompts case, product-page launch work remains a
+  possible sample on reserve to avoid overlap, terminology belongs to
+  content-system evidence, Pricing Page V2 supports achievements, and
+  unrelated checkout, security, and administration material remains with its
+  own project. No work is held merely for lacking outside contribution proof.
+- [x] 22. Reconsider the pricing case's subject, title, and scope from the
   corrected evidence, including whether Translator and Write should form the
   spine and Voice/API should be reduced to context or removed.
 
-Gate: each selected experience has one clear portfolio job and does not depend
-on weakly supported ownership.
+  Completed and revalidated 2026-07-26. The next candidate is provisionally
+  titled `Cutting the pricing grid down to what changes` and uses the genuine
+  `MON-06` same-offer working sequence as its contribution spine. Write is brief
+  pressure and context rather than an equal or causal second case; Voice and
+  API are omitted for focus, not because Mason's contribution lacks outside
+  proof. The clean 2024 repeated-list and cumulative-state images are the
+  preferred visual pair. Mason's red hand-annotated image remains private at
+  his editorial direction. The rationale and required one-sentence story
+  diagnosis are recorded in the Phase 6 allocation owner.
+
+Gate: each selected experience has one clear, non-overlapping portfolio job;
+Mason's account is accepted as contribution evidence; and remaining lifecycle,
+outcome, permission, and narrative boundaries are explicit. Passed 2026-07-26;
+Step 23 drafting is the next action after repository validation.
 
 ## Phase 7: Rebuild the pricing story
 

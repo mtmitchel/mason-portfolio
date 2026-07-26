@@ -30,6 +30,11 @@ documented contribution and initiative context. Neither proves shipment,
 adoption, error reduction, security outcomes, or authorship of every string.
 MFA evidence must not be used as SSO evidence.
 
+Mason's current account is sufficient evidence of his collaborative
+involvement in the recovered project family. Missing contributor metadata in a
+specific node narrows exact-string claims; it does not exclude the experience
+or require outside corroboration before portfolio consideration.
+
 ## Current crosswalk
 
 | Canonical area | Current relationship | Supported use | Boundary |

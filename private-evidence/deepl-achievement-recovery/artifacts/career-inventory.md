@@ -8,6 +8,12 @@ exports remain a provenance limitation, not an automatic reason to remove those
 figures from career materials. Keep every outcome at its honest team, program,
 campaign, platform, or experiment-wave scope.
 
+Mason's current account is also the primary source for his own role and
+collaborative contribution. Missing outside corroboration or contributor
+metadata does not remove work he identifies as his experience. The boundaries
+below still separate collaboration from sole ownership, exact lifecycle, and
+personal causation.
+
 ## Career arc reconstructed from the export
 
 ### Marketing and editorial content — 2023
@@ -39,13 +45,13 @@ campaign, platform, or experiment-wave scope.
 
 ### Monetization and experimentation — 2024 to early 2025
 
-- Workshopped launch-related UX and product content for Write Pro, setting
-  constraints and directly correcting benefit framing, limit states, trial
-  prompts, and enterprise messaging without treating generated suggestions as
-  Mason-authored copy.
-- Workshopped a connected June-July 2024 pricing-grid sequence around
-  concise-versus-detailed information layers and cumulative headings; the
-  working sequence does not establish authorship of generated wording.
+- Helped conceive, write, edit, and shape launch-related UX and product content
+  for Write Pro across benefit framing, limit states, trial prompts, and
+  enterprise messaging.
+- Helped develop a connected June-July 2024 pricing-grid sequence around
+  concise-versus-detailed information layers and cumulative headings. The
+  working record does not identify the verbatim author of every generated line,
+  but that does not reduce Mason's collaborative contribution.
 - Contributed message and copy variants for Pro Driver experiment DM-1523.
 - Supported content refinement for checkout-flow experiment DM-1418.
 - Helped develop messaging for anonymous-user soft-block experiment DM-1417.

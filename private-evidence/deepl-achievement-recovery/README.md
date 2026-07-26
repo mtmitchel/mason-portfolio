@@ -61,12 +61,23 @@ Particularly useful outcomes include:
 
 The supplemental performance-review review completed on 2026-07-21 added page-level, hash-checked references to the original first-half and full-year HiBob self-reflection PDFs for seven existing records. The PDFs did not independently create a new achievement record or independently prove a numeric outcome: they are primary self-reports, not analytics exports, experiment readouts, manager evaluations, or proof of submission. Mason subsequently confirmed that the metrics and KPIs he supplied came from DeepL business-intelligence reporting available to employees. The current-direction file governs how those figures may be used in career materials.
 
+Mason's current account is the primary contribution source for his role,
+participation, intent, and rationale. The machine extraction below is a
+reproducible locator for his direct messages; it is not the complete evidence
+universe and cannot veto collaborative work merely because a second source or
+node-level contributor label is absent. AI-assisted outputs and attached
+working states may support his conception, direction, editing, selection, and
+application when his account and project context connect them to the work.
+
 ## Evidence levels
 
-- `confirmed` — direct contemporaneous user-authored project material identifies Mason's work or deliverable.
-- `strong` — the contribution is repeated in review material and supported by project records or manager feedback.
+- `confirmed` — Mason's explicit account or direct contemporaneous project
+  material identifies his work or deliverable.
+- `strong` — Mason's account is reinforced by review material, project records,
+  or manager feedback.
 - `supported_missing_attachment` — the claim was extracted from an uploaded source and repeated in review material, but the uploaded source is absent from the export.
-- `lead` — the chat establishes likely work or planning, but completion or impact needs another source.
+- `lead` — the contribution or plan is credible, but a specific lifecycle or
+  impact claim still needs clarification.
 - `excluded` — contradicted by Mason or traceable only to GPT invention; not suitable for portfolio or career claims.
 
 ## Artifact inventory
@@ -92,10 +103,12 @@ The four Markdown reflection drafts and two general DKH guidance PDFs are
 preserved under `archive/research/performance-review-supplemental/`. They are
 inventoried in the master but are not independent achievement evidence.
 
-### Machine-generated evidence indexes
+### Machine-generated direct-message indexes
 
 - `artifacts/candidate-conversations.json` — ranked DeepL-related conversation candidates.
-- `artifacts/source-messages.json` — retained user-authored source messages; assistant responses are excluded.
+- `artifacts/source-messages.json` — retained user-authored source-message
+  locators. Assistant responses are excluded from this bounded index, not
+  automatically excluded from collaborative project interpretation.
 - `artifacts/metric-candidates.json` — text fragments containing possible metrics.
 - `artifacts/role-corrections.json` — Mason's corrections to overstated, inaccurate, or invented claims.
 - `artifacts/extraction-summary.json`
@@ -125,7 +138,9 @@ node "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-re
 The last completed validation checked 25 achievement records, 62 conversation
 references, 38 exact user-message references, 11 page-level artifact
 references, 8 unique supplemental source files, all 25 final-list IDs, 1,265
-extracted source messages, and zero duplicate keys or failures.
+extracted source-message locators, and zero duplicate keys or failures. It
+checks locator and artifact integrity; it does not certify or limit the full
+scope of Mason's contribution.
 
 ## Useful supporting evidence still missing
 

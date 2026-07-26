@@ -6,6 +6,14 @@ Verified: 2026-07-26
 
 Public use: Prohibited
 
+Historical interpretation notice: this audit predates Mason's explicit
+correction that his account is valid evidence of his role, participation,
+judgment, and collaborative contribution. Its coverage, source, chronology,
+and repository findings remain useful. Any sentence that treats missing
+outside corroboration as a reason to deny or omit Mason's contribution is
+superseded by `AGENTS.md`, `claim-review.md`, and the active pricing project
+owners.
+
 This document preserves the evidence and repository findings behind
 [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md). It
 exists so a new agent can continue from current disk truth without depending on
@@ -487,15 +495,17 @@ checker defects are plan step 14; do not repair them in steps 2-3.
 states that Voice and API belong in the pricing/product architecture inventory
 because Figma contains their plan surfaces.
 
-It also states that no recovered Mason achievement currently supports promoting
-either product to a Mason-owned case. Their frames prove artifact existence
-only, not Mason's contribution, experiment participation, shipment, lifecycle,
-or outcome.
+It originally stated that no recovered achievement supported promoting either
+product to a Mason-owned case. That contribution conclusion is superseded:
+Mason's account supports his wider collaborative involvement. The frames still
+do not, by themselves, establish exact wording, shipment, lifecycle, outcome,
+or publication permission.
 
 This supports Mason's concern that ending the pricing case with Voice and API
 makes them feel appended. The four-product title and ending must be reopened.
-Voice/API may remain naming-system or architecture context only if later
-evidence justifies that job.
+Voice/API may remain naming-system or architecture context if that gives them a
+clear portfolio job. Their omission from the focused pricing case is an
+editorial choice, not a missing-proof penalty.
 
 ## Portfolio opportunities created by the recovered evidence
 

@@ -37,12 +37,20 @@ before an inventory batch was completed and is not counted in coverage below.
 
 ## Evidence rules
 
+- Mason's account is valid evidence of his role, participation, judgment, and
+  collaborative contribution. Figma metadata is not an outside-proof gate.
+  Historical rows below that call a contributor or authorship `unknown` mean
+  only that the extracted Figma record does not identify the exact layer,
+  string, or decision author. They do not contradict Mason's account or justify
+  excluding the work.
 - Feedback, rewrite, review, and copy-variant conversations are workshop or
-  brainstorming evidence by default. They may support Mason's user-authored
-  problem framing, constraints, corrections, selections, or supplied working
-  artifact.
-- Assistant suggestions do not prove Mason's authorship, approval, shipment,
-  adoption, testing, outcomes, or final wording.
+  brainstorming evidence by default. Together with Mason's account, they may
+  support his conception, problem framing, writing, editing, constraints,
+  corrections, selections, and application.
+- Assistant suggestions are not automatically Mason's exact verbatim prose.
+  That limit does not erase his collaborative authorship, direction, editing,
+  or selection. Approval, shipment, adoption, testing, and outcomes remain
+  separate.
 - Every Figma page, frame, component, and mockup is fallible artifact or state
   evidence with a margin of error.
 - `Canonical` means the current organizing destination only. Nothing in Figma
@@ -464,29 +472,29 @@ positions are stated where numeric node ranges would be ambiguous.
 
 | ID | Candidate family | Step 18 classification | Comparison and evidence ceiling | Step 19 route |
 | --- | --- | --- | --- | --- |
-| `PP-00A` | Pricing root 1, `3:95730` | Contextual evidence | Broad source/archive cluster with strong artifact value but substantial overlap, mixed states, and no bounded contribution or lifecycle relationship. | No separate pass; retain as private source context |
-| `PP-00B` | Pricing roots 2–3, `3:96476`, `3:98129` | Genuinely new evidence | Responsive Translator-route and bundle systems add artifact evidence absent from the selected crops. Contribution, chronology, lifecycle, and permission remain unknown. | No Step 19 pass; retain for Phase 6 allocation |
-| `PP-00C` | Pricing roots 4–8 and 17–20 | Contextual evidence | Enterprise, mixed `For Dev`, and repeated callout states support product context but do not form a bounded contribution or distinct exhibit. | No separate pass |
-| `PP-00D` | Pricing roots 9–16 | Genuinely new evidence | Repeated Clarify copy-process and decision-rationale families add private accessibility and hierarchy evidence. Authorship, selection, lifecycle, and permission remain unknown. | No Step 19 pass; retain for Phase 6 allocation |
-| `PP-01` | Pricing roots 21–24, `3:126837`–`3:129432` | Unresolved | Compact native responsive rule with clear comparison value, but its date, author, workstream, and relationship to selected pricing assets are unknown. | Focused relationship and visual check |
-| `PP-02` | Pricing roots 25–31: vision, four grid variants, and two repeated notes | Contextual evidence | Useful wording and hierarchy context, but it overlaps stronger current pricing-system assets and has no contribution or lifecycle link. | No pass unless another finalist depends on it |
-| `PP-03` | Pricing roots 58–67, `4:145732`–`4:150829` | Genuinely new evidence | Adds native system, goal, and responsive evidence absent from the selected crops. It remains private and unattributed. | Verify the smallest readable goal/rule frame |
-| `PP-04` | Pricing roots 68–73, `4:152715`–`4:181193` | Genuinely new evidence | Strong copy-decision and file-format evidence not represented in the selected asset set. Authorship, selection, lifecycle, and permission remain unknown. | Focused exact-frame pass |
+| `PP-00A` | Pricing root 1, `3:95730` | Contextual evidence | Broad source/archive cluster with strong artifact value but substantial overlap, mixed states, and no bounded lifecycle or self-contained story unit. | No separate pass; retain as private source context |
+| `PP-00B` | Pricing roots 2–3, `3:96476`, `3:98129` | Genuinely new evidence | Responsive Translator-route and bundle systems add artifact evidence absent from the selected crops. Exact chronology, lifecycle, and permission remain unknown; Mason's account governs contribution. | No Step 19 pass; retain for Phase 6 allocation |
+| `PP-00C` | Pricing roots 4–8 and 17–20 | Contextual evidence | Enterprise, mixed `For Dev`, and repeated callout states support product context but do not form a bounded story unit or distinct exhibit. | No separate pass |
+| `PP-00D` | Pricing roots 9–16 | Genuinely new evidence | Repeated Clarify copy-process and decision-rationale families add private accessibility and hierarchy evidence. Exact-string attribution, selection, lifecycle, and permission remain unknown. | No Step 19 pass; retain for Phase 6 allocation |
+| `PP-01` | Pricing roots 21–24, `3:126837`–`3:129432` | Unresolved | Compact native responsive rule with clear comparison value, but its date, exact source relationship, workstream boundary, and relationship to selected pricing assets are unknown. | Focused relationship and visual check |
+| `PP-02` | Pricing roots 25–31: vision, four grid variants, and two repeated notes | Contextual evidence | Useful wording and hierarchy context, but it overlaps stronger current pricing-system assets and has no exact workstream or lifecycle link. | No pass unless another finalist depends on it |
+| `PP-03` | Pricing roots 58–67, `4:145732`–`4:150829` | Genuinely new evidence | Adds native system, goal, and responsive evidence absent from the selected crops. Figma metadata does not attribute each exact element; that is not a contribution veto. | Verify the smallest readable goal/rule frame |
+| `PP-04` | Pricing roots 68–73, `4:152715`–`4:181193` | Genuinely new evidence | Strong copy-decision and file-format evidence not represented in the selected asset set. Exact-string attribution, selection, lifecycle, and permission remain unknown. | Focused exact-frame pass |
 | `PP-05A` | Seven routed nodes within Pricing roots 74–135: `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, `5:196803` | Unresolved | Native states were initially correlated to the canonical pricing area; Step 19 corrected them to checkout context and excluded replacement or publication use. | Compare only the seven listed nodes |
-| `PP-05B` | All other Pricing roots 74–135 | Contextual evidence | Useful plan, eligibility, address, payment, component, and order-summary context; it does not establish Mason's pricing contribution. | No separate pass |
-| `PP-06` | Pricing roots 136–145 plus root 173, `2176:278674` | Unresolved | High-value repeated or older native page systems may overlap current assets, but copied families, chronology, contribution, and exact visual relationship are unresolved. | Compare one representative from each main family; root 173 remains private context |
-| `PP-07` | Pricing roots 146–152, `5:303260`–`5:309562` | Genuinely new evidence | Adds explicit questions about routes, bundles, grid length, API, sales entry, social proof, and missing copy. Intent is visible; authorship and decisions are not. | Verify one question-rich native frame |
+| `PP-05B` | All other Pricing roots 74–135 | Contextual evidence | Useful plan, eligibility, address, payment, component, and order-summary context, but it belongs to checkout and purchase-state work rather than the focused pricing story. | No separate pass |
+| `PP-06` | Pricing roots 136–145 plus root 173, `2176:278674` | Unresolved | High-value repeated or older native page systems may overlap current assets, but copied families, chronology, exact workstream relationships, and visual relationships are unresolved. | Compare one representative from each main family; root 173 remains private context |
+| `PP-07` | Pricing roots 146–152, `5:303260`–`5:309562` | Genuinely new evidence | Adds explicit questions about routes, bundles, grid length, API, sales entry, social proof, and missing copy. Intent is visible; exact note authors and eventual decisions are not explicit in Figma. | Verify one question-rich native frame |
 | `PP-08` | Pricing roots 153–159 and 161 | Contextual evidence | Repeated goals, routes, responsive states, a labelled vision, and a further pricing layout help compare retained and changed requirements but substantially repeat stronger families. | No separate pass |
 | `PP-09` | Pricing root 162, `5:313460` | Genuinely new evidence | Exact existing copy, proposed revisions, and rationales offer strong writing-process evidence missing from current assets. Acceptance and implementation are unknown. | Priority exact-frame and readability pass |
 | `PP-10` | Pricing roots 163–165, 167–169, and 172 | Genuinely new evidence | Grid reduction, `Feature awareness`, product pages, anatomy, indicator, and separate `Feature-awareness` material add strong private rationale and variant evidence. Structural or provenance relationships among the two similarly named top-level sections are not assumed. | Priority representative-frame pass |
 | `PP-11` | Pricing roots 166, 170, and 171: `5:314813`, `5:315601`, `5:315610` | Private-only evidence | Named quotations and brand material lack source, attribution, and publication permission. | No pass; retain on publication hold |
-| `PP-12` | Pricing root 174, `2178:278670` | Private-only evidence | Internal status and impact/effort material is useful private context but has no verified author, lifecycle, outcome, or publication permission. | No pass |
+| `PP-12` | Pricing root 174, `2178:278670` | Private-only evidence | Internal status and impact/effort material is useful private context, but exact attribution, lifecycle, outcome, and publication permission are unresolved. | No pass |
 | `WP-01` | `Write Pro` batches 01–02 | Genuinely new evidence | Native seat-change, limit, value-framing, security, and hardblock evidence extends beyond the current pricing crops and aligns with the bounded `MON-05` workshop themes. | Priority representative-frame pass |
-| `WP-02A` | `Write Pro` batch 03 through root 63 | Genuinely new evidence | Adds copy-review, value-proposition, banner, and review-context artifacts; a note naming Mason supports review context only. | Verify the review frame and one banner family |
+| `WP-02A` | `Write Pro` batch 03 through root 63 | Genuinely new evidence | Adds copy-review, value-proposition, banner, and review-context artifacts. A note names Mason in the review flow; his account supports the broader collaborative contribution. | Verify the review frame and one banner family |
 | `WP-02B` | `Write Pro` roots 64–81 | Contextual evidence | Mixed proposals, tooltips, references, opaque widgets, and repeated fragments add context but no distinct defensible portfolio claim. | No separate pass |
-| `EX-01` | `Experiments` batches 01–03 | Contextual evidence | Broad pricing, account, trial, API, and hardblock states establish system context; initiative boundaries and contribution remain unresolved. | No pass unless required by `EX-03` |
+| `EX-01` | `Experiments` batches 01–03 | Contextual evidence | Broad pricing, account, trial, API, and hardblock states establish system context; initiative boundaries and exact artifact-to-workstream relationships remain unresolved. | No pass unless required by `EX-03` |
 | `EX-02` | `Experiments` batches 04–06 | Genuinely new evidence | Cancellation, survey, comparison, usage, and downgrade alternatives add a coherent private decision space absent from current selected assets. | Verify one cancellation family if retained |
-| `EX-03` | `Experiments` batches 07–12 | Current-asset replacement | Native document-count, file-size, character-limit, daily-limit, and hardblock families are specific candidates to replace or source the currently source-missing `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. Exact frame equivalence, visual quality, contribution, and permission are still unproved. | Priority replacement comparison |
+| `EX-03` | `Experiments` batches 07–12 | Current-asset replacement | Native document-count, file-size, character-limit, daily-limit, and hardblock families are specific candidates to replace or source the currently source-missing `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. Exact frame equivalence, visual quality, export lineage, and permission still required checking; Mason's account governs contribution. | Priority replacement comparison |
 | `AR-01` | Archive / `Page 1` | Private-only evidence | MFA material is outside the pricing case and mixes duplicates, personal text, and unsupported lifecycle labels. | No pass |
 | `AR-02` | Archive / `ATE` | Private-only evidence | Rich administrative artifacts contain operational identifiers and personal data and do not support a pricing contribution. | No pass |
 | `CO-01A` | Checkout pages 003, 011, 013–015, 017, 018, 025, and 028 | Unresolved | These native purchase-state systems may overlap the current checkout assets, but exact same-state equivalence and improvement are not established. Pages 014/015 are one close family. | Compare only if a later phase separately activates checkout replacement |
@@ -496,19 +504,20 @@ positions are stated where numeric node ranges would be ambiguous.
 | `CO-02B` | Checkout pages 029–032, 034, 036–038, and 041–044 | Contextual evidence | Useful experiment context, but repeated hypothesis scaffolding and close variants add less distinct value. | No separate pass |
 | `CO-03A` | Checkout pages 052, 054, and 057 | Genuinely new evidence | Trial-risk, reassurance, quote, and timeline artifacts add bounded content examples not present in the selected checkout set. | No Step 19 pass; retain for Phase 6 allocation |
 | `CO-03B` | Checkout pages 045–049, 053, 055–056, and 058–059 | Contextual evidence | Page 056 links pricing and checkout routes; the remaining pages mainly repeat checkout scaffolding or provide narrow variants. | No separate pass |
-| `CO-04` | Checkout page 060 | Private-only evidence | The workshop preserves rich questions but includes internal critique, unverified metrics, and unclear authorship; it is unsuitable for public use without independent evidence and permission. | No pass |
-| `CO-05` | Checkout pages 062–064 | Contextual evidence | References, shared components, and a document legend explain the file but do not establish contribution or lifecycle. | No separate pass |
+| `CO-04` | Checkout page 060 | Private-only evidence | The workshop preserves rich questions but includes internal critique, unverified metrics, and missing publication permission. Those are the hold reasons; Mason's participation is not in doubt. | No pass |
+| `CO-05` | Checkout pages 062–064 | Contextual evidence | References, shared components, and a document legend explain the file but do not add a bounded decision story or lifecycle record. | No separate pass |
 | `REJ-01` | Twelve zero-root Checkout records; Pricing roots 32–57 and 160; exact duplicate, empty vector/text, raster-only, and other incidental scaffolding families identified above | Reject | They add no distinct readable candidate after family-level deduplication. Rejection does not delete or alter the raw ledger. | No pass |
 
 Classification count: one current-asset replacement family; thirteen genuinely
 new evidence families; ten contextual evidence families; six private-only
 families; four unresolved families; and one reject family.
 
-No Figwright candidate independently satisfies the portfolio evidence model's
-artifact, contribution, lifecycle, outcome, and permission dimensions or its
-full-case reader-value gate. The Step 19 pass below was limited to the
-replacement candidate and the explicit focused or priority routes above. It
-does not turn a routing classification into authorship, selection, approval,
+No Figwright candidate alone satisfies every artifact, lifecycle, outcome,
+permission, and full-case reader-value question. That is not a contribution
+veto: Mason's account supplies the collaborative contribution relationship.
+The Step 19 pass below was limited to the replacement candidate and the
+explicit focused or priority routes above. It does not turn a routing
+classification into exact verbatim authorship, selection, approval,
 implementation, shipment, testing, adoption, causation, outcome, or
 publication claims.
 
@@ -525,16 +534,16 @@ replacement decision.
 | ID | Live scope checked | Verified finding | Step 19 disposition |
 | --- | --- | --- | --- |
 | `PP-01` | Four responsive roots `3:126837`, `3:127702`, `3:128567`, and `3:129432`; notes `3:127701`, `3:128566`, `3:129431`, and `3:130296` | All four roots repeat the same 1440/1200/1024 sibling structure and the same readable rule: remove the Clarify message below 1200 pixels. The 1024 states depend on raster foundations. | Relationship resolved. Retain as private responsive-rule context; do not advance a repeated, raster-limited family as a distinct asset. |
-| `PP-03` | Goal note `4:150823`; 1920-pixel rule `4:152681`; responsive root `4:150829` | The goal and maximum-width rule are small, readable, native, and unlocked. The `DM-2112` label and screen-size labels are artifact text, not independent chronology or lifecycle evidence. | Retain as private planning and rule evidence. Do not advance as a public visual without contribution and permission support. |
+| `PP-03` | Goal note `4:150823`; 1920-pixel rule `4:152681`; responsive root `4:150829` | The goal and maximum-width rule are small, readable, native, and unlocked. The `DM-2112` label and screen-size labels are artifact text, not independent chronology or lifecycle evidence. | Retain as private planning and rule evidence. Do not advance as a public visual because it is not a self-contained story image and permission remains unresolved. |
 | `PP-04` | Copy workspace `4:152718`; file-format section `4:181193`; bounded component `4:181199`; note `4:181209` | `4:152718` is a very large internal workspace and not a readable standalone asset. `4:181199` is a self-contained 1360-by-635 native comparison with three plan popovers; live table rows use `.xslx` while the popovers use `.xlsx`, so the artifact is not final-copy proof. | Carry only `4:181199` to Step 20 as conditional private copy-decision evidence. Keep `4:152718` as process context. |
 | `PP-05A` | All seven routed nodes: `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, and `5:196803` | The nodes are checkout and purchase-state systems, not pricing-page equivalents. They include sample account, address, card, tax, legal, and named-person context. | Relationship resolved as checkout context. Do not advance for pricing-asset replacement or publication. |
 | `PP-06` | Representatives `5:224853`, `5:226823`, `5:228736`, `5:230222`, `5:230243`, `5:267065`, and `5:269002` | The second family repeats a reduced subset of the first; `5:230222` and `5:230243` are structurally and visually duplicate 1440-pixel Translator frames apart from IDs and position. The native responsive systems add context but do not improve on the cleaner selected pricing crops. | Repeated-family accounting resolved. Retain one private representative for context; do not advance a visual replacement. |
 | `PP-07` | Question-rich root `5:307644`; product-selector note `5:307992`; supporting questions `5:308461`, `5:308462`, `5:308465`, and `5:308472` | The live notes preserve route, value-proposition, FAQ, and permission questions. They are readable intent evidence but not self-sufficient visuals, and one note explicitly asks whether quoted material may be used. | Retain on private context and permission hold; do not advance a public asset. |
-| `PP-09` | Full inventory `5:313460`; bounded row `5:313472` | The 1667-by-5785 native table is too dense for a standalone portfolio image. The single row is readable and preserves existing copy, a proposed security revision, and rationale, but acceptance, implementation, contribution, and permission remain unknown. | Carry only `5:313472` to Step 20 as conditional private copy-process evidence; do not treat the full table as an asset. |
+| `PP-09` | Full inventory `5:313460`; bounded row `5:313472` | The 1667-by-5785 native table is too dense for a standalone portfolio image. The single row is readable and preserves existing copy, a proposed security revision, and rationale, but exact acceptance, implementation, lifecycle, and permission remain unknown. Mason's account supports collaborative contribution. | Carry only `5:313472` to Step 20 as conditional private copy-process evidence; do not treat the full table as an asset. |
 | `PP-10` | Reduction workspace `5:313532`; rationale `5:313905`; feature-awareness root `5:313906`; representative `5:314534`; active card `5:313938`; full section `5:315615` | `5:314534` is a self-contained 1512-by-592 native feature-awareness system that adds visual evidence absent from the current pricing crops. `5:315615` is tall and repetitive; `5:313905` is useful rationale rather than a standalone visual. | Carry `5:314534` to Step 20 as a conditional private visual candidate and retain `5:313905` as private rationale. |
 | `WP-01` | Representative hardblock `4:184736` | The 618-by-400 native instance is readable and self-contained, with a limit state, timer, Write Pro value list, price, and upgrade action. Its node name says `Translate Pro` while its visible content says `Write Pro`, so naming does not establish lineage. | Carry `4:184736` to Step 20 as a conditional private visual candidate. |
-| `WP-02A` | Review label `4:185353`; dev area `4:185368`; banner family `4:186544`; review note `4:186560` | `4:185353` is only a standalone `Copy in review` label, and `4:185368` is a large raster-heavy country-availability workspace. `4:186544` is a bounded native banner family; `4:186560` says `For Ana to review with Mason.` That note supports review context only. | Carry `4:186544` to Step 20 as contribution-context evidence only, not as authorship, approval, or a standalone public asset. |
-| `EX-02` | Copy area `2:99544`; tiered cancellation component set `2:99549` | `2:99549` is a clean native and unlocked Starter/Advanced/Ultimate family with tier-aware loss copy and `Continue with Pro` / `Cancel subscription` actions. Entitlement accuracy, contribution, selection, lifecycle, outcomes, and permission remain open. | Carry `2:99549` to Step 20 as a conditional private cancellation candidate. |
+| `WP-02A` | Review label `4:185353`; dev area `4:185368`; banner family `4:186544`; review note `4:186560` | `4:185353` is only a standalone `Copy in review` label, and `4:185368` is a large raster-heavy country-availability workspace. `4:186544` is a bounded native banner family; `4:186560` says `For Ana to review with Mason.` The note supports that review context, while Mason's account supports his wider collaborative contribution. | Carry `4:186544` to Step 20 as private contribution-context evidence, not as exact-string attribution, approval, or a standalone public asset. |
+| `EX-02` | Copy area `2:99544`; tiered cancellation component set `2:99549` | `2:99549` is a clean native and unlocked Starter/Advanced/Ultimate family with tier-aware loss copy and `Continue with Pro` / `Cancel subscription` actions. Entitlement accuracy, exact selection, lifecycle, outcomes, and permission remain open; Mason's account governs contribution. | Carry `2:99549` to Step 20 as a conditional private cancellation candidate. |
 | `EX-03` | Usage-limit frame `2:112817`; document-size frame `2:165768`; remaining-documents frame `2:165336`; current `usage-limit.png`, `document-size.png`, and `remaining-documents.png` | A focused read-only follow-up resolved both live questions. All three frames use the same shadow, adding 34 logical pixels across each axis. `2:165768` is the larger-file-size state and maps to `document-size.png`; its 512-by-568 frame becomes 1092 by 1204 at 2x. `2:165336` is the remaining-document-count state and maps to `remaining-documents.png`; its 512-by-592 frame becomes 546 by 626 at 1x. For `2:112817`, the PNG shows a `Pro feature` badge while the current node's 22-pixel `DeepL Pro` badge is hidden. Showing that badge plus its 4-pixel header gap adds 26 logical pixels, exactly explaining the remaining 52 pixels at 2x. Copy, artwork, structure, and actions otherwise match. This resolves the source-family and historical-state relationship, not export lineage. | Keep all three exact node IDs as conditional source candidates. No further Figma recheck is required unless independent export-lineage evidence appears. |
 | `CO-01A` | No live node | Checkout replacement was not part of the approved focused pass, so the conditional Step 18 route was not activated. | Not inspected. No implied next-page or checkout-review order. |
 
@@ -543,9 +552,10 @@ The conditional Step 20 visual or source candidates are `4:181199`,
 `2:165336`. `4:186544` is contribution-context evidence only. Every other
 routed family remains private context, is excluded from pricing replacement,
 or is held for permission. No checked node independently resolved chronology,
-contribution, lifecycle, outcome, or publication permission, and no checked
-node proves authorship, selection, approval, implementation, shipment, testing,
-adoption, causation, or results.
+exact layer or string attribution, lifecycle, outcome, or publication
+permission. Mason's account supplies the wider contribution relationship. No
+checked node alone proves selection, approval, implementation, shipment,
+testing, adoption, causation, or results.
 
 ## Final Step 20 evidence allocation and source mapping
 
@@ -556,17 +566,18 @@ export an asset, replace a PNG, or change the site.
 
 | Step 19 lead | Final records disposition |
 | --- | --- |
-| `4:181199` | Added to the pricing overlay and Monetization crosswalk as conditional private copy-decision context for `MON-04`. Contribution, selection, lifecycle, outcome, and permission remain unknown. |
-| `5:313472` | Added to the pricing overlay as Figma-only private copy-process evidence. No achievement, contributor, acceptance, implementation, or permission relationship was established. |
+| `4:181199` | Added to the pricing overlay and Monetization crosswalk as conditional private copy-decision context for `MON-04`. Exact artifact-to-workstream relationship, selection, lifecycle, outcome, and permission remain unknown; Mason's account governs contribution. |
+| `5:313472` | Added to the pricing overlay as Figma-only private copy-process evidence. It does not establish exact-string attribution, acceptance, implementation, or permission; it also does not negate Mason's collaborative contribution. |
 | `5:314534` | Added to the pricing and Write Pro crosswalks as a correlated private artifact candidate for `MON-05`; the direct workshop records remain stronger contribution evidence. |
 | `4:184736` | Added to the pricing and Write Pro crosswalks as a correlated private limit-state candidate for `MON-05`; conflicting node and visible product naming leaves lineage unresolved. |
-| `4:186544` | Added to the pricing and Write Pro crosswalks as contribution-context evidence only. The adjacent review note does not prove authorship, approval, implementation, or public readiness. |
-| `2:99549` | Added to the pricing and Monetization crosswalks as a Figma-only private cancellation candidate contextual to `MON-04`; entitlement accuracy and every non-artifact evidence dimension remain open. |
+| `4:186544` | Added to the pricing and Write Pro crosswalks as contribution-context evidence. The adjacent review note does not establish exact-string attribution, approval, implementation, or public readiness; Mason's account supports the broader contribution. |
+| `2:99549` | Added to the pricing and Monetization crosswalks as a Figma-only private cancellation candidate contextual to `MON-04`; entitlement accuracy, exact initiative mapping, selection, lifecycle, outcome, and permission remain open. |
 | `2:112817`, `2:165768`, and `2:165336` | Added to the Monetization crosswalk and asset manifest as conditional source candidates for `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. The focused follow-up resolved the geometry and same-name questions: the two document nodes map unambiguously by visible state, while the usage PNG is a historical visible-badge variant of the current hidden-badge node. The PNGs retain `missing` provenance because no independent repository source export or proven export lineage exists. |
 | `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, and `5:196803` | Corrected in the Monetization and pricing crosswalks: these are checkout and purchase-state systems, not Pricing Page V2 equivalents. They remain private context and include sensitive sample data. |
 
-No Step 20 record proves authorship, selection, approval, implementation,
-shipment, testing, adoption, causation, outcomes, or publication permission.
+No Step 20 record alone proves exact verbatim authorship, selection, approval,
+implementation, shipment, testing, adoption, causation, outcomes, or
+publication permission. Mason's account remains valid contribution evidence.
 
 ## Legacy interpreted batch history
 
