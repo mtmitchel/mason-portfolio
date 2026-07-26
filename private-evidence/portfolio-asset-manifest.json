@@ -26,11 +26,11 @@
           "dimensions": "1092x1500",
           "public_path": "site/public/work/upgrade-prompts/usage-limit.png",
           "source_status": "missing",
-          "source_notes": "No independent repository source export is retained. A native, unlocked source-equivalent frame was verified in the preserved Monetization Figma file, but the current PNG's export lineage is unproved, so provenance remains missing.",
+          "source_notes": "No independent repository source export is retained. A native, unlocked same-family historical-state candidate was verified in the preserved Monetization Figma file; the current node's badge visibility and label differ from the PNG. Export lineage is unproved, so provenance remains missing.",
           "figma_source_candidate": {
             "file_key": "0JYwhKhRAliGBhyl2kBnEu",
             "node_id": "2:112817",
-            "relationship": "Source-equivalent in visible copy, artwork family, structure, actions, and shadow-expanded dimensions; not proven as the export source."
+            "relationship": "A focused read-only Figma follow-up resolved the 52-pixel height difference. The node's shared shadow adds 34 logical pixels across each axis. Its current hidden-badge state would export at 1092x1448 at 2x; the PNG shows a 22-pixel badge plus the header's 4-pixel gap, adding 26 logical pixels or exactly 52 pixels at 2x. Copy, artwork, structure, and actions otherwise match, but the PNG badge says `Pro feature` while the currently hidden badge says `DeepL Pro`. This is a source-family and historical-state match, not proven export lineage."
           },
           "sha256": "0d50e9c215a3cceb01ac0902068c573396494159dc8ce9aaa27cfa969c71b371"
         },
@@ -59,7 +59,7 @@
           "figma_source_candidate": {
             "file_key": "0JYwhKhRAliGBhyl2kBnEu",
             "node_id": "2:165768",
-            "relationship": "Source-equivalent in visible copy, artwork family, structure, actions, and shadow-expanded dimensions; not proven as the export source."
+            "relationship": "A focused read-only Figma follow-up resolved this same-named node as the larger-file-size state from its visible `{5} MB` copy and matching artwork and actions. The shared shadow expands the 512x568 frame to 546x602 at 1x, exactly matching the PNG's 1092x1204 dimensions at 2x. Export lineage is not proven."
           },
           "sha256": "3b5e1a6eb9af6ad32d33ccba548f3426116d52ff496bb69a2cd1f3e3c7e65878"
         },
@@ -72,7 +72,7 @@
           "figma_source_candidate": {
             "file_key": "0JYwhKhRAliGBhyl2kBnEu",
             "node_id": "2:165336",
-            "relationship": "Source-equivalent in visible copy, artwork family, structure, actions, and shadow-expanded dimensions; not proven as the export source."
+            "relationship": "A focused read-only Figma follow-up resolved this same-named node as the remaining-document-count state from its visible one-file-translation copy and matching artwork and actions. The shared shadow expands the 512x592 frame to 546x626 at 1x, exactly matching the PNG's dimensions. Export lineage is not proven."
           },
           "sha256": "f464d2355b76d65e5e5daa9c57fde2d90d3c34a6eb4081dca1370a60f8f181d4"
         },

@@ -33,6 +33,9 @@ blocked:
   `pricing-case-presentation-wip` at `05df5d0`. Evidence recovery proceeds on
   `pricing-evidence-recovery` without changing that candidate or its linked
   signoff worktree.
+- Mason separately approved committing and pushing the Steps 18–20 checkpoint.
+  Commit `b1d7552` is preserved on the private `origin/pricing-evidence-recovery`
+  branch. That approval does not authorize any later commit or push.
 - Figma inspection is read-only by default.
 - Figma edits, exports, mockup creation, destructive cleanup, commits, pushes,
   publication, and deployment each require separate approval.
@@ -178,9 +181,9 @@ execution logs, or the raw GPT export as active owners.
   hashes and provenance, and marking genuinely missing sources honestly.
 
   Completed 2026-07-26. Eight selected originals moved into active private
-  source folders. All 39 public-file records now have verified hashes and an
-  explicit source status: 20 verified private sources, five recorded
-  derivatives, and 14 honestly missing independent sources.
+  source folders. The current manifest has 44 public-file records with verified
+  hashes and an explicit source status: 24 verified private sources, five
+  recorded derivatives, and 15 honestly missing independent sources.
 - [x] 13. Classify exact duplicates as intentional copies, source-internal
   duplicates, superseded history, or archive-cleanup candidates. Preserve
   material and request separate approval before destructive cleanup.
@@ -223,11 +226,11 @@ relevant page.
   selected top-level roots, then preserve bounded raw extraction records for
   every manifest root. Record exact copy/text, structure, node IDs, exposed
   visibility and locked state, dimensions, relevant style/layout/component
-  fields, and opaque image-fill references without analysis or final selection.
+  fields, and opaque image-fill markers without analysis or final selection.
 
   Completed 2026-07-26 for the three approved source files. The compressed raw
   ledger contains 69 page records, 1,190 selected top-level roots, 185,501 text
-  nodes, 182,628 structural nodes, and 2,984 image-fill references with no
+  nodes, 182,628 structural nodes, and 2,984 image-fill markers with no
   unresolved extraction limitation. The earlier fourteen interpreted
   `Monetization` / `Experiments` batches covering 108 exact selected nodes remain
   provisional legacy history. At the step 16 extraction gate, no page had
@@ -265,6 +268,12 @@ relevant page.
   relationships to Step 19. Classification does not approve an asset,
   publication, or replacement. The approved Step 19 pass below later inspected
   only those routed candidates.
+
+  A post-checkpoint adversarial audit found classification-table omissions even
+  though the underlying saved-ledger reviews were complete. The table was
+  repaired to assign all 174 Pricing roots and all 64 Checkout page records
+  exactly once at family or page level, remove overlapping ranges, and retain
+  the original evidence ceilings. No raw ledger or Figma change was required.
 - [x] 19. Run focused second Figwright passes only on finalists or unresolved
   clusters to verify exact frame relationships, chronology, readable text,
   editability, and whether they improve on current portfolio assets.
@@ -278,16 +287,24 @@ relevant page.
   causation, outcomes, or publication permission. `CO-01A` was not inspected
   because checkout replacement was outside the approved Step 19 scope. No
   Figma edit, export, public selection, or asset replacement occurred.
+
+  A post-audit read-only follow-up resolved the remaining upgrade-prompt mapping
+  questions. The two identically named document nodes map unambiguously by their
+  visible file-size and remaining-document states. The usage PNG's extra 52
+  pixels equal a visible 22-pixel badge plus its 4-pixel gap at 2x; that badge
+  is hidden and differently labelled in the current node. This establishes a
+  historical-state relationship, not export lineage.
 - [x] 20. Update project crosswalks and the asset manifest from the final Figma
   dispositions. Request separate approval before any Figma edit, export, or
   mockup creation.
 
   Completed 2026-07-26 as a records-only disposition pass. Exact private node
   relationships were added to the pricing, Write Pro, and Monetization
-  crosswalks. Three source-equivalent upgrade-prompt frames were added to the
-  asset manifest as candidates while provenance correctly remains `missing`
-  because export lineage is unproved. No Figma edit, export, public selection,
-  asset replacement, or site change was made.
+  crosswalks. Three upgrade-prompt source candidates were added to the asset
+  manifest: two exact visible-state matches and one historical visible-badge
+  variant. Provenance correctly remains `missing` because export lineage is
+  unproved. No Figma edit, export, public selection, asset replacement, or site
+  change was made.
 
 ### Figwright coverage tracker
 

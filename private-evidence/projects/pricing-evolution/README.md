@@ -22,12 +22,21 @@ zero-root records, and classified every provisional candidate family.
 Classification is private evidence routing, not asset approval or public
 selection. The approved Step 19 pass then used Figma Desktop read-only to check
 only the routed Pricing page, Write Pro, cancellation, and upgrade-prompt
-candidates. It verified conditional Step 20 evidence leads and three
-source-equivalent native upgrade-prompt frames, but it did not prove that the
-current PNGs were exported from those frames. Step 20 then updated the private
-project crosswalks and asset manifest, retaining `missing` provenance for those
-PNGs because export lineage remains unproved. Editing, export, final public
+candidates. It verified conditional Step 20 evidence leads and three native
+upgrade-prompt source candidates, but it did not prove that the current PNGs
+were exported from those frames. A focused read-only follow-up later resolved
+the remaining mapping questions: the two same-named document nodes are
+distinguished by visible state, and a historical visible-badge state explains
+the usage PNG's dimensions exactly. Step 20 records retain `missing` provenance
+because export lineage remains unproved. Editing, export, final public
 selection, and public-site work have not been reached.
+
+A post-checkpoint adversarial audit then corrected classification bookkeeping:
+all 174 Pricing roots and all 64 Checkout page records now have one explicit
+family- or page-level disposition, ambiguous ranges were replaced with exact
+manifest positions or page lists, and one unsupported feature-awareness
+lineage was removed. The audit did not change the raw ledger, Figma, public
+assets, or the site.
 
 ## Owners and supporting records
 

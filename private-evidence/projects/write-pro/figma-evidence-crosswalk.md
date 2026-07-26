@@ -40,7 +40,7 @@ state retains a margin of error and may be revised by stronger evidence.
 | Recovery record | Figma relationship | Ceiling |
 | --- | --- | --- |
 | `MON-05` — Write Pro launch and monetization content | Correlated private artifact candidates at preserved-source nodes `4:184736` and `5:314534`; `4:186544` supplies contribution context only. Direct GPT attachments prove Mason's workshop contribution more precisely than the Figma nodes do. | Mason workshopped launch-related content and supplied specific constraints and corrections. The nodes do not prove authorship, approval, shipment, launch ownership, adoption, outcomes, or publication permission. |
-| `MON-01` — Pro Driver experiment wave | Correlated candidate across pricing/upgrade and experiment pages; exact winning frame unresolved | The approved 12% paid-conversion lift and seven-figure ARR uplift apply only to the overall wave, never one visible frame. |
+| `MON-01` — Pro Driver experiment wave | Correlated candidate across pricing/upgrade and experiment pages; exact winning frame unresolved | The [current claim-review owner](../../claim-review.md#upgrade-prompts-across-translator-and-write) permits Mason's confirmed 12% paid-conversion lift and seven-figure ARR uplift only at overall wave scope. Figma does not substantiate the result, and the retired granular formulations must not be used. |
 | `SYS-01` — repeatable review workflow | Contextual to variant and content-pattern pages | Mason's workshop criteria are supported; generated instructions, production deployment, team adoption, and measured improvement are not. |
 | `SYS-04` — naming guidance | Contextual across product, pricing, and content-pattern pages | Participation and direct corrections within the team-owned naming system are supported; generated suggestions, exact implementation, and universal adoption are not. |
 
@@ -58,8 +58,11 @@ and performance remain unproved.
   remains a conditional private limit-state visual. Its node name and visible
   product name conflict, so it cannot establish lineage.
 - [`5:314534`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=5-314534)
-  is the bounded private feature-awareness representative from the larger
-  `5:315615` family.
+  is the bounded private representative inside top-level section `5:313906`
+  (`Feature awareness`). `5:315615` (`Feature-awareness`) is a separate
+  top-level section and the source of the existing preserved export above.
+  Any visual or content relationship between the two sections remains
+  unresolved without another focused Figma check.
 - [`4:186544`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=4-186544)
   is contribution-context evidence only. The adjacent `4:186560` note says
   `For Ana to review with Mason`, which does not establish authorship,

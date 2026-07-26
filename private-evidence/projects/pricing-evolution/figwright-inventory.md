@@ -20,8 +20,8 @@ ledger owns normalized raw Figwright extraction data. This Markdown file owns
 coverage state, legacy interpreted batches, hypotheses, and any later candidate
 summaries. The ledger preserves node IDs and names, hierarchy, copy, geometry,
 visibility and locked state, relevant text/style/layout/component fields, and
-opaque image-fill references. It contains no screenshots, exports, signed URLs,
-or analysis.
+opaque image-fill markers. It contains no stable image identity, screenshots,
+exports, signed URLs, or analysis.
 
 The ledger contains 655 JSON objects. On 2026-07-26 it was normalized
 losslessly so Unicode line-separator characters inside extracted copy are
@@ -52,7 +52,7 @@ before an inventory batch was completed and is not counted in coverage below.
   visually reviewed or that every distant, hidden, locked, obscured, or
   raster-only object has been interpreted.
 - Raw extraction is not analysis or visual verification. Node names, adjacency,
-  duplicate structure, text, dimensions, and image-fill references do not prove
+  duplicate structure, text, dimensions, and image-fill markers do not prove
   chronology, authorship, approval, selection, implementation, testing,
   shipment, adoption, or results.
 - Do not make final asset selections until the complete page-by-page review is
@@ -60,7 +60,7 @@ before an inventory batch was completed and is not counted in coverage below.
 
 ## Manifest-first raw extraction coverage
 
-| Figma file | Page scope | Page ID | Selected top-level roots | Text nodes | Structural nodes | Image-fill references | Extraction status |
+| Figma file | Page scope | Page ID | Selected top-level roots | Text nodes | Structural nodes | Image-fill markers | Extraction status |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
 | `Monetization` | `Experiments` | `0:1` | 231 | 33,772 | 35,290 | 944 | Raw extraction complete; whole-page text timed out and was recovered across 231 bounded root records |
 | `Monetization` | `Pricing page` | `3:94360` | 174 | 70,973 | 73,972 | 793 | Raw extraction complete across 174 bounded root records |
@@ -70,7 +70,7 @@ before an inventory batch was completed and is not counted in coverage below.
 | `Checkout — Experiments (Copy)` | 64 pages; exact page IDs and names are in the raw ledger | Multiple | 605 | 42,893 | 41,303 | 1,219 | Raw extraction complete across 64 page records |
 
 Raw extraction totals: 69 pages; 1,190 selected top-level roots; 185,501
-text nodes; 182,628 structural nodes; 2,984 image-fill references; 0
+text nodes; 182,628 structural nodes; 2,984 image-fill markers; 0
 unresolved extraction limitations. These are mechanical counts from successful
 Figwright responses. They do not constitute review and do not add to the legacy
 reviewed-node total.
@@ -92,6 +92,11 @@ leaving a page. Table row order is deterministic for navigation only; it does
 not prescribe or authorize a Step 18 review order. The 14 legacy `Experiments`
 batches remain provisional history and do not count toward this fresh
 full-page pass.
+
+Coverage resolution is not uniform. The five non-Checkout page scopes have
+per-root extraction records. The 64 Checkout records are flat page-level scans;
+their completed batch cursors prove page coverage, not equally precise
+root-to-descendant attribution.
 
 Tracker totals: 69 pages; 99 planned non-empty review batches; all 99 reviewed;
 12 zero-root page records; all 12 dispositioned; zero saved-data batches or
@@ -266,7 +271,7 @@ consulted. These batches cover roots 21–174 in manifest order:
 The page manifest and 174 root records reconcile exactly. All top-level roots
 are exposed as visible and unlocked, all root-record limitation arrays are
 empty, and the page totals remain 70,973 text nodes, 73,972 structural nodes,
-and 793 opaque image-fill references. The saved ledger exposes no raster
+and 793 opaque image-fill markers. The saved ledger exposes no raster
 pixels. Filename dates apply only to named embedded assets; they do not date a
 root, establish a sequence, or prove a product state.
 
@@ -386,6 +391,8 @@ asset selections, publication decisions, or claims.
 
 - Exact or near-exact repeated roots and scaffolding are counted once per
   family, not as separate achievements or separate evidence of contribution.
+- An `extracted-text signature` means the ordered sequence of `characters`
+  values only; node IDs, node names, geometry, and styling are excluded.
 - `Experiments` roots 129–133 equal 134–138 by extracted text. Roots 206–208,
   209–211, 212–214, 215–217, 218–220, 221–223, and 224–226 form seven repeated
   triplets. Roots 227–229 are three same-named zero-text image roots.
@@ -401,10 +408,12 @@ asset selections, publication decisions, or claims.
 
 #### Raster, chronology, and attribution limits
 
-- The remaining pages contain 2,191 opaque image-fill references. Sixty-five
-  remaining top-level roots have an image fill and two `Write Pro` roots are
-  opaque widgets. The ledger has names and fill references, not pixels,
-  screenshots, exports, signed URLs, or visual renders.
+- The remaining pages contain 2,191 opaque image-fill markers. Sixty-four
+  remaining top-level roots are themselves marked with an image fill and two
+  `Write Pro` roots are opaque widgets. The ledger has node names and fill
+  properties but no stable image hash or reference, pixels, screenshots,
+  exports, signed URLs, or visual renders. Raster-family observations therefore
+  rely on node names and local structure rather than image identity.
 - Date-bearing filenames range across several years and date only a named
   embedded asset. Dates inside mock billing, trial, account, or payment copy are
   content artifacts, not safe design chronology.
@@ -445,21 +454,33 @@ split only where different evidence boundaries require different
 classifications. The 14 legacy `Experiments` batches are subsumed by the fresh
 `EX-*` decisions and do not create additional candidates.
 
+An adversarial post-checkpoint audit found that the original table omitted
+Pricing batch 01, Pricing roots 160–161 and 173, left root 169 implicit inside a
+broad range, overlapped other Pricing and Checkout scopes, and omitted six
+non-empty Checkout pages even though their saved-ledger reviews were present
+above. The corrected scopes below assign all 174 Pricing manifest positions and
+all 64 Checkout page records exactly once at family or page level. Manifest
+positions are stated where numeric node ranges would be ambiguous.
+
 | ID | Candidate family | Step 18 classification | Comparison and evidence ceiling | Step 19 route |
 | --- | --- | --- | --- | --- |
-| `PP-01` | Responsive Clarify family, `3:126837`–`3:129432` | Unresolved | Compact native responsive rule with clear comparison value, but its date, author, workstream, and relationship to selected pricing assets are unknown. | Focused relationship and visual check |
-| `PP-02` | Vision plus four pricing-grid variants, `3:150294`, `4:139973`–`4:140696` | Contextual evidence | Useful wording and hierarchy context, but it overlaps stronger current pricing-system assets and has no contribution or lifecycle link. | No pass unless another finalist depends on it |
-| `PP-03` | Pricing components, product routes, goals, and responsive rules, `4:145732`–`4:150829` | Genuinely new evidence | Adds native system, goal, and responsive evidence absent from the selected crops. It remains private and unattributed. | Verify the smallest readable goal/rule frame |
-| `PP-04` | Copy-change questions and file-format popovers, `4:152718`, `4:181193` | Genuinely new evidence | Strong copy-decision evidence not represented in the selected asset set. Authorship, selection, lifecycle, and permission remain unknown. | Focused exact-frame pass |
-| `PP-05A` | Crosswalk-listed pricing nodes within `5:171099`–`5:198928` | Unresolved | Native states correlate to the canonical pricing area, but the reviewed sources do not prove exact equivalence to, or improvement over, the current flattened crops. | Compare only the seven crosswalk-listed nodes |
-| `PP-05B` | Remaining checkout rules within `5:171099`–`5:198928` | Contextual evidence | Useful plan, eligibility, address, payment, and order-summary context; it does not establish Mason's pricing contribution. | No separate pass |
-| `PP-06` | Repeated pricing-page families, `5:224853`–`5:272422` | Unresolved | High-value native page systems may overlap current assets, but copied families, chronology, contribution, and exact visual relationship are unresolved. | Compare one representative from each family |
-| `PP-07` | Updated page workspaces and decision questions, `5:303260`–`5:309562` | Genuinely new evidence | Adds explicit questions about routes, bundles, grid length, API, sales entry, social proof, and missing copy. Intent is visible; authorship and decisions are not. | Verify one question-rich native frame |
-| `PP-08` | Repeated goals, routes, responsive states, and labelled vision, `5:309775`–`5:311670` | Contextual evidence | Helps compare retained and changed requirements but substantially repeats stronger families; the vision label proves intent only. | No separate pass |
-| `PP-09` | Tooltip copy inventory, `5:313460` | Genuinely new evidence | Exact existing copy, proposed revisions, and rationales offer strong writing-process evidence missing from current assets. Acceptance and implementation are unknown. | Priority exact-frame and readability pass |
-| `PP-10` | Grid reduction and feature-awareness system, `5:313532`–`5:315615` | Genuinely new evidence | Strong native rationale, shortlist, explanation, anatomy, and variant evidence. Repeated product scaffolding and contribution boundaries still apply. | Priority representative-frame pass |
-| `PP-11` | Logo-market labels and customer-quote sources, `5:314813`, `5:315601`, `5:315610` | Private-only evidence | Named quotations and brand material lack source, attribution, and publication permission. | No pass; retain on publication hold |
-| `PP-12` | Design-priority workspace, `2178:278670` | Private-only evidence | Internal status and impact/effort material is useful private context but has no verified author, lifecycle, outcome, or publication permission. | No pass |
+| `PP-00A` | Pricing root 1, `3:95730` | Contextual evidence | Broad source/archive cluster with strong artifact value but substantial overlap, mixed states, and no bounded contribution or lifecycle relationship. | No separate pass; retain as private source context |
+| `PP-00B` | Pricing roots 2–3, `3:96476`, `3:98129` | Genuinely new evidence | Responsive Translator-route and bundle systems add artifact evidence absent from the selected crops. Contribution, chronology, lifecycle, and permission remain unknown. | No Step 19 pass; retain for Phase 6 allocation |
+| `PP-00C` | Pricing roots 4–8 and 17–20 | Contextual evidence | Enterprise, mixed `For Dev`, and repeated callout states support product context but do not form a bounded contribution or distinct exhibit. | No separate pass |
+| `PP-00D` | Pricing roots 9–16 | Genuinely new evidence | Repeated Clarify copy-process and decision-rationale families add private accessibility and hierarchy evidence. Authorship, selection, lifecycle, and permission remain unknown. | No Step 19 pass; retain for Phase 6 allocation |
+| `PP-01` | Pricing roots 21–24, `3:126837`–`3:129432` | Unresolved | Compact native responsive rule with clear comparison value, but its date, author, workstream, and relationship to selected pricing assets are unknown. | Focused relationship and visual check |
+| `PP-02` | Pricing roots 25–31: vision, four grid variants, and two repeated notes | Contextual evidence | Useful wording and hierarchy context, but it overlaps stronger current pricing-system assets and has no contribution or lifecycle link. | No pass unless another finalist depends on it |
+| `PP-03` | Pricing roots 58–67, `4:145732`–`4:150829` | Genuinely new evidence | Adds native system, goal, and responsive evidence absent from the selected crops. It remains private and unattributed. | Verify the smallest readable goal/rule frame |
+| `PP-04` | Pricing roots 68–73, `4:152715`–`4:181193` | Genuinely new evidence | Strong copy-decision and file-format evidence not represented in the selected asset set. Authorship, selection, lifecycle, and permission remain unknown. | Focused exact-frame pass |
+| `PP-05A` | Seven routed nodes within Pricing roots 74–135: `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, `5:196803` | Unresolved | Native states were initially correlated to the canonical pricing area; Step 19 corrected them to checkout context and excluded replacement or publication use. | Compare only the seven listed nodes |
+| `PP-05B` | All other Pricing roots 74–135 | Contextual evidence | Useful plan, eligibility, address, payment, component, and order-summary context; it does not establish Mason's pricing contribution. | No separate pass |
+| `PP-06` | Pricing roots 136–145 plus root 173, `2176:278674` | Unresolved | High-value repeated or older native page systems may overlap current assets, but copied families, chronology, contribution, and exact visual relationship are unresolved. | Compare one representative from each main family; root 173 remains private context |
+| `PP-07` | Pricing roots 146–152, `5:303260`–`5:309562` | Genuinely new evidence | Adds explicit questions about routes, bundles, grid length, API, sales entry, social proof, and missing copy. Intent is visible; authorship and decisions are not. | Verify one question-rich native frame |
+| `PP-08` | Pricing roots 153–159 and 161 | Contextual evidence | Repeated goals, routes, responsive states, a labelled vision, and a further pricing layout help compare retained and changed requirements but substantially repeat stronger families. | No separate pass |
+| `PP-09` | Pricing root 162, `5:313460` | Genuinely new evidence | Exact existing copy, proposed revisions, and rationales offer strong writing-process evidence missing from current assets. Acceptance and implementation are unknown. | Priority exact-frame and readability pass |
+| `PP-10` | Pricing roots 163–165, 167–169, and 172 | Genuinely new evidence | Grid reduction, `Feature awareness`, product pages, anatomy, indicator, and separate `Feature-awareness` material add strong private rationale and variant evidence. Structural or provenance relationships among the two similarly named top-level sections are not assumed. | Priority representative-frame pass |
+| `PP-11` | Pricing roots 166, 170, and 171: `5:314813`, `5:315601`, `5:315610` | Private-only evidence | Named quotations and brand material lack source, attribution, and publication permission. | No pass; retain on publication hold |
+| `PP-12` | Pricing root 174, `2178:278670` | Private-only evidence | Internal status and impact/effort material is useful private context but has no verified author, lifecycle, outcome, or publication permission. | No pass |
 | `WP-01` | `Write Pro` batches 01–02 | Genuinely new evidence | Native seat-change, limit, value-framing, security, and hardblock evidence extends beyond the current pricing crops and aligns with the bounded `MON-05` workshop themes. | Priority representative-frame pass |
 | `WP-02A` | `Write Pro` batch 03 through root 63 | Genuinely new evidence | Adds copy-review, value-proposition, banner, and review-context artifacts; a note naming Mason supports review context only. | Verify the review frame and one banner family |
 | `WP-02B` | `Write Pro` roots 64–81 | Contextual evidence | Mixed proposals, tooltips, references, opaque widgets, and repeated fragments add context but no distinct defensible portfolio claim. | No separate pass |
@@ -468,18 +489,19 @@ classifications. The 14 legacy `Experiments` batches are subsumed by the fresh
 | `EX-03` | `Experiments` batches 07–12 | Current-asset replacement | Native document-count, file-size, character-limit, daily-limit, and hardblock families are specific candidates to replace or source the currently source-missing `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. Exact frame equivalence, visual quality, contribution, and permission are still unproved. | Priority replacement comparison |
 | `AR-01` | Archive / `Page 1` | Private-only evidence | MFA material is outside the pricing case and mixes duplicates, personal text, and unsupported lifecycle labels. | No pass |
 | `AR-02` | Archive / `ATE` | Private-only evidence | Rich administrative artifacts contain operational identifiers and personal data and do not support a pricing contribution. | No pass |
-| `CO-01A` | Checkout pages 003, 011, 017, 018, 025, and 028 | Unresolved | These native purchase-state systems may overlap the current checkout assets, but exact same-state equivalence and improvement are not established. | Compare only if Step 19 includes checkout replacement |
-| `CO-01B` | Decision-rich Checkout pages 004, 008, 016, 019, 022, 026, and 027 | Genuinely new evidence | Adds clear consent, payment-rationale, saved-wallet, bite-size, mobile, verification, and experiment-noise decisions not shown in current assets. Page 005 remains excluded on publication hold. | No Step 19 pass; retain for Phase 6 allocation |
+| `CO-01A` | Checkout pages 003, 011, 013–015, 017, 018, 025, and 028 | Unresolved | These native purchase-state systems may overlap the current checkout assets, but exact same-state equivalence and improvement are not established. Pages 014/015 are one close family. | Compare only if a later phase separately activates checkout replacement |
+| `CO-01B` | Decision-rich Checkout pages 004, 008, 016, 019–022, 026, and 027 | Genuinely new evidence | Adds clear consent, payment-rationale, saved-wallet, bite-size, stepper, modal-signup, mobile, verification, and experiment-noise decisions not shown in current assets. | No Step 19 pass; retain for Phase 6 allocation |
+| `CO-01C` | Checkout page 005 | Private-only evidence | The verification flow contains personal data and a live-looking verification link/token. It remains on publication hold regardless of artifact value. | No pass |
 | `CO-02A` | Checkout pages 033, 035, 039, and 040 | Genuinely new evidence | Strong bounded final-screen, review, stepper, and team-size decision artifacts. Metric names and labels do not prove testing or results. | No Step 19 pass; retain for Phase 6 allocation |
-| `CO-02B` | Other Checkout pages 029–044 | Contextual evidence | Useful experiment context, but repeated hypothesis scaffolding and close variants add less distinct value. | No separate pass |
+| `CO-02B` | Checkout pages 029–032, 034, 036–038, and 041–044 | Contextual evidence | Useful experiment context, but repeated hypothesis scaffolding and close variants add less distinct value. | No separate pass |
 | `CO-03A` | Checkout pages 052, 054, and 057 | Genuinely new evidence | Trial-risk, reassurance, quote, and timeline artifacts add bounded content examples not present in the selected checkout set. | No Step 19 pass; retain for Phase 6 allocation |
-| `CO-03B` | Checkout page 056 and other pages 045–059 | Contextual evidence | Page 056 links pricing and checkout routes; the remaining pages mainly repeat checkout scaffolding or provide narrow variants. | No separate pass |
+| `CO-03B` | Checkout pages 045–049, 053, 055–056, and 058–059 | Contextual evidence | Page 056 links pricing and checkout routes; the remaining pages mainly repeat checkout scaffolding or provide narrow variants. | No separate pass |
 | `CO-04` | Checkout page 060 | Private-only evidence | The workshop preserves rich questions but includes internal critique, unverified metrics, and unclear authorship; it is unsuitable for public use without independent evidence and permission. | No pass |
 | `CO-05` | Checkout pages 062–064 | Contextual evidence | References, shared components, and a document legend explain the file but do not establish contribution or lifecycle. | No separate pass |
-| `REJ-01` | Twelve zero-root records; exact duplicate, empty vector/text, raster-only, and incidental scaffolding families identified above | Reject | They add no distinct readable candidate after family-level deduplication. Rejection does not delete or alter the raw ledger. | No pass |
+| `REJ-01` | Twelve zero-root Checkout records; Pricing roots 32–57 and 160; exact duplicate, empty vector/text, raster-only, and other incidental scaffolding families identified above | Reject | They add no distinct readable candidate after family-level deduplication. Rejection does not delete or alter the raw ledger. | No pass |
 
-Classification count: one current-asset replacement family; eleven genuinely
-new evidence families; eight contextual evidence families; five private-only
+Classification count: one current-asset replacement family; thirteen genuinely
+new evidence families; ten contextual evidence families; six private-only
 families; four unresolved families; and one reject family.
 
 No Figwright candidate independently satisfies the portfolio evidence model's
@@ -513,7 +535,7 @@ replacement decision.
 | `WP-01` | Representative hardblock `4:184736` | The 618-by-400 native instance is readable and self-contained, with a limit state, timer, Write Pro value list, price, and upgrade action. Its node name says `Translate Pro` while its visible content says `Write Pro`, so naming does not establish lineage. | Carry `4:184736` to Step 20 as a conditional private visual candidate. |
 | `WP-02A` | Review label `4:185353`; dev area `4:185368`; banner family `4:186544`; review note `4:186560` | `4:185353` is only a standalone `Copy in review` label, and `4:185368` is a large raster-heavy country-availability workspace. `4:186544` is a bounded native banner family; `4:186560` says `For Ana to review with Mason.` That note supports review context only. | Carry `4:186544` to Step 20 as contribution-context evidence only, not as authorship, approval, or a standalone public asset. |
 | `EX-02` | Copy area `2:99544`; tiered cancellation component set `2:99549` | `2:99549` is a clean native and unlocked Starter/Advanced/Ultimate family with tier-aware loss copy and `Continue with Pro` / `Cancel subscription` actions. Entitlement accuracy, contribution, selection, lifecycle, outcomes, and permission remain open. | Carry `2:99549` to Step 20 as a conditional private cancellation candidate. |
-| `EX-03` | Usage-limit frame `2:112817`; document-size frame `2:165768`; remaining-documents frame `2:165336`; current `usage-limit.png`, `document-size.png`, and `remaining-documents.png` | All three live frames are native, unlocked, and source-equivalent to the named current PNGs in visible copy, artwork family, structure, actions, and shadow-expanded dimensions. The current files remain 1092-by-1500, 1092-by-1204, and 546-by-626 pixels. This comparison does not prove that those PNGs were exported from these frames. | Carry all three exact node IDs to Step 20 for source and provenance mapping. Do not change the PNGs or asset manifest in Step 19. |
+| `EX-03` | Usage-limit frame `2:112817`; document-size frame `2:165768`; remaining-documents frame `2:165336`; current `usage-limit.png`, `document-size.png`, and `remaining-documents.png` | A focused read-only follow-up resolved both live questions. All three frames use the same shadow, adding 34 logical pixels across each axis. `2:165768` is the larger-file-size state and maps to `document-size.png`; its 512-by-568 frame becomes 1092 by 1204 at 2x. `2:165336` is the remaining-document-count state and maps to `remaining-documents.png`; its 512-by-592 frame becomes 546 by 626 at 1x. For `2:112817`, the PNG shows a `Pro feature` badge while the current node's 22-pixel `DeepL Pro` badge is hidden. Showing that badge plus its 4-pixel header gap adds 26 logical pixels, exactly explaining the remaining 52 pixels at 2x. Copy, artwork, structure, and actions otherwise match. This resolves the source-family and historical-state relationship, not export lineage. | Keep all three exact node IDs as conditional source candidates. No further Figma recheck is required unless independent export-lineage evidence appears. |
 | `CO-01A` | No live node | Checkout replacement was not part of the approved focused pass, so the conditional Step 18 route was not activated. | Not inspected. No implied next-page or checkout-review order. |
 
 The conditional Step 20 visual or source candidates are `4:181199`,
@@ -540,7 +562,7 @@ export an asset, replace a PNG, or change the site.
 | `4:184736` | Added to the pricing and Write Pro crosswalks as a correlated private limit-state candidate for `MON-05`; conflicting node and visible product naming leaves lineage unresolved. |
 | `4:186544` | Added to the pricing and Write Pro crosswalks as contribution-context evidence only. The adjacent review note does not prove authorship, approval, implementation, or public readiness. |
 | `2:99549` | Added to the pricing and Monetization crosswalks as a Figma-only private cancellation candidate contextual to `MON-04`; entitlement accuracy and every non-artifact evidence dimension remain open. |
-| `2:112817`, `2:165768`, and `2:165336` | Added to the Monetization crosswalk and asset manifest as source-equivalent candidates for `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. The PNGs retain `missing` provenance because no independent repository source export or proven export lineage exists. |
+| `2:112817`, `2:165768`, and `2:165336` | Added to the Monetization crosswalk and asset manifest as conditional source candidates for `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. The focused follow-up resolved the geometry and same-name questions: the two document nodes map unambiguously by visible state, while the usage PNG is a historical visible-badge variant of the current hidden-badge node. The PNGs retain `missing` provenance because no independent repository source export or proven export lineage exists. |
 | `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, and `5:196803` | Corrected in the Monetization and pricing crosswalks: these are checkout and purchase-state systems, not Pricing Page V2 equivalents. They remain private context and include sensitive sample data. |
 
 No Step 20 record proves authorship, selection, approval, implementation,
