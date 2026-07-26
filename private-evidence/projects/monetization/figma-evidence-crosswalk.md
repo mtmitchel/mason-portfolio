@@ -31,7 +31,7 @@ state retains a margin of error and may be revised by stronger evidence.
 
 | Canonical area | Current relationship | Supported use | Boundary |
 | --- | --- | --- | --- |
-| `01 — Pricing & packaging`; nodes `5:176750`, `5:196049`, `5:195920`, `5:195868`, `5:195702`, `5:196128`, `5:196803` | Correlated to `MON-04`; contextual or unresolved for `MON-05`, `MON-06`, `SYS-03`, and `SYS-04` | Pricing, plan, bundle, add-on, market, currency, and responsive artifact states | Initiative-level equivalence, testing, shipment, and results are not established. |
+| `01 — Pricing & packaging` | Contextual or unresolved for `MON-04`, `MON-05`, `MON-06`, `SYS-03`, and `SYS-04`. The seven formerly routed `5:*` nodes were verified as checkout and purchase-state systems, not pricing-page equivalents. | Pricing, plan, bundle, add-on, market, currency, and responsive artifact states | Initiative-level equivalence, contribution, testing, shipment, results, and publication permission are not established. |
 | `02 — Purchase & order summary` | Contextual candidate for `MON-02` | Purchase and order-summary content states | Product, tax, country, account, and payment data require item-level review. |
 | `03 — Plans, trials & eligibility` | Contextual to `SYS-01` and `SYS-03` | Conditional plan, trial, eligibility, and account-state logic | Do not expose account identifiers or infer deployment/adoption. |
 | `04 — Translation limits & bundles` | Contextual to `MON-05`, `MON-06`, and pricing-copy conversations | Limit, plan, bundle, and focused UX-copy examples | Exact contribution and lifecycle must come from direct sources, not page location. |
@@ -57,6 +57,18 @@ state retains a margin of error and may be revised by stronger evidence.
 - Voice and API plan frames prove artifact existence only. No recovered Mason
   achievement currently supports presenting either as his pricing
   contribution.
+
+## Final Step 20 preserved-source dispositions
+
+| Node or family | Relationship | Records use and boundary |
+| --- | --- | --- |
+| [`4:181199`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=4-181199) | Contextual private copy-decision artifact for `MON-04` | The file-format comparison contains a visible `.xslx`/`.xlsx` inconsistency. Do not treat it as final copy or as evidence of Mason's contribution, selection, approval, or implementation. |
+| [`2:99549`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=2-99549) | Figma-only private cancellation candidate, contextual to `MON-04` | The tier-aware family is readable, but entitlement accuracy, contribution, lifecycle, outcome, and permission remain unknown. |
+| [`2:112817`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=2-112817), [`2:165768`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=2-165768), and [`2:165336`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=2-165336) | Figma-only source context for three current upgrade-prompt PNGs; no exact achievement mapping | The native frames are source-equivalent in visible copy, artwork family, structure, actions, and dimensions. They do not prove export lineage, authorship, selection, approval, shipment, testing, results, or publication permission. |
+| `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, and `5:196803` | Checkout and purchase-state context | Remove the earlier Pricing Page V2 equivalence. The nodes include sensitive sample account, payment, tax, legal, address, and named-person material and are not publication candidates. |
+
+Step 20 changed private records only. It did not edit or export from Figma,
+change public assets, select final visuals, or authorize publication.
 
 The failed 245-page Monetization PDF remains navigation history, not
 publication evidence. Detailed page inventories, source moves, and

@@ -1,16 +1,18 @@
 # Pricing evolution Figwright inventory
 
-Status: Step 17 resume tracker complete; Step 18 active; 1 of 99 fresh review
-batches reviewed; no final classifications
+Status: Steps 18–20 complete; 99 of 99 fresh review batches reviewed; all 12
+zero-root records dispositioned; every candidate family classified; all routed
+live checks dispositioned; final private records allocated
 
 Last updated: 2026-07-26
 
 Public use: Prohibited
 
 This is the running page-and-batch inventory for pricing-evolution recovery
-steps 15–20. It records provisional evidence during the Step 18 saved-ledger
-review; it does not authorize Figma inspection, editing, export, asset
-selection, or public-site work.
+steps 15–20. It records the Step 18 saved-ledger review and candidate
+classification, the approved read-only Step 19 verification, and the Step 20
+private crosswalk and source-candidate allocation. It does not authorize Figma
+editing, export, public asset selection, or public-site work.
 
 The compressed
 [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz)
@@ -75,9 +77,10 @@ reviewed-node total.
 
 At the Step 17 checkpoint there were 57 non-empty page records, 99 planned
 review batches, 12 zero-root records pending later disposition, and zero fresh
-batches reviewed. Step 18 has now reviewed 1 of 99 saved-data batches; 98
-remain. No Figma page has been visually verified and no public asset has been
-selected.
+batches reviewed. Step 18 saved-ledger coverage is now complete at 99 of 99
+batches, and all 12 zero-root records have explicit dispositions. Step 19 then
+verified only the explicitly routed live nodes in Figma Desktop; it did not
+reopen or visually certify whole pages. No public asset has been selected.
 
 ## Review resume tracker
 
@@ -90,81 +93,81 @@ not prescribe or authorize a Step 18 review order. The 14 legacy `Experiments`
 batches remain provisional history and do not count toward this fresh
 full-page pass.
 
-Tracker totals: 69 pages; 99 planned non-empty review batches; 12 zero-root
-page records requiring an explicit empty-page disposition; 1 batch reviewed
-and 98 remaining in the saved-data pass.
+Tracker totals: 69 pages; 99 planned non-empty review batches; all 99 reviewed;
+12 zero-root page records; all 12 dispositioned; zero saved-data batches or
+empty-record checks remaining.
 
 | Capture ID | Figma file / page | Page ID | Roots | Planned batches | Progress | Next review slice | State |
 | --- | --- | --- | ---: | ---: | ---: | --- | --- |
-| `monetization-pricing-page` | `Monetization` / `Pricing page` | `3:94360` | 174 | 9 | 1/9 | Batch 02, roots 21–40 | Review active; batch 01 provisional |
-| `monetization-write-pro-page` | `Monetization` / `Write Pro` | `4:181271` | 81 | 5 | 0/5 | Batch 01, roots 1–20 | Unreviewed |
-| `monetization-experiments-page` | `Monetization` / `Experiments` | `0:1` | 231 | 12 | 0/12 | Batch 01, roots 1–20 | Unreviewed |
-| `archive-page-1` | `_Archive — Misc (pre-cleanup)` / `Page 1` | `0:1` | 17 | 1 | 0/1 | Batch 01, roots 1–17 | Unreviewed |
-| `archive-ate-page` | `_Archive — Misc (pre-cleanup)` / `ATE` | `2:1284` | 82 | 5 | 0/5 | Batch 01, roots 1–20 | Unreviewed |
-| `checkout-page-001` | `Checkout — Experiments (Copy)` / `---` | `10606:21321` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-002` | `Checkout — Experiments (Copy)` / `🚧 In progress` | `10606:22151` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-003` | `Checkout — Experiments (Copy)` / `Integrating the sign-up in the checkout flow` | `10848:11930` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-004` | `Checkout — Experiments (Copy)` / `DM-0000 Adding a checkbox for the US customers` | `10606:18924` | 1 | 1 | 0/1 | Batch 01, roots 1–1 | Unreviewed |
-| `checkout-page-005` | `Checkout — Experiments (Copy)` / `PABC-6 Email verification for VBAN` | `10688:68043` | 9 | 1 | 0/1 | Batch 01, roots 1–9 | Unreviewed |
-| `checkout-page-006` | `Checkout — Experiments (Copy)` / `————————` | `3529:10082` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-007` | `Checkout — Experiments (Copy)` / `🧪  EXPERIMENTS` | `1260:0` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-008` | `Checkout — Experiments (Copy)` / `DM-1146 • Why payment needed?` | `4482:21725` | 3 | 1 | 0/1 | Batch 01, roots 1–3 | Unreviewed |
-| `checkout-page-009` | `Checkout — Experiments (Copy)` / `————————` | `1176:1322` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-010` | `Checkout — Experiments (Copy)` / `🔎  EXPLORATION` | `1176:0` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-011` | `Checkout — Experiments (Copy)` / `DM-2185 • Checkout Next` | `8759:5038` | 12 | 1 | 0/1 | Batch 01, roots 1–12 | Unreviewed |
-| `checkout-page-012` | `Checkout — Experiments (Copy)` / `---` | `10606:18925` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-013` | `Checkout — Experiments (Copy)` / `Without address field ` | `8902:10969` | 9 | 1 | 0/1 | Batch 01, roots 1–9 | Unreviewed |
-| `checkout-page-014` | `Checkout — Experiments (Copy)` / `DM-2003 • Remove address from Checkout` | `8060:6661` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-015` | `Checkout — Experiments (Copy)` / `Page 58` | `9239:40459` | 1 | 1 | 0/1 | Batch 01, roots 1–1 | Unreviewed |
-| `checkout-page-016` | `Checkout — Experiments (Copy)` / `DM-2053 • Show payment information saved wallet` | `8005:40424` | 15 | 1 | 0/1 | Batch 01, roots 1–15 | Unreviewed |
-| `checkout-page-017` | `Checkout — Experiments (Copy)` / `Checkout Vision` | `5497:59879` | 51 | 3 | 0/3 | Batch 01, roots 1–20 | Unreviewed |
-| `checkout-page-018` | `Checkout — Experiments (Copy)` / `Multiple subscription` | `5542:36305` | 3 | 1 | 0/1 | Batch 01, roots 1–3 | Unreviewed |
-| `checkout-page-019` | `Checkout — Experiments (Copy)` / `DM-1677 • Bite size checkout` | `5381:15302` | 6 | 1 | 0/1 | Batch 01, roots 1–6 | Unreviewed |
-| `checkout-page-020` | `Checkout — Experiments (Copy)` / `DM-XXXX • Updated checkout stepper` | `4909:643` | 3 | 1 | 0/1 | Batch 01, roots 1–3 | Unreviewed |
-| `checkout-page-021` | `Checkout — Experiments (Copy)` / `Modal Sign up flow` | `3717:13936` | 11 | 1 | 0/1 | Batch 01, roots 1–11 | Unreviewed |
-| `checkout-page-022` | `Checkout — Experiments (Copy)` / `Updates to Mobile checkout` | `4494:23543` | 34 | 2 | 0/2 | Batch 01, roots 1–20 | Unreviewed |
-| `checkout-page-023` | `Checkout — Experiments (Copy)` / `————————` | `1260:1` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-024` | `Checkout — Experiments (Copy)` / `✅  DONE` | `1176:2` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-025` | `Checkout — Experiments (Copy)` / `DM-1999 • Due today + reassurance` | `6889:20863` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-026` | `Checkout — Experiments (Copy)` / `DM-2063 • Email verification` | `8257:22222` | 8 | 1 | 0/1 | Batch 01, roots 1–8 | Unreviewed |
-| `checkout-page-027` | `Checkout — Experiments (Copy)` / `DM-2031 • Sign up optimisations` | `7336:21555` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-028` | `Checkout — Experiments (Copy)` / `DM-1418 • 2-Step Checkout` | `5036:4490` | 9 | 1 | 0/1 | Batch 01, roots 1–9 | Unreviewed |
-| `checkout-page-029` | `Checkout — Experiments (Copy)` / `DM-1419 • Reassurances + Button CTA to checkout review` | `5222:16133` | 1 | 1 | 0/1 | Batch 01, roots 1–1 | Unreviewed |
-| `checkout-page-030` | `Checkout — Experiments (Copy)` / `DM-1616 • Rule of 100` | `5346:838` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-031` | `Checkout — Experiments (Copy)` / `Remove review from checkout` | `4491:21945` | 5 | 1 | 0/1 | Batch 01, roots 1–5 | Unreviewed |
-| `checkout-page-032` | `Checkout — Experiments (Copy)` / `DM-1092 • Checkout abandonment survey` | `4385:21723` | 17 | 1 | 0/1 | Batch 01, roots 1–17 | Unreviewed |
-| `checkout-page-033` | `Checkout — Experiments (Copy)` / `DM-1032 • Final screen optimisations` | `3787:15288` | 14 | 1 | 0/1 | Batch 01, roots 1–14 | Unreviewed |
-| `checkout-page-034` | `Checkout — Experiments (Copy)` / `DM-997 • Add FAQ to checkout v1` | `3792:15047` | 6 | 1 | 0/1 | Batch 01, roots 1–6 | Unreviewed |
-| `checkout-page-035` | `Checkout — Experiments (Copy)` / `DM-1029 • Review screen improvement` | `3786:15217` | 5 | 1 | 0/1 | Batch 01, roots 1–5 | Unreviewed |
-| `checkout-page-036` | `Checkout — Experiments (Copy)` / `DM-1028 • Decrease price size on details page` | `3786:14918` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-037` | `Checkout — Experiments (Copy)` / `DM-1018 • Secure payment labels` | `3760:14773` | 5 | 1 | 0/1 | Batch 01, roots 1–5 | Unreviewed |
-| `checkout-page-038` | `Checkout — Experiments (Copy)` / `DM-1004 • API usage limits UI update` | `3737:15462` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-039` | `Checkout — Experiments (Copy)` / `DM-1001 • Add Stepper to checkout` | `3735:14323` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-040` | `Checkout — Experiments (Copy)` / `DM-975 • Don't auto-correct team size field` | `3664:13621` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-041` | `Checkout — Experiments (Copy)` / `DM-952 • Add trust elements to checkout details` | `3577:12310` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-042` | `Checkout — Experiments (Copy)` / `DM-625 - Add plan name and details to registration step` | `2675:9243` | 3 | 1 | 0/1 | Batch 01, roots 1–3 | Unreviewed |
-| `checkout-page-043` | `Checkout — Experiments (Copy)` / `DM-734 • Display Accepted Payment Methods` | `3618:14993` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-044` | `Checkout — Experiments (Copy)` / `DM-736 - Iteration on DM-625 - Add plan details and price to registration step` | `3455:9972` | 3 | 1 | 0/1 | Batch 01, roots 1–3 | Unreviewed |
-| `checkout-page-045` | `Checkout — Experiments (Copy)` / `Registration - existing email` | `1384:6168` | 5 | 1 | 0/1 | Batch 01, roots 1–5 | Unreviewed |
-| `checkout-page-046` | `Checkout — Experiments (Copy)` / `Separate Credit card fields` | `1317:4050` | 3 | 1 | 0/1 | Batch 01, roots 1–3 | Unreviewed |
-| `checkout-page-047` | `Checkout — Experiments (Copy)` / `Billing option more comparable` | `1878:6515` | 8 | 1 | 0/1 | Batch 01, roots 1–8 | Unreviewed |
-| `checkout-page-048` | `Checkout — Experiments (Copy)` / `DM-412 - Increase perceived security of payment data fields ` | `2361:7159` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-049` | `Checkout — Experiments (Copy)` / `DM-872 - Removing links to other pages on details page` | `3361:9168` | 1 | 1 | 0/1 | Batch 01, roots 1–1 | Unreviewed |
-| `checkout-page-050` | `Checkout — Experiments (Copy)` / `————————` | `1217:3299` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-051` | `Checkout — Experiments (Copy)` / `💀  ARCHIVE` | `7421:12788` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-052` | `Checkout — Experiments (Copy)` / `DM-1084 • Quote to review screen` | `4188:23350` | 6 | 1 | 0/1 | Batch 01, roots 1–6 | Unreviewed |
-| `checkout-page-053` | `Checkout — Experiments (Copy)` / `DM-1997 • Add Stepper to Registration` | `6888:25251` | 1 | 1 | 0/1 | Batch 01, roots 1–1 | Unreviewed |
-| `checkout-page-054` | `Checkout — Experiments (Copy)` / `DM-1054 • Visualise how the free trial works` | `3761:15882` | 6 | 1 | 0/1 | Batch 01, roots 1–6 | Unreviewed |
-| `checkout-page-055` | `Checkout — Experiments (Copy)` / `DM-XXX • Highlight features visible on Review` | `4980:3179` | 13 | 1 | 0/1 | Batch 01, roots 1–13 | Unreviewed |
-| `checkout-page-056` | `Checkout — Experiments (Copy)` / `Compare / Change plan experiment` | `3782:14999` | 20 | 1 | 0/1 | Batch 01, roots 1–20 | Unreviewed |
-| `checkout-page-057` | `Checkout — Experiments (Copy)` / `Won't charge during trial assurance` | `1875:6385` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-058` | `Checkout — Experiments (Copy)` / `General - Checkout improvements` | `3436:9335` | 61 | 4 | 0/4 | Batch 01, roots 1–20 | Unreviewed |
-| `checkout-page-059` | `Checkout — Experiments (Copy)` / `New VAT messaging` | `5134:7983` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
-| `checkout-page-060` | `Checkout — Experiments (Copy)` / `⭐️  BTT Reunion (Feb 2023) Checkout Experiments` | `3529:10083` | 200 | 10 | 0/10 | Batch 01, roots 1–20 | Unreviewed |
-| `checkout-page-061` | `Checkout — Experiments (Copy)` / `---` | `7421:12789` | 0 | 0 | 0/0 | Empty-page record check | No selected roots; page disposition pending |
-| `checkout-page-062` | `Checkout — Experiments (Copy)` / `👀  REFERENCES` | `3531:10158` | 1 | 1 | 0/1 | Batch 01, roots 1–1 | Unreviewed |
-| `checkout-page-063` | `Checkout — Experiments (Copy)` / `🧩 LOCAL COMPONENTS` | `3533:13370` | 4 | 1 | 0/1 | Batch 01, roots 1–4 | Unreviewed |
-| `checkout-page-064` | `Checkout — Experiments (Copy)` / `⚡️ GETTING STARTED` | `1217:3298` | 2 | 1 | 0/1 | Batch 01, roots 1–2 | Unreviewed |
+| `monetization-pricing-page` | `Monetization` / `Pricing page` | `3:94360` | 174 | 9 | 9/9 | None | Saved-data page pass complete; findings provisional |
+| `monetization-write-pro-page` | `Monetization` / `Write Pro` | `4:181271` | 81 | 5 | 5/5 | None | Saved-data page pass complete; findings provisional |
+| `monetization-experiments-page` | `Monetization` / `Experiments` | `0:1` | 231 | 12 | 12/12 | None | Saved-data page pass complete; findings provisional |
+| `archive-page-1` | `_Archive — Misc (pre-cleanup)` / `Page 1` | `0:1` | 17 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `archive-ate-page` | `_Archive — Misc (pre-cleanup)` / `ATE` | `2:1284` | 82 | 5 | 5/5 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-001` | `Checkout — Experiments (Copy)` / `---` | `10606:21321` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-002` | `Checkout — Experiments (Copy)` / `🚧 In progress` | `10606:22151` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-003` | `Checkout — Experiments (Copy)` / `Integrating the sign-up in the checkout flow` | `10848:11930` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-004` | `Checkout — Experiments (Copy)` / `DM-0000 Adding a checkbox for the US customers` | `10606:18924` | 1 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-005` | `Checkout — Experiments (Copy)` / `PABC-6 Email verification for VBAN` | `10688:68043` | 9 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-006` | `Checkout — Experiments (Copy)` / `————————` | `3529:10082` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-007` | `Checkout — Experiments (Copy)` / `🧪  EXPERIMENTS` | `1260:0` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-008` | `Checkout — Experiments (Copy)` / `DM-1146 • Why payment needed?` | `4482:21725` | 3 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-009` | `Checkout — Experiments (Copy)` / `————————` | `1176:1322` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-010` | `Checkout — Experiments (Copy)` / `🔎  EXPLORATION` | `1176:0` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-011` | `Checkout — Experiments (Copy)` / `DM-2185 • Checkout Next` | `8759:5038` | 12 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-012` | `Checkout — Experiments (Copy)` / `---` | `10606:18925` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-013` | `Checkout — Experiments (Copy)` / `Without address field ` | `8902:10969` | 9 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-014` | `Checkout — Experiments (Copy)` / `DM-2003 • Remove address from Checkout` | `8060:6661` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-015` | `Checkout — Experiments (Copy)` / `Page 58` | `9239:40459` | 1 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-016` | `Checkout — Experiments (Copy)` / `DM-2053 • Show payment information saved wallet` | `8005:40424` | 15 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-017` | `Checkout — Experiments (Copy)` / `Checkout Vision` | `5497:59879` | 51 | 3 | 3/3 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-018` | `Checkout — Experiments (Copy)` / `Multiple subscription` | `5542:36305` | 3 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-019` | `Checkout — Experiments (Copy)` / `DM-1677 • Bite size checkout` | `5381:15302` | 6 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-020` | `Checkout — Experiments (Copy)` / `DM-XXXX • Updated checkout stepper` | `4909:643` | 3 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-021` | `Checkout — Experiments (Copy)` / `Modal Sign up flow` | `3717:13936` | 11 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-022` | `Checkout — Experiments (Copy)` / `Updates to Mobile checkout` | `4494:23543` | 34 | 2 | 2/2 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-023` | `Checkout — Experiments (Copy)` / `————————` | `1260:1` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-024` | `Checkout — Experiments (Copy)` / `✅  DONE` | `1176:2` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-025` | `Checkout — Experiments (Copy)` / `DM-1999 • Due today + reassurance` | `6889:20863` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-026` | `Checkout — Experiments (Copy)` / `DM-2063 • Email verification` | `8257:22222` | 8 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-027` | `Checkout — Experiments (Copy)` / `DM-2031 • Sign up optimisations` | `7336:21555` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-028` | `Checkout — Experiments (Copy)` / `DM-1418 • 2-Step Checkout` | `5036:4490` | 9 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-029` | `Checkout — Experiments (Copy)` / `DM-1419 • Reassurances + Button CTA to checkout review` | `5222:16133` | 1 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-030` | `Checkout — Experiments (Copy)` / `DM-1616 • Rule of 100` | `5346:838` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-031` | `Checkout — Experiments (Copy)` / `Remove review from checkout` | `4491:21945` | 5 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-032` | `Checkout — Experiments (Copy)` / `DM-1092 • Checkout abandonment survey` | `4385:21723` | 17 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-033` | `Checkout — Experiments (Copy)` / `DM-1032 • Final screen optimisations` | `3787:15288` | 14 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-034` | `Checkout — Experiments (Copy)` / `DM-997 • Add FAQ to checkout v1` | `3792:15047` | 6 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-035` | `Checkout — Experiments (Copy)` / `DM-1029 • Review screen improvement` | `3786:15217` | 5 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-036` | `Checkout — Experiments (Copy)` / `DM-1028 • Decrease price size on details page` | `3786:14918` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-037` | `Checkout — Experiments (Copy)` / `DM-1018 • Secure payment labels` | `3760:14773` | 5 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-038` | `Checkout — Experiments (Copy)` / `DM-1004 • API usage limits UI update` | `3737:15462` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-039` | `Checkout — Experiments (Copy)` / `DM-1001 • Add Stepper to checkout` | `3735:14323` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-040` | `Checkout — Experiments (Copy)` / `DM-975 • Don't auto-correct team size field` | `3664:13621` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-041` | `Checkout — Experiments (Copy)` / `DM-952 • Add trust elements to checkout details` | `3577:12310` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-042` | `Checkout — Experiments (Copy)` / `DM-625 - Add plan name and details to registration step` | `2675:9243` | 3 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-043` | `Checkout — Experiments (Copy)` / `DM-734 • Display Accepted Payment Methods` | `3618:14993` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-044` | `Checkout — Experiments (Copy)` / `DM-736 - Iteration on DM-625 - Add plan details and price to registration step` | `3455:9972` | 3 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-045` | `Checkout — Experiments (Copy)` / `Registration - existing email` | `1384:6168` | 5 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-046` | `Checkout — Experiments (Copy)` / `Separate Credit card fields` | `1317:4050` | 3 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-047` | `Checkout — Experiments (Copy)` / `Billing option more comparable` | `1878:6515` | 8 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-048` | `Checkout — Experiments (Copy)` / `DM-412 - Increase perceived security of payment data fields ` | `2361:7159` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-049` | `Checkout — Experiments (Copy)` / `DM-872 - Removing links to other pages on details page` | `3361:9168` | 1 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-050` | `Checkout — Experiments (Copy)` / `————————` | `1217:3299` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-051` | `Checkout — Experiments (Copy)` / `💀  ARCHIVE` | `7421:12788` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-052` | `Checkout — Experiments (Copy)` / `DM-1084 • Quote to review screen` | `4188:23350` | 6 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-053` | `Checkout — Experiments (Copy)` / `DM-1997 • Add Stepper to Registration` | `6888:25251` | 1 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-054` | `Checkout — Experiments (Copy)` / `DM-1054 • Visualise how the free trial works` | `3761:15882` | 6 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-055` | `Checkout — Experiments (Copy)` / `DM-XXX • Highlight features visible on Review` | `4980:3179` | 13 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-056` | `Checkout — Experiments (Copy)` / `Compare / Change plan experiment` | `3782:14999` | 20 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-057` | `Checkout — Experiments (Copy)` / `Won't charge during trial assurance` | `1875:6385` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-058` | `Checkout — Experiments (Copy)` / `General - Checkout improvements` | `3436:9335` | 61 | 4 | 4/4 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-059` | `Checkout — Experiments (Copy)` / `New VAT messaging` | `5134:7983` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-060` | `Checkout — Experiments (Copy)` / `⭐️  BTT Reunion (Feb 2023) Checkout Experiments` | `3529:10083` | 200 | 10 | 10/10 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-061` | `Checkout — Experiments (Copy)` / `---` | `7421:12789` | 0 | 0 | 0/0 | None | Empty-record disposition complete; no evidence candidate |
+| `checkout-page-062` | `Checkout — Experiments (Copy)` / `👀  REFERENCES` | `3531:10158` | 1 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-063` | `Checkout — Experiments (Copy)` / `🧩 LOCAL COMPONENTS` | `3533:13370` | 4 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
+| `checkout-page-064` | `Checkout — Experiments (Copy)` / `⚡️ GETTING STARTED` | `1217:3298` | 2 | 1 | 1/1 | None | Saved-data page pass complete; findings provisional |
 
 ## Fresh saved-data review
 
@@ -218,11 +221,337 @@ classification results.
 | Batch 01, roots 9–12 | `3:119357`, `3:119386`, `3:119415`, `3:119444` | Repeated Clarify availability, explainer, ambiguity example, and accessibility-implementation note. | Clarify launch or pricing-grid feature communication; relationship to the main pricing story unresolved. | Surrounding root undated; embedded screenshot filename references 2025-02-20 only. | Potential copy-process evidence, but no reviewed source attributes the strings, accessibility decision, or final state to Mason. | Visible, unlocked native sections plus one embedded screenshot each; canonical raw ledger. | Medium as a possible content-design or accessibility example outside the central pricing narrative. | Find the owning ticket, author and review record, selected wording, lifecycle, and whether this belongs in Pricing Evolution or a separate achievement inventory. |
 | Batch 01, roots 13–16 | `3:119473`, `3:121313`, `3:123153`, `3:124993` | Repeated pricing-grid explorations with Clarify-message variants and an explicit proposal to move lesser features into the comparison table. | Pricing-grid scannability and feature hierarchy; exact workstream unresolved. | Undated; Clarify context makes a June–July 2024 mapping unsafe without another source. | The note supports a rationale visible in the artifact, not its author, approval, implementation, or outcome. | Visible, unlocked native sections with embedded image fills; canonical raw ledger. | High as a decision-rationale lead. | Identify note author, date, ticket, relationship to `MON-04` or `MON-06`, selected treatment, lifecycle, and any true before/after evidence. |
 
-Batch 01 is complete for saved-data review. Progress is 1 of 99 batches; the
-next cursor is `Monetization` / `Pricing page`, batch 02, roots 21–40. The 12
-zero-root records remain pending.
+Batch 01 is complete for saved-data review. Its original 1-of-99 checkpoint is
+preserved above; batches 02–09 complete this page-level pass below. The
+remaining saved-ledger pass later in this section records all 12 zero-root
+dispositions.
 
-## Legacy interpreted batch coverage
+### `Monetization` / `Pricing page` / batches 02–09
+
+Reviewed 2026-07-26 from the canonical raw ledger only. The quarantine was not
+consulted. These batches cover roots 21–174 in manifest order:
+
+- Batch 02, roots 21–40 (20): `3:126837`, `3:127702`, `3:128567`,
+  `3:129432`, `3:150294`, `4:139973`, `4:140232`, `4:140467`, `4:140696`,
+  `4:140931`, `4:140932`, `4:140933`, `4:140962`, `4:140999`, `4:141000`,
+  `4:141001`, `4:141002`, `4:141003`, `4:141004`, `4:141005`.
+- Batch 03, roots 41–60 (20): `4:141006`, `4:141007`, `4:141008`,
+  `4:141009`, `4:141010`, `4:141011`, `4:141012`, `4:141013`, `4:141016`,
+  `4:141017`, `4:141018`, `4:141019`, `4:141021`, `4:141060`, `4:141075`,
+  `4:141113`, `4:141114`, `4:145732`, `4:146594`, `4:149617`.
+- Batch 04, roots 61–80 (20): `4:150414`, `4:150609`, `4:150822`,
+  `4:150826`, `4:150827`, `4:150828`, `4:150829`, `4:152715`, `4:152717`,
+  `4:152718`, `4:152725`, `4:152731`, `4:181193`, `5:171099`, `5:171212`,
+  `5:171215`, `5:171553`, `5:171918`, `5:171934`, `5:175576`.
+- Batch 05, roots 81–100 (20): `5:176611`, `5:176750`, `5:177304`,
+  `5:177305`, `5:195622`, `5:195695`, `5:195702`, `5:195868`, `5:195920`,
+  `5:195972`, `5:196049`, `5:196128`, `5:196489`, `5:196594`, `5:196803`,
+  `5:196974`, `5:197002`, `5:197445`, `5:197469`, `5:197494`.
+- Batch 06, roots 101–120 (20): `5:197525`, `5:197531`, `5:197557`,
+  `5:198230`, `5:198231`, `5:198233`, `5:198234`, `5:198235`, `5:198298`,
+  `5:198299`, `5:198300`, `5:198301`, `5:198302`, `5:198303`, `5:198304`,
+  `5:198305`, `5:198306`, `5:198307`, `5:198308`, `5:198309`.
+- Batch 07, roots 121–140 (20): `5:198310`, `5:198311`, `5:198475`,
+  `5:198551`, `5:198552`, `5:198706`, `5:198708`, `5:198888`, `5:198889`,
+  `5:198896`, `5:198900`, `5:198901`, `5:198902`, `5:198905`, `5:198928`,
+  `5:224853`, `5:226823`, `5:228736`, `5:230222`, `5:230243`.
+- Batch 08, roots 141–160 (20): `5:267065`, `5:269002`, `5:270915`,
+  `5:272401`, `5:272422`, `5:303260`, `5:304631`, `5:307644`, `5:308479`,
+  `5:308570`, `5:309367`, `5:309562`, `5:309775`, `5:309778`, `5:309779`,
+  `5:309780`, `5:309781`, `5:311667`, `5:311670`, `5:312535`.
+- Batch 09, roots 161–174 (14): `5:312536`, `5:313460`, `5:313532`,
+  `5:313906`, `5:314597`, `5:314813`, `5:314818`, `5:315430`, `5:315599`,
+  `5:315601`, `5:315610`, `5:315615`, `2176:278674`, `2178:278670`.
+
+The page manifest and 174 root records reconcile exactly. All top-level roots
+are exposed as visible and unlocked, all root-record limitation arrays are
+empty, and the page totals remain 70,973 text nodes, 73,972 structural nodes,
+and 793 opaque image-fill references. The saved ledger exposes no raster
+pixels. Filename dates apply only to named embedded assets; they do not date a
+root, establish a sequence, or prove a product state.
+
+#### Root-family accounting
+
+| Batch | Root or family | Saved-data observation | Repetition and raster limit |
+| --- | --- | --- | --- |
+| 02 | `3:126837`, `3:127702`, `3:128567`, `3:129432` | Four equivalent responsive pricing sections expose the same extracted copy and structure, including the note to remove the Clarify message below 1200 pixels. | One four-copy family; 28 opaque fills include 2023-10-23 and 2025-02-21 filename hints. |
+| 02 | `3:150294`; `4:139973`, `4:140232`, `4:140467`, `4:140696`; `4:140931`, `4:140932` | One broad `Vision-explorations` workspace, four 1440/1280 pricing-grid variants with differing feature wording, and two identical screen-dimension notes. | Treat the dimensional frames as one variant family and the notes as one repeated note. The workspace repeats a 2024-12-05 filename; pixels are unavailable. |
+| 02–03 | `4:140933`, `4:140962`; roots 34–50; `4:141018`, `4:141019`; `4:141021`, `4:141060`, `4:141075`; `4:141113`, `4:141114` | Two separate language-AI platform-page working groups; fourteen empty rectangle roots, two empty text roots, small headline/component fragments, three copy-analysis tool fragments, and two empty rectangle roots. | Accounted as incidental page material rather than separate pricing achievements. Roots 34–47 form one empty-rectangle family; roots 49–50 are equivalent empty-text records. |
+| 03 | `4:145732`, `4:146594`, `4:149617` | A reusable pricing component library, a multi-product pricing-page workspace with future-bundle notes, and Pro-subscriber page states. | Large roots reuse plan, FAQ, comparison, and enterprise content. Fifty-nine fills in batch 03 expose only opaque image references; the dated name repeats 2024-12-05. |
+| 04 | `4:150414`, `4:150609`, `4:150822`, `4:150826`, `4:150827`, `4:150828`, `4:150829` | Popover and currency states, explicit `DM-2112` goals/non-goals, three buying-route notes, and responsive states from 1920 to 375 pixels. | The pricing template is repeated across specialized states. The three note roots repeat exactly as roots 154–156 in batch 08. |
+| 04 | `4:152715` through `4:181193`; `5:171099` through `5:175576` | Popover copy, copy-change and experiment questions, feature-list variants, file-format explanations, and a checkout cluster covering trial eligibility, plan variants, business purchase, payment methods, archived material, and components. | Root 75's opaque screenshot name also appears inside root 79. Batch 04 has 51 fills with filename hints from 2022–2025; mixed dates do not make one chronology. |
+| 05 | `5:176611` through `5:177305`; `5:195622` through `5:197002`; `5:197445`, `5:197469`, `5:197494` | Checkout copy/responsiveness and two small components; a large working set for billing, address, country, business purchase, errors, payment, trial loss, bundles, and a labelled future; three selector components. | The checkout roots repeatedly reuse the same base page and a 2023-11-07 screenshot name. Seventy-seven fills carry 2023–2025 filename hints; pixels and visual differences are unverified. |
+| 06 | `5:197525` through `5:198231`; `5:198233` through `5:198301`; `5:198302` through `5:198309` | An add-on card, master checkout, order-widget variants, one note, isolated order widgets and dated screenshot references, two labels, and eight vectors with no extracted text or children. | Record the widgets as one component family and roots 113–120 as one incidental vector family. Four opaque fills expose 2023-11-07 and 2024-05-15/16 filename hints only. |
+| 07 | `5:198310` through `5:198928` | A discussion note, a labelled first checkout step, following-phase notes, trial dialog, checkout/order components, tax references, and isolated raster groups. | One related checkout working family; 18 opaque fills precede the later pricing roots, and their names do not establish lifecycle. |
+| 07–08 | `5:224853`, `5:226823`, `5:228736`, `5:230222`, `5:230243`; `5:267065`, `5:269002`, `5:270915`, `5:272401`, `5:272422` | Two large pricing-page families with Translator, Write, bundle, subscriber, and responsive states. Roots 137/142, 138/143, and 139/140/144/145 have equivalent extracted semantic content after node IDs and geometry are excluded. | Count repeated families once for provisional comparison. Their 2023-10-23 and 2023-06-12 names date embedded assets only. |
+| 08 | `5:303260` through `5:312535` | Updated component land; two multi-product pricing-page workspaces; a large-team sales-copy note; Pro-subscriber, popover, currency, goal, route, and responsive states; one small placeholder; a labelled vision; and an empty rectangle. | Roots 154–156 repeat roots 64–66 exactly. Roots 150–157 substantially reuse the same pricing system while exposing changed strings and structure; visual equivalence is unverified. |
+| 09 | `5:312536` through `5:315615`; `2176:278674`, `2178:278670` | A further pricing layout, tooltip-copy inventory, grid-reduction exploration, feature-awareness work, full product pages, anatomy/components, logo and quote source groups, an older pricing-family section, and a design-priority workspace. | Thirty-three fills expose only 2023-06, 2023-10, and 2024-12 filename hints. Root 173 overlaps the earlier pricing-family content; root 174 is a working backlog, not lifecycle proof. |
+
+#### Provisional candidate notes
+
+All entries remain private working leads. No row is a final Step 18
+classification, asset selection, publication decision, or claim.
+
+| Batch / root(s) | Artifact observation and provisional value | Chronology question | Contribution, lifecycle, and permission question |
+| --- | --- | --- | --- |
+| 02 / `3:126837`–`3:129432` | Compact repeated responsive-pricing family with an explicit under-1200 Clarify rule; high comparison value after duplicate reduction. | What date and workstream own the responsive rule, beyond embedded filename hints? | Who wrote the note and content, which copy was authoritative, and did any state advance? Publication permission is unknown. |
+| 02 / `3:150294`, `4:139973`–`4:140696` | Broad vision plus four copy-differentiated pricing grids; useful as a wording and information-hierarchy lead. | How do the vision workspace and four screen variants relate to later `DM-2112` generations? | Who assembled the grids and authored or selected the differing feature lines? Approval, implementation, testing, and outcomes are unknown. |
+| 03–04 / `4:145732`–`4:150829` | Strong pricing-system lead spanning components, full product routes, current-subscriber states, goals/non-goals, and responsive rules. | Are these roots one generation or several copied working areas, and where does `DM-2112` begin? | Which components, notes, and strings reflect Mason's contribution? Organizing labels such as `Current` and `as today` do not prove lifecycle. |
+| 04 / `4:152718`, `4:181193` | Copy-change list, experiment questions, and plan-specific file-format popovers; useful content-design leads. | Which source requirements and dates govern the wording and file limits? | Who proposed, reviewed, and selected the changes? Questions about monitoring are not testing or outcome evidence. |
+| 04–07 / `5:171099`–`5:198928` | Coherent checkout decision space covering trial eligibility, plan and bundle rules, company/VAT/address conditions, payment methods, errors, responsive behavior, order summaries, and phased work. | How do the `Archive`, `Current`, `Future`, `For experiment`, `Ideal / Future`, `Step 1`, and `Following phases` labels relate in time? | Which notes and strings are Mason's, which behavior was selected or implemented, and were any variants tested? The visible percentages and legal-review notes are unverified leads, not outcomes. |
+| 07–08 / `5:224853`–`5:272422` | Large repeated pricing-page family covering anonymous, Pro, trial, admin, team-member, bundle, and responsive states. High as a page-system comparison lead after duplicate reduction. | Which of the two copied page families is earlier, later, or authoritative? | Who created the state model and copy, and which state was approved or shipped? Raster strips cannot answer selection or publication safety. |
+| 08 / `5:303260`–`5:309562` | Updated component and page workspaces contain explicit questions about the product selector, bundles, grid length, API content, sales-assisted entry, social proof, and missing copy. | What review or ticket sequence connects these questions to the earlier page families and `DM-2112` goals? | Who raised each question, authored revisions, and decided the direction? Placeholder and testimonial content cannot be treated as approved public evidence. |
+| 08 / `5:309775`–`5:311670` | Repeated goals/routes plus an updated responsive system and a labelled vision; useful for comparing retained versus changed requirements. | Why were the three route notes copied exactly, and what changed between the two responsive workspaces? | Which differences were intentional and selected, and who owned them? `Vision is to get here` states intent, not delivery. |
+| 09 / `5:313460` | Structured tooltip inventory pairing existing copy, suggested revisions, and rationales; high copy-process value. | When was the table prepared, and which product-guide or review version governed its limits? | Who authored each revision and rationale, and were any accepted or implemented? The table does not establish outcomes or publication permission. |
+| 09 / `5:313532`, `5:313906`, `5:314597`, `5:314818`, `5:315430`, `5:315615` | Grid-reduction and feature-awareness system with observable rationale, proposed feature shortlist, reusable explanations, product pages, anatomy, and variants. | How does this cluster relate to Clarify-era work and the earlier grid proposal? | Who wrote the rationale and feature copy, which explanations were selected, and was the system implemented or tested? |
+| 09 / `5:314813`, `5:315601`, `5:315610` | Logo-market labels and named customer-quote text are source and social-proof leads only; the ledger contains no rendered logos or source documents. | When and from which approved source were the names and quotations copied? | Who sourced and selected them, are the attributions exact, and does explicit publication permission exist? |
+| 09 / `2178:278670` | Working design-priority sheet ranks plan, discount, comparison, popover, information-architecture, B2B, and copy ideas by proposed impact/effort and exposes `IN PROGRESS`, `DONE`, and `TO DO` labels. | What date, ticket, and review source govern each item and label? | Who made the estimates and status labels, what exact artifact changed, and what independent lifecycle record exists? Proposed impact is not an observed outcome. |
+
+The `Pricing page` saved-data pass is 9 of 9 batches and 174 of 174 roots.
+
+### Remaining saved-ledger pass
+
+Reviewed 2026-07-26 from the canonical raw ledger only. The quarantine was not
+consulted. This pass covers the remaining 68 page records, 1,016 roots, 90
+batches, and 12 zero-root records. Together with the completed `Pricing page`
+pass, Step 18 saved-ledger coverage is 69 pages, 1,190 roots, and 99 of 99
+batches, with all 12 empty-record checks dispositioned.
+
+The 1,016 roots reconcile to 1,015 visible and one hidden top-level root
+(`archive-ate-page`, root 64, `2:59029`); none is locked. The saved records have
+no reported extraction limitations. Descendant nodes can have their own
+visibility, locked, component, or instance states, so top-level status does not
+prove direct editability.
+
+| Scope | Page records | Roots | Batches | Empty records | Saved-ledger result |
+| --- | ---: | ---: | ---: | ---: | --- |
+| `Monetization` / `Write Pro` | 1 | 81 | 5 | 0 | Complete |
+| `Monetization` / `Experiments` | 1 | 231 | 12 | 0 | Complete; 231 root-text records match manifest order |
+| `_Archive — Misc (pre-cleanup)` / `Page 1` | 1 | 17 | 1 | 0 | Complete |
+| `_Archive — Misc (pre-cleanup)` / `ATE` | 1 | 82 | 5 | 0 | Complete |
+| `Checkout — Experiments (Copy)` | 64 | 605 | 67 | 12 | Complete; all empty records dispositioned |
+| **Remaining-pass total** | **68** | **1,016** | **90** | **12** | **Complete** |
+
+#### Batch-boundary reconciliation
+
+Every batch uses at most 20 manifest roots. The 49 single-batch slices are
+`archive-page-1` roots 1–17 plus the 48 non-empty Checkout page records that
+have 20 or fewer roots; their exact IDs, counts, and completed state are in the
+tracker above. The other 41 batches reconcile as follows:
+
+| Scope | Exact manifest-order boundaries |
+| --- | --- |
+| `Monetization` / `Write Pro` | 01: 1–20, `4:184026`–`4:184195`; 02: 21–40, `4:184196`–`4:184809`; 03: 41–60, `4:185303`–`4:186531`; 04: 61–80, `4:186532`–`4:188266`; 05: 81, `4:188267` |
+| `Monetization` / `Experiments` | 01: 1–20, `2:13478`–`2:20165`; 02: 21–40, `2:20367`–`2:22949`; 03: 41–60, `2:22970`–`2:23160`; 04: 61–80, `2:99544`–`2:99748`; 05: 81–100, `2:99749`–`2:100266`; 06: 101–120, `2:100342`–`2:112753`; 07: 121–140, `2:112759`–`2:153400`; 08: 141–160, `2:153663`–`2:158274`; 09: 161–180, `2:158348`–`3:164936`; 10: 181–200, `3:164943`–`3:172456`; 11: 201–220, `3:172457`–`3:177376`; 12: 221–231, `3:177638`–`3:179056` |
+| `_Archive — Misc (pre-cleanup)` / `ATE` | 01: 1–20, `2:6163`–`2:34523`; 02: 21–40, `2:34571`–`2:43804`; 03: 41–60, `2:43837`–`2:53482`; 04: 61–80, `2:54253`–`2:97782`; 05: 81–82, `2:97836`–`2:98003` |
+| `checkout-page-017` | 01: 1–20, `5497:43087`–`5520:89560`; 02: 21–40, `5522:105739`–`5552:46006`; 03: 41–51, `7323:67631`–`8637:40441` |
+| `checkout-page-022` | 01: 1–20, `4494:23980`–`4494:24028`; 02: 21–34, `4494:24029`–`4498:23795` |
+| `checkout-page-058` | 01: 1–20, `3436:9347`–`3438:9958`; 02: 21–40, `3438:9960`–`3439:10192`; 03: 41–60, `3439:10193`–`3459:11887`; 04: 61, `3519:10339` |
+| `checkout-page-060` | 01: 1–20, `3529:10092`–`3533:10684`; 02: 21–40, `3533:10942`–`3571:11615`; 03: 41–60, `3571:11619`–`3578:13565`; 04: 61–80, `3578:13567`–`3578:14256`; 05: 81–100, `3578:14260`–`3608:13657`; 06: 101–120, `3608:14378`–`3608:15190`; 07: 121–140, `3608:15286`–`3613:13850`; 08: 141–160, `3613:13854`–`3614:14801`; 09: 161–180, `3614:14804`–`3617:14959`; 10: 181–200, `3618:14965`–`3701:14564` |
+
+#### Zero-root dispositions
+
+All 12 records contain zero selected top-level roots and zero extracted text,
+structural, or image-fill nodes. Their names are organizational labels only and
+do not prove page lifecycle or whether unselected content exists elsewhere.
+They provide no saved-ledger candidate.
+
+| Page-name family | Capture IDs | Disposition |
+| --- | --- | --- |
+| `---` | `checkout-page-001`, `checkout-page-012`, `checkout-page-061` | Empty-record check complete; no candidate |
+| `————————` | `checkout-page-006`, `checkout-page-009`, `checkout-page-023`, `checkout-page-050` | Empty-record check complete; no candidate |
+| Organizational labels | `checkout-page-002` (`🚧 In progress`), `checkout-page-007` (`🧪 EXPERIMENTS`), `checkout-page-010` (`🔎 EXPLORATION`), `checkout-page-024` (`✅ DONE`), `checkout-page-051` (`💀 ARCHIVE`) | Empty-record check complete; labels are not lifecycle evidence |
+
+#### Provisional family observations
+
+These are artifact-level review findings, not final Step 18 classifications,
+asset selections, publication decisions, or claims.
+
+| Scope | Saved-data observation | Repeated-family and evidence limit | Provisional lead |
+| --- | --- | --- | --- |
+| `Write Pro`, batches 01–02 | Seat-change dialogs, self-serve constraints, escalation paths, eight character-limit prompts, five Write/bundle value-card variants, security copy, and hardblock rules. | Dialog, input-driver, `Final-Write`, `Final-Bundle`, and USP variants are families, not separate achievements. `For Dev` is a label only. | Strong source lead for conditional pricing, limit, upgrade, and value-framing work. |
+| `Write Pro`, batches 03–05 | Copy-review headers, value propositions, free-version banners, desktop variants, a review note naming Mason, large mixed proposal areas, and tooltip/reference fragments. | `For Ana to review with Mason` establishes review context only. Two opaque widgets, empty image/reference roots, repeated tooltips, and a final `undefined` root limit interpretation. | Strong copy-process lead through root 63; later mixed and reference roots are conditional context. |
+| `Experiments`, batches 01–03 | Pricing pages, bundle and naming explorations, account plan, upgrade/downgrade, checkout, Pro-driver, trial, free-warning, API, and hardblock artifacts. | Large page roots combine many states; screenshot and vector roots with no text cannot be read visually. Root order is not chronology. | Strong page-system and conditional-content source lead; exact initiative boundaries remain unresolved. |
+| `Experiments`, batches 04–06 | Cancellation and retention work includes plan-specific cancel copy, surveys, current/new flows, comparison and usage displays, feature-loss dialogs, downgrade alternatives, and development notes. | Many zero-text vectors are support fragments. Target measures and labels do not establish experiment entry or results. | Strong decision-space lead for cancellation, retention, and loss-aversion content. |
+| `Experiments`, batches 07–09 | Document-count, file-size, character-limit, responsive, free/Pro/admin states, awareness labels, signup variants, and bulk-upload edge cases. | Roots 129–138 are two exact five-root text families; status-label and free-text variants repeat. Research and metric language is embedded artifact copy, not supplied research or outcome proof. | Strong conditional-content and edge-case lead. |
+| `Experiments`, batches 10–12 | Daily-limit timing models, localization, desktop/mobile hardblocks, countdowns, audience rules, future/current/archive groups, Pro-driver cards, and cancellation alternatives. | Roots 206–226 form seven repeated triplet families; roots 227–229 are three zero-text image roots. PT-BR and hardblock variants repeat. | Strong rationale and responsive-state lead; chronology, contribution, lifecycle, and percentage meanings remain unresolved. |
+| Archive / `Page 1` | MFA/2FA setup, enforcement, login, error, recovery, disabling, and admin flows, plus an archived note saying recovery codes would not be pursued. | Six roots are explicitly named duplicates. Roots 1–2 include unrelated and personal text; roots 6–7 have no extracted content. | Useful private artifact lead outside the pricing case; publication is prohibited pending explicit review and permission. |
+| Archive / `ATE` | Custom logo/domain and KMS flows, user-list states, export models, bulk actions, license recycling, group/subscription flows, and multi-email entry. | `users` (25), `users-master` (18), `Dialog` (7), and other repeated families must be counted once. Large archive/flow composites mix history and contain operational identifiers and personal data. | Rich private artifact evidence outside the pricing case; not a public lead from this pass. |
+| Checkout pages 003–028 | Signup integration, US consent, email verification, payment rationale, Checkout Next, address removal, saved wallets, a broad Checkout Vision, bundles, bite-size and mobile flows, due-today reassurance, signup optimization, and two-step checkout. | Pages 014 and 015 are a near-exact text family. Large pages 005, 011, 017, and 028 mix native UI, screenshots, dates, and alternatives. Page 005 contains a live-looking verification link/token and personal email data and is on publication hold pending safe redaction and permission review. | Strong transaction-content context; pages 004, 008, 019, 025, and 028 expose especially clear rationale or state rules. |
+| Checkout pages 029–044 | CTA reassurance, discount presentation, review removal, abandonment, final-screen, FAQ, review, price-size, secure-payment, usage-limit, stepper, team-size, trust, plan-registration, and payment-method experiments. | Pages 033–040 repeat an unrelated hypothesis template; pages 034/035 share a background; pages 042/044 are one close iteration family. Metric names are targets, not results. | Strongest leads are pages 033, 035, 039, and 040; the rest remain medium or conditional artifact leads. |
+| Checkout pages 045–059 | Existing-email, card-field, billing comparison, payment security, link removal, quote, registration stepper, trial timeline, review-feature, change-plan, reassurance, general redesign, and VAT artifacts. | Pages 052/055 share quote/workspace families; pages 047/057/048 reuse much checkout scaffolding. Page 058 contains 61 roots in four batches, not 61 separate initiatives. | Strong trial-risk and reassurance leads at pages 052, 054, and 057; page 056 is useful pricing-to-checkout route context. |
+| Checkout pages 060–064 | A 200-root February 2023 workshop preserves stepper, plan, billing, order-widget, review, price, terminology, account-type, final-screen, prioritization, and measurement questions; reference, component, and legend pages follow. | Many roots are annotations, vectors, screenshots, and repeated order widgets. Page 062 is raster-heavy; page 063 is shared components; page 064 is a document legend. | Strong private decision-space context at page 060; pages 062–064 are supporting reference or document-structure context only. |
+
+#### Repeated-family accounting
+
+- Exact or near-exact repeated roots and scaffolding are counted once per
+  family, not as separate achievements or separate evidence of contribution.
+- `Experiments` roots 129–133 equal 134–138 by extracted text. Roots 206–208,
+  209–211, 212–214, 215–217, 218–220, 221–223, and 224–226 form seven repeated
+  triplets. Roots 227–229 are three same-named zero-text image roots.
+- `Write Pro` repeats seat dialogs, input-driver states, USP items, final
+  Write/bundle cards, desktop banners, and tooltip variants. Roots 6/7,
+  36/47, 37/45, 75/76, and 78/81 have matching extracted-text signatures.
+- Archive `Page 1` names six duplicate MFA roots. `ATE` contains 25 `users`, 18
+  `users-master`, seven `Dialog`, four `base`, and two bulk-revoke roots.
+- Checkout pages 014/015 and 042/044 are close text families. Pages 052/055
+  reuse quote/workspace roots. Pages 033–040 repeat one unrelated hypothesis
+  template. Shared plan benefits, legal copy, order widgets, screenshots, and
+  checkout components are product scaffolding rather than separate leads.
+
+#### Raster, chronology, and attribution limits
+
+- The remaining pages contain 2,191 opaque image-fill references. Sixty-five
+  remaining top-level roots have an image fill and two `Write Pro` roots are
+  opaque widgets. The ledger has names and fill references, not pixels,
+  screenshots, exports, signed URLs, or visual renders.
+- Date-bearing filenames range across several years and date only a named
+  embedded asset. Dates inside mock billing, trial, account, or payment copy are
+  content artifacts, not safe design chronology.
+- Checkout records are page-wide flat extractions. Top-level root order and
+  boundaries are exact, but component-instance child IDs do not always resolve
+  safely to one root. Checkout copy and structure observations therefore remain
+  page-level unless the record makes the relationship explicit.
+- `Current`, `Archive`, `Future`, `Experiment`, `Intervention`, `For Dev`,
+  `Ready for dev`, `Done`, and ticket names are artifact labels. They do not
+  establish selection, approval, implementation, shipment, testing, adoption,
+  rejection, or chronology.
+
+#### Questions retained for later evidence work
+
+| Dimension | Unresolved question |
+| --- | --- |
+| Chronology | Which dated ticket, version history, or direct source orders each family, and which filename dates describe captured UI rather than the surrounding proposal? |
+| Contribution | Which screens, copy, hypotheses, interaction rules, and review notes did Mason create or materially shape, and which came from collaborators, templates, existing UI, legal, research, or customer-marketing sources? |
+| Lifecycle | Which variants remained exploration, which were selected or approved, and which—if any—were implemented, tested, shipped, changed, retired, or archived? |
+| Outcome | What independent readouts support metric names, percentages, traffic figures, research claims, or statements about conversion, churn, bounce, plan mix, usage, or adoption? |
+| Permission | What may be published after redaction, especially screenshots, customer quotations, internal ticket and metric names, prices, account or payment examples, operational identifiers, personal data, and collaborator comments? |
+
+The completed pass establishes artifact coverage only. It does not establish
+authorship, selection, approval, implementation, shipment, testing, adoption,
+causation, outcomes, or publication permission.
+
+## Final Step 18 candidate classification
+
+Completed 2026-07-26. These are evidence-routing decisions, not public asset
+selections. `Current-asset replacement` means that a native candidate is
+specific enough to compare against a named current asset family in Step 19; it
+does not authorize a substitution. `Genuinely new evidence` means new relative
+to the current selected portfolio assets, not newly proved authorship,
+lifecycle, outcome, or permission.
+
+Every provisional candidate row above maps to at least one ID below. Rows are
+split only where different evidence boundaries require different
+classifications. The 14 legacy `Experiments` batches are subsumed by the fresh
+`EX-*` decisions and do not create additional candidates.
+
+| ID | Candidate family | Step 18 classification | Comparison and evidence ceiling | Step 19 route |
+| --- | --- | --- | --- | --- |
+| `PP-01` | Responsive Clarify family, `3:126837`–`3:129432` | Unresolved | Compact native responsive rule with clear comparison value, but its date, author, workstream, and relationship to selected pricing assets are unknown. | Focused relationship and visual check |
+| `PP-02` | Vision plus four pricing-grid variants, `3:150294`, `4:139973`–`4:140696` | Contextual evidence | Useful wording and hierarchy context, but it overlaps stronger current pricing-system assets and has no contribution or lifecycle link. | No pass unless another finalist depends on it |
+| `PP-03` | Pricing components, product routes, goals, and responsive rules, `4:145732`–`4:150829` | Genuinely new evidence | Adds native system, goal, and responsive evidence absent from the selected crops. It remains private and unattributed. | Verify the smallest readable goal/rule frame |
+| `PP-04` | Copy-change questions and file-format popovers, `4:152718`, `4:181193` | Genuinely new evidence | Strong copy-decision evidence not represented in the selected asset set. Authorship, selection, lifecycle, and permission remain unknown. | Focused exact-frame pass |
+| `PP-05A` | Crosswalk-listed pricing nodes within `5:171099`–`5:198928` | Unresolved | Native states correlate to the canonical pricing area, but the reviewed sources do not prove exact equivalence to, or improvement over, the current flattened crops. | Compare only the seven crosswalk-listed nodes |
+| `PP-05B` | Remaining checkout rules within `5:171099`–`5:198928` | Contextual evidence | Useful plan, eligibility, address, payment, and order-summary context; it does not establish Mason's pricing contribution. | No separate pass |
+| `PP-06` | Repeated pricing-page families, `5:224853`–`5:272422` | Unresolved | High-value native page systems may overlap current assets, but copied families, chronology, contribution, and exact visual relationship are unresolved. | Compare one representative from each family |
+| `PP-07` | Updated page workspaces and decision questions, `5:303260`–`5:309562` | Genuinely new evidence | Adds explicit questions about routes, bundles, grid length, API, sales entry, social proof, and missing copy. Intent is visible; authorship and decisions are not. | Verify one question-rich native frame |
+| `PP-08` | Repeated goals, routes, responsive states, and labelled vision, `5:309775`–`5:311670` | Contextual evidence | Helps compare retained and changed requirements but substantially repeats stronger families; the vision label proves intent only. | No separate pass |
+| `PP-09` | Tooltip copy inventory, `5:313460` | Genuinely new evidence | Exact existing copy, proposed revisions, and rationales offer strong writing-process evidence missing from current assets. Acceptance and implementation are unknown. | Priority exact-frame and readability pass |
+| `PP-10` | Grid reduction and feature-awareness system, `5:313532`–`5:315615` | Genuinely new evidence | Strong native rationale, shortlist, explanation, anatomy, and variant evidence. Repeated product scaffolding and contribution boundaries still apply. | Priority representative-frame pass |
+| `PP-11` | Logo-market labels and customer-quote sources, `5:314813`, `5:315601`, `5:315610` | Private-only evidence | Named quotations and brand material lack source, attribution, and publication permission. | No pass; retain on publication hold |
+| `PP-12` | Design-priority workspace, `2178:278670` | Private-only evidence | Internal status and impact/effort material is useful private context but has no verified author, lifecycle, outcome, or publication permission. | No pass |
+| `WP-01` | `Write Pro` batches 01–02 | Genuinely new evidence | Native seat-change, limit, value-framing, security, and hardblock evidence extends beyond the current pricing crops and aligns with the bounded `MON-05` workshop themes. | Priority representative-frame pass |
+| `WP-02A` | `Write Pro` batch 03 through root 63 | Genuinely new evidence | Adds copy-review, value-proposition, banner, and review-context artifacts; a note naming Mason supports review context only. | Verify the review frame and one banner family |
+| `WP-02B` | `Write Pro` roots 64–81 | Contextual evidence | Mixed proposals, tooltips, references, opaque widgets, and repeated fragments add context but no distinct defensible portfolio claim. | No separate pass |
+| `EX-01` | `Experiments` batches 01–03 | Contextual evidence | Broad pricing, account, trial, API, and hardblock states establish system context; initiative boundaries and contribution remain unresolved. | No pass unless required by `EX-03` |
+| `EX-02` | `Experiments` batches 04–06 | Genuinely new evidence | Cancellation, survey, comparison, usage, and downgrade alternatives add a coherent private decision space absent from current selected assets. | Verify one cancellation family if retained |
+| `EX-03` | `Experiments` batches 07–12 | Current-asset replacement | Native document-count, file-size, character-limit, daily-limit, and hardblock families are specific candidates to replace or source the currently source-missing `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. Exact frame equivalence, visual quality, contribution, and permission are still unproved. | Priority replacement comparison |
+| `AR-01` | Archive / `Page 1` | Private-only evidence | MFA material is outside the pricing case and mixes duplicates, personal text, and unsupported lifecycle labels. | No pass |
+| `AR-02` | Archive / `ATE` | Private-only evidence | Rich administrative artifacts contain operational identifiers and personal data and do not support a pricing contribution. | No pass |
+| `CO-01A` | Checkout pages 003, 011, 017, 018, 025, and 028 | Unresolved | These native purchase-state systems may overlap the current checkout assets, but exact same-state equivalence and improvement are not established. | Compare only if Step 19 includes checkout replacement |
+| `CO-01B` | Decision-rich Checkout pages 004, 008, 016, 019, 022, 026, and 027 | Genuinely new evidence | Adds clear consent, payment-rationale, saved-wallet, bite-size, mobile, verification, and experiment-noise decisions not shown in current assets. Page 005 remains excluded on publication hold. | No Step 19 pass; retain for Phase 6 allocation |
+| `CO-02A` | Checkout pages 033, 035, 039, and 040 | Genuinely new evidence | Strong bounded final-screen, review, stepper, and team-size decision artifacts. Metric names and labels do not prove testing or results. | No Step 19 pass; retain for Phase 6 allocation |
+| `CO-02B` | Other Checkout pages 029–044 | Contextual evidence | Useful experiment context, but repeated hypothesis scaffolding and close variants add less distinct value. | No separate pass |
+| `CO-03A` | Checkout pages 052, 054, and 057 | Genuinely new evidence | Trial-risk, reassurance, quote, and timeline artifacts add bounded content examples not present in the selected checkout set. | No Step 19 pass; retain for Phase 6 allocation |
+| `CO-03B` | Checkout page 056 and other pages 045–059 | Contextual evidence | Page 056 links pricing and checkout routes; the remaining pages mainly repeat checkout scaffolding or provide narrow variants. | No separate pass |
+| `CO-04` | Checkout page 060 | Private-only evidence | The workshop preserves rich questions but includes internal critique, unverified metrics, and unclear authorship; it is unsuitable for public use without independent evidence and permission. | No pass |
+| `CO-05` | Checkout pages 062–064 | Contextual evidence | References, shared components, and a document legend explain the file but do not establish contribution or lifecycle. | No separate pass |
+| `REJ-01` | Twelve zero-root records; exact duplicate, empty vector/text, raster-only, and incidental scaffolding families identified above | Reject | They add no distinct readable candidate after family-level deduplication. Rejection does not delete or alter the raw ledger. | No pass |
+
+Classification count: one current-asset replacement family; eleven genuinely
+new evidence families; eight contextual evidence families; five private-only
+families; four unresolved families; and one reject family.
+
+No Figwright candidate independently satisfies the portfolio evidence model's
+artifact, contribution, lifecycle, outcome, and permission dimensions or its
+full-case reader-value gate. The Step 19 pass below was limited to the
+replacement candidate and the explicit focused or priority routes above. It
+does not turn a routing classification into authorship, selection, approval,
+implementation, shipment, testing, adoption, causation, outcome, or
+publication claims.
+
+## Final Step 19 focused verification
+
+Completed 2026-07-26 through Figwright connected to Figma Desktop. This was a
+targeted live check of the explicit Step 18 routes, not a new full-page review.
+`Native and unlocked` below records the observed Figma structure and lock state;
+it does not grant edit authority. `Carry to Step 20` means only that a node is
+specific enough for separately authorized evidence allocation or source
+mapping. It is not a public asset selection, approval, export instruction, or
+replacement decision.
+
+| ID | Live scope checked | Verified finding | Step 19 disposition |
+| --- | --- | --- | --- |
+| `PP-01` | Four responsive roots `3:126837`, `3:127702`, `3:128567`, and `3:129432`; notes `3:127701`, `3:128566`, `3:129431`, and `3:130296` | All four roots repeat the same 1440/1200/1024 sibling structure and the same readable rule: remove the Clarify message below 1200 pixels. The 1024 states depend on raster foundations. | Relationship resolved. Retain as private responsive-rule context; do not advance a repeated, raster-limited family as a distinct asset. |
+| `PP-03` | Goal note `4:150823`; 1920-pixel rule `4:152681`; responsive root `4:150829` | The goal and maximum-width rule are small, readable, native, and unlocked. The `DM-2112` label and screen-size labels are artifact text, not independent chronology or lifecycle evidence. | Retain as private planning and rule evidence. Do not advance as a public visual without contribution and permission support. |
+| `PP-04` | Copy workspace `4:152718`; file-format section `4:181193`; bounded component `4:181199`; note `4:181209` | `4:152718` is a very large internal workspace and not a readable standalone asset. `4:181199` is a self-contained 1360-by-635 native comparison with three plan popovers; live table rows use `.xslx` while the popovers use `.xlsx`, so the artifact is not final-copy proof. | Carry only `4:181199` to Step 20 as conditional private copy-decision evidence. Keep `4:152718` as process context. |
+| `PP-05A` | All seven routed nodes: `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, and `5:196803` | The nodes are checkout and purchase-state systems, not pricing-page equivalents. They include sample account, address, card, tax, legal, and named-person context. | Relationship resolved as checkout context. Do not advance for pricing-asset replacement or publication. |
+| `PP-06` | Representatives `5:224853`, `5:226823`, `5:228736`, `5:230222`, `5:230243`, `5:267065`, and `5:269002` | The second family repeats a reduced subset of the first; `5:230222` and `5:230243` are structurally and visually duplicate 1440-pixel Translator frames apart from IDs and position. The native responsive systems add context but do not improve on the cleaner selected pricing crops. | Repeated-family accounting resolved. Retain one private representative for context; do not advance a visual replacement. |
+| `PP-07` | Question-rich root `5:307644`; product-selector note `5:307992`; supporting questions `5:308461`, `5:308462`, `5:308465`, and `5:308472` | The live notes preserve route, value-proposition, FAQ, and permission questions. They are readable intent evidence but not self-sufficient visuals, and one note explicitly asks whether quoted material may be used. | Retain on private context and permission hold; do not advance a public asset. |
+| `PP-09` | Full inventory `5:313460`; bounded row `5:313472` | The 1667-by-5785 native table is too dense for a standalone portfolio image. The single row is readable and preserves existing copy, a proposed security revision, and rationale, but acceptance, implementation, contribution, and permission remain unknown. | Carry only `5:313472` to Step 20 as conditional private copy-process evidence; do not treat the full table as an asset. |
+| `PP-10` | Reduction workspace `5:313532`; rationale `5:313905`; feature-awareness root `5:313906`; representative `5:314534`; active card `5:313938`; full section `5:315615` | `5:314534` is a self-contained 1512-by-592 native feature-awareness system that adds visual evidence absent from the current pricing crops. `5:315615` is tall and repetitive; `5:313905` is useful rationale rather than a standalone visual. | Carry `5:314534` to Step 20 as a conditional private visual candidate and retain `5:313905` as private rationale. |
+| `WP-01` | Representative hardblock `4:184736` | The 618-by-400 native instance is readable and self-contained, with a limit state, timer, Write Pro value list, price, and upgrade action. Its node name says `Translate Pro` while its visible content says `Write Pro`, so naming does not establish lineage. | Carry `4:184736` to Step 20 as a conditional private visual candidate. |
+| `WP-02A` | Review label `4:185353`; dev area `4:185368`; banner family `4:186544`; review note `4:186560` | `4:185353` is only a standalone `Copy in review` label, and `4:185368` is a large raster-heavy country-availability workspace. `4:186544` is a bounded native banner family; `4:186560` says `For Ana to review with Mason.` That note supports review context only. | Carry `4:186544` to Step 20 as contribution-context evidence only, not as authorship, approval, or a standalone public asset. |
+| `EX-02` | Copy area `2:99544`; tiered cancellation component set `2:99549` | `2:99549` is a clean native and unlocked Starter/Advanced/Ultimate family with tier-aware loss copy and `Continue with Pro` / `Cancel subscription` actions. Entitlement accuracy, contribution, selection, lifecycle, outcomes, and permission remain open. | Carry `2:99549` to Step 20 as a conditional private cancellation candidate. |
+| `EX-03` | Usage-limit frame `2:112817`; document-size frame `2:165768`; remaining-documents frame `2:165336`; current `usage-limit.png`, `document-size.png`, and `remaining-documents.png` | All three live frames are native, unlocked, and source-equivalent to the named current PNGs in visible copy, artwork family, structure, actions, and shadow-expanded dimensions. The current files remain 1092-by-1500, 1092-by-1204, and 546-by-626 pixels. This comparison does not prove that those PNGs were exported from these frames. | Carry all three exact node IDs to Step 20 for source and provenance mapping. Do not change the PNGs or asset manifest in Step 19. |
+| `CO-01A` | No live node | Checkout replacement was not part of the approved focused pass, so the conditional Step 18 route was not activated. | Not inspected. No implied next-page or checkout-review order. |
+
+The conditional Step 20 visual or source candidates are `4:181199`,
+`5:313472`, `5:314534`, `4:184736`, `2:99549`, `2:112817`, `2:165768`, and
+`2:165336`. `4:186544` is contribution-context evidence only. Every other
+routed family remains private context, is excluded from pricing replacement,
+or is held for permission. No checked node independently resolved chronology,
+contribution, lifecycle, outcome, or publication permission, and no checked
+node proves authorship, selection, approval, implementation, shipment, testing,
+adoption, causation, or results.
+
+## Final Step 20 evidence allocation and source mapping
+
+Completed 2026-07-26 as a records-only pass. The exact Step 19 leads were
+allocated to the private project crosswalks and asset manifest. This did not
+create a final public classification, select a portfolio visual, change Figma,
+export an asset, replace a PNG, or change the site.
+
+| Step 19 lead | Final records disposition |
+| --- | --- |
+| `4:181199` | Added to the pricing overlay and Monetization crosswalk as conditional private copy-decision context for `MON-04`. Contribution, selection, lifecycle, outcome, and permission remain unknown. |
+| `5:313472` | Added to the pricing overlay as Figma-only private copy-process evidence. No achievement, contributor, acceptance, implementation, or permission relationship was established. |
+| `5:314534` | Added to the pricing and Write Pro crosswalks as a correlated private artifact candidate for `MON-05`; the direct workshop records remain stronger contribution evidence. |
+| `4:184736` | Added to the pricing and Write Pro crosswalks as a correlated private limit-state candidate for `MON-05`; conflicting node and visible product naming leaves lineage unresolved. |
+| `4:186544` | Added to the pricing and Write Pro crosswalks as contribution-context evidence only. The adjacent review note does not prove authorship, approval, implementation, or public readiness. |
+| `2:99549` | Added to the pricing and Monetization crosswalks as a Figma-only private cancellation candidate contextual to `MON-04`; entitlement accuracy and every non-artifact evidence dimension remain open. |
+| `2:112817`, `2:165768`, and `2:165336` | Added to the Monetization crosswalk and asset manifest as source-equivalent candidates for `usage-limit.png`, `document-size.png`, and `remaining-documents.png`. The PNGs retain `missing` provenance because no independent repository source export or proven export lineage exists. |
+| `5:176750`, `5:195702`, `5:195868`, `5:195920`, `5:196049`, `5:196128`, and `5:196803` | Corrected in the Monetization and pricing crosswalks: these are checkout and purchase-state systems, not Pricing Page V2 equivalents. They remain private context and include sensitive sample data. |
+
+No Step 20 record proves authorship, selection, approval, implementation,
+shipment, testing, adoption, causation, outcomes, or publication permission.
+
+## Legacy interpreted batch history
+
+The rows below preserve the earlier node-level review history. Their
+instructions to continue the page scan are superseded by the completed fresh
+saved-ledger coverage above. Their unresolved chronology, contribution,
+lifecycle, outcome, and permission questions remain open.
 
 | Figma file | Page | Batch | Selected frame range | Batches reviewed | Coverage status | Follow-up need |
 | --- | --- | --- | --- | ---: | --- | --- |

@@ -1,7 +1,7 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; Step 18 saved-ledger review started; 1 of 99 review batches
-complete; public pricing implementation frozen
+Status: Active; Steps 1–20 complete; public pricing
+implementation frozen
 
 Last updated: 2026-07-26
 
@@ -243,7 +243,7 @@ relevant page.
   review batches remain unreviewed in the fresh pass. The raw ledger was also
   normalized losslessly into strict one-object-per-line JSONL; all 655 objects,
   parsed-record hashes, and extraction totals remained unchanged.
-- [ ] 18. Review all 99 saved batches and the 12 zero-root records. Add
+- [x] 18. Review all 99 saved batches and the 12 zero-root records. Add
   provisional candidates to the inventory without making final selection
   decisions. After the complete review, compare and classify every candidate
   as:
@@ -254,39 +254,65 @@ relevant page.
   - unresolved;
   - reject.
 
-  Started 2026-07-26. `Monetization` / `Pricing page` batch 01, roots
-  1–20, has been reviewed from the saved raw ledger. One of 99 batches is
-  complete; all findings remain provisional. The next cursor is batch 02,
-  roots 21–40.
-- [ ] 19. Run focused second Figwright passes only on finalists or unresolved
+  Saved-ledger coverage completed 2026-07-26. All 99 deterministic batches and
+  1,190 manifest roots have been reviewed, and all 12 zero-root page records
+  have explicit dispositions. The inventory records provisional artifact
+  families, repeated-family accounting, raster limits, and unresolved
+  chronology, contribution, lifecycle, outcome, and permission questions.
+  Candidate comparison and classification completed 2026-07-26. The inventory
+  assigns every provisional candidate family to one Step 18 class, records its
+  evidence ceiling, and routes only focused finalists or unresolved
+  relationships to Step 19. Classification does not approve an asset,
+  publication, or replacement. The approved Step 19 pass below later inspected
+  only those routed candidates.
+- [x] 19. Run focused second Figwright passes only on finalists or unresolved
   clusters to verify exact frame relationships, chronology, readable text,
   editability, and whether they improve on current portfolio assets.
-- [ ] 20. Update project crosswalks and the asset manifest from the final Figma
+
+  Focused read-only verification completed 2026-07-26 in Figma Desktop. The
+  pass checked only the explicit focused and priority routes from Step 18. The
+  inventory records exact live nodes, repeated-family relationships,
+  native/unlocked and raster boundaries, readability, current-asset
+  comparisons, and conditional Step 20 dispositions. The pass did not resolve
+  authorship, approval, implementation, shipment, testing, adoption,
+  causation, outcomes, or publication permission. `CO-01A` was not inspected
+  because checkout replacement was outside the approved Step 19 scope. No
+  Figma edit, export, public selection, or asset replacement occurred.
+- [x] 20. Update project crosswalks and the asset manifest from the final Figma
   dispositions. Request separate approval before any Figma edit, export, or
   mockup creation.
+
+  Completed 2026-07-26 as a records-only disposition pass. Exact private node
+  relationships were added to the pricing, Write Pro, and Monetization
+  crosswalks. Three source-equivalent upgrade-prompt frames were added to the
+  asset manifest as candidates while provenance correctly remains `missing`
+  because export lineage is unproved. No Figma edit, export, public selection,
+  asset replacement, or site change was made.
 
 ### Figwright coverage tracker
 
 The detailed running inventory is
 [`projects/pricing-evolution/figwright-inventory.md`](projects/pricing-evolution/figwright-inventory.md).
-Steps 16 and 17 are complete. The raw extraction is preserved and every page
-has a deterministic review cursor. Step 18 has started: 1 of the 99 fresh
-review batches has been reviewed, 98 remain, and the 12 zero-root records still
-need a later disposition.
+Steps 16–20 are complete. The raw extraction is preserved. Step 18 reviewed all
+99 fresh batches, dispositioned all 12 zero-root records, and classified every
+candidate family. Step 19 completed only the routed live checks and recorded
+conditional dispositions. Step 20 allocated those dispositions to the private
+crosswalks and asset manifest without changing Figma or public assets.
 
 | Figma file | Page scope | Manifest roots | Raw roots extracted | Legacy reviewed batches | Fresh review progress | Next cursor |
 | --- | --- | ---: | ---: | ---: | --- | --- |
-| `Monetization` | `Experiments` | 231 | 231 | 14 | 0 of 12 batches | Batch 01, roots 1–20; legacy batches remain provisional history |
-| `Monetization` | `Pricing page` | 174 | 174 | 0 | 1 of 9 batches | Batch 02, roots 21–40 |
-| `Monetization` | `Write Pro` | 81 | 81 | 0 | 0 of 5 batches | Batch 01, roots 1–20 |
-| `_Archive — Misc (pre-cleanup)` | `Page 1` | 17 | 17 | 0 | 0 of 1 batch | Batch 01, roots 1–17 |
-| `_Archive — Misc (pre-cleanup)` | `ATE` | 82 | 82 | 0 | 0 of 5 batches | Batch 01, roots 1–20 |
-| `Checkout — Experiments (Copy)` | 64 pages | 605 | 605 | 0 | 0 of 67 batches; 12 zero-root records pending | Page-level next cursors are in the inventory |
+| `Monetization` | `Experiments` | 231 | 231 | 14 | 12 of 12 batches | Complete; legacy batches remain provisional history |
+| `Monetization` | `Pricing page` | 174 | 174 | 0 | 9 of 9 batches | Complete |
+| `Monetization` | `Write Pro` | 81 | 81 | 0 | 5 of 5 batches | Complete |
+| `_Archive — Misc (pre-cleanup)` | `Page 1` | 17 | 17 | 0 | 1 of 1 batch | Complete |
+| `_Archive — Misc (pre-cleanup)` | `ATE` | 82 | 82 | 0 | 5 of 5 batches | Complete |
+| `Checkout — Experiments (Copy)` | 64 pages | 605 | 605 | 0 | 67 of 67 batches; 12 of 12 zero-root records dispositioned | Complete |
 
-Step 17 gate passed: every approved page and planned batch has a recoverable
-cursor, and the provisional legacy candidates remain preserved. Step 18 review
-has begun from the saved ledger. Final dispositions, live visual verification,
-Figma edits, exports, public selection, and public-page work have not started.
+Step 18 gate passed: every approved page and planned batch was reviewed, all
+empty records were dispositioned, and every candidate family has one
+classification and evidence ceiling. The focused Step 19 live verification is
+complete, and the Step 20 private records allocation is complete. Figma edits,
+exports, public selection, and public-page work have not started.
 
 ## Phase 6: Allocate the recovered work across the portfolio
 

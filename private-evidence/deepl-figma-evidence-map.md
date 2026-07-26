@@ -44,9 +44,12 @@ untouchable, or the ultimate source of truth.
 
 The pricing-evolution
 [`running Figwright inventory`](projects/pricing-evolution/figwright-inventory.md)
-is the page-and-batch coverage owner for recovery steps 15–20. Its structure is
-ready, but zero pages and zero batches have been reviewed; step 16 has not
-started.
+is the page-and-batch coverage and final-disposition owner for recovery steps
+15–20. Those steps are complete: the immutable ledger contains 655 parseable
+records across 69 pages, 1,190 roots, and 99 planned batches; all 99 batches and
+12 zero-root records were reviewed. The final crosswalk and manifest mappings
+remain private and conditional, with no Figma edit, export, public selection,
+or publication approval.
 
 The
 [`achievement ledger`](deepl-achievement-recovery/artifacts/achievement-ledger.json)

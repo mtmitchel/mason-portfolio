@@ -1,7 +1,7 @@
 # Pricing evolution project evidence
 
-Status: Recovery plan steps 1–17 complete; Step 18 saved-ledger review active;
-public case and current private drafts paused
+Status: Recovery plan steps 1–20 complete; public case and
+current private drafts paused
 
 This is the active private index for the pricing evolution and Write Pro
 recovery work. It routes readers to the records that own or support each part
@@ -16,13 +16,18 @@ case until the recovery plan reaches the later evidence, reader-review, and
 implementation gates.
 
 Step 16 raw extraction and the Step 17 resume tracker are complete. The raw
-ledger covers 69 pages and 1,190 selected top-level roots. The tracker divides
-57 non-empty page records into 99 bounded review batches and preserves 12
-zero-root records for later disposition. Step 18 has started from the saved
-ledger: 1 batch has been reviewed, 98 remain, and all findings are provisional.
-Direct Figma inspection remains read-only. Editing and export remain
-unauthorized; final evidence classification, final public selection, and
-public-site work have not been reached.
+ledger covers 69 pages and 1,190 selected top-level roots. Step 18 reviewed all
+99 bounded batches across the 57 non-empty page records, dispositioned all 12
+zero-root records, and classified every provisional candidate family.
+Classification is private evidence routing, not asset approval or public
+selection. The approved Step 19 pass then used Figma Desktop read-only to check
+only the routed Pricing page, Write Pro, cancellation, and upgrade-prompt
+candidates. It verified conditional Step 20 evidence leads and three
+source-equivalent native upgrade-prompt frames, but it did not prove that the
+current PNGs were exported from those frames. Step 20 then updated the private
+project crosswalks and asset manifest, retaining `missing` provenance for those
+PNGs because export lineage remains unproved. Editing, export, final public
+selection, and public-site work have not been reached.
 
 ## Owners and supporting records
 
@@ -32,9 +37,9 @@ public-site work have not been reached.
 | Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. The Write Pro reconstruction and dated audit remain supporting records. |
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July grid proposal, naming, repeatable review tooling, and Pricing Page V2. The ledger now contains their source references and claim ceilings. |
 | Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual and publication ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
-| Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Active, revisable pricing relationship map. `Canonical` means an organizing destination only; every Figma state retains a margin of error. Final selection waits for the complete later Figwright inventory. |
-| Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) and [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz) | Step 18 active: 69 pages, 1,190 roots, 99 planned review batches, 12 zero-root records pending disposition, and 1 of 99 batches reviewed from the saved ledger. |
-| Asset provenance | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current selected-asset source, crop, hash, caption, alternative-text, permission, and exact-duplicate records. Missing independent sources are marked honestly; duplicate files remain preserved by classification. |
+| Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Step 20 complete. Exact surviving private nodes are allocated with separate artifact, contribution, lifecycle, outcome, and permission ceilings. `Canonical` remains an organizing destination only. |
+| Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) and [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz) | Steps 18–20 complete: 69 pages, 1,190 roots, 99 of 99 review batches, 12 of 12 zero-root dispositions, every candidate family classified, all routed live checks dispositioned, and final records allocation documented. |
+| Asset provenance | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current selected-asset source, crop, hash, caption, alternative-text, permission, and exact-duplicate records. Three source-equivalent Figma frames are recorded as candidates, but the current PNGs correctly retain `missing` provenance because export lineage is unproved. |
 | Sources | [Pricing source locations](#pricing-source-locations) | Current private source exports, the active reconstruction, and the curated GPT register. The full raw export remains outside the repository. |
 | Paused and archived drafts | [Paused and archived records](#paused-and-archived-records) | Preserved for recovery and comparison only; none is an accepted public story. |
 

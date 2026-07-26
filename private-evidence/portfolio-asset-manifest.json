@@ -26,7 +26,12 @@
           "dimensions": "1092x1500",
           "public_path": "site/public/work/upgrade-prompts/usage-limit.png",
           "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "source_notes": "No independent repository source export is retained. A native, unlocked source-equivalent frame was verified in the preserved Monetization Figma file, but the current PNG's export lineage is unproved, so provenance remains missing.",
+          "figma_source_candidate": {
+            "file_key": "0JYwhKhRAliGBhyl2kBnEu",
+            "node_id": "2:112817",
+            "relationship": "Source-equivalent in visible copy, artwork family, structure, actions, and shadow-expanded dimensions; not proven as the export source."
+          },
           "sha256": "0d50e9c215a3cceb01ac0902068c573396494159dc8ce9aaa27cfa969c71b371"
         },
         {
@@ -50,7 +55,12 @@
           "dimensions": "1092x1204",
           "public_path": "site/public/work/upgrade-prompts/document-size.png",
           "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "source_notes": "No independent repository source export is retained. A native, unlocked source-equivalent frame was verified in the preserved Monetization Figma file, but the current PNG's export lineage is unproved, so provenance remains missing.",
+          "figma_source_candidate": {
+            "file_key": "0JYwhKhRAliGBhyl2kBnEu",
+            "node_id": "2:165768",
+            "relationship": "Source-equivalent in visible copy, artwork family, structure, actions, and shadow-expanded dimensions; not proven as the export source."
+          },
           "sha256": "3b5e1a6eb9af6ad32d33ccba548f3426116d52ff496bb69a2cd1f3e3c7e65878"
         },
         {
@@ -58,7 +68,12 @@
           "dimensions": "546x626",
           "public_path": "site/public/work/upgrade-prompts/remaining-documents.png",
           "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "source_notes": "No independent repository source export is retained. A native, unlocked source-equivalent frame was verified in the preserved Monetization Figma file, but the current PNG's export lineage is unproved, so provenance remains missing.",
+          "figma_source_candidate": {
+            "file_key": "0JYwhKhRAliGBhyl2kBnEu",
+            "node_id": "2:165336",
+            "relationship": "Source-equivalent in visible copy, artwork family, structure, actions, and shadow-expanded dimensions; not proven as the export source."
+          },
           "sha256": "f464d2355b76d65e5e5daa9c57fde2d90d3c34a6eb4081dca1370a60f8f181d4"
         },
         {

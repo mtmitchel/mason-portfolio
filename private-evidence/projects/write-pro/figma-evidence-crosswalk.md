@@ -29,7 +29,7 @@ state retains a margin of error and may be revised by stronger evidence.
 
 | Canonical area | Disposition | Supported use | Boundary |
 | --- | --- | --- | --- |
-| `01 — Product & landing page`; hard-block source `4:184736` plus product/landing clusters | Canonical with variants | Historical product, benefit, landing-page, and limit-state artifacts | Launch status, exact authorship, approval, and shipment are unverified. |
+| `01 — Product & landing page`; preserved-source candidates `4:184736` and `5:314534`, plus contribution-context node `4:186544` | Canonical with private variants | Historical product, benefit, landing-page, limit-state, and review-context artifacts | Launch status, exact authorship, approval, shipment, and publication permission are unverified. |
 | `02 — Pricing & upgrade surfaces` | Canonical | Conditional upgrade and account-state copy | Check plan, account, pricing, and unreleased-state data. |
 | `03 — Experiments & variants` | Canonical alternatives | Variant and rejected-language context | No winning-variant or result claim without an exact readout. |
 | `80 — Components & content patterns` | Canonical references | Private content-pattern and process support | Do not publish canvas annotations or internal guidance. |
@@ -39,7 +39,7 @@ state retains a margin of error and may be revised by stronger evidence.
 
 | Recovery record | Figma relationship | Ceiling |
 | --- | --- | --- |
-| `MON-05` — Write Pro launch and monetization content | Correlated to pages `01` and `02`; the direct GPT attachments prove working artifacts more precisely than the reorganized page names do | Mason workshopped launch-related content and supplied specific constraints and corrections. Assistant suggestions are not Mason-authored copy; exact approved/shipped variants, launch ownership, adoption, and outcomes remain unknown. |
+| `MON-05` — Write Pro launch and monetization content | Correlated private artifact candidates at preserved-source nodes `4:184736` and `5:314534`; `4:186544` supplies contribution context only. Direct GPT attachments prove Mason's workshop contribution more precisely than the Figma nodes do. | Mason workshopped launch-related content and supplied specific constraints and corrections. The nodes do not prove authorship, approval, shipment, launch ownership, adoption, outcomes, or publication permission. |
 | `MON-01` — Pro Driver experiment wave | Correlated candidate across pricing/upgrade and experiment pages; exact winning frame unresolved | The approved 12% paid-conversion lift and seven-figure ARR uplift apply only to the overall wave, never one visible frame. |
 | `SYS-01` — repeatable review workflow | Contextual to variant and content-pattern pages | Mason's workshop criteria are supported; generated instructions, production deployment, team adoption, and measured improvement are not. |
 | `SYS-04` — naming guidance | Contextual across product, pricing, and content-pattern pages | Participation and direct corrections within the team-owned naming system are supported; generated suggestions, exact implementation, and universal adoption are not. |
@@ -51,6 +51,22 @@ export is
 [`feature-awareness-security-2x.png`](../../source-exports/figma/write-pro-launch/feature-awareness-security-2x.png).
 The frame supports artifact and state evidence only; final approval, shipment,
 and performance remain unproved.
+
+## Final Step 20 node dispositions
+
+- [`4:184736`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=4-184736)
+  remains a conditional private limit-state visual. Its node name and visible
+  product name conflict, so it cannot establish lineage.
+- [`5:314534`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=5-314534)
+  is the bounded private feature-awareness representative from the larger
+  `5:315615` family.
+- [`4:186544`](https://www.figma.com/design/0JYwhKhRAliGBhyl2kBnEu/Monetization?node-id=4-186544)
+  is contribution-context evidence only. The adjacent `4:186560` note says
+  `For Ana to review with Mason`, which does not establish authorship,
+  selection, approval, or implementation.
+
+These dispositions do not select a public visual or authorize a Figma edit,
+export, publication, or site change.
 
 Detailed direct-CUA checkpoints, source moves, and troubleshooting remain in
 the
