@@ -4,7 +4,7 @@ import { pricingEvolutionCase } from "./pricingEvolutionData";
 
 export const metadata: Metadata = {
   title: "Simplifying pricing across four products — Mason Mitchel",
-  description: "How DeepL pricing moved from tabs and repeated bundles to one page per product, with cumulative tiers and add-ons.",
+  description: "How competitor research, naming, and content rules supported pricing patterns across Translator, Write, Voice, and API.",
   alternates: { canonical: "/work/pricing-evolution" },
 };
 

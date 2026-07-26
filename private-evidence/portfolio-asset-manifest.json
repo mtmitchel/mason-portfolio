@@ -85,9 +85,9 @@
       "publication_permission": "unknown",
       "contains_sensitive_data": false,
       "redaction_notes": "The selected product-frame exports contain no private identifiers, comments, tickets, Figma chrome, account avatars or private links. Proposal styling and placeholder values were resolved before export.",
-      "crop_notes": "Every public file is one crop trimmed to its own content, and the image dialog opens that same file; breathing room is supplied by the page frame, never baked into an asset. The story runs from the one-product Translate Pro grid through the three buying routes, the content those routes produced, the add-on pivot, the cumulative card rewrite, the label-once table rewrite, and the three products the cumulative ladder did not fit.",
-      "caption": "Captions name the visible commercial choice and the content-design decision behind it: one subscription and a developer tab, three buying routes, repeated and sentence-bound feature content, the add-on toggle states, cumulative tier additions, label-once table values, and one complete card row per remaining product.",
-      "text_alternative": "Describe the visible product, plan and add-on choices; whether the add-on toggle is on or off; which tiers or parallel offers are shown; and whether feature content repeats, states only its additions, or carries its qualifier in the row label.",
+      "crop_notes": "The public crops keep only the text and controls needed for four story movements: the original Translator grid, the multiplication of buying routes, the commercial relationship behind add-on states, shared versus changing information, and product-specific patterns. The repeated bundle row and cumulative Translator row are descriptive states from different offer scopes; they are not a chronological comparison.",
+      "caption": "Captions identify what each artifact adds without claiming that Mason designed the add-on interaction, that two different offers form a before-and-after pair, or that the selected work shipped or changed customer behaviour.",
+      "text_alternative": "Describe the visible product, route, name, tier relationship, add-on state, price pattern, or table-label distinction. Do not infer ownership, chronology, testing, shipment, adoption, or outcomes from a crop.",
       "export_ready": false,
       "files": [
         {
@@ -102,6 +102,8 @@
             "right": 0,
             "bottom": 0
           },
+          "caption": "Translator fills the individual-and-team plan grid while API keeps a separate developer route.",
+          "text_alternative": "DeepL pricing page with a Translate Pro tab for Individuals and Teams and a Translate API tab for developers above Free, Starter, Advanced, Ultimate, and Enterprise cards.",
           "sha256": "e56285f8030003e84685abe9fe5aa9b18cab82146ced119788fb9c2e54626a57",
           "public_path": "site/public/work/pricing-evolution/legacy-two-tab-grid.png"
         },
@@ -117,127 +119,94 @@
             "right": 0,
             "bottom": 0
           },
+          "caption": "A new middle route places Translator and Write inside the same offer.",
+          "text_alternative": "DeepL pricing page headed Find your perfect plan with tabs for DeepL Translator, DeepL Translator plus DeepL Write, and DeepL API above combined product cards.",
           "sha256": "c2f42ad100b45e0b5f07259bb203b721a28ba8f5553a87508d98f3d72db8a13d",
           "public_path": "site/public/work/pricing-evolution/bundle-era-selector-in-context.png"
         },
         {
-          "path": "bundle-era-translator-grid.png",
-          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-translator-2x.png",
-          "crop_notes": "-trim +repage — standalone Translator plan grid with Free, Starter, Advanced, Ultimate and Enterprise",
-          "crop_scope": "plan-grid",
-          "dimensions": "3216x1458",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "sha256": "4351d7f262190359df964c003c6b19e359e02d8f209678dbbe243b67b41a9354",
-          "public_path": "site/public/work/pricing-evolution/bundle-era-translator-grid.png"
-        },
-        {
           "path": "bundle-era-write-grid.png",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
-          "crop_notes": "-trim +repage — standalone Write pricing page with Free, Write Pro and Enterprise cards plus the account-page add-on banner",
+          "crop_notes": "-trim +repage, then -crop 2482x705+0+0 +repage — account-page add-on banner plus the names, prices, and actions for standalone Write Free, Write Pro, and Enterprise",
           "crop_scope": "plan-grid",
-          "dimensions": "2482x1219",
+          "dimensions": "2482x705",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "015b5638e51fd86f26a27eddc530565b8ce9b0c667cf6bfa707ff1eb9037d8b6",
+          "caption": "Write also has its own Free, Write Pro, and Enterprise offers, plus a separate account-page upgrade route.",
+          "text_alternative": "Standalone Write pricing page with Free, Write Pro, and Enterprise cards beneath a banner that links existing subscribers to an account-page upgrade.",
+          "sha256": "0359e3230874da96e6aa20bfcfabfc92ba3bb5cbb79b215aeabe2101693379bc",
           "public_path": "site/public/work/pricing-evolution/bundle-era-write-grid.png"
-        },
-        {
-          "path": "bundle-era-repeated-write-block.png",
-          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
-          "crop_notes": "-crop 2058x485+72+1575 +repage -trim +repage — identical DeepL Write Pro feature groups repeated under the Starter, Advanced and Ultimate bundle cards",
-          "crop_scope": "feature-group-row",
-          "dimensions": "2048x485",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "sha256": "6625e5ad476eddb3119ee565f2fd3e59509de4202e0af432f3b69be50c87ad40",
-          "public_path": "site/public/work/pricing-evolution/bundle-era-repeated-write-block.png"
-        },
-        {
-          "path": "bundle-era-limits-in-sentences.png",
-          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
-          "crop_notes": "-crop 2058x570+72+820 +repage -trim +repage — Translator feature groups on the same three bundle cards with limits written inside sentences",
-          "crop_scope": "feature-group-row",
-          "dimensions": "2048x570",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "sha256": "1a0916b10591b50a240dd245b1920403fee41855df578c4d798783d295411cc6",
-          "public_path": "site/public/work/pricing-evolution/bundle-era-limits-in-sentences.png"
         },
         {
           "path": "addon-on-cards.png",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
-          "crop_notes": "-crop 2832x2224+96+836 +repage -trim +repage — Translator pricing cards with the Add DeepL Write Pro toggle on and combined plan names and prices",
+          "crop_notes": "-crop 2832x2224+96+836 +repage -trim +repage, then -crop 2772x915+0+0 +repage — add-on control plus combined names, prices, discounts, actions, and audience rows",
           "crop_scope": "addon-state",
-          "dimensions": "2772x2147",
+          "dimensions": "2772x915",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "fbbcfa4823799fa0fbc02ccc7bdc1b8c9380ab415f953b6cf00f0fb67d2277fc",
+          "caption": "The included state uses combined names and prices, with the bundle discount beside each self-serve price.",
+          "text_alternative": "Pricing cards with Add DeepL Write Pro switched on. Starter, Advanced, and Ultimate use combined product names, combined prices, and discount badges; Enterprise remains a sales offer.",
+          "sha256": "37d3e1eed4698600c5c4a43295b9ec8274757f1a3f05f1f8401fe289bcad70a5",
           "public_path": "site/public/work/pricing-evolution/addon-on-cards.png"
         },
         {
           "path": "addon-off-cards.png",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
-          "crop_notes": "-crop 2832x1707+96+838 +repage -trim +repage — the same Translator pricing grid with the Add DeepL Write Pro toggle off",
+          "crop_notes": "-crop 2832x1707+96+838 +repage -trim +repage, then -crop 2772x915+0+0 +repage — add-on control plus Translator names, prices, actions, and audience rows",
           "crop_scope": "addon-state",
-          "dimensions": "2772x1635",
+          "dimensions": "2772x915",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "1315ca3ff72d8743fb27e7ffd9dee580ae110d1e119d49603188d73e3ce8d234",
+          "caption": "The other state keeps Translator names and prices on the three self-serve cards.",
+          "text_alternative": "Pricing cards with Add DeepL Write Pro switched off. Starter, Advanced, and Ultimate use Translator names and prices; Enterprise remains a sales offer.",
+          "sha256": "0e0927b6c9cec940da724978f9cdb3459b8655d8929b145679dfaf3805054e9d",
           "public_path": "site/public/work/pricing-evolution/addon-off-cards.png"
         },
         {
           "path": "cards-bundle-repeated.png",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
-          "crop_notes": "-crop 2736x1953+72+145 +repage -trim +repage — complete four-card bundle row where every tier lists a full Translator group and an identical Write Pro group",
+          "crop_notes": "-crop 2048x1953+72+145 +repage — Starter, Advanced, and Ultimate combined cards with their full Translator groups and repeated Write Pro groups",
           "crop_scope": "plan-card-row",
-          "dimensions": "2736x1953",
+          "dimensions": "2048x1953",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "8d850ef9e4a2ab2593fc46d6fb38cccc9087d913e8e5b0b218f1e5d82773f5ff",
+          "caption": "Starter, Advanced, and Ultimate each restate the same Write Pro group beneath the Translator features.",
+          "text_alternative": "Starter plus Write Pro, Advanced plus Write Pro, and Ultimate plus Write Pro cards. Each card contains a Translator feature group and repeats the same DeepL Write Pro feature group.",
+          "sha256": "e9266478d602ce3cf383b6c58aee54871e9304f80e9b1d60a091527fe7b599ab",
           "public_path": "site/public/work/pricing-evolution/cards-bundle-repeated.png"
         },
         {
           "path": "cards-cumulative-tiers.png",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
-          "crop_notes": "-crop 2976x1388+24+900 +repage -trim +repage — complete four-card Translator row using cumulative headers so each paid tier states only its additions",
+          "crop_notes": "-crop 2976x1388+24+900 +repage -trim +repage, then -crop 2208x1350+0+0 +repage — Starter, Advanced, and Ultimate Translator cards with cumulative headings",
           "crop_scope": "plan-card-row",
-          "dimensions": "2948x1350",
+          "dimensions": "2208x1350",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "a45d6aefc8161ab4b872512e4aa7f3c92e9b58b36e4a73b5934e7da01405e774",
+          "caption": "Starter establishes the offer; Advanced and Ultimate state only their additions.",
+          "text_alternative": "Starter, Advanced, and Ultimate Translator cards using What’s included, Everything in Starter plus, and Everything in Advanced plus headings.",
+          "sha256": "f1a8a814a00567bc5dfd25ca6be091f4a11d15ceaa75297ac627bc2aa117f06b",
           "public_path": "site/public/work/pricing-evolution/cards-cumulative-tiers.png"
         },
         {
@@ -252,6 +221,8 @@
             "right": 0,
             "bottom": 0
           },
+          "caption": "The values repeat nouns and qualifiers that do not change between plans.",
+          "text_alternative": "Comparison table where file translation values repeat per user and glossary values repeat the word glossary across the plan columns.",
           "sha256": "1caa690720ca8e30feac384d9527f4ff38aa40675b6d8005f2e78a5cf508d847",
           "public_path": "site/public/work/pricing-evolution/table-values-repeat-label.png"
         },
@@ -267,6 +238,8 @@
             "right": 0,
             "bottom": 0
           },
+          "caption": "The labels carry shared wording; cells retain the changing value and any intrinsic unit.",
+          "text_alternative": "Comparison table where File translations per user per month and Glossaries carry the shared wording in row labels, leaving changing numbers in the cells.",
           "sha256": "52241a907725c8814356f90ccb001d055e9b2fa5733b62cb2bfa5b343dc3237a",
           "public_path": "site/public/work/pricing-evolution/table-labels-own-qualifier.png"
         },
@@ -282,22 +255,26 @@
             "right": 0,
             "bottom": 0
           },
+          "caption": "Write uses a cumulative ladder for its self-serve offer and a separately named business offer.",
+          "text_alternative": "DeepL Write cards for Free, Write Pro, and DeepL Write for Business. The paid offers use cumulative headings and the business offer keeps a separate name.",
           "sha256": "b957dfdac7c590c0b2bc29997940bf63c03a248e356a968e1b18106ae43ee53a",
           "public_path": "site/public/work/pricing-evolution/product-write-cards.png"
         },
         {
           "path": "product-voice-cards.png",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
-          "crop_notes": "-crop 1790x1840+620+720 +repage -trim +repage — Voice for Meetings and Voice for Conversations card row cropped to the cards themselves The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
+          "crop_notes": "-crop 1790x1840+620+720 +repage -trim +repage, then -crop 1700x1358+0+422 +repage — Voice for Meetings and Voice for Conversations below the clipped illustration area",
           "crop_scope": "product-card-row",
-          "dimensions": "1700x1780",
+          "dimensions": "1700x1358",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "sha256": "fbf9a16343222cda108df0886de3c4b453b6a76eda58b81a1e2487f663bd4aca",
+          "caption": "Voice presents Meetings and Conversations as parallel use-case offers.",
+          "text_alternative": "DeepL Voice for Meetings and DeepL Voice for Conversations cards side by side, each with its own description, sales action, and feature list.",
+          "sha256": "8d2d8e1d2924f0bf64ca6d40a4b864cec19838eda7d8d286dfdbd797bcc9f77b",
           "public_path": "site/public/work/pricing-evolution/product-voice-cards.png"
         },
         {
@@ -312,11 +289,16 @@
             "right": 0,
             "bottom": 0
           },
+          "caption": "API combines a free tier, subscription and usage pricing, and a custom business offer.",
+          "text_alternative": "DeepL API Free, DeepL API Pro with a monthly subscription and usage price, and DeepL API for Business with custom pricing.",
           "sha256": "64738df0fdcee1cf7ca59a082d4dd701e6861e7333013cbd71e973d1f7f42ad9",
           "public_path": "site/public/work/pricing-evolution/product-api-cards.png"
         }
       ],
       "private_originals": [
+        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-limits-in-sentences.png",
+        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-repeated-write-block.png",
+        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-translator-grid.png",
         "archive/retired/figma-exports/pricing-evolution-superseded-2026-07/rev6-round3-pricing-translator-transition-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-era-clean.png",
@@ -604,5 +586,5 @@
       "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428"
     }
   ],
-  "updated": "2026-07-25"
+  "updated": "2026-07-26"
 }

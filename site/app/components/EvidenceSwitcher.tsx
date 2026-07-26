@@ -8,20 +8,26 @@ import ImageLightbox from "./ImageLightbox";
 type EvidenceSwitcherProps = {
   ariaLabel: string;
   dialogPresentation?: "default" | "minimal";
+  dialogSizes?: string;
   initialId?: string;
   presentation?: "default" | "quiet";
   showCaption?: boolean;
   showDialogCaption?: boolean;
+  sizes?: string;
   views: StoryEvidenceView[];
 };
+
+const defaultEvidenceSizes = "(max-width: 820px) calc(100vw - 32px), 1120px";
 
 export default function EvidenceSwitcher({
   ariaLabel,
   dialogPresentation = "default",
+  dialogSizes = "94vw",
   initialId,
   presentation = "default",
   showCaption = true,
   showDialogCaption = true,
+  sizes = defaultEvidenceSizes,
   views,
 }: EvidenceSwitcherProps) {
   const initialIndex = Math.max(0, views.findIndex((view) => view.id === initialId));
@@ -97,9 +103,10 @@ export default function EvidenceSwitcher({
                   alt={view.image.alt}
                   caption={view.image.caption}
                   dialogPresentation={dialogPresentation}
+                  dialogSizes={dialogSizes}
                   showCaption={showCaption}
                   showDialogCaption={showDialogCaption}
-                  sizes="(max-width: 820px) calc(100vw - 32px), 1120px"
+                  sizes={sizes}
                 />
               </>
             )}

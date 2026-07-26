@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+const repositoryRoot = new URL("../../", import.meta.url);
 const publicRoot = new URL("../public/", import.meta.url);
 const privateRoot = new URL("../../private-evidence/", import.meta.url);
 
@@ -98,25 +100,10 @@ const selectedAssets = [
   ["work/home-covers/localyze-passport-loop-poster.png", 1280, 1280],
 ];
 
-const pricingCurrentFiles = [
-  "legacy-two-tab-grid.png",
-  "bundle-era-selector-in-context.png",
+const pricingRetiredPublicFiles = [
   "bundle-era-translator-grid.png",
-  "bundle-era-write-grid.png",
   "bundle-era-repeated-write-block.png",
   "bundle-era-limits-in-sentences.png",
-  "addon-on-cards.png",
-  "addon-off-cards.png",
-  "cards-bundle-repeated.png",
-  "cards-cumulative-tiers.png",
-  "table-values-repeat-label.png",
-  "table-labels-own-qualifier.png",
-  "product-write-cards.png",
-  "product-voice-cards.png",
-  "product-api-cards.png",
-];
-
-const pricingRetiredPublicFiles = [
   "pro-page-2023.png",
   "bundle-era-tab-selector.png",
   "product-translator.png",
@@ -148,9 +135,23 @@ const pricingRetiredPublicFiles = [
   "pricing-write-pro-viewer.png",
 ];
 
+function pricingEvidenceFromData(data) {
+  return [...data.matchAll(
+    /src:\s*"(\/work\/pricing-evolution\/[^"]+)"[\s\S]*?width:\s*(\d+)[\s\S]*?height:\s*(\d+)[\s\S]*?alt:\s*"([^"]+)"[\s\S]*?caption:\s*"([^"]+)"/g,
+  )].map(([, src, width, height, alt, caption]) => ({
+    src,
+    publicPath: src.replace(/^\//, ""),
+    path: src.split("/").at(-1),
+    width: Number(width),
+    height: Number(height),
+    alt,
+    caption,
+  }));
+}
+
 function pricingAssetsFromData(data) {
-  return [...data.matchAll(/src:\s*"(\/work\/pricing-evolution\/[^"]+)"[\s\S]*?width:\s*(\d+)[\s\S]*?height:\s*(\d+)/g)]
-    .map(([, src, width, height]) => [src.replace(/^\//, ""), Number(width), Number(height)]);
+  return pricingEvidenceFromData(data)
+    .map(({ publicPath, width, height }) => [publicPath, width, height]);
 }
 
 const exactQuotes = [
@@ -203,16 +204,17 @@ test("the homepage route switcher remains real navigation", async () => {
 });
 
 for (const [pathname, title] of selectedRoutes) {
-  test(`${pathname} uses the same title as its homepage card`, async () => {
+  test(`${pathname} renders its public case heading`, async () => {
     const html = await htmlFor(pathname);
-    assert.match(html, new RegExp(`<h1>${escapeRegExp(title)}</h1>`));
     if (pathname === "/work/pricing-evolution") {
+      assert.equal((html.match(/<h1>/g) ?? []).length, 1);
       assert.match(
         html,
         /<a(?=[^>]*href="\/")(?=[^>]*class="back-link")[^>]*><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"><\/path><\/svg><span>Back<\/span><\/a>/,
       );
       assert.doesNotMatch(html, /Back to selected work/);
     } else {
+      assert.match(html, new RegExp(`<h1>${escapeRegExp(title)}</h1>`));
       assert.match(html, /Back to selected work/);
     }
     assert.doesNotMatch(html, /noindex/);
@@ -273,82 +275,21 @@ test("pricing copy avoids unsupported lifecycle and ownership claims", async () 
     /\bcost most to maintain\b/i,
     /\btook longest\b/i,
     /\bsource that settled\b/i,
+    /\bI (?:designed|created|introduced|placed|put) (?:the )?(?:add-on )?control\b/i,
+    /\bmy (?:add-on )?control\b/i,
+    /\btests? (?:ran|showed|proved|validated)\b/i,
+    /\btest results?\b/i,
+    /\bchanged customer behaviou?r\b/i,
   ]) {
     assert.doesNotMatch(publicSource, banned);
   }
 });
 
-test("pricing paired evidence shares equivalent crop scope", async () => {
-  const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
-  const pricing = manifest.assets.find((asset) => asset.id === "DEEPL-PRICING-EVOLUTION");
-  assert.ok(pricing, "DEEPL-PRICING-EVOLUTION should be recorded");
-  const byPath = Object.fromEntries((pricing.files ?? []).map((file) => [file.path, file]));
-
-  for (const path of ["cards-bundle-repeated.png", "cards-cumulative-tiers.png"]) {
-    assert.equal(byPath[path]?.crop_scope, "plan-card-row", `${path} should use plan-card-row`);
-  }
-
-  for (const path of ["addon-on-cards.png", "addon-off-cards.png"]) {
-    assert.equal(byPath[path]?.crop_scope, "addon-state", `${path} should use addon-state`);
-  }
-  assert.equal(
-    byPath["addon-on-cards.png"].dimensions.split("x")[0],
-    byPath["addon-off-cards.png"].dimensions.split("x")[0],
-    "addon states should share one width",
-  );
-  // 2772 after re-trimming flush; was 2832 with 30px of dead margin each side.
-  assert.equal(byPath["addon-on-cards.png"].dimensions.split("x")[0], "2772");
-
-  for (const path of ["table-values-repeat-label.png", "table-labels-own-qualifier.png"]) {
-    assert.equal(byPath[path]?.crop_scope, "table-section", `${path} should use table-section`);
-  }
-  assert.equal(
-    byPath["table-values-repeat-label.png"].dimensions,
-    byPath["table-labels-own-qualifier.png"].dimensions,
-    "table sections should share identical dimensions",
-  );
-  assert.equal(byPath["table-values-repeat-label.png"].dimensions, "2768x1167");
-
-  for (const path of ["bundle-era-repeated-write-block.png", "bundle-era-limits-in-sentences.png"]) {
-    assert.equal(byPath[path]?.crop_scope, "feature-group-row", `${path} should use feature-group-row`);
-  }
-  assert.equal(
-    byPath["bundle-era-repeated-write-block.png"].dimensions.split("x")[0],
-    byPath["bundle-era-limits-in-sentences.png"].dimensions.split("x")[0],
-    "feature-group rows should share width 2048",
-  );
-  assert.equal(byPath["bundle-era-repeated-write-block.png"].dimensions.split("x")[0], "2048");
-
-  for (const path of ["bundle-era-translator-grid.png", "bundle-era-write-grid.png"]) {
-    assert.equal(byPath[path]?.crop_scope, "plan-grid", `${path} should use plan-grid`);
-  }
-
-  const productRows = (pricing.files ?? []).filter((file) => file.crop_scope === "product-card-row");
-  assert.equal(productRows.length, 3);
-  assert.deepEqual(
-    productRows.map((file) => file.path).sort(),
-    ["product-api-cards.png", "product-voice-cards.png", "product-write-cards.png"],
-  );
-  assert.equal(byPath["product-write-cards.png"].dimensions.split("x")[0], "2244");
-  assert.equal(byPath["product-api-cards.png"].dimensions.split("x")[0], "2244");
-  assert.equal(
-    byPath["product-voice-cards.png"].dimensions.split("x")[0],
-    "1700",
-    "Voice is intentionally narrower because it has two cards, not three",
-  );
-});
-
-test("pricing cumulative comparison names every tier", async () => {
-  // The repetition pair is now a switcher, and a switcher server-renders only
-  // its active view, so the cumulative "after" image is no longer in the
-  // rendered HTML. Its alternative text is asserted from case data instead.
+test("pricing evidence does not manufacture a repeated-to-cumulative transformation", async () => {
   const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
-  const block = data.match(/cards-cumulative-tiers\.png[\s\S]{0,600}?alt:\s*"([^"]+)"/);
-  const alt = block?.[1] ?? "";
-  assert.ok(alt, "cards-cumulative-tiers.png should declare alternative text");
-  for (const tier of ["Starter", "Advanced", "Ultimate", "Enterprise"]) {
-    assert.match(alt, new RegExp(escapeRegExp(tier)), `cumulative alt should name ${tier}`);
-  }
+  assert.doesNotMatch(data, /\bBefore\b|\bAfter\b/);
+  assert.doesNotMatch(data, /from (?:full|repeated)[\s\S]{0,80}to cumulative/i);
+  assert.doesNotMatch(data, /same-offer (?:pair|comparison)|matching crops? (?:show|prove|establish)/i);
 });
 
 test("pricing page carries no business-outcome metric", async () => {
@@ -506,10 +447,10 @@ test("selected assets retain their declared dimensions", async () => {
   }
 });
 
-test("the private manifest records every new crop and the corrected report cover", async () => {
+test("the private manifest records active evidence and the corrected report cover", async () => {
   const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
   assert.equal(manifest.version, "2.0");
-  assert.equal(manifest.updated, "2026-07-25");
+  assert.match(manifest.updated, /^\d{4}-\d{2}-\d{2}$/);
   const files = manifest.assets.flatMap((asset) => asset.files ?? []);
   const cropPaths = [
     "upgrade-prompts/write-free-account-detail.png",
@@ -533,18 +474,35 @@ test("the private manifest records every new crop and the corrected report cover
       assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
     }
   }
-  for (const path of pricingCurrentFiles) {
-    const file = files.find((candidate) => candidate.path === path);
-    assert.ok(file, `${path} should be recorded`);
+  const pricingData = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
+  const activePricingEvidence = pricingEvidenceFromData(pricingData);
+  const pricingManifest = manifest.assets.find((asset) => asset.id === "DEEPL-PRICING-EVOLUTION");
+  assert.ok(pricingManifest, "DEEPL-PRICING-EVOLUTION should be recorded");
+  assert.deepEqual(
+    (pricingManifest.files ?? []).map((file) => file.path).sort(),
+    activePricingEvidence.map((evidence) => evidence.path).sort(),
+    "the pricing manifest should contain exactly the assets referenced by the case",
+  );
+
+  for (const evidence of activePricingEvidence) {
+    const file = pricingManifest.files.find((candidate) => candidate.path === evidence.path);
+    assert.ok(file, `${evidence.path} should be recorded`);
     for (const field of ["public_path", "source_path", "crop_notes", "crop_scope", "dimensions", "sha256"]) {
-      assert.equal(typeof file[field], "string", `${path}.${field} should be recorded`);
-      assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
+      assert.equal(typeof file[field], "string", `${evidence.path}.${field} should be recorded`);
+      assert.ok(file[field].length > 0, `${evidence.path}.${field} should not be empty`);
     }
-    assert.equal(typeof file.trim_margin, "object", `${path}.trim_margin should be recorded`);
-    assert.ok(file.trim_margin, `${path}.trim_margin should not be empty`);
+    assert.equal(file.public_path, `site/public/${evidence.publicPath}`);
+    assert.equal(file.dimensions, `${evidence.width}x${evidence.height}`);
+    assert.equal(file.caption, evidence.caption);
+    assert.equal(file.text_alternative, evidence.alt);
+    assert.equal(typeof file.trim_margin, "object", `${evidence.path}.trim_margin should be recorded`);
+    assert.ok(file.trim_margin, `${evidence.path}.trim_margin should not be empty`);
     for (const edge of ["left", "top", "right", "bottom"]) {
-      assert.equal(typeof file.trim_margin[edge], "number", `${path}.trim_margin.${edge} should be a number`);
+      assert.equal(typeof file.trim_margin[edge], "number", `${evidence.path}.trim_margin.${edge} should be a number`);
     }
+    await access(new URL(file.source_path, repositoryRoot));
+    const buffer = await readFile(new URL(evidence.publicPath, publicRoot));
+    assert.equal(createHash("sha256").update(buffer).digest("hex"), file.sha256);
   }
   const reportCover = files.find((file) => file.path === "report-campaign/report-cover.png");
   assert.equal(reportCover.dimensions, "978x1369");
@@ -695,6 +653,22 @@ test("dialog image sizes pass through interactive evidence components", async ()
 
   assert.match(lightbox, /sizes=\{dialogSizes\}/);
   assert.match(switcher, /dialogSizes=\{dialogSizes\}/);
+});
+
+test("pricing viewer preserves image proportions and confines overflow", async () => {
+  const css = await readFile(new URL("app/globals.css", root), "utf8");
+  assert.match(
+    css,
+    /\.pricing-page \.lightbox-panel--minimal\s*\{[^}]*display:\s*flex;[^}]*overflow:\s*hidden;/s,
+  );
+  assert.match(
+    css,
+    /\.pricing-page \.lightbox-panel--minimal \.lightbox-image\s*\{[^}]*min-height:\s*0;[^}]*overflow:\s*auto;/s,
+  );
+  assert.match(
+    css,
+    /\.pricing-page \.lightbox-panel--minimal \.lightbox-image img\s*\{[^}]*align-self:\s*flex-start;[^}]*flex:\s*0 0 auto;[^}]*height:\s*auto;/s,
+  );
 });
 
 test("résumé remains anonymously downloadable", async () => {

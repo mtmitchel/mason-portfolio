@@ -13,10 +13,13 @@ check the portfolio. Nothing here is cleared for public release by default.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visuals and their private sources, crops, dimensions, captions,
   alternative text, and permission state.
-- [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) — build
-  candidate for the pricing case: proposed chapter order and copy,
-  claim-to-evidence relationships, and presentation notes. It remains
-  revisable until the full case passes reader review.
+- [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) —
+  current pricing evidence and narrative-recovery brief. The rejected
+  implementation contract is preserved in the archive and is not an editorial
+  owner.
+- [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md) —
+  active work-status plan for evidence organization, Figwright coverage,
+  portfolio decisions, and the eventual pricing rebuild.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — bidirectional
   achievement-to-Figma crosswalk.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)

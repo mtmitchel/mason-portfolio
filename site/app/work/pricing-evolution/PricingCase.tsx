@@ -1,9 +1,11 @@
 import Link from "next/link";
 import EvidenceSwitcher from "../../components/EvidenceSwitcher";
-import ImageComparison from "../../components/ImageComparison";
 import ImageLightbox from "../../components/ImageLightbox";
 import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryEvidenceView, StoryImage } from "../portfolioTypes";
+
+const pricingImageSizes = "(max-width: 928px) calc(100vw - 48px), 880px";
+const pricingDialogSizes = "1440px";
 
 type PricingBlock =
   | { kind: "prose"; paragraphs: string[] }
@@ -15,16 +17,9 @@ type PricingBlock =
       showCaption?: boolean;
       showDialogCaption?: boolean;
       views: StoryEvidenceView[];
-    }
-  | {
-      kind: "comparison";
-      layout?: "stacked";
-      ariaLabel: string;
-      before: { tag: string; image: StoryImage };
-      after: { tag: string; image: StoryImage };
     };
 
-type PricingSection = {
+type PricingMovement = {
   id: string;
   title: string;
   blocks: PricingBlock[];
@@ -33,7 +28,7 @@ type PricingSection = {
 export type PricingCaseStory = {
   title: string;
   synopsis: string[];
-  chapters: PricingSection[];
+  movements: PricingMovement[];
   closing: {
     heading: string;
     paragraphs: string[];
@@ -60,10 +55,11 @@ function PricingBlockView({ block }: { block: PricingBlock }) {
           caption={block.image.caption}
           chrome="overlay"
           dialogPresentation="minimal"
+          dialogSizes={pricingDialogSizes}
           height={block.image.height}
           label={block.image.label}
           previewSrc={block.image.src}
-          sizes="(max-width: 1160px) 100vw, 1120px"
+          sizes={pricingImageSizes}
           width={block.image.width}
         />
       </div>
@@ -76,32 +72,13 @@ function PricingBlockView({ block }: { block: PricingBlock }) {
         <EvidenceSwitcher
           ariaLabel={block.ariaLabel}
           dialogPresentation="minimal"
+          dialogSizes={pricingDialogSizes}
           initialId={block.initialId}
           presentation="quiet"
           showCaption={block.showCaption}
           showDialogCaption={block.showDialogCaption}
+          sizes={pricingImageSizes}
           views={block.views}
-        />
-      </div>
-    );
-  }
-
-  if (block.kind === "comparison") {
-    const mediaClassName =
-      block.layout === "stacked"
-        ? "chapter-media chapter-media--comparison-stacked"
-        : "chapter-media";
-
-    return (
-      <div className={mediaClassName}>
-        <ImageComparison
-          ariaLabel={block.ariaLabel}
-          chrome="overlay"
-          dialogPresentation="minimal"
-          items={[
-            { label: block.before.tag, image: block.before.image },
-            { label: block.after.tag, image: block.after.image },
-          ]}
         />
       </div>
     );
@@ -131,14 +108,14 @@ export default function PricingCase({ story }: { story: PricingCaseStory }) {
           </div>
         </header>
 
-        {story.chapters.map((chapter) => (
-          <section className="chapter-section" id={chapter.id} key={chapter.id}>
+        {story.movements.map((movement) => (
+          <section className="chapter-section" id={movement.id} key={movement.id}>
             <h2 className="chapter-heading">
-              <span className="chapter-heading-title">{chapter.title}</span>
+              <span className="chapter-heading-title">{movement.title}</span>
             </h2>
             <div className="chapter-blocks">
-              {chapter.blocks.map((block, index) => (
-                <PricingBlockView block={block} key={`${chapter.id}-${block.kind}-${index}`} />
+              {movement.blocks.map((block, index) => (
+                <PricingBlockView block={block} key={`${movement.id}-${block.kind}-${index}`} />
               ))}
             </div>
           </section>

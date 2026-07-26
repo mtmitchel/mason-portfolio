@@ -1,6 +1,6 @@
 # Current portfolio direction
 
-**Updated:** 2026-07-24
+**Updated:** 2026-07-26
 **Status:** Current decision owner
 
 This file records the current public structure. The
@@ -64,37 +64,37 @@ belong to the wider experiment wave.
 
 ### Simplifying pricing across four products
 
-**Narrative status, 2026-07-25:** Rejected. The sequence and notes below record
-the current implementation candidate for recovery only; they do not direct the
-next rewrite. Rebuild the case from the broader project evidence, hiring-reader
-needs, and current factual claim limits.
+**Narrative status, 2026-07-26:** Accepted after page-only first-reader
+review. The case uses four movements:
 
-1. When there was one product to buy.
-2. A second paid product opened three ways to buy.
-3. Two problems inside every bundle card.
-4. Put the add-on choice on the Translator page.
-5. Replace repetition with progression.
-6. Move qualifiers into row labels.
-7. Three products the ladder did not fit.
-8. One page per product, one job for each line.
+1. One grid became several buying systems.
+2. Define the relationship before writing the card.
+3. State shared information once.
+4. Let each commercial model use the right pattern.
 
-The case opens on the single-product condition so the complication has
-something to complicate, then names the three buying routes, the content those
-routes produced, the add-on pivot, the cumulative rewrite, the table rewrite,
-and the three products the cumulative ladder did not fit. Every pair on the
-page, repetition to progression included, is a two-state switcher; the
-repetition pair keeps Before and After labels because it is the one real
-change of state. Each evidence image is one intentional crop, and
-the dialog opens that same crop. Paired evidence shares a recorded crop scope,
-the cumulative comparison shows every tier in its grid, and the three remaining
-product states use one consistent card-row crop. Translator's grid appears once,
-in the repetition-to-progression comparison, and is deliberately not shown
-again in the final chapter. Every crop is trimmed flush to its own content and
-the page frame supplies the surrounding space, so no image carries baked-in
-padding or dead margin. Chapter copy, captions, alternative text, and
-claim limits are owned by
-[`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md). The case
-contains no conversion or revenue claim.
+The pressure is the expansion from Translator's individual-and-team grid and
+API's developer route into combined, standalone, and account-upgrade routes for
+Write. Mason's supported contribution is competitor research, messaging
+analysis, value-proposition exploration, naming, pricing writing, content
+structure, headline concepts, and copy variations prepared for testing.
+
+The pivotal content judgment is to define whether an offer is a cumulative
+tier, parallel choice, add-on, or usage-based product before writing the card.
+Shared information then gets one place while changing information follows a
+consistent pattern. The add-on control is a project-level structural turn that
+Mason's content supported, not an interaction decision attributed to him.
+
+The repeated combined cards and cumulative Translator cards are separate
+descriptive states. They are not a Before and After pair because the recovered
+record does not establish comparable same-offer chronology. The table pair and
+add-on pair also use descriptive state labels.
+
+The final movement resolves the four-product promise: Translator uses a
+cumulative ladder; Write combines self-serve and separately named business
+offers; Voice uses parallel offers; API combines subscription, usage, and
+custom pricing. The ending states what the selected work demonstrates without
+claiming shipment, adoption, testing results, causation, customer behaviour, or
+measured outcomes.
 
 ### Checkout across four purchase states
 

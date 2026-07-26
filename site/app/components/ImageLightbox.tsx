@@ -18,6 +18,8 @@ type ImageLightboxProps = {
   previewSrc: string;
   /** Fetch hint for the preview image; defaults to the legacy 760px story column. */
   sizes?: string;
+  /** Fetch hint for the dialog image; defaults to the legacy viewport-sized dialog. */
+  dialogSizes?: string;
   /** When true, the dialog image pane scrolls tall sources inside a capped viewport. */
   tallDialog?: boolean;
   triggerClassName?: string;
@@ -40,6 +42,7 @@ export default function ImageLightbox({
   showDialogCaption = true,
   showCaption = true,
   sizes = "(max-width: 760px) 100vw, 760px",
+  dialogSizes = "94vw",
   tallDialog = false,
   triggerClassName = "",
   width,
@@ -160,7 +163,7 @@ export default function ImageLightbox({
                 alt={alt}
                 width={width}
                 height={height}
-                sizes="94vw"
+                sizes={dialogSizes}
               />
             </div>
             {showDialogCaption ? <p id={captionId}>{caption}</p> : null}

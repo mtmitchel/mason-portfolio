@@ -966,16 +966,6 @@ img {
   .lightbox { padding: 10px; }
   .lightbox-panel { width: 100%; padding: 14px; }
   .lightbox-panel--minimal { padding: 12px; }
-
-  .pricing-page .lightbox-panel--minimal .lightbox-image {
-    justify-content: flex-start;
-  }
-
-  .pricing-page .lightbox-panel--minimal .lightbox-image img {
-    width: auto;
-    min-width: 820px;
-    max-width: none;
-  }
 }
 
 /* Pricing case layout. */
@@ -1088,13 +1078,11 @@ img {
    measure its two cards blow up to ~430px each against API's ~293px, and the
    block runs ~873px tall. Match the card, not the block: two thirds of the
    measure puts a Voice card at ~295px, level with API's. Width-driven on
-   purpose — capping image height collapses images that have not loaded. */
+   purpose — capping image height collapses images that have not loaded.
+   Center only the preview; the caption stays on the 740px text edge. */
 #product-patterns [id$="-panel-voice"] .evidence-preview {
   width: min(100%, 587px);
-}
-
-.chapter-page .chapter-media--comparison-stacked .story-comparison {
-  grid-template-columns: 1fr;
+  margin-inline: auto;
 }
 
 .chapter-page .chapter-media .evidence-figure,
@@ -1167,9 +1155,34 @@ img {
   border-radius: 0;
 }
 
-/* The dialog floats free of the page grid, so it keeps inset on all four sides. */
+/* Pricing expanded evidence: wider panel, scrollable image pane, and a
+   materially larger crop. Horizontal overflow stays inside the image pane. */
+.pricing-page .lightbox-panel--minimal {
+  display: flex;
+  flex-direction: column;
+  width: min(96vw, 1600px);
+  max-height: 94vh;
+  overflow: hidden;
+}
+
 .pricing-page .lightbox-panel--minimal .lightbox-image {
+  flex: 1 1 auto;
+  min-height: 0;
+  justify-content: flex-start;
   padding: 24px;
+  overflow: auto;
+}
+
+.pricing-page .lightbox-panel--minimal .lightbox-image img {
+  align-self: flex-start;
+  flex: 0 0 auto;
+  width: max(100%, 1440px);
+  max-width: none;
+  height: auto;
+}
+
+.pricing-page .lightbox-panel--minimal > p {
+  max-width: 740px;
 }
 
 /* Width-driven, never height-driven. `width: auto` with a max-height was tried
