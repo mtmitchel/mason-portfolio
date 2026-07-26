@@ -220,6 +220,12 @@ has been reviewed.
 - [ ] 16. For each relevant Figma page, have Mason select the largest practical
   frame batch and run Figwright. Inspect the exposed frames and append
   candidates to the inventory without making final selection decisions.
+
+  Started 2026-07-26. Eleven unlabelled batches, covering 72 exact selected nodes,
+  from the preserved `Monetization` source file, page `Experiments`, have been
+  reviewed. The first eight batches selected page-level nodes; the ninth and
+  tenth also included exact nested nodes. Page coverage is partial, all
+  observations remain provisional, and no final asset selection has started.
 - [ ] 17. Track unreviewed pages and frame batches so work can resume across
   sessions without rescanning completed material or losing provisional
   candidates.
@@ -242,11 +248,11 @@ has been reviewed.
 
 The detailed running inventory is
 [`projects/pricing-evolution/figwright-inventory.md`](projects/pricing-evolution/figwright-inventory.md).
-Step 16 has not started, so page coverage remains at zero reviewed batches.
+Step 16 is active with eleven reviewed batches and no completed page.
 
 | Figma file | Page | Batches reviewed | Coverage status | Notes |
 | --- | --- | ---: | --- | --- |
-| To inventory | To inventory | 0 | Not started | Inventory structure ready; step 16 has not started; final decisions deferred |
+| `Monetization` | `Experiments` | 11 | Partial | Eleven unlabelled selections covering 72 exact selected nodes reviewed; remaining page batches and the other prioritized source files are unreviewed; final decisions deferred |
 
 Gate: all relevant pages have recorded coverage, and finalists have been judged
 against the complete inventory rather than the order in which they were found.
