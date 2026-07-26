@@ -7,24 +7,21 @@ check the portfolio. Nothing here is cleared for public release by default.
 
 - [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md)
   — current page titles, candidate story direction, writing rules, and homepage
-  decisions.
+  decisions. Its pricing direction is paused and routed through the active
+  pricing-project index below.
 - [`claim-review.md`](claim-review.md) — factual claim ceilings and publication
   decisions; it does not own narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visuals and their private sources, crops, dimensions, captions,
   alternative text, and permission state.
-- [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) —
-  current pricing evidence and narrative-recovery brief. The rejected
-  implementation contract is preserved in the archive and is not an editorial
-  owner.
-- [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md) —
-  active work-status plan for evidence organization, Figwright coverage,
-  portfolio decisions, and the eventual pricing rebuild.
-- [`pricing-evolution-recovery-audit-2026-07-26.md`](pricing-evolution-recovery-audit-2026-07-26.md)
-  — private audit findings, direct-source recovery leads, known repository
-  defects, and exact continuation context for the active plan.
-- [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — bidirectional
-  achievement-to-Figma crosswalk.
+- [`asset-duplicate-classification.md`](asset-duplicate-classification.md) —
+  SHA-256 classification and preservation disposition for exact duplicate
+  files.
+- [`projects/pricing-evolution/README.md`](projects/pricing-evolution/README.md)
+  — active pricing-project index. It records the pause and routes to work
+  status, evidence owners, source locations, and rejected or superseded drafts.
+- [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md) — active index
+  for the project-level bidirectional achievement-to-Figma crosswalks.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
   — binding product and navigation correction for the copied Figma files.
 - [`deepl-achievement-recovery/README.md`](deepl-achievement-recovery/README.md)

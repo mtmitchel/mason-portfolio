@@ -21,7 +21,12 @@ are the primary supplemental sources. Their synthesis is
 
 ## Start here
 
-- [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md) — current owner for portfolio scope, metric framing, writing hierarchy, and publication boundaries, updated with Mason's decisions through 2026-07-24.
+- [`../projects/pricing-evolution/README.md`](../projects/pricing-evolution/README.md)
+  — active owner for the paused pricing recovery, direct-source chronology,
+  contribution map, and corrected claim routing.
+- [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md)
+  — general portfolio scope, metric framing, writing hierarchy, and publication
+  boundaries. Its pricing direction remains paused.
 - [`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md) — canonical paired CV and portfolio language covering every recovery record exactly once.
 - [`artifacts/outcome-evidence.md`](artifacts/outcome-evidence.md) — strongest positive outcomes, growth and revenue candidates, evidence quality, and missing-source warnings.
 - [`artifacts/career-inventory.md`](artifacts/career-inventory.md) — chronological reconstruction across Marketing, Apps & Integrations, Content Experience, Monetization, IAM, ATE, and content tooling.
@@ -34,9 +39,9 @@ are the primary supplemental sources. Their synthesis is
 
 ## Current findings
 
-The curated ledger contains 22 achievement records:
+The curated ledger contains 25 achievement records:
 
-- 14 confirmed from contemporaneous project material
+- 17 confirmed from contemporaneous project material
 - 2 strongly supported by project and review evidence
 - 4 with valuable metrics whose original experiment or analytics attachments are missing
 - 2 leads requiring further confirmation
@@ -44,6 +49,9 @@ The curated ledger contains 22 achievement records:
 
 Particularly useful outcomes include:
 
+- Direct-source records for Write Pro launch-related content, the June-July
+  2024 Translator pricing-grid proposal, and product and plan naming guidance,
+  each with a separate lifecycle and claim ceiling.
 - Contribution to more than 25 product, enterprise, and developer landing pages, including a major Enterprise-page revamp.
 - An Apps & Integrations post-signup experiment whose hypothesis was described as proven and then expanded into a broader sidebar experience.
 - Monetization experiment candidates involving paid purchases, incremental ARR, and free-account growth.
@@ -114,7 +122,10 @@ node "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-re
   "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-recovery/artifacts"
 ```
 
-The last completed validation checked 22 achievement records, 49 conversation references, 25 exact user-message references, 11 page-level artifact references, 8 unique supplemental source files, all 22 final-list IDs, 1,265 extracted source messages, and zero duplicate keys or failures.
+The last completed validation checked 25 achievement records, 62 conversation
+references, 38 exact user-message references, 11 page-level artifact
+references, 8 unique supplemental source files, all 25 final-list IDs, 1,265
+extracted source messages, and zero duplicate keys or failures.
 
 ## Useful supporting evidence still missing
 
@@ -135,7 +146,8 @@ Use
 [`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md)
 as the canonical career-language source and
 [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md)
-as the current portfolio-decision owner. Mason-confirmed
+as the general portfolio-decision owner, with the active pricing-project index
+governing the paused pricing exception. Mason-confirmed
 business-intelligence outcomes may be used in CV and private portfolio copy
 when the wording accurately
 separates Mason's contribution from the team, program, campaign, platform, or

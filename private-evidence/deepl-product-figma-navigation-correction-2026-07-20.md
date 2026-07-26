@@ -21,6 +21,18 @@ and publish claims the evidence does not support.
 This is a navigation failure, not permission to edit Figma. The canonical and
 source files remain read-only during portfolio review.
 
+## Authority limit — 2026-07-26
+
+The word `canonical` in this document identifies the current organizational
+destination only. No Figma file, page, frame, component, mockup, or restored
+source is untouchable or an ultimate source of truth.
+
+Some states may be close to what shipped, but every state retains a margin of
+error. Treat Figma as fallible artifact and state evidence, then check stronger
+direct project, approval, release, public-product, and Mason correction evidence
+before making lifecycle, authorship, or exact-production claims. New evidence
+may revise any current mapping.
+
 ## Product model: historical truth and current truth
 
 During the period represented by the recovered work, DeepL Translator, DeepL

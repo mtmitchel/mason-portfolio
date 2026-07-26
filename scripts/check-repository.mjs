@@ -14,6 +14,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const failures = [];
 
 const ignoredDirectories = new Set([
+  ".agents",
+  ".codex",
   ".git",
   ".vinext",
   ".wrangler",
@@ -88,6 +90,8 @@ function resolveMagickBinary() {
 }
 
 const allowedRootEntries = new Set([
+  ".agents",
+  ".codex",
   ".git",
   ".gitignore",
   "AGENTS.md",
@@ -179,7 +183,7 @@ const routeDirectories = (await readdir(routeRoot, { withFileTypes: true }))
 assert.deepEqual(
   routeDirectories,
   expectedRoutes,
-  "site/app/work should contain only the six live case routes",
+  "site/app/work should contain only the expected live case routes",
 );
 
 const routeSources = await walk(routeRoot, (file) => file.endsWith(".tsx"));
@@ -221,57 +225,246 @@ for (const file of markdownFiles) {
 
 const manifestPath = path.join(root, "private-evidence/portfolio-asset-manifest.json");
 const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+const currentDate = new Date().toISOString().slice(0, 10);
+const manifestAssets = Array.isArray(manifest.assets) ? manifest.assets : [];
+const sha256Pattern = /^[a-f0-9]{64}$/;
+const parsedManifestDate = typeof manifest.updated === "string"
+  ? Date.parse(`${manifest.updated}T00:00:00.000Z`)
+  : Number.NaN;
+const validManifestDate = typeof manifest.updated === "string"
+  && /^\d{4}-\d{2}-\d{2}$/.test(manifest.updated)
+  && Number.isFinite(parsedManifestDate)
+  && new Date(parsedManifestDate).toISOString().slice(0, 10) === manifest.updated;
+
 record(manifest.version === "2.0", "asset manifest version should be 2.0");
-record(manifest.updated === "2026-07-25", "asset manifest update date should be current");
-record(Array.isArray(manifest.assets) && manifest.assets.length === 6, "asset manifest should contain six project records");
+record(validManifestDate, "asset manifest update date should be a valid ISO date");
+record(!validManifestDate || manifest.updated <= currentDate, "asset manifest update date should not be in the future");
+record(Array.isArray(manifest.assets), "asset manifest assets should be an array");
+record(manifestAssets.length > 0, "asset manifest should contain at least one project record");
+
+const assetIds = manifestAssets.map((asset) => asset.id);
+const projectIds = manifestAssets.map((asset) => asset.project_id);
+record(
+  assetIds.every((id) => typeof id === "string" && id.length > 0),
+  "every asset manifest record should have an id",
+);
+record(new Set(assetIds).size === assetIds.length, "asset manifest ids should be unique");
+record(
+  projectIds.every((id) => typeof id === "string" && id.length > 0),
+  "every asset manifest record should have a project_id",
+);
+record(new Set(projectIds).size === projectIds.length, "asset manifest project_ids should be unique");
+
+function isArchivePath(relative) {
+  if (typeof relative !== "string") return false;
+  const normalized = path.posix.normalize(relative);
+  return normalized === "archive" || normalized.startsWith("archive/");
+}
+
+function isPublicPath(relative) {
+  if (typeof relative !== "string") return false;
+  const normalized = path.posix.normalize(relative);
+  return normalized === "site/public" || normalized.startsWith("site/public/");
+}
+
+function isSafeRepositoryPath(relative) {
+  if (typeof relative !== "string" || relative.length === 0 || path.isAbsolute(relative)) {
+    return false;
+  }
+  if (path.posix.normalize(relative) !== relative) return false;
+  const resolved = path.resolve(root, relative);
+  return resolved.startsWith(`${root}${path.sep}`);
+}
+
+const duplicateClassification = manifest.duplicate_classification;
+record(
+  isSafeRepositoryPath(duplicateClassification)
+    && !isArchivePath(duplicateClassification)
+    && await exists(path.join(root, duplicateClassification)),
+  "asset manifest duplicate classification should point to a current file",
+);
+
+async function verifyFileHash(relative, expectedHash, label) {
+  const safePath = isSafeRepositoryPath(relative);
+  record(safePath, `${label}: path must stay inside the repository: ${relative}`);
+  if (!safePath) return null;
+
+  const absolute = path.join(root, relative);
+  const present = await exists(absolute);
+  record(present, `${label}: file is missing: ${relative}`);
+
+  const validHash = typeof expectedHash === "string" && sha256Pattern.test(expectedHash);
+  record(validHash, `${label}: a lowercase SHA-256 is required for ${relative}`);
+  if (!present || !validHash) return null;
+
+  const buffer = await readFile(absolute);
+  const actualHash = createHash("sha256").update(buffer).digest("hex");
+  record(actualHash === expectedHash, `${label}: SHA-256 changed for ${relative}`);
+  return buffer;
+}
 
 const manifestPublicPaths = new Set();
 
-for (const asset of manifest.assets) {
+for (const asset of manifestAssets) {
+  for (const file of asset.files ?? []) {
+    manifestPublicPaths.add(file.public_path ?? `site/public/work/${file.path}`);
+  }
+  for (const recordValue of [asset.homepage_media, asset]) {
+    if (!recordValue) continue;
+    if (recordValue.public_path) manifestPublicPaths.add(recordValue.public_path);
+    if (recordValue.poster_path) manifestPublicPaths.add(recordValue.poster_path);
+  }
+}
+
+async function validateProvenance(recordValue, label, publicPath) {
+  const sourceStatus = recordValue.source_status;
+  record(
+    ["verified", "derived", "missing"].includes(sourceStatus),
+    `${label}: source_status must be verified, derived, or missing`,
+  );
+
+  if (sourceStatus === "missing") {
+    record(!recordValue.source_path, `${label}: missing provenance must not self-source from ${publicPath}`);
+    record(!recordValue.source_sha256, `${label}: missing provenance must not claim a source SHA-256`);
+    record(
+      typeof recordValue.source_notes === "string" && recordValue.source_notes.trim().length > 0,
+      `${label}: missing provenance requires source_notes`,
+    );
+    return;
+  }
+
+  if (sourceStatus !== "verified" && sourceStatus !== "derived") return;
+
+  const sourcePath = recordValue.source_path;
+  record(
+    typeof sourcePath === "string" && sourcePath.length > 0,
+    `${label}: ${sourceStatus} provenance requires source_path`,
+  );
+  if (typeof sourcePath !== "string" || sourcePath.length === 0) return;
+
+  record(!isArchivePath(sourcePath), `${label}: active source must not use an archived path: ${sourcePath}`);
+  record(sourcePath !== publicPath, `${label}: public file must not be its own source: ${sourcePath}`);
+
+  if (sourceStatus === "verified") {
+    record(!isPublicPath(sourcePath), `${label}: verified source must be independent of site/public: ${sourcePath}`);
+  } else {
+    record(isPublicPath(sourcePath), `${label}: derived source should be a manifest-listed public parent: ${sourcePath}`);
+    record(
+      manifestPublicPaths.has(sourcePath),
+      `${label}: derived source is not another manifest-listed public asset: ${sourcePath}`,
+    );
+  }
+
+  await verifyFileHash(sourcePath, recordValue.source_sha256, `${label} source`);
+}
+
+async function validatePublicRecord(recordValue, label, publicPath) {
+  record(
+    typeof publicPath === "string" && isPublicPath(publicPath),
+    `${label}: public_path should stay under site/public`,
+  );
+  if (typeof publicPath !== "string") return;
+
+  const buffer = await verifyFileHash(publicPath, recordValue.sha256, `${label} public`);
+  record(
+    typeof recordValue.dimensions === "string" && /^\d+x\d+$/.test(recordValue.dimensions),
+    `${label}: dimensions are required`,
+  );
+  if (buffer) {
+    const dimensions = pngDimensions(buffer);
+    if (dimensions) {
+      record(
+        `${dimensions.width}x${dimensions.height}` === recordValue.dimensions,
+        `${label}: dimensions changed for ${publicPath}`,
+      );
+    }
+  }
+
+  await validateProvenance(recordValue, label, publicPath);
+}
+
+for (const asset of manifestAssets) {
   record(asset.publication_permission === "unknown", `${asset.id}: publication permission must remain unknown`);
   record(asset.export_ready === false, `${asset.id}: export_ready must remain false`);
 
   for (const file of asset.files ?? []) {
     const publicPath = file.public_path ?? `site/public/work/${file.path}`;
-    const absolutePublicPath = path.join(root, publicPath);
-    manifestPublicPaths.add(publicPath);
-    record(await exists(absolutePublicPath), `${asset.id}: public file is missing: ${publicPath}`);
-
-    if (file.source_path && !file.source_path.includes(" and ") && !file.source_path.endsWith("/")) {
-      record(
-        await exists(path.join(root, file.source_path)),
-        `${asset.id}: source file is missing: ${file.source_path}`,
-      );
-    }
-
-    if (await exists(absolutePublicPath) && file.sha256) {
-      const buffer = await readFile(absolutePublicPath);
-      const hash = createHash("sha256").update(buffer).digest("hex");
-      record(hash === file.sha256, `${asset.id}: SHA-256 changed for ${publicPath}`);
-
-      const dimensions = pngDimensions(buffer);
-      if (dimensions && file.dimensions) {
-        record(
-          `${dimensions.width}x${dimensions.height}` === file.dimensions,
-          `${asset.id}: dimensions changed for ${publicPath}`,
-        );
-      }
-    }
+    await validatePublicRecord(file, `${asset.id}: ${file.path}`, publicPath);
   }
 
   const media = asset.homepage_media;
   if (media) {
-    for (const field of ["source_path", "public_path", "poster_path"]) {
-      if (!media[field]) continue;
-      record(await exists(path.join(root, media[field])), `${asset.id}: homepage ${field} is missing: ${media[field]}`);
-      if (field !== "source_path") manifestPublicPaths.add(media[field]);
+    await validatePublicRecord(media, `${asset.id}: homepage media`, media.public_path);
+    if (media.poster_path) {
+      await verifyFileHash(
+        media.poster_path,
+        media.poster_sha256,
+        `${asset.id}: homepage poster`,
+      );
     }
   }
 
-  for (const field of ["source_path", "public_path", "poster_path"]) {
-    if (!asset[field]) continue;
-    record(await exists(path.join(root, asset[field])), `${asset.id}: ${field} is missing: ${asset[field]}`);
-    if (field !== "source_path") manifestPublicPaths.add(asset[field]);
+  if (asset.public_path) {
+    await validatePublicRecord(asset, asset.id, asset.public_path);
+    if (asset.poster_path) {
+      await verifyFileHash(asset.poster_path, asset.poster_sha256, `${asset.id}: poster`);
+    }
+  } else if (asset.source_path) {
+    const safeSourceRoot = isSafeRepositoryPath(asset.source_path);
+    record(safeSourceRoot, `${asset.id}: source root must stay inside the repository: ${asset.source_path}`);
+    record(!isArchivePath(asset.source_path), `${asset.id}: source root must not be archived: ${asset.source_path}`);
+    record(!isPublicPath(asset.source_path), `${asset.id}: source root must not use site/public: ${asset.source_path}`);
+    if (safeSourceRoot) {
+      record(await exists(path.join(root, asset.source_path)), `${asset.id}: source root is missing: ${asset.source_path}`);
+    }
+  }
+
+  if (asset.private_originals !== undefined) {
+    record(Array.isArray(asset.private_originals), `${asset.id}: private_originals should be an array`);
+    for (const sourcePath of Array.isArray(asset.private_originals) ? asset.private_originals : []) {
+      const safeSourcePath = isSafeRepositoryPath(sourcePath);
+      record(safeSourcePath, `${asset.id}: private original must stay inside the repository: ${sourcePath}`);
+      record(!isArchivePath(sourcePath), `${asset.id}: private original must not be archived: ${sourcePath}`);
+      record(!isPublicPath(sourcePath), `${asset.id}: private original must not use site/public: ${sourcePath}`);
+      if (safeSourcePath) {
+        record(await exists(path.join(root, sourcePath)), `${asset.id}: private original is missing: ${sourcePath}`);
+      }
+    }
+  }
+
+  if (asset.historical_archive_material !== undefined) {
+    record(
+      Array.isArray(asset.historical_archive_material),
+      `${asset.id}: historical_archive_material should be an array`,
+    );
+  }
+  for (const historicalPath of Array.isArray(asset.historical_archive_material)
+    ? asset.historical_archive_material
+    : []) {
+    const safeHistoricalPath = isSafeRepositoryPath(historicalPath);
+    record(safeHistoricalPath, `${asset.id}: historical material must stay inside the repository: ${historicalPath}`);
+    record(isArchivePath(historicalPath), `${asset.id}: historical material should stay under archive: ${historicalPath}`);
+    if (safeHistoricalPath) {
+      record(await exists(path.join(root, historicalPath)), `${asset.id}: historical archive material is missing: ${historicalPath}`);
+    }
+  }
+
+  if (asset.private_source_archive) {
+    const safePrivateArchive = isSafeRepositoryPath(asset.private_source_archive);
+    record(
+      safePrivateArchive,
+      `${asset.id}: private source archive must stay inside the repository`,
+    );
+    record(
+      !isArchivePath(asset.private_source_archive) && !isPublicPath(asset.private_source_archive),
+      `${asset.id}: private source archive must stay in active private evidence`,
+    );
+    if (safePrivateArchive) {
+      record(
+        await exists(path.join(root, asset.private_source_archive)),
+        `${asset.id}: private source archive is missing: ${asset.private_source_archive}`,
+      );
+    }
   }
 }
 
@@ -349,6 +542,8 @@ const tracked = execFileSync("git", ["ls-files", "-z"], { cwd: root })
   .filter(Boolean);
 
 const generatedPrefixes = [
+  ".agents/",
+  ".codex/",
   "site/.vinext/",
   "site/.wrangler/",
   "site/dist/",
@@ -358,7 +553,9 @@ const generatedPrefixes = [
 
 for (const file of tracked) {
   record(
-    !generatedPrefixes.some((prefix) => file.startsWith(prefix)),
+    file !== ".agents"
+      && file !== ".codex"
+      && !generatedPrefixes.some((prefix) => file.startsWith(prefix)),
     `generated or scratch file is tracked: ${file}`,
   );
 }
@@ -373,7 +570,7 @@ for (const entry of topLevelFiles) {
 }
 
 const trimMarginEntries = [];
-for (const asset of manifest.assets) {
+for (const asset of manifestAssets) {
   for (const file of asset.files ?? []) {
     if (file.trim_margin) trimMarginEntries.push({ assetId: asset.id, file });
   }
@@ -442,5 +639,7 @@ if (failures.length) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log(`Repository check passed: ${markdownFiles.length} Markdown files, ${publicWorkFiles.length} live public assets, six case routes.`);
+  console.log(
+    `Repository check passed: ${markdownFiles.length} Markdown files, ${publicWorkFiles.length} live public assets, ${routeDirectories.length} case routes.`,
+  );
 }

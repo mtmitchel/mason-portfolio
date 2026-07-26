@@ -1,10 +1,10 @@
 # Current portfolio claim review
 
-**Updated:** 2026-07-24
+**Updated:** 2026-07-26
 **Status:** Current claim owner
 
 This file states what the current portfolio may say. The
-[full historical audit](../archive/research/claim-review-full-2026-07-24.md)
+[full historical audit](../archive/research/claim-review-history/claim-review-full-2026-07-24.md)
 is preserved in the archive.
 
 It owns factual and publication limits only. It does not prescribe case-study
@@ -19,7 +19,9 @@ portfolio cannot prove.
 
 Visual evidence proves only what is visible in the selected state. It does not
 by itself prove launch, ownership, causation, research, adoption, or a business
-result.
+result. Every Figma frame, page, component, or mockup retains a margin of error,
+even when it resembles production. `Canonical` means a current organizing
+destination, not final, untouchable, or ultimate truth.
 
 ## Portfolio-wide claims
 
@@ -43,17 +45,58 @@ result.
 - Do not attach that result to one prompt or claim that Mason wrote every
   blocker.
 
-## Simplifying pricing across four products
+## Pricing evolution and Write monetization
 
-- Include observable differences between the Translator plan grid and developer tab, Write’s three buying routes, repeated self-serve bundle content, add-on states, cumulative tier headings, comparison-table row labels, and the Write, Voice, and API card patterns.
-- Describe Write’s buying routes as the bundle tab, standalone Write pricing page, and account-page upgrade route. Describe its visible names as DeepL Write, DeepL Write Pro, and Write Pro.
-- Scope bundle-wide statements to Starter, Advanced, and Ultimate. Treat Enterprise as a separate sales offer wherever it is visible.
-- State that Write and API use cumulative headings. State that Voice uses parallel offers. Do not claim that all three products reject cumulative relationships.
-- Use Before and After labels only for the repetition-to-progression card comparison. Use descriptive labels for the add-on, table, and product states.
-- State Mason’s contribution as pricing writing, naming rules, and content structure. Do not imply sole ownership of product strategy or interaction design.
-- Do not claim that a specific version shipped, improved conversion, caused revenue, became the current architecture, or was later adopted.
-- Do not claim relative maintenance cost, elapsed decision time, or that one source settled an internal decision.
-- Prices, discounts, and usage rates may be described only as visible offer content. They are not outcome metrics.
+- Keep dated product states separate. DeepL Write launched as a free beta on
+  2023-01-17. DeepL's official Write Pro overview stated paid availability on
+  2024-04-24; launch and named bundle reporting followed on 2024-04-25.
+- Use `DeepL Write` for the free/beta product in its historical context,
+  `DeepL Write Pro` for the full paid name, and `Write Pro` only as a contextual
+  short form. Do not present these as three simultaneous products or tiers.
+- Treat `DeepL Pro` as the recovered collective name for paid Translator plans,
+  not one plan. A bundle is not a plan, the free version is not a paid plan,
+  and `subscription` is not a universal synonym for `plan`.
+- Describe a bundle, standalone page, add-on, or account upgrade only in its
+  own dated and sourced context. Do not present them as one simultaneous
+  three-route state. The account-page upgrade route's launch position remains
+  unresolved.
+- Use only the named Translator + Write bundles established by the dated
+  launch or archived pricing source. Do not generalize one locale, channel, or
+  date to every offer or to Enterprise.
+- Treat feedback, rewrite, and variant conversations as workshop or
+  brainstorming evidence by default. They support Mason's user-authored
+  constraints, corrections, selections, and working artifacts; they do not
+  make assistant suggestions Mason-authored copy.
+- State Mason's Write Pro contribution as workshopping launch-related benefit
+  framing, product-page content, explicit limit states, trial prompts, and
+  terminology, with specific user-authored constraints and corrections. Do not
+  imply authorship of generated suggestions, launch ownership, final approval,
+  shipment, adoption, conversion, or measured impact.
+- State Mason's June-July 2024 Translator work as a workshop and working
+  proposal for clearer grid content, concise-versus-detailed information
+  layers, and cumulative headings. A before-and-after comparison is allowed
+  only for that genuine same-offer working sequence and must be labelled as a
+  proposal, not a production change or proof that Mason authored generated
+  wording.
+- Keep the 2024 grid proposal separate from Pricing Page V2 in 2024 Q4-2025 Q1.
+  Pricing Page V2 supports research, messaging analysis, concepts, and
+  test-ready copy only; final rollout and results are not present.
+- The public Translator ladder adopted new names and cumulative headings after
+  2025-06-04 and by 2025-07-21. The web bundle tab became a Write Pro add-on
+  presentation after 2025-10-09 and by 2025-10-29. Do not say Mason's earlier
+  work caused, shipped as, or was adopted in either later public state.
+- State Mason's naming contribution as participation in and workshopping of a
+  terminology system owned by UX Writing and reviewed with Product Marketing.
+  Attribute his direct corrections, not assistant suggestions. Do not claim
+  sole creation, sole ownership, or organization-wide adoption.
+- Voice and API artifacts may establish product or pricing architecture only.
+  No recovered achievement currently supports presenting either as a
+  Mason-owned pricing contribution.
+- Do not claim that a specific version shipped, improved comparison, increased
+  conversion, caused revenue, became the current architecture, or was later
+  adopted.
+- Prices, discounts, limits, and usage rates may be described only as visible
+  historical offer content. They are not outcome metrics.
 
 ## Checkout across four purchase states
 
@@ -102,6 +145,8 @@ result.
 ## Private source owners
 
 - [`deepl-achievement-recovery/artifacts/final-achievements-and-talking-points.md`](deepl-achievement-recovery/artifacts/final-achievements-and-talking-points.md)
+- [`projects/pricing-evolution/pricing-evolution-chronology.md`](projects/pricing-evolution/pricing-evolution-chronology.md)
+- [`projects/pricing-evolution/pricing-evolution-contribution-map.md`](projects/pricing-evolution/pricing-evolution-contribution-map.md)
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md)
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json)

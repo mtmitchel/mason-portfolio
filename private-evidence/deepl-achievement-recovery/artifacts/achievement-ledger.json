@@ -539,6 +539,7 @@
       "outcome": "The work is documented against DM-2112 and multiple experiment-preparation threads; final test results are not present.",
       "metrics": [],
       "confidence": "confirmed",
+      "claim_ceiling": "Supported Pricing Page V2 content preparation through research, messaging analysis, concepts, and test-ready copy. Do not claim final rollout, test results, conversion or revenue impact, causation, or sole ownership.",
       "sources": [
         {
           "title": "Pricing Page Action Items",
@@ -568,6 +569,83 @@
           "sha256": "862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799",
           "evidence_role": "primary_self_report",
           "note": "Describes pricing-copy collaboration as work in progress and not fully rolled out; expected impact is not a result."
+        }
+      ]
+    },
+    {
+      "id": "MON-05",
+      "period": "2024-Q1 to 2024-Q2",
+      "team": "Monetization / Content Design",
+      "initiative": "DeepL Write Pro launch and monetization content",
+      "achievement": "Workshopped launch-related UX and product copy across Write Pro benefit framing, product-page structure, free-to-paid limit states, trial prompts, and enterprise messaging.",
+      "contribution": "Brought working copy and artifacts into iterative review; set criteria for B2B benefit hierarchy, product-led page content, character-limit clarity, and the separate jobs of headline, explanation, and CTA; and directly corrected misleading or unsupported wording.",
+      "outcome": "Contemporaneous workshop records and surviving screenshots establish the exploration, Mason's constraints, and his direct corrections. They do not establish authorship of assistant suggestions or which variants were approved or shipped. DeepL made Write Pro available for purchase in April 2024.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "claim_ceiling": "Workshopped launch-related UX and product content for DeepL Write Pro. Attribute only Mason's user-authored constraints, corrections, selections, and independently supported work; do not attribute assistant suggestions to him or claim launch ownership, final approval, shipment, adoption, conversion, or measured impact.",
+      "sources": [
+        {
+          "title": "Upgrade to DeepL Write.",
+          "date": "2024-02-27",
+          "source_file": "conversations-051.json",
+          "conversation_id": "f3072da5-0bdd-435d-8442-b69fb036a047",
+          "message_id": "aaa2bd2a-ca77-4b2e-a0d7-fda549a32517"
+        },
+        {
+          "title": "Keep Flowing with Write Pro",
+          "date": "2024-03-11",
+          "source_file": "conversations-051.json",
+          "conversation_id": "e5b7dc87-5151-49dd-8e12-1c430bdd1361",
+          "message_id": "aaa2474e-8c04-417b-a071-48ac003b31d0"
+        },
+        {
+          "title": "DeepL Write Pro Copy",
+          "date": "2024-06-06",
+          "source_file": "conversations-049.json",
+          "conversation_id": "c01a612b-99c6-4243-a38f-fc6af5082055",
+          "message_id": "e34d8020-e978-4efb-8311-b6e5b04743b9"
+        }
+      ]
+    },
+    {
+      "id": "MON-06",
+      "period": "2024-06 to 2024-07",
+      "team": "Monetization / Content Design",
+      "initiative": "Translator pricing-grid scannability and cumulative structure",
+      "achievement": "Workshopped a clearer proposed content structure for the Translator pricing grid and its relationship to the detailed comparison table.",
+      "contribution": "Set goals for shorter, more consistent benefit wording; identified editable files and shared glossaries as distinct benefits; retained relevant team-administration information; distinguished concise grid content from detailed comparison content; and explicitly requested cumulative headings in a connected revision.",
+      "outcome": "Direct user-authored workshop messages and four hash-verified working images establish a same-offer exploration and Mason's constraints and corrections. They do not establish authorship of assistant suggestions, production use, later adoption, usability improvement, or commercial impact.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "claim_ceiling": "Workshopped a clearer proposed pricing-grid content structure and cumulative working sequence. Attribute only Mason's user-authored constraints, corrections, and selections; do not call assistant suggestions his authored copy, call the images a production before/after, or claim shipment, later adoption, causation, faster comparison, conversion, or revenue impact.",
+      "sources": [
+        {
+          "title": "Enhance Pricing Grid Readability",
+          "date": "2024-06-27",
+          "source_file": "conversations-049.json",
+          "conversation_id": "cd9f26bb-b7ba-49fe-a1d7-29ba7e731dcf",
+          "message_id": "aaa26e35-ae12-4c8b-b632-1bc67083cee9"
+        },
+        {
+          "title": "Enhance Pricing Grid Readability",
+          "date": "2024-06-27",
+          "source_file": "conversations-049.json",
+          "conversation_id": "cd9f26bb-b7ba-49fe-a1d7-29ba7e731dcf",
+          "message_id": "aaa27312-f95b-4ece-a359-8a2c7d0c85e0"
+        },
+        {
+          "title": "DeepL Pricing Grid Update",
+          "date": "2024-07-01",
+          "source_file": "conversations-046.json",
+          "conversation_id": "98aeeb7c-255c-43cd-b668-b40ee4befe2a",
+          "message_id": "aaa27d12-e2b9-4963-8d16-7ab5918ea6ea"
+        },
+        {
+          "title": "DeepL Pricing Grid Update",
+          "date": "2024-07-01",
+          "source_file": "conversations-046.json",
+          "conversation_id": "98aeeb7c-255c-43cd-b668-b40ee4befe2a",
+          "message_id": "aaa20865-6d5f-4d53-8f0e-99e6dd7b7ee3"
         }
       ]
     },
@@ -691,7 +769,22 @@
       "outcome": "Produced structured reference material used in tooling prototypes; organization-wide adoption is not proven.",
       "metrics": [],
       "confidence": "confirmed",
+      "claim_ceiling": "Created structured guidance and explored or workshopped repeatable AI-assisted review approaches. Do not attribute assistant-generated instructions to Mason or claim production deployment, organization-wide adoption, automated quality gains, conversion impact, or measured time savings.",
       "sources": [
+        {
+          "title": "Custom GPT Copy Improvement",
+          "date": "2024-10-10",
+          "source_file": "conversations-008.json",
+          "conversation_id": "6707da57-a7f8-8006-ba8f-e1c7e85d2402",
+          "message_id": "aaa28d1c-ffbf-4a16-b690-9166e21c069a"
+        },
+        {
+          "title": "Custom GPT Copy Improvement",
+          "date": "2024-10-10",
+          "source_file": "conversations-008.json",
+          "conversation_id": "6707da57-a7f8-8006-ba8f-e1c7e85d2402",
+          "message_id": "aaa2a0b8-523a-4f51-b539-073810c43cef"
+        },
         {
           "title": "Content Style Guide Review",
           "date": "2025-01-01",
@@ -777,6 +870,48 @@
           "date": "2025-03-10",
           "source_file": "conversations-018.json",
           "conversation_id": "67ce9df7-24f4-8006-baa8-946383375134"
+        }
+      ]
+    },
+    {
+      "id": "SYS-04",
+      "period": "2024-Q4",
+      "team": "Content Design / UX Writing",
+      "initiative": "Product and plan naming guidance",
+      "achievement": "Contributed to and workshopped naming guidance across DeepL products, paid plans, bundles, shortened forms, and space-constrained UI contexts.",
+      "contribution": "Worked on naming-principles material with coworkers and made direct corrections to distinctions among product names, plan names, free-version language, bundles, subscriptions, collective DeepL Pro usage, and contextual Write Pro shorthand.",
+      "outcome": "Direct project messages establish Mason's participation, constraints, and corrections, not authorship of assistant suggestions or every draft. The embedded paid-plan source says the terminology record was owned by UX Writing and reviewed with Product Marketing; organization-wide adoption is not established.",
+      "metrics": [],
+      "confidence": "confirmed",
+      "claim_ceiling": "Contributed to and workshopped product and plan naming guidance. Attribute only Mason's direct corrections and independently supported contribution; do not attribute assistant suggestions to him or claim sole creation, sole ownership, universal adoption, or that every recovered draft became the final standard.",
+      "sources": [
+        {
+          "title": "Naming Principles for DeepL",
+          "date": "2024-10-31",
+          "source_file": "conversations-009.json",
+          "conversation_id": "672366fc-fd0c-8006-855a-fdad41ebfb7f",
+          "message_id": "aaa21a53-4a99-47d2-a9e6-83a768e4e726"
+        },
+        {
+          "title": "Naming Principles for DeepL",
+          "date": "2024-10-31",
+          "source_file": "conversations-009.json",
+          "conversation_id": "672366fc-fd0c-8006-855a-fdad41ebfb7f",
+          "message_id": "aaa248b6-1655-4be9-92d8-70561ac5446d"
+        },
+        {
+          "title": "Naming Product Plans Guide",
+          "date": "2024-11-15",
+          "source_file": "conversations-010.json",
+          "conversation_id": "6737306d-72f4-8006-84bf-0ac4dc034a8e",
+          "message_id": "aaa265b5-e221-4d37-ab9f-73a1d46fe67c"
+        },
+        {
+          "title": "Naming Product Plans Guide",
+          "date": "2024-11-15",
+          "source_file": "conversations-010.json",
+          "conversation_id": "6737306d-72f4-8006-84bf-0ac4dc034a8e",
+          "message_id": "aaa270a9-aaa8-49c0-9e51-327b5828830f"
         }
       ]
     }

@@ -1,6 +1,7 @@
 # DeepL performance review evidence master
 
-**Review date:** 2026-07-21  
+**Review date:** 2026-07-26
+
 **Status:** Private canonical synthesis of eight reviewed source files
 **Public-use rule:** This file is evidence working material. Do not publish it or copy its private source references into the portfolio.
 
@@ -37,14 +38,16 @@ A self-reflection proves that Mason recorded a contribution or result in the per
 | --- | --- | --- | --- | --- |
 | `source-documents/performance-review/1st half bob.pdf` | 8-page HiBob first-half 2024 self-reflection; exported 2025-01-24 | Earliest primary personal artifact in this folder | Retain as primary self-report and page-level corroboration | `b5d7ea29d6c3a340fd0df89b2347548cfc798f6bbcdad5a7120e717132d05c98` |
 | `source-documents/performance-review/Bob.pdf` | 7-page HiBob full-year 2024 self-reflection; exported 2025-01-24 | Later primary personal artifact; repeats four first-half achievements and adds pricing and plugin material | Retain as the main full-year self-report; submission and manager-validation status remain unproved | `862eadb2d095fc7e83c2e36b530c5e2c0bbe92bb15c9fbd60aa4227654c6b799` |
-| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection.md` | Markdown draft | Early AI-expanded draft; duplicates the same four achievement families and proposed 2025 goals | Superseded; retain only as provenance. Reject leadership wording and unsupported outcomes | `7a4c46cc39af8810bd3d9e4a4d8f955e5e8594bd5b624b11eb51dabb62a7d618` |
-| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection (1).md` | Markdown draft | Near-duplicate of `2024-reflection.md`; only the proposed 2025 goal section materially differs | Superseded; no independent achievement evidence | `ad7473b5e5304ba2f2aacdd001bcc682d9a03c0d24112a097b5294106d1817eb` |
-| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection (2).md` | Markdown draft | Partially corrects contribution wording for Enterprise and desktop work but retains other overclaims | Superseded; useful only as an edit-history marker | `305e46903b46c898195793cb172b042ccf3aa8944584e8cf3c3718e1a7cd4083` |
-| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection (3).md` | Markdown draft | Closest derivative summary of the HiBob achievement material; uses more accurate contribution verbs | Superseded by the original PDFs; not an independent source | `97737600bda8a2fe0eb936cd613f383ba7df001e9fed820c6fa9b06f053d37a3` |
+| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection-ai-expanded-leadership-draft.md` | Markdown draft | Early AI-expanded draft; duplicates the same four achievement families and proposed 2025 goals | Superseded; retain only as provenance. Reject leadership wording and unsupported outcomes | `7a4c46cc39af8810bd3d9e4a4d8f955e5e8594bd5b624b11eb51dabb62a7d618` |
+| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection-ai-expanded-goals-variant.md` | Markdown draft | Near-duplicate of the leadership draft; only the proposed 2025 goal section materially differs | Superseded; no independent achievement evidence | `ad7473b5e5304ba2f2aacdd001bcc682d9a03c0d24112a097b5294106d1817eb` |
+| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection-contribution-wording-partial-repair.md` | Markdown draft | Partially corrects contribution wording for Enterprise and desktop work but retains other overclaims | Superseded; useful only as an edit-history marker | `305e46903b46c898195793cb172b042ccf3aa8944584e8cf3c3718e1a7cd4083` |
+| `../archive/research/performance-review-supplemental/derivative-drafts/2024-reflection-contribution-wording-closest-summary.md` | Markdown draft | Closest derivative summary of the HiBob achievement material; uses more accurate contribution verbs | Superseded by the original PDFs; not an independent source | `97737600bda8a2fe0eb936cd613f383ba7df001e9fed820c6fa9b06f053d37a3` |
 | `../archive/research/performance-review-supplemental/guidance/DKHGoal checkins and individual goals at DeepL240125063929.pdf` | 11-page DeepL Knowledge Hub guide; exported 2025-01-24 | General OKR and goal-check-in guidance | Context only. It supplies no Mason-specific contribution or outcome evidence | `8c31d1f6cb5ecc42c6a55836f5a77e4e729a8b7d6abb9fe2aa82dcc7544ae683` |
 | `../archive/research/performance-review-supplemental/guidance/DKHPerformance Reflections for Individuals240125061015.pdf` | 11-page DeepL Knowledge Hub guide; exported 2025-01-24 | General guidance for the 2025 reflection cycle | Context only. Its useful rule is to separate individual contribution (the what) from behavior (the how) and team outcomes | `009ad4920aadda74de4b4445d9b86301b5762007fc87dc3778df3b2944cfc6ca` |
 
 No original source was deleted or rewritten. The Markdown variants remain useful for provenance but should not be mined as separate achievements.
+Their explicit version-family index is
+[`archive/research/performance-review-supplemental/README.md`](../archive/research/performance-review-supplemental/README.md).
 
 ## Deduplicated achievement evidence
 
@@ -141,4 +144,6 @@ The full-year reflection contains private development and employment-process mat
 - The recovered HiBob PDFs close the gap for an original self-reflection artifact.
 - They do not establish that the reflection was submitted, accepted by a manager, or used in calibration.
 - They do not recover the missing analytics dashboards, experiment canvases/readouts, exact launch records, or publication rights.
-- The existing 22-record achievement inventory remains intact. The new evidence strengthens provenance for seven records and clarifies several claim ceilings without creating a new achievement family.
+- The current 25-record achievement inventory remains intact. The performance
+  review family strengthens provenance for seven records and clarifies several
+  claim ceilings without creating a new achievement family.

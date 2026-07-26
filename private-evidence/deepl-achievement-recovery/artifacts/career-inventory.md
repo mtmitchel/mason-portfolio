@@ -39,6 +39,13 @@ campaign, platform, or experiment-wave scope.
 
 ### Monetization and experimentation — 2024 to early 2025
 
+- Workshopped launch-related UX and product content for Write Pro, setting
+  constraints and directly correcting benefit framing, limit states, trial
+  prompts, and enterprise messaging without treating generated suggestions as
+  Mason-authored copy.
+- Workshopped a connected June-July 2024 pricing-grid sequence around
+  concise-versus-detailed information layers and cumulative headings; the
+  working sequence does not establish authorship of generated wording.
 - Contributed message and copy variants for Pro Driver experiment DM-1523.
 - Supported content refinement for checkout-flow experiment DM-1418.
 - Helped develop messaging for anonymous-user soft-block experiment DM-1417.
@@ -57,6 +64,8 @@ campaign, platform, or experiment-wave scope.
 ### Content systems and self-initiated tooling — late 2024 to March 2025
 
 - Consolidated content style, product, terminology, and naming guidance into structured, machine-readable formats.
+- Contributed direct corrections while workshopping product and plan naming
+  guidance across Translator, Write, API, Voice, bundles, and shortened forms.
 - Prototyped and documented a Figma plugin for in-context copy review, research, and standards guidance.
 - Explored repeatable AI-assisted review using DeepL's internal OpenAI proxy and structured content guidance.
 - Built Google Sheets filtering and categorization for roughly 9,000 Phrase keys to surface dynamic product content.
@@ -64,13 +73,19 @@ campaign, platform, or experiment-wave scope.
 
 ## Evidence summary
 
-- **22 achievement records** are currently in the structured ledger.
-- **14** are supported by direct contemporaneous project evidence.
+- **25 achievement records** are currently in the structured ledger.
+- **17** are supported by direct contemporaneous project evidence.
 - **2** are strongly supported by both project material and review evidence.
 - **4** have promising numeric outcomes but rely on uploaded experiment or analytics sources missing from the export.
 - **2** are useful leads whose completion or adoption needs another source.
 - **6 claims** are explicitly quarantined because of contradiction, attribution risk, or missing proof.
 
-The 2026-07-21 supplemental review recovered original first-half and full-year HiBob self-reflection PDFs. They add primary self-report provenance to seven existing records but do not change the 22-record count or independently verify analytics, experiment results, manager approval, or submission status. Mason's later confirmation supplies the current career-use direction for the BI figures without turning the PDFs themselves into analytics proof.
+The 2026-07-21 supplemental review recovered original first-half and full-year
+HiBob self-reflection PDFs. They add primary self-report provenance to seven
+existing records but do not independently verify analytics, experiment results,
+manager approval, or submission status. The 2026-07-26 direct-source pricing
+recovery added `MON-05`, `MON-06`, and `SYS-04`; none adds a measured outcome.
+Mason's later confirmation supplies the current career-use direction for the BI
+figures without turning the PDFs themselves into analytics proof.
 
 The detailed source references, confidence decisions, and excluded claims are in `achievement-ledger.json`. The complete machine extraction is retained in `source-messages.json`, `metric-candidates.json`, and `role-corrections.json`.

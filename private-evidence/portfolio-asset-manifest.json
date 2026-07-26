@@ -1,10 +1,16 @@
 {
   "version": "2.0",
+  "provenance_statuses": {
+    "verified": "An independent source file exists outside the public site and archive, and source_sha256 verifies it.",
+    "derived": "The public asset was derived from another manifest-listed public asset whose hash and relationship are recorded.",
+    "missing": "No independent source file is retained. The public file is not treated as its own provenance."
+  },
+  "duplicate_classification": "private-evidence/asset-duplicate-classification.md",
   "assets": [
     {
       "id": "DEEPL-UPGRADE-PROMPTS",
       "project_id": "DEEPL-UPGRADE-PROMPTS",
-      "source_path": "site/public/work/upgrade-prompts",
+      "source_path": "private-evidence/source-exports/figma/upgrade-prompts",
       "source_type": "design",
       "editability": "flattened",
       "publication_permission": "unknown",
@@ -19,36 +25,48 @@
           "path": "usage-limit.png",
           "dimensions": "1092x1500",
           "public_path": "site/public/work/upgrade-prompts/usage-limit.png",
-          "source_path": "site/public/work/upgrade-prompts/usage-limit.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "sha256": "0d50e9c215a3cceb01ac0902068c573396494159dc8ce9aaa27cfa969c71b371"
         },
         {
           "path": "formality.png",
           "dimensions": "1092x1150",
           "public_path": "site/public/work/upgrade-prompts/formality.png",
-          "source_path": "site/public/work/upgrade-prompts/formality.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "sha256": "e3f69b7bec0fc00ec9e0996d62a18d01ca44d6ac48d56370048ae4eeef1923d2"
         },
         {
           "path": "glossaries.png",
           "dimensions": "1092x1388",
           "public_path": "site/public/work/upgrade-prompts/glossaries.png",
-          "source_path": "site/public/work/upgrade-prompts/glossaries.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "sha256": "c709c0ed7758d06093a40464df7a3950e173dbd3286f1078bcd28e963c6c45bb"
         },
         {
           "path": "document-size.png",
           "dimensions": "1092x1204",
           "public_path": "site/public/work/upgrade-prompts/document-size.png",
-          "source_path": "site/public/work/upgrade-prompts/document-size.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "sha256": "3b5e1a6eb9af6ad32d33ccba548f3426116d52ff496bb69a2cd1f3e3c7e65878"
         },
         {
           "path": "remaining-documents.png",
           "dimensions": "546x626",
           "public_path": "site/public/work/upgrade-prompts/remaining-documents.png",
-          "source_path": "site/public/work/upgrade-prompts/remaining-documents.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "sha256": "f464d2355b76d65e5e5daa9c57fde2d90d3c34a6eb4081dca1370a60f8f181d4"
         },
         {
           "path": "upgrade-prompts/write-free-account-detail.png",
           "public_path": "site/public/work/upgrade-prompts/write-free-account-detail.png",
-          "source_path": "archive/retired/public-assets/2026-07-24/work/hard-blockers/write-pro-illustrated-free.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/upgrade-prompts/write-pro-illustrated-free.png",
+          "source_sha256": "8c2f083a8fbd3d22b7bf112ea35c400dbfcedeecc4ed2fc281808a11da65f5aa",
           "crop": "1520x800+64+630",
           "dimensions": "1520x800",
           "caption": "Offer a 30-day trial and keep the return-later route available.",
@@ -58,7 +76,9 @@
         {
           "path": "upgrade-prompts/write-translator-pro-account-detail.png",
           "public_path": "site/public/work/upgrade-prompts/write-translator-pro-account-detail.png",
-          "source_path": "archive/retired/public-assets/2026-07-24/work/hard-blockers/write-pro-illustrated-translator-pro.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/upgrade-prompts/write-pro-illustrated-translator-pro.png",
+          "source_sha256": "9d79ec0191f4e3cea498102aa7ecad22aa913012048f67f1d253992ac39b8585",
           "crop": "1520x800+64+630",
           "dimensions": "1520x800",
           "caption": "Replace the trial with an upgrade action for an existing Translator Pro customer.",
@@ -68,12 +88,12 @@
       ],
       "homepage_media": {
         "source_type": "DeepL marketing illustration",
-        "source_notes": "Selected during the 2026-07-24 homepage review. The original download URL was not retained; the tracked 1728x1728 working file is the provenance source.",
+        "source_status": "missing",
+        "source_notes": "Selected during the 2026-07-24 homepage review. The original download URL and an independent source file were not retained; the tracked public file is the only surviving copy and is not independent provenance.",
         "crop_notes": "Use the complete square illustration as a homepage cover. The case page retains the product-interface evidence.",
         "public_path": "site/public/work/home-covers/deepl-upgrade-to-pro.png",
         "dimensions": "1728x1728",
-        "sha256": "6ba05a23bd8b43effe3b09e331faa0170c95e1d641e4a939f89e9d1670c848e6",
-        "source_path": "site/public/work/home-covers/deepl-upgrade-to-pro.png"
+        "sha256": "6ba05a23bd8b43effe3b09e331faa0170c95e1d641e4a939f89e9d1670c848e6"
       }
     },
     {
@@ -92,7 +112,9 @@
       "files": [
         {
           "path": "legacy-two-tab-grid.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
+          "source_sha256": "db460df886993402ef0440a7322ed0b1323bae3343dd5ee94817fdc2526a81a1",
           "crop_notes": "-crop 1650x1025+140+25 +repage -trim +repage — Translate Pro and Translate API two-tab pricing grid with Free, Starter, Advanced, Ultimate and Enterprise cards",
           "crop_scope": "plan-grid",
           "dimensions": "1602x900",
@@ -109,7 +131,9 @@
         },
         {
           "path": "bundle-era-selector-in-context.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
+          "source_sha256": "6c3e5efba8f9bfa0eb1a649341b5ed638fc09900c681566e7ce05e6fe22bbbe6",
           "crop_notes": "-crop 3280x1260+280+40 +repage -trim +repage — Find your perfect plan heading, three buying-route tabs, and the top of the bundle card grid the selector controls",
           "crop_scope": "selector-in-context",
           "dimensions": "3204x1208",
@@ -126,7 +150,9 @@
         },
         {
           "path": "bundle-era-write-grid.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
+          "source_sha256": "27aa96e69d50848228d328382d3cd9de78052e3044f9b30921d7305f4fc861c8",
           "crop_notes": "-trim +repage, then -crop 2482x705+0+0 +repage — account-page add-on banner plus the names, prices, and actions for standalone Write Free, Write Pro, and Enterprise",
           "crop_scope": "plan-grid",
           "dimensions": "2482x705",
@@ -143,7 +169,9 @@
         },
         {
           "path": "addon-on-cards.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
+          "source_sha256": "879fae09f6b0a7b94638b02e072afff3079dd8bc148a5e8066f4cf576927578a",
           "crop_notes": "-crop 2832x2224+96+836 +repage -trim +repage, then -crop 2772x915+0+0 +repage — add-on control plus combined names, prices, discounts, actions, and audience rows",
           "crop_scope": "addon-state",
           "dimensions": "2772x915",
@@ -160,7 +188,9 @@
         },
         {
           "path": "addon-off-cards.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
+          "source_sha256": "20d8b250c78715afaaaab1b5b3f4075b29d720eecb1aa0718217ced6664204c2",
           "crop_notes": "-crop 2832x1707+96+838 +repage -trim +repage, then -crop 2772x915+0+0 +repage — add-on control plus Translator names, prices, actions, and audience rows",
           "crop_scope": "addon-state",
           "dimensions": "2772x915",
@@ -177,7 +207,9 @@
         },
         {
           "path": "cards-bundle-repeated.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
+          "source_sha256": "3b3773e66cd6d4dfd3a545c30b9ae98032e1d2c207c3edbebe5793fb4fd35160",
           "crop_notes": "-crop 2048x1953+72+145 +repage — Starter, Advanced, and Ultimate combined cards with their full Translator groups and repeated Write Pro groups",
           "crop_scope": "plan-card-row",
           "dimensions": "2048x1953",
@@ -194,7 +226,9 @@
         },
         {
           "path": "cards-cumulative-tiers.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
+          "source_sha256": "2de075cc95acfd49f0bf47a444a2a2203714d1e5886bff61673fedda494c7aa9",
           "crop_notes": "-crop 2976x1388+24+900 +repage -trim +repage, then -crop 2208x1350+0+0 +repage — Starter, Advanced, and Ultimate Translator cards with cumulative headings",
           "crop_scope": "plan-card-row",
           "dimensions": "2208x1350",
@@ -211,7 +245,9 @@
         },
         {
           "path": "table-values-repeat-label.png",
-          "source_path": "archive/retired/figma-exports/pricing-evolution-superseded-2026-07/rev6-round3-pricing-translator-transition-clean.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/historical/rev6-round3-pricing-translator-transition-clean.png",
+          "source_sha256": "77df029a7885d429857972e1df26c330a21b75b94ee0e9071818602fd859e791",
           "crop_notes": "-crop 2864x1335+80+8305 +repage -trim +repage — comparison-table File translation and Glossary sections where values repeat the noun or qualifier from the row label The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
           "crop_scope": "table-section",
           "dimensions": "2768x1167",
@@ -228,7 +264,9 @@
         },
         {
           "path": "table-labels-own-qualifier.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png",
+          "source_sha256": "51baebbd05e88347fd229133d163445793639c97d9ae614d95886d127c48b2c4",
           "crop_notes": "-crop 2864x1335+80+8305 +repage -trim +repage — the same comparison-table sections with qualifiers in the row labels and bare numeric values The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
           "crop_scope": "table-section",
           "dimensions": "2768x1167",
@@ -245,7 +283,9 @@
         },
         {
           "path": "product-write-cards.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
+          "source_sha256": "dd0e4492250f8738a1ee121e3aa8a137ca4444c1b9b2960b3ce072b3a396fe46",
           "crop_notes": "-crop 2320x1230+355+880 +repage -trim +repage — Write Free, Write Pro and DeepL Write for Business card row cropped to the cards themselves The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
           "crop_scope": "product-card-row",
           "dimensions": "2244x1166",
@@ -262,7 +302,9 @@
         },
         {
           "path": "product-voice-cards.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
+          "source_sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9",
           "crop_notes": "-crop 1790x1840+620+720 +repage -trim +repage, then -crop 1700x1358+0+422 +repage — Voice for Meetings and Voice for Conversations below the clipped illustration area",
           "crop_scope": "product-card-row",
           "dimensions": "1700x1358",
@@ -279,7 +321,9 @@
         },
         {
           "path": "product-api-cards.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
+          "source_sha256": "d68405c08e79136a5979308cab6f75e516fbff3c190cbf3f7d48b9a2a90d3dc9",
           "crop_notes": "-crop 2320x1380+355+1305 +repage -trim +repage — API Free, API Pro and API for Business card row cropped to the cards themselves",
           "crop_scope": "product-card-row",
           "dimensions": "2244x1312",
@@ -296,10 +340,7 @@
         }
       ],
       "private_originals": [
-        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-limits-in-sentences.png",
-        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-repeated-write-block.png",
-        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-translator-grid.png",
-        "archive/retired/figma-exports/pricing-evolution-superseded-2026-07/rev6-round3-pricing-translator-transition-clean.png",
+        "private-evidence/source-exports/figma/pricing-evolution/historical/rev6-round3-pricing-translator-transition-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-era-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
@@ -315,9 +356,16 @@
         "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
         "private-evidence/source-exports/web-archive/deepl-pricing/pro-page-2023-03-11.png"
       ],
+      "historical_archive_material": [
+        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-limits-in-sentences.png",
+        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-repeated-write-block.png",
+        "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-translator-grid.png"
+      ],
       "private_source_archive": "private-evidence/source-exports/figma/write-pro-launch/feature-awareness-security-source.zip",
       "homepage_media": {
+        "source_status": "verified",
         "source_path": "private-evidence/source-media/homepage-loops/pricing-language-cubes-source.mp4",
+        "source_sha256": "bc1dc7ae5c08254db7667d51118c41befc849a22312d75a4a564a5a5ba9e2618",
         "source_type": "user-provided AI-generated animation",
         "crop_notes": "Use the centered 588x588 square crop at x=346 and y=66, scaled to 1280x1280 with light sharpening. This removes the source's baked-in white frame so the blue field meets the card edge cleanly. The audio track is removed. The motion plays forward and then reverses so the final frame flows back into the first without a reset.",
         "public_path": "site/public/work/home-covers/pricing-language-cubes-loop.mp4",
@@ -344,7 +392,9 @@
         {
           "path": "account-team-security/account-security-login-detail.png",
           "public_path": "site/public/work/account-team-security/account-security-login-detail.png",
-          "source_path": "archive/retired/public-assets/2026-07-22/work/multi-factor-authentication/mfa-recovery-01-entry.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/mfa/mfa-recovery-01-entry.png",
+          "source_sha256": "cf3f63266085d3f8d0fc6e687f560d71d93c96ac7b144ce7839da911d8bb9c17",
           "crop": "1080x1250+900+420",
           "dimensions": "1080x1250",
           "caption": "The prompt asks for a six-digit code while keeping recovery code and recovery email routes visible.",
@@ -354,7 +404,9 @@
         {
           "path": "account-team-security/account-security-authentication-error-detail.png",
           "public_path": "site/public/work/account-team-security/account-security-authentication-error-detail.png",
-          "source_path": "archive/retired/public-assets/2026-07-22/work/multi-factor-authentication/mfa-recovery-02-authentication-error.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/mfa/mfa-recovery-02-authentication-error.png",
+          "source_sha256": "880e9c685c46b0d03ecf0b08096bd1ebacebffb9d67107ba486c15854e976dd0",
           "crop": "1080x1250+900+420",
           "dimensions": "1080x1250",
           "caption": "The error names the incorrect code, keeps retry available, and offers recovery email or administrator support.",
@@ -366,19 +418,23 @@
           "dimensions": "1176x720",
           "sha256": "d6ad4ffbf551cb626ae128e83fe4907b9bc30d9e847f25a1748ec280eac4a822",
           "public_path": "site/public/work/account-team-security/account-security-reset-required.png",
-          "source_path": "site/public/work/account-team-security/account-security-reset-required.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "account-team-security/account-security-protection-restored.png",
           "dimensions": "2360x734",
           "sha256": "b03d2d11379f3bd89b9914320d50000d05497b166c06eaaf185546e665240589",
           "public_path": "site/public/work/account-team-security/account-security-protection-restored.png",
-          "source_path": "site/public/work/account-team-security/account-security-protection-restored.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "account-team-security/bulk-delete-confirmation-detail.png",
           "public_path": "site/public/work/account-team-security/bulk-delete-confirmation-detail.png",
-          "source_path": "archive/retired/public-assets/2026-07-22/work/bulk-administration/complete-flow/bulk-delete-05-confirmation.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/team-administration/bulk-deletion/bulk-delete-05-confirmation.png",
+          "source_sha256": "abf7848e4b7f9fabd3496b1b5294e14d0a5f2c45aa7da5ea3b8c608b8b7e71e8",
           "crop": "2530x1480+170+560",
           "dimensions": "2530x1480",
           "caption": "The confirmation connects the selected users, the destructive action and the loss of access to any DeepL subscriptions.",
@@ -390,12 +446,18 @@
           "dimensions": "2600x500",
           "sha256": "4ce8ff6e44423d167c5089a843497620f31a9a8e14dcc1c80d32de84d2617ed1",
           "public_path": "site/public/work/account-team-security/bulk-delete-06-result-detail.png",
-          "source_path": "site/public/work/account-team-security/bulk-delete-06-result-detail.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         }
       ],
-      "private_originals": "archive/retired/public-assets/2026-07-22/work/multi-factor-authentication/ and archive/retired/public-assets/2026-07-22/work/bulk-administration/",
+      "historical_archive_material": [
+        "archive/retired/public-assets/2026-07-22/work/multi-factor-authentication/",
+        "archive/retired/public-assets/2026-07-22/work/bulk-administration/"
+      ],
       "homepage_media": {
+        "source_status": "verified",
         "source_path": "private-evidence/source-media/homepage-loops/account-security-cards-source.mp4",
+        "source_sha256": "67fce46aa05932031fa4add951e9ca8448e2819fdf6a5d29bca973423b0afd4f",
         "source_type": "user-provided AI-generated animation",
         "crop_notes": "Use the centered 560x560 square crop at source position x336 y88, scaled to 1280x1280 with light sharpening. The tighter crop removes the unrelated horizontal source line and centers the complete lock-and-cards shape. The audio track is removed. The motion plays forward and then reverses so the final frame flows back into the first without a reset.",
         "public_path": "site/public/work/home-covers/account-security-cards-loop.mp4",
@@ -424,33 +486,39 @@
           "dimensions": "3024x1800",
           "sha256": "c14505a4e602089cd1a6fb7813f210ad75068f328a8e4e641ed55737907e98cf",
           "public_path": "site/public/work/checkout/start-my-free-trial.png",
-          "source_path": "site/public/work/checkout/start-my-free-trial.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "bundle-checkout.png",
           "dimensions": "3024x2864",
           "sha256": "37c79d9f65411ea1601fa54f3ff01f5f063642013006af82f8ae19f21da2e751",
           "public_path": "site/public/work/checkout/bundle-checkout.png",
-          "source_path": "site/public/work/checkout/bundle-checkout.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "team-license-checkout.png",
           "dimensions": "3024x2864",
           "sha256": "4a7b8812d96329817b166896026c16aff1f5e4dcd2d3921cf386ea17345886de",
           "public_path": "site/public/work/checkout/team-license-checkout.png",
-          "source_path": "site/public/work/checkout/team-license-checkout.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "no-trial-ultimate-checkout.png",
           "dimensions": "3024x2738",
           "sha256": "387b33b914237dfab4fa85c941803fef4b7dafff104ca5089c40d274d2fd9f66",
           "public_path": "site/public/work/checkout/no-trial-ultimate-checkout.png",
-          "source_path": "site/public/work/checkout/no-trial-ultimate-checkout.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "checkout/trial-sign-up-detail.png",
           "public_path": "site/public/work/checkout/trial-sign-up-detail.png",
+          "source_status": "derived",
           "source_path": "site/public/work/checkout/start-my-free-trial.png",
+          "source_sha256": "c14505a4e602089cd1a6fb7813f210ad75068f328a8e4e641ed55737907e98cf",
           "crop": "1200x1220+240+270",
           "dimensions": "1200x1220",
           "caption": "Repeat the selected 30-day trial in the page heading while keeping account creation as the button action.",
@@ -460,7 +528,9 @@
         {
           "path": "checkout/bundle-checkout-detail.png",
           "public_path": "site/public/work/checkout/bundle-checkout-detail.png",
+          "source_status": "derived",
           "source_path": "site/public/work/checkout/bundle-checkout.png",
+          "source_sha256": "37c79d9f65411ea1601fa54f3ff01f5f063642013006af82f8ae19f21da2e751",
           "crop": "2500x1500+300+140",
           "dimensions": "2500x1500",
           "caption": "Keep both products and one user visible beside €0 due today, the later charge and Begin subscription.",
@@ -470,7 +540,9 @@
         {
           "path": "checkout/team-purchase-detail.png",
           "public_path": "site/public/work/checkout/team-purchase-detail.png",
+          "source_status": "derived",
           "source_path": "site/public/work/checkout/team-license-checkout.png",
+          "source_sha256": "4a7b8812d96329817b166896026c16aff1f5e4dcd2d3921cf386ea17345886de",
           "crop": "2500x1500+300+140",
           "dimensions": "2500x1500",
           "caption": "Repeat 20 users in the selector and order summary, then update price, savings and allowances to match.",
@@ -480,7 +552,9 @@
         {
           "path": "checkout/no-trial-checkout-detail.png",
           "public_path": "site/public/work/checkout/no-trial-checkout-detail.png",
+          "source_status": "derived",
           "source_path": "site/public/work/checkout/no-trial-ultimate-checkout.png",
+          "source_sha256": "387b33b914237dfab4fa85c941803fef4b7dafff104ca5089c40d274d2fd9f66",
           "crop": "2500x1500+300+140",
           "dimensions": "2500x1500",
           "caption": "Remove the trial promise, show the amount due today and add the immediate-start acknowledgement before purchase.",
@@ -489,7 +563,9 @@
         }
       ],
       "homepage_media": {
+        "source_status": "verified",
         "source_path": "private-evidence/source-exports/public-product-pages/illustrations/deepl-retail-ecommerce.svg",
+        "source_sha256": "12b113801ffe48008b05b81e8b0acd1fbe989f13b8d12bb1b083259fcba6cd4c",
         "source_type": "DeepL marketing illustration",
         "crop_notes": "Use the complete square illustration as a homepage cover. The case page retains the checkout-interface evidence.",
         "public_path": "site/public/work/home-covers/deepl-retail-ecommerce.svg",
@@ -516,7 +592,9 @@
           "dimensions": "978x1369",
           "sha256": "d261736f273ecb4875baa90ad716e46e8a13fd142f337cbe6f4374039bf64c61",
           "public_path": "site/public/work/report-campaign/report-cover.png",
+          "source_status": "verified",
           "source_path": "private-evidence/source-exports/publications/localization-report/report-cover.png",
+          "source_sha256": "d261736f273ecb4875baa90ad716e46e8a13fd142f337cbe6f4374039bf64c61",
           "crop": "none; full cover",
           "caption": "The complete report cover frames translation and localization as a business question for marketing leaders.",
           "text_alternative": "Full cover of DeepL’s state of translation and localization report for 2023 and 2024."
@@ -525,19 +603,24 @@
           "path": "report-campaign/key-findings.png",
           "dimensions": "1488x2105",
           "public_path": "site/public/work/report-campaign/key-findings.png",
-          "source_path": "site/public/work/report-campaign/key-findings.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy.",
+          "sha256": "e00b22dd7db2abfce534286e64c6ba58b0ab68676eb7d6be34381dbc50e639b9"
         },
         {
           "path": "report-campaign/ai-content-generation.png",
           "dimensions": "1488x1100",
           "sha256": "fd5ad9735dd5f37b59d88381d309c3b65be2b90953b35e35089089ea4539b667",
           "public_path": "site/public/work/report-campaign/ai-content-generation.png",
-          "source_path": "site/public/work/report-campaign/ai-content-generation.png"
+          "source_status": "missing",
+          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
         },
         {
           "path": "report-campaign/report-ai-findings-source.png",
           "public_path": "site/public/work/report-campaign/report-ai-findings-source.png",
+          "source_status": "derived",
           "source_path": "site/public/work/report-campaign/key-findings.png",
+          "source_sha256": "e00b22dd7db2abfce534286e64c6ba58b0ab68676eb7d6be34381dbc50e639b9",
           "crop": "608x340+760+785",
           "dimensions": "608x340",
           "caption": "The report groups both adoption figures into one finding.",
@@ -547,7 +630,9 @@
         {
           "path": "report-campaign/hubspot-story-focus.png",
           "public_path": "site/public/work/report-campaign/hubspot-story-focus.png",
-          "source_path": "archive/retired/public-assets/2026-07-24/work/report-campaign/hubspot-case-study.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/publications/localization-report/hubspot-case-study.png",
+          "source_sha256": "5726aea9c2edfe94013e327d043675e1a799f8a73bb821f203d0bd0df16feabb",
           "crop": "1348x1300+70+200",
           "dimensions": "1348x1300",
           "caption": "Challenge and solution labels turn HubSpot’s operational detail into a route the reader can scan.",
@@ -557,7 +642,9 @@
         {
           "path": "report-campaign/phrase-story-focus.png",
           "public_path": "site/public/work/report-campaign/phrase-story-focus.png",
-          "source_path": "archive/retired/public-assets/2026-07-24/work/report-campaign/phrase-case-study.png",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/publications/localization-report/phrase-case-study.png",
+          "source_sha256": "d60e1f4f9c718f251d7c36acfd08dac72f4c612b11adf649ad917ea13f27a980",
           "crop": "1348x760+70+1300",
           "dimensions": "1348x760",
           "caption": "The Phrase story reuses the same structure while changing the technical detail.",
@@ -579,6 +666,8 @@
       "caption": "Passport and travel animation used as the homepage cover; the case page contains the published writing evidence.",
       "text_alternative": "Line illustration of a passport, airplane route and clouds.",
       "export_ready": false,
+      "source_status": "verified",
+      "source_sha256": "21d60dd26103e2200163b1e5e8d1d46db26bf0d8cd22b17c992514a0d0ef2034",
       "public_path": "site/public/work/home-covers/localyze-passport-loop.mp4",
       "dimensions": "1280x1280",
       "sha256": "afe8f4b44451755f6a6a4a7d938fd590082c417b8d4196cea0b2e11d1a72dba2",

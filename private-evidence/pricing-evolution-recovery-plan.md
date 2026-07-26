@@ -1,6 +1,6 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; public pricing implementation frozen
+Status: Active; phase 4 complete; public pricing implementation frozen
 
 Last updated: 2026-07-26
 
@@ -28,8 +28,10 @@ blocked:
 
 - The pricing page, current public assets, and current private pricing drafts
   remain frozen until the evidence and organization gates below pass.
-- The dirty worktree contains the paused pricing candidate. Preserve it before
-  reorganizing files.
+- The paused pricing candidate is preserved on
+  `pricing-case-presentation-wip` at `05df5d0`. Evidence recovery proceeds on
+  `pricing-evidence-recovery` without changing that candidate or its linked
+  signoff worktree.
 - Figma inspection is read-only by default.
 - Figma edits, exports, mockup creation, destructive cleanup, commits, pushes,
   publication, and deployment each require separate approval.
@@ -77,62 +79,123 @@ agent owns the complete diff and final judgment.
 
   Completed 2026-07-26 through a local checkpoint on
   `pricing-case-presentation-wip`. The checkpoint is intentionally not pushed.
-- [ ] 2. Create one active pricing-project index that states the work is paused
+- [x] 2. Create one active pricing-project index that states the work is paused
   and identifies the owners for chronology, contributions, claims, sources,
   assets, and archived drafts.
-- [ ] 3. Move the Write Pro launch reconstruction back into active project
+
+  Completed 2026-07-26. The index now routes every pricing evidence role while
+  keeping the rejected story specification and public implementation paused.
+- [x] 3. Move the Write Pro launch reconstruction back into active project
   evidence and cross-reference it from the pricing index.
+
+  Completed 2026-07-26. The reconstruction moved byte-for-byte into the active
+  project directory and retained SHA-256
+  `51ba1e7b2254563f9341856c14613f5290949accb76ccc07419fa0e56758a84f`.
 
 Gate: the paused candidate is recoverable, and a reader can find every active
 pricing owner from one index.
 
 ## Phase 2: Reconstruct chronology and contribution
 
-- [ ] 4. Build one corrected direct-source chronology covering the
+- [x] 4. Build one corrected direct-source chronology covering the
   Translator/API baseline, Write beta, Write Pro paid launch, bundles, the 2024
   grid revisions, later pricing-page work, and the eventual add-on state.
-- [ ] 5. Build a contribution map separating Write Pro launch work, June/July
+
+  Completed 2026-07-26. The active chronology now separates public product
+  states, private work evidence, later page changes, and bounded unknowns.
+- [x] 5. Build a contribution map separating Write Pro launch work, June/July
   2024 grid simplification, naming and terminology work, repeatable review
   tooling, and 2025 Pricing Page V2 work.
-- [ ] 6. Add the missing achievement records and claim ceilings to the recovery
+
+  Completed 2026-07-26. Each workstream now has independent artifact,
+  contribution, lifecycle, outcome, publication, and claim boundaries.
+- [x] 6. Add the missing achievement records and claim ceilings to the recovery
   ledger without implying sole ownership, shipment, adoption, testing,
   causation, or measured results.
-- [ ] 7. Correct the current claim review where it conflates chronological
+
+  Completed 2026-07-26. The ledger now adds `MON-05`, `MON-06`, and `SYS-04`,
+  strengthens the `SYS-01` source trail, and gives every pricing-related
+  workstream an explicit claim ceiling.
+- [x] 7. Correct the current claim review where it conflates chronological
   product names, buying routes, and tiers. Preserve superseded wording in the
   archive.
+
+  Completed 2026-07-26. The current claim owner now distinguishes dated product
+  states and contributions; the replaced pricing section is preserved in the
+  pricing research archive.
 
 Gate: every proposed public contribution has a direct source, evidence class,
 chronological position, and factual ceiling.
 
 ## Phase 3: Consolidate documents and selected raw evidence
 
-- [ ] 8. Consolidate the pricing deep-research report, correction addendum,
+- [x] 8. Consolidate the pricing deep-research report, correction addendum,
   PDF, and old story specifications into clearly dated current or superseded
   document families.
-- [ ] 9. Consolidate ambiguous performance-review variants and other
+
+  Completed 2026-07-26. A pricing archive-family index now separates the
+  active project owners from superseded research, its correction history, the
+  undated PDF derivative, rejected story specifications, execution history,
+  and prior claim wording.
+- [x] 9. Consolidate ambiguous performance-review variants and other
   near-duplicate evidence documents into explicit version families with one
   active owner.
-- [ ] 10. Split the monolithic Figma evidence map into project-level
+
+  Completed 2026-07-26. Four ambiguous reflection drafts were renamed
+  byte-for-byte by content and routed to the existing performance-review
+  master. The two full claim-review snapshots now form one dated archive family
+  with the current claim review as its sole active owner.
+- [x] 10. Split the monolithic Figma evidence map into project-level
   crosswalks. Archive execution logs, troubleshooting notes, and obsolete
   selection history.
-- [ ] 11. Curate only relevant GPT-export conversations and attachments into
+
+  Completed 2026-07-26 without opening Figma. The active index now routes
+  Account Security, Team Administration, Write Pro, Monetization, and the
+  pricing overlay to focused crosswalks. The intact pre-split map preserves
+  execution checkpoints, troubleshooting, aliases, and old selection history
+  in the archive. `Canonical` now means an organizing destination only; no
+  Figma state is treated as final, untouchable, or the ultimate source of
+  truth.
+- [x] 11. Curate only relevant GPT-export conversations and attachments into
   project evidence using conversation IDs, dates, hashes, provenance, and
   redacted excerpts. Do not copy the full export into the repository.
+
+  Completed 2026-07-26. The pricing project now contains a 24-conversation
+  provenance index, 13 redacted user-authored excerpts, and 17 byte-for-byte
+  private attachment copies. The full export and broader internal source
+  documents remain outside the repository. Feedback, rewrite, and variant
+  conversations are classified as workshop evidence by default; assistant
+  suggestions are not attributed to Mason.
 
 Gate: current evidence is discoverable without treating archived research,
 execution logs, or the raw GPT export as active owners.
 
 ## Phase 4: Repair assets, duplicates, and repository checks
 
-- [ ] 12. Repair the asset manifest by moving live originals out of archive
+- [x] 12. Repair the asset manifest by moving live originals out of archive
   paths, replacing public-file self-sources where possible, adding missing
   hashes and provenance, and marking genuinely missing sources honestly.
-- [ ] 13. Classify exact duplicates as intentional copies, source-internal
+
+  Completed 2026-07-26. Eight selected originals moved into active private
+  source folders. All 39 public-file records now have verified hashes and an
+  explicit source status: 20 verified private sources, five recorded
+  derivatives, and 14 honestly missing independent sources.
+- [x] 13. Classify exact duplicates as intentional copies, source-internal
   duplicates, superseded history, or archive-cleanup candidates. Preserve
   material and request separate approval before destructive cleanup.
-- [ ] 14. Repair repository checks so they ignore runtime mounts
+
+  Completed 2026-07-26. The live-file audit classified 15 exact-hash groups
+  containing 31 files as three intentional-copy groups, four source-internal
+  groups, and eight superseded-history groups. Every copy remains preserved;
+  none is currently approved as an archive-cleanup candidate.
+- [x] 14. Repair repository checks so they ignore runtime mounts
   appropriately, avoid hard-coded dates and project counts, require
   hashes/provenance, and reject archived paths as active evidence sources.
+
+  Completed 2026-07-26. The checker now handles `.agents` and `.codex` as
+  runtime mounts, validates dates and reports route counts without fixed
+  literals, verifies public and source hashes, enforces explicit provenance
+  states, and rejects archived or self-referential active sources.
 
 Gate: every active public asset has a valid source record, and the repository
 checks enforce the same archive and provenance boundaries described by the

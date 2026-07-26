@@ -128,7 +128,7 @@ and API Pro on a separate commercial path; DeepL Write free beta 17 January
 2023; DeepL Write Pro paid 25 April 2024; Voice launched as a business product
 in late 2024 and appeared in the web pricing selector by April 2026.
 Terminology and content-rule claims come from
-[`../archive/research/pricing-evolution/write-pro-launch-reconstruction.md`](write-pro-launch-reconstruction.md)
+[`private-evidence/projects/pricing-evolution/write-pro-launch-reconstruction.md`](../../../private-evidence/projects/pricing-evolution/write-pro-launch-reconstruction.md)
 and
 [`../archive/research/pricing-evolution/figma-exhibit-brief.md`](figma-exhibit-brief.md).
 
@@ -483,7 +483,7 @@ Sources, relative to the repository root:
 - `I` = `private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png`
 - `J` = `private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png`
 - `K` = `private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png`
-- `L` = `archive/retired/figma-exports/pricing-evolution-superseded-2026-07/rev6-round3-pricing-translator-transition-clean.png`
+- `L` = `private-evidence/source-exports/figma/pricing-evolution/historical/rev6-round3-pricing-translator-transition-clean.png`
 - `M` = `private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png`
 
 Build list. Every expected size below was produced and measured on 2026-07-25

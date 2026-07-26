@@ -8,8 +8,9 @@ current product, claim, source-selection, or publication owner.
 - [`handoffs/`](handoffs/) — completed task handoffs.
 - [`previews/`](previews/) — old portfolio preview images.
 - [`research/`](research/) — completed claim reviews, pricing research,
-  candidate selection, prior direction, and supplemental performance-review
-  material.
+  candidate selection, prior direction, supplemental performance-review
+  material, and archived Figma execution history. The family indexes inside
+  that directory identify current owners and superseded versions.
 - [`review-artifacts/`](review-artifacts/) — old review packets, rendered PDFs,
   page captures, and generated comparison output.
 - [`retired/code/`](retired/code/) — replaced components, data, tests, styles,

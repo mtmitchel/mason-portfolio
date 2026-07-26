@@ -1,10 +1,12 @@
 # Final DeepL achievements and talking points
 
-**Review date:** 2026-07-21  
+**Review date:** 2026-07-26
+
 **Status:** Private canonical career-language source  
-**Inputs:** All 22 recovery records, the deduplicated performance-review master,
+**Inputs:** All 25 recovery records, the deduplicated performance-review master,
 the private claim review, the dated portfolio candidate shortlist, Mason's direct
-metric and experiment-wave corrections, and the current portfolio-direction file
+metric and experiment-wave corrections, the active pricing-project owners, and
+the current portfolio-direction file
 
 ## How to use this file
 
@@ -167,7 +169,40 @@ individual-variant causation.
 
 **Withhold:** Exact test mapping, launch, conversion or ARR impact, causation, and sole ownership.
 
-## 8. Authentication and account security
+## 8. Write Pro launch and 2024 pricing-grid work
+
+**Recovery IDs:** `MON-05`, `MON-06`
+
+**Evidence:** Confirmed contribution; exact approval, shipment, and results are
+not established
+
+**Canonical achievement:** Workshopped launch-related UX and product content
+for Write Pro across benefit framing, product pages, explicit character- and
+usage-limit states, trial prompts, and enterprise messaging, supplying specific
+constraints and corrections. Separately, workshopped a clearer proposed content
+structure for the Translator pricing grid, including concise-versus-detailed
+information layers and cumulative headings.
+
+**Supported result:** Direct workshop messages and surviving working images
+establish Mason's constraints, corrections, selections, and the working
+artifacts. They do not make assistant suggestions Mason-authored copy. DeepL
+publicly made Write Pro available in April 2024, but the record does not
+establish which variants shipped. The June-July grid sequence is a working
+proposal, not a production before-and-after.
+
+**CV wording:** Workshopped launch-related Write Pro content and a proposed
+Translator pricing-grid structure across comparison levels and cumulative plan
+headings, supplying specific constraints and corrections.
+
+**Portfolio use:** Factual substrate for later portfolio allocation. Keep the
+Write Pro launch work and the grid proposal distinct from Pricing Page V2 and
+from the later public cumulative page.
+
+**Withhold:** Authorship of assistant suggestions, launch ownership, final
+approval, shipment, adoption, usability improvement, conversion or revenue
+impact, and any claim that the 2024 grid proposal caused the 2025 public page.
+
+## 9. Authentication and account security
 
 **Recovery IDs:** `IAM-01`  
 **Evidence:** Confirmed
@@ -182,7 +217,7 @@ individual-variant causation.
 
 **Withhold:** Internal ticket identifiers in public copy, authorship of every visible string, interaction-model ownership, shipment of every state, and security/adoption outcomes.
 
-## 9. Account and team administration
+## 10. Account and team administration
 
 **Recovery IDs:** `IAM-02`, `IAM-03`, `ATE-01`  
 **Evidence:** Confirmed for the account/admin content portfolio and localization investigation; lead for broader process adoption
@@ -197,22 +232,33 @@ individual-variant causation.
 
 **Withhold:** Ownership of team delivery processes, adoption of the proposed localization/process changes, shipment of every flow, and outcome metrics.
 
-## 10. Content standards and tooling
+## 11. Content standards and tooling
 
-**Recovery IDs:** `SYS-01`, `SYS-02`, `SYS-03`  
+**Recovery IDs:** `SYS-01`, `SYS-02`, `SYS-03`, `SYS-04`
+
 **Evidence:** Confirmed scope and prototype work
 
-**Canonical achievement:** Structured content standards and terminology into machine-readable guidance, prototyped and documented a Figma-native content-review tool, and built filtering/categorization logic for roughly 9,000 English Phrase keys.
+**Canonical achievement:** Structured content standards and terminology into
+machine-readable guidance, workshopped repeatable AI-assisted copy-review
+criteria, contributed direct corrections to product and plan naming guidance,
+prototyped and documented a Figma-native content-review tool, and built
+filtering/categorization logic for roughly 9,000 English Phrase keys.
 
-**Supported result:** Working materials, prototype development, documentation, and a reusable dynamic-content audit dataset are supported. Production deployment, team-wide adoption, remediation, and time savings are not.
+**Supported result:** Working materials, Mason's naming and review constraints,
+prototype development, documentation, and a reusable dynamic-content audit
+dataset are supported. Assistant-generated suggestions are not Mason-authored
+content. Production deployment, team-wide adoption, remediation, and time
+savings are not.
 
 **CV wording:** Built content-design tools and structured guidance, including a Figma review prototype and a dynamic-content inventory covering roughly 9,000 English Phrase keys.
 
 **Portfolio use:** Strong future methods mini case once the actual plugin, documentation, or dataset can be shown safely. Current Figma content patterns are illustrative context only.
 
-**Withhold:** Production status, organization-wide use, measured efficiency, and claims that the tool reviewed or generated the current canonical Figma files.
+**Withhold:** Sole creation or ownership of the naming system, production
+status, organization-wide use, measured efficiency, and claims that the tool
+reviewed or generated the current canonical Figma files.
 
-## 11. Research-led thought leadership
+## 12. Research-led thought leadership
 
 **Recovery IDs:** `MKT-03`  
 **Evidence:** Confirmed deliverable and scope; Mason-confirmed campaign outcome
@@ -231,7 +277,7 @@ business intelligence; raw campaign reporting is not stored in this repository.
 campaign outcome with contribution wording. Do not claim sole pipeline causation
 or unsupported sole ownership of the full campaign.
 
-## 12. Launch and lifecycle marketing
+## 13. Launch and lifecycle marketing
 
 **Recovery IDs:** `MKT-01`, `MKT-02`, `MKT-04`  
 **Evidence:** Confirmed deliverables; performance metrics unavailable
