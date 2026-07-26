@@ -93,6 +93,7 @@ const allowedRootEntries = new Set([
   ".agents",
   ".codex",
   ".git",
+  ".gitattributes",
   ".gitignore",
   "AGENTS.md",
   "CLAUDE.md",

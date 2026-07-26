@@ -1,7 +1,7 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; phase 5 inventory structure ready; public pricing
-implementation frozen
+Status: Active; Step 18 saved-ledger review started; 1 of 99 review batches
+complete; public pricing implementation frozen
 
 Last updated: 2026-07-26
 
@@ -204,39 +204,60 @@ documentation.
 
 ## Phase 5: Complete the page-by-page Figwright inventory
 
-Figwright exposes only the frames Mason selects before running the plugin.
-Coverage must therefore proceed page by page and, when necessary, in multiple
-frame batches. Do not select final portfolio evidence until every relevant page
-has been reviewed.
+Figwright exposes selected objects and scoped node reads. Coverage therefore
+starts with a selected top-level page manifest, followed by bounded raw
+extraction for every recorded root. Do not treat a manifest or raw extraction
+as analysis, visual verification, or a completed page review. Do not select
+final portfolio evidence until the later analysis pass has reviewed every
+relevant page.
 
 - [x] 15. Create one running Figwright inventory with fields for Figma file,
   page, batch, selected frame range, frame/node ID, visual description, likely
   project, chronology, contribution relationship, editability, provenance,
   provisional value, and follow-up need.
 
-  Completed 2026-07-26. The inventory structure now records page-and-batch
-  coverage and every required candidate-frame field. No Figma page or batch
-  was reviewed; step 16 has not started.
-- [ ] 16. For each relevant Figma page, have Mason select the largest practical
-  frame batch and run Figwright. Inspect the exposed frames and append
-  candidates to the inventory without making final selection decisions.
+  Completed 2026-07-26. The inventory structure records page-and-batch coverage
+  and every required candidate-frame field. At that point no Figma page or
+  batch had been reviewed; step 16 started later the same day.
+- [x] 16. For each relevant Figma page, capture a Figwright manifest of the
+  selected top-level roots, then preserve bounded raw extraction records for
+  every manifest root. Record exact copy/text, structure, node IDs, exposed
+  visibility and locked state, dimensions, relevant style/layout/component
+  fields, and opaque image-fill references without analysis or final selection.
 
-  Started 2026-07-26. Eleven unlabelled batches, covering 72 exact selected nodes,
-  from the preserved `Monetization` source file, page `Experiments`, have been
-  reviewed. The first eight batches selected page-level nodes; the ninth and
-  tenth also included exact nested nodes. Page coverage is partial, all
-  observations remain provisional, and no final asset selection has started.
-- [ ] 17. Track unreviewed pages and frame batches so work can resume across
+  Completed 2026-07-26 for the three approved source files. The compressed raw
+  ledger contains 69 page records, 1,190 selected top-level roots, 185,501 text
+  nodes, 182,628 structural nodes, and 2,984 image-fill references with no
+  unresolved extraction limitation. The earlier fourteen interpreted
+  `Monetization` / `Experiments` batches covering 108 exact selected nodes remain
+  provisional legacy history. At the step 16 extraction gate, no page had
+  completed saved-data analysis, no final asset selection had occurred, and
+  neither step 18 nor any later phase had started.
+- [x] 17. Track unreviewed pages and frame batches so work can resume across
   sessions without rescanning completed material or losing provisional
   candidates.
-- [ ] 18. After all relevant pages and batches have been reviewed, compare the
-  complete inventory and classify every candidate as:
+
+  Completed 2026-07-26. The inventory now tracks all 69 pages as 99
+  deterministic review batches of at most 20 manifest roots, plus 12
+  zero-root page records requiring an explicit later disposition. All 99
+  review batches remain unreviewed in the fresh pass. The raw ledger was also
+  normalized losslessly into strict one-object-per-line JSONL; all 655 objects,
+  parsed-record hashes, and extraction totals remained unchanged.
+- [ ] 18. Review all 99 saved batches and the 12 zero-root records. Add
+  provisional candidates to the inventory without making final selection
+  decisions. After the complete review, compare and classify every candidate
+  as:
   - current-asset replacement;
   - genuinely new evidence;
   - contextual evidence;
   - private-only evidence;
   - unresolved;
   - reject.
+
+  Started 2026-07-26. `Monetization` / `Pricing page` batch 01, roots
+  1–20, has been reviewed from the saved raw ledger. One of 99 batches is
+  complete; all findings remain provisional. The next cursor is batch 02,
+  roots 21–40.
 - [ ] 19. Run focused second Figwright passes only on finalists or unresolved
   clusters to verify exact frame relationships, chronology, readable text,
   editability, and whether they improve on current portfolio assets.
@@ -248,14 +269,24 @@ has been reviewed.
 
 The detailed running inventory is
 [`projects/pricing-evolution/figwright-inventory.md`](projects/pricing-evolution/figwright-inventory.md).
-Step 16 is active with eleven reviewed batches and no completed page.
+Steps 16 and 17 are complete. The raw extraction is preserved and every page
+has a deterministic review cursor. Step 18 has started: 1 of the 99 fresh
+review batches has been reviewed, 98 remain, and the 12 zero-root records still
+need a later disposition.
 
-| Figma file | Page | Batches reviewed | Coverage status | Notes |
-| --- | --- | ---: | --- | --- |
-| `Monetization` | `Experiments` | 11 | Partial | Eleven unlabelled selections covering 72 exact selected nodes reviewed; remaining page batches and the other prioritized source files are unreviewed; final decisions deferred |
+| Figma file | Page scope | Manifest roots | Raw roots extracted | Legacy reviewed batches | Fresh review progress | Next cursor |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `Monetization` | `Experiments` | 231 | 231 | 14 | 0 of 12 batches | Batch 01, roots 1–20; legacy batches remain provisional history |
+| `Monetization` | `Pricing page` | 174 | 174 | 0 | 1 of 9 batches | Batch 02, roots 21–40 |
+| `Monetization` | `Write Pro` | 81 | 81 | 0 | 0 of 5 batches | Batch 01, roots 1–20 |
+| `_Archive — Misc (pre-cleanup)` | `Page 1` | 17 | 17 | 0 | 0 of 1 batch | Batch 01, roots 1–17 |
+| `_Archive — Misc (pre-cleanup)` | `ATE` | 82 | 82 | 0 | 0 of 5 batches | Batch 01, roots 1–20 |
+| `Checkout — Experiments (Copy)` | 64 pages | 605 | 605 | 0 | 0 of 67 batches; 12 zero-root records pending | Page-level next cursors are in the inventory |
 
-Gate: all relevant pages have recorded coverage, and finalists have been judged
-against the complete inventory rather than the order in which they were found.
+Step 17 gate passed: every approved page and planned batch has a recoverable
+cursor, and the provisional legacy candidates remain preserved. Step 18 review
+has begun from the saved ledger. Final dispositions, live visual verification,
+Figma edits, exports, public selection, and public-page work have not started.
 
 ## Phase 6: Allocate the recovered work across the portfolio
 
