@@ -48,10 +48,11 @@ personal causation.
 - Helped conceive, write, edit, and shape launch-related UX and product content
   for Write Pro across benefit framing, limit states, trial prompts, and
   enterprise messaging.
-- Helped develop a connected June-July 2024 pricing-grid sequence around
-  concise-versus-detailed information layers and cumulative headings. The
-  working record does not identify the verbatim author of every generated line,
-  but that does not reduce Mason's collaborative contribution.
+- Restructured the Translator pricing grid with the product team around
+  cumulative tier differences in a connected June-July 2024 sequence. The
+  cumulative structure shipped and remains live. The working record does not
+  identify the verbatim author of every generated line or exact
+  file-to-production lineage.
 - Contributed message and copy variants for Pro Driver experiment DM-1523.
 - Supported content refinement for checkout-flow experiment DM-1418.
 - Helped develop messaging for anonymous-user soft-block experiment DM-1417.

@@ -49,11 +49,12 @@ metadata is not a reason to exclude a family from portfolio consideration.
 - `MON-04` supports research, messaging analysis, concepts, and test-ready copy
   for Pricing Page V2. The listed page-`01` nodes do not prove DM-2112
   equivalence, rollout, testing, or results.
-- `MON-06` is a direct-source June–July 2024 Translator grid workshop and
-  proposal. Mason's account and the working record support his collaborative
-  conception, writing, editing, constraints, corrections, and application.
-  They do not make every generated line his exact verbatim prose. No exact
-  canonical Figma node upgrades the work from proposal to production evidence.
+- `MON-06` is a direct-source June–July 2024 Translator grid workstream.
+  Mason's account and the working record support his collaborative conception,
+  writing, editing, constraints, corrections, and application. The cumulative
+  structure shipped and remains live on the public page. The working images are
+  not production screenshots, and no exact canonical Figma node establishes
+  word-for-word or file-to-production lineage.
 - `MON-05` supports Mason's collaborative conception, writing, editing,
   direction, and corrections around Write Pro launch-related content. A
   pricing or bundle frame does not identify the exact author of every line or

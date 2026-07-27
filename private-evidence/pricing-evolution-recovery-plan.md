@@ -1,9 +1,10 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; Steps 1–22 complete after targeted contribution-model and
-artifact-genesis correction; public pricing implementation frozen
+Status: Active; evidence recovery Steps 1–22 complete; rejected Step 23 draft
+and invalidated Step 24 review archived; Steps 23–25 reset; public pricing
+implementation frozen
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 This is the canonical work-status plan for recovering, organizing, and applying
 the pricing and Write Pro evidence. It does not own public claims, narrative
@@ -44,16 +45,21 @@ blocked:
 
 ## Current boundary
 
-- The pricing page, current public assets, and current private pricing drafts
-  remain frozen until the evidence and organization gates below pass.
+- The rejected pricing page, its existing public assets, and all rejected
+  private drafts remain frozen. The rejected Step 25 implementation was
+  restored to the committed site baseline and its untracked public image
+  duplicates were removed.
 - The paused pricing candidate is preserved on
   `pricing-case-presentation-wip` at `05df5d0`. Evidence recovery proceeds on
   `pricing-evidence-recovery` without changing that candidate or its linked
   signoff worktree. The contribution-model correction began from
   `2493d6188f8b0c49924eebad49a3fd0f468fa57b` on that recovery branch.
 - Mason separately approved committing and pushing the Steps 18–20 checkpoint.
-  Commit `b1d7552` is preserved on the private `origin/pricing-evidence-recovery`
-  branch. That approval does not authorize any later commit or push.
+  Commit `b1d7552` is preserved on the private
+  `origin/pricing-evidence-recovery` branch. On 2026-07-27 he also explicitly
+  approved committing and pushing the rejection cleanup, research, factual
+  corrections, and Linux handover in this continuation. Neither approval
+  authorizes deployment or publication.
 - Figma inspection is read-only by default.
 - Figma edits, exports, mockup creation, destructive cleanup, commits, pushes,
   publication, and deployment each require separate approval.
@@ -392,33 +398,53 @@ exports, public selection, and public-page work have not started.
   corrected evidence, including whether Translator and Write should form the
   spine and Voice/API should be reduced to context or removed.
 
-  Completed and revalidated 2026-07-26. The next candidate is provisionally
-  titled `Cutting the pricing grid down to what changes` and uses the genuine
-  `MON-06` same-offer working sequence as its contribution spine. Write is brief
-  pressure and context rather than an equal or causal second case; Voice and
-  API are omitted for focus, not because Mason's contribution lacks outside
-  proof. The clean 2024 repeated-list and cumulative-state images are the
-  preferred visual pair. Mason's red hand-annotated image remains private at
-  his editorial direction. The rationale and required one-sentence story
-  diagnosis are recorded in the Phase 6 allocation owner.
+  Completed and revalidated 2026-07-26 as an evidence-allocation decision. It
+  identified the genuine `MON-06` same-offer sequence and the clean repeated-
+  list/cumulative-state pair as the strongest pricing spine, kept the red
+  annotated image private, and omitted Voice and API. Mason's 2026-07-27
+  rejection invalidated the provisional title, the decision to mention Write
+  as pressure, the comparison-table framing, the mini-case format, and the
+  one-sentence diagnosis. The underlying evidence selection remains valid.
 
 Gate: each selected experience has one clear, non-overlapping portfolio job;
 Mason's account is accepted as contribution evidence; and remaining lifecycle,
-outcome, permission, and narrative boundaries are explicit. Passed 2026-07-26;
-Step 23 drafting is the next action after repository validation.
+outcome, permission, and narrative boundaries are explicit. The evidence
+allocation gate passed 2026-07-26. Mason's later rejection reopened the title,
+format, narrative, evidence sequence, and reader verdict.
 
 ## Phase 7: Rebuild the pricing story
 
-- [ ] 23. Draft a new pricing narrative and evidence sequence with corrected
-  chronology, clear Mason contribution, the genuine 2024 same-offer grid
-  change, truthful captions, and no unsupported outcome claims.
-- [ ] 24. Review the narrative and evidence sequence as a hiring reader before
-  rebuilding the page. Reopen the subject or structure if it still reads as a
-  screen inventory.
+- [ ] 23. After the researched writing and positioning safeguards are committed
+  to their canonical skills, have a fresh Claude Opus 5 Max session write an
+  entirely new private pricing narrative and evidence sequence from the
+  `MON-06` material. Lead with the clean repeated-list and cumulative working
+  images; state Mason's shipped contribution plainly; use the current public
+  page as product-state evidence; omit Write, Voice, API, and any unseen table;
+  keep the red annotated image private; and do not reuse prose or structure from
+  the rejected draft.
+
+  This step means writing the case. It does not mean changing the site. The
+  first attempt and its repair were rejected by Mason and are preserved only in
+  the archive.
+- [ ] 24. Review the unchanged new draft in two independent parts before any
+  site work: first Codex reads it as a hiring reader, then a fresh Claude Opus 5
+  Max session reads the same draft and evidence. Compare their notes, report
+  agreements and disagreements, and reopen the story if either reader finds
+  vague ownership, process theatre, weak headings, unsupported claims, or prose
+  that obscures what Mason did.
+
+  This step means testing whether a recruiter or hiring manager can quickly
+  understand the problem, Mason's action and judgment, the shipped change, and
+  why the work matters. It is not approval to repair, publish, or implement the
+  page.
 - [ ] 25. Rebuild the pricing route and assets only after narrative approval.
   Address image placement, crops, visibly distinct captions, missing switcher
   images, stable controls, lightbox scale, responsive overflow, keyboard
   access, focus behavior, and reduced motion.
+
+  This step means implementing Mason's approved narrative in the private site.
+  It begins only after Mason has read and approved the Step 23 narrative and
+  considered the Step 24 comparison.
 - [ ] 26. Rewrite tests around source integrity, privacy, accessibility,
   interaction safety, dimensions, provenance, and narrow claim ceilings rather
   than exact prose, fixed asset counts, or narrative geometry.

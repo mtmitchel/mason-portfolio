@@ -65,27 +65,33 @@ belong to the wider experiment wave.
 
 ### Pricing evolution
 
-**Narrative status, 2026-07-26:** Reopened. The live four-product title, page,
-and previous four-movement direction are frozen rejected candidates, not
-current editorial truth.
+**Narrative status, 2026-07-27:** Reopened. Mason rejected the Step 23 draft,
+the Step 24 verdict, and the attempted repair. No pricing title, format,
+narrative, story diagnosis, or site implementation is approved. The rejected
+draft and invalidated review are archived and prohibited as rewrite sources.
 
-The Phase 6 working direction is a focused Translator story provisionally
-titled **Cutting the pricing grid down to what changes**. Write supplies brief
-pressure and context because the pricing page had more paid-product
-relationships to explain. Voice and API are omitted because they dilute this
-case, not because Mason's collaborative involvement lacks outside proof.
+The strongest evidence still points to a focused Translator story built from
+the genuine June–July 2024 `MON-06` sequence. Mason restructured the plan cards
+with the product team so each tier showed what it added instead of repeating
+what it inherited. The cumulative structure shipped and remains visible on
+DeepL's current public pricing page. The clean repeated-list and revised
+cumulative images show the work in progress; they are not production
+screenshots. The red hand-annotated image stays private at Mason's direction.
 
-The narrative spine is the genuine June–July 2024 `MON-06` working sequence:
-Mason helped reduce repeated wording, separate scannable card benefits from
-detailed comparison content, and move plan differences toward cumulative
-headings. The clean repeated-list and revised cumulative working images are the
-preferred evidence pair. The red hand-annotated image stays private at Mason's
-editorial direction.
+Do not mention Write as background unless a new draft gives it a necessary,
+developed role. Do not mention a comparison table unless the evidence sequence
+shows it. Voice and API remain out of scope. Keep exact wording, sole
+ownership, exact implementation lineage, sole causation, measured outcomes,
+and publication permission separate from Mason's established collaborative
+contribution.
 
-This is a Step 22 diagnosis, not an approved narrative. Do not replace the
-live title or update a new story specification until the Step 23 draft passes
-reader review. The allocation owner is
-[`projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md`](projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md).
+Before another draft, commit the researched writing and positioning safeguards
+to their canonical skills. Then have a fresh Claude Opus 5 Max session write
+the case from a blank page. The current owners are the
+[`recovery plan`](pricing-evolution-recovery-plan.md),
+[`allocation record`](projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md),
+and
+[`Linux handover`](pricing-evolution-linux-handover-2026-07-27.md).
 
 ### Checkout across four purchase states
 

@@ -1,8 +1,9 @@
 # Pricing recovery portfolio allocation and story diagnosis
 
-Status: Phase 6 decision owner; Steps 21–22 complete
+Status: Phase 6 evidence allocation retained; title, format, and narrative
+reopened after Mason rejected the Step 23 draft
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 Public use: Not approved
 
@@ -23,7 +24,7 @@ permission.
 
 | Recovered experience | One portfolio job | Disposition and boundary |
 | --- | --- | --- |
-| Translator pricing-grid scannability and cumulative proposal (`MON-06`) | Pricing case contribution spine | Use as a focused full-case candidate. The genuine June–July 2024 same-offer working sequence can show Mason's conception, writing, editing, requests, corrections, concise-versus-detailed information split, and cumulative-heading proposal. Treat it as collaborative working material; approval, production use, adoption, usability improvement, and commercial impact remain separate and unknown. |
+| Translator pricing-grid scannability and cumulative structure (`MON-06`) | Pricing case contribution spine | Build from the genuine June–July 2024 same-offer sequence. Mason restructured the plan cards with the product team around what each tier added, and the cumulative structure shipped. Use the two clean working images to show the change taking shape; do not call them production screenshots or claim exact file-to-production lineage, sole ownership, a measured usability result, or commercial impact. |
 | Write Pro character-limit, usage-limit, trial, and return-later work within `MON-05` | Existing upgrade-prompts case | Use the direct `2,000 of 4,182 characters` state and the documented truthfulness trade-off to strengthen that case. Do not attach the wider experiment-wave result to the Write Pro launch work or imply that every prompt shipped. |
 | Write Pro product-page, B2B benefit-hierarchy, and enterprise-page work within `MON-05` | Possible launch sample, held in reserve | Do not create a separate case now. Mason's collaborative contribution is supported. Keep the material in reserve because another launch story would currently overlap the upgrade-prompts case and the pricing context; revisit it only when it can do a distinct portfolio job. |
 | Product and plan terminology within `MON-05` and `SYS-04` | Naming/content-system evidence | Route to a future content-standards or methods sample, not the pricing or upgrade-prompts cases. Mason helped conceive, draft, edit, and extend the team-owned system. Do not inflate that into sole creation, sole ownership, universal adoption, or a measured result. |
@@ -59,38 +60,35 @@ This allocation covers all 35 final Step 18 families exactly once.
 
 ## Pricing case decision
 
-**Working title:** Cutting the pricing grid down to what changes
+No title, format, story diagnosis, or narrative has approval. **Cutting the
+pricing grid down to what changes** is a discarded provisional title, not a
+constraint on the rewrite.
 
-**Subject:** Mason's June–July 2024 collaborative work to make the Translator
-plan grid easier to scan by removing repetition and giving the detailed
-comparison table a different job.
+The strongest available spine remains the connected `MON-06` sequence:
 
-**Scope:** Use the earlier Translator paid-plan ladder as the baseline and the
-arrival of paid Write as brief pressure and context: the page now had more
-product relationships to explain. The narrative spine remains the same-offer
-Translator working sequence in `MON-06`: shorter and more consistent benefit
-wording, distinct benefits, retained team-administration information, the
-concise-versus-detailed split, and Mason's correction toward cumulative
-headings.
+- the earlier paid-plan cards repeat the same eight lines across Advanced and
+  Ultimate while the price doubles and only two numbers change;
+- Mason restructured the cards with the product team around what each tier
+  added;
+- when a later working layout lost the inheritance cue, he called for it to be
+  restored;
+- the revised state shows cumulative headings; and
+- the current DeepL pricing page still uses the cumulative structure.
 
-Write is visible pressure, not an equal second case and not a claimed cause.
-That avoids retelling the upgrade-prompts case and the reserved Write Pro launch
-sample. Voice and API are omitted from this case because a four-product ending
-turns a focused content decision into a catalogue. Their omission is editorial,
-not a judgment that Mason lacks contribution evidence.
+This is a shipped content-design change, not a proposal story. The recovered
+images document the work in progress; they are not production screenshots.
+Exact wording, exact implementation lineage, sole ownership, measured outcomes,
+causation beyond Mason's contribution, and publication permission remain
+separate.
 
-**One-sentence story diagnosis:** When Write added another paid-product
-relationship to the pricing page, the Translator grid carried too much repeated
-information, so Mason helped strip out repeated qualifiers, separate
-card-level benefits from comparison-table detail, and reorganize plan
-differences into cumulative headings.
+Do not mention Write merely to supply pressure. Do not mention a comparison
+table unless the final evidence sequence shows it and the narrative explains
+its role. Voice and API remain omitted because they turn a focused change into
+a catalogue.
 
-The true subject is information hierarchy under commercial pressure, not a
-tour of DeepL's pricing surfaces. The pressure is the grid's need to be brief
-without erasing meaningful plan differences. The movement comes from Mason's
-conception, writing, editing, requests, and corrections across a connected
-working sequence. The supported ending is the proposal itself, not a claimed
-launch or measured result.
+The Step 23 narrative, its Step 24 review, and the attempted repair were
+rejected by Mason on 2026-07-27. They are archived as failure history and must
+not be used as the base for a rewrite.
 
 ## Visual direction
 
@@ -101,6 +99,10 @@ Use the genuine 2024 working sequence as the primary visual evidence:
 2. `gpt-export-evidence/attachments/file-bkypvx2q2LfL56qYugZ3wwbK.png` — the
    revised cumulative state.
 
+The revised state also adds Free and changes Enterprise content. Treat the pair
+as evidence of the paid-tier content-pattern change, not as a controlled
+one-variable comparison or a pair of production screenshots.
+
 Keep
 `gpt-export-evidence/attachments/file-ivKHtgzlEG5d1YUtkUPix1ZF.png` as a
 near-duplicate reserve. Keep the red hand-annotated
@@ -108,25 +110,32 @@ near-duplicate reserve. Keep the red hand-annotated
 it creates in a job-search portfolio; it is not needed to make the story
 credible.
 
-The current public pricing crops mix recovered historical artifacts with
-portfolio reconstructions made in 2026. They remain frozen candidates. If a
-later draft uses a 2026 reconstruction, label it explicitly as a demonstration
-or reconstruction rather than historical product evidence. Do not use the
-Write, Voice, API, add-on, or reconstructed table families merely to fill out
-the page.
+The rejected public pricing crops mixed recovered historical artifacts with
+portfolio reconstructions made in 2026. Their untracked duplicates were removed
+from the site; the private originals remain intact. If a later draft uses a
+2026 reconstruction, label it explicitly as a demonstration or reconstruction
+rather than historical product evidence. Do not use the Write, Voice, API,
+add-on, or reconstructed table families merely to fill out the page.
 
-## Step 23 boundary
+## Next narrative boundary
 
-Step 23 may draft only after this allocation gate has passed. It should:
+The next Step 23 attempt may begin only after the researched writing and
+positioning rules have been added to their canonical skills and committed. A
+fresh Claude Opus 5 Max session must write from a blank page. It should:
 
 - build around the `MON-06` same-offer working sequence;
-- use Write as brief pressure and portfolio context;
 - lead with the clean 2024 repeated-list and cumulative-state pair;
-- keep the current public page and rejected story specification frozen as
-  comparison candidates;
+- state plainly that Mason restructured the cards with the product team and
+  that the cumulative change shipped;
+- use the current public page as product-state evidence without claiming that
+  either working image is the production screen;
 - omit Voice and API;
+- omit Write and the comparison table unless the draft both needs and shows
+  them;
 - avoid the reserved Write Pro launch sample, naming-system material,
   Pricing Page V2 achievement, and checkout evidence as competing subcases;
-- label intent, rationale, and working artifacts accurately; and
-- end with the documented proposal without claiming approval, shipment,
-  adoption, testing, behavior change, conversion, or revenue.
+- use headings that carry a concrete fact, turn, or consequence rather than an
+  internal state note;
+- end on the shipped change and what Mason's judgment demonstrates, without
+  inventing testing, behavior change, conversion, or revenue; and
+- avoid every sentence and heading from the rejected draft.

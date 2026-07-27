@@ -176,36 +176,37 @@ individual-variant causation.
 
 **Recovery IDs:** `MON-05`, `MON-06`
 
-**Evidence:** Confirmed contribution; exact approval, shipment, and results are
-not established
+**Evidence:** Confirmed contribution; the Translator cumulative structure
+shipped; exact working-file lineage and measured results are not established
 
 **Canonical achievement:** Helped conceive, write, edit, and shape
 launch-related UX and product content for Write Pro across benefit framing,
 product pages, explicit character- and usage-limit states, trial prompts, and
-enterprise messaging. Separately, helped develop a clearer proposed content
-structure for the Translator pricing grid, including concise-versus-detailed
-information layers and cumulative headings.
+enterprise messaging. Separately, restructured the Translator pricing grid
+with the product team so each tier showed what it added instead of repeating
+inherited benefits. The cumulative structure shipped and remains live.
 
 **Supported result:** Mason's account, direct workshop messages, and surviving
-working images establish his collaborative contribution and the working
+working images establish his collaborative contribution and the in-progress
 artifacts. The record does not identify the verbatim author of every
 tool-generated line. DeepL publicly made Write Pro available in April 2024,
-but the record does not establish which variants shipped. The June-July grid
-sequence is a genuine working before-and-after proposal, not a production
-before-and-after.
+but the record does not establish which Write variants shipped. The
+June-July grid images show the connected work, and the cumulative structure
+shipped; the images are not production screenshots and do not establish exact
+file-to-production lineage.
 
-**CV wording:** Helped shape launch-related Write Pro content and a proposed
-Translator pricing-grid structure across comparison levels and cumulative plan
-headings.
+**CV wording:** Shaped launch-related Write Pro content and restructured
+Translator pricing cards with the product team around cumulative plan
+differences, a pattern that shipped and remains live.
 
 **Portfolio use:** Factual substrate for later portfolio allocation. Keep the
-Write Pro launch work and the grid proposal distinct from Pricing Page V2 and
-from the later public cumulative page.
+Write Pro launch work, the Translator grid change, and Pricing Page V2
+distinct. Use the public cumulative page as lifecycle evidence for the grid
+change, not as proof of exact working-file identity.
 
 **Withhold:** Sole launch ownership, verbatim authorship of every
-tool-generated line, final approval, shipment, adoption, measured usability
-improvement, conversion or revenue impact, and any claim that the 2024 grid
-proposal caused the 2025 public page.
+tool-generated line, exact working-file approval or implementation lineage,
+sole causation, measured usability improvement, conversion, or revenue impact.
 
 ## 9. Authentication and account security
 

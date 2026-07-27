@@ -49,9 +49,10 @@ The curated ledger contains 25 achievement records:
 
 Particularly useful outcomes include:
 
-- Direct-source records for Write Pro launch-related content, the June-July
-  2024 Translator pricing-grid proposal, and product and plan naming guidance,
-  each with a separate lifecycle and claim ceiling.
+- Direct-source records for Write Pro launch-related content, Mason's work
+  restructuring the June-July 2024 Translator pricing grid around the
+  cumulative pattern that shipped, and product and plan naming guidance, each
+  with a separate lifecycle and claim ceiling.
 - Contribution to more than 25 product, enterprise, and developer landing pages, including a major Enterprise-page revamp.
 - An Apps & Integrations post-signup experiment whose hypothesis was described as proven and then expanded into a broader sidebar experience.
 - Monetization experiment candidates involving paid purchases, incremental ARR, and free-account growth.

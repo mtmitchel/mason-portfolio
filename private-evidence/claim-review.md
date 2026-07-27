@@ -1,6 +1,6 @@
 # Current portfolio claim review
 
-**Updated:** 2026-07-26
+**Updated:** 2026-07-27
 **Status:** Current claim owner
 
 This file states what the current portfolio may say. The
@@ -79,19 +79,23 @@ untouchable, or ultimate truth.
   terminology through iterative writing and content-design work. Do not imply
   sole launch ownership, final approval, shipment, adoption, conversion, or
   measured impact.
-- State Mason's June-July 2024 Translator work as a workshop and working
-  proposal for clearer grid content, concise-versus-detailed information
-  layers, and cumulative headings. Mason's account supports describing this as
-  his collaborative content-design contribution. A before-and-after comparison
-  is allowed only for that genuine same-offer working sequence and must be
-  labelled as a working proposal, not a production change.
-- Keep the 2024 grid proposal separate from Pricing Page V2 in 2024 Q4-2025 Q1.
+- State plainly that Mason restructured the Translator plan cards around
+  cumulative tier differences as part of the product team. The cumulative
+  structure shipped and remains visible on the current public Translator
+  pricing page. The recovered same-offer images show the work in progress; they
+  are not production screenshots and do not prove exact file-to-production or
+  word-for-word lineage.
+- Keep the 2024 grid work separate from Pricing Page V2 in 2024 Q4-2025 Q1.
   Pricing Page V2 supports research, messaging analysis, concepts, and
   test-ready copy only; final rollout and results are not present.
 - The public Translator ladder adopted new names and cumulative headings after
-  2025-06-04 and by 2025-07-21. The web bundle tab became a Write Pro add-on
-  presentation after 2025-10-09 and by 2025-10-29. Do not say Mason's earlier
-  work caused, shipped as, or was adopted in either later public state.
+  2025-06-04 and by 2025-07-21. The current page still uses cumulative
+  `Everything in ..., plus` headings. Mason's account establishes his
+  collaborative contribution to the shipped cumulative change. Do not turn
+  that contribution into sole ownership, sole causation, exact
+  file-to-production lineage, or authorship of every current string. The web
+  bundle tab became a Write Pro add-on presentation after 2025-10-09 and by
+  2025-10-29.
 - State Mason's naming contribution as participation in and workshopping of a
   terminology system owned by UX Writing and reviewed with Product Marketing.
   His account and the working record support collaborative conception,
@@ -102,9 +106,10 @@ untouchable, or ultimate truth.
   used when they have a clear narrative job. Their omission from a case must be
   an editorial decision about focus and overlap, not a penalty for missing
   independent contribution proof.
-- Do not claim that a specific version shipped, improved comparison, increased
-  conversion, caused revenue, became the current architecture, or was later
-  adopted.
+- Do not call either recovered working image the production screen. Do not
+  claim that its exact layout or every visible string shipped unchanged, that
+  Mason alone caused the change, or that the change increased comparison
+  success, conversion, or revenue without separate evidence.
 - Prices, discounts, limits, and usage rates may be described only as visible
   historical offer content. They are not outcome metrics.
 

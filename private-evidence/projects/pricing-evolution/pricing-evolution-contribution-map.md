@@ -2,7 +2,7 @@
 
 Status: Active private contribution owner
 
-Last verified: 2026-07-26
+Last verified: 2026-07-27
 
 Public use: Not approved
 
@@ -22,7 +22,7 @@ remain separate.
 | Workstream | Recovery record | Supported contribution | Artifact and lifecycle status | Outcome and publication ceiling |
 | --- | --- | --- | --- | --- |
 | Write Pro launch and monetization content, 2024 Q1-Q2 | `MON-05` | Helped conceive, write, edit, and shape launch-related UX and product content across B2B benefit framing, product-page structure, explicit character-limit states, usage-limit messaging, trial prompts, and enterprise/product-led page work. Mason set constraints and corrected promotional, vague, misleading, or unsupported language. | Mason's account, direct workshop messages, and surviving screenshots establish collaborative work and working artifacts. They do not identify the verbatim author of every tool-generated line or which variants were approved or shipped. DeepL publicly made Write Pro available in April 2024. | No project result is established. Private claim ceiling: Mason helped shape launch-related content for Write Pro. Do not claim sole launch ownership, verbatim authorship of every generated line, final approval, shipment, adoption, conversion, or measured impact. |
-| Translator pricing-grid scannability and cumulative proposal, June-July 2024 | `MON-06` | Helped develop the concise grid against the detailed comparison table; set goals for shorter, more consistent benefit wording; identified distinct benefits; retained relevant team-administration information; and explicitly restored cumulative `All previous features, plus` headings in a connected revision. | Mason's account, direct workshop messages, and four hash-verified working images establish a same-offer exploration and his collaborative contribution. They do not establish a production state or verbatim authorship of every generated line. | No measured usability or commercial result is established. Private claim ceiling: Mason helped develop a clearer proposed grid structure. The genuine working images may form a proposal before-and-after; do not call them production states or say the proposal shipped, caused the 2025 page, or produced a measured comparison improvement. |
+| Translator pricing-grid scannability and cumulative structure, June-July 2024 | `MON-06` | Restructured the Translator plan cards with the product team so each tier showed what it added instead of repeating inherited benefits; set goals for shorter, more consistent benefit wording; identified distinct benefits; retained relevant team-administration information; and explicitly restored cumulative `All previous features, plus` headings in a connected revision. | Mason's account, direct workshop messages, and four hash-verified working images establish the connected work and his collaborative contribution. The cumulative structure shipped and remains live on the current public page. The images are working artifacts, not production screenshots, and do not establish verbatim authorship of every generated line or exact file-to-production lineage. | No measured usability or commercial result is established. Private claim ceiling: Mason restructured the Translator plan cards with the product team around cumulative tier differences, and that structure shipped. Do not call the working images production states or claim sole ownership, sole causation, exact implementation identity, measured comparison improvement, conversion, or revenue impact. |
 | Product and plan naming and terminology, 2024 | `SYS-04` | Helped conceive, draft, edit, and extend naming guidance across Translator, Write, API, Voice, bundles, full names, shortened forms, sentence case, free-version language, and the distinction between plans and subscriptions. | Mason's account and direct project messages establish collaborative work. They do not identify the verbatim author of every generated line or every draft. The embedded launch terminology says the source of truth was owned by UX Writing and reviewed with Product Marketing. | No organization-wide adoption result is established. Private claim ceiling: Mason helped shape the naming system within a team-owned practice. Do not claim sole creation, sole ownership, or universal adoption. |
 | Repeatable copy-review workflow, 2024 Q4 | `SYS-01` | Helped design a repeatable review approach for upgrade and upsell modals using project specifications, conversion-copy practice, brand and style guidance, correct plan names, localization constraints, distinct options, and a hypothesis for each recommendation. | Mason's account and direct instructions establish his conception, criteria, editing, and iterative direction. Existing `SYS-01` separately covers later structured content guidance. Production deployment and team-wide use are not established. | No conversion, efficiency, or adoption result is established. Private claim ceiling: Mason helped develop a repeatable AI-assisted review approach. Do not claim automated quality improvement, production status, organization-wide use, or measured savings. |
 | Pricing Page V2 and packaging communication, 2024 Q4-2025 Q1 | `MON-04` | Supported the later program through competitor research, messaging analysis, action planning, value-proposition exploration, headline concepts, and test-ready trial, pricing, cancellation, and plan-comparison copy. | Direct project messages and a self-reflection establish contribution. The work was recorded as in progress and not fully rolled out. | No final test result is present. Private claim ceiling: Mason supported Pricing Page V2 content preparation. Do not claim that it launched, map it to a specific later public state, or attach conversion or revenue results. |
@@ -32,7 +32,7 @@ remain separate.
 | Workstream | Artifact | Contribution | Lifecycle | Outcome | Permission |
 | --- | --- | --- | --- | --- | --- |
 | Write Pro launch content | Verified working artifacts | Mason-confirmed collaborative conception, writing, editing, direction, and correction; exact verbatim authorship varies | Workshop/exploration; exact variants unknown | Unknown | Private; public use unapproved |
-| 2024 grid proposal | Verified working artifacts | Mason-confirmed collaborative content-design work; exact verbatim authorship varies | Working proposal only | Unknown | Private; raw-export assets unapproved |
+| 2024 grid work | Verified working artifacts | Mason-confirmed collaborative content-design work; exact verbatim authorship varies | Cumulative structure shipped; exact working-file lineage is unknown | No measured result | Private; raw-export assets unapproved |
 | Naming and terminology | Verified working context | Mason-confirmed collaborative conception, drafting, editing, and correction within team-owned work | Workshop/drafting context; adoption unknown | Unknown | Private; internal guidance unapproved |
 | Review workflow | Verified workshop record | Mason-confirmed conception, criteria, editing, and iterative direction | Exploration; deployment unknown | Unknown | Private; internal workflow unapproved |
 | Pricing Page V2 | Verified | Verified | In progress/not fully rolled out in reviewed record | Unknown | Private; public use unapproved |
@@ -57,12 +57,13 @@ remain separate.
 ## Separation rules
 
 - Do not use Write Pro launch work as proof of Pricing Page V2 contribution.
-- Do not use Pricing Page V2 as proof that the June-July 2024 grid proposal
-  shipped.
+- Do not use Pricing Page V2 as proof of the June-July 2024 grid work or its
+  lifecycle.
 - Do not turn contextual short forms into simultaneous product or tier
   inconsistency.
-- Do not use a later public cumulative or add-on state as evidence of Mason's
-  causation.
+- Use Mason's account for his collaborative contribution and the public page
+  for the shipped cumulative product state. Do not convert either into sole
+  causation or exact working-file lineage.
 - Do not attach the wider Pro Driver experiment result to these pricing or
   Write Pro workstreams.
 - Mason's account supports collaborative involvement across the wider Voice and

@@ -24,10 +24,11 @@ implementation truth.
 | --- | --- | --- |
 | [`pricing-evolution-story-spec-rejected-2026-07-25.md`](pricing-evolution-story-spec-rejected-2026-07-25.md) | 2026-07-25 | Rejected story specification preserved for recovery. |
 | [`pricing-evolution-story-spec-revision-3-2026-07-25.md`](pricing-evolution-story-spec-revision-3-2026-07-25.md) | 2026-07-25 | Later paused presentation revision. It is not accepted narrative truth. |
+| [`pricing-evolution-narrative-rejected-2026-07-27.md`](pricing-evolution-narrative-rejected-2026-07-27.md) | 2026-07-27 | Step 23 narrative and attempted repair rejected by Mason. Preserve only as failure history; never reuse its prose or structure. |
+| [`pricing-evolution-step-24-review-invalidated-2026-07-27.md`](pricing-evolution-step-24-review-invalidated-2026-07-27.md) | 2026-07-27 | Reader review invalidated by Mason's rejection. It is not evidence that the narrative passed. |
 
 The current private story specification outside the archive is also paused and
-rejected. It remains in place only as part of the frozen candidate until the
-later reader-review gate.
+rejected. No current pricing narrative has passed reader review.
 
 ## Selection and execution history
 
