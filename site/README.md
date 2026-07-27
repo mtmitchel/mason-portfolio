@@ -80,7 +80,7 @@ Passing checks does not establish that the narrative or visual pacing works.
 ## Evidence
 
 Selected public visuals live under `public/work/<case>/`. Their private source,
-crop, caption, dimensions, alternative text, and permission state are recorded
+crop, caption, dimensions, and alternative text are recorded
 in
 [`../private-evidence/portfolio-asset-manifest.json`](../private-evidence/portfolio-asset-manifest.json).
 
@@ -94,7 +94,7 @@ it sit better on the page; change the frame instead. `-trim` is not always
 idempotent, so repeat it until the result stops changing, and record the
 resulting zero margins in the manifest.
 
-## Publication state
+## Deployment state
 
 The site is not published. The repository is private. Commit and push do not
 authorize access changes, a saved hosting version, or deployment.

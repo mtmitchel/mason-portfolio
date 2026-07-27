@@ -27,7 +27,7 @@ relax anything it requires.
   repository except under the ignored `tmp/`.
 - Subagents inherit these instructions only if you restate them. When
   delegating, name the evidence owner the subagent may read and repeat the
-  prohibition on publishing private evidence.
+  rule that Mason selects the evidence used in the site.
 - The approval gates in `AGENTS.md` — commit, push, deployment, Figma writes,
   destructive actions — are not satisfied by a permission-mode allowlist. Ask
   Mason each time.

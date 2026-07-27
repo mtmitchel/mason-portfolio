@@ -4,13 +4,29 @@ Private, source-linked reconstruction of Mason Mitchel's work and outcomes at De
 
 ## Privacy boundary
 
-This directory belongs under `private-evidence/`. It contains employment-review material, internal project names, performance metrics, message identifiers, and excerpts from private ChatGPT conversations. Do not copy it into the public portfolio site or publish it without reviewing and redacting the contents.
+This directory belongs under `private-evidence/`. It contains employment-review
+material, internal project names, performance metrics, message identifiers, and
+excerpts from private ChatGPT conversations. Mason chooses what appears in his
+portfolio. When he selects material from this directory, identify concrete
+personal data, credentials, internal identifiers, and unsupported claims for
+his decision.
 
 The raw ChatGPT export remains at:
 
 ```text
 /home/mason/Downloads/gptexport
 ```
+
+The broad 23-project discovery audit remains beside that raw export:
+
+```text
+/home/mason/Downloads/gptexport/deepl-project-candidate-audit.md
+```
+
+It is a discovery input, not a claim owner or case-study draft. The current
+[`candidate queue`](../deepl-project-candidate-queue.md) reconciles it with the
+complete Figma extraction, current CV, achievement ledger, and claim review.
+The repository-root instructions own selection and writing workflow.
 
 It was deliberately not moved here because the 278 MB export contains
 thousands of unrelated private conversations. The raw export remains the source
@@ -25,7 +41,7 @@ are the primary supplemental sources. Their synthesis is
   — active owner for the paused pricing recovery, direct-source chronology,
   contribution map, and corrected claim routing.
 - [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md)
-  — general portfolio scope, metric framing, writing hierarchy, and publication
+  — general portfolio scope, metric framing, writing hierarchy, and factual
   boundaries. Its pricing direction remains paused.
 - [`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md) — canonical paired CV and portfolio language covering every recovery record exactly once.
 - [`artifacts/outcome-evidence.md`](artifacts/outcome-evidence.md) — strongest positive outcomes, growth and revenue candidates, evidence quality, and missing-source warnings.
@@ -36,6 +52,10 @@ are the primary supplemental sources. Their synthesis is
 - [`../performance-review.md`](../performance-review.md) — deduplicated source
   inventory and synthesis of the recovered HiBob reflections, derivative
   drafts, and DeepL guidance files.
+- `/home/mason/Downloads/gptexport/deepl-project-candidate-audit.md` — broad
+  discovery source across 23 possible projects.
+- [`../deepl-project-candidate-queue.md`](../deepl-project-candidate-queue.md) —
+  current combined source reconciliation, ranking, coverage, and freeze owner.
 
 ## Current findings
 
@@ -145,7 +165,7 @@ scope of Mason's contribution.
 
 ## Useful supporting evidence still missing
 
-These sources would improve case-specific attribution, public substantiation, or
+These sources would improve case-specific attribution, claim substantiation, or
 historical completeness. They are not prerequisites for using Mason-confirmed
 business outcomes in his CV at their honest team, program, campaign, platform,
 or experiment-wave scope:
@@ -156,7 +176,7 @@ or experiment-wave scope:
 4. Apps & Integrations experiment results and download-attribution reporting.
 5. Evidence that the recovered HiBob self-reflection was submitted, plus the corresponding manager evaluation or calibrated outcome.
 
-## Publication rule
+## Career and portfolio use
 
 Use
 [`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md)
@@ -164,10 +184,11 @@ as the canonical career-language source and
 [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md)
 as the general portfolio-decision owner, with the active pricing-project index
 governing the paused pricing exception. Mason-confirmed
-business-intelligence outcomes may be used in CV and private portfolio copy
-when the wording accurately
+business-intelligence outcomes may be used in CV and portfolio copy when the
+wording accurately
 separates Mason's contribution from the team, program, campaign, platform, or
 experiment-wave result. Do not attribute an aggregate result to one screen,
-copy variant, or sole personal causation. Raw dashboards remain private and are
-not required for CV use. Any public portfolio release still requires Mason's
-factual, confidentiality, wording, access, and deployment approval.
+copy variant, or sole personal causation. Raw dashboards contain internal
+operational detail and are not required for CV use; flag any selected detail
+for Mason. Mason alone chooses what material appears. External publication,
+access changes, and deployment still require his separate explicit approval.

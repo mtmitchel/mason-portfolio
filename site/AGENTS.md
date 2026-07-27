@@ -1,6 +1,7 @@
 # Mason Portfolio site instructions
 
-The repository-root [`AGENTS.md`](../AGENTS.md) applies first. This file owns
+The repository-root [`AGENTS.md`](../AGENTS.md) applies first and owns story
+selection, visual proposal, writing, and review routing. This file owns
 application implementation and validation.
 
 ## Product direction
@@ -12,7 +13,8 @@ application implementation and validation.
 - Put every important claim beside the image or excerpt that supports it.
 - Use before and after only for two real states.
 - State Mason's role in normal prose.
-- Keep source handling, claim limits, and publication notes out of public copy.
+- Keep source handling, claim limits, and internal review notes out of public
+  copy.
 - The current case order and section order live in
   [`../private-evidence/deepl-portfolio-current-direction.md`](../private-evidence/deepl-portfolio-current-direction.md)
   as the current candidate. When Mason rejects the story or a reader review

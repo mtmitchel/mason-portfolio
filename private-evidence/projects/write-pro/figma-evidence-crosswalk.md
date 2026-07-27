@@ -4,7 +4,6 @@ Status: Active private project crosswalk
 
 Last updated: 2026-07-26
 
-Public use: Not approved
 
 This file owns the current Write Pro achievement-to-Figma relationship. Write
 Pro is a historical product lane, not a synonym for every Pro Driver. Read the
@@ -34,18 +33,18 @@ his verbatim wording, sole ownership, lifecycle, or outcomes.
 
 | Canonical area | Disposition | Supported use | Boundary |
 | --- | --- | --- | --- |
-| `01 — Product & landing page`; preserved-source candidates `4:184736` and `5:314534`, plus contribution-context node `4:186544` | Canonical with private variants | Historical product, benefit, landing-page, limit-state, and review-context artifacts | Launch status, exact authorship, approval, shipment, and publication permission are unverified. |
+| `01 — Product & landing page`; preserved-source candidates `4:184736` and `5:314534`, plus contribution-context node `4:186544` | Canonical with private variants | Historical product, benefit, landing-page, limit-state, and review-context artifacts | Launch status, exact authorship, approval, and shipment are unverified. |
 | `02 — Pricing & upgrade surfaces` | Canonical | Conditional upgrade and account-state copy | Check plan, account, pricing, and unreleased-state data. |
 | `03 — Experiments & variants` | Canonical alternatives | Variant and rejected-language context | No winning-variant or result claim without an exact readout. |
-| `80 — Components & content patterns` | Canonical references | Private content-pattern and process support | Do not publish canvas annotations or internal guidance. |
+| `80 — Components & content patterns` | Canonical references | Private content-pattern and process support | Canvas annotations and internal guidance may contain concrete internal details; flag them for Mason if selected. |
 | `90 — Source map & deferred` | Provenance only | Source routing and unresolved relationships | Not an export page. |
 
 ## Achievement crosswalk
 
 | Recovery record | Figma relationship | Ceiling |
 | --- | --- | --- |
-| `MON-05` — Write Pro launch and monetization content | Correlated private artifact candidates at preserved-source nodes `4:184736` and `5:314534`; `4:186544` adds review context. Direct GPT attachments describe the work more precisely than the Figma nodes do. | Mason's account and the project record support collaborative launch-content work, including conception, writing, editing, constraints, and corrections. The nodes do not by themselves prove verbatim authorship, approval, shipment, sole launch ownership, adoption, outcomes, or publication permission. |
-| `MON-01` — Pro Driver experiment wave | Correlated candidate across pricing/upgrade and experiment pages; exact winning frame unresolved | The [current claim-review owner](../../claim-review.md#upgrade-prompts-across-translator-and-write) permits Mason's confirmed 12% paid-conversion lift and seven-figure ARR uplift only at overall wave scope. Figma does not substantiate the result, and the retired granular formulations must not be used. |
+| `MON-05` — Write Pro launch and monetization content | Correlated private artifact candidates at preserved-source nodes `4:184736` and `5:314534`; `4:186544` adds review context. Direct GPT attachments describe the work more precisely than the Figma nodes do. | Mason's account and the project record support collaborative launch-content work, including conception, writing, editing, constraints, and corrections. The nodes do not by themselves prove verbatim authorship, approval, shipment, sole launch ownership, adoption, or outcomes. |
+| `MON-01` — Pro Driver experiment wave | Correlated candidate across pricing/upgrade and experiment pages; exact winning frame unresolved | The [current claim-review owner](../../claim-review.md#upgrade-prompts-across-translator-and-write) supports Mason's confirmed 12% paid-conversion lift and seven-figure ARR uplift only at overall wave scope. Figma does not substantiate the result, and the retired granular formulations must not be used. |
 | `SYS-01` — repeatable review workflow | Contextual to variant and content-pattern pages | Mason's account supports his conception, criteria, editing, direction, and application of the AI-assisted approach. Production deployment, team adoption, and measured improvement remain separate and unproved. |
 | `SYS-04` — naming guidance | Contextual across product, pricing, and content-pattern pages | Mason's collaborative conception, drafting, editing, and correction within the team-owned naming system are supported. Exact verbatim authorship varies; implementation and universal adoption remain separate. |
 
@@ -74,8 +73,8 @@ and performance remain unproved.
   contribution relationship, while the note alone does not establish exact
   wording, selection, approval, or implementation.
 
-These dispositions do not select a public visual or authorize a Figma edit,
-export, publication, or site change.
+These dispositions record evidence relationships only. No public visual
+selection, Figma edit or export, publication, or site change occurred.
 
 Detailed direct-CUA checkpoints, source moves, and troubleshooting remain in
 the

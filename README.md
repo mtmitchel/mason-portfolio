@@ -6,20 +6,33 @@ work. The deployable application lives in [`site/`](site/).
 
 ## Start here
 
+- [`AGENTS.md`](AGENTS.md) — canonical portfolio-content workflow, evidence
+  boundaries, approvals, and repository rules.
 - [`site/README.md`](site/README.md) — live routes, application structure,
   local commands, and publication state.
+- [`private-evidence/deepl-project-candidate-queue.md`](private-evidence/deepl-project-candidate-queue.md)
+  — combined GPT-audit, Figma, CV, and achievement ranking. It owns the current
+  DeepL work order and frozen or represented dispositions.
 - [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
   — current page titles, candidate story direction, writing rules, and homepage
   decisions.
 - [`private-evidence/claim-review.md`](private-evidence/claim-review.md) —
-  factual and publication limits for every public case.
+  factual limits for every case.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
-  — source, crop, dimensions, caption, alternative text, and permission state
-  for selected visuals.
+  — source, crop, dimensions, caption, and alternative text for selected
+  visuals.
 - [`private-evidence/README.md`](private-evidence/README.md) — private evidence
   and source-material index.
 - [`archive/README.md`](archive/README.md) — index of retired code, old reviews,
   completed research, and historical snapshots.
+
+## Portfolio content workflow
+
+![Three-stage portfolio-content workflow: rank the candidates, show Mason the story, then write and review the rendered page.](docs/portfolio-content-workflow.png)
+
+This image is a quick reference, not a second policy owner. The repository-root
+[`AGENTS.md`](AGENTS.md) owns the workflow; the candidate queue owns ranking and
+work status.
 
 ## Repository layout
 
@@ -56,15 +69,15 @@ Then run the final whitespace check from this directory:
 git diff --check
 ```
 
-## Privacy and publication
+## Source control and deployment
 
 Private evidence is tracked so the complete working context can be recovered on
 another machine. The repository must remain private. A commit or push is only a
 source-control checkpoint; it does not publish or deploy the site.
 
-Public release still requires Mason's separate approval for the final wording,
-employer rights, redactions, repository access, and deployment. Unsupported
-claims are omitted from the site instead of explained with a public disclaimer.
+Mason controls the final wording, source selection, repository access, and
+deployment. Unsupported claims are omitted from the site instead of explained
+with a public disclaimer.
 
 Evidence rules protect factual integrity; they do not determine case-study
 structure or prose. A story spec or passing test suite remains provisional

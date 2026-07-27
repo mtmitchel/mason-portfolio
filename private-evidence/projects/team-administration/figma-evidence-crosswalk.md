@@ -4,7 +4,6 @@ Status: Active private project crosswalk
 
 Last updated: 2026-07-26
 
-Public use: Not approved
 
 This file owns the current Team Administration achievement-to-Figma
 relationship. Read the
@@ -39,12 +38,12 @@ verbatim authorship, sole ownership, lifecycle, or outcomes by itself.
 | Canonical area | Current relationship | Supported use | Boundary |
 | --- | --- | --- | --- |
 | `01 — Users & membership`; exact section `2:27176` | Correlated/contextual to `IAM-02` and `ATE-01` | User-management flow and content-state evidence | Inspect every nested name, email, and account value. |
-| `02 — Invitations`; retained node `2:56199` | Correlated/contextual to `IAM-02` and `ATE-01` | Invitation scope and consequence copy | Invitation links and emails are private-only. |
+| `02 — Invitations`; retained node `2:56199` | Correlated/contextual to `IAM-02` and `ATE-01` | Invitation scope and consequence copy | Invitation links and emails are source-only. |
 | `03 — Bulk actions & groups`; retained node `2:57881` | Correlated/contextual to `IAM-02` and `ATE-01` | Bulk selection, destructive-action separation, and confirmation copy | User identifiers require redaction; no error-reduction claim. |
 | `04 — CSV import`; retained node `2:97159` | Contextual to `ATE-01` | Import flow and invalid-email edge copy | CSV data and email examples require redaction. |
 | `05 — Restrictions & edge states`; source `2020:8502` and SSO references | Contextual to `IAM-02` and `ATE-01` | Restriction and edge-state copy | MFA evidence cannot substantiate SSO; inspect tenant data. |
 | Pages `70–89` | Private source, component, dialog, user-state, and reference families | Provenance and content-pattern support | Not public export sources without item-level privacy and lifecycle review. |
-| `90 — Source map & deferred` and `99 — Historical archive` | Provenance only | Source comparison and unresolved-history retention | Not active-design or publication evidence. |
+| `90 — Source map & deferred` and `99 — Historical archive` | Provenance only | Source comparison and unresolved-history retention | Not evidence of an active design, contribution, lifecycle, or outcome. |
 
 ## Current reviewed bulk-deletion sequence
 
@@ -56,7 +55,7 @@ verbatim authorship, sole ownership, lifecycle, or outcomes by itself.
 - empty filtered result and feedback: [`2:54189`](https://www.figma.com/design/fFC8RdkCw0eMe1pTlMEmYx/DeepL-%E2%80%94-Team-Administration-%E2%80%94-Canonical?node-id=2-54189).
 
 The reviewed frames use fictional demo accounts. That supports a safer
-selection, not general publication permission.
+selection, not general source support.
 
 Detailed archive-extraction checkpoints, alias inventories, and
 troubleshooting remain in the

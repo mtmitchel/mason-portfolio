@@ -1,7 +1,8 @@
 # Private evidence
 
 This directory contains the current private owners and source material used to
-check the portfolio. Nothing here is cleared for public release by default.
+check the portfolio. Mason selects what appears in the portfolio; these files
+are evidence and working records, not deployable site content.
 
 ## Current owners
 
@@ -9,11 +10,11 @@ check the portfolio. Nothing here is cleared for public release by default.
   — current page titles, candidate story direction, writing rules, and homepage
   decisions. Its pricing direction is paused and routed through the active
   pricing-project index below.
-- [`claim-review.md`](claim-review.md) — factual claim ceilings and publication
-  decisions; it does not own narrative structure or tone.
+- [`claim-review.md`](claim-review.md) — factual claim ceilings; it does not own
+  narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visuals and their private sources, crops, dimensions, captions,
-  alternative text, and permission state.
+  and alternative text.
 - [`asset-duplicate-classification.md`](asset-duplicate-classification.md) —
   SHA-256 classification and preservation disposition for exact duplicate
   files.
@@ -26,6 +27,10 @@ check the portfolio. Nothing here is cleared for public release by default.
   — binding product and navigation correction for the copied Figma files.
 - [`deepl-achievement-recovery/README.md`](deepl-achievement-recovery/README.md)
   — recovery package, evidence levels, scripts, and canonical career language.
+- [`deepl-project-candidate-queue.md`](deepl-project-candidate-queue.md) —
+  current ranked reconciliation of the GPT audit, complete Figma extraction,
+  current CV, achievement ledger, and claim review. It does not own factual
+  claims or the story workflow.
 - [`performance-review.md`](performance-review.md) — deduplicated performance
   review synthesis.
 
@@ -51,11 +56,15 @@ rejected draft final, and they do not replace narrative judgment. Targeted
 historical and reconstruction records may support chronology, intent,
 rationale, and tradeoffs when their source status remains clear.
 
+Broad source-side audits may identify candidates, but they do not become new
+portfolio owners. Reconcile and rank them in the current candidate queue. The
+repository-root instructions own what happens after a candidate is selected.
+
 Mason's current account is the primary source for his own role, participation,
 contribution, intent, and rationale. Missing contributor metadata or a missing
 second source is not a reason to exclude work he identifies as his
-collaborative experience. Artifact, lifecycle, outcome, causation, and
-publication questions remain separate; none may be used as a substitute
+collaborative experience. Artifact, lifecycle, outcome, and causation remain
+separate; none may be used as a substitute
 notary test for his contribution. Historical files that say otherwise record
 an older method and do not override the repository-root rule.
 

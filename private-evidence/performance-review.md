@@ -3,7 +3,7 @@
 **Review date:** 2026-07-26
 
 **Status:** Private canonical synthesis of eight reviewed source files
-**Public-use rule:** This file is evidence working material. Do not publish it or copy its private source references into the portfolio.
+Mason selects any material carried from this working record into the portfolio.
 
 ## Current Mason correction — 2026-07-21
 
@@ -150,7 +150,8 @@ The full-year reflection contains private development and employment-process mat
 
 - The recovered HiBob PDFs close the gap for an original self-reflection artifact.
 - They do not establish that the reflection was submitted, accepted by a manager, or used in calibration.
-- They do not recover the missing analytics dashboards, experiment canvases/readouts, exact launch records, or publication rights.
+- They do not recover the missing analytics dashboards, experiment
+  canvases/readouts, or exact launch records.
 - The current 25-record achievement inventory remains intact. The performance
   review family strengthens provenance for seven records and clarifies several
   claim ceilings without creating a new achievement family.

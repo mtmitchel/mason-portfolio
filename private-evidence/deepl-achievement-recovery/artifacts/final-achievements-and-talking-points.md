@@ -15,7 +15,8 @@ Each achievement family has one evidence-backed fact set and two applications:
 - **CV wording** is concise, uses Mason-confirmed business outcomes at the correct
   team, program, or experiment-wave scope, and avoids unsupported sole ownership
   or individual-variant causation.
-- **Portfolio use** identifies the strongest story angle and its relationship to the current evidence review. It is not permission to publish confidential material.
+- **Portfolio use** identifies the strongest story angle and its relationship
+  to the current evidence review. Mason chooses which material appears.
 
 Evidence labels retain the recovery package meanings: `confirmed`, `strong`,
 `supported_missing_attachment`, and `lead`. Mason's current account governs his
@@ -117,7 +118,7 @@ result.
 
 **Canonical achievement:** Optimized Google Play listing copy within strict store constraints and developed product/landing-page content for desktop apps, browser tools, Microsoft integrations, and cross-device product discovery.
 
-**Supported result:** Publishable acquisition experiments, page assignments, and
+**Supported result:** Acquisition experiments, page assignments, and
 migrations are documented. Mason confirmed the download and growth figures came
 from DeepL business intelligence; they describe platform scale and performance,
 not copy-only causation.
@@ -234,7 +235,10 @@ sole causation, measured usability improvement, conversion, or revenue impact.
 
 **CV wording:** Produced security- and account-management UX content across access authorization, audit logs, invitations, team groups, CSV member import, usage reports, and account-change alerts.
 
-**Portfolio use:** Supports the Team Administration bulk-action and CSV-import mini cases plus contextual process notes for account security. Confirm exact strings, lifecycle, collaborator credit, and confidentiality before publication.
+**Portfolio use:** Supports the Team Administration bulk-action and CSV-import
+mini cases plus contextual process notes for account security. Confirm exact
+strings, lifecycle, and collaborator credit, and flag any concrete personal
+data, credentials, or internal identifiers for Mason.
 
 **Withhold:** Ownership of team delivery processes, adoption of the proposed localization/process changes, shipment of every flow, and outcome metrics.
 
@@ -258,7 +262,9 @@ deployment, team-wide adoption, remediation, and time savings are not.
 
 **CV wording:** Built content-design tools and structured guidance, including a Figma review prototype and a dynamic-content inventory covering roughly 9,000 English Phrase keys.
 
-**Portfolio use:** Strong future methods mini case once the actual plugin, documentation, or dataset can be shown safely. Current Figma content patterns are illustrative context only.
+**Portfolio use:** Strong future methods mini case if Mason selects the actual
+plugin, documentation, or dataset. Current Figma content patterns are
+illustrative context only.
 
 **Withhold:** Sole creation or ownership of the naming system, production
 status, organization-wide use, measured efficiency, and claims that the tool
@@ -277,7 +283,8 @@ business intelligence; raw campaign reporting is not stored in this repository.
 
 **CV wording:** Developed a research-led localization report from a survey of 415 senior marketers across four countries, then repurposed the research into a blog and webinar-derived case studies.
 
-**Portfolio use:** Secondary marketing-writing example rather than a core UX case. Use only if the report or safe excerpts can be recovered and publication rights are confirmed.
+**Portfolio use:** Secondary marketing-writing example rather than a core UX
+case. Mason decides whether to use the report or excerpts.
 
 **Metric use:** The six-figure lead-generation-pipeline result may be used as a
 campaign outcome with contribution wording. Do not claim sole pipeline causation
@@ -312,10 +319,11 @@ career framing. At the next separately authorized CV/site edit:
   their team/program scope with contribution wording.
 - Keep the localization report's six-figure pipeline result at campaign scope;
   do not attribute the full result solely to one deliverable or person.
-- Keep raw dashboards and confidential operational detail private even when an
-  aggregated program metric is approved for CV or portfolio use.
+- Raw dashboards contain internal operational detail. Use aggregated program
+  metrics unless Mason selects more detail after reviewing the concrete risks.
 
-This task does not edit the CV PDF, public portfolio, site source, Figma, or publication state.
+This task does not edit the CV PDF, public portfolio, site source, Figma, or
+external publication state.
 
 ## Final claim ceiling
 

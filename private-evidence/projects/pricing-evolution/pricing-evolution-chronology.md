@@ -4,7 +4,6 @@ Status: Active private factual chronology
 
 Last verified: 2026-07-27
 
-Public use: Not approved
 
 This chronology owns the dated factual sequence for pricing evolution and
 Write Pro recovery. It does not choose the public case subject. It separates
@@ -14,7 +13,7 @@ change, and the later public product states.
 ## Evidence rules
 
 - Keep artifact existence, Mason's contribution, lifecycle, outcome, and
-  publication permission separate.
+  source support separate.
 - Treat Mason's current account as primary evidence of his role,
   participation, intent, rationale, and collaborative contribution. Use
   messages, AI-assisted exchanges, and attached working files to reconstruct

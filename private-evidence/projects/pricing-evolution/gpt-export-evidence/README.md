@@ -4,7 +4,6 @@ Status: Active private source register
 
 Curated: 2026-07-26
 
-Public use: Prohibited
 
 This register preserves only the GPT-export material needed for the recovered
 pricing, Write Pro, naming, and review-workflow records. The full export remains
@@ -96,8 +95,7 @@ repository.
 
 The supporting leads are retained for discovery. They may add collaborative
 contribution context under Mason's account, but they do not automatically
-create a new achievement family or raise a lifecycle, outcome, or permission
-ceiling.
+create a new achievement family or raise a lifecycle or outcome claim.
 
 ## Redacted direct excerpts
 
@@ -126,8 +124,9 @@ verify exact wording when needed.
 
 Every file below is a hash-preserved byte-for-byte copy of the external `.dat`
 asset. The extension reflects the detected binary format; no image was edited,
-redacted, recompressed, or exported. All remain private and unapproved for
-publication.
+redacted, recompressed, or exported. Mason chooses whether any appear in the
+portfolio. Inspect concrete personal-data, credential, internal-identifier,
+and factual risks before use and report them to him.
 
 | Date and source message | Curated attachment | Dimensions / format | SHA-256 | Evidentiary role |
 | --- | --- | --- | --- | --- |

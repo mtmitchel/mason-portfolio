@@ -1,8 +1,8 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Active; evidence recovery Steps 1–22 complete; rejected Step 23 draft
-and invalidated Step 24 review archived; Steps 23–25 reset; public pricing
-implementation frozen
+Status: Frozen at Mason's direction; evidence recovery Steps 1–22 complete;
+rejected Step 23 draft and invalidated Step 24 review archived; Steps 23–30 are
+inactive unless Mason explicitly reopens Pricing
 
 Last updated: 2026-07-27
 
@@ -10,10 +10,6 @@ This is the canonical work-status plan for recovering, organizing, and applying
 the pricing and Write Pro evidence. It does not own public claims, narrative
 decisions, or asset provenance. Those remain with the claim review, current
 direction, story brief, achievement recovery package, and asset manifest.
-
-The evidence, repository, and continuation context behind this plan is recorded
-in
-[`pricing-evolution-recovery-audit-2026-07-26.md`](pricing-evolution-recovery-audit-2026-07-26.md).
 
 ## 2026-07-26 correction and rollback decision
 
@@ -139,7 +135,7 @@ pricing owner from one index.
   tooling, and 2025 Pricing Page V2 work.
 
   Completed 2026-07-26. Each workstream now has separate artifact,
-  contribution, lifecycle, outcome, publication, and claim boundaries. Mason's
+  contribution, lifecycle, outcome, and claim boundaries. Mason's
   account is the primary contribution source; missing outside corroboration is
   not a downgrade.
 - [x] 6. Add the missing achievement records and claim ceilings to the recovery
@@ -291,7 +287,7 @@ relevant page.
   - current-asset replacement;
   - genuinely new evidence;
   - contextual evidence;
-  - private-only evidence;
+  - source-only evidence;
   - unresolved;
   - reject.
 
@@ -299,13 +295,13 @@ relevant page.
   1,190 manifest roots have been reviewed, and all 12 zero-root page records
   have explicit dispositions. The inventory records provisional artifact
   families, repeated-family accounting, raster limits, and unresolved
-  chronology, contribution, lifecycle, outcome, and permission questions.
+  chronology, contribution, lifecycle, outcome, and source-support questions.
   Candidate comparison and classification completed 2026-07-26. The inventory
   assigns every provisional candidate family to one Step 18 class, records its
   evidence ceiling, and routes only focused finalists or unresolved
-  relationships to Step 19. Classification does not approve an asset,
-  publication, or replacement. The approved Step 19 pass below later inspected
-  only those routed candidates.
+  relationships to Step 19. Classification routes evidence only; Mason chooses
+  what appears in the portfolio. The approved Step 19 pass below later
+  inspected only those routed candidates.
 
   A post-checkpoint adversarial audit found classification-table omissions even
   though the underlying saved-ledger reviews were complete. The table was
@@ -328,9 +324,9 @@ relevant page.
   native/unlocked and raster boundaries, readability, current-asset
   comparisons, and conditional Step 20 dispositions. The pass did not resolve
   authorship, approval, implementation, shipment, testing, adoption,
-  causation, outcomes, or publication permission. `CO-01A` was not inspected
+  causation, or outcomes. `CO-01A` was not inspected
   because checkout replacement was outside the approved Step 19 scope. No
-  Figma edit, export, public selection, or asset replacement occurred.
+  Figma edit, export, or asset replacement occurred.
 
   A post-audit read-only follow-up resolved the remaining upgrade-prompt mapping
   questions. The two identically named document nodes map unambiguously by their
@@ -347,8 +343,7 @@ relevant page.
   crosswalks. Three upgrade-prompt source candidates were added to the asset
   manifest: two exact visible-state matches and one historical visible-badge
   variant. Provenance correctly remains `missing` because export lineage is
-  unproved. No Figma edit, export, public selection, asset replacement, or site
-  change was made.
+  unproved. No Figma edit, export, asset replacement, or site change was made.
 
   Revalidated after the contribution-model correction. The crosswalks now keep
   Figma-only attribution limits separate from Mason's account of his wider
@@ -377,18 +372,19 @@ Step 18 gate passed: every approved page and planned batch was reviewed, all
 empty records were dispositioned, and every candidate family has one
 classification and evidence ceiling. The focused Step 19 live verification is
 complete, and the Step 20 private records allocation is complete. Figma edits,
-exports, public selection, and public-page work have not started.
+exports and public-page work have not started. Mason had not selected any
+portfolio material through this pass.
 
 ## Phase 6: Allocate the recovered work across the portfolio
 
 - [x] 21. Allocate recovered material across the pricing narrative,
   upgrade-prompts improvements, a possible Write Pro launch sample,
-  naming/content-system evidence, CV or achievement support, and private-only
+  naming/content-system evidence, CV or achievement support, and source-only
   records. Avoid overlapping cases.
 
   Completed and revalidated 2026-07-26. Every recovered workstream and all 35
   final Step 18 families now have one portfolio job, project route, reserve
-  decision, or explicit private/hold disposition. Limit-state work belongs to
+  decision, or explicit context-only/omit disposition. Limit-state work belongs to
   the existing upgrade-prompts case, product-page launch work remains a
   possible sample on reserve to avoid overlap, terminology belongs to
   content-system evidence, Pricing Page V2 supports achievements, and
@@ -408,7 +404,7 @@ exports, public selection, and public-page work have not started.
 
 Gate: each selected experience has one clear, non-overlapping portfolio job;
 Mason's account is accepted as contribution evidence; and remaining lifecycle,
-outcome, permission, and narrative boundaries are explicit. The evidence
+outcome, source-support, and narrative boundaries are explicit. The evidence
 allocation gate passed 2026-07-26. Mason's later rejection reopened the title,
 format, narrative, evidence sequence, and reader verdict.
 

@@ -507,7 +507,6 @@ test("the private manifest records active evidence and the corrected report cove
   const reportCover = files.find((file) => file.path === "report-campaign/report-cover.png");
   assert.equal(reportCover.dimensions, "978x1369");
   for (const asset of manifest.assets) {
-    assert.equal(asset.publication_permission, "unknown");
     assert.equal(asset.export_ready, false);
   }
 });

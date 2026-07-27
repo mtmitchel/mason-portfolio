@@ -7,11 +7,11 @@ This file states what the current portfolio may say. The
 [full historical audit](../archive/research/claim-review-history/claim-review-full-2026-07-24.md)
 is preserved in the archive.
 
-It owns factual and publication limits only. It does not prescribe case-study
+It owns factual limits only. It does not prescribe case-study
 structure, tone, emphasis, sentence style, or how supported intent, rationale,
 and interpretation should be narrated.
 
-## Public rule
+## Factual rule
 
 Mason's current account is valid evidence for his own role, participation,
 contribution, intent, and rationale. State a proportionate collaborative claim
@@ -38,7 +38,6 @@ untouchable, or ultimate truth.
 | Mason was the sole owner of a product strategy or interaction design. | Omit. Describe his writing and content-design contribution. |
 | A selected variant shipped. | Omit unless a current source separately proves it. |
 | User research, testing, support data, or a particular screen caused an outcome. | Omit unless a current source separately proves it. |
-| Mason has public rights to every historical DeepL screen. | Unconfirmed. The site remains private. |
 
 ## Upgrade prompts across Translator and Write
 
@@ -166,5 +165,5 @@ untouchable, or ultimate truth.
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json)
 
-Publication still requires Mason's separate factual, confidentiality, rights,
-access, and deployment approval.
+Mason controls the final wording, source selection, repository access, and
+deployment.

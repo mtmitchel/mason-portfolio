@@ -5,20 +5,18 @@ reopened after Mason rejected the Step 23 draft
 
 Last updated: 2026-07-27
 
-Public use: Not approved
 
 This record owns the portfolio allocation and provisional story decision made
 after pricing recovery Steps 1–20. It does not draft the Step 23 narrative,
-approve a public claim or asset, replace the factual claim review, or unfreeze
-the current site and rejected pricing drafts.
+replace the factual claim review, or unfreeze the current site and rejected
+pricing drafts. Mason chooses the claims and assets that appear.
 
-The allocation keeps artifact, contribution, lifecycle, outcome, permission,
-and narrative status separate. Mason's account is valid evidence of his role,
+The allocation keeps artifact, contribution, lifecycle, outcome, and narrative
+status separate. Mason's account is valid evidence of his role,
 participation, judgment, and collaborative contribution. Missing outside
 corroboration cannot demote or exclude work he says he helped conceive, write,
 edit, shape, or review. A Figma family can add artifact detail without proving
-exact verbatim authorship, approval, shipment, results, or publication
-permission.
+exact verbatim authorship, approval, shipment, or results.
 
 ## Portfolio jobs
 
@@ -31,7 +29,7 @@ permission.
 | Repeatable review workflow (`SYS-01`) | Content-system/tooling support | Keep with the wider structured-guidance and tooling achievement. Mason helped devise the criteria and iterative AI-assisted review approach. It may support a future methods mini case, but it does not belong in the pricing narrative. |
 | Pricing Page V2 (`MON-04`) | CV and achievement support | Retain Mason's collaborative research, messaging analysis, concepts, and test-ready copy as achievement evidence. Do not use it as the pricing case spine because it is a later initiative with no complete rollout or result in the reviewed record and would blur the focused 2024 grid story. |
 | Voice and API pricing surfaces | Broader collaborative context; omitted from this case | Mason's account supports involvement across the wider product-design work. Omit Voice and API from this pricing story because they dilute the focused Translator decision and repeat material better used in naming or product-system evidence—not because his contribution lacks outside proof. |
-| Sensitive, duplicated, hard-to-read, or lifecycle-unclear Figma families | Private context or hold | Preserve them under their existing private owners. Hold or omit them for a concrete reason such as personal data, internal critique, weak readability, duplication, an unclear lifecycle claim, overlap, or no useful narrative job. Missing outside corroboration of Mason's contribution is not a valid hold reason. |
+| Sensitive, duplicated, hard-to-read, or lifecycle-unclear Figma families | Context with concrete risks | Preserve them under their existing private owners. Record personal data, internal critique, weak readability, duplication, unclear lifecycle claims, overlap, and missing narrative jobs for Mason. Those findings inform his selection; missing outside corroboration of his contribution does not decide it. |
 
 The launch evidence is divided by surface function, not retold as several
 projects: limit-state work belongs to upgrade prompts; product-page work stays
@@ -44,16 +42,16 @@ Mason-contribution thread.
 Every final Step 18 family has one destination below. These are records routes,
 not public selections.
 
-| Portfolio job or hold | Step 18 families | Use |
+| Portfolio job or context | Step 18 families | Use |
 | --- | --- | --- |
-| Private context for the focused Translator pricing case | `PP-00A`, `PP-00B`, `PP-00C`, `PP-01`, `PP-02`, `PP-03`, `PP-06`, `PP-07`, `PP-08` | Use to understand responsive, bundle, hierarchy, question, and page-system context. Mason's account supplies the contribution relationship. These families remain contextual because they are mixed, repetitive, undated, hard to read alone, or unnecessary to the focused story; they do not establish lifecycle, outcome, or permission. |
-| Private naming, hierarchy, and copy-process reserve | `PP-00D`, `PP-04`, `PP-09`, `PP-10`, `PP-11`, `PP-12` | Preserve as possible cross-checks for later naming, content-system, or Pricing Page V2 work. Named quotations, internal status material, impact/effort material, unclear acceptance, and missing publication permission stay on hold. Do not treat absent Figma attribution as evidence that Mason did not contribute. |
+| Private context for the focused Translator pricing case | `PP-00A`, `PP-00B`, `PP-00C`, `PP-01`, `PP-02`, `PP-03`, `PP-06`, `PP-07`, `PP-08` | Use to understand responsive, bundle, hierarchy, question, and page-system context. Mason's account supplies the contribution relationship. These families remain contextual because they are mixed, repetitive, undated, hard to read alone, or unnecessary to the focused story; they do not establish lifecycle or outcome. |
+| Private naming, hierarchy, and copy-process reserve | `PP-00D`, `PP-04`, `PP-09`, `PP-10`, `PP-11`, `PP-12` | Preserve as possible cross-checks for later naming, content-system, or Pricing Page V2 work. Report named quotations, internal status material, impact/effort material, unclear acceptance, and missing source support to Mason as concrete context. Do not treat absent Figma attribution as evidence that he did not contribute. |
 | Existing checkout-case evidence, outside Pricing Evolution | `PP-05A`, `PP-05B`, `CO-01A`, `CO-01B`, `CO-02A`, `CO-02B`, `CO-03A`, `CO-03B`, `CO-05` | Route to the separate checkout project for later review. Do not use these families to enlarge or validate the pricing case. |
-| Possible Write Pro launch sample, held in reserve | `WP-01`, `WP-02A`, `WP-02B` | Preserve the native value, security, seat, banner, review, and hardblock context. Mason's account and workshop records support contribution; the reserve decision prevents story overlap. The families do not establish final selection, shipment, results, or permission. |
-| Existing upgrade-prompts case | `EX-01`, `EX-03` | Use the broad experiment family as private system context and the mapped limit-state family only for the three conditional source candidates. The exact visible-state relationships are resolved. Export lineage, lifecycle, outcome, and permission remain separate; Mason's account governs contribution. |
-| Pricing Page V2 achievement cross-check only | `EX-02` | Keep the cancellation, survey, comparison, usage, and downgrade decision space private. It may add artifact detail to `MON-04`, but it is not the sole source for Mason's contribution and is not currently a public exhibit. |
-| Other project owners; private only | `AR-01`, `AR-02` | Keep MFA material with Account Security and administrative material with Team Administration. Personal or operational data prevents pricing use. |
-| Sensitive publication hold | `CO-01C`, `CO-04` | Keep private because of personal data, a live-looking verification token, internal critique, unverified metrics, and missing permission. The hold does not question Mason's participation. |
+| Possible Write Pro launch sample, held in reserve | `WP-01`, `WP-02A`, `WP-02B` | Preserve the native value, security, seat, banner, review, and hardblock context. Mason's account and workshop records support contribution; the reserve decision prevents story overlap. The families do not establish final selection, shipment, or results. |
+| Existing upgrade-prompts case | `EX-01`, `EX-03` | Use the broad experiment family as private system context and the mapped limit-state family only for the three conditional source candidates. The exact visible-state relationships are resolved. Export lineage, lifecycle, and outcome remain separate; Mason's account governs contribution. |
+| Pricing Page V2 achievement cross-check only | `EX-02` | Keep the cancellation, survey, comparison, usage, and downgrade decision space as supporting context. It may add artifact detail to `MON-04`, but it is not the sole source for Mason's contribution and Mason has not selected it as an exhibit. |
+| Other project owners | `AR-01`, `AR-02` | Keep MFA material with Account Security and administrative material with Team Administration. These records do not belong in the pricing case and contain personal or operational data for Mason to inspect before any use. |
+| Concrete risk records | `CO-01C`, `CO-04` | Record the personal data, live-looking verification token, internal critique, and unverified metrics for Mason. These concrete risks inform his selection; they do not decide it or question his participation. |
 | Rejected as distinct portfolio evidence | `REJ-01` | Preserve in the raw ledger only. The empty, duplicate, raster-only, and incidental records add no separate portfolio job. |
 
 This allocation covers all 35 final Step 18 families exactly once.
@@ -78,7 +76,7 @@ The strongest available spine remains the connected `MON-06` sequence:
 This is a shipped content-design change, not a proposal story. The recovered
 images document the work in progress; they are not production screenshots.
 Exact wording, exact implementation lineage, sole ownership, measured outcomes,
-causation beyond Mason's contribution, and publication permission remain
+causation beyond Mason's contribution, and source support remain
 separate.
 
 Do not mention Write merely to supply pressure. Do not mention a comparison

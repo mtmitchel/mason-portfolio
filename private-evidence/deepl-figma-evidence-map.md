@@ -2,13 +2,12 @@
 
 Status: Active private routing owner
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
-Public use: Prohibited
 
 This index routes DeepL Figma evidence to project-level crosswalks. It replaces
-the former 2,189-line map as the active owner; it does not grant publication
-permission, prove shipment, or authorize Figma inspection or editing.
+the former 2,189-line map as the active owner; it does not prove shipment or
+authorize Figma inspection or editing.
 
 Read
 [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
@@ -42,14 +41,19 @@ untouchable, or the ultimate source of truth.
 | Monetization | [`projects/monetization/figma-evidence-crosswalk.md`](projects/monetization/figma-evidence-crosswalk.md) | Pricing, purchase, eligibility, limits, bundles, and Pro Driver surfaces across products. |
 | Pricing evolution overlay | [`projects/pricing-evolution/figma-evidence-crosswalk.md`](projects/pricing-evolution/figma-evidence-crosswalk.md) | Current relationship between the recovered pricing workstreams and the Write Pro and Monetization source domains. |
 
+Cross-source candidate reconciliation, scores, coverage, and work order belong
+only in the
+[`DeepL project candidate queue`](deepl-project-candidate-queue.md). Do not
+duplicate the 36-row candidate map in this routing index or the project
+crosswalks.
+
 The pricing-evolution
 [`running Figwright inventory`](projects/pricing-evolution/figwright-inventory.md)
 is the page-and-batch coverage and final-disposition owner for recovery steps
 15–20. Those steps are complete: the immutable ledger contains 655 parseable
 records across 69 pages, 1,190 roots, and 99 planned batches; all 99 batches and
 12 zero-root records were reviewed. The final crosswalk and manifest mappings
-remain private and conditional, with no Figma edit, export, public selection,
-or publication approval.
+record no Figma edit, export, public selection, or Mason selection.
 
 The
 [`achievement ledger`](deepl-achievement-recovery/artifacts/achievement-ledger.json)
@@ -59,8 +63,7 @@ The crosswalks record what Figma adds or does not add to those records.
 ## Evidence contract
 
 - Check both directions: achievement to Figma and Figma to achievement.
-- Keep artifact, contribution, lifecycle, outcome, and publication permission
-  independent.
+- Keep artifact, contribution, lifecycle, and outcome independent.
 - Figma metadata alone may not identify an exact contributor. That narrow
   limitation does not override Mason's account of his collaborative work.
   When Mason connects himself to a recovered project or artifact family, use
@@ -77,8 +80,7 @@ The crosswalks record what Figma adds or does not add to those records.
   implemented.
 - Flattened images, PDFs, and exports are historical artifacts, not active
   editable design.
-- Private or unresolved material remains non-public until a positive
-  permission and redaction decision exists.
+- Mason chooses which material appears in the portfolio.
 - Figma remains read-only unless Mason separately authorizes an edit.
 
 ## Current organizing destinations and preserved source files

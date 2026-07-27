@@ -12,8 +12,8 @@ The complete contiguous source range was exported as fresh 2x PNGs on
 | Class | Count | Location | Disposition |
 | --- | ---: | --- | --- |
 | Product states | 44 | `raw/` | Private review evidence; select only safe, unclipped states for portfolio derivatives. |
-| Process-note cards | 35 | `process-notes/` | Private-only. These are blue scenario notes, not product UI, and must never appear as portfolio visuals. |
-| Non-product source layers | 5 | `non-product-source-layers/` | Private-only. One label, one arrow, two connectors and one blank rounded rectangle. |
+| Process-note cards | 35 | `process-notes/` | Source evidence. These are blue scenario notes, not product UI. Mason has not selected them as portfolio visuals. |
+| Non-product source layers | 5 | `non-product-source-layers/` | source-only. One label, one arrow, two connectors and one blank rounded rectangle. |
 
 ## Product-state families
 
@@ -44,7 +44,7 @@ The complete contiguous source range was exported as fresh 2x PNGs on
 - Several populated states use fictional `evil-corp.com` addresses or
   staff-like `@deepl.com` examples. They remain private and must not be copied
   into the public asset tree.
-- Publication permission for every historical design remains unconfirmed.
+- source support for every historical design remains unconfirmed.
 
 ## Private sequence retained for possible future use
 

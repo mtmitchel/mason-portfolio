@@ -25,5 +25,5 @@ and team case uses only the documented MFA and bulk-deletion states under
 `site/public/work/account-team-security/`.
 
 These exports do not prove launch, adoption, outcome, sole ownership, or
-publication permission. Process-note cards, internal examples, staff-like
+source support. Process-note cards, internal examples, staff-like
 addresses, and operational frames remain private.

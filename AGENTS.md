@@ -13,7 +13,7 @@ the application.
   order, writing rules, and homepage choices. Its narrative choices remain
   revisable after explicit user criticism or a failed reader review.
 - [`private-evidence/claim-review.md`](private-evidence/claim-review.md) owns
-  factual and publication ceilings only. It does not own story structure,
+  factual ceilings only. It does not own story structure,
   emphasis, tone, or supported statements of intent and rationale.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
   owns selected-asset source and crop records.
@@ -60,6 +60,38 @@ Read only the owners required by the task:
 Do not scan every private source file by default. Narrow evidence work to the
 selected case, claim, frame, or acceptance result.
 
+## Story approval workflow
+
+Use one simple three-stage workflow:
+
+1. **Rank the candidates and take the first active story.** Keep one current
+   work queue, which owns the score and tie rules. Review only its highest
+   active candidate in one pass and record what artifact exists, what Mason
+   contributed, the supported lifecycle, the supported outcome or ending, and
+   any material unknown. Do not split this into separate source, connection,
+   and claim-gate phases or create a project folder for every candidate. The
+   current DeepL queue lives in
+   [`private-evidence/deepl-project-candidate-queue.md`](private-evidence/deepl-project-candidate-queue.md).
+2. **Show Mason the story before writing it.** Generate one visual proposal or
+   infographic in chat for every new full case, mini case, writing page, or
+   substantial rebuild. Include the proposed title, one-sentence synopsis, page
+   type, beginning-to-ending storyline, proposed images or excerpts, strongest
+   supported claims, material unknowns, and what the story will leave out. Do
+   not save a proposal file unless Mason asks for one. This gate does not apply
+   to candidate ranking, factual corrections, or minor maintenance. Mason may
+   approve, revise, or reject the direction. Do not draft portfolio prose or
+   implement the route before it is approved.
+3. **Write and review.** After Mason approves the visual direction, write the
+   case directly in its rendered site route. Create a durable project evidence
+   folder only for the approved story and only when its selected sources need
+   one. Run the independent hiring-reader review, apply warranted revisions,
+   and give Mason the rendered route as his single final qualitative review
+   surface. Do not assign separate prose drafts or reader notes for his review.
+
+The visual proposal is a story-selection aid, not a claim owner or a substitute
+for Mason's judgment. Its approval does not authorize commit, push, external
+publication, deployment, access changes, Figma writes, or destructive action.
+
 ## Working rules
 
 - Treat Mason's request as the objective and finish every safe, authorized
@@ -68,8 +100,8 @@ selected case, claim, frame, or acceptance result.
 - Keep one current source of truth for each decision. Move superseded work into
   the archive instead of leaving active stubs, duplicate instructions, or
   placeholder links.
-- Never publish private employment evidence, raw Figma links, internal
-  identifiers, or archived review material.
+- Mason selects the exact evidence and source material included in the site.
+  Do not add material he has not selected.
 - Aggregated business results may appear only at the documented program,
   experiment-wave, or campaign level.
 - Do not create screenshots, recordings, PDFs, or visual-diff files unless
@@ -127,7 +159,6 @@ selected case, claim, frame, or acceptance result.
 - Update current-direction and case-specific specs after the revised narrative
   has passed reader review. Do not use those documents to preserve a rejected
   draft.
-
 ## Protected phases
 
 Figma is read-only unless Mason explicitly approves an edit in the current

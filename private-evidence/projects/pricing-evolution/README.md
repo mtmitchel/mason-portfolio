@@ -5,8 +5,7 @@ archived; Steps 23–25 reset; no pricing narrative or implementation approved
 
 This is the active private index for the pricing evolution and Write Pro
 recovery work. It routes readers to the records that own or support each part
-of the work; it does not approve a public story, claim, asset, or
-implementation.
+of the work. Mason chooses the story, claims, assets, and implementation.
 
 The rejected public pricing case, its existing public assets, and its preserved
 private drafts remain frozen. The failed Step 23 narrative and invalidated Step
@@ -14,15 +13,14 @@ private drafts remain frozen. The failed Step 23 narrative and invalidated Step
 particular,
 [`pricing-evolution-story-spec.md`](../../pricing-evolution-story-spec.md) is a
 preserved rejected candidate, not accepted narrative truth. Do not resume the
-case until the recovery plan reaches the later evidence, reader-review, and
-implementation gates.
+case unless Mason explicitly reopens Pricing.
 
 Step 16 raw extraction and the Step 17 resume tracker are complete. The raw
 ledger covers 69 pages and 1,190 selected top-level roots. Step 18 reviewed all
 99 bounded batches across the 57 non-empty page records, dispositioned all 12
 zero-root records, and classified every provisional candidate family.
-Classification is private evidence routing, not asset approval or public
-selection. The approved Step 19 pass then used Figma Desktop read-only to check
+Classification is private evidence routing, not Mason's portfolio selection.
+The approved Step 19 pass then used Figma Desktop read-only to check
 only the routed Pricing page, Write Pro, cancellation, and upgrade-prompt
 candidates. It verified conditional Step 20 evidence leads and three native
 upgrade-prompt source candidates, but it did not prove that the current PNGs
@@ -54,14 +52,13 @@ from portfolio reconstructions created in 2026.
 | Area | Owner or supporting record | Current status |
 | --- | --- | --- |
 | Work status | [`pricing-evolution-recovery-plan.md`](../../pricing-evolution-recovery-plan.md) | Canonical plan, phase order, gates, and completion state. |
-| Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Phase 6 evidence owner. Every recovered family has one portfolio job or private/hold disposition. The `MON-06` sequence remains the strongest pricing spine, but the prior title, format, diagnosis, and narrative are reopened. |
-| Linux continuation | [`pricing-evolution-linux-handover-2026-07-27.md`](../../pricing-evolution-linux-handover-2026-07-27.md) | Detailed continuation record covering Mason's feedback, the Claude reset, research, lifecycle correction, asset readiness, unfinished skill changes, and the exact next sequence. |
-| Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. The Write Pro reconstruction and dated audit remain supporting records. |
+| Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Phase 6 evidence owner. Every recovered family has one portfolio job or context-only/omit disposition. The prior title, format, diagnosis, and narrative do not authorize new Pricing work. |
+| Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. |
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July Translator grid change, naming, repeatable review tooling, and Pricing Page V2. The ledger now states that Mason contributed to the cumulative structure that shipped while preserving the remaining claim limits. |
-| Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual and publication ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
-| Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Step 20 complete. Exact surviving private nodes are allocated with separate artifact, contribution, lifecycle, outcome, and permission ceilings. `Canonical` remains an organizing destination only. |
+| Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
+| Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Step 20 complete. Exact surviving private nodes are allocated across artifact, contribution, lifecycle, and outcome evidence. `Canonical` remains an organizing destination only. |
 | Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) and [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz) | Steps 18–20 complete: 69 pages, 1,190 roots, 99 of 99 review batches, 12 of 12 zero-root dispositions, every candidate family classified, all routed live checks dispositioned, and final records allocation documented. |
-| Asset provenance and genesis | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current source, crop, hash, caption, alternative-text, permission, exact-duplicate, and artifact-genesis records. Pricing files now distinguish historical-artifact crops from 2026 portfolio reconstructions. Three source-equivalent Figma frames are recorded as candidates, but the current upgrade-prompt PNGs correctly retain `missing` provenance because export lineage is unproved. |
+| Asset provenance and genesis | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current source, crop, hash, caption, alternative-text, exact-duplicate, and artifact-genesis records. Pricing files now distinguish historical-artifact crops from 2026 portfolio reconstructions. Three source-equivalent Figma frames are recorded as candidates, but the current upgrade-prompt PNGs correctly retain `missing` provenance because export lineage is unproved. |
 | Sources | [Pricing source locations](#pricing-source-locations) | Current private source exports, the active reconstruction, and the curated GPT register. The full raw export remains outside the repository. |
 | Paused and archived drafts | [Paused and archived records](#paused-and-archived-records) | Preserved for recovery and comparison only; none is an accepted public story. |
 
@@ -70,13 +67,11 @@ from portfolio reconstructions created in 2026.
 - [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) — current
   direct-source sequence and bounded unknowns.
 - [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md)
-  — current workstream, contribution, lifecycle, outcome, and publication
+  — current workstream, contribution, lifecycle, outcome, and factual
   boundaries.
 - [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md)
   — current Phase 6 portfolio jobs, strongest evidence spine, visual direction,
   and boundaries for a new narrative.
-- [`pricing-evolution-linux-handover-2026-07-27.md`](../../pricing-evolution-linux-handover-2026-07-27.md)
-  — self-contained continuation context and exact next sequence.
 - [`ux-content-design-portfolio-deep-research-report.md`](../../ux-content-design-portfolio-deep-research-report.md)
   — Mason's newly added market and portfolio research synthesis. Its citation
   markers are opaque, so use its analysis as direction and verify external
@@ -141,12 +136,3 @@ Archived and superseded:
   — rejected Step 23 draft and attempted repair; never use it as rewrite copy.
 - [`pricing-evolution-step-24-review-invalidated-2026-07-27.md`](../../../archive/research/pricing-evolution/pricing-evolution-step-24-review-invalidated-2026-07-27.md)
   — invalidated reader verdict retained only to document why the gate failed.
-
-## Historical continuation context
-
-[`pricing-evolution-recovery-audit-2026-07-26.md`](../../pricing-evolution-recovery-audit-2026-07-26.md)
-is the dated audit handoff behind the active plan. It preserves findings,
-source leads, known repository-check defects, acceptance for this recovery
-slice, and the recommended continuation into plan steps 4–7. It is historical
-context rather than current Git-state truth; current disk evidence takes
-precedence.

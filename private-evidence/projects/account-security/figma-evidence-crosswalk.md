@@ -4,7 +4,6 @@ Status: Active private project crosswalk
 
 Last updated: 2026-07-26
 
-Public use: Not approved
 
 This file owns the current Account Security achievement-to-Figma relationship.
 Read the
@@ -39,11 +38,11 @@ or require outside corroboration before portfolio consideration.
 
 | Canonical area | Current relationship | Supported use | Boundary |
 | --- | --- | --- | --- |
-| `01 — MFA setup`; source nodes `2:139549`, `2:140341`, `2:139090` | Correlated with `IAM-01` to `IAM-03` | Setup, enrollment, and recovery-entry artifact/state evidence | Check names, emails, comments, credentials, and internal URLs before any public use. |
+| `01 — MFA setup`; source nodes `2:139549`, `2:140341`, `2:139090` | Correlated with `IAM-01` to `IAM-03` | Setup, enrollment, and recovery-entry artifact/state evidence | Names, emails, comments, credentials, and internal URLs are concrete risks to flag for Mason if selected. |
 | `02 — Login & authentication`; source nodes `2:139889`, `2:138588`, `2:139885` | Correlated with the MFA evidence family | Login, enforcement, retry, and recovery-route evidence | Exact lifecycle and shipment are unresolved. |
-| `03 — Recovery & disable flows`; source nodes `2:138949`, `2:138955`, `2:137609` | Correlated with `IAM-01` to `IAM-03` | Recovery-code, reset, disablement, and consequence copy | Recovery-email and credential-bearing states are private-only without safe redaction. |
-| `04 — Admin enforcement`; source node `2:139900` | Contextual to `IAM-02` | Administrator expectation and enforcement-state evidence | The long source is private-only unless separately reviewed and sanitized. |
-| `80 — Copy & components` | Figma-supported or contextual only | Private content-pattern and component-process context | Canvas notes and comments are not publication evidence. |
+| `03 — Recovery & disable flows`; source nodes `2:138949`, `2:138955`, `2:137609` | Correlated with `IAM-01` to `IAM-03` | Recovery-code, reset, disablement, and consequence copy | Recovery-email and credential-bearing states contain concrete risks for Mason to consider. |
+| `04 — Admin enforcement`; source node `2:139900` | Contextual to `IAM-02` | Administrator expectation and enforcement-state evidence | The long source may contain personal data or internal identifiers; flag any found for Mason. |
+| `80 — Copy & components` | Figma-supported or contextual only | Private content-pattern and component-process context | Canvas notes and comments do not prove contribution, lifecycle, or outcome. |
 | Historical, alias, and cross-domain pages `81–102` | Figma-only, contextual, or unresolved | Provenance and duplicate comparison only | They are not Account Security claim homes or public export sources. |
 
 ## Current reviewed selection
@@ -58,7 +57,8 @@ The reviewed MFA sequence uses these canonical destinations:
 
 Credential-bearing re-enrollment node
 [`6004:14889`](https://www.figma.com/design/RvJJvJNBLl8XlrWD9Q6fWt/DeepL-%E2%80%94-Account-Security-%E2%80%94-Canonical?node-id=6004-14889)
-is private-only because it exposes a manual authenticator secret.
+exposes a manual authenticator secret; flag that concrete credential risk for
+Mason if he selects the state.
 
 Detailed historical aliases, reorganization checkpoints, and troubleshooting
 remain in the

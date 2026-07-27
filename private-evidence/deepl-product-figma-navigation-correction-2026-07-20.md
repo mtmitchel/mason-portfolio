@@ -122,7 +122,8 @@ actual product distribution.
 - `90 — Source map & deferred` contains Write Pro provenance and is not a
   product or export page.
 
-The existing PDF is a failed page-wide export and is not publication evidence.
+The existing PDF is a failed page-wide export and does not support artifact
+fidelity, lifecycle, contribution, or outcome claims.
 It is useful only for navigation and text discovery. Within that export:
 
 - Translator + Write bundle headings appear across dozens of frames;
@@ -219,7 +220,7 @@ candidates.
 5. Classify second by behavior: preview, limit, paid prompt, add-on, bundle,
    eligibility, plan change, checkout, verification, or activation.
 6. Record exact file, page, node, source alias, relationship type, evidence
-   level, confidentiality risk, and claim ceiling.
+   level, source-handling note, and claim ceiling.
 7. Search the achievement recovery in both directions. Record unmatched Figma
    artifacts and unmatched achievements rather than forcing a relationship.
 8. Keep Figma and restored sources read-only unless Mason separately authorizes

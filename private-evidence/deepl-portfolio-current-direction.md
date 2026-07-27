@@ -1,6 +1,6 @@
 # Current portfolio direction
 
-**Updated:** 2026-07-26
+**Updated:** 2026-07-27
 **Status:** Current decision owner
 
 This file records the current public structure. The
@@ -13,7 +13,7 @@ The homepage contains six cards in this order:
 
 1. **Upgrade prompts across Translator and Write** — `/work/upgrade-prompts`
 2. **Simplifying pricing across four products** — `/work/pricing-evolution`
-   (frozen public candidate; not the approved next title)
+   (frozen route; no title or story direction is approved)
 3. **Checkout across four purchase states** — `/work/checkout`
 4. **Account recovery and team administration** — `/work/account-team-security`
 5. **Turning localization research into a multi-format campaign** — `/work/report-campaign`
@@ -35,7 +35,7 @@ About stays at two short paragraphs:
    enterprise accounts; earlier product and editorial work includes Localyze,
    SmartRecruiters, Joblift, and Kitchen Stories.
 
-## Rules for every case
+## Current writing direction
 
 - Open with the complete story promised by the title.
 - State Mason's role in normal prose.
@@ -46,7 +46,7 @@ About stays at two short paragraphs:
 - Use captions to tell the reader what to notice.
 - Omit unsupported claims without displaying a disclaimer.
 - Keep source handling, crop notes, Figma variables, claim review, and
-  publication status private.
+  repository status out of public copy.
 - Let each case use its own story shape. Shared code handles presentation, not
   narrative order.
 
@@ -65,33 +65,17 @@ belong to the wider experiment wave.
 
 ### Pricing evolution
 
-**Narrative status, 2026-07-27:** Reopened. Mason rejected the Step 23 draft,
-the Step 24 verdict, and the attempted repair. No pricing title, format,
-narrative, story diagnosis, or site implementation is approved. The rejected
-draft and invalidated review are archived and prohibited as rewrite sources.
+**Status, 2026-07-27:** Frozen. Mason rejected the current Pricing direction.
+No Pricing title, format, narrative, proposal, story diagnosis, or route
+implementation is approved. Do not resume evidence reconstruction, story work,
+or site work unless Mason explicitly reopens Pricing.
 
-The strongest evidence still points to a focused Translator story built from
-the genuine June–July 2024 `MON-06` sequence. Mason restructured the plan cards
-with the product team so each tier showed what it added instead of repeating
-what it inherited. The cumulative structure shipped and remains visible on
-DeepL's current public pricing page. The clean repeated-list and revised
-cumulative images show the work in progress; they are not production
-screenshots. The red hand-annotated image stays private at Mason's direction.
-
-Do not mention Write as background unless a new draft gives it a necessary,
-developed role. Do not mention a comparison table unless the evidence sequence
-shows it. Voice and API remain out of scope. Keep exact wording, sole
-ownership, exact implementation lineage, sole causation, measured outcomes,
-and publication permission separate from Mason's established collaborative
-contribution.
-
-Before another draft, commit the researched writing and positioning safeguards
-to their canonical skills. Then have a fresh Claude Opus 5 Max session write
-the case from a blank page. The current owners are the
-[`recovery plan`](pricing-evolution-recovery-plan.md),
-[`allocation record`](projects/pricing-evolution/portfolio-allocation-and-story-diagnosis.md),
-and
-[`Linux handover`](pricing-evolution-linux-handover-2026-07-27.md).
+The current route and private candidate records remain preserved but are not a
+current candidate or rewrite source. The
+[`candidate queue`](deepl-project-candidate-queue.md) owns the freeze and
+disposition; the
+[`project index`](projects/pricing-evolution/README.md) routes the preserved
+evidence without authorizing continuation.
 
 ### Checkout across four purchase states
 
@@ -146,7 +130,7 @@ exact selectable samples, a first-person explanation of the writing decision,
 and a public link. Publication context appears only when the live source could
 mislead the reader about Mason's original contribution.
 
-## Evidence and publication
+## Evidence and deployment
 
 The selected-asset source and crop record is
 [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json). Current claim

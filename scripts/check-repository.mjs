@@ -414,7 +414,6 @@ for (const file of pricingEvolutionAsset?.files ?? []) {
 }
 
 for (const asset of manifestAssets) {
-  record(asset.publication_permission === "unknown", `${asset.id}: publication permission must remain unknown`);
   record(asset.export_ready === false, `${asset.id}: export_ready must remain false`);
 
   for (const file of asset.files ?? []) {
