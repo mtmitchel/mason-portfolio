@@ -19,8 +19,9 @@ Each achievement family has one evidence-backed fact set and two applications:
   to the current evidence review. Mason chooses which material appears.
 
 Evidence labels retain the recovery package meanings: `confirmed`, `strong`,
-`supported_missing_attachment`, and `lead`. Mason's current account governs his
-own role, participation, contribution, intent, and rationale. Missing outside
+`supported_missing_attachment`, `supported_retained_partial`,
+and `lead`. Mason's current account governs his own role, participation,
+contribution, intent, and rationale. Missing outside
 corroboration does not exclude work he identifies as collaborative experience.
 His direct corrections also govern CV and portfolio framing when raw analytics
 or attachment recovery is incomplete. This allows normal, scope-accurate
@@ -134,8 +135,9 @@ program context. Do not imply Mason's copy alone drove those totals.
 ## 6. Free-to-paid conversion experiments
 
 **Recovery IDs:** `MON-01`, `MON-02`, `MON-03`  
-**Evidence:** Confirmed contribution and Mason-confirmed program result; original
-experiment canvases/readouts are not in the repository
+**Evidence:** Confirmed contribution and Mason-confirmed program result; direct
+partial excerpts survive for DM-1523, DM-1418, and DM-1417, while the original
+binaries and complete canvas context are not held
 
 **Canonical achievement:** Partnered with Product Design, Content Design, and Monetization on benefit-led messaging for Pro Driver, checkout, and anonymous-user soft-block experiments.
 

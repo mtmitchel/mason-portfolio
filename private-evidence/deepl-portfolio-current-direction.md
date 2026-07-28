@@ -1,6 +1,6 @@
 # Current portfolio direction
 
-**Updated:** 2026-07-27
+**Updated:** 2026-07-28
 **Status:** Current decision owner
 
 This file records the current public structure. The
@@ -9,15 +9,18 @@ is preserved for history and does not override this file.
 
 ## Homepage and About
 
-The homepage contains six cards in this order:
+The homepage contains eight cards in this order:
 
 1. **Upgrade prompts across Translator and Write** — `/work/upgrade-prompts`
-2. **Simplifying pricing across four products** — `/work/pricing-evolution`
-   (frozen route; no title or story direction is approved)
+2. **Making the more expensive plan explain itself** —
+   `/work/pricing-evolution` (frozen, preserved implementation; the displayed
+   title and story are rejected rather than approved direction)
 3. **Checkout across four purchase states** — `/work/checkout`
 4. **Account recovery and team administration** — `/work/account-team-security`
 5. **Turning localization research into a multi-format campaign** — `/work/report-campaign`
 6. **Executive ghostwriting on global mobility** — `/work/localyze-executive-ghostwriting`
+7. **A working naming framework for a growing product portfolio** — `/work/product-naming`
+8. **Giving DeepL Voice two clear jobs** — `/work/voice-product`
 
 Keep the restrained three-column grid, the Selected work and Writing links, the
 short role line, and the current metadata placement and size. Do not add tags,
@@ -26,6 +29,10 @@ summaries, badges, or another filter.
 The pricing, account-security, and Localyze cards keep their silent loops. The
 localization-report card shows the complete `978 × 1369` report cover at its
 natural proportions. It must never be cropped.
+
+The Product Naming card uses a source-faithful selectable-text preview of the
+Write naming-order decision. Do not replace it with the archived decorative
+cover or another attractive image that does not advance the story.
 
 About stays at two short paragraphs:
 
@@ -55,20 +62,27 @@ About stays at two short paragraphs:
 ### Upgrade prompts across Translator and Write
 
 1. Different interruptions needed different explanations.
-2. Name why the task stopped.
+2. Show the document-limit copy as a working variable template until resolved
+   customer-state exports are available.
 3. Match the paid value to the task.
-4. Change the offer for the account state.
-5. Wave result.
+4. Show the value before the hard stop with four feature-awareness states.
+5. Change the offer for the account state.
+6. Escalate the offer between an inline allowance and a hard stop.
+7. End with the wider experiment-wave result.
 
 The 12% paid-conversion lift and seven-figure ARR increase appear once and
-belong to the wider experiment wave.
+belong to the wider experiment wave. If that aggregate result remains in the
+case, confirm the project dates, audience, sample, and baseline behind it. Do
+not attribute the result to an individual surface. Describe the selected
+feature-awareness and allowance states only at their supported lifecycle.
 
 ### Pricing evolution
 
 **Status, 2026-07-27:** Frozen. Mason rejected the current Pricing direction.
-No Pricing title, format, narrative, proposal, story diagnosis, or route
-implementation is approved. Do not resume evidence reconstruction, story work,
-or site work unless Mason explicitly reopens Pricing.
+The implemented route and homepage card remain preserved as rejected candidate
+state; their displayed title, format, narrative, and evidence selection are not
+approved direction. Do not resume evidence reconstruction, story work, or site
+work unless Mason explicitly reopens Pricing.
 
 The current route and private candidate records remain preserved but are not a
 current candidate or rewrite source. The
@@ -83,10 +97,16 @@ evidence without authorizing continuation.
 2. Keep a two-product offer visible at commitment.
 3. Scale the order to a team.
 4. Change timing and consent when no trial applies.
-5. Explore the complete purchase states.
-6. End with observable differences.
+5. Show the trial FAQ as a separate checkout exploration unless its direct
+   relationship to the four states is confirmed.
+6. Explore the complete purchase states.
+7. End with observable differences.
 
-The crop-led story comes first. The accessible switcher follows it.
+The crop-led story comes first. The accessible switcher follows it. Describe
+the selected screens as working states until final-string and launch status are
+confirmed. Add a project timeline or connect the FAQ only when the evidence
+supports them. Omit a completion, abandonment, or support-contact result unless
+a source supports it.
 
 ### Account recovery and team administration
 
@@ -97,6 +117,46 @@ The crop-led story comes first. The accessible switcher follows it.
 5. Confirm the filtered result.
 
 The page makes only observable claims about the selected states.
+
+Keep the category and current advanced draft in the homepage slate. Before
+publication, run the reader review and keep the lifecycle of the selected
+states at the supported level. Mason's current account can establish his role.
+If his account or the project record shows that recovery and team deletion were
+separate workstreams, split them into separate stories without demoting the
+product category.
+
+### A working naming framework for a growing product portfolio
+
+**Page type:** Full product case.
+
+1. Separate product, paid offer, collective label, free version, and bundle.
+2. Show the corrections that made the working rules reliable.
+3. Show the named Product-and-plan-names section and the Write naming-order
+   decision as two related but distinct artifacts.
+4. End at the draft contribution and decision logic, not an unverified
+   approval, publication, or adoption claim.
+
+The current evidence establishes that Mason was assigned to draft and
+contributed draft content to the Content Design System's product-and-plan-names
+section, drawing on a terminology source of truth owned by UX Writing and
+reviewed with Product Marketing. It does not establish final approval,
+publication, organization-wide adoption, sole ownership of the wider system,
+or that every later DeepL name followed these rules.
+
+### Giving DeepL Voice two clear jobs
+
+**Page type:** Mini product case.
+
+1. Establish one Voice category promise.
+2. Separate Meetings and Conversations into two recognizable buying jobs.
+3. End on the complete working comparison surface.
+
+Keep the mini case as an advanced draft, not a finished public story. Before
+publication, run the reader review and keep visual chronology, lifecycle, and
+commercial outcomes at the level the evidence supports. Mason's current
+account can establish his assignment and contribution. Add the
+use-case-specific FAQ architecture only if a clean artifact and its
+relationship to the same direction are confirmed.
 
 ### Turning localization research into a multi-format campaign
 

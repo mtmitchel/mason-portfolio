@@ -115,7 +115,7 @@ Read these files completely, in this order, before ranking candidates:
     - the current evidence assets under `site/public/work/`
 
 Use `artifacts/source-messages.json`, `artifacts/candidate-conversations.json`,
-and the raw export under `/home/mason/Downloads/gptexport` only to verify exact
+and the raw export under `/home/mason/Downloads/assistant-exports/chatgpt` only to verify exact
 source references for shortlisted claims. User-authored source messages and
 Mason's corrections outrank assistant prose.
 
@@ -133,7 +133,7 @@ an earlier classification decision matters:
 Run the existing read-only validator from the raw export directory:
 
 ```bash
-cd /home/mason/Downloads/gptexport
+cd /home/mason/Downloads/assistant-exports/chatgpt
 node "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-recovery/scripts/validate_outputs.mjs" \
   . \
   "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-recovery/artifacts"

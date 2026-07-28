@@ -3,3 +3,8 @@
 .DS_Store
 *.pem
 .env*
+
+# Raw personal-assistant exports. These carry full multi-account conversation
+# histories including unrelated private material, so they are never committed.
+# Curated extracts belong in private-evidence/ instead.
+/data-*batch-*.zip

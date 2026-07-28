@@ -1,6 +1,8 @@
 # DeepL achievement recovery
 
-Private, source-linked reconstruction of Mason Mitchel's work and outcomes at DeepL from a ChatGPT data export plus recovered local performance-review artifacts.
+Private, source-linked reconstruction of Mason Mitchel's work and outcomes at
+DeepL from the ChatGPT and Claude exports, recovered internal document text,
+Figma evidence, and local performance-review artifacts.
 
 ## Privacy boundary
 
@@ -14,19 +16,20 @@ his decision.
 The raw ChatGPT export remains at:
 
 ```text
-/home/mason/Downloads/gptexport
+/home/mason/Downloads/assistant-exports/chatgpt
 ```
 
 The broad 23-project discovery audit remains beside that raw export:
 
 ```text
-/home/mason/Downloads/gptexport/deepl-project-candidate-audit.md
+/home/mason/Downloads/assistant-exports/chatgpt/deepl-project-candidate-audit.md
 ```
 
 It is a discovery input, not a claim owner or case-study draft. The current
 [`candidate queue`](../deepl-project-candidate-queue.md) reconciles it with the
-complete Figma extraction, current CV, achievement ledger, and claim review.
-The repository-root instructions own selection and writing workflow.
+cross-export document inventory, complete Figma extraction and candidate ZIPs,
+current CV, achievement ledger, and claim review. The repository-root
+instructions own selection and writing workflow.
 
 It was deliberately not moved here because the 278 MB export contains
 thousands of unrelated private conversations. The raw export remains the source
@@ -52,10 +55,16 @@ are the primary supplemental sources. Their synthesis is
 - [`../performance-review.md`](../performance-review.md) — deduplicated source
   inventory and synthesis of the recovered HiBob reflections, derivative
   drafts, and DeepL guidance files.
-- `/home/mason/Downloads/gptexport/deepl-project-candidate-audit.md` — broad
+- `/home/mason/Downloads/assistant-exports/chatgpt/deepl-project-candidate-audit.md` — broad
   discovery source across 23 possible projects.
 - [`../deepl-project-candidate-queue.md`](../deepl-project-candidate-queue.md) —
-  current combined source reconciliation, ranking, coverage, and freeze owner.
+  current discipline-tagged source reconciliation, ranking, implemented-route
+  state, coverage, and freeze owner.
+- [`../deepl-document-inventory.json`](../deepl-document-inventory.json) —
+  canonical source-occurrence inventory across the ChatGPT and Claude exports.
+  It separates custody, origin, privacy, and the four claim dimensions.
+- [`../deepl-document-register.md`](../deepl-document-register.md) —
+  interpretation and safe-use guide for that inventory.
 
 ## Current findings
 
@@ -63,7 +72,8 @@ The curated ledger contains 25 achievement records:
 
 - 17 confirmed from contemporaneous project material
 - 2 strongly supported by project and review evidence
-- 4 with valuable metrics whose original experiment or analytics attachments are missing
+- 3 with valuable metrics supported by retained partial experiment excerpts
+- 1 with valuable metrics whose underlying analytics source is not held
 - 2 leads requiring further confirmation
 - 6 quarantined claims with attribution, contradiction, or invention risk
 
@@ -96,7 +106,9 @@ application when his account and project context connect them to the work.
   material identifies his work or deliverable.
 - `strong` — Mason's account is reinforced by review material, project records,
   or manager feedback.
-- `supported_missing_attachment` — the claim was extracted from an uploaded source and repeated in review material, but the uploaded source is absent from the export.
+- `supported_retained_partial` — a direct partial source excerpt survives in an
+  export content reference, but the original binary and complete context are
+  not held.
 - `lead` — the contribution or plan is credible, but a specific lifecycle or
   impact claim still needs clarification.
 - `excluded` — contradicted by Mason or traceable only to GPT invention; not suitable for portfolio or career claims.
@@ -138,14 +150,21 @@ inventoried in the master but are not independent achievement evidence.
 ### Reproducible scripts
 
 - `scripts/extract_deepl_evidence.mjs` — scans the split conversation JSON files and rebuilds the machine-generated indexes.
-- `scripts/validate_outputs.mjs` — verifies curated source references, exact message references, output presence, and duplicate keys.
+- `scripts/validate_outputs.mjs` — verifies curated source references, exact
+  message references, document-inventory relationships, retained-text hashes,
+  output presence, and duplicate keys.
+- `scripts/evidence-link-validation.mjs` — keeps the source-to-inventory
+  relationship checks independently testable.
+- `scripts/build_deepl_document_inventory.mjs` — reads the ChatGPT and Claude
+  exports in place and rebuilds the canonical cross-export document inventory.
+  It does not copy or alter raw exports.
 
 ## Rebuild and validate
 
 Run from the raw export directory:
 
 ```bash
-cd /home/mason/Downloads/gptexport
+cd /home/mason/Downloads/assistant-exports/chatgpt
 
 node "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-recovery/scripts/extract_deepl_evidence.mjs" \
   . \
@@ -158,10 +177,23 @@ node "/home/mason/Projects/Mason Portfolio/private-evidence/deepl-achievement-re
 
 The last completed validation checked 25 achievement records, 62 conversation
 references, 38 exact user-message references, 11 page-level artifact
-references, 8 unique supplemental source files, all 25 final-list IDs, 1,265
-extracted source-message locators, and zero duplicate keys or failures. It
-checks locator and artifact integrity; it does not certify or limit the full
-scope of Mason's contribution.
+references, 6 inventory relationships, 8 unique supplemental source files, all
+25 final-list IDs, 1,265 extracted source-message locators, and zero duplicate
+keys or failures. It checks locator, relationship, retained-text, and artifact
+integrity; it does not certify or limit the full scope of Mason's contribution.
+
+Run the separate document-inventory checks from the repository root:
+
+```bash
+node private-evidence/deepl-achievement-recovery/scripts/build_deepl_document_inventory.mjs --repo "$PWD" --check
+node --test private-evidence/deepl-achievement-recovery/scripts/build_deepl_document_inventory.test.mjs
+node --test private-evidence/deepl-achievement-recovery/scripts/evidence-link-validation.test.mjs
+```
+
+The message extractor and document inventory answer different questions. The
+former indexes selected conversation messages; the latter inventories
+document-like source occurrences, retained text, custody, origin, privacy, and
+claim coverage across both exports.
 
 ## Useful supporting evidence still missing
 
@@ -170,7 +202,8 @@ historical completeness. They are not prerequisites for using Mason-confirmed
 business outcomes in his CV at their honest team, program, campaign, platform,
 or experiment-wave scope:
 
-1. DM-1523, DM-1418, and DM-1417 experiment canvases.
+1. Original binaries and complete context for DM-1523, DM-1418, and DM-1417.
+   Direct partial excerpts survive for all three.
 2. Enterprise-page analytics supporting the B2B engagement and sales-inquiry figures.
 3. SEO and conversion dashboards supporting the organic-traffic, conversion, and revenue figures.
 4. Apps & Integrations experiment results and download-attribution reporting.

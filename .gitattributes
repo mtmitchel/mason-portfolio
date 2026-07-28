@@ -1,2 +1,10 @@
 /site/public/work/home-covers/deepl-retail-ecommerce.svg text eol=lf
 /private-evidence/source-exports/public-product-pages/illustrations/deepl-retail-ecommerce.svg text eol=lf
+
+# Preserve source-exact whitespace in raw and recovered evidence text. These
+# paths are hash-checked against exports; authored documentation and code keep
+# Git's normal whitespace checks.
+archive/research/deepl-product-intelligence/** whitespace=-trailing-space
+archive/research/portfolio-method/** whitespace=-trailing-space
+archive/retired/source-dumps/** whitespace=-trailing-space
+private-evidence/source-documents/recovered/** whitespace=-trailing-space

@@ -47,7 +47,9 @@ for current wording.
 - **Growth objective:** Reduce checkout friction and improve paid-plan conversion.
 - **Mason's contribution:** Contributed content iterations and clarity improvements for DM-1418. The export does not establish that Mason owned the flow or experiment.
 - **Concrete outcome candidate:** **3.02% increase in Pro purchases**, approximately **100 additional purchases per day**, and about **€2.4M incremental ARR**.
-- **Evidence status:** **Supported, source attachment missing.** The original experiment-canvas PDF is absent.
+- **Evidence status:** **Supported by a retained partial source excerpt.** The
+  original experiment-canvas PDF and complete context are absent. Confirm that
+  the rendered checkout flow is the same flow before using these numbers.
 - **Source:** `conversations-015.json`, conversation `67934ac4-b938-8006-acc7-78ae99eacfce`; `conversations-018.json`, conversation `67d2da73-0148-8006-83c3-1bbb62aab9cb`.
 
 ### 5. Supported a soft-block experiment associated with user growth
@@ -55,7 +57,9 @@ for current wording.
 - **Growth objective:** Encourage frequent anonymous users to create free accounts without materially harming usage.
 - **Mason's contribution:** Helped develop and refine the UX message for DM-1417.
 - **Concrete outcome candidate:** **76.22% increase in free-account creation**, approximately **514 additional accounts per day**, with a reported **0.26% decrease in sessions**.
-- **Evidence status:** **Supported, source attachment missing.** The original experiment-canvas PDF is absent.
+- **Evidence status:** **Supported by a retained partial source excerpt.** The
+  original experiment-canvas PDF and complete context are absent. The excerpt
+  records a stopped/evaluate ending, so this is not a simple success story.
 - **Source:** `conversations-015.json`, conversation `67934ac4-b938-8006-acc7-78ae99eacfce`; `conversations-018.json`, conversation `67d2da73-0148-8006-83c3-1bbb62aab9cb`.
 
 ### 6. Supported SEO-informed landing-page growth work
@@ -112,7 +116,8 @@ for current wording.
 These would strengthen public substantiation and case-specific attribution; they
 are not prerequisites for scope-accurate CV use of Mason-confirmed BI outcomes.
 
-1. DM-1523, DM-1418, and DM-1417 experiment canvases.
+1. Original binaries and complete context for DM-1523, DM-1418, and DM-1417;
+   direct partial excerpts survive for all three.
 2. Enterprise-page and landing-page analytics supporting the 20% engagement and 15% inquiry figures.
 3. SEO and conversion dashboards supporting the 15%, 30%, and €800,000 figures.
 4. Apps & Integrations experiment results and download-attribution reporting.

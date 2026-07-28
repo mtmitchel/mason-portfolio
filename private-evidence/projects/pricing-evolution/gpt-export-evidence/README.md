@@ -7,7 +7,7 @@ Curated: 2026-07-26
 
 This register preserves only the GPT-export material needed for the recovered
 pricing, Write Pro, naming, and review-workflow records. The full export remains
-outside the repository at `/home/mason/Downloads/gptexport`; it contains
+outside the repository at `/home/mason/Downloads/assistant-exports/chatgpt`; it contains
 unrelated private and personal material and must never be copied wholesale.
 
 The curated set contains:

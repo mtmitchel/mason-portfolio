@@ -1,19 +1,20 @@
 # Pricing evolution project evidence
 
-Status: Evidence recovery Steps 1–22 complete; rejected narrative and review
-archived; Steps 23–25 reset; no pricing narrative or implementation approved
+Status: Frozen at Mason's direction. Evidence-recovery history, private records,
+and the unapproved pricing route remain preserved. Do not resume Pricing
+proposal, narrative, evidence-reconstruction, Figma, or site work unless Mason
+explicitly reopens it.
 
 This is the active private index for the pricing evolution and Write Pro
 recovery work. It routes readers to the records that own or support each part
 of the work. Mason chooses the story, claims, assets, and implementation.
 
-The rejected public pricing case, its existing public assets, and its preserved
-private drafts remain frozen. The failed Step 23 narrative and invalidated Step
-24 review have been moved to the archive; neither is a current candidate. In
-particular,
-[`pricing-evolution-story-spec.md`](../../pricing-evolution-story-spec.md) is a
-preserved rejected candidate, not accepted narrative truth. Do not resume the
-case unless Mason explicitly reopens Pricing.
+The rejected public pricing cases, private drafts, and rendered
+`/work/pricing-evolution` route remain preserved. None is a current candidate or
+an active review assignment. In particular,
+[`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) is a
+preserved rejected candidate, not accepted narrative truth. The recovery plan
+records completed work and the freeze; it does not authorize continuation.
 
 Step 16 raw extraction and the Step 17 resume tracker are complete. The raw
 ledger covers 69 pages and 1,190 selected top-level roots. Step 18 reviewed all
@@ -28,8 +29,9 @@ were exported from those frames. A focused read-only follow-up later resolved
 the remaining mapping questions: the two same-named document nodes are
 distinguished by visible state, and a historical visible-badge state explains
 the usage PNG's dimensions exactly. Step 20 records retain `missing` provenance
-because export lineage remains unproved. Editing, export, final public
-selection, and public-site work have not been reached.
+because export lineage remains unproved. The pricing route now selects two
+recovered `MON-06` working layouts; it does not require a Figma export or claim
+exact file-to-production lineage.
 
 A post-checkpoint adversarial audit then corrected classification bookkeeping:
 all 174 Pricing roots and all 64 Checkout page records now have one explicit
@@ -51,8 +53,8 @@ from portfolio reconstructions created in 2026.
 
 | Area | Owner or supporting record | Current status |
 | --- | --- | --- |
-| Work status | [`pricing-evolution-recovery-plan.md`](../../pricing-evolution-recovery-plan.md) | Canonical plan, phase order, gates, and completion state. |
-| Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Phase 6 evidence owner. Every recovered family has one portfolio job or context-only/omit disposition. The prior title, format, diagnosis, and narrative do not authorize new Pricing work. |
+| Work status | [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md) | Canonical completed-work record and current freeze. |
+| Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Preserved Phase 6 evidence allocation. Its prior title, format, diagnosis, and narrative do not authorize new Pricing work. |
 | Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. |
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July Translator grid change, naming, repeatable review tooling, and Pricing Page V2. The ledger now states that Mason contributed to the cumulative structure that shipped while preserving the remaining claim limits. |
 | Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
@@ -60,7 +62,7 @@ from portfolio reconstructions created in 2026.
 | Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) and [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz) | Steps 18–20 complete: 69 pages, 1,190 roots, 99 of 99 review batches, 12 of 12 zero-root dispositions, every candidate family classified, all routed live checks dispositioned, and final records allocation documented. |
 | Asset provenance and genesis | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current source, crop, hash, caption, alternative-text, exact-duplicate, and artifact-genesis records. Pricing files now distinguish historical-artifact crops from 2026 portfolio reconstructions. Three source-equivalent Figma frames are recorded as candidates, but the current upgrade-prompt PNGs correctly retain `missing` provenance because export lineage is unproved. |
 | Sources | [Pricing source locations](#pricing-source-locations) | Current private source exports, the active reconstruction, and the curated GPT register. The full raw export remains outside the repository. |
-| Paused and archived drafts | [Paused and archived records](#paused-and-archived-records) | Preserved for recovery and comparison only; none is an accepted public story. |
+| Frozen route and archived drafts | [Frozen route and archived records](#frozen-route-and-archived-records) | The rendered route and supporting private drafts are preserved, unapproved records. |
 
 ## Pricing source locations
 
@@ -72,10 +74,9 @@ from portfolio reconstructions created in 2026.
 - [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md)
   — current Phase 6 portfolio jobs, strongest evidence spine, visual direction,
   and boundaries for a new narrative.
-- [`ux-content-design-portfolio-deep-research-report.md`](../../ux-content-design-portfolio-deep-research-report.md)
-  — Mason's newly added market and portfolio research synthesis. Its citation
-  markers are opaque, so use its analysis as direction and verify external
-  claims from accessible primary sources.
+- [`ux-content-design-portfolio-deep-research-report-2026-07-27.md`](../../../archive/research/portfolio-method/ux-content-design-portfolio-deep-research-report-2026-07-27.md)
+  — archived market and portfolio research input. Its citation markers are
+  opaque, so it is not a current workflow or case-study specification.
 - [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md) — current
   pricing-to-Figma relationship and claim boundaries.
 - [`figwright-inventory.md`](figwright-inventory.md) — page, batch, Step 18
@@ -103,15 +104,20 @@ from portfolio reconstructions created in 2026.
 The full GPT export is not a repository source package. It contains unrelated
 private material and must remain outside this repository.
 
-## Paused and archived records
+## Frozen route and archived records
 
-Current but paused:
+Frozen, unapproved route:
+
+- [`site/app/work/pricing-evolution/pricingEvolutionData.ts`](../../../site/app/work/pricing-evolution/pricingEvolutionData.ts)
+ — the preserved `MON-06` narrative and two-image evidence sequence currently
+ rendered at `/work/pricing-evolution`. It is not an approved story or active
+ review assignment.
+
+Other preserved records:
 
 - [`deepl-portfolio-current-direction.md`](../../deepl-portfolio-current-direction.md)
-  — the live four-product pricing direction is rejected and paused. It points
-  to the focused Translator Step 22 direction without treating it as an
-  approved narrative.
-- [`pricing-evolution-story-spec.md`](../../pricing-evolution-story-spec.md)
+  — current public-slate owner and binding Pricing freeze.
+- [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md)
   — preserved rejected candidate, not an accepted pricing-story owner.
 
 Archived and superseded:

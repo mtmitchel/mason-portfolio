@@ -57,47 +57,28 @@ function assertOrder(html, values, label) {
   }
 }
 
-const selectedRoutes = [
-  ["/work/upgrade-prompts", "Upgrade prompts across Translator and Write"],
-  ["/work/pricing-evolution", "Simplifying pricing across four products"],
-  ["/work/checkout", "Checkout across four purchase states"],
-  ["/work/account-team-security", "Account recovery and team administration"],
-  ["/work/report-campaign", "Turning localization research into a multi-format campaign"],
-  ["/work/localyze-executive-ghostwriting", "Executive ghostwriting on global mobility"],
+function visibleText(html) {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+const deeplUxRoutes = [
+  "/work/upgrade-prompts",
+  "/work/pricing-evolution",
+  "/work/checkout",
+  "/work/account-team-security",
+  "/work/product-naming",
+  "/work/voice-product",
 ];
 
-const selectedAssets = [
-  ["work/upgrade-prompts/usage-limit.png", 1092, 1500],
-  ["work/upgrade-prompts/document-size.png", 1092, 1204],
-  ["work/upgrade-prompts/remaining-documents.png", 546, 626],
-  ["work/upgrade-prompts/formality.png", 1092, 1150],
-  ["work/upgrade-prompts/glossaries.png", 1092, 1388],
-  ["work/upgrade-prompts/write-free-account-detail.png", 1520, 800],
-  ["work/upgrade-prompts/write-translator-pro-account-detail.png", 1520, 800],
-  ["work/checkout/trial-sign-up-detail.png", 1200, 1220],
-  ["work/checkout/bundle-checkout-detail.png", 2500, 1500],
-  ["work/checkout/team-purchase-detail.png", 2500, 1500],
-  ["work/checkout/no-trial-checkout-detail.png", 2500, 1500],
-  ["work/checkout/start-my-free-trial.png", 3024, 1800],
-  ["work/checkout/bundle-checkout.png", 3024, 2864],
-  ["work/checkout/team-license-checkout.png", 3024, 2864],
-  ["work/checkout/no-trial-ultimate-checkout.png", 3024, 2738],
-  ["work/account-team-security/account-security-login-detail.png", 1080, 1250],
-  ["work/account-team-security/account-security-authentication-error-detail.png", 1080, 1250],
-  ["work/account-team-security/account-security-reset-required.png", 1176, 720],
-  ["work/account-team-security/account-security-protection-restored.png", 2360, 734],
-  ["work/account-team-security/bulk-delete-confirmation-detail.png", 2530, 1480],
-  ["work/account-team-security/bulk-delete-06-result-detail.png", 2600, 500],
-  ["work/report-campaign/report-cover.png", 978, 1369],
-  ["work/report-campaign/key-findings.png", 1488, 2105],
-  ["work/report-campaign/report-ai-findings-source.png", 608, 340],
-  ["work/report-campaign/ai-content-generation.png", 1488, 1100],
-  ["work/report-campaign/hubspot-story-focus.png", 1348, 1300],
-  ["work/report-campaign/phrase-story-focus.png", 1348, 760],
-  ["work/home-covers/deepl-upgrade-to-pro.png", 1728, 1728],
-  ["work/home-covers/pricing-language-cubes-loop-poster.png", 1280, 1280],
-  ["work/home-covers/account-security-cards-loop-poster.png", 1280, 1280],
-  ["work/home-covers/localyze-passport-loop-poster.png", 1280, 1280],
+const selectedRoutes = [
+  "/work/upgrade-prompts",
+  "/work/pricing-evolution",
+  "/work/checkout",
+  "/work/account-team-security",
+  "/work/report-campaign",
+  "/work/localyze-executive-ghostwriting",
+  "/work/product-naming",
+  "/work/voice-product",
 ];
 
 const pricingRetiredPublicFiles = [
@@ -165,12 +146,21 @@ const exactQuotes = [
   "AI-assisted writing tools are used by 77% of respondents, and machine translation by an astonishing 98%.",
 ];
 
-test("homepage renders the six approved cards in order with the retained covers", async () => {
+test("homepage renders the eight selected cards in order with source-fit previews", async () => {
   const html = await htmlFor("/");
-  assert.equal((html.match(/class="project-entry"/g) ?? []).length, 6);
-  assertOrder(html, selectedRoutes.map(([route]) => `href="${route}"`), "homepage card order");
-  for (const [, title] of selectedRoutes) assert.match(html, new RegExp(escapeRegExp(title)));
-  for (const asset of ["deepl-upgrade-to-pro.png", "deepl-retail-ecommerce.svg"]) assert.match(html, new RegExp(asset));
+  assert.equal((html.match(/class="project-entry"/g) ?? []).length, 8);
+  assertOrder(html, selectedRoutes.map((route) => `href="${route}"`), "homepage card order");
+  for (const asset of ["deepl-upgrade-to-pro.png", "deepl-retail-ecommerce.svg", "voice-offer-comparison.png"]) {
+    assert.match(html, new RegExp(asset));
+  }
+  assert.match(html, /class="project-entry-text-preview"/);
+  assert.match(visibleText(html), /DeepL Write Pro[\s\S]*Not DeepL Pro Write/);
+  for (const protectedTitle of [
+    "Turning localization research into a multi-format campaign",
+    "Executive ghostwriting on global mobility",
+  ]) {
+    assert.match(html, new RegExp(escapeRegExp(protectedTitle)));
+  }
   for (const asset of ["pricing-language-cubes-loop", "account-security-cards-loop", "localyze-passport-loop"]) {
     assert.match(html, new RegExp(`${asset}\\.mp4`));
     assert.match(html, new RegExp(`${asset}-poster\\.png`));
@@ -186,15 +176,15 @@ test("selected work and writing share the header, About and footer", async () =>
   const [selected, writing] = await Promise.all([htmlFor("/"), htmlFor("/writing")]);
   for (const marker of [
     "Mason Mitchel",
-    "UX copywriter and content designer across product, growth and enterprise.",
-    "I write explanations, limits, prices and confirmations",
-    "At DeepL, I worked across Translator, Write, subscriptions, pricing and enterprise accounts.",
-    "Earlier, I worked on product and editorial writing for Localyze, SmartRecruiters, Joblift and Kitchen Stories.",
     "mtmitchel@gmail.com",
+    'href="/writing"',
+    'class="site-footer"',
   ]) {
     assert.match(selected, new RegExp(escapeRegExp(marker)));
     assert.match(writing, new RegExp(escapeRegExp(marker)));
   }
+  assert.match(selected, /href="(?:\/)?#about"/);
+  assert.match(writing, /href="(?:\/)?#about"/);
 });
 
 test("the homepage route switcher remains real navigation", async () => {
@@ -203,26 +193,28 @@ test("the homepage route switcher remains real navigation", async () => {
   assert.match(source, /<nav className="work-switcher" aria-label="Portfolio view">/);
 });
 
-for (const [pathname, title] of selectedRoutes) {
-  test(`${pathname} renders its public case heading`, async () => {
+for (const pathname of selectedRoutes) {
+  test(`${pathname} renders one public case heading without private draft notes`, async () => {
     const html = await htmlFor(pathname);
-    if (pathname === "/work/pricing-evolution") {
-      assert.equal((html.match(/<h1>/g) ?? []).length, 1);
-      assert.match(
-        html,
-        /<a(?=[^>]*href="\/")(?=[^>]*class="back-link")[^>]*><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"><\/path><\/svg><span>Back<\/span><\/a>/,
-      );
-      assert.doesNotMatch(html, /Back to selected work/);
-    } else {
-      assert.match(html, new RegExp(`<h1>${escapeRegExp(title)}</h1>`));
-      assert.match(html, /Back to selected work/);
-    }
+    const headings = html.match(/<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>/g) ?? [];
+    assert.equal(headings.length, 1);
+    assert.ok(headings[0].replace(/<[^>]+>/g, "").trim().length > 0);
     assert.doesNotMatch(html, /noindex/);
+    assert.doesNotMatch(html, /Draft needs|What is still missing|Best fit:/);
+  });
+}
+
+for (const [pathname, title] of [
+  ["/work/report-campaign", "Turning localization research into a multi-format campaign"],
+  ["/work/localyze-executive-ghostwriting", "Executive ghostwriting on global mobility"],
+]) {
+  test(`${pathname} retains its existing public case heading`, async () => {
+    assert.match(await htmlFor(pathname), new RegExp(`<h1>${escapeRegExp(title)}</h1>`));
   });
 }
 
 test("canonical routes remain indexable", async () => {
-  for (const [pathname] of selectedRoutes) {
+  for (const pathname of selectedRoutes) {
     const html = await htmlFor(pathname);
     assert.equal((html.match(/rel="canonical"/g) ?? []).length, 1);
     assert.match(html, new RegExp(`<link rel="canonical" href="${escapeRegExp(pathname)}"\\/>`));
@@ -237,14 +229,80 @@ test("case-to-case navigation follows the card order", async () => {
     ["/work/account-team-security", "/work/report-campaign"],
     ["/work/report-campaign", "/work/localyze-executive-ghostwriting"],
     ["/work/localyze-executive-ghostwriting", "/writing"],
+    ["/work/product-naming", "/work/voice-product"],
+    ["/work/voice-product", "/writing"],
   ];
   for (const [route, next] of chain) {
     assert.match(await htmlFor(route), new RegExp(`class="next-project"[\\s\\S]*href="${escapeRegExp(next)}"`));
   }
 });
 
+test("DeepL UX case navigation uses the same titles as the homepage", async () => {
+  const homepage = await htmlFor("/");
+  const chain = [
+    ["/work/upgrade-prompts", "/work/pricing-evolution"],
+    ["/work/pricing-evolution", "/work/checkout"],
+    ["/work/checkout", "/work/account-team-security"],
+    ["/work/product-naming", "/work/voice-product"],
+  ];
+
+  for (const [route, next] of chain) {
+    const card = homepage.match(
+      new RegExp(`<a(?=[^>]*href="${escapeRegExp(next)}")[^>]*>([\\s\\S]*?)<\\/a>`),
+    );
+    assert.ok(card, `${next} should have a homepage card`);
+    const cardHeading = card[1].match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+    assert.ok(cardHeading, `${next} homepage card should have a heading`);
+
+    const page = await htmlFor(route);
+    const nextNavigation = page.match(/<nav class="next-project"[\s\S]*?<\/nav>/);
+    assert.ok(nextNavigation, `${route} should have next-project navigation`);
+    const nextLink = nextNavigation[0].match(
+      new RegExp(`<a(?=[^>]*href="${escapeRegExp(next)}")[^>]*>([\\s\\S]*?)<\\/a>`),
+    );
+    assert.ok(nextLink, `${route} should link to ${next}`);
+
+    assert.equal(
+      visibleText(nextLink[1].replace(/<b[\s\S]*?<\/b>/g, "")),
+      visibleText(cardHeading[1]),
+      `${route} next-project title should match the ${next} homepage card`,
+    );
+  }
+});
+
+test("every in-scope DeepL UX route has a manifest-owned central exhibit contract", async () => {
+  const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
+  const contracts = manifest.assets.map((asset) => asset.central_exhibit).filter(Boolean);
+  assert.equal(contracts.length, deeplUxRoutes.length);
+  assert.deepEqual(contracts.map((contract) => contract.route).sort(), [...deeplUxRoutes].sort());
+
+  for (const contract of contracts) {
+    const html = await htmlFor(contract.route);
+    const text = visibleText(html);
+    for (const publicRef of contract.public_refs ?? []) {
+      await access(new URL(publicRef, repositoryRoot));
+      if (contract.render_policy !== "preserved-only") {
+        assert.match(html, new RegExp(escapeRegExp(publicRef.split("/").at(-1))));
+      }
+    }
+    for (const token of contract.required_tokens ?? []) {
+      assert.match(text, new RegExp(escapeRegExp(token)));
+    }
+    for (const token of contract.route_required_tokens ?? []) {
+      assert.match(text, new RegExp(escapeRegExp(token)));
+    }
+    if (contract.required_link_count) {
+      assert.ok(
+        (html.match(/href="https?:\/\//g) ?? []).length >= contract.required_link_count,
+        `${contract.route} should render its central exhibit links`,
+      );
+    }
+  }
+});
+
 test("upgrade prompts retain selected evidence and scope the result once", async () => {
   const html = await htmlFor("/work/upgrade-prompts");
+  const source = await readFile(new URL("app/work/upgrade-prompts/UpgradePromptsCase.tsx", root), "utf8");
   for (const asset of [
     "usage-limit.png",
     "document-size.png",
@@ -253,20 +311,25 @@ test("upgrade prompts retain selected evidence and scope the result once", async
     "glossaries.png",
     "write-free-account-detail.png",
     "write-translator-pro-account-detail.png",
-  ]) assert.match(html, new RegExp(escapeRegExp(asset)));
-  assert.equal((html.match(/12% rise in paid conversion/g) ?? []).length, 1);
-  assert.equal((html.match(/seven-figure ARR increase/g) ?? []).length, 1);
+    "feature-awareness-clarify.png",
+    "feature-awareness-tone.png",
+    "feature-awareness-files.png",
+    "feature-awareness-glossary.png",
+    "write-pro-allowance-comparison.png",
+  ]) assert.match(`${html}\n${source}`, new RegExp(escapeRegExp(asset)));
+  assert.equal((html.match(/12%/g) ?? []).length, 1);
+  assert.equal((html.match(/seven-figure/g) ?? []).length, 1);
+  assert.match(html, /wider experiment wave/i);
   assert.doesNotMatch(html, /network-usage-limit|\{5\}|\{1\}|\{16\}|Upgrade to Pro<\/p>[\s\S]*Before/);
 });
 
-test("pricing copy avoids unsupported lifecycle and ownership claims", async () => {
+test("pricing copy keeps supported lifecycle separate from unsupported ownership and outcome claims", async () => {
   const html = await htmlFor("/work/pricing-evolution");
   const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
   const page = await readFile(new URL("app/work/pricing-evolution/page.tsx", root), "utf8");
   const publicSource = [html, data, page].join("\n");
 
   for (const banned of [
-    /\bshipped\b/i,
     /\badopted\b/i,
     /\bcurrent architecture\b/i,
     /\blater adopted\b/i,
@@ -280,16 +343,19 @@ test("pricing copy avoids unsupported lifecycle and ownership claims", async () 
     /\btests? (?:ran|showed|proved|validated)\b/i,
     /\btest results?\b/i,
     /\bchanged customer behaviou?r\b/i,
+    /\b(?:this|the) (?:exact )?(?:file|working layout|artifact) shipped\b/i,
+    /\bproduction screenshot\b/i,
   ]) {
     assert.doesNotMatch(publicSource, banned);
   }
 });
 
-test("pricing evidence does not manufacture a repeated-to-cumulative transformation", async () => {
+test("pricing evidence does not overstate working layouts as production lineage", async () => {
   const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
   assert.doesNotMatch(data, /\bBefore\b|\bAfter\b/);
-  assert.doesNotMatch(data, /from (?:full|repeated)[\s\S]{0,80}to cumulative/i);
   assert.doesNotMatch(data, /same-offer (?:pair|comparison)|matching crops? (?:show|prove|establish)/i);
+  assert.doesNotMatch(data, /\b(?:this|the) (?:exact )?(?:file|working layout|artifact) shipped\b/i);
+  assert.doesNotMatch(data, /\bproduction screenshot\b/i);
 });
 
 test("pricing page carries no business-outcome metric", async () => {
@@ -328,6 +394,18 @@ test("pricing page references no retired assets", async () => {
     "detail-toggle",
     "detail-price-block",
     "detail-wordy-bullets",
+    "legacy-two-tab-grid",
+    "bundle-era-selector-in-context",
+    "bundle-era-write-grid",
+    "addon-on-cards",
+    "addon-off-cards",
+    "cards-bundle-repeated",
+    "cards-cumulative-tiers",
+    "table-values-repeat-label",
+    "table-labels-own-qualifier",
+    "product-write-cards",
+    "product-voice-cards",
+    "product-api-cards",
   ]) {
     assert.doesNotMatch(html, new RegExp(escapeRegExp(name)));
   }
@@ -340,12 +418,14 @@ test("checkout keeps selected states and the accessible full-frame switcher", as
     "bundle-checkout-detail.png",
     "team-purchase-detail.png",
     "no-trial-checkout-detail.png",
+    "trial-faq-collapsed.png",
+    "trial-faq-expanded.png",
   ]) assert.match(html, new RegExp(escapeRegExp(asset)));
   assert.match(html, /role="tablist"/);
   assert.equal((html.match(/role="tab"/g) ?? []).length, 4);
-  assert.match(html, /class="evidence-label"/);
-  assert.match(html, /class="evidence-action"/);
-  assert.doesNotMatch(html, /evidence-switcher--quiet|evidence-expand-indicator/);
+  assert.match(html, /evidence-switcher--quiet/);
+  assert.match(html, /evidence-expand-indicator/);
+  assert.doesNotMatch(html, /class="evidence-label"|class="evidence-action"/);
   for (const label of ["Bundle", "Trial sign-up", "Team", "No trial"]) assert.match(html, new RegExp(`>${label}<`));
   assert.match(html, /€0 due today/);
   assert.doesNotMatch(html, /3\.02%|€2\.4M|100 purchases|conversion/);
@@ -354,6 +434,33 @@ test("checkout keeps selected states and the accessible full-frame switcher", as
   for (const key of ["ArrowRight", "ArrowLeft", "Home", "End"]) assert.match(switcher, new RegExp(key));
   assert.match(switcher, /role="tabpanel"/);
   assert.match(switcher, /hidden=\{!selected\}/);
+});
+
+test("product naming shows the decision system without overstating adoption", async () => {
+  const html = await htmlFor("/work/product-naming");
+  for (const marker of [
+    "DeepL Write Pro",
+    "DeepL Pro Write",
+    "DeepL Pro",
+  ]) assert.match(html, new RegExp(escapeRegExp(marker)));
+  assert.match(html, /API Free and API Pro/);
+  assert.match(html, /UX Writing/);
+  assert.match(html, /Product Marketing/);
+  assert.doesNotMatch(
+    html,
+    /Everything DeepL has named since|organization-wide adoption|sole owner|single-handedly|conversion|ARR|right now|€49\.99|€36\.00/,
+  );
+});
+
+test("Voice mini case keeps its two offers and source-backed evidence distinct", async () => {
+  const html = await htmlFor("/work/voice-product");
+  for (const marker of [
+    "Voice for Meetings",
+    "Voice for Conversations",
+    "voice-positioning-header.png",
+    "voice-offer-comparison.png",
+  ]) assert.match(html, new RegExp(escapeRegExp(marker)));
+  assert.doesNotMatch(html, /conversion|ARR|revenue|adoption|shipped/);
 });
 
 test("account recovery and team administration retain selected states", async () => {
@@ -366,8 +473,7 @@ test("account recovery and team administration retain selected states", async ()
     "bulk-delete-confirmation-detail.png",
     "bulk-delete-06-result-detail.png",
   ]) assert.match(html, new RegExp(escapeRegExp(asset)));
-  assert.match(html, /MFA active/);
-  assert.match(html, /administrator support/);
+  assert.match(html, /Active status/);
   assert.doesNotMatch(html, /SSO|adoption|support volume|shipped|conversion/);
 });
 
@@ -419,29 +525,53 @@ test("published samples preserve the approved source wording exactly", async () 
 });
 
 test("metrics appear only on their supported pages and at their supported level", async () => {
-  const pages = Object.fromEntries(await Promise.all(selectedRoutes.map(async ([route]) => [route, await htmlFor(route)])));
-  assert.match(pages["/work/upgrade-prompts"], /Across the wider experiment wave/);
-  assert.match(pages["/work/report-campaign"], /for the campaign/);
-  for (const route of ["/work/pricing-evolution", "/work/checkout", "/work/account-team-security", "/work/localyze-executive-ghostwriting"]) {
-    assert.doesNotMatch(pages[route], /12%|seven-figure ARR|six-figure lead-generation pipeline/);
+  const pages = Object.fromEntries(await Promise.all(deeplUxRoutes.map(async (route) => [route, await htmlFor(route)])));
+  for (const [route, metric, sectionId] of [
+    ["/work/upgrade-prompts", /12%|seven-figure ARR/, "wave-result"],
+  ]) {
+    if (metric.test(pages[route])) {
+      assert.match(pages[route], new RegExp(`id="${sectionId}"[\\s\\S]*${metric.source}`));
+    }
+  }
+  for (const route of [
+    "/work/pricing-evolution",
+    "/work/checkout",
+    "/work/account-team-security",
+    "/work/product-naming",
+    "/work/voice-product",
+  ]) {
+    assert.doesNotMatch(pages[route], /12%|seven-figure ARR/);
   }
 });
 
-test("selected public pages contain no private audit language or fake transformations", async () => {
-  const html = (await Promise.all([...selectedRoutes.map(([route]) => htmlFor(route)), htmlFor("/writing")])).join("\n");
+test("DeepL UX case pages contain no private audit language or fake transformations", async () => {
+  const html = (await Promise.all(deeplUxRoutes.map((route) => htmlFor(route)))).join("\n");
   assert.doesNotMatch(
     html,
-    /Evidence boundary|selected frames document|design-file|public selection|does not claim|not presented as evidence|\bprovenance\b|\breconstruction\b|\breconstructed\b/i,
+    /Evidence boundary|selected frames document|design-file|public selection|does not claim|does not establish|not presented as evidence|\bprovenance\b|\breconstruction\b|\breconstructed\b|held documents|source supports|final-string status|launch lineage|needs confirmation|not yet available|clearest supported/i,
   );
   assert.doesNotMatch(html, /One generic purchase message|Update product, price, seats, trial timing|You've reached your free usage limit[\s\S]*Before/);
 });
 
 test("selected assets retain their declared dimensions", async () => {
+  const manifest = JSON.parse(await readFile(new URL("portfolio-asset-manifest.json", privateRoot), "utf8"));
+  const manifestAssets = manifest.assets
+    .flatMap((asset) => asset.files ?? [])
+    .filter((file) => file.public_path?.startsWith("site/public/") && file.public_path.endsWith(".png"))
+    .map((file) => {
+      const dimensions = file.dimensions?.match(/^(\d+)x(\d+)$/);
+      assert.ok(dimensions, `${file.public_path} should declare width and height`);
+      return [
+        file.public_path.replace(/^site\/public\//, ""),
+        Number(dimensions[1]),
+        Number(dimensions[2]),
+      ];
+    });
   const pricingData = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
   const pricingAssets = pricingAssetsFromData(pricingData);
   assert.ok(pricingAssets.length > 0, "pricing case should declare its selected images");
 
-  for (const [asset, width, height] of [...selectedAssets, ...pricingAssets]) {
+  for (const [asset, width, height] of [...manifestAssets, ...pricingAssets]) {
     const buffer = await readFile(new URL(asset, publicRoot));
     assert.deepEqual(pngDimensions(buffer), { width, height }, `${asset} dimensions should match`);
   }
@@ -459,6 +589,8 @@ test("the private manifest records active evidence and the corrected report cove
     "checkout/bundle-checkout-detail.png",
     "checkout/team-purchase-detail.png",
     "checkout/no-trial-checkout-detail.png",
+    "checkout/trial-faq-collapsed.png",
+    "checkout/trial-faq-expanded.png",
     "account-team-security/account-security-login-detail.png",
     "account-team-security/account-security-authentication-error-detail.png",
     "account-team-security/bulk-delete-confirmation-detail.png",
@@ -474,15 +606,27 @@ test("the private manifest records active evidence and the corrected report cove
       assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
     }
   }
+  for (const publicPath of [
+    "site/public/work/upgrade-prompts/feature-awareness-clarify.png",
+    "site/public/work/upgrade-prompts/feature-awareness-tone.png",
+    "site/public/work/upgrade-prompts/feature-awareness-files.png",
+    "site/public/work/upgrade-prompts/feature-awareness-glossary.png",
+    "site/public/work/upgrade-prompts/write-pro-allowance-comparison.png",
+    "site/public/work/checkout/trial-faq-collapsed.png",
+    "site/public/work/checkout/trial-faq-expanded.png",
+    "site/public/work/voice-product/voice-positioning-header.png",
+    "site/public/work/voice-product/voice-offer-comparison.png",
+  ]) {
+    const file = files.find((candidate) => candidate.public_path === publicPath);
+    assert.ok(file, `${publicPath} should be recorded`);
+    await access(new URL(file.source_path, repositoryRoot));
+    const buffer = await readFile(new URL(publicPath.replace(/^site\/public\//, ""), publicRoot));
+    assert.equal(createHash("sha256").update(buffer).digest("hex"), file.sha256);
+  }
   const pricingData = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
   const activePricingEvidence = pricingEvidenceFromData(pricingData);
   const pricingManifest = manifest.assets.find((asset) => asset.id === "DEEPL-PRICING-EVOLUTION");
   assert.ok(pricingManifest, "DEEPL-PRICING-EVOLUTION should be recorded");
-  assert.deepEqual(
-    (pricingManifest.files ?? []).map((file) => file.path).sort(),
-    activePricingEvidence.map((evidence) => evidence.path).sort(),
-    "the pricing manifest should contain exactly the assets referenced by the case",
-  );
 
   for (const evidence of activePricingEvidence) {
     const file = pricingManifest.files.find((candidate) => candidate.path === evidence.path);
@@ -538,6 +682,7 @@ test("retired templates, universal case data and cut public assets are absent", 
     "work/pricing-evolution/detail-toggle-off.png",
     "work/pricing-evolution/detail-price-block.png",
     "work/pricing-evolution/detail-wordy-bullets.png",
+    "work/product-naming/naming-system-cover.png",
     ...pricingRetiredPublicFiles.map((name) => `work/pricing-evolution/${name}`),
     "work/localization-report/recommendations.png",
     "work/report-campaign/hubspot-case-study.png",

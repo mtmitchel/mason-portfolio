@@ -23,9 +23,14 @@ export type StoryEvidenceView = {
 
 export type PortfolioCard = {
   href: string;
-  image: StoryImage;
+  image?: StoryImage;
   imageDisplay?: "natural" | "full-document";
   meta: string;
+  textPreview?: {
+    alternative: string;
+    label: string;
+    primary: string;
+  };
   title: string;
   video?: StoryVideo;
 };

@@ -1,5 +1,5 @@
 {
-  "generated_from": "ChatGPT data export in /home/mason/Downloads/gptexport",
+  "generated_from": "ChatGPT data export in /home/mason/Downloads/assistant-exports/chatgpt",
   "supplemental_sources": [
     {
       "repo_path": "private-evidence",
@@ -13,6 +13,7 @@
     "confirmed": "Mason's explicit account or direct contemporaneous project material identifies his work or deliverable.",
     "strong": "Mason's account is reinforced by review material, project records, or manager feedback.",
     "supported_missing_attachment": "The claim was extracted from an uploaded source and repeated in review material, but the uploaded source file is absent from the export.",
+    "supported_retained_partial": "A direct partial source excerpt survives in an export content reference, but the original binary and complete source context are not held.",
     "lead": "The contribution or plan is credible, but a specific lifecycle or impact claim still needs clarification.",
     "excluded": "A claim contradicted by Mason or traceable only to assistant invention. Excluded from career bullets."
   },
@@ -425,21 +426,22 @@
       "initiative": "DM-1523 Pro Driver experiment",
       "achievement": "Contributed benefit-led messaging and copy variations for a post-signup Pro Driver experiment.",
       "contribution": "Worked with Product Design, Content Design, and Monetization to refine the message shown after free-account signup; did not claim sole leadership.",
-      "outcome": "The missing experiment canvas was summarized at the time as producing 124 additional Pro purchases per day; later review material repeats that formulation, while the recovered HiBob self-reflections contain a conflicting 12%/€1.2M formulation.",
+      "outcome": "A direct partial excerpt retained from the experiment canvas reports 124 additional Pro purchases per day; later review material repeats that formulation, while the recovered HiBob self-reflections contain a conflicting 12%/€1.2M formulation.",
       "metrics": [
         {
           "claim": "+124 Pro purchases per day and projected €3.2M incremental ARR",
-          "status": "supported_missing_attachment: GPT cited the uploaded experiment canvas, but that PDF is absent from the export"
+          "status": "supported_retained_partial: direct canvas excerpt retained; original PDF absent; conflicts with the self-reflection formulation"
         }
       ],
-      "confidence": "supported_missing_attachment",
+      "confidence": "supported_retained_partial",
       "sources": [
         {
           "title": "Experiment Canvas Summary",
           "date": "2025-01-24",
           "source_file": "conversations-015.json",
           "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce",
-          "note": "Uploaded PDF pointer exists, exported asset is missing."
+          "inventory_source_record_id": "chatgpt-CbBdCevn9xtbpQKNFY1vpU",
+          "note": "A direct content_reference excerpt survives; the original PDF binary does not."
         },
         {
           "title": "Performance Review Talking Points",
@@ -475,20 +477,22 @@
       "initiative": "DM-1418 checkout-flow simplification",
       "achievement": "Contributed content iterations to a checkout-flow experiment intended to remove friction and clarify plan information.",
       "contribution": "Supported messaging and content refinement within a cross-functional experiment; the export does not establish that Mason designed the flow or owned the test.",
-      "outcome": "The missing canvas was summarized as a 3.02% lift in Pro purchases and 100 additional purchases per day.",
+      "outcome": "A direct partial canvas excerpt reports a 3.02% lift in Pro purchases and 100 additional purchases per day.",
       "metrics": [
         {
           "claim": "3.02% increase in Pro purchases, about 100 additional purchases per day, and €2.4M incremental ARR",
-          "status": "supported_missing_attachment: source PDF absent; exact ARR should be rechecked before external use"
+          "status": "supported_retained_partial: direct canvas excerpt retained; original PDF absent; confirm the rendered flow matches before external use"
         }
       ],
-      "confidence": "supported_missing_attachment",
+      "confidence": "supported_retained_partial",
       "sources": [
         {
           "title": "Experiment Canvas Summary",
           "date": "2025-01-24",
           "source_file": "conversations-015.json",
-          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce"
+          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce",
+          "inventory_source_record_id": "chatgpt-6FJfuvwJLXeNV3fqmhxf5b",
+          "note": "A direct content_reference excerpt survives; the original PDF binary does not."
         },
         {
           "title": "Performance Review Talking Points",
@@ -506,20 +510,22 @@
       "initiative": "DM-1417 anonymous-user soft block",
       "achievement": "Contributed strategic UX messaging to an experiment encouraging frequent anonymous users to create free accounts without unnecessarily disrupting translation use.",
       "contribution": "Helped shape and refine the soft-block copy within Product Design, Content Design, and Monetization collaboration.",
-      "outcome": "The missing canvas was summarized as a large increase in free-account creation with minimal session impact.",
+      "outcome": "A direct partial canvas excerpt reports a large increase in free-account creation with a small session decline and a stopped/evaluate ending.",
       "metrics": [
         {
           "claim": "76.22% increase in free-account creation, 514 additional accounts per day, and a 0.26% session decrease",
-          "status": "supported_missing_attachment: source PDF absent"
+          "status": "supported_retained_partial: direct canvas excerpt retained; original PDF absent"
         }
       ],
-      "confidence": "supported_missing_attachment",
+      "confidence": "supported_retained_partial",
       "sources": [
         {
           "title": "Experiment Canvas Summary",
           "date": "2025-01-24",
           "source_file": "conversations-015.json",
-          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce"
+          "conversation_id": "67934ac4-b938-8006-acc7-78ae99eacfce",
+          "inventory_source_record_id": "chatgpt-QQkJMbFwiGXwr3Fd2YSYzN",
+          "note": "A direct content_reference excerpt survives; the original PDF binary does not."
         },
         {
           "title": "Performance Review Talking Points",
@@ -879,12 +885,12 @@
       "period": "2024-Q4",
       "team": "Content Design / UX Writing",
       "initiative": "Product and plan naming guidance",
-      "achievement": "Contributed to and workshopped naming guidance across DeepL products, paid plans, bundles, shortened forms, and space-constrained UI contexts.",
-      "contribution": "Worked on naming-principles material with coworkers and made direct corrections to distinctions among product names, plan names, free-version language, bundles, subscriptions, collective DeepL Pro usage, and contextual Write Pro shorthand.",
-      "outcome": "Mason's account and direct project messages establish collaborative conception, drafting, constraints, and corrections. They do not identify the verbatim author of every generated line or every draft. The embedded paid-plan source says the terminology record was owned by UX Writing and reviewed with Product Marketing; organization-wide adoption is not established.",
+      "achievement": "Was assigned to draft and contributed draft content to the Content Design System's product-and-plan-names section.",
+      "contribution": "Developed and workshopped rules covering product names, plan names, free-version language, bundles, subscriptions, collective DeepL Pro usage, and contextual Write Pro shorthand, drawing on a terminology source of truth owned by UX Writing and reviewed with Product Marketing.",
+      "outcome": "Recovered system and planning documents name Mason as the writer for the product-and-plan-names section. They establish assignment and draft contribution, but not final approval, publication, organization-wide adoption, sole ownership of the wider system, or that every later DeepL name followed these rules.",
       "metrics": [],
       "confidence": "confirmed",
-      "claim_ceiling": "Helped conceive, draft, edit, and extend product and plan naming guidance within a team-owned system. Do not claim sole creation, sole ownership, universal adoption, verbatim authorship of every tool-generated line, or that every recovered draft became the final standard.",
+      "claim_ceiling": "Was assigned to draft, and contributed draft content to, the Content Design System's product-and-plan-names section. Do not claim final approval, publication, organization-wide adoption, sole ownership of the wider system, verbatim authorship of every generated line, or that every later DeepL name followed the rules.",
       "sources": [
         {
           "title": "Naming Principles for DeepL",
@@ -914,13 +920,30 @@
           "conversation_id": "6737306d-72f4-8006-84bf-0ac4dc034a8e",
           "message_id": "aaa270a9-aaa8-49c0-9e51-327b5828830f"
         }
+      ],
+      "document_sources": [
+        {
+          "repo_path": "private-evidence/source-documents/recovered/content-design-system--pdf-049544.md",
+          "inventory_source_record_id": "claude-14b5e7cf-29b6-4786-831f-1528994fb589",
+          "evidence_role": "retained system section naming Mason"
+        },
+        {
+          "repo_path": "private-evidence/source-documents/recovered/content-design-system--pdf-e2c0ac.md",
+          "inventory_source_record_id": "claude-6c8389b0-2218-41c8-a1c9-a886b986c666",
+          "evidence_role": "retained tracker assigning product and feature naming principles"
+        },
+        {
+          "repo_path": "private-evidence/source-documents/recovered/content-design-system-plans.md",
+          "inventory_source_record_id": "claude-81d201c6-60ac-4c15-a5f7-7a75a1f6d2e0",
+          "evidence_role": "retained section assignment and draft content"
+        }
       ]
     }
   ],
   "excluded_or_quarantined_claims": [
     {
       "claim": "Pro Driver work produced both a 12% conversion increase/€1.2M ARR and +124 purchases per day/€3.2M ARR",
-      "reason": "Two materially different metric formulations survive. The +124/day result is indirectly tied to the missing DM-1523 canvas; the 12%/€1.2M formulation appears in the recovered HiBob self-reflections but is not an experiment readout. Reconcile before using either ARR figure externally.",
+      "reason": "Two materially different metric formulations survive. The +124/day result is indirectly tied to a retained partial excerpt from the DM-1523 canvas, but the original binary and complete context are absent; the 12%/€1.2M formulation appears in the recovered HiBob self-reflections but is not an experiment readout. Reconcile before using either ARR figure externally.",
       "source_file": "conversations-015.json",
       "conversation_ids": [
         "6793425e-2340-8006-a7d3-3ea84fac6d1e",

@@ -6,11 +6,12 @@ recovery, or an explicitly authorized Figma edit. The repository-root
 
 ## Access and source safety
 
-- Use Mason's logged-in Chrome profile through the Chrome-control workflow when
-  accessing Figma directly.
-- Non-official Figma MCP servers and their required local desktop or plugin
-  bridges are allowed. Never use Figma's official native MCP server,
-  `use_figma`, a direct API, an unrelated plugin, Playwright, or another browser.
+- Use Mason's logged-in Figma desktop app when the desktop or plugin workflow is
+  practical. Mason's logged-in Chrome profile remains an allowed direct-access
+  route.
+- The unofficial Figwright MCP server and its required local desktop or
+  development-plugin bridge are allowed. Never use Figma's official native MCP
+  server, `use_figma`, a direct API, an unrelated plugin, or Playwright.
 - MCP access does not authorize a Figma write. The same read-only default and
   explicit edit approval below apply to every permitted access route.
 - Keep one Figma tab open. Work on one file and one bounded cluster at a time.
@@ -62,17 +63,17 @@ recovery, or an explicitly authorized Figma edit. The repository-root
 
 For each coherent cluster:
 
-1. Make one bounded change through Chrome.
+1. Make one bounded change through the approved direct-access route.
 2. Wait for Figma's save state to settle.
 3. Navigate away and back.
 4. Check overview and readable zoom levels and inspect the layer tree.
 5. Confirm no overlap, clipping, hidden content, detached island, or title/content
    mismatch.
-6. Create a named version checkpoint before the next risky cluster.
+6. Stop after the verified cluster before starting another risky cluster.
 
 If save state is uncertain or the page remains unresponsive, stop writing and
-recover from the last known checkpoint. Resume only with a smaller file or batch.
-Never guess what Figma saved.
+recover from the last confirmed saved state. Resume only with a smaller file or
+batch. Never guess what Figma saved.
 
 ## Export
 
@@ -80,6 +81,21 @@ Never guess what Figma saved.
   older asset or similar frame does not implement a requested visual change.
 - Export the product frame itself at 2x or 3x, not the canvas. Exclude headings,
   notes, comments, selection borders, and neighboring frames.
+- Treat a whole-canvas export as a review aid only. Never put it on the
+  recruiter-facing site when it exposes WIP labels, red working copy, placeholder
+  values or art, unavailable-component warnings, editor chrome, selection
+  outlines, internal notes, personal data, or large areas of accidental space.
+- Inspect the exported pixels at readable portfolio scale. Prefer an existing
+  cleaner repository export when it shows the same mapped artifact. If a
+  promising frame needs only a crop, neutral background, or removal of one
+  annotation, record that exact cleanup. If it needs missing art, rewritten
+  placeholders, data replacement, or structural reconstruction, request a clean
+  source-frame export or reject it for current portfolio use.
+- Before requesting another Figma export, classify the candidate as: ready from
+  an existing repository asset, ready after a local crop or site treatment,
+  needs one known clean source-frame export, or has no known exact surface. Only
+  the third state belongs in an export request. Never ask for a speculative
+  search merely because a candidate would benefit from better visuals.
 - Keep portfolio annotations outside the exportable frame and use matching
   viewport, scale, and aspect ratio for comparisons.
 - Exhibits presented as a set must share one design generation, viewport, and
@@ -94,5 +110,5 @@ Never guess what Figma saved.
 Do not claim completion while a required provenance, editability, mapping,
 navigation, load, save-state, or export check is unverified.
 Record the exact source/destination URLs, disposition, evidence relationship,
-checkpoint or export result, and any unresolved evidence in the existing
+verified save state or export result, and any unresolved evidence in the existing
 private owner for the task.

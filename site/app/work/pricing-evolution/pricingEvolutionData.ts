@@ -1,237 +1,83 @@
 import type { PricingCaseStory } from "./PricingCase";
 
 export const pricingEvolutionCase: PricingCaseStory = {
-  title: "Simplifying pricing across four products",
+ title: "Making the more expensive plan explain itself",
   synopsis: [
-    "As DeepL’s pricing expanded from one Translator plan grid into four product and packaging models, the work stopped being a matter of writing one clear card.",
-    "I turned competitor research and messaging analysis into naming and content rules that gave cumulative tiers, parallel offers, prices, and limits a clear place.",
+ "DeepL’s Translator pricing page put four plans side by side and asked people to pick one. Advanced cost €24.99 per user per month, Ultimate cost €49.99, and both cards listed the same eight benefits in the same order.",
+ "I restructured the cards with the product team so each plan stated only what it added to the one below it. When a later layout came back without the line that named what each plan inherited, I asked for it back. The cumulative structure shipped, and DeepL’s pricing page still uses it.",
   ],
   movements: [
     {
-      id: "buying-systems",
-      title: "One grid became several buying systems",
+ id: "upgrade-in-two-numbers",
+ title: "The upgrade was two numbers, and nothing pointed to them",
       blocks: [
         {
           kind: "prose",
           paragraphs: [
-            "The earlier pricing page put Translator’s Free, Starter, Advanced, Ultimate, and Enterprise offers in one individual-and-team grid. API had a separate route for developers, but it did not compete for space inside that grid.",
-            "Write changed the problem. It introduced a combined Translator and Write route, a standalone Write page, and an account-page upgrade route. Across those routes, the product appeared as DeepL Write, DeepL Write Pro, and Write Pro. The page now had to explain not just how tiers differed, but how products related.",
+ "The paid cards ran as checklists. Starter carried six lines; Advanced and Ultimate carried eight each. Advanced’s eight and Ultimate’s eight were the same eight, in the same order, and six of them matched word for word—data security, unlimited text translation, shared glossaries, team administration, single sign-on and CAT tool integration.",
+ "Two lines carried the entire difference. Advanced said “20 editable file translations per user/month in total” and “Upload files up to 20 MB in size.” Ultimate said “100 editable file translations per user/month in total” and “Upload files up to 30 MB in size.” The price roughly doubled; two numbers moved.",
+ "Nothing on the card named that upgrade. To find it, you had to read the two lists against each other, line by line, and notice which figures changed—the reader was doing the card’s job at the moment of deciding whether to spend another €25 per user per month.",
+ "Three of the eight lines ran to two or three rows inside a narrow column, including both lines that carried the price difference. “Upload files up to 20 MB in size” also buried its number in the middle of a sentence. Enterprise, at the far right, dropped the vocabulary altogether while its neighbours counted files and megabytes.",
           ],
         },
         {
           kind: "figure",
           image: {
-            label: "Translator’s original plan grid",
-            src: "/work/pricing-evolution/legacy-two-tab-grid.png",
-            width: 1602,
-            height: 900,
-            alt: "DeepL pricing page with a Translate Pro tab for Individuals and Teams and a Translate API tab for developers above Free, Starter, Advanced, Ultimate, and Enterprise cards.",
-            caption: "Translator fills the individual-and-team plan grid while API keeps a separate developer route.",
-          },
-        },
-        {
-          kind: "figure",
-          image: {
-            label: "The combined product route",
-            src: "/work/pricing-evolution/bundle-era-selector-in-context.png",
-            width: 3204,
-            height: 1208,
-            alt: "DeepL pricing page headed Find your perfect plan with tabs for DeepL Translator, DeepL Translator plus DeepL Write, and DeepL API above combined product cards.",
-            caption: "A new middle route places Translator and Write inside the same offer.",
-          },
-        },
-        {
-          kind: "figure",
-          image: {
-            label: "Standalone Write and account upgrade",
-            src: "/work/pricing-evolution/bundle-era-write-grid.png",
-            width: 2482,
-            height: 705,
-            alt: "Standalone Write pricing page with Free, Write Pro, and Enterprise cards beneath a banner that links existing subscribers to an account-page upgrade.",
-            caption: "Write also has its own Free, Write Pro, and Enterprise offers, plus a separate account-page upgrade route.",
+ label: "Working layout — repeated benefit lists, June–July 2024",
+ src: "/work/pricing-evolution/translator-repeated-working-layout.png",
+ width: 1088,
+ height: 863,
+ alt: "A four-column DeepL Translator plan grid: Starter at €7.49, Advanced at €24.99, Ultimate at €49.99, and an Enterprise contact-sales card. Advanced and Ultimate list the same eight benefits in the same order, differing only in two figures: 20 versus 100 editable file translations per user each month, and a 20 MB versus 30 MB upload limit.",
+ caption: "The price roughly doubles between Advanced and Ultimate, and only two numbers change. Nothing on either card points to them.",
           },
         },
       ],
     },
     {
-      id: "commercial-relationship",
-      title: "Define the relationship before writing the card",
+ id: "one-rule",
+ title: "One rule: name a benefit on the plan that adds it",
       blocks: [
         {
           kind: "prose",
           paragraphs: [
-            "Working with Monetization, I researched how competitors organized products, packages, tiers, incentives, and offer messages. I translated the pricing-page findings into content work: exploring value propositions, shaping product and plan naming rules, and preparing headline and copy variations for testing.",
-            "My pivotal judgment was to define the commercial relationship first. Was the offer a tier in a ladder, a parallel choice, an add-on, or a usage-based product? Once that was clear, the name, price, limit, and action could each do one job.",
-            "The project’s add-on control brought the Write question into Translator’s grid. My content had to support both states: combined names, prices, and discounts when Write Pro was included; Translator names and prices when it was not. The control itself was a project decision, not my interaction-design decision.",
-          ],
-        },
-        {
-          kind: "switcher",
-          ariaLabel: "Compare the selected pricing states with and without DeepL Write Pro",
-          initialId: "write-pro-included",
-          views: [
-            {
-              id: "write-pro-included",
-              label: "Write Pro included",
-              image: {
-                label: "Write Pro included",
-                src: "/work/pricing-evolution/addon-on-cards.png",
-                width: 2772,
-                height: 915,
-                alt: "Pricing cards with Add DeepL Write Pro switched on. Starter, Advanced, and Ultimate use combined product names, combined prices, and discount badges; Enterprise remains a sales offer.",
-                caption: "The included state uses combined names and prices, with the bundle discount beside each self-serve price.",
-              },
-            },
-            {
-              id: "translator-only",
-              label: "Translator only",
-              image: {
-                label: "Translator only",
-                src: "/work/pricing-evolution/addon-off-cards.png",
-                width: 2772,
-                height: 915,
-                alt: "Pricing cards with Add DeepL Write Pro switched off. Starter, Advanced, and Ultimate use Translator names and prices; Enterprise remains a sales offer.",
-                caption: "The other state keeps Translator names and prices on the three self-serve cards.",
-              },
-            },
+ "The rule was easy to state and awkward to apply. Name a benefit once, on the plan that introduces it, and let every plan above it say in a single line what it carries forward. Team administration arrives with Starter, so it belongs on Starter and nowhere above. Single sign-on and CAT tool integration arrive with Advanced, so they appear once, on Advanced. Ultimate raises two limits, so Ultimate lists two limits.",
+ "Cumulative wording has one trap, and the numeric limits are where it opens. “All Advanced features, plus: 100 file translations/month” has to read as a raised ceiling, not as a second allowance stacked on Advanced’s 20. Features accumulate; limits replace. The higher number supersedes the lower one, and the wording has to make that obvious without a footnote.",
+ "I pushed the benefit wording toward one shape per kind of fact. Every file allowance became “N file translations/month” and every size cap became “N MB maximum file size,” so the same named limit appears one card to the right with a bigger number. “Upload files up to 20 MB in size” became “20 MB maximum file size.” “2,000 glossaries with 5,000 entries each, shared with your team” became “2,000 shared glossaries (5,000 entries each).” The facts stayed. The sentence shapes stopped competing with the comparison the columns existed to make.",
           ],
         },
       ],
     },
     {
-      id: "shared-information",
-      title: "State shared information once",
+ id: "inheritance-cue",
+ title: "Six lines came off Ultimate, and one line had to go back",
       blocks: [
         {
           kind: "prose",
           paragraphs: [
-            "The combined Starter, Advanced, and Ultimate cards each restated the same DeepL Write Pro group. A reader had to scan every list to discover that this part of the offer did not change.",
-            "I used a simple content rule: shared information belongs in one place; changing information needs a consistent pattern. One selected Translator state shows the rule as cumulative headings. Starter establishes what is included, Advanced states what it adds to Starter, and Ultimate states what it adds to Advanced.",
+ "When the work moved onto a new layout, the repeats were gone but the inheritance heading had not survived the move. Cutting without that heading would have been worse than not cutting at all. Strip six lines off Ultimate and say nothing about what it keeps, and the most expensive self-serve plan shows two benefits while the free plan shows four. The shortest list reads as the smallest offer.",
+ "So I asked for the line back. In the revised state, each paid card opens with what it inherits—“All Free features, plus:”, “All Starter features, plus:” and “All Advanced features, plus:”—and then lists only its own additions. Advanced carries five additions under its heading instead of eight repeated lines. Ultimate’s whole card is the heading and two lines: “100 file translations/month” and “30 MB maximum file size.” One line does the work of the six it replaced, and the two that justify the price are the only two left standing.",
+ "Enterprise picked up “All Ultimate features, plus:” and four additions, so the most expensive column answered the same question as the rest instead of switching to brochure language. The revised layout also carries a Free tier at the left, which gives “All Free features, plus:” something concrete to point at.",
           ],
         },
         {
           kind: "figure",
           image: {
-            label: "Repeated bundle content",
-            src: "/work/pricing-evolution/cards-bundle-repeated.png",
-            width: 2048,
-            height: 1953,
-            alt: "Starter plus Write Pro, Advanced plus Write Pro, and Ultimate plus Write Pro cards. Each card contains a Translator feature group and repeats the same DeepL Write Pro feature group.",
-            caption: "Starter, Advanced, and Ultimate each restate the same Write Pro group beneath the Translator features.",
-          },
-        },
-        {
-          kind: "figure",
-          image: {
-            label: "Cumulative Translator headings",
-            src: "/work/pricing-evolution/cards-cumulative-tiers.png",
-            width: 2208,
-            height: 1350,
-            alt: "Starter, Advanced, and Ultimate Translator cards using What’s included, Everything in Starter plus, and Everything in Advanced plus headings.",
-            caption: "Starter establishes the offer; Advanced and Ultimate state only their additions.",
-          },
-        },
-        {
-          kind: "prose",
-          paragraphs: [
-            "The comparison table needed the same separation. When every value repeated “per user,” the qualifier belonged in the row label. When every glossary value repeated “glossary,” the noun belonged in the label. Cells could then keep only the changing value, plus an intrinsic unit such as MB when the unit was part of the value.",
-          ],
-        },
-        {
-          kind: "switcher",
-          ariaLabel: "Compare shared wording in table values and row labels",
-          initialId: "shared-words-in-values",
-          views: [
-            {
-              id: "shared-words-in-values",
-              label: "Shared words in values",
-              image: {
-                label: "Shared words in values",
-                src: "/work/pricing-evolution/table-values-repeat-label.png",
-                width: 2768,
-                height: 1167,
-                alt: "Comparison table where file translation values repeat per user and glossary values repeat the word glossary across the plan columns.",
-                caption: "The values repeat nouns and qualifiers that do not change between plans.",
+ label: "Working layout — cumulative structure, July 2024",
+ src: "/work/pricing-evolution/translator-cumulative-working-layout.png",
+ width: 1088,
+ height: 846,
+ alt: "A five-column plan grid for Free, Starter, Advanced, Ultimate and Enterprise. Each paid column opens with an inheritance line naming the previous plan, followed only by that plan’s additions. Advanced adds five items, including single sign-on and CAT tool integration. Ultimate adds two: 100 file translations per month and a 30 MB maximum file size.",
+ caption: "Every paid card now names what it carries forward. That lets Ultimate focus on the two limits that actually change.",
               },
             },
-            {
-              id: "shared-words-in-labels",
-              label: "Shared words in labels",
-              image: {
-                label: "Shared words in labels",
-                src: "/work/pricing-evolution/table-labels-own-qualifier.png",
-                width: 2768,
-                height: 1167,
-                alt: "Comparison table where File translations per user per month and Glossaries carry the shared wording in row labels, leaving changing numbers in the cells.",
-                caption: "The labels carry shared wording; cells retain the changing value and any intrinsic unit.",
-              },
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: "product-patterns",
-      title: "Let each commercial model use the right pattern",
-      blocks: [
-        {
-          kind: "prose",
-          paragraphs: [
-            "The rule was consistent, but the card pattern was not universal. Translator used a cumulative tier ladder. Write combined a free offer, a self-serve paid offer, and a separately named business offer. Voice presented two parallel use cases. API combined a free tier, subscription and usage pricing, and a custom business offer.",
-            "Write and API both use cumulative headings, but for different relationships. Voice does not use them: Meetings and Conversations sit side by side because neither offer is the next rung above the other.",
-          ],
-        },
-        {
-          kind: "switcher",
-          ariaLabel: "Compare the selected pricing patterns for Write, Voice, and API",
-          initialId: "write",
-          views: [
-            {
-              id: "write",
-              label: "Write",
-              image: {
-                label: "Write",
-                src: "/work/pricing-evolution/product-write-cards.png",
-                width: 2244,
-                height: 1166,
-                alt: "DeepL Write cards for Free, Write Pro, and DeepL Write for Business. The paid offers use cumulative headings and the business offer keeps a separate name.",
-                caption: "Write uses a cumulative ladder for its self-serve offer and a separately named business offer.",
-              },
-            },
-            {
-              id: "voice",
-              label: "Voice",
-              image: {
-                label: "Voice",
-                src: "/work/pricing-evolution/product-voice-cards.png",
-                width: 1700,
-                height: 1358,
-                alt: "DeepL Voice for Meetings and DeepL Voice for Conversations cards side by side, each with its own description, sales action, and feature list.",
-                caption: "Voice presents Meetings and Conversations as parallel use-case offers.",
-              },
-            },
-            {
-              id: "api",
-              label: "API",
-              image: {
-                label: "API",
-                src: "/work/pricing-evolution/product-api-cards.png",
-                width: 2244,
-                height: 1312,
-                alt: "DeepL API Free, DeepL API Pro with a monthly subscription and usage price, and DeepL API for Business with custom pricing.",
-                caption: "API combines a free tier, subscription and usage pricing, and a custom business offer.",
-              },
-            },
-          ],
-        },
       ],
     },
   ],
   closing: {
-    heading: "One content rule, several pricing models",
+ heading: "Two years on, the page still names what each plan inherits",
     paragraphs: [
-      "The selected work demonstrates a content model that can hold cumulative ladders, parallel offers, add-ons, subscription pricing, and usage pricing without forcing every product into the same card template.",
-      "The common decision was not a template. It was defining the commercial relationship first, then giving shared information one place and changing information a consistent pattern.",
+ "The cumulative structure shipped. DeepL later renamed the paid Translator plans—Starter, Advanced and Ultimate became Individual, Team and Business—and kept the pattern. On the public pricing page today, Team opens with “Everything in Individual, plus:” and Business opens with “Everything in Team, plus:”, each followed by its own additions. The names changed. The structure held.",
+ "Six repeated lines came off Ultimate in that working layout. They could come off only because I called for the line above them—the one naming what Ultimate keeps—to be restored. A plan card can drop what the reader already has, as long as it still says what the reader is getting. Under different plan names, that is still how the page works.",
     ],
   },
   next: { href: "/work/checkout", label: "Checkout across four purchase states" },

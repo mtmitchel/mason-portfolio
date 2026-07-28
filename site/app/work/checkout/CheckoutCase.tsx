@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { ChapterBackLink, ChapterFigure } from "../../components/ChapterCaseElements";
 import EvidenceSwitcher from "../../components/EvidenceSwitcher";
-import ImageLightbox from "../../components/ImageLightbox";
+import ImageComparison from "../../components/ImageComparison";
 import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryEvidenceView, StoryImage } from "../portfolioTypes";
 
@@ -76,6 +77,24 @@ const noTrialDetail: StoryImage = {
   caption: "Remove the trial promise, show the amount due today and add the immediate-start acknowledgement before purchase.",
 };
 
+const trialFaqCollapsed: StoryImage = {
+  label: "Trial questions collapsed",
+  src: "/work/checkout/trial-faq-collapsed.png",
+  width: 1080,
+  height: 1590,
+  alt: "DeepL trial checkout summary with collapsed questions about cancellation, charge timing and included Pro features",
+  caption: "Three questions surface the uncertainties most likely to block a trial decision without competing with the order summary.",
+};
+
+const trialFaqExpanded: StoryImage = {
+  label: "Trial questions expanded",
+  src: "/work/checkout/trial-faq-expanded.png",
+  width: 1080,
+  height: 1900,
+  alt: "DeepL trial checkout summary with expanded answers about cancellation, credit-card charge timing and included Pro features",
+  caption: "The expanded state answers cancellation first, then explains charge timing and what the trial includes.",
+};
+
 const completeStates: StoryEvidenceView[] = [
   {
     id: "bundle",
@@ -103,74 +122,46 @@ const completeStates: StoryEvidenceView[] = [
   },
 ];
 
-function EvidenceFigure({ image }: { image: StoryImage }) {
-  return (
-    <div className="chapter-figure">
-      <ImageLightbox
-        chrome="image"
-        label={image.label}
-        previewSrc={image.src}
-        width={image.width}
-        height={image.height}
-        alt={image.alt}
-        caption={image.caption}
-        sizes="(max-width: 1160px) 100vw, 1120px"
-      />
-    </div>
-  );
-}
-
-function SectionHeading({ label, title }: { label: string; title: string }) {
-  return (
-    <div className="story-section-heading">
-      <p>{label}</p>
-      <h2>{title}</h2>
-    </div>
-  );
-}
-
 function EvidenceSection({
   id,
   image,
   intro,
-  label,
   title,
 }: {
   id: string;
   image: StoryImage;
   intro: string;
-  label: string;
   title: string;
 }) {
   return (
-    <section className="story-evidence" id={id}>
-      <SectionHeading label={label} title={title} />
-      <div className="story-copy story-section-intro"><p>{intro}</p></div>
-      <EvidenceFigure image={image} />
+    <section className="chapter-section" id={id}>
+      <h2 className="chapter-heading">{title}</h2>
+      <div className="chapter-blocks">
+        <div className="chapter-prose"><p>{intro}</p></div>
+        <ChapterFigure image={image} measure={id === "trial-sign-up" ? "compact" : "wide"} />
+      </div>
     </section>
   );
 }
 
 export default function CheckoutCase() {
   return (
-    <main className="site-shell case-shell">
+    <main className="site-shell case-shell chapter-shell">
       <SiteHeader />
-      <article className="story-page">
-        <Link className="back-link" href="/">Back to selected work</Link>
+      <article className="chapter-page chapter-case-page checkout-page">
+        <ChapterBackLink />
 
-        <header className="story-hero">
-          <p className="story-context">DeepL · Purchase journeys</p>
+        <header className="chapter-hero">
           <h1>Checkout across four purchase states</h1>
           <div className="chapter-synopsis">
-            <p>Checkout content changed when the product mix, seat count, trial eligibility or payment timing changed.</p>
-            <p>I contributed content iterations across sign-up and checkout with product design, content design and monetization.</p>
-            <p>Across four parallel states—trial sign-up, a Translator and Write bundle, a twenty-seat team purchase and a purchase with no trial—the offer appears at account creation, and product, price, seats, timing and consent change with the purchase conditions.</p>
+            <p>A checkout cannot repeat one promise when the product mix, seat count, trial eligibility, and payment timing all change.</p>
+            <p>Working on UX writing and checkout content iterations with product design, content design, and monetization, my job was to keep the offer coherent as each purchase condition changed.</p>
+            <p>Across four parallel working states, the product, price, seats, timing, consent, and reassurance stay aligned—from account creation through the order summary.</p>
           </div>
         </header>
 
         <EvidenceSection
           id="trial-sign-up"
-          label="Trial sign-up"
           title="Carry the trial into account creation"
           intro="Account creation appears after trial selection, so the selected offer remains visible during sign-up."
           image={trialSignUpDetail}
@@ -178,7 +169,6 @@ export default function CheckoutCase() {
 
         <EvidenceSection
           id="bundle-checkout"
-          label="Bundle"
           title="Keep a two-product offer visible at commitment"
           intro="The bundle state brings two products into a one-user order."
           image={bundleDetail}
@@ -186,7 +176,6 @@ export default function CheckoutCase() {
 
         <EvidenceSection
           id="team-purchase"
-          label="Team purchase"
           title="Scale the order to a team"
           intro="Seat count changes several values at once: total price, savings and plan allowances."
           image={teamDetail}
@@ -194,31 +183,59 @@ export default function CheckoutCase() {
 
         <EvidenceSection
           id="no-trial-checkout"
-          label="No trial"
           title="Change timing and consent when no trial applies"
           intro="Trial eligibility changes when payment starts and what the customer acknowledges."
           image={noTrialDetail}
         />
 
-        <section className="story-evidence" id="complete-purchase-states">
-          <SectionHeading label="Complete states" title="Explore the complete purchase states" />
-          <div className="story-copy story-section-intro">
-            <p>Choose a tab to follow product, price, timing and consent through one complete state.</p>
-            <p>These are parallel purchase conditions.</p>
+        <section className="chapter-section" id="trial-questions">
+          <h2 className="chapter-heading">Answer the questions that can stop the purchase</h2>
+          <div className="chapter-blocks">
+            <div className="chapter-prose">
+              <p>In a separate trial-checkout exploration, the order summary already states price and timing, but a customer can still hesitate over cancellation, card charges, and what the trial includes. The FAQ keeps those questions inside the purchase context instead of sending the customer to the help center.</p>
+              <p>The collapsed state makes all three concerns scannable. The expanded state answers directly, putting the temporary verification charge inside the payment answer instead of turning it into a competing warning.</p>
+            </div>
+            <div className="chapter-media">
+              <ImageComparison
+                ariaLabel="Collapsed and expanded trial questions beside the checkout order summary"
+                chrome="overlay"
+                dialogPresentation="minimal"
+                dialogSizes="1440px"
+                items={[
+                  { label: "Questions visible", image: trialFaqCollapsed },
+                  { label: "Answers visible", image: trialFaqExpanded },
+                ]}
+                sizes="(max-width: 928px) calc(100vw - 48px), 880px"
+              />
+            </div>
           </div>
-          <EvidenceSwitcher
-            ariaLabel="Choose a complete checkout state"
-            initialId="bundle"
-            views={completeStates}
-          />
         </section>
 
-        <section className="story-outcome" id="observable-ending">
-          <SectionHeading label="Ending state" title="Observable ending" />
-          <div className="story-copy">
-            <p>Plan controls and order summaries carry the same product and seat information.</p>
-            <p>Trial states show €0 due today and a later charge after the trial.</p>
-            <p>The no-trial state shows an immediate charge and adds consent for the service to start immediately.</p>
+        <section className="chapter-section" id="complete-purchase-states">
+          <h2 className="chapter-heading">Explore the complete purchase states</h2>
+          <div className="chapter-blocks">
+            <div className="chapter-prose">
+              <p>Choose a tab to follow product, price, timing, and consent through one complete working state. These are parallel purchase conditions, not a before-and-after sequence.</p>
+            </div>
+            <div className="chapter-media chapter-media--reading">
+              <EvidenceSwitcher
+                ariaLabel="Choose a complete checkout state"
+                dialogPresentation="minimal"
+                dialogSizes="1440px"
+                initialId="bundle"
+                presentation="quiet"
+                sizes="(max-width: 928px) calc(100vw - 48px), 740px"
+                views={completeStates}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="chapter-closing" id="observable-ending">
+          <h2 className="chapter-heading chapter-heading--closing">Observable ending</h2>
+          <div className="chapter-prose">
+            <p>The selected working states keep the plan controls and order summary in agreement. Trial purchases show €0 due today and the later charge; the no-trial purchase shows the immediate charge and adds consent for service to start now.</p>
+            <p>In a separate FAQ exploration, the collapsed view keeps the answer close to the order; expanding it explains both the free period and the later monthly charge without sending the customer elsewhere.</p>
           </div>
         </section>
 

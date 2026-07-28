@@ -67,7 +67,7 @@ These are historical rules. They do not establish current DeepL terminology.
 ## Private source register
 
 The raw GPT export remains outside the repository at
-`/home/mason/Downloads/gptexport`. Do not publish or copy it wholesale. The
+`/home/mason/Downloads/assistant-exports/chatgpt`. Do not publish or copy it wholesale. The
 selected conversation provenance, redacted excerpts, and hash-preserved attachment
 copies are curated in
 [`gpt-export-evidence/`](gpt-export-evidence/README.md).

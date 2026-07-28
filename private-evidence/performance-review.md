@@ -77,7 +77,10 @@ Their explicit version-family index is
 
 - **What survives:** Mason collaborated with Product Design, Content Design, and Monetization on benefit-led Pro Driver messaging for free-to-paid conversion work.
 - **Strongest new pages:** `source-documents/performance-review/1st half bob.pdf`, page 2; `source-documents/performance-review/Bob.pdf`, pages 2-3.
-- **Conflict:** The self-reflections use 12% conversion growth and €1.2M ARR, while the existing recovery preserves a separate missing-canvas formulation of 124 additional purchases per day and approximately €3.2M projected ARR.
+- **Conflict:** The self-reflections use 12% conversion growth and €1.2M ARR,
+  while a retained partial DM-1523 canvas excerpt preserves a separate
+  formulation of 124 additional purchases per day and approximately €3.2M
+  projected ARR.
 - **Current resolution:** Keep the contribution and use Mason's approved high-level formulation—12% lift in paid conversion and a seven-figure ARR uplift—only for the overall Pro Driver/free-to-paid experiment wave. Retire the conflicting granular formulations rather than combining them.
 - **Recovery relationship:** Corroborates the contribution in `MON-01` but does not raise its evidence level.
 

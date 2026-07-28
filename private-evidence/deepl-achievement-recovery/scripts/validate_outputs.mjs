@@ -2,10 +2,23 @@ import fs from "node:fs/promises";
 import crypto from "node:crypto";
 import path from "node:path";
 
+import {
+  conversationInventoryLinkErrors,
+  documentInventoryLinkErrors,
+  recoveredContentHash,
+} from "./evidence-link-validation.mjs";
+
 const root = path.resolve(process.argv[2] ?? ".");
 const outputDir = path.resolve(process.argv[3] ?? path.join(root, "outputs/deepl-achievement-recovery"));
 const repoRoot = path.resolve(outputDir, "../../..");
 const ledger = JSON.parse(await fs.readFile(path.join(outputDir, "achievement-ledger.json"), "utf8"));
+const documentInventory = JSON.parse(await fs.readFile(
+  path.join(repoRoot, "private-evidence/deepl-document-inventory.json"),
+  "utf8",
+));
+const inventoryById = new Map(
+  documentInventory.documents.map((item) => [item.source_record_id, item]),
+);
 
 const fileCache = new Map();
 async function loadConversationFile(fileName) {
@@ -19,6 +32,7 @@ const failures = [];
 let sourceRefs = 0;
 let messageRefs = 0;
 let artifactRefs = 0;
+let inventoryLinkRefs = 0;
 const artifactFiles = new Set();
 const artifactRefKeys = new Set();
 const duplicateArtifactRefs = new Set();
@@ -79,6 +93,17 @@ for (const achievement of ledger.achievements) {
         failures.push(`${achievement.id}: message ${source.message_id} is not user-authored`);
       }
     }
+    if (source.inventory_source_record_id) {
+      inventoryLinkRefs += 1;
+      const inventoryRecord = inventoryById.get(source.inventory_source_record_id);
+      if (!inventoryRecord) {
+        failures.push(`${achievement.id}: inventory record not found: ${source.inventory_source_record_id}`);
+      } else {
+        for (const error of conversationInventoryLinkErrors(source, inventoryRecord)) {
+          failures.push(`${achievement.id}: ${error}`);
+        }
+      }
+    }
   }
   for (const source of achievement.artifact_sources ?? []) {
     artifactRefs += 1;
@@ -97,6 +122,29 @@ for (const achievement of ledger.achievements) {
       continue;
     }
     await validateArtifact(source.repo_path, source.sha256, achievement.id);
+  }
+  for (const source of achievement.document_sources ?? []) {
+    if (!source.repo_path || path.isAbsolute(source.repo_path) || source.repo_path.split(path.sep).includes("..")) {
+      failures.push(`${achievement.id}: invalid document source path ${source.repo_path ?? "<missing>"}`);
+      continue;
+    }
+    let actualHash = null;
+    try {
+      actualHash = recoveredContentHash(
+        await fs.readFile(path.join(repoRoot, source.repo_path), "utf8"),
+      );
+    } catch (error) {
+      failures.push(`${achievement.id}: cannot load document source ${source.repo_path}: ${error.message}`);
+    }
+    inventoryLinkRefs += 1;
+    const inventoryRecord = inventoryById.get(source.inventory_source_record_id);
+    if (!inventoryRecord) {
+      failures.push(`${achievement.id}: inventory record not found: ${source.inventory_source_record_id ?? "<missing>"}`);
+    } else {
+      for (const error of documentInventoryLinkErrors(source, inventoryRecord, actualHash)) {
+        failures.push(`${achievement.id}: ${error}`);
+      }
+    }
   }
 }
 
@@ -156,6 +204,7 @@ const result = {
   source_references_checked: sourceRefs,
   message_references_checked: messageRefs,
   artifact_references_checked: artifactRefs,
+  inventory_links_checked: inventoryLinkRefs,
   unique_artifact_files_checked: artifactFiles.size,
   master_source_files_checked: masterSourceManifest.length,
   extracted_source_messages: sourceMessages.length,

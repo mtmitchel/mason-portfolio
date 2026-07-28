@@ -3,8 +3,8 @@ import PricingCase from "./PricingCase";
 import { pricingEvolutionCase } from "./pricingEvolutionData";
 
 export const metadata: Metadata = {
-  title: "Simplifying pricing across four products — Mason Mitchel",
-  description: "How competitor research, naming, and content rules supported pricing patterns across Translator, Write, Voice, and API.",
+ title: "Making the more expensive plan explain itself — Mason Mitchel",
+ description: "How Mason restructured DeepL Translator plan cards around cumulative tier differences—and restored the line that made the shorter lists work.",
   alternates: { canonical: "/work/pricing-evolution" },
 };
 

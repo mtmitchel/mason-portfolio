@@ -53,6 +53,21 @@ const checkoutCover = {
   caption: "Current DeepL ecommerce artwork used as a homepage cover; the case page contains the checkout evidence.",
 };
 
+const productNamingPreview = {
+  label: "Follow the API convention",
+  primary: "DeepL Write Pro",
+  alternative: "Not DeepL Pro Write",
+};
+
+const voiceProductCover = {
+  label: "DeepL Voice offer comparison",
+  src: "/work/voice-product/voice-offer-comparison.png",
+  width: 3024,
+  height: 2654,
+  alt: "DeepL pricing surface comparing Voice for Meetings and Voice for Conversations",
+  caption: "The comparison gives DeepL Voice for Meetings and Conversations distinct use cases inside one product family.",
+};
+
 const reportCover = {
   label: "Report cover",
   src: "/work/report-campaign/report-cover.png",
@@ -80,7 +95,7 @@ const localyzeVideo = {
 
 export const selectedWorkCards: PortfolioCard[] = [
   { href: "/work/upgrade-prompts", title: "Upgrade prompts across Translator and Write", meta: "DeepL · Monetization", image: upgradePromptsCover },
-  { href: "/work/pricing-evolution", title: "Simplifying pricing across four products", meta: "DeepL · Pricing evolution", image: pricingEvolutionCover, video: pricingEvolutionVideo },
+  { href: "/work/pricing-evolution", title: "Making the more expensive plan explain itself", meta: "DeepL · Pricing evolution", image: pricingEvolutionCover, video: pricingEvolutionVideo },
   { href: "/work/checkout", title: "Checkout across four purchase states", meta: "DeepL · Purchase journeys", image: checkoutCover },
   { href: "/work/account-team-security", title: "Account recovery and team administration", meta: "DeepL · Account and team journeys", image: accountTeamSecurityCover, video: accountTeamSecurityVideo },
   {
@@ -91,6 +106,8 @@ export const selectedWorkCards: PortfolioCard[] = [
     imageDisplay: "full-document",
   },
   { href: "/work/localyze-executive-ghostwriting", title: "Executive ghostwriting on global mobility", meta: "Localyze · CEO thought leadership", image: localyzeCover, video: localyzeVideo },
+  { href: "/work/product-naming", title: "A working naming framework for a growing product portfolio", meta: "DeepL · Product naming", textPreview: productNamingPreview },
+  { href: "/work/voice-product", title: "Giving DeepL Voice two clear jobs", meta: "DeepL · Product positioning", image: voiceProductCover },
 ];
 
 export const writingEntries: WritingEntry[] = [

@@ -8,19 +8,24 @@ work. The deployable application lives in [`site/`](site/).
 
 - [`AGENTS.md`](AGENTS.md) — canonical portfolio-content workflow, evidence
   boundaries, approvals, and repository rules.
-- [`site/README.md`](site/README.md) — live routes, application structure,
+- [`site/README.md`](site/README.md) — implemented routes, application structure,
   local commands, and publication state.
 - [`private-evidence/deepl-project-candidate-queue.md`](private-evidence/deepl-project-candidate-queue.md)
-  — combined GPT-audit, Figma, CV, and achievement ranking. It owns the current
-  DeepL work order and frozen or represented dispositions.
+  — DeepL UX copy and content-design ranking across the assistant exports,
+  document inventory, Figma evidence, CV, and achievement records. It owns the
+  in-scope work order and implemented, frozen, or represented dispositions;
+  marketing, editorial, and other-employer work stay outside it.
+- [`private-evidence/deepl-document-inventory.json`](private-evidence/deepl-document-inventory.json)
+  — reproducible source-occurrence inventory across the ChatGPT and Claude
+  exports.
 - [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
   — current page titles, candidate story direction, writing rules, and homepage
   decisions.
 - [`private-evidence/claim-review.md`](private-evidence/claim-review.md) —
   factual limits for every case.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
-  — source, crop, dimensions, caption, and alternative text for selected
-  visuals.
+  — sources, transformations, exact locators, captions, alternative text, and
+  central-exhibit contracts for selected visual and text evidence.
 - [`private-evidence/README.md`](private-evidence/README.md) — private evidence
   and source-material index.
 - [`archive/README.md`](archive/README.md) — index of retired code, old reviews,

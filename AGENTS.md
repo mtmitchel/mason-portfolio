@@ -16,7 +16,14 @@ the application.
   factual ceilings only. It does not own story structure,
   emphasis, tone, or supported statements of intent and rationale.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
-  owns selected-asset source and crop records.
+  owns selected visual and text-exhibit sources, transformations, exact
+  locators, and central-exhibit contracts.
+- [`private-evidence/deepl-document-inventory.json`](private-evidence/deepl-document-inventory.json)
+  owns the reproducible cross-export source-occurrence record. Its custody,
+  origin, privacy, and claim-coverage fields must remain separate.
+- [`private-evidence/deepl-document-register.md`](private-evidence/deepl-document-register.md)
+  explains how to rebuild and interpret that inventory. It is not a second
+  inventory.
 - [`private-evidence/deepl-figma-evidence-map.md`](private-evidence/deepl-figma-evidence-map.md)
   owns the achievement-to-Figma crosswalk.
 - [`docs/figma-workflow.md`](docs/figma-workflow.md) owns Figma access, edit,
@@ -44,6 +51,13 @@ Read only the owners required by the task:
   only the targeted project or reconstruction evidence needed for the story.
   Do not limit the narrative to the currently selected screenshots or route
   implementation.
+- DeepL case selection, story proposals, or factual audits: also use
+  `research-deepl-product-intelligence` whenever the work depends on product
+  definitions or relationships, terminology, launch history, pricing or
+  packaging, audience, adoption, or current product state. Use it again before
+  finalizing volatile DeepL claims. It supplies domain context only;
+  repository evidence owners govern Mason's role, contribution, lifecycle,
+  causation, and outcomes.
 - Achievement-to-Figma mapping:
   [`private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md`](private-evidence/deepl-product-figma-navigation-correction-2026-07-20.md),
   the relevant section of
@@ -162,9 +176,10 @@ publication, deployment, access changes, Figma writes, or destructive action.
 ## Protected phases
 
 Figma is read-only unless Mason explicitly approves an edit in the current
-task. Use Mason's logged-in Chrome profile when direct Figma access is required.
-The official native Figma MCP server, direct Figma APIs, unrelated plugins,
-Playwright, and other browsers are prohibited.
+task. Direct Figma access may use Mason's logged-in Figma desktop app or logged-in
+Chrome profile. The unofficial Figwright MCP server and its required local
+desktop or development-plugin bridge are allowed. The official native Figma MCP
+server, direct Figma APIs, unrelated plugins, and Playwright are prohibited.
 
 Commit, push, publication, deployment, access changes, Figma writes, and
 destructive actions each require explicit approval. Approval for one phase does

@@ -191,8 +191,9 @@ candidates.
 ## Evidence and claim ceilings
 
 - `MON-01` (DM-1523) supports collaborative post-signup Pro Driver messaging in
-  2024, but the experiment canvas is missing. A surviving Translator or Write
-  frame cannot be declared the winning variant.
+  2024. A direct partial canvas excerpt survives, but the original binary,
+  complete context, and screen-to-variant mapping do not. A surviving
+  Translator or Write frame cannot be declared the winning variant.
 - `MON-03` (DM-1417) concerns an anonymous-user soft block encouraging free
   account creation. It is adjacent funnel evidence, not automatically a paid
   Pro Driver.

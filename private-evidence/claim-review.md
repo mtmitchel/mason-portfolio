@@ -95,11 +95,11 @@ untouchable, or ultimate truth.
   file-to-production lineage, or authorship of every current string. The web
   bundle tab became a Write Pro add-on presentation after 2025-10-09 and by
   2025-10-29.
-- State Mason's naming contribution as participation in and workshopping of a
-  terminology system owned by UX Writing and reviewed with Product Marketing.
-  His account and the working record support collaborative conception,
-  drafting, correction, and extension of the system. Do not claim sole
-  creation, sole ownership, or organization-wide adoption.
+- State that Mason was assigned to draft, and contributed draft content to, the
+  Content Design System's product-and-plan-names section, drawing on a
+  terminology source of truth owned by UX Writing and reviewed with Product
+  Marketing. The evidence does not establish final approval, publication,
+  organization-wide adoption, or sole ownership of the wider system.
 - Mason's account supports broader collaborative involvement in the Voice and
   API work represented in the recovered product-design context. They may be
   used when they have a clear narrative job. Their omission from a case must be
@@ -164,6 +164,10 @@ untouchable, or ultimate truth.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md)
 - [`deepl-product-figma-navigation-correction-2026-07-20.md`](deepl-product-figma-navigation-correction-2026-07-20.md)
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json)
+- [`deepl-document-inventory.json`](deepl-document-inventory.json)
+- [`source-documents/recovered/content-design-system--pdf-049544.md`](source-documents/recovered/content-design-system--pdf-049544.md)
+- [`source-documents/recovered/content-design-system--pdf-e2c0ac.md`](source-documents/recovered/content-design-system--pdf-e2c0ac.md)
+- [`source-documents/recovered/content-design-system-plans.md`](source-documents/recovered/content-design-system-plans.md)
 
 Mason controls the final wording, source selection, repository access, and
 deployment.

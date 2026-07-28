@@ -15,6 +15,15 @@
     {
       "id": "DEEPL-UPGRADE-PROMPTS",
       "project_id": "DEEPL-UPGRADE-PROMPTS",
+      "central_exhibit": {
+        "id": "upgrade-allowance-escalation",
+        "route": "/work/upgrade-prompts",
+        "kind": "manifest-image",
+        "public_refs": [
+          "site/public/work/upgrade-prompts/write-pro-allowance-comparison.png"
+        ],
+        "relationship": "Parallel allowance states showing how account context changes the offer."
+      },
       "source_path": "private-evidence/source-exports/figma/upgrade-prompts",
       "source_type": "design",
       "editability": "flattened",
@@ -27,8 +36,12 @@
           "path": "usage-limit.png",
           "dimensions": "1092x1500",
           "public_path": "site/public/work/upgrade-prompts/usage-limit.png",
-          "source_status": "missing",
-          "source_notes": "No independent repository source export is retained. A native, unlocked same-family historical-state candidate was verified in the preserved Monetization Figma file; the current node's badge visibility and label differ from the PNG. Export lineage is unproved, so provenance remains missing.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-28.zip",
+          "source_sha256": "6028c995cbce5f22cd45b2ebca9c3dbb3b5e800135aab774ccc82f3ae9da65ad",
+          "source_zip_entry": "usage-limit.png",
+          "source_entry_sha256": "0d50e9c215a3cceb01ac0902068c573396494159dc8ce9aaa27cfa969c71b371",
+          "crop": "none; complete exported frame",
           "figma_source_candidate": {
             "file_key": "0JYwhKhRAliGBhyl2kBnEu",
             "node_id": "2:112817",
@@ -56,8 +69,12 @@
           "path": "document-size.png",
           "dimensions": "1092x1204",
           "public_path": "site/public/work/upgrade-prompts/document-size.png",
-          "source_status": "missing",
-          "source_notes": "No independent repository source export is retained. A native, unlocked source-equivalent frame was verified in the preserved Monetization Figma file, but the current PNG's export lineage is unproved, so provenance remains missing.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-28.zip",
+          "source_sha256": "6028c995cbce5f22cd45b2ebca9c3dbb3b5e800135aab774ccc82f3ae9da65ad",
+          "source_zip_entry": "document-size.png",
+          "source_entry_sha256": "3b5e1a6eb9af6ad32d33ccba548f3426116d52ff496bb69a2cd1f3e3c7e65878",
+          "crop": "none; complete exported frame",
           "figma_source_candidate": {
             "file_key": "0JYwhKhRAliGBhyl2kBnEu",
             "node_id": "2:165768",
@@ -69,8 +86,12 @@
           "path": "remaining-documents.png",
           "dimensions": "546x626",
           "public_path": "site/public/work/upgrade-prompts/remaining-documents.png",
-          "source_status": "missing",
-          "source_notes": "No independent repository source export is retained. A native, unlocked source-equivalent frame was verified in the preserved Monetization Figma file, but the current PNG's export lineage is unproved, so provenance remains missing.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-28.zip",
+          "source_sha256": "6028c995cbce5f22cd45b2ebca9c3dbb3b5e800135aab774ccc82f3ae9da65ad",
+          "source_zip_entry": "remaining-documents.png",
+          "source_entry_sha256": "f464d2355b76d65e5e5daa9c57fde2d90d3c34a6eb4081dca1370a60f8f181d4",
+          "crop": "none; complete exported frame",
           "figma_source_candidate": {
             "file_key": "0JYwhKhRAliGBhyl2kBnEu",
             "node_id": "2:165336",
@@ -101,6 +122,81 @@
           "caption": "Replace the trial with an upgrade action for an existing Translator Pro customer.",
           "text_alternative": "Matching detail of a DeepL Write Pro prompt for an existing Translator Pro account with an upgrade action.",
           "sha256": "8c1d6def49adc1d9fd8ec6946d29572d57bc4ae38898669372f91f052d24c9cf"
+        },
+        {
+          "path": "upgrade-prompts/feature-awareness-clarify.png",
+          "public_path": "site/public/work/upgrade-prompts/feature-awareness-clarify.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D06\\D06__feature-awareness-state-a__5-315616.png",
+          "source_entry_sha256": "d08e4a85c9370fd1b5862d1ef1dfc8fe4051f8d49d6abf11dcce365bb557fe23",
+          "crop": "none; complete exported frame",
+          "dimensions": "3024x1198",
+          "caption": "The explanation names the behavior; the product example shows the question Clarify asks before adjusting the translation.",
+          "text_alternative": "DeepL feature-awareness panel explaining Clarify beside a translation example that asks the user to resolve gender ambiguity.",
+          "sha256": "d08e4a85c9370fd1b5862d1ef1dfc8fe4051f8d49d6abf11dcce365bb557fe23"
+        },
+        {
+          "path": "upgrade-prompts/feature-awareness-tone.png",
+          "public_path": "site/public/work/upgrade-prompts/feature-awareness-tone.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D06\\D06__feature-awareness-state-b__5-315617.png",
+          "source_entry_sha256": "90b6c23e2a0fab2141f8a12b96712534a8b45b2c57a0ea6c618d80489ccabcd5",
+          "crop": "none; complete exported frame",
+          "dimensions": "3024x1240",
+          "caption": "The copy explains when tone matters, while the product view makes the available choices concrete.",
+          "text_alternative": "DeepL feature-awareness panel explaining tone controls beside formal, informal and writing-style options.",
+          "sha256": "90b6c23e2a0fab2141f8a12b96712534a8b45b2c57a0ea6c618d80489ccabcd5"
+        },
+        {
+          "path": "upgrade-prompts/feature-awareness-files.png",
+          "public_path": "site/public/work/upgrade-prompts/feature-awareness-files.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D06\\D06__feature-awareness-state-c__5-315618.png",
+          "source_entry_sha256": "8869a252186aacbd0c59cfadd5ea09c45fac5dbed848f4d265efd0b4b0fbef4f",
+          "crop": "none; complete exported frame",
+          "dimensions": "3024x1185",
+          "caption": "The copy replaces a feature noun with the task—translate an entire file—then the visual supplies the format detail.",
+          "text_alternative": "DeepL feature-awareness panel explaining whole-file translation beside supported document formats.",
+          "sha256": "8869a252186aacbd0c59cfadd5ea09c45fac5dbed848f4d265efd0b4b0fbef4f"
+        },
+        {
+          "path": "upgrade-prompts/feature-awareness-glossary.png",
+          "public_path": "site/public/work/upgrade-prompts/feature-awareness-glossary.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D06\\D06__feature-awareness-state-d__5-315619.png",
+          "source_entry_sha256": "96f117371bec720f2c875f9befe63824886bae242a03dc75efba1bb009f706fb",
+          "crop": "none; complete exported frame",
+          "dimensions": "3024x1185",
+          "caption": "The explanation leads with consistency and connects it to a visible term pair and writing correction.",
+          "text_alternative": "DeepL feature-awareness panel explaining personal glossaries beside terminology and writing examples.",
+          "sha256": "96f117371bec720f2c875f9befe63824886bae242a03dc75efba1bb009f706fb"
+        },
+        {
+          "path": "upgrade-prompts/write-pro-allowance-comparison.png",
+          "public_path": "site/public/work/upgrade-prompts/write-pro-allowance-comparison.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D17\\D17__suggestions-comparison__2-20734.png",
+          "source_entry_sha256": "6d13caf69b1fd9ae413c55cc8de007a992fab3b8b050251dad67833876643a74",
+          "crop": "none; complete exported comparison",
+          "dimensions": "2468x788",
+          "caption": "The inline state preserves the task while alternatives remain; the hard stop expands the offer, action and reassurance.",
+          "text_alternative": "DeepL Write showing an inline message with nine alternatives remaining beside a full limit state offering a 30-day Write Pro trial.",
+          "sha256": "6d13caf69b1fd9ae413c55cc8de007a992fab3b8b050251dad67833876643a74"
         }
       ],
       "homepage_media": {
@@ -116,268 +212,71 @@
     {
       "id": "DEEPL-PRICING-EVOLUTION",
       "project_id": "DEEPL-PRICING-EVOLUTION",
+      "central_exhibit": {
+        "id": "pricing-working-layouts-preserved",
+        "route": "/work/pricing-evolution",
+        "kind": "manifest-image-set",
+        "public_refs": [
+          "site/public/work/pricing-evolution/translator-repeated-working-layout.png",
+          "site/public/work/pricing-evolution/translator-cumulative-working-layout.png"
+        ],
+        "relationship": "Non-equivalent working layouts preserved for evidence review; not a before-and-after pair.",
+        "render_policy": "preserved-only"
+      },
       "source_path": "private-evidence/source-exports/figma/pricing-evolution",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "The frozen public candidate mixes historical-artifact crops with 2026 portfolio reconstructions. Artifact genesis is recorded per file below. The repeated bundle row and reconstructed cumulative Translator row are different evidence types and must not be presented as an unlabelled historical before-and-after.",
-      "caption": "Any later caption must identify whether the image is a historical artifact or a 2026 portfolio reconstruction, then state the content-design idea it demonstrates without implying shipment, adoption, testing, or measured impact.",
-      "text_alternative": "Describe the visible product, route, name, tier relationship, add-on state, price pattern, or table-label distinction. If the image is a 2026 reconstruction, say so in the surrounding public caption; do not present it as historical product evidence.",
+      "crop_notes": "The two current route assets remove only empty outer margins from the recovered working layouts and are labelled as working artifacts. They are not production screenshots or a controlled before-and-after pair: the cumulative state also introduces Free and rewrites Enterprise.",
+      "caption": "Current captions identify each image as a working layout, state the visible comparison job, and avoid implying exact file-to-production lineage, testing, or measured impact.",
+      "text_alternative": "Describe the visible Translator plan grid, tier relationship, repeated benefits, changed limits, and inheritance headings. Do not describe either working layout as a production screenshot or controlled before-and-after state.",
       "export_ready": false,
       "files": [
         {
-          "path": "legacy-two-tab-grid.png",
+          "path": "translator-repeated-working-layout.png",
           "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Portfolio crop of a retained historical two-tab Translator and API pricing-page screenshot.",
+          "artifact_genesis_notes": "Public crop of the recovered June–July 2024 Translator working layout with repeated Advanced and Ultimate benefit lists; only empty top and bottom margins were removed.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
-          "source_sha256": "db460df886993402ef0440a7322ed0b1323bae3343dd5ee94817fdc2526a81a1",
-          "crop_notes": "-crop 1650x1025+140+25 +repage -trim +repage — Translate Pro and Translate API two-tab pricing grid with Free, Starter, Advanced, Ultimate and Enterprise cards",
-          "crop_scope": "plan-grid",
-          "dimensions": "1602x900",
+          "source_path": "private-evidence/projects/pricing-evolution/gpt-export-evidence/attachments/file-tWhO0PSkFda3Tfh3Hi24u5rQ.png",
+          "source_sha256": "170ebcb6f3d3b4a2445ae1ff8de229ee3113229905408b40dd39f9529d78507a",
+          "crop_notes": "-crop 1088x863+0+51 +repage — remove only the 51px empty top margin and 56px empty bottom margin",
+          "crop_scope": "full-working-layout",
+          "dimensions": "1088x863",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "caption": "Translator fills the individual-and-team plan grid while API keeps a separate developer route.",
-          "text_alternative": "DeepL pricing page with a Translate Pro tab for Individuals and Teams and a Translate API tab for developers above Free, Starter, Advanced, Ultimate, and Enterprise cards.",
-          "sha256": "e56285f8030003e84685abe9fe5aa9b18cab82146ced119788fb9c2e54626a57",
-          "public_path": "site/public/work/pricing-evolution/legacy-two-tab-grid.png"
+          "caption": "The price roughly doubles between Advanced and Ultimate, and only two numbers change. Nothing on either card points to them.",
+          "text_alternative": "A four-column DeepL Translator plan grid: Starter at €7.49, Advanced at €24.99, Ultimate at €49.99, and an Enterprise contact-sales card. Advanced and Ultimate list the same eight benefits in the same order, differing only in two figures: 20 versus 100 editable file translations per user each month, and a 20 MB versus 30 MB upload limit.",
+          "sha256": "f55f0e77168707a3223097ba4bf3ccdd150588d5de9763bd113ad4b4691af304",
+          "public_path": "site/public/work/pricing-evolution/translator-repeated-working-layout.png"
         },
         {
-          "path": "bundle-era-selector-in-context.png",
+          "path": "translator-cumulative-working-layout.png",
           "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Portfolio crop of the retained historical three-route bundle-rollout artifact; the 2026 exhibit repair did not alter its source.",
+          "artifact_genesis_notes": "Public crop of the recovered July 2024 Translator working layout with cumulative inheritance headings; only empty left and right margins were removed.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png",
-          "source_sha256": "6c3e5efba8f9bfa0eb1a649341b5ed638fc09900c681566e7ce05e6fe22bbbe6",
-          "crop_notes": "-crop 3280x1260+280+40 +repage -trim +repage — Find your perfect plan heading, three buying-route tabs, and the top of the bundle card grid the selector controls",
-          "crop_scope": "selector-in-context",
-          "dimensions": "3204x1208",
+          "source_path": "private-evidence/projects/pricing-evolution/gpt-export-evidence/attachments/file-bkypvx2q2LfL56qYugZ3wwbK.png",
+          "source_sha256": "1eb12932ab9f74f8835e59084690c9ac2d8397c349fd9a40c26a1309e7399801",
+          "crop_notes": "-crop 1088x846+35+0 +repage — remove only the 35px empty left margin and 47px empty right margin",
+          "crop_scope": "full-working-layout",
+          "dimensions": "1088x846",
           "trim_margin": {
             "left": 0,
             "top": 0,
             "right": 0,
             "bottom": 0
           },
-          "caption": "A new middle route places Translator and Write inside the same offer.",
-          "text_alternative": "DeepL pricing page headed Find your perfect plan with tabs for DeepL Translator, DeepL Translator plus DeepL Write, and DeepL API above combined product cards.",
-          "sha256": "c2f42ad100b45e0b5f07259bb203b721a28ba8f5553a87508d98f3d72db8a13d",
-          "public_path": "site/public/work/pricing-evolution/bundle-era-selector-in-context.png"
-        },
-        {
-          "path": "bundle-era-write-grid.png",
-          "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Portfolio crop of a retained historical Write Pro pricing export.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-write-pro-2x.png",
-          "source_sha256": "27aa96e69d50848228d328382d3cd9de78052e3044f9b30921d7305f4fc861c8",
-          "crop_notes": "-trim +repage, then -crop 2482x705+0+0 +repage — account-page add-on banner plus the names, prices, and actions for standalone Write Free, Write Pro, and Enterprise",
-          "crop_scope": "plan-grid",
-          "dimensions": "2482x705",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "Write also has its own Free, Write Pro, and Enterprise offers, plus a separate account-page upgrade route.",
-          "text_alternative": "Standalone Write pricing page with Free, Write Pro, and Enterprise cards beneath a banner that links existing subscribers to an account-page upgrade.",
-          "sha256": "0359e3230874da96e6aa20bfcfabfc92ba3bb5cbb79b215aeabe2101693379bc",
-          "public_path": "site/public/work/pricing-evolution/bundle-era-write-grid.png"
-        },
-        {
-          "path": "addon-on-cards.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of the 2026 portfolio reconstruction of the later internal toggle-on direction; not a historical product screenshot.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-bundle-era-grid.png",
-          "source_sha256": "879fae09f6b0a7b94638b02e072afff3079dd8bc148a5e8066f4cf576927578a",
-          "crop_notes": "-crop 2832x2224+96+836 +repage -trim +repage, then -crop 2772x915+0+0 +repage — add-on control plus combined names, prices, discounts, actions, and audience rows",
-          "crop_scope": "addon-state",
-          "dimensions": "2772x915",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "The included state uses combined names and prices, with the bundle discount beside each self-serve price.",
-          "text_alternative": "Pricing cards with Add DeepL Write Pro switched on. Starter, Advanced, and Ultimate use combined product names, combined prices, and discount badges; Enterprise remains a sales offer.",
-          "sha256": "37d3e1eed4698600c5c4a43295b9ec8274757f1a3f05f1f8401fe289bcad70a5",
-          "public_path": "site/public/work/pricing-evolution/addon-on-cards.png"
-        },
-        {
-          "path": "addon-off-cards.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of the 2026 styling reconstruction of the toggle-off direction; not a historical product screenshot.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/site-display/pricing-translator-transition-grid.png",
-          "source_sha256": "20d8b250c78715afaaaab1b5b3f4075b29d720eecb1aa0718217ced6664204c2",
-          "crop_notes": "-crop 2832x1707+96+838 +repage -trim +repage, then -crop 2772x915+0+0 +repage — add-on control plus Translator names, prices, actions, and audience rows",
-          "crop_scope": "addon-state",
-          "dimensions": "2772x915",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "The other state keeps Translator names and prices on the three self-serve cards.",
-          "text_alternative": "Pricing cards with Add DeepL Write Pro switched off. Starter, Advanced, and Ultimate use Translator names and prices; Enterprise remains a sales offer.",
-          "sha256": "0e0927b6c9cec940da724978f9cdb3459b8655d8929b145679dfaf3805054e9d",
-          "public_path": "site/public/work/pricing-evolution/addon-off-cards.png"
-        },
-        {
-          "path": "cards-bundle-repeated.png",
-          "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Portfolio crop of a retained historical bundle-pricing export with repeated Write Pro groups.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/write-pro-launch/pricing-bundle-2x.png",
-          "source_sha256": "3b3773e66cd6d4dfd3a545c30b9ae98032e1d2c207c3edbebe5793fb4fd35160",
-          "crop_notes": "-crop 2048x1953+72+145 +repage — Starter, Advanced, and Ultimate combined cards with their full Translator groups and repeated Write Pro groups",
-          "crop_scope": "plan-card-row",
-          "dimensions": "2048x1953",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "Starter, Advanced, and Ultimate each restate the same Write Pro group beneath the Translator features.",
-          "text_alternative": "Starter plus Write Pro, Advanced plus Write Pro, and Ultimate plus Write Pro cards. Each card contains a Translator feature group and repeats the same DeepL Write Pro feature group.",
-          "sha256": "e9266478d602ce3cf383b6c58aee54871e9304f80e9b1d60a091527fe7b599ab",
-          "public_path": "site/public/work/pricing-evolution/cards-bundle-repeated.png"
-        },
-        {
-          "path": "cards-cumulative-tiers.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of the 2026 portfolio reconstruction demonstrating cumulative Translator tier headings.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-cumulative.png",
-          "source_sha256": "2de075cc95acfd49f0bf47a444a2a2203714d1e5886bff61673fedda494c7aa9",
-          "crop_notes": "-crop 2976x1388+24+900 +repage -trim +repage, then -crop 2208x1350+0+0 +repage — Starter, Advanced, and Ultimate Translator cards with cumulative headings",
-          "crop_scope": "plan-card-row",
-          "dimensions": "2208x1350",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "Starter establishes the offer; Advanced and Ultimate state only their additions.",
-          "text_alternative": "Starter, Advanced, and Ultimate Translator cards using What’s included, Everything in Starter plus, and Everything in Advanced plus headings.",
-          "sha256": "f1a8a814a00567bc5dfd25ca6be091f4a11d15ceaa75297ac627bc2aa117f06b",
-          "public_path": "site/public/work/pricing-evolution/cards-cumulative-tiers.png"
-        },
-        {
-          "path": "table-values-repeat-label.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of a 2026 portfolio reconstruction showing the pre-transform repeated-label table state.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/historical/rev6-round3-pricing-translator-transition-clean.png",
-          "source_sha256": "77df029a7885d429857972e1df26c330a21b75b94ee0e9071818602fd859e791",
-          "crop_notes": "-crop 2864x1335+80+8305 +repage -trim +repage — comparison-table File translation and Glossary sections where values repeat the noun or qualifier from the row label The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
-          "crop_scope": "table-section",
-          "dimensions": "2768x1167",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "The values repeat nouns and qualifiers that do not change between plans.",
-          "text_alternative": "Comparison table where file translation values repeat per user and glossary values repeat the word glossary across the plan columns.",
-          "sha256": "1caa690720ca8e30feac384d9527f4ff38aa40675b6d8005f2e78a5cf508d847",
-          "public_path": "site/public/work/pricing-evolution/table-values-repeat-label.png"
-        },
-        {
-          "path": "table-labels-own-qualifier.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of the 2026 portfolio reconstruction demonstrating the label-once table transform.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-translator-transition-clean.png",
-          "source_sha256": "51baebbd05e88347fd229133d163445793639c97d9ae614d95886d127c48b2c4",
-          "crop_notes": "-crop 2864x1335+80+8305 +repage -trim +repage — the same comparison-table sections with qualifiers in the row labels and bare numeric values The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
-          "crop_scope": "table-section",
-          "dimensions": "2768x1167",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "The labels carry shared wording; cells retain the changing value and any intrinsic unit.",
-          "text_alternative": "Comparison table where File translations per user per month and Glossaries carry the shared wording in row labels, leaving changing numbers in the cells.",
-          "sha256": "52241a907725c8814356f90ccb001d055e9b2fa5733b62cb2bfa5b343dc3237a",
-          "public_path": "site/public/work/pricing-evolution/table-labels-own-qualifier.png"
-        },
-        {
-          "path": "product-write-cards.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of a Write offer pattern refined for the 2026 portfolio exhibit; not historical product evidence.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-write-addon-clean.png",
-          "source_sha256": "dd0e4492250f8738a1ee121e3aa8a137ca4444c1b9b2960b3ce072b3a396fe46",
-          "crop_notes": "-crop 2320x1230+355+880 +repage -trim +repage — Write Free, Write Pro and DeepL Write for Business card row cropped to the cards themselves The crop is trimmed repeatedly until stable, because one pass leaves a second near-uniform band.",
-          "crop_scope": "product-card-row",
-          "dimensions": "2244x1166",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "Write uses a cumulative ladder for its self-serve offer and a separately named business offer.",
-          "text_alternative": "DeepL Write cards for Free, Write Pro, and DeepL Write for Business. The paid offers use cumulative headings and the business offer keeps a separate name.",
-          "sha256": "b957dfdac7c590c0b2bc29997940bf63c03a248e356a968e1b18106ae43ee53a",
-          "public_path": "site/public/work/pricing-evolution/product-write-cards.png"
-        },
-        {
-          "path": "product-voice-cards.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of a Voice offer pattern refined for the 2026 portfolio exhibit; not historical product evidence.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
-          "source_sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9",
-          "crop_notes": "-crop 1790x1840+620+720 +repage -trim +repage, then -crop 1700x1358+0+422 +repage — Voice for Meetings and Voice for Conversations below the clipped illustration area",
-          "crop_scope": "product-card-row",
-          "dimensions": "1700x1358",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "Voice presents Meetings and Conversations as parallel use-case offers.",
-          "text_alternative": "DeepL Voice for Meetings and DeepL Voice for Conversations cards side by side, each with its own description, sales action, and feature list.",
-          "sha256": "8d2d8e1d2924f0bf64ca6d40a4b864cec19838eda7d8d286dfdbd797bcc9f77b",
-          "public_path": "site/public/work/pricing-evolution/product-voice-cards.png"
-        },
-        {
-          "path": "product-api-cards.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Crop of an API offer pattern refined for the 2026 portfolio exhibit; not historical product evidence.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
-          "source_sha256": "d68405c08e79136a5979308cab6f75e516fbff3c190cbf3f7d48b9a2a90d3dc9",
-          "crop_notes": "-crop 2320x1380+355+1305 +repage -trim +repage — API Free, API Pro and API for Business card row cropped to the cards themselves",
-          "crop_scope": "product-card-row",
-          "dimensions": "2244x1312",
-          "trim_margin": {
-            "left": 0,
-            "top": 0,
-            "right": 0,
-            "bottom": 0
-          },
-          "caption": "API combines a free tier, subscription and usage pricing, and a custom business offer.",
-          "text_alternative": "DeepL API Free, DeepL API Pro with a monthly subscription and usage price, and DeepL API for Business with custom pricing.",
-          "sha256": "64738df0fdcee1cf7ca59a082d4dd701e6861e7333013cbd71e973d1f7f42ad9",
-          "public_path": "site/public/work/pricing-evolution/product-api-cards.png"
+          "caption": "Every paid card now names what it carries forward. That lets Ultimate focus on the two limits that actually change.",
+          "text_alternative": "A five-column plan grid for Free, Starter, Advanced, Ultimate and Enterprise. Each paid column opens with an inheritance line naming the previous plan, followed only by that plan’s additions. Advanced adds five items, including single sign-on and CAT tool integration. Ultimate adds two: 100 file translations per month and a 30 MB maximum file size.",
+          "sha256": "c3190e05f5880971157750aebb8c82ffe01d96f5b454e3425451443cc4cf0f27",
+          "public_path": "site/public/work/pricing-evolution/translator-cumulative-working-layout.png"
         }
       ],
       "private_originals": [
+        "private-evidence/projects/pricing-evolution/gpt-export-evidence/attachments/file-tWhO0PSkFda3Tfh3Hi24u5rQ.png",
+        "private-evidence/projects/pricing-evolution/gpt-export-evidence/attachments/file-bkypvx2q2LfL56qYugZ3wwbK.png",
         "private-evidence/source-exports/figma/pricing-evolution/historical/rev6-round3-pricing-translator-transition-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-api-clean.png",
         "private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-era-clean.png",
@@ -395,6 +294,18 @@
         "private-evidence/source-exports/web-archive/deepl-pricing/pro-page-2023-03-11.png"
       ],
       "historical_archive_material": [
+        "archive/retired/assets/2026-07-27/pricing-evolution/addon-off-cards.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/addon-on-cards.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/bundle-era-selector-in-context.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/bundle-era-write-grid.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/cards-bundle-repeated.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/cards-cumulative-tiers.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/legacy-two-tab-grid.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/product-api-cards.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/product-voice-cards.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/product-write-cards.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/table-labels-own-qualifier.png",
+        "archive/retired/assets/2026-07-27/pricing-evolution/table-values-repeat-label.png",
         "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-limits-in-sentences.png",
         "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-repeated-write-block.png",
         "archive/retired/public-assets/2026-07-26/work/pricing-evolution/bundle-era-translator-grid.png"
@@ -416,6 +327,20 @@
     {
       "id": "DEEPL-ACCOUNT-TEAM-SECURITY",
       "project_id": "DEEPL-ACCOUNT-TEAM-SECURITY",
+      "central_exhibit": {
+        "id": "account-and-team-state-sequences",
+        "route": "/work/account-team-security",
+        "kind": "grouped-image-set",
+        "public_refs": [
+          "site/public/work/account-team-security/account-security-login-detail.png",
+          "site/public/work/account-team-security/account-security-authentication-error-detail.png",
+          "site/public/work/account-team-security/account-security-reset-required.png",
+          "site/public/work/account-team-security/account-security-protection-restored.png",
+          "site/public/work/account-team-security/bulk-delete-confirmation-detail.png",
+          "site/public/work/account-team-security/bulk-delete-06-result-detail.png"
+        ],
+        "relationship": "Account recovery and bulk deletion are two related state groups, not one continuous journey."
+      },
       "source_path": "private-evidence/source-exports/figma/team-administration",
       "source_type": "design",
       "editability": "flattened",
@@ -505,6 +430,18 @@
     {
       "id": "DEEPL-SUBSCRIPTION-CHECKOUT",
       "project_id": "DEEPL-SUBSCRIPTION-CHECKOUT",
+      "central_exhibit": {
+        "id": "checkout-four-purchase-states",
+        "route": "/work/checkout",
+        "kind": "manifest-image-set",
+        "public_refs": [
+          "site/public/work/checkout/trial-sign-up-detail.png",
+          "site/public/work/checkout/bundle-checkout-detail.png",
+          "site/public/work/checkout/team-purchase-detail.png",
+          "site/public/work/checkout/no-trial-checkout-detail.png"
+        ],
+        "relationship": "Four parallel purchase conditions with distinct product, seat, timing, consent, and action details."
+      },
       "source_path": "private-evidence/source-exports/figma/checkout",
       "source_type": "design",
       "editability": "flattened",
@@ -592,6 +529,36 @@
           "caption": "Remove the trial promise, show the amount due today and add the immediate-start acknowledgement before purchase.",
           "text_alternative": "Detail of a DeepL no-trial checkout showing the immediate charge and withdrawal acknowledgement.",
           "sha256": "d3490c80cc8e80b46ed5fe5d28e57e50cd1ad579ee62ea41593805ca8b418b83"
+        },
+        {
+          "path": "checkout/trial-faq-collapsed.png",
+          "public_path": "site/public/work/checkout/trial-faq-collapsed.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D11\\D11__faq-translator-collapsed__3793-16082.png",
+          "source_entry_sha256": "4810c9042cca1ca19fa97492de58f73ed93f34e456bd7072b5aeea5ced762b38",
+          "crop": "1080x1590+1660+720",
+          "dimensions": "1080x1590",
+          "caption": "Three questions surface the uncertainties most likely to block a trial decision without competing with the order summary.",
+          "text_alternative": "DeepL trial checkout summary with collapsed questions about cancellation, charge timing and included Pro features.",
+          "sha256": "bf04b7a939f56606a3ffcef2b14dbce1b78a1e78509d7f1c65dc500fbcf68433"
+        },
+        {
+          "path": "checkout/trial-faq-expanded.png",
+          "public_path": "site/public/work/checkout/trial-faq-expanded.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\D11\\D11__faq-translator-expanded__3793-16127.png",
+          "source_entry_sha256": "79427a71ec0192a98fc3608a31be63cec70250f98056fa465c6c528a7fc5b352",
+          "crop": "1080x1900+1660+720",
+          "dimensions": "1080x1900",
+          "caption": "The expanded state answers cancellation first, then explains charge timing and what the trial includes.",
+          "text_alternative": "DeepL trial checkout summary with expanded answers about cancellation, credit-card charge timing and included Pro features.",
+          "sha256": "fdf01253b4aa9ac6740b73ce104b915d69f0996de47b5a50002450e7020a38ac"
         }
       ],
       "homepage_media": {
@@ -604,6 +571,126 @@
         "dimensions": "575x575",
         "sha256": "12b113801ffe48008b05b81e8b0acd1fbe989f13b8d12bb1b083259fcba6cd4c"
       }
+    },
+    {
+      "id": "DEEPL-PRODUCT-NAMING",
+      "project_id": "DEEPL-PRODUCT-NAMING",
+      "central_exhibit": {
+        "id": "write-naming-order-decision",
+        "route": "/work/product-naming",
+        "kind": "transcribed-source",
+        "render_ref": "site/app/components/NamingDecision.tsx",
+        "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-28.zip",
+        "source_sha256": "6028c995cbce5f22cd45b2ebca9c3dbb3b5e800135aab774ccc82f3ae9da65ad",
+        "source_zip_entry": "deepl-write-naming-decision.png",
+        "source_entry_sha256": "ab7b3b51b641241cbde7fbee7e29f5c0e4142b0959be3427b90c1f8cc05c0b1a",
+        "source_dimensions": "2400x1500",
+        "required_tokens": [
+          "DeepL Write Pro",
+          "DeepL Pro Write",
+          "API convention",
+          "Translator convention",
+          "If we went this way around, then Write may appear to be a plan of DeepL"
+        ],
+        "route_required_tokens": [
+          "Product and plan names (Mason)"
+        ],
+        "claim_locators": [
+          {
+            "claim_dimension": "contribution",
+            "source_path": "private-evidence/source-documents/recovered/content-design-system-plans.md",
+            "source_sha256": "67c32247e399c07f714b9f0033295ece6b3e9ef9eab8396d98239d3ff9011871",
+            "source_locator": "line 13",
+            "source_quotes": [
+              "Product and plan names (Mason)"
+            ]
+          },
+          {
+            "claim_dimension": "lifecycle",
+            "source_path": "private-evidence/source-documents/recovered/content-design-system--pdf-e2c0ac.md",
+            "source_sha256": "10771bcccc15696dce32d9a7438faddee251068280d019aa42e4cf0b9e2b7e9c",
+            "source_locator": "lines 13-16 and 22-24",
+            "source_quotes": [
+              "Agree on different sections",
+              "and who should write them",
+              "October 9, 2024",
+              "Share first drafts",
+              "October 30, 2024",
+              "In progress"
+            ]
+          }
+        ],
+        "source_visual_check_date": "2026-07-28",
+        "relationship": "A source-faithful text reconstruction of the two naming orders, the selected convention, and the frame's stated rationale."
+      },
+      "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-28.zip",
+      "source_type": "design",
+      "editability": "flattened",
+  "crop_notes": "The case's central exhibit is a source-faithful transcription of `deepl-write-naming-decision.png`: the two candidate names and the selected convention. The unrelated Write Pro allowance crop was retired from this case on 2026-07-28 and preserved at archive/retired/assets/product-naming/; the identical full export remains live on the upgrade-prompts case, where it has a narrative job. The terminology paper is excluded because it carries a colleague's name.",
+  "caption": "The homepage preview and case exhibit render the naming decision as real text so the names stay legible and selectable.",
+  "text_alternative": "Describe the naming decision as text: the name already in use, the two candidate orders, and what each one leads a reader to conclude.",
+  "export_ready": false,
+  "homepage_text_preview": {
+    "render_ref": "site/app/work/portfolioData.ts",
+    "central_exhibit_id": "write-naming-order-decision",
+    "required_tokens": [
+      "DeepL Write Pro",
+      "DeepL Pro Write"
+    ]
+  },
+  "files": []
+    },
+    {
+      "id": "DEEPL-VOICE-PRODUCT",
+      "project_id": "DEEPL-VOICE-PRODUCT",
+      "central_exhibit": {
+        "id": "voice-two-offers",
+        "route": "/work/voice-product",
+        "kind": "manifest-image",
+        "public_refs": [
+          "site/public/work/voice-product/voice-offer-comparison.png"
+        ],
+        "relationship": "Two parallel Voice offers on one comparison surface."
+      },
+      "source_path": "private-evidence/source-exports/figma/pricing-evolution",
+      "source_type": "design",
+      "editability": "flattened",
+      "crop_notes": "Use the clean standalone Voice header and the complete repository comparison of Voice for Meetings and Voice for Conversations. Exclude the raw FAQ export because the black canvas margins make it read as a working board.",
+      "caption": "The header establishes the category promise; the comparison gives Meetings and Conversations distinct use cases inside one Voice family.",
+      "text_alternative": "Describe the shared Voice promise and the distinct meetings and in-person conversation offers.",
+      "export_ready": false,
+      "files": [
+        {
+          "path": "voice-product/voice-positioning-header.png",
+          "public_path": "site/public/work/voice-product/voice-positioning-header.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip",
+          "source_sha256": "8bd5d0f6b43b0393ec593beb9c73d4cc1333089e0679c34dbde376e91647f24d",
+          "source_zip_entry": "mason-figma-exports\\C24\\C24__voice-header__5-308229.png",
+          "source_entry_sha256": "da8f849e285b0549afcebe477407f0658e659afa10c0334a89d617f54d007ba8",
+          "crop": "none; complete exported frame",
+          "dimensions": "3024x614",
+          "caption": "One headline establishes the category; three supporting statements cover performance, translation quality, and security.",
+          "text_alternative": "DeepL Voice headline promising real-time voice translation with three supporting benefit statements.",
+          "sha256": "da8f849e285b0549afcebe477407f0658e659afa10c0334a89d617f54d007ba8"
+        },
+        {
+          "path": "voice-product/voice-offer-comparison.png",
+          "public_path": "site/public/work/voice-product/voice-offer-comparison.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-28.zip",
+          "source_sha256": "6028c995cbce5f22cd45b2ebca9c3dbb3b5e800135aab774ccc82f3ae9da65ad",
+          "source_zip_entry": "voice-addon-refined-43-65515-2x.png",
+          "source_entry_sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9",
+          "crop": "none; complete clean comparison",
+          "dimensions": "3024x2654",
+          "caption": "The shared structure makes the offers comparable while the headlines, illustrations, and benefit lists give each one a distinct job.",
+          "text_alternative": "DeepL pricing surface comparing Voice for Meetings and Voice for Conversations with distinct use cases, benefits, and sales actions.",
+          "sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9"
+        }
+      ]
     },
     {
       "id": "DEEPL-LOCALIZATION-CAMPAIGN",
@@ -701,5 +788,5 @@
       "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428"
     }
   ],
-  "updated": "2026-07-26"
+  "updated": "2026-07-28"
 }

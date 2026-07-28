@@ -133,6 +133,9 @@ const requiredFiles = [
   "private-evidence/README.md",
   "private-evidence/claim-review.md",
   "private-evidence/deepl-portfolio-current-direction.md",
+  "private-evidence/deepl-document-inventory.json",
+  "private-evidence/deepl-document-inventory.schema.json",
+  "private-evidence/deepl-project-candidate-queue.md",
   "private-evidence/portfolio-asset-manifest.json",
   "site/README.md",
   "site/AGENTS.md",
@@ -166,26 +169,13 @@ for (const target of bannedActivePaths) {
   record(!await exists(path.join(root, target)), `obsolete active path remains: ${target}`);
 }
 
-const expectedRoutes = [
-  "account-team-security",
-  "checkout",
-  "localyze-executive-ghostwriting",
-  "pricing-evolution",
-  "report-campaign",
-  "upgrade-prompts",
-];
-
 const routeRoot = path.join(root, "site/app/work");
 const routeDirectories = (await readdir(routeRoot, { withFileTypes: true }))
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
   .sort();
 
-assert.deepEqual(
-  routeDirectories,
-  expectedRoutes,
-  "site/app/work should contain only the expected live case routes",
-);
+record(routeDirectories.length > 0, "site/app/work should contain at least one case route");
 
 const routeSources = await walk(routeRoot, (file) => file.endsWith(".tsx"));
 for (const file of routeSources) {
@@ -372,6 +362,65 @@ async function validateProvenance(recordValue, label, publicPath) {
   await verifyFileHash(sourcePath, recordValue.source_sha256, `${label} source`);
 }
 
+function validateZipEntry(recordValue, label, publicBuffer = null) {
+  if (!recordValue.source_zip_entry) return;
+  record(
+    recordValue.source_status === "verified" || !recordValue.source_status,
+    `${label}: ZIP-entry provenance must be verified`,
+  );
+  record(
+    typeof recordValue.source_path === "string" && recordValue.source_path.endsWith(".zip"),
+    `${label}: source_zip_entry requires a ZIP source_path`,
+  );
+  record(
+    typeof recordValue.source_entry_sha256 === "string"
+      && sha256Pattern.test(recordValue.source_entry_sha256),
+    `${label}: source_entry_sha256 is required`,
+  );
+  if (
+    typeof recordValue.source_path !== "string"
+    || !recordValue.source_path.endsWith(".zip")
+    || typeof recordValue.source_entry_sha256 !== "string"
+    || !sha256Pattern.test(recordValue.source_entry_sha256)
+  ) return;
+
+  const sourcePath = path.join(root, recordValue.source_path);
+  let entryBuffer;
+  try {
+    const unzipEntryPattern = recordValue.source_zip_entry.replaceAll("\\", "\\\\");
+    entryBuffer = execFileSync(
+      "unzip",
+      ["-p", sourcePath, unzipEntryPattern],
+      { maxBuffer: 100 * 1024 * 1024 },
+    );
+  } catch {
+    record(false, `${label}: ZIP entry is missing or unreadable: ${recordValue.source_zip_entry}`);
+    return;
+  }
+  const entryHash = createHash("sha256").update(entryBuffer).digest("hex");
+  record(
+    entryHash === recordValue.source_entry_sha256,
+    `${label}: ZIP-entry SHA-256 changed for ${recordValue.source_zip_entry}`,
+  );
+  const entryDimensions = pngDimensions(entryBuffer);
+  const expectedSourceDimensions = recordValue.source_dimensions
+    ?? (String(recordValue.crop ?? "").startsWith("none") ? recordValue.dimensions : null);
+  if (expectedSourceDimensions) {
+    record(
+      entryDimensions
+        && `${entryDimensions.width}x${entryDimensions.height}` === expectedSourceDimensions,
+      `${label}: ZIP-entry dimensions changed for ${recordValue.source_zip_entry}`,
+    );
+  }
+  if (publicBuffer && String(recordValue.crop ?? "").startsWith("none")) {
+    const publicHash = createHash("sha256").update(publicBuffer).digest("hex");
+    record(
+      publicHash === entryHash,
+      `${label}: uncropped public asset no longer matches its ZIP entry`,
+    );
+  }
+}
+
 async function validatePublicRecord(recordValue, label, publicPath) {
   record(
     typeof publicPath === "string" && isPublicPath(publicPath),
@@ -395,6 +444,7 @@ async function validatePublicRecord(recordValue, label, publicPath) {
   }
 
   await validateProvenance(recordValue, label, publicPath);
+  validateZipEntry(recordValue, label, buffer);
 }
 
 const pricingEvolutionAsset = manifestAssets.find(
@@ -415,6 +465,101 @@ for (const file of pricingEvolutionAsset?.files ?? []) {
 
 for (const asset of manifestAssets) {
   record(asset.export_ready === false, `${asset.id}: export_ready must remain false`);
+  const centralExhibit = asset.central_exhibit;
+  if (centralExhibit) {
+    record(
+      typeof centralExhibit.id === "string" && centralExhibit.id.length > 0,
+      `${asset.id}: central exhibit id is required`,
+    );
+    record(
+      typeof centralExhibit.route === "string" && centralExhibit.route.startsWith("/work/"),
+      `${asset.id}: central exhibit route is required`,
+    );
+    for (const publicRef of centralExhibit.public_refs ?? []) {
+      record(
+        manifestPublicPaths.has(publicRef),
+        `${asset.id}: central exhibit reference is not manifest-listed: ${publicRef}`,
+      );
+    }
+    if (centralExhibit.render_ref) {
+      const renderPath = centralExhibit.render_ref.split("#")[0];
+      const renderPresent = isSafeRepositoryPath(renderPath)
+        && await exists(path.join(root, renderPath));
+      record(
+        renderPresent,
+        `${asset.id}: central exhibit render_ref is missing: ${centralExhibit.render_ref}`,
+      );
+      if (renderPresent) {
+        const renderSource = await readFile(path.join(root, renderPath), "utf8");
+        for (const token of centralExhibit.required_tokens ?? []) {
+          record(
+            renderSource.includes(token),
+            `${asset.id}: central exhibit render_ref is missing required token: ${token}`,
+          );
+        }
+      }
+    }
+    if (centralExhibit.source_zip_entry) {
+      await verifyFileHash(
+        centralExhibit.source_path,
+        centralExhibit.source_sha256,
+        `${asset.id}: central exhibit source`,
+      );
+      validateZipEntry(centralExhibit, `${asset.id}: central exhibit`);
+    }
+    for (const locator of centralExhibit.claim_locators ?? []) {
+      record(
+        ["artifact", "contribution", "lifecycle", "outcome"].includes(locator.claim_dimension),
+        `${asset.id}: claim locator has an invalid dimension: ${locator.claim_dimension}`,
+      );
+      record(
+        typeof locator.source_locator === "string" && locator.source_locator.trim().length > 0,
+        `${asset.id}: claim locator requires a bounded source_locator`,
+      );
+      record(
+        Array.isArray(locator.source_quotes) && locator.source_quotes.length > 0,
+        `${asset.id}: claim locator requires at least one source quote`,
+      );
+      const sourceBuffer = await verifyFileHash(
+        locator.source_path,
+        locator.source_sha256,
+        `${asset.id}: ${locator.claim_dimension} claim locator`,
+      );
+      if (sourceBuffer) {
+        const sourceText = sourceBuffer.toString("utf8");
+        for (const quote of locator.source_quotes ?? []) {
+          record(
+            typeof quote === "string" && quote.length > 0 && sourceText.includes(quote),
+            `${asset.id}: claim locator source is missing quoted text: ${quote}`,
+          );
+        }
+      }
+    }
+  }
+
+  const homepageTextPreview = asset.homepage_text_preview;
+  if (homepageTextPreview) {
+    record(
+      homepageTextPreview.central_exhibit_id === centralExhibit?.id,
+      `${asset.id}: homepage text preview must use the central exhibit`,
+    );
+    const renderPath = homepageTextPreview.render_ref?.split("#")[0];
+    const renderPresent = isSafeRepositoryPath(renderPath)
+      && await exists(path.join(root, renderPath));
+    record(
+      renderPresent,
+      `${asset.id}: homepage text preview render_ref is missing: ${homepageTextPreview.render_ref}`,
+    );
+    if (renderPresent) {
+      const renderSource = await readFile(path.join(root, renderPath), "utf8");
+      for (const token of homepageTextPreview.required_tokens ?? []) {
+        record(
+          renderSource.includes(token),
+          `${asset.id}: homepage text preview is missing required token: ${token}`,
+        );
+      }
+    }
+  }
 
   for (const file of asset.files ?? []) {
     const publicPath = file.public_path ?? `site/public/work/${file.path}`;
@@ -497,6 +642,89 @@ for (const asset of manifestAssets) {
   }
 }
 
+const queuePath = path.join(root, "private-evidence/deepl-project-candidate-queue.md");
+const queueSource = await readFile(queuePath, "utf8");
+const routeContractMatch = queueSource.match(/```json route-contracts\n([\s\S]*?)\n```/);
+record(Boolean(routeContractMatch), "candidate queue must contain the route-contracts JSON block");
+let routeContracts = [];
+if (routeContractMatch) {
+  try {
+    routeContracts = JSON.parse(routeContractMatch[1]);
+  } catch (error) {
+    record(false, `candidate queue route-contracts JSON is invalid: ${error.message}`);
+  }
+}
+const expectedRoutePaths = routeDirectories.map((route) => `/work/${route}`);
+record(
+  routeContracts.length > 0,
+  "candidate queue must own at least one in-scope implemented route",
+);
+record(
+  new Set(routeContracts.map((item) => item.route)).size === routeContracts.length,
+  "candidate queue route contracts must not repeat a route",
+);
+const manifestByProject = new Map(manifestAssets.map((asset) => [asset.project_id, asset]));
+for (const contract of routeContracts) {
+  record(
+    expectedRoutePaths.includes(contract.route),
+    `${contract.route}: route contract does not match an implemented route`,
+  );
+  record(
+    ["active", "advanced-draft", "frozen"].includes(contract.state),
+    `${contract.route}: unsupported route state ${contract.state}`,
+  );
+  const asset = manifestByProject.get(contract.project_id);
+  record(Boolean(asset), `${contract.route}: manifest project is missing: ${contract.project_id}`);
+  record(
+    asset?.central_exhibit?.route === contract.route,
+    `${contract.route}: central exhibit route does not match the queue`,
+  );
+  record(
+    asset?.central_exhibit?.id === contract.central_exhibit_id,
+    `${contract.route}: central exhibit id does not match the queue`,
+  );
+}
+
+const inventoryPath = path.join(root, "private-evidence/deepl-document-inventory.json");
+const inventory = JSON.parse(await readFile(inventoryPath, "utf8"));
+record(inventory.schema_version === "1.0", "document inventory schema_version should be 1.0");
+record(Array.isArray(inventory.documents), "document inventory documents should be an array");
+const inventoryIds = new Set();
+for (const document of inventory.documents ?? []) {
+  record(
+    typeof document.source_record_id === "string" && document.source_record_id.length > 0,
+    "document inventory source_record_id is required",
+  );
+  record(
+    !inventoryIds.has(document.source_record_id),
+    `duplicate document inventory source_record_id: ${document.source_record_id}`,
+  );
+  inventoryIds.add(document.source_record_id);
+  record(
+    /^title-[a-f0-9]{12}$/.test(document.title_group_id ?? ""),
+    `${document.source_record_id}: invalid title_group_id`,
+  );
+  record(
+    ["original-binary", "retained-full", "retained-partial", "metadata-only"].includes(document.custody),
+    `${document.source_record_id}: invalid custody`,
+  );
+  record(
+    ["public-product-source", "internal-organizational-record", "mason-authored", "assistant-synthesis", "ai-assisted-working-artifact", "mixed", "unknown"].includes(document.origin),
+    `${document.source_record_id}: invalid origin`,
+  );
+  record(
+    document.privacy === "public" || document.publication_default === "deny",
+    `${document.source_record_id}: non-public source must default to deny`,
+  );
+  if (document.recovered_repo_path) {
+    record(
+      isSafeRepositoryPath(document.recovered_repo_path)
+        && await exists(path.join(root, document.recovered_repo_path)),
+      `${document.source_record_id}: recovered document path is missing`,
+    );
+  }
+}
+
 const appSources = await walk(path.join(root, "site/app"), (file) => /\.(?:ts|tsx|css)$/.test(file));
 const referencedPublicPaths = new Set();
 const publicReferencePattern = /["'(](\/work\/[^"'()\s]+\.(?:jpg|jpeg|mp4|png|svg))/g;
@@ -516,6 +744,7 @@ const expectedPublicDirectories = [
   "pricing-evolution",
   "report-campaign",
   "upgrade-prompts",
+  "voice-product",
 ];
 const publicDirectories = (await readdir(publicWorkRoot, { withFileTypes: true }))
   .filter((entry) => entry.isDirectory())

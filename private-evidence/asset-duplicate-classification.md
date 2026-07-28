@@ -1,11 +1,11 @@
 # Exact duplicate classification
 
-Last audited: 2026-07-26
+Last audited: 2026-07-28
 
 This is the current classification owner for byte-identical files in the live
 repository. The audit covers repository files while excluding `.git`, runtime
 mounts, ignored scratch space, dependencies, and generated build output.
-SHA-256 comparison found 15 groups containing 31 files.
+SHA-256 comparison found 17 groups containing 36 files.
 
 No file in this review is approved for deletion. A matching hash proves only
 that bytes are identical; it does not make the files interchangeable or make
@@ -79,6 +79,15 @@ Disposition: preserve both process-note positions.
 
 Disposition: preserve both frame-identified source exports.
 
+### `7db7cd4385bcddb17417326b3e3fa92bf9bf674ec51f35cadbdd3327aa6731c9`
+
+- `archive/retired/source-dumps/2026-07-28/deepl-brand-voice-tone.md`
+- `archive/retired/source-dumps/2026-07-28/deepl-content-style-guide.md`
+
+Disposition: preserve both misleading capture names as archived provenance.
+Their identical bytes are evidence that the browser dumps did not contain the
+documents their filenames implied.
+
 ## Superseded history
 
 Each group below keeps an archived retired-public copy and an identical active
@@ -105,6 +114,15 @@ is the only path eligible to serve as active manifest provenance.
 - `archive/retired/public-assets/2026-07-25/work/pricing-evolution/pricing-bundle-tabs.png`
 - `private-evidence/source-exports/figma/pricing-evolution/pricing-bundle-tabs.png`
 
+### `6d13caf69b1fd9ae413c55cc8de007a992fab3b8b050251dad67833876643a74`
+
+- `archive/retired/assets/product-naming/write-pro-allowance-comparison.png`
+- `site/public/work/upgrade-prompts/write-pro-allowance-comparison.png`
+
+The archived copy records its removal from the Product Naming case. The public
+copy is selected independently for Upgrade Prompts and traces to its Figma ZIP
+entry through the asset manifest.
+
 ### `879fae09f6b0a7b94638b02e072afff3079dd8bc148a5e8066f4cf576927578a`
 
 - `archive/retired/public-assets/2026-07-25/work/pricing-evolution/pricing-bundle-era-grid.png`
@@ -124,6 +142,9 @@ is the only path eligible to serve as active manifest provenance.
 
 - `archive/retired/public-assets/2026-07-25/work/pricing-evolution/pricing-voice-clean.png`
 - `private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png`
+- `site/public/work/voice-product/voice-offer-comparison.png`
 
-Disposition for all eight groups: preserve both copies. Reconsider archive
-cleanup only through a separate, explicitly approved review.
+Disposition for all nine groups: preserve every listed copy. The active public
+copies remain independently listed in the manifest; archived paths are
+historical only. Reconsider archive cleanup only through a separate, explicitly
+approved review.

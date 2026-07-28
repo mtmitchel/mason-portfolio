@@ -2,7 +2,7 @@
 
 Status: Active private routing owner
 
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 
 This index routes DeepL Figma evidence to project-level crosswalks. It replaces
@@ -40,11 +40,13 @@ untouchable, or the ultimate source of truth.
 | Write Pro | [`projects/write-pro/figma-evidence-crosswalk.md`](projects/write-pro/figma-evidence-crosswalk.md) | Historical product/landing work, upgrade surfaces, experiments, and content patterns. |
 | Monetization | [`projects/monetization/figma-evidence-crosswalk.md`](projects/monetization/figma-evidence-crosswalk.md) | Pricing, purchase, eligibility, limits, bundles, and Pro Driver surfaces across products. |
 | Pricing evolution overlay | [`projects/pricing-evolution/figma-evidence-crosswalk.md`](projects/pricing-evolution/figma-evidence-crosswalk.md) | Current relationship between the recovered pricing workstreams and the Write Pro and Monetization source domains. |
+| Product Naming selected exhibit | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact candidate ZIP, entry, hash, dimensions, rendered text reconstruction, and naming claim locators. No broader domain crosswalk is claimed. |
+| DeepL Voice selected exhibits | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact candidate ZIP, entries, hashes, dimensions, and current public copies. No broader domain crosswalk is claimed. |
 
 Cross-source candidate reconciliation, scores, coverage, and work order belong
 only in the
 [`DeepL project candidate queue`](deepl-project-candidate-queue.md). Do not
-duplicate the 36-row candidate map in this routing index or the project
+duplicate the 37-family candidate map in this routing index or the project
 crosswalks.
 
 The pricing-evolution
@@ -52,8 +54,9 @@ The pricing-evolution
 is the page-and-batch coverage and final-disposition owner for recovery steps
 15–20. Those steps are complete: the immutable ledger contains 655 parseable
 records across 69 pages, 1,190 roots, and 99 planned batches; all 99 batches and
-12 zero-root records were reviewed. The final crosswalk and manifest mappings
-record no Figma edit, export, public selection, or Mason selection.
+12 zero-root records were reviewed. Those recovery steps record no Figma edit
+or Mason selection. The asset manifest separately owns the current public
+selection and exact source locators.
 
 The
 [`achievement ledger`](deepl-achievement-recovery/artifacts/achievement-ledger.json)

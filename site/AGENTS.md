@@ -24,11 +24,17 @@ application implementation and validation.
 ## Current implementation
 
 - `app/components/PortfolioChrome.tsx` owns the shared header, About, and footer.
-- `app/components/PortfolioProjectGrid.tsx` owns the homepage card grid.
+- `app/components/PortfolioProjectGrid.tsx` owns the homepage card grid,
+  including source-faithful text previews when an image would not do the
+  story's job.
 - `app/components/ImageLightbox.tsx` owns accessible evidence dialogs.
 - `app/components/ImageComparison.tsx` presents two labelled real states.
 - `app/components/EvidenceSwitcher.tsx` presents parallel complete states.
 - `app/components/LoopingCardVideo.tsx` owns visibility-aware homepage loops.
+- `app/components/ChapterCaseElements.tsx` owns optional shared chapter-page
+  presentation primitives, not story sections or order.
+- `app/components/NamingDecision.tsx` renders the source-faithful selectable
+  Write naming fork.
 - `app/work/<case>/` owns each case's data, prose, and story order.
 - `app/work/portfolioData.ts` owns homepage cards and writing entries.
 - `app/globals.css` owns the visual system.
@@ -50,6 +56,10 @@ every story into the same sections. Do not add retired-route placeholders.
   unnecessary controls.
 - Keep media at its natural proportions. Never use `object-fit: cover`, fixed
   aspect ratios, or arbitrary positioning that hides evidence.
+- The `chapter-shell` and `chapter-page` classes are reusable presentation
+  tools, not a visual baseline or acceptance rule. Change their measure,
+  spacing, media scale, or use in a case when its approved story and evidence
+  need something else.
 - The homepage localization-report card must show the complete report cover.
 - Every evidence image needs true dimensions, useful alternative text, and a
   caption that tells the reader what to notice.

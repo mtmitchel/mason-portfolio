@@ -13,8 +13,8 @@ are evidence and working records, not deployable site content.
 - [`claim-review.md`](claim-review.md) — factual claim ceilings; it does not own
   narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
-  public visuals and their private sources, crops, dimensions, captions,
-  and alternative text.
+  public visual and text exhibits, their private sources, transformations,
+  exact locators, captions, alternative text, and central-exhibit contracts.
 - [`asset-duplicate-classification.md`](asset-duplicate-classification.md) —
   SHA-256 classification and preservation disposition for exact duplicate
   files.
@@ -28,20 +28,30 @@ are evidence and working records, not deployable site content.
 - [`deepl-achievement-recovery/README.md`](deepl-achievement-recovery/README.md)
   — recovery package, evidence levels, scripts, and canonical career language.
 - [`deepl-project-candidate-queue.md`](deepl-project-candidate-queue.md) —
-  current ranked reconciliation of the GPT audit, complete Figma extraction,
-  current CV, achievement ledger, and claim review. It does not own factual
-  claims or the story workflow.
+  current DeepL UX copy and content-design ranking and implemented-route
+  reconciliation across the assistant exports, document inventory, complete
+  Figma extraction, candidate ZIPs, current CV, achievement ledger, and claim
+  review. It does not rank marketing, editorial, or other-employer work, and it
+  does not own factual claims or the story workflow.
+- [`deepl-document-inventory.json`](deepl-document-inventory.json) — canonical,
+  reproducible source-occurrence inventory across the ChatGPT and Claude
+  exports. It keeps custody, origin, privacy, and claim coverage separate.
+- [`deepl-document-register.md`](deepl-document-register.md) — human-readable
+  guide to the inventory, including its rebuild path and public-use boundary.
 - [`performance-review.md`](performance-review.md) — deduplicated performance
   review synthesis.
 
 ## Source material
 
-- [`source-documents/`](source-documents/) — current CV source and original
-  performance-review PDFs.
+- [`source-documents/`](source-documents/) — current CV source, original
+  performance-review PDFs, and convenience copies of retained internal text.
+  Recovered Markdown is not automatically an original binary or an
+  organizational record; the document inventory owns those distinctions.
 - [`source-media/homepage-loops/`](source-media/homepage-loops/) — original
   generated MP4 files behind the selected homepage loops.
 - [`source-exports/figma/`](source-exports/figma/) — Checkout, MFA, pricing,
-  Write Pro, and team-administration exports and source batches.
+  Write Pro, team-administration, and reviewed candidate exports and source
+  batches.
 - [`source-exports/public-product-pages/`](source-exports/public-product-pages/)
   — private reference captures and selected source illustrations from public
   DeepL product surfaces.
@@ -57,8 +67,18 @@ historical and reconstruction records may support chronology, intent,
 rationale, and tradeoffs when their source status remains clear.
 
 Broad source-side audits may identify candidates, but they do not become new
-portfolio owners. Reconcile and rank them in the current candidate queue. The
-repository-root instructions own what happens after a candidate is selected.
+portfolio owners. Reconcile and rank only DeepL UX copy and content-design
+candidates in the current queue. Marketing, editorial, and other-employer
+candidates remain unchanged until Mason authorizes a separate workflow. The
+repository-root instructions own what happens after an in-scope candidate is
+selected.
+
+DeepL product, commercial, audience, and adoption context is routed through the
+`research-deepl-product-intelligence` skill named in the repository-root
+instructions. The two raw research reports used to assemble its curated,
+direct-link reference pack are archived under
+[`../archive/research/deepl-product-intelligence/`](../archive/research/deepl-product-intelligence/)
+because their opaque citation tokens are not usable source locators.
 
 Mason's current account is the primary source for his own role, participation,
 contribution, intent, and rationale. Missing contributor metadata or a missing

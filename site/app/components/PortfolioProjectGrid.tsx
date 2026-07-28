@@ -17,9 +17,15 @@ export default function PortfolioProjectGrid({ projects }: { projects: Portfolio
                   : "",
               ].filter(Boolean).join(" ")}
             >
-              {project.video ? (
+              {project.textPreview ? (
+                <div className="project-entry-text-preview">
+                  <p>{project.textPreview.label}</p>
+                  <strong>{project.textPreview.primary}</strong>
+                  <span>{project.textPreview.alternative}</span>
+                </div>
+              ) : project.video ? (
                 <LoopingCardVideo {...project.video} />
-              ) : (
+              ) : project.image ? (
                 <Image
                   src={project.image.src}
                   alt={project.image.alt}
@@ -27,7 +33,7 @@ export default function PortfolioProjectGrid({ projects }: { projects: Portfolio
                   height={project.image.height}
                   sizes="(max-width: 600px) 100vw, (max-width: 820px) 50vw, 33vw"
                 />
-              )}
+              ) : null}
             </div>
             <div className="project-entry-heading">
               <h3>{project.title}</h3>
