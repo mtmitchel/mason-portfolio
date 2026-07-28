@@ -4,8 +4,8 @@ Source: Team Administration — Canonical, page `72 — Add-and-manage users
 reference flow`, node `6187:306`.
 
 The complete contiguous source range was exported as fresh 2x PNGs on
-2026-07-22. The original 84-file batch is preserved at
-`../source-batches/add-manage-users-complete-2x.zip`.
+2026-07-22. All 84 source PNGs are retained directly in the three folders
+listed below; the redundant export archive was removed from the current tree.
 
 ## Disposition
 

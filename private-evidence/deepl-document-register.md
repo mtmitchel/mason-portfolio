@@ -123,7 +123,7 @@ retained document is non-publishable by default. Before using any excerpt:
 An exhibit or factual statement must point to the evidence it actually uses:
 
 - text: source record plus a quoted source line or bounded passage;
-- Figma: file/node/root or a ZIP entry, entry hash, and dimensions;
+- Figma: file/node/root or a retained source frame, file hash, and dimensions;
 - public page: archived or current URL plus capture date where relevant;
 - reconstructed visual: the underlying source locator and the transformation.
 

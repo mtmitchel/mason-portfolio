@@ -100,9 +100,8 @@ folder task, proposal task, or writing task.
 
 ## Visual-readiness re-audit
 
-The ledger review and the pixel-level review of all 198 PNGs in
-[`mason-figma-exports-2026-07-27.zip`](../../../private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip)
-found 17 candidates with exact or closely
+The ledger review and the pixel-level review of all 198 PNGs in the
+2026-07-27 candidate export found 17 candidates with exact or closely
 corresponding Figma visuals, eight with contextual or incomplete relationships,
 and 11 with no corresponding usable Figma visual.
 
@@ -133,9 +132,9 @@ candidate's story.
 
 ### Reviewed export set
 
-These dispositions apply to the 14 candidate folders in the
-[reviewed export ZIP](../../../private-evidence/source-exports/figma/candidate-exports/mason-figma-exports-2026-07-27.zip).
-A whole Figma canvas is never a portfolio asset merely
+These dispositions apply to the 14 candidate folders in the reviewed
+2026-07-27 export. The redundant ZIP was later removed after selected source
+frames were retained directly. A whole Figma canvas is never a portfolio asset merely
 because it contains one promising frame.
 
 This is not a new export list. Most candidates below already have usable

@@ -11,9 +11,11 @@ Private flattened exports from the read-only
   references from node `6189:22754`.
 - `custom-logo/` — nine account-settings and file-picker states from node
   `6191:22617`.
-- `source-batches/` — the original 2x ZIP exports, including one superseded
-  custom-domain batch under `source-batches/obsolete/`.
 - `asset-manifest.json` — file-level source classification for this package.
+
+The original ZIP batches were removed from the current tree after all selected
+PNG source frames were checked as present. Direct files are the maintained
+evidence; export archives are not.
 
 The detailed add-and-manage-users disposition is in
 [`add-manage-users/inventory.md`](add-manage-users/inventory.md).

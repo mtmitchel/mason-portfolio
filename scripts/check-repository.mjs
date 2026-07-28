@@ -362,65 +362,6 @@ async function validateProvenance(recordValue, label, publicPath) {
   await verifyFileHash(sourcePath, recordValue.source_sha256, `${label} source`);
 }
 
-function validateZipEntry(recordValue, label, publicBuffer = null) {
-  if (!recordValue.source_zip_entry) return;
-  record(
-    recordValue.source_status === "verified" || !recordValue.source_status,
-    `${label}: ZIP-entry provenance must be verified`,
-  );
-  record(
-    typeof recordValue.source_path === "string" && recordValue.source_path.endsWith(".zip"),
-    `${label}: source_zip_entry requires a ZIP source_path`,
-  );
-  record(
-    typeof recordValue.source_entry_sha256 === "string"
-      && sha256Pattern.test(recordValue.source_entry_sha256),
-    `${label}: source_entry_sha256 is required`,
-  );
-  if (
-    typeof recordValue.source_path !== "string"
-    || !recordValue.source_path.endsWith(".zip")
-    || typeof recordValue.source_entry_sha256 !== "string"
-    || !sha256Pattern.test(recordValue.source_entry_sha256)
-  ) return;
-
-  const sourcePath = path.join(root, recordValue.source_path);
-  let entryBuffer;
-  try {
-    const unzipEntryPattern = recordValue.source_zip_entry.replaceAll("\\", "\\\\");
-    entryBuffer = execFileSync(
-      "unzip",
-      ["-p", sourcePath, unzipEntryPattern],
-      { maxBuffer: 100 * 1024 * 1024 },
-    );
-  } catch {
-    record(false, `${label}: ZIP entry is missing or unreadable: ${recordValue.source_zip_entry}`);
-    return;
-  }
-  const entryHash = createHash("sha256").update(entryBuffer).digest("hex");
-  record(
-    entryHash === recordValue.source_entry_sha256,
-    `${label}: ZIP-entry SHA-256 changed for ${recordValue.source_zip_entry}`,
-  );
-  const entryDimensions = pngDimensions(entryBuffer);
-  const expectedSourceDimensions = recordValue.source_dimensions
-    ?? (String(recordValue.crop ?? "").startsWith("none") ? recordValue.dimensions : null);
-  if (expectedSourceDimensions) {
-    record(
-      entryDimensions
-        && `${entryDimensions.width}x${entryDimensions.height}` === expectedSourceDimensions,
-      `${label}: ZIP-entry dimensions changed for ${recordValue.source_zip_entry}`,
-    );
-  }
-  if (publicBuffer && String(recordValue.crop ?? "").startsWith("none")) {
-    const publicHash = createHash("sha256").update(publicBuffer).digest("hex");
-    record(
-      publicHash === entryHash,
-      `${label}: uncropped public asset no longer matches its ZIP entry`,
-    );
-  }
-}
-
 async function validatePublicRecord(recordValue, label, publicPath) {
   record(
     typeof publicPath === "string" && isPublicPath(publicPath),
@@ -444,7 +385,6 @@ async function validatePublicRecord(recordValue, label, publicPath) {
   }
 
   await validateProvenance(recordValue, label, publicPath);
-  validateZipEntry(recordValue, label, buffer);
 }
 
 const pricingEvolutionAsset = manifestAssets.find(
@@ -499,13 +439,20 @@ for (const asset of manifestAssets) {
         }
       }
     }
-    if (centralExhibit.source_zip_entry) {
-      await verifyFileHash(
+    if (centralExhibit.source_path) {
+      const sourceBuffer = await verifyFileHash(
         centralExhibit.source_path,
         centralExhibit.source_sha256,
         `${asset.id}: central exhibit source`,
       );
-      validateZipEntry(centralExhibit, `${asset.id}: central exhibit`);
+      if (sourceBuffer && centralExhibit.source_dimensions) {
+        const dimensions = pngDimensions(sourceBuffer);
+        record(
+          dimensions
+            && `${dimensions.width}x${dimensions.height}` === centralExhibit.source_dimensions,
+          `${asset.id}: central exhibit source dimensions changed`,
+        );
+      }
     }
     for (const locator of centralExhibit.claim_locators ?? []) {
       record(
@@ -620,24 +567,6 @@ for (const asset of manifestAssets) {
     record(isArchivePath(historicalPath), `${asset.id}: historical material should stay under archive: ${historicalPath}`);
     if (safeHistoricalPath) {
       record(await exists(path.join(root, historicalPath)), `${asset.id}: historical archive material is missing: ${historicalPath}`);
-    }
-  }
-
-  if (asset.private_source_archive) {
-    const safePrivateArchive = isSafeRepositoryPath(asset.private_source_archive);
-    record(
-      safePrivateArchive,
-      `${asset.id}: private source archive must stay inside the repository`,
-    );
-    record(
-      !isArchivePath(asset.private_source_archive) && !isPublicPath(asset.private_source_archive),
-      `${asset.id}: private source archive must stay in active private evidence`,
-    );
-    if (safePrivateArchive) {
-      record(
-        await exists(path.join(root, asset.private_source_archive)),
-        `${asset.id}: private source archive is missing: ${asset.private_source_archive}`,
-      );
     }
   }
 }

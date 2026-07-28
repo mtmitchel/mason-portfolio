@@ -8,3 +8,7 @@
 # histories including unrelated private material, so they are never committed.
 # Curated extracts belong in private-evidence/ instead.
 /data-*batch-*.zip
+
+# Retain selected Figma source frames directly. Export archives duplicate those
+# files, obscure locators, and can exceed ordinary Git hosting limits.
+/private-evidence/source-exports/figma/**/*.zip

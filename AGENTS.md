@@ -111,6 +111,11 @@ publication, deployment, access changes, Figma writes, or destructive action.
 - Treat Mason's request as the objective and finish every safe, authorized
   step through focused verification and final diff review.
 - Preserve unrelated dirty work.
+- In review, distinguish a demonstrated defect from a preference. Do not
+  recommend a new gate, schema, owner, status, script, test, document, approval
+  step, or other ceremony unless it prevents a specific observed failure and a
+  simpler deletion, merge, relaxation, or direct fix cannot do so. Prefer
+  simplifying or removing machinery; omit speculative "best practice" advice.
 - Keep one current source of truth for each decision. Move superseded work into
   the archive instead of leaving active stubs, duplicate instructions, or
   placeholder links.

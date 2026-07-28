@@ -171,10 +171,11 @@ score.
 ## July 28 Figma reconciliation
 
 - `deepl-write-naming-decision.png` is the source for the Product Naming
-  transcription. Its ZIP entry, dimensions, and hash are in the manifest.
+  transcription. Its retained source frame, dimensions, and hash are in the
+  manifest.
 - `usage-limit.png`, `document-size.png`, `remaining-documents.png`, and
   `voice-addon-refined-43-65515-2x.png` are byte-matched to public assets and now
-  have exact ZIP-entry provenance.
+  have exact retained-source provenance.
 - Clarify original/revised is not a valid before/after pair: one export is a
   transparent text layer and the other a complete card.
 - The terminology paper remains private because it identifies a colleague.
