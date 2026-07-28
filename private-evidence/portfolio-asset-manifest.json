@@ -10,7 +10,6 @@
     "crop_of_recovered_historical_export": "A portfolio crop made from a retained historical working or product artifact.",
     "portfolio_reconstruction_2026": "A frame or crop created or materially reconstructed in 2026 to demonstrate a portfolio idea; it is not historical product evidence."
   },
-  "duplicate_classification": "private-evidence/asset-duplicate-classification.md",
   "assets": [
     {
       "id": "DEEPL-UPGRADE-PROMPTS",
@@ -629,7 +628,6 @@
         ],
         "relationship": "Two parallel Voice offers on one comparison surface."
       },
-      "source_path": "private-evidence/source-exports/figma/pricing-evolution",
       "source_type": "design",
       "editability": "flattened",
       "crop_notes": "Use the clean standalone Voice header and the complete repository comparison of Voice for Meetings and Voice for Conversations. Exclude the raw FAQ export because the black canvas margins make it read as a working board.",
@@ -653,9 +651,10 @@
         {
           "path": "voice-product/voice-offer-comparison.png",
           "public_path": "site/public/work/voice-product/voice-offer-comparison.png",
-          "artifact_genesis": "recovered_historical_export",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Created for the July 2026 portfolio from historical Figma node 13:17681 as refined exhibit 43:65515. The reconstruction regularized feature-bullet weight and the shared sales CTA rhythm, and used an authorized shorter Conversations feature line to prevent wrapping; the export log records the full decisions.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/voice-product/voice-offer-comparison-source.png",
+          "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
           "source_sha256": "ff9c9bec6ac401c0a6d34837f8351dbe41de107c7db3acfa41ddae246e2038a9",
           "crop": "none; complete clean comparison",
           "dimensions": "3024x2654",

@@ -300,7 +300,7 @@ test("every in-scope DeepL UX route has a manifest-owned central exhibit contrac
   }
 });
 
-test("upgrade prompts retain selected evidence and scope the result once", async () => {
+test("upgrade prompts retain the selected evidence", async () => {
   const html = await htmlFor("/work/upgrade-prompts");
   const source = await readFile(new URL("app/work/upgrade-prompts/UpgradePromptsCase.tsx", root), "utf8");
   for (const asset of [
@@ -317,9 +317,6 @@ test("upgrade prompts retain selected evidence and scope the result once", async
     "feature-awareness-glossary.png",
     "write-pro-allowance-comparison.png",
   ]) assert.match(`${html}\n${source}`, new RegExp(escapeRegExp(asset)));
-  assert.equal((html.match(/12%/g) ?? []).length, 1);
-  assert.equal((html.match(/seven-figure/g) ?? []).length, 1);
-  assert.match(html, /wider experiment wave/i);
   assert.doesNotMatch(html, /network-usage-limit|\{5\}|\{1\}|\{16\}|Upgrade to Pro<\/p>[\s\S]*Before/);
 });
 
@@ -524,23 +521,21 @@ test("published samples preserve the approved source wording exactly", async () 
   for (const quote of exactQuotes) assert.match(combined, new RegExp(escapeRegExp(quote)), quote);
 });
 
-test("metrics appear only on their supported pages and at their supported level", async () => {
+test("experiment-wave metrics keep their supported attribution wherever used", async () => {
   const pages = Object.fromEntries(await Promise.all(deeplUxRoutes.map(async (route) => [route, await htmlFor(route)])));
-  for (const [route, metric, sectionId] of [
-    ["/work/upgrade-prompts", /12%|seven-figure ARR/, "wave-result"],
-  ]) {
-    if (metric.test(pages[route])) {
-      assert.match(pages[route], new RegExp(`id="${sectionId}"[\\s\\S]*${metric.source}`));
+  for (const [route, html] of Object.entries(pages)) {
+    const text = visibleText(html);
+    for (const match of text.matchAll(/12%|seven-figure ARR/gi)) {
+      const context = text.slice(
+        Math.max(0, match.index - 180),
+        match.index + match[0].length + 180,
+      );
+      assert.match(
+        context,
+        /wider experiment wave/i,
+        `${route} should attribute the aggregate metric to the wider experiment wave`,
+      );
     }
-  }
-  for (const route of [
-    "/work/pricing-evolution",
-    "/work/checkout",
-    "/work/account-team-security",
-    "/work/product-naming",
-    "/work/voice-product",
-  ]) {
-    assert.doesNotMatch(pages[route], /12%|seven-figure ARR/);
   }
 });
 

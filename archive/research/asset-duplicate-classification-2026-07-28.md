@@ -1,11 +1,12 @@
-# Exact duplicate classification
+# Archived exact duplicate classification
 
 Last audited: 2026-07-28
 
-This is the current classification owner for byte-identical files in the live
-repository. The audit covers repository files while excluding `.git`, runtime
-mounts, ignored scratch space, dependencies, and generated build output.
-SHA-256 comparison found 17 groups containing 36 files.
+This one-time audit records the repository state observed on 2026-07-28. It is
+preserved for history, not maintained as a current duplicate inventory or
+cleanup owner. The audit excluded `.git`, runtime mounts, ignored scratch
+space, dependencies, and generated build output. Its SHA-256 comparison found
+17 groups containing 36 files at that point in time.
 
 No file in this review is approved for deletion. A matching hash proves only
 that bytes are identical; it does not make the files interchangeable or make

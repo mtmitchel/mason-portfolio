@@ -15,9 +15,6 @@ are evidence and working records, not deployable site content.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visual and text exhibits, their private sources, transformations,
   exact locators, captions, alternative text, and central-exhibit contracts.
-- [`asset-duplicate-classification.md`](asset-duplicate-classification.md) —
-  SHA-256 classification and preservation disposition for exact duplicate
-  files.
 - [`projects/pricing-evolution/README.md`](projects/pricing-evolution/README.md)
   — active pricing-project index. It records the pause and routes to work
   status, evidence owners, source locations, and rejected or superseded drafts.
@@ -30,9 +27,9 @@ are evidence and working records, not deployable site content.
 - [`deepl-project-candidate-queue.md`](deepl-project-candidate-queue.md) —
   current DeepL UX copy and content-design ranking and implemented-route
   reconciliation across the assistant exports, document inventory, complete
-  Figma extraction, candidate ZIPs, current CV, achievement ledger, and claim
-  review. It does not rank marketing, editorial, or other-employer work, and it
-  does not own factual claims or the story workflow.
+  Figma extraction, retained direct candidate frames, current CV, achievement
+  ledger, and claim review. It does not rank marketing, editorial, or
+  other-employer work, and it does not own factual claims or the story workflow.
 - [`deepl-document-inventory.json`](deepl-document-inventory.json) — canonical,
   reproducible source-occurrence inventory across the ChatGPT and Claude
   exports. It keeps custody, origin, privacy, and claim coverage separate.
@@ -49,9 +46,9 @@ are evidence and working records, not deployable site content.
   organizational record; the document inventory owns those distinctions.
 - [`source-media/homepage-loops/`](source-media/homepage-loops/) — original
   generated MP4 files behind the selected homepage loops.
-- [`source-exports/figma/`](source-exports/figma/) — Checkout, MFA, pricing,
-  Write Pro, team-administration, and reviewed candidate exports and source
-  batches.
+- [`source-exports/figma/`](source-exports/figma/) — retained direct Checkout,
+  MFA, pricing, Write Pro, team-administration, Product Naming, and Voice source
+  frames.
 - [`source-exports/public-product-pages/`](source-exports/public-product-pages/)
   — private reference captures and selected source illustrations from public
   DeepL product surfaces.

@@ -40,8 +40,8 @@ untouchable, or the ultimate source of truth.
 | Write Pro | [`projects/write-pro/figma-evidence-crosswalk.md`](projects/write-pro/figma-evidence-crosswalk.md) | Historical product/landing work, upgrade surfaces, experiments, and content patterns. |
 | Monetization | [`projects/monetization/figma-evidence-crosswalk.md`](projects/monetization/figma-evidence-crosswalk.md) | Pricing, purchase, eligibility, limits, bundles, and Pro Driver surfaces across products. |
 | Pricing evolution overlay | [`projects/pricing-evolution/figma-evidence-crosswalk.md`](projects/pricing-evolution/figma-evidence-crosswalk.md) | Current relationship between the recovered pricing workstreams and the Write Pro and Monetization source domains. |
-| Product Naming selected exhibit | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact candidate ZIP, entry, hash, dimensions, rendered text reconstruction, and naming claim locators. No broader domain crosswalk is claimed. |
-| DeepL Voice selected exhibits | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact candidate ZIP, entries, hashes, dimensions, and current public copies. No broader domain crosswalk is claimed. |
+| Product Naming selected exhibit | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact retained source frame, hash, dimensions, rendered text reconstruction, and naming claim locators. No broader domain crosswalk is claimed. |
+| DeepL Voice selected exhibits | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact retained source frames, transformations, hashes, dimensions, and current public copies. No broader domain crosswalk is claimed. |
 
 Cross-source candidate reconciliation, scores, coverage, and work order belong
 only in the

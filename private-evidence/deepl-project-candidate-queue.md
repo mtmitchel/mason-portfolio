@@ -5,7 +5,8 @@
 reconciliation, and ranking owner
 
 This queue reconciles the ChatGPT audit, current CV, achievement ledger, current
-document inventory, complete Figma extraction, and both reviewed candidate ZIPs.
+document inventory, complete Figma extraction, and the retained direct frames
+from the reviewed candidate exports.
 The discovery universe contains 37 candidate families: the original 36 plus
 `R37`, found in the retained document pass. This queue ranks only DeepL UX copy,
 product content design, and content-system work. Marketing, editorial,
@@ -41,10 +42,11 @@ Score viable candidates from `0` to `2` on four independent axes:
 4. **Presentation readiness** — how much bounded preparation the selected
    evidence needs.
 
-Order is lexicographic: reader value → source strength → evidence fit →
-presentation readiness → prior order. Do not add the values. Presentation can
-break only an otherwise exact tie and can never move a weaker story above a
-stronger one.
+Eligibility and status are resolved before ordering: viable `Active` candidates
+are ranked ahead of `Reserve` candidates. Within each status, order is
+lexicographic: reader value → source strength → evidence fit → presentation
+readiness → prior order. Do not add the values. Presentation can break only an
+otherwise exact tie and can never move a weaker story above a stronger one.
 
 Candidates are ranked inside a discipline lane, not against candidates doing a
 different hiring job. The current active lane is **product content design**.

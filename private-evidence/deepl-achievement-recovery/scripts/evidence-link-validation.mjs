@@ -5,8 +5,10 @@ const sha256Pattern = /^[a-f0-9]{64}$/;
 export function recoveredContentHash(markdown) {
   const frontmatter = String(markdown).match(/^---\n[\s\S]*?\n---\n/);
   if (!frontmatter) return null;
+  const wrappedBody = String(markdown).slice(frontmatter[0].length);
+  const sourceBody = wrappedBody.startsWith("\n") ? wrappedBody.slice(1) : wrappedBody;
   return crypto.createHash("sha256")
-    .update(String(markdown).slice(frontmatter[0].length).trim())
+    .update(sourceBody)
     .digest("hex");
 }
 
@@ -23,6 +25,14 @@ export function conversationInventoryLinkErrors(source, inventoryRecord) {
   ));
   if (!matchingLocator) {
     errors.push(`inventory record ${inventoryRecord.source_record_id} does not contain the source locator`);
+  }
+
+  const inventoryNames = [
+    inventoryRecord.canonical_name,
+    ...(inventoryRecord.alternate_names ?? []),
+  ];
+  if (!inventoryNames.includes(source.title)) {
+    errors.push(`inventory record ${inventoryRecord.source_record_id} does not match source title ${source.title ?? "<missing>"}`);
   }
 
   if (

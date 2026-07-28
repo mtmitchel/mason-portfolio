@@ -68,13 +68,15 @@ About stays at two short paragraphs:
 4. Show the value before the hard stop with four feature-awareness states.
 5. Change the offer for the account state.
 6. Escalate the offer between an inline allowance and a hard stop.
-7. End with the wider experiment-wave result.
+7. If the aggregate result is retained, end with its wider experiment-wave
+   scope.
 
-The 12% paid-conversion lift and seven-figure ARR increase appear once and
-belong to the wider experiment wave. If that aggregate result remains in the
-case, confirm the project dates, audience, sample, and baseline behind it. Do
-not attribute the result to an individual surface. Describe the selected
-feature-awareness and allowance states only at their supported lifecycle.
+The 12% paid-conversion lift and seven-figure ARR increase belong to the wider
+experiment wave. If that aggregate result remains in this or another related
+case, confirm the project dates, audience, sample, and baseline behind it and
+state the wave-level relationship. Do not attribute the result to an individual
+surface. Describe the selected feature-awareness and allowance states only at
+their supported lifecycle.
 
 ### Pricing evolution
 

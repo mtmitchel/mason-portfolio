@@ -11,6 +11,9 @@ current product, claim, source-selection, or publication owner.
   candidate selection, prior direction, supplemental performance-review
   material, and archived Figma execution history. The family indexes inside
   that directory identify current owners and superseded versions.
+- [`research/asset-duplicate-classification-2026-07-28.md`](research/asset-duplicate-classification-2026-07-28.md)
+  — one-time exact-duplicate audit retained for history; it is not a current
+  repository inventory or cleanup owner.
 - [`research/deepl-product-intelligence/`](research/deepl-product-intelligence/)
   — raw research reports with opaque citation tokens, superseded by the
   direct-link reference pack in the `research-deepl-product-intelligence`

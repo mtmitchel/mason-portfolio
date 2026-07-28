@@ -134,7 +134,6 @@ const requiredFiles = [
   "private-evidence/claim-review.md",
   "private-evidence/deepl-portfolio-current-direction.md",
   "private-evidence/deepl-document-inventory.json",
-  "private-evidence/deepl-document-inventory.schema.json",
   "private-evidence/deepl-project-candidate-queue.md",
   "private-evidence/portfolio-asset-manifest.json",
   "site/README.md",
@@ -279,14 +278,6 @@ function isSafeRepositoryPath(relative) {
   const resolved = path.resolve(root, relative);
   return resolved.startsWith(`${root}${path.sep}`);
 }
-
-const duplicateClassification = manifest.duplicate_classification;
-record(
-  isSafeRepositoryPath(duplicateClassification)
-    && !isArchivePath(duplicateClassification)
-    && await exists(path.join(root, duplicateClassification)),
-  "asset manifest duplicate classification should point to a current file",
-);
 
 async function verifyFileHash(relative, expectedHash, label) {
   const safePath = isSafeRepositoryPath(relative);

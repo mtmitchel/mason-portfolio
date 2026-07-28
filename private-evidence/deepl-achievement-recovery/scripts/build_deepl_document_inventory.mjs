@@ -5,6 +5,8 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { promisify } from "node:util";
 
+import { recoveredContentHash } from "./evidence-link-validation.mjs";
+
 const execFileAsync = promisify(execFile);
 
 export const INVENTORY_SCHEMA_VERSION = "1.0";
@@ -287,9 +289,16 @@ async function loadRecoveredSources(repoRoot) {
   for (const filePath of await listFiles(recoveredDir, (name) => name.endsWith(".md"))) {
     const text = await fs.readFile(filePath, "utf8");
     const frontmatter = text.match(/^---\n([\s\S]*?)\n---\n/);
-    const contentHash = frontmatter?.[1].match(/^sha256:\s*([a-f0-9]{64})$/m)?.[1] ?? null;
-    if (!contentHash) continue;
-    byHash.set(contentHash, path.relative(repoRoot, filePath).split(path.sep).join("/"));
+    const declaredHash = frontmatter?.[1].match(/^sha256:\s*([a-f0-9]{64})$/m)?.[1] ?? null;
+    const actualHash = recoveredContentHash(text);
+    const repoPath = path.relative(repoRoot, filePath).split(path.sep).join("/");
+    if (!declaredHash || !actualHash) {
+      throw new Error(`${repoPath}: recovered source lacks a valid content fingerprint`);
+    }
+    if (declaredHash !== actualHash) {
+      throw new Error(`${repoPath}: recovered source content does not match its declared SHA-256`);
+    }
+    byHash.set(actualHash, repoPath);
   }
   return byHash;
 }

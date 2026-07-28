@@ -27,9 +27,10 @@ The broad 23-project discovery audit remains beside that raw export:
 
 It is a discovery input, not a claim owner or case-study draft. The current
 [`candidate queue`](../deepl-project-candidate-queue.md) reconciles it with the
-cross-export document inventory, complete Figma extraction and candidate ZIPs,
-current CV, achievement ledger, and claim review. The repository-root
-instructions own selection and writing workflow.
+cross-export document inventory, complete Figma extraction, retained direct
+frames from the reviewed candidate exports, current CV, achievement ledger, and
+claim review. The repository-root instructions own selection and writing
+workflow.
 
 It was deliberately not moved here because the 278 MB export contains
 thousands of unrelated private conversations. The raw export remains the source
@@ -44,8 +45,9 @@ are the primary supplemental sources. Their synthesis is
   — active owner for the paused pricing recovery, direct-source chronology,
   contribution map, and corrected claim routing.
 - [`../deepl-portfolio-current-direction.md`](../deepl-portfolio-current-direction.md)
-  — general portfolio scope, metric framing, writing hierarchy, and factual
-  boundaries. Its pricing direction remains paused.
+  — general portfolio scope, metric framing, writing hierarchy, and current
+  story directions. Its pricing direction remains paused.
+- [`../claim-review.md`](../claim-review.md) — current factual claim ceilings.
 - [`artifacts/final-achievements-and-talking-points.md`](artifacts/final-achievements-and-talking-points.md) — canonical paired CV and portfolio language covering every recovery record exactly once.
 - [`artifacts/outcome-evidence.md`](artifacts/outcome-evidence.md) — strongest positive outcomes, growth and revenue candidates, evidence quality, and missing-source warnings.
 - [`artifacts/career-inventory.md`](artifacts/career-inventory.md) — chronological reconstruction across Marketing, Apps & Integrations, Content Experience, Monetization, IAM, ATE, and content tooling.

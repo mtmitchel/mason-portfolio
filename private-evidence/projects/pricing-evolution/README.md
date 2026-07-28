@@ -53,14 +53,14 @@ from portfolio reconstructions created in 2026.
 
 | Area | Owner or supporting record | Current status |
 | --- | --- | --- |
-| Work status | [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md) | Canonical completed-work record and current freeze. |
+| Work status | [`deepl-project-candidate-queue.md`](../../deepl-project-candidate-queue.md) | Current freeze and disposition owner. The recovery plan below preserves the completed-work record only. |
 | Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Preserved Phase 6 evidence allocation. Its prior title, format, diagnosis, and narrative do not authorize new Pricing work. |
 | Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. |
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July Translator grid change, naming, repeatable review tooling, and Pricing Page V2. The ledger now states that Mason contributed to the cumulative structure that shipped while preserving the remaining claim limits. |
 | Factual claim ceilings | [`claim-review.md`](../../claim-review.md) | Current factual ceiling, corrected for product dates, buying routes, plan relationships, contribution, lifecycle, and later public states. It does not own story structure or tone. |
 | Figma relationships | [`figma-evidence-crosswalk.md`](figma-evidence-crosswalk.md), supported by the [`Write Pro`](../write-pro/figma-evidence-crosswalk.md) and [`Monetization`](../monetization/figma-evidence-crosswalk.md) source-domain crosswalks | Step 20 complete. Exact surviving private nodes are allocated across artifact, contribution, lifecycle, and outcome evidence. `Canonical` remains an organizing destination only. |
 | Figwright page and batch inventory | [`figwright-inventory.md`](figwright-inventory.md) and [`figwright-raw-extractions.jsonl.gz`](figwright-raw-extractions.jsonl.gz) | Steps 18–20 complete: 69 pages, 1,190 roots, 99 of 99 review batches, 12 of 12 zero-root dispositions, every candidate family classified, all routed live checks dispositioned, and final records allocation documented. |
-| Asset provenance and genesis | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) and [`asset-duplicate-classification.md`](../../asset-duplicate-classification.md) | Current source, crop, hash, caption, alternative-text, exact-duplicate, and artifact-genesis records. Pricing files now distinguish historical-artifact crops from 2026 portfolio reconstructions. Three source-equivalent Figma frames are recorded as candidates, but the current upgrade-prompt PNGs correctly retain `missing` provenance because export lineage is unproved. |
+| Asset provenance and genesis | [`portfolio-asset-manifest.json`](../../portfolio-asset-manifest.json) | Current source, crop, hash, caption, alternative-text, and artifact-genesis records. Pricing files now distinguish historical-artifact crops from 2026 portfolio reconstructions. Three source-equivalent Figma frames are recorded as candidates, but the current upgrade-prompt PNGs correctly retain `missing` provenance because export lineage is unproved. |
 | Sources | [Pricing source locations](#pricing-source-locations) | Current private source exports, the active reconstruction, and the curated GPT register. The full raw export remains outside the repository. |
 | Frozen route and archived drafts | [Frozen route and archived records](#frozen-route-and-archived-records) | The rendered route and supporting private drafts are preserved, unapproved records. |
 
@@ -72,8 +72,11 @@ from portfolio reconstructions created in 2026.
   — current workstream, contribution, lifecycle, outcome, and factual
   boundaries.
 - [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md)
-  — current Phase 6 portfolio jobs, strongest evidence spine, visual direction,
-  and boundaries for a new narrative.
+  — preserved Phase 6 evidence allocation and rejected direction record. It is
+  not a current story or layout baseline.
+- [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md)
+  — preserved completed-work record; it does not own the current freeze or
+  disposition.
 - [`ux-content-design-portfolio-deep-research-report-2026-07-27.md`](../../../archive/research/portfolio-method/ux-content-design-portfolio-deep-research-report-2026-07-27.md)
   — archived market and portfolio research input. Its citation markers are
   opaque, so it is not a current workflow or case-study specification.

@@ -45,7 +45,7 @@ untouchable, or ultimate truth.
   states.
 - Explain that prompt content changes with the interrupted task and account
   state.
-- Include one result sentence only: across the wider experiment wave, DeepL
+- If the result is used, attribute it to the wider experiment wave: DeepL
   recorded a 12% rise in paid conversion and a seven-figure ARR increase.
 - Do not attach that result to one prompt or claim that Mason wrote every
   blocker.
