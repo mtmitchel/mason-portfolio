@@ -110,6 +110,44 @@ or reviewer preference binding after Mason rejects it.
   desktop, mobile, overflow, and keyboard inspection. Static checks do not
   replace that visual review.
 
+## External-agent packet requests
+
+When Mason asks a repository agent to prepare, fill, update, or refresh an
+external-agent packet, follow
+[`docs/external-agent-packets.md`](docs/external-agent-packets.md).
+
+- [`docs/external-agent/base/`](docs/external-agent/base/) is the canonical
+  tracked base. Edit it there, never in a dated `tmp/` copy.
+- The external agent receives only `PROJECT_INSTRUCTIONS.txt`, the four
+  numbered base files, and the files and images in the current task packet. It
+  cannot inspect this repository, hidden evidence, prior conversations, local
+  paths, or unshared source material.
+- The repository agent may search the private evidence library to assemble a
+  self-contained packet. Do not expose repository paths, raw private archives,
+  credentials, unrelated personal data, or unsupported conclusions.
+- Generated upload bundles belong in ignored `tmp/external-agent-*`
+  directories. They are working output, not durable instructions or sources of
+  truth. Preparing a packet does not authorize sending it to a provider.
+- Choose the packet mode before collecting files: portfolio-slate discovery,
+  case construction or reconstruction, rendered-case review, or an explicit
+  combination. A single-case packet cannot make a final slate comparison
+  without the competing cases.
+- For comprehensive written feedback, include the reader-facing draft when one
+  exists and ask for narrative, structure, role clarity, headings, transitions,
+  body copy, captions, result treatment, and ending.
+- For comprehensive design feedback on an implemented page, also include a
+  currently accessible public URL or current desktop and mobile captures.
+  Product screenshots alone support visual planning, not a rendered-page
+  review. Do not create new captures unless Mason requested them.
+- Every case packet normally includes an exact task file, `CASE_CONTEXT.md`,
+  `FACTS_AND_LIMITS.md`, `ASSET_INDEX.md`, and the selected artifacts.
+  Add `CURRENT_DRAFT.md`, rendered captures, a slate context, or a narrowly
+  necessary source excerpt only when the chosen mode needs them.
+- Keep `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. Before handoff,
+  verify every reference resolves, every selected asset is actually included,
+  rejected work is labelled or removed, and the packet assumes no hidden
+  access.
+
 ## Narrative and evidence boundaries
 
 - Mason is the primary source for his own role, participation, rationale, and

@@ -12,6 +12,16 @@
   portfolio slate, then develop each case's narrative and visual form together.
 - Kept one independent reader review and at most one focused repair while
   removing automated checks that froze editorial or layout choices.
+- Added a provider-neutral external-agent packet workflow with a canonical
+  shared base, explicit no-repository-access assumptions, and separate modes
+  for slate discovery, case construction, rendered review, or a combined task.
+
+### Repository guardrails
+
+- Split the production stylesheet into responsibility-based modules without
+  changing its cascade.
+- Added tracked commit hooks and repository checks that reject production
+  source files over 500 physical lines in the full staged snapshot.
 
 ## Unreleased — 2026-07-24
 

@@ -8,6 +8,9 @@ work. The deployable application lives in [`site/`](site/).
 
 - [`AGENTS.md`](AGENTS.md) — canonical portfolio-content workflow, evidence
   boundaries, approvals, and repository rules.
+- [`docs/external-agent-packets.md`](docs/external-agent-packets.md) —
+  repository-agent workflow for building self-contained external-agent review
+  packets.
 - [`site/README.md`](site/README.md) — implemented routes, application structure,
   local commands, and publication state.
 - [`private-evidence/deepl-project-candidate-queue.md`](private-evidence/deepl-project-candidate-queue.md)
@@ -49,6 +52,17 @@ current routes. The default path is:
 [`AGENTS.md`](AGENTS.md) owns the detailed workflow and skill timing. The queue,
 current-direction notes, manifest, and existing routes are inputs to judgment,
 not approval gates or templates.
+
+## External-agent packets
+
+The canonical shared instructions and base files live in
+[`docs/external-agent/base/`](docs/external-agent/base/). Repository agents use
+[`docs/external-agent-packets.md`](docs/external-agent-packets.md) to assemble
+self-contained, provider-neutral case or slate packets.
+
+Generated upload bundles remain under ignored `tmp/external-agent-*`. External
+agents receive only the shared instructions, four numbered base files, and the
+current packet; they never receive implied repository access.
 
 ## Repository layout
 
