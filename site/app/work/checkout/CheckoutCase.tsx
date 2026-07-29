@@ -211,7 +211,7 @@ export default function CheckoutCase() {
           </div>
         </section>
 
-        <nav className="next-project next-project--compact" aria-label="Next project">
+        <nav className="next-project next-project--compact" aria-label="Next">
           <Link href="/work/account-team-security">
             Next
             <b aria-hidden="true">→</b>

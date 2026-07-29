@@ -1,8 +1,8 @@
 # Mason Mitchel portfolio
 
-A restrained, image-led portfolio for Mason's UX copywriting and content design
-work. Shared code handles the site shell, typography, image viewer, comparisons,
-and switchers. Each case page controls its own story order.
+A portfolio for Mason's UX copywriting and content design work. Shared code
+handles the site shell and accessible media behavior. Comparisons, switchers,
+and chapter patterns are optional. Each case owns its story and visual form.
 
 ## Implemented routes
 
@@ -58,43 +58,26 @@ The production build is the type-integration check. Standalone `tsc --noEmit`
 is not authoritative because the Cloudflare worker ambient types are not
 declared.
 
-## Current presentation rules
+## Presentation direction
 
-- Keep the concise header, selected-work grid, writing route, About copy, and
-  footer visually quiet.
-- Keep every piece of public-facing text at 18px or larger at every breakpoint.
-- Keep long-form body copy at 20px or larger with a comfortable reading width.
-- Use literal project titles and direct prose.
-- Keep each important claim beside the image or excerpt that supports it.
-- Let each case use the story shape its evidence needs.
-- Treat the current chapter-page measure, spacing, and media sizes as
-  implementation choices, not acceptance criteria. Change them when a case's
-  approved story or evidence needs a different reading experience.
-- Make the reader understand the pressure, Mason's judgment and contribution,
-  the meaningful decisions, and the change by the end. Do not treat an
-  inventory of screens and copy rules as a complete story.
-- Keep homepage cards at their natural media height. The localization-report
-  card must show the complete `978 × 1369` cover and must never crop it.
-- Let a homepage preview be real selectable text when that is the
-  source-faithful evidence. Product Naming uses its naming-order decision
-  instead of an unrelated decorative image.
-- Keep the three homepage loops silent, visibility-aware, and safe for reduced
-  motion.
-- Do not add tags, badges, card summaries, extra filters, or public evidence
-  disclaimers.
-- Use `ImageComparison` only for two real states.
-- Preserve the accessible Checkout and pricing switchers.
+Use clear prose, readable typography, useful evidence, and accessible
+interaction. Let each case choose the story shape, reading width, media scale,
+and comparison treatment its material needs. Existing measures, grids,
+switchers, chapter classes, and media sizes are implementation choices, not
+acceptance criteria.
 
-Automated checks must not freeze case-study chapter order, paragraph count,
-sentence length, exact editorial prose, or generic strategic vocabulary.
-Passing checks does not establish that the narrative or visual pacing works.
+The reader should understand the pressure, Mason's contribution, the meaningful
+decisions, and the change by the end. That goal does not require one public
+section per question, one screenshot per claim, or one repeated case layout.
+Passing automated checks does not establish that the narrative or visual
+pacing works.
 
 ## Evidence
 
 Selected public visual assets live under `public/work/<case>/`. Selected text
 exhibits remain real text in the route. Their private source, transformation,
-exact locator, central-exhibit role, caption, dimensions where applicable, and
-alternative text are recorded in
+exact locator, caption, dimensions where applicable, and alternative text are
+recorded in
 [`../private-evidence/portfolio-asset-manifest.json`](../private-evidence/portfolio-asset-manifest.json).
 
 Source images stay unchanged. Public crops must be truthful, documented, and

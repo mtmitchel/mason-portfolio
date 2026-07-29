@@ -402,33 +402,11 @@ for (const asset of manifestAssets) {
       typeof centralExhibit.id === "string" && centralExhibit.id.length > 0,
       `${asset.id}: central exhibit id is required`,
     );
-    record(
-      typeof centralExhibit.route === "string" && centralExhibit.route.startsWith("/work/"),
-      `${asset.id}: central exhibit route is required`,
-    );
     for (const publicRef of centralExhibit.public_refs ?? []) {
       record(
         manifestPublicPaths.has(publicRef),
         `${asset.id}: central exhibit reference is not manifest-listed: ${publicRef}`,
       );
-    }
-    if (centralExhibit.render_ref) {
-      const renderPath = centralExhibit.render_ref.split("#")[0];
-      const renderPresent = isSafeRepositoryPath(renderPath)
-        && await exists(path.join(root, renderPath));
-      record(
-        renderPresent,
-        `${asset.id}: central exhibit render_ref is missing: ${centralExhibit.render_ref}`,
-      );
-      if (renderPresent) {
-        const renderSource = await readFile(path.join(root, renderPath), "utf8");
-        for (const token of centralExhibit.required_tokens ?? []) {
-          record(
-            renderSource.includes(token),
-            `${asset.id}: central exhibit render_ref is missing required token: ${token}`,
-          );
-        }
-      }
     }
     if (centralExhibit.source_path) {
       const sourceBuffer = await verifyFileHash(
@@ -471,30 +449,6 @@ for (const asset of manifestAssets) {
             `${asset.id}: claim locator source is missing quoted text: ${quote}`,
           );
         }
-      }
-    }
-  }
-
-  const homepageTextPreview = asset.homepage_text_preview;
-  if (homepageTextPreview) {
-    record(
-      homepageTextPreview.central_exhibit_id === centralExhibit?.id,
-      `${asset.id}: homepage text preview must use the central exhibit`,
-    );
-    const renderPath = homepageTextPreview.render_ref?.split("#")[0];
-    const renderPresent = isSafeRepositoryPath(renderPath)
-      && await exists(path.join(root, renderPath));
-    record(
-      renderPresent,
-      `${asset.id}: homepage text preview render_ref is missing: ${homepageTextPreview.render_ref}`,
-    );
-    if (renderPresent) {
-      const renderSource = await readFile(path.join(root, renderPath), "utf8");
-      for (const token of homepageTextPreview.required_tokens ?? []) {
-        record(
-          renderSource.includes(token),
-          `${asset.id}: homepage text preview is missing required token: ${token}`,
-        );
       }
     }
   }
@@ -560,49 +514,6 @@ for (const asset of manifestAssets) {
       record(await exists(path.join(root, historicalPath)), `${asset.id}: historical archive material is missing: ${historicalPath}`);
     }
   }
-}
-
-const queuePath = path.join(root, "private-evidence/deepl-project-candidate-queue.md");
-const queueSource = await readFile(queuePath, "utf8");
-const routeContractMatch = queueSource.match(/```json route-contracts\n([\s\S]*?)\n```/);
-record(Boolean(routeContractMatch), "candidate queue must contain the route-contracts JSON block");
-let routeContracts = [];
-if (routeContractMatch) {
-  try {
-    routeContracts = JSON.parse(routeContractMatch[1]);
-  } catch (error) {
-    record(false, `candidate queue route-contracts JSON is invalid: ${error.message}`);
-  }
-}
-const expectedRoutePaths = routeDirectories.map((route) => `/work/${route}`);
-record(
-  routeContracts.length > 0,
-  "candidate queue must own at least one in-scope implemented route",
-);
-record(
-  new Set(routeContracts.map((item) => item.route)).size === routeContracts.length,
-  "candidate queue route contracts must not repeat a route",
-);
-const manifestByProject = new Map(manifestAssets.map((asset) => [asset.project_id, asset]));
-for (const contract of routeContracts) {
-  record(
-    expectedRoutePaths.includes(contract.route),
-    `${contract.route}: route contract does not match an implemented route`,
-  );
-  record(
-    ["active", "advanced-draft", "frozen"].includes(contract.state),
-    `${contract.route}: unsupported route state ${contract.state}`,
-  );
-  const asset = manifestByProject.get(contract.project_id);
-  record(Boolean(asset), `${contract.route}: manifest project is missing: ${contract.project_id}`);
-  record(
-    asset?.central_exhibit?.route === contract.route,
-    `${contract.route}: central exhibit route does not match the queue`,
-  );
-  record(
-    asset?.central_exhibit?.id === contract.central_exhibit_id,
-    `${contract.route}: central exhibit id does not match the queue`,
-  );
 }
 
 const inventoryPath = path.join(root, "private-evidence/deepl-document-inventory.json");
@@ -693,12 +604,16 @@ for (const relative of referencedPublicPaths) {
 
 const reportSource = path.join(root, "site/app/work/portfolioData.ts");
 const gridSource = path.join(root, "site/app/components/PortfolioProjectGrid.tsx");
-const cssSource = path.join(root, "site/app/globals.css");
-const [portfolioData, projectGrid, css] = await Promise.all([
+const cssSources = await walk(
+  path.join(root, "site/app"),
+  (file) => path.extname(file) === ".css",
+);
+const [portfolioData, projectGrid, cssFiles] = await Promise.all([
   readFile(reportSource, "utf8"),
   readFile(gridSource, "utf8"),
-  readFile(cssSource, "utf8"),
+  Promise.all(cssSources.map((file) => readFile(file, "utf8"))),
 ]);
+const css = cssFiles.join("\n");
 
 record(
   /reportCover,[\s\S]*imageDisplay:\s*"full-document"/.test(portfolioData),

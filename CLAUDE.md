@@ -68,32 +68,18 @@ sequence. `app/work/portfolioData.ts` owns homepage cards and writing entries.
 Do not reintroduce a single data object that forces every case into the same
 sections.
 
-**Evidence is machine-verified across the repository boundary.** Site content is
-coupled to files under `private-evidence/`, and `scripts/check-repository.mjs`
-enforces the coupling. When touching cases or assets, expect to update the
-evidence owners in the same change:
+**Evidence records provenance; it does not choose the story.**
+`private-evidence/portfolio-asset-manifest.json` records where public assets
+came from and how they were transformed. `scripts/check-repository.mjs` checks
+those file, hash, dimension, privacy, and inventory facts. The candidate queue
+is a library of potentially related material and useful artifact combinations,
+not a route contract, required outline, or machine-readable acceptance gate.
 
-- `private-evidence/portfolio-asset-manifest.json` records every public asset's
-  private source, transformation, exact locator, and SHA-256. The check
-  re-hashes both public file and private source, rejects sources that live in
-  `archive/` or `site/public/`, and compares recorded trim margins against
-  ImageMagick's measurement. Replacing a file under `site/public/work/` without
-  updating its hash fails the check.
-- `private-evidence/deepl-project-candidate-queue.md` embeds a fenced
-  ` ```json route-contracts ` block that is parsed as data. It must stay
-  consistent with the directories under `site/app/work/` and with the manifest's
-  project IDs and central exhibits. Adding or removing a case route means
-  editing that block.
-- The repository root has an **allowlist**. Any new top-level file or directory
-  fails the check. Scratch goes in the scratchpad directory or the ignored
-  `tmp/`.
-- The check also enforces a required-file list, a banned obsolete-path list, no
-  redirect-only routes (`from "next/navigation"` in a case route), and the
-  document inventory schema.
-
-**Typography is a blocking test, not a preference.** `tests/rendered-html.test.mjs`
-parses `app/globals.css` and fails any `font-size` resolving below 18px,
-including the floor of a `clamp()`. Long-form body copy is asserted at 20px.
+**Tests protect durable behavior, not editorial taste.**
+`tests/rendered-html.test.mjs` may protect route health, privacy, supported claim
+ceilings, contrast, responsive behavior, and keyboard interaction. It must not
+freeze exact prose, metadata, artifact selection, section order, component
+choice, font size, grid columns, or a preferred comparison construction.
 
 ## Claude Code specifics
 
@@ -103,8 +89,7 @@ relax anything it requires.
 - Use the scratchpad directory for working files. Do not write scratch into the
   repository except under the ignored `tmp/`.
 - Subagents inherit these instructions only if you restate them. When
-  delegating, name the evidence owner the subagent may read and repeat the rule
-  that Mason selects the evidence used in the site.
+  delegating, give them a bounded responsibility and a clear write boundary.
 - The approval gates in `AGENTS.md` — commit, push, deployment, Figma writes,
   destructive actions — are not satisfied by a permission-mode allowlist. Ask
   Mason each time.

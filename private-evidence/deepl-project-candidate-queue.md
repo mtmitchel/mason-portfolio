@@ -1,12 +1,12 @@
 # DeepL project candidate queue
 
 **Updated and re-scored:** 2026-07-29
-**Status:** Current DeepL UX copy and content-design discovery, route
-reconciliation, and ranking owner
+**Status:** DeepL UX copy and content-design story-material database
 
-This queue reconciles the ChatGPT audit, current CV, achievement ledger, current
-document inventory, complete Figma extraction, and the retained direct frames
-from the reviewed candidate exports.
+This database reconciles the ChatGPT audit, current CV, achievement ledger,
+document inventory, Figma extraction, and retained direct frames. Use it to
+discover relationships, compare possible story combinations, and find the
+artifacts that make a complete case.
 The discovery universe contains 37 candidate families: the original 36 plus
 `R37`, found in the retained document pass. This queue ranks only DeepL UX copy,
 product content design, and content-system work. Marketing, editorial,
@@ -18,24 +18,29 @@ cannot disprove a contribution. Artifact, contribution, lifecycle, and outcome
 remain separate. A filename, assistant summary, or attractive frame cannot fill
 another dimension.
 
-This queue is a framework and parts inventory, not a case-study outline. A
-strong story may combine compatible rows, existing route material, and several
-artifacts around one larger product or organizational stake. Scores prioritize
-the material worth examining; they do not dictate the public subject, section
-order, or one-row-per-case structure.
+This is a parts-and-relationships database, not a case-study outline or
+workflow. A strong story may combine compatible rows, strategic context,
+existing route material, and several artifacts around one larger product or
+organizational stake. Scores are historical discovery aids. They do not
+dictate the subject, evidence selection, section order, route state, or
+one-row-per-case structure.
 
-## Viability and score
+## Prioritizing story combinations
 
-A full case needs:
+When Mason has not already named the story, compare combinations rather than
+individual rows. Prefer the combination that creates the strongest total arc:
 
-- hiring-reader value;
-- a defensible account of Mason's contribution;
-- one usable central artifact or source-faithful reconstruction;
-- a supported lifecycle or an honest artifact-level ending; and
-- a story-shaped decision, constraint, or trade-off.
+- a meaningful product or organizational stake;
+- a clear causal timeline rather than a list of tickets;
+- a defensible account of Mason's contribution and collaborators;
+- complementary artifacts that show context, decisions, and change without
+  repeating one another; and
+- a supported result or other meaningful ending.
 
-Metadata-only evidence can identify a lead, but cannot supply contents. An
-assistant synthesis is discovery-only.
+Do not add these dimensions into a mechanical total. One excellent artifact
+combination can outweigh several high-ranked individual candidates. An
+artifact may do more than one job, and a complete story does not need a
+screenshot for every step.
 
 Exact locators preserve internal traceability. They are not a requirement to
 prove that a representative working artifact is the exact tested, winning, or
@@ -44,7 +49,7 @@ current account is direct evidence of his contribution; missing outside
 corroboration must not lower a candidate, hold a story, or trigger more source
 recovery by itself.
 
-Score viable candidates from `0` to `2` on four independent axes:
+The existing row scores retain four discovery fields:
 
 1. **Reader value** — relevance and distinct hiring signal.
 2. **Source strength** — custody, origin, and claim coverage of the sources
@@ -56,22 +61,17 @@ Score viable candidates from `0` to `2` on four independent axes:
 4. **Presentation readiness** — how much bounded preparation the selected
    evidence needs.
 
-Eligibility and status are resolved before ordering: viable `Active` candidates
-are ranked ahead of `Reserve` candidates. Within each status, order is
-lexicographic: reader value → source strength → evidence fit → presentation
-readiness → prior order. Do not add the values. Presentation can break only an
-otherwise exact tie and can never move a weaker story above a stronger one.
+They help search and compare the database. `Active`, `Reserve`, `Represented`,
+and rank values are not approval gates and never override a better
+story-combination judgment or Mason's current request.
 
-Candidates are ranked inside a discipline lane, not against candidates doing a
-different hiring job. The current active lane is **product content design**.
-Content systems keep their own order.
+## Implemented-route index
 
-## Implemented-route reconciliation
+The site is private and undeployed. This index prevents accidental duplicate
+work. It is not a machine contract and does not make a current route, central
+exhibit, title, or state authoritative.
 
-The site is private and undeployed. These are implemented route states, not
-claims of public publication.
-
-```json route-contracts
+```json implemented-route-index
 [
   {"route":"/work/upgrade-prompts","project_id":"DEEPL-UPGRADE-PROMPTS","candidate_ids":["D06","D12"],"state":"advanced-draft","central_exhibit_id":"upgrade-allowance-escalation"},
   {"route":"/work/pricing-evolution","project_id":"DEEPL-PRICING-EVOLUTION","candidate_ids":["D14","D16"],"state":"frozen","central_exhibit_id":"pricing-working-layouts-preserved"},
@@ -82,19 +82,15 @@ claims of public publication.
 ]
 ```
 
-Implemented-route reconciliation prevents duplicate publication work; it does
-not remove the underlying candidates from story consideration. Represented rows
-remain available as evidence, chapters, or rebuild subjects, and a weak route
-must never lock its framing onto the work. The Pricing route is frozen in place
-— its implemented story is rejected and must not be edited until a new
-direction is approved — but the Pricing subject is open.
+Represented rows remain available as evidence, chapters, combinations, or
+rebuild subjects. A weak route never locks its framing or selected artifacts
+onto the underlying work.
 
 ## Product content design
 
-Use rank to decide what to inspect first when Mason has not already named a
-subject. For a portfolio slate or a larger story, combine compatible candidates
-when that creates a more meaningful and accurate account. The re-score was run
-once after the rubric and route reconciliation were fixed.
+Use the rows to discover related material. For a portfolio slate or larger
+story, compare compatible combinations in totality and choose the one that
+creates the most meaningful, complete, and accurate account.
 
 The final column is a claim boundary or useful next action, not a publication
 gate. A missing detail blocks only the exact claim that depends on it.
@@ -120,7 +116,7 @@ gate. A missing detail blocks only the exact claim that depends on it.
 | — | `D06` | DeepL Write Pro launch and monetization work | `2/2/2/2` | Implemented full case | Represented by `/work/upgrade-prompts` | Use its prompts and experiment-wave result as components of a stronger monetization story. The existing route does not lock the framing. |
 | — | `D12` | Free/Pro status label and file-limit awareness | `1/1/2/2` | Implemented support | Represented by `/work/upgrade-prompts` | Use as state-aware monetization evidence. Keep any outcome at the wider supported experiment-wave level. |
 | — | `D08` | Country selection and delayed subscription activation | `1/2/2/1` | Mini case or checkout chapter | Not currently represented | It may support a future broader checkout story when the separate scopes are clear. Do not label it a tested DM-1418 state without support. |
-| — | `C28` | DM-1418 checkout-flow simplification | `2/2/2/2` | Implemented full-case candidate | Represented by `/work/checkout` | Use the retained metrics at DM-1418 experiment level. Representative checkout frames may illustrate the work; exact linkage is needed only to call one the tested or winning variant. The 2026-07-29 route is mechanically verified but remains an advanced draft after Mason judged it “better, but not good”; the next revision waits for his additional context. |
+| — | `C28` | DM-1418 checkout-flow simplification | `2/2/2/2` | Implemented full-case candidate | Represented by `/work/checkout` | Combine the Monetization roadmap, experiment program, Mason's work with the product manager and product designer, the content decisions that made a shorter flow viable, representative checkout evidence, and the experiment-level result. Exact frame linkage is needed only to call one the tested or winning variant. The current route remains rejected and does not own the next structure or asset combination. |
 | — | `D19` | MFA recovery and authentication keys | `2/2/2/2` | Implemented full case | Represented by `/work/account-team-security` | May combine with related admin work around enterprise deployment or access. Keep different lifecycle claims scoped; no single-ticket proof is required. |
 | — | `C30` | Broader authentication and administration portfolio | `2/2/2/2` | Implemented support | Represented by `/work/account-team-security` | Use as the larger administrative context. Individual surfaces may have different lifecycle endings without being forced into separate cases. |
 | — | `C24` | DeepL Voice product content | `2/1/2/2` | Implemented mini case | Represented by `/work/voice-product` | Central exhibits re-audited; keep the ending at artifact level unless lifecycle or outcome evidence is added. |
@@ -153,7 +149,8 @@ Translator/Write variants in `10-write-and-cross-product-states/4-184736.png`,
 `4-186545.png`, `4-186552.png`, and `4-186561.png`. Several frames contain
 placeholders, annotations, clipped components, or historical prices. Treat
 those as visual leads or working-state evidence rather than production proof.
-None belongs in the focused checkout case.
+These were not selected for the July 29 checkout candidate. Reconsider them
+only if a new story skeleton gives them a clear, non-duplicative job.
 
 For `C29` and `F34`, the batch supports two compatible signup angles: explain
 the value of a free account before asking someone to register, and keep the
@@ -167,7 +164,8 @@ account. The five C29 iteration frames and experiment result remain the
 measurable spine; the Figma frames add product and cross-platform context and
 should not be called the exact tested C29 variant. Placeholder concepts,
 email-like values, and browser-password prompts require exclusion or careful
-framing before public selection. None belongs in the checkout case.
+framing before public selection. They were not selected for the July 29
+checkout candidate, but a new story combination may reassess them.
 
 The IAM and ATE batches contain 98 and 240 original source members,
 respectively. They support several components of a possible larger enterprise

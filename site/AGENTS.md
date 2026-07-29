@@ -1,98 +1,85 @@
 # Mason Portfolio site instructions
 
-The repository-root [`AGENTS.md`](../AGENTS.md) applies first and owns story
-selection, visual proposal, writing, and review routing. This file owns
-application implementation and validation.
+The repository-root [`AGENTS.md`](../AGENTS.md) owns story construction,
+evidence use, qualitative review, permissions, and external-action boundaries.
+This file owns application implementation and technical verification.
 
-## Product direction
+## Application ownership
 
-- Position Mason as a UX copywriter and content designer.
-- Open each case with the complete story promised by its title.
-- Use observable language: what repeated, changed, disappeared, became visible,
-  or required a different message.
-- Put every important claim beside the image or excerpt that supports it.
-- Use before and after only for two real states.
-- State Mason's role in normal prose.
-- Keep source handling, claim limits, and internal review notes out of public
-  copy.
-- The current case order and section order live in
-  [`../private-evidence/deepl-portfolio-current-direction.md`](../private-evidence/deepl-portfolio-current-direction.md)
-  as the current candidate. When Mason rejects the story or a reader review
-  fails, use the repository's portfolio and narrative-writing route and reopen
-  the structure.
+- `app/components/PortfolioChrome.tsx` owns shared site chrome.
+- `app/components/PortfolioProjectGrid.tsx` owns the homepage project index.
+- `app/components/ImageLightbox.tsx` owns accessible image dialogs.
+- `app/components/EvidenceSwitcher.tsx` and
+  `app/components/ImageComparison.tsx` are optional evidence utilities.
+- `app/work/<case>/` owns each case's prose, structure, components, and
+  case-specific visual treatment.
+- `app/work/portfolioData.ts` owns homepage entries.
+- `app/globals.css` and `app/styles/` own shared and case-specific styles.
 
-## Current implementation
+Shared components provide behavior, not a required case-study composition.
+Do not introduce a universal case template.
 
-- `app/components/PortfolioChrome.tsx` owns the shared header, About, and footer.
-- `app/components/PortfolioProjectGrid.tsx` owns the homepage card grid,
-  including source-faithful text previews when an image would not do the
-  story's job.
-- `app/components/ImageLightbox.tsx` owns accessible evidence dialogs.
-- `app/components/ImageComparison.tsx` presents two labelled real states.
-- `app/components/EvidenceSwitcher.tsx` presents parallel complete states.
-- `app/components/LoopingCardVideo.tsx` owns visibility-aware homepage loops.
-- `app/components/ChapterCaseElements.tsx` owns optional shared chapter-page
-  presentation primitives, not story sections or order.
-- `app/components/NamingDecision.tsx` renders the source-faithful selectable
-  Write naming fork.
-- `app/work/<case>/` owns each case's data, prose, and story order.
-- `app/work/portfolioData.ts` owns homepage cards and writing entries.
-- `app/globals.css` owns the visual system.
+## Design freedom
 
-Do not reintroduce a universal case template or a single data object that forces
-every story into the same sections. Do not add retired-route placeholders.
+Treat every substantial case as its own editorial design problem.
 
-## Visual and interaction rules
+- Let the story determine section order, reading width, media scale, rhythm,
+  comparison treatment, and interaction.
+- Existing `chapter-shell`, `chapter-page`, `story-comparison`, card, rail,
+  annotation, and split-layout constructions are not defaults. A rejected case
+  may replace them completely.
+- Use a shared component only when it improves this case. Direct, case-specific
+  markup and CSS are preferable to forcing the story through an ill-fitting
+  primitive.
+- Do not place long explanations beside complete screens merely to fill a
+  two-column layout. Avoid dense clusters of copy, labels, metrics, and media.
+- Complete screens, focused crops, typeset excerpts, tabs, sequential figures,
+  diagrams, and text-only passages are all optional. Select the smallest set
+  that makes the story clear.
+- Captions and labels should help the reader, but their location and wording are
+  not fixed.
+- A supported result can lead or end a case. Do not force it into a stat strip
+  or card.
 
-- Use <https://fredrika.dev/> as a reference for restraint, pacing, generous
-  space, and confident image handling—not for copied content or identity.
-- Never render public-facing text below 18px at any breakpoint. This includes
-  navigation, buttons, labels, metadata, captions, card text, and footer links.
-  Treat this as a blocking acceptance rule and keep its automated CSS check.
-- Render long-form body copy at 20px or larger. Keep it near 60–75 characters
-  per line and adjust line height and paragraph spacing with any size change.
-- Use neutral backgrounds, dark text, and one restrained accent.
-- Do not add tags, pills, decorative numbering, oversized display type, or
-  unnecessary controls.
-- Keep media at its natural proportions. Never use `object-fit: cover`, fixed
-  aspect ratios, or arbitrary positioning that hides evidence.
-- When a complete screen establishes the product structure, keep it as
-  contextual evidence and add focused crops or typeset excerpts when the exact
-  writing would otherwise be illegible. Do not treat complete screens and
-  detail evidence as mutually exclusive.
-- Put comparison labels above their visuals and captions below. Use one
-  consistent `Before:` / `After:` label pattern within a comparison, do not
-  repeat those labels in the captions, and keep each caption aligned to and no
-  wider than its own visual.
-- Paired visuals must sit on the same visible plane. Remove accidental baked-in
-  whitespace or correct the presentation frame when one asset creates an
-  unmatched band, height, or vertical offset; never hide evidence with cropping
-  merely to force symmetry.
-- The `chapter-shell` and `chapter-page` classes are reusable presentation
-  tools, not a visual baseline or acceptance rule. Change their measure,
-  spacing, media scale, or use in a case when its approved story and evidence
-  need something else.
-- The homepage localization-report card must show the complete report cover.
-- Every evidence image needs true dimensions, useful alternative text, and a
-  caption that tells the reader what to notice.
-- Image dialogs must trap and restore focus, lock body scroll, close with
-  Escape and the backdrop, and expose a useful label and caption.
-- Switchers must work by click, Arrow keys, Home, and End.
-- Narrow layouts must not introduce horizontal overflow.
-- Reduced-motion behavior must remain intact.
+Use the existing colors and typography as a starting point, not as a reason to
+repeat rejected layouts. Mason's current request outranks visual consistency
+with another case.
 
-## Change-to-proof table
+## Technical quality
 
-Run commands from `site/` unless stated otherwise.
+- Keep semantic landmarks and one useful page-level heading.
+- Keep keyboard access and visible focus for interactive elements.
+- Dialogs must close with Escape, manage focus, and avoid trapping the page in
+  a locked-scroll state.
+- Tabs or switchers must use appropriate semantics and keyboard behavior.
+- Use useful alternative text for informative images.
+- Preserve image meaning. Do not distort evidence or crop it in a misleading
+  way; intentional focused crops are allowed.
+- Prevent unintended horizontal overflow and overlap at narrow widths.
+- Preserve reduced-motion behavior where motion exists.
+- Use readable type, spacing, line length, and contrast. Do not enforce one
+  global pixel size for every label, caption, metadata line, and paragraph.
 
-| Change | Required proof |
-| --- | --- |
-| Site documentation only | Root `node scripts/check-repository.mjs`, then root `git diff --check -- site/` |
-| Public copy, route data, captions, or evidence assets | Production build, rendered HTML tests, repository check, then root `git diff --check` |
-| TypeScript, TSX, CSS, worker, configuration, or shared interaction | Scoped ESLint, production build, rendered HTML tests, repository check, then root `git diff --check` |
-| Publication | All implementation proof plus Mason's separate approval, exact approved commit, terminal deployment result, and anonymous route verification |
+## What tests may enforce
 
-Canonical application checks:
+Automated tests may protect:
+
+- successful route rendering and canonical metadata;
+- privacy boundaries and known false-claim prohibitions;
+- source hashes, declared image dimensions, and required asset metadata;
+- semantic and keyboard behavior of shared interactions;
+- responsive safety and reduced motion; and
+- genuine user-requested invariants that are intended to persist.
+
+Automated tests must not require exact portfolio prose, titles, metadata copy,
+metrics chosen for display, a fixed asset set, a central exhibit, section
+count or order, paragraph count, component name, case-to-case project label, or
+one visual construction. When an editorial or layout choice changes, remove
+the obsolete assertion instead of rewriting it to canonize the new taste.
+
+## Verification
+
+Run from `site/`:
 
 ```bash
 ./node_modules/.bin/eslint . --ignore-pattern dist --ignore-pattern .next
@@ -100,40 +87,16 @@ WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vinext build
 node --test tests/rendered-html.test.mjs
 ```
 
-Use browser inspection for behavior that static checks cannot prove. Do not
-create screenshots or recordings unless Mason asks for them.
+Then run from the repository root:
 
-When Mason is actively reviewing a local route, do not hand off a site change
-until the hot-reload preview is running and the changed route returns HTTP 200.
-This is local preview continuity, not publication or production deployment.
+```bash
+node scripts/check-repository.mjs
+git diff --check
+```
 
-## Narrative and visual acceptance
+Use an approved browser connection for visual and interaction checks that code
+cannot prove. If it is unavailable, report that limitation; do not replace
+editorial judgment with more static assertions.
 
-Before treating a case as editorially complete, a first-time hiring reader
-should be able to answer:
-
-- What problem or change created pressure?
-- What did Mason contribute, decide, or make clearer?
-- Why did the important decisions follow from the problem?
-- What does each selected artifact add to the story?
-- What changed, or what does the work demonstrate by the end?
-
-Every section must change the reader's understanding. Let the narrative
-determine layout, media scale, comparison treatment, and pacing; do not preserve
-a section because a component, owner document, or existing test expects it.
-Review the rendered page as a complete reading experience before or alongside
-mechanical checks.
-
-Automated tests may protect routes, privacy boundaries, asset integrity,
-accessibility contracts, exact quotations from interfaces, and narrow
-prohibitions on known false claims. They must not require a chapter count or
-order, paragraph count, word or sentence limit, number of first-person
-statements, exact portfolio prose, or generic strategy vocabulary. Passing
-tests proves conformance, not narrative or design quality. Explicit user
-rejection reopens both.
-
-## Completion
-
-Review the full diff, run the required checks, and report any unverified
-behavior plainly. Commit, push, publication, deployment, and access changes
-remain separate approval gates.
+Commit, push, publication, deployment, and access changes remain separately
+approved actions.
