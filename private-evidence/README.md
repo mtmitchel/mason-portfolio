@@ -7,14 +7,14 @@ are evidence and working records, not deployable site content.
 ## Current owners
 
 - [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md)
-  — current page titles, candidate story direction, writing rules, and homepage
-  decisions. Its pricing direction is paused and routed through the active
-  pricing-project index below.
+  — nonbinding snapshot of recent decisions and explicit corrections. It does
+  not own the portfolio slate, case structure, or layout.
 - [`claim-review.md`](claim-review.md) — factual claim ceilings; it does not own
   narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visual and text exhibits, their private sources, transformations,
-  exact locators, captions, alternative text, and central-exhibit contracts.
+  exact locators, captions, alternative text, dimensions, and hashes. It
+  records provenance rather than editorial priority.
 - [`projects/pricing-evolution/README.md`](projects/pricing-evolution/README.md)
   — active pricing-project index. It records the pause and routes to work
   status, evidence owners, source locations, and rejected or superseded drafts.
@@ -25,11 +25,11 @@ are evidence and working records, not deployable site content.
 - [`deepl-achievement-recovery/README.md`](deepl-achievement-recovery/README.md)
   — recovery package, evidence levels, scripts, and canonical career language.
 - [`deepl-project-candidate-queue.md`](deepl-project-candidate-queue.md) —
-  current DeepL UX copy and content-design ranking and implemented-route
-  reconciliation across the assistant exports, document inventory, complete
-  Figma extraction, retained direct candidate frames, current CV, achievement
-  ledger, and claim review. It does not rank marketing, editorial, or
-  other-employer work, and it does not own factual claims or the story workflow.
+  story-material database connecting DeepL UX copy and content-design
+  initiatives, strategic context, Mason's experience, Figma evidence, and
+  outcomes across the assistant exports, document inventory, CV, achievement
+  ledger, and claim review. Historical ranks and route states aid discovery;
+  they do not own work order, case selection, factual claims, or story form.
 - [`deepl-document-inventory.json`](deepl-document-inventory.json) — canonical,
   reproducible source-occurrence inventory across the ChatGPT and Claude
   exports. It keeps custody, origin, privacy, and claim coverage separate.
@@ -67,12 +67,12 @@ rejected draft final, and they do not replace narrative judgment. Targeted
 historical and reconstruction records may support chronology, intent,
 rationale, and tradeoffs when their source status remains clear.
 
-Broad source-side audits may identify candidates, but they do not become new
-portfolio owners. Reconcile and rank only DeepL UX copy and content-design
-candidates in the current queue. Marketing, editorial, and other-employer
-candidates remain unchanged until Mason authorizes a separate workflow. The
-repository-root instructions own what happens after an in-scope candidate is
-selected.
+Broad source-side audits may identify candidates and relationships, but they do
+not become new portfolio owners. Use the queue to connect relevant DeepL UX
+copy and content-design experience, Figma artifacts, strategic goals, and
+attributable outcomes into candidate story clusters. The repository-root
+instructions own portfolio-wide comparison, slate selection, and case
+construction.
 
 DeepL product, commercial, audience, and adoption context is routed through the
 `research-deepl-product-intelligence` skill named in the repository-root

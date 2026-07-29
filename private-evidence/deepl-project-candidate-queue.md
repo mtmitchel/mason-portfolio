@@ -27,15 +27,18 @@ one-row-per-case structure.
 
 ## Prioritizing story combinations
 
-When Mason has not already named the story, compare combinations rather than
-individual rows. Prefer the combination that creates the strongest total arc:
+For portfolio-slate discovery, compare combinations rather than individual
+rows. Generate candidate clusters across related initiatives and prefer the
+combination that creates the strongest total arc:
 
-- a meaningful product or organizational stake;
+- a documented company or team goal, commercial priority, or meaningful
+  product stake;
 - a clear causal timeline rather than a list of tickets;
 - a defensible account of Mason's contribution and collaborators;
-- complementary artifacts that show context, decisions, and change without
-  repeating one another; and
-- a supported result or other meaningful ending.
+- complementary existing Figma visuals or other artifacts that show context,
+  decisions, and change without repeating one another;
+- an attributable data-driven result at the correct scope when supported; and
+- a distinct hiring signal that strengthens the complete portfolio slate.
 
 Do not add these dimensions into a mechanical total. One excellent artifact
 combination can outweigh several high-ranked individual candidates. An
@@ -335,6 +338,8 @@ No additional qualified candidate emerged from the July 28 ZIP.
 - [`deepl-figma-evidence-map.md`](deepl-figma-evidence-map.md)
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json)
 
-This queue owns candidate discipline, score, order, coverage, route
-reconciliation, and disposition. The repository-root workflow owns story
-proposals and writing.
+This queue preserves candidate records, historical scores, source coverage,
+relationships, and implemented-route history. It does not own work order,
+portfolio selection, case boundaries, artifact combinations, or story form.
+The repository-root workflow owns portfolio-wide comparison and case
+construction.

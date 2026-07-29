@@ -119,15 +119,6 @@ test("canonical routes remain indexable", async () => {
   }
 });
 
-test("checkout uses the requested compact Next control", async () => {
-  const html = await htmlFor("/work/checkout");
-  const navigation = html.match(/<nav class="next-project(?: [^"]*)?"[\s\S]*?<\/nav>/);
-  assert.ok(navigation, "checkout should have next navigation");
-  const link = navigation[0].match(/<a href="[^"]+">([\s\S]*?)<\/a>/);
-  assert.ok(link, "checkout should link to the next route");
-  assert.equal(visibleText(link[1].replace(/<b[\s\S]*?<\/b>/g, "")), "Next");
-});
-
 test("pricing copy keeps supported lifecycle separate from unsupported ownership and outcome claims", async () => {
   const html = await htmlFor("/work/pricing-evolution");
   const data = await readFile(new URL("app/work/pricing-evolution/pricingEvolutionData.ts", root), "utf8");
@@ -187,6 +178,27 @@ test("DeepL cases avoid known unsupported ownership, lifecycle and outcome claim
     html,
     /Everything DeepL has named since|organization-wide adoption|sole owner|single-handedly|support volume|this exact (?:file|artifact) shipped/i,
   );
+});
+
+test("aggregate experiment results remain attributed above the individual prompt or screen", async () => {
+  const routes = ["/", ...selectedRoutes];
+  const aggregateMetric = /12%|seven-figure(?:\s+ARR|\s+annual recurring revenue)?/i;
+  const aggregateScope = new RegExp([
+    String.raw`\b(?:across|within|from|for)\s+(?:the\s+)?`,
+    String.raw`(?:(?:wider|broader|overall|combined)\s+)?`,
+    String.raw`(?:experiments?|tests?)(?:\s+(?:wave|program|programme|portfolio))?\b`,
+    String.raw`|\b(?:series|set|portfolio|group)\s+of\s+(?:experiments|tests)\b`,
+  ].join(""), "i");
+
+  for (const route of routes) {
+    const text = visibleText(await htmlFor(route));
+    if (!aggregateMetric.test(text)) continue;
+    assert.match(
+      text,
+      aggregateScope,
+      `${route} must attribute aggregate metrics to multiple or wider experiments`,
+    );
+  }
 });
 
 test("DeepL UX case pages contain no private audit language or fake transformations", async () => {

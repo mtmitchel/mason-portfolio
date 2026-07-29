@@ -11,21 +11,19 @@ work. The deployable application lives in [`site/`](site/).
 - [`site/README.md`](site/README.md) — implemented routes, application structure,
   local commands, and publication state.
 - [`private-evidence/deepl-project-candidate-queue.md`](private-evidence/deepl-project-candidate-queue.md)
-  — DeepL UX copy and content-design ranking across the assistant exports,
-  document inventory, Figma evidence, CV, and achievement records. It owns the
-  in-scope work order and implemented, frozen, or represented dispositions;
-  marketing, editorial, and other-employer work stay outside it.
+  — story-material database linking DeepL initiatives, Mason's experience,
+  Figma evidence, strategic context, and outcomes. Historical ranks and route
+  states help discovery but do not own work order or case selection.
 - [`private-evidence/deepl-document-inventory.json`](private-evidence/deepl-document-inventory.json)
   — reproducible source-occurrence inventory across the ChatGPT and Claude
   exports.
 - [`private-evidence/deepl-portfolio-current-direction.md`](private-evidence/deepl-portfolio-current-direction.md)
-  — current page titles, candidate story direction, writing rules, and homepage
-  decisions.
+  — nonbinding snapshot of recent decisions and explicit corrections.
 - [`private-evidence/claim-review.md`](private-evidence/claim-review.md) —
   factual limits for every case.
 - [`private-evidence/portfolio-asset-manifest.json`](private-evidence/portfolio-asset-manifest.json)
-  — sources, transformations, exact locators, captions, alternative text, and
-  central-exhibit contracts for selected visual and text evidence.
+  — provenance, transformations, exact locators, captions, alternative text,
+  and dimensions for selected visual and text evidence.
 - [`private-evidence/README.md`](private-evidence/README.md) — private evidence
   and source-material index.
 - [`archive/README.md`](archive/README.md) — index of retired code, old reviews,
@@ -33,11 +31,24 @@ work. The deployable application lives in [`site/`](site/).
 
 ## Portfolio content workflow
 
-![Three-stage portfolio-content workflow: rank the candidates, show Mason the story, then write and review the rendered page.](docs/portfolio-content-workflow.png)
+The target is the strongest overall portfolio slate, not preservation of the
+current routes. The default path is:
 
-This image is a quick reference, not a second policy owner. The repository-root
-[`AGENTS.md`](AGENTS.md) owns the workflow; the candidate queue owns ranking and
-work status.
+1. Search across DeepL experience, Figma evidence, documented company or team
+   goals, and attributable outcomes.
+2. Form several causally coherent story clusters, including cross-row
+   combinations when they make one stronger case.
+3. Compare the complete clusters for hiring value, Mason's contribution,
+   visual proof, strategic stakes, attributable results, factual
+   defensibility, and distinctness from the rest of the slate.
+4. Select roughly five strong cases, then build a causal skeleton and
+   case-specific visual form for each one.
+5. Implement, verify material claims and behavior, run one independent reader
+   review, apply at most one focused repair, and stop.
+
+[`AGENTS.md`](AGENTS.md) owns the detailed workflow and skill timing. The queue,
+current-direction notes, manifest, and existing routes are inputs to judgment,
+not approval gates or templates.
 
 ## Repository layout
 

@@ -1,4 +1,3 @@
-import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import {
@@ -568,26 +567,6 @@ for (const file of appSources) {
 }
 
 const publicWorkRoot = path.join(root, "site/public/work");
-const expectedPublicDirectories = [
-  "account-team-security",
-  "checkout",
-  "home-covers",
-  "pricing-evolution",
-  "report-campaign",
-  "upgrade-prompts",
-  "voice-product",
-];
-const publicDirectories = (await readdir(publicWorkRoot, { withFileTypes: true }))
-  .filter((entry) => entry.isDirectory())
-  .map((entry) => entry.name)
-  .sort();
-
-assert.deepEqual(
-  publicDirectories,
-  expectedPublicDirectories,
-  "site/public/work should contain only current case assets and homepage covers",
-);
-
 const publicWorkFiles = await walk(publicWorkRoot);
 
 for (const file of publicWorkFiles) {
@@ -601,33 +580,6 @@ for (const file of publicWorkFiles) {
 for (const relative of referencedPublicPaths) {
   record(await exists(path.join(root, relative)), `live application references a missing public asset: ${relative}`);
 }
-
-const reportSource = path.join(root, "site/app/work/portfolioData.ts");
-const gridSource = path.join(root, "site/app/components/PortfolioProjectGrid.tsx");
-const cssSources = await walk(
-  path.join(root, "site/app"),
-  (file) => path.extname(file) === ".css",
-);
-const [portfolioData, projectGrid, cssFiles] = await Promise.all([
-  readFile(reportSource, "utf8"),
-  readFile(gridSource, "utf8"),
-  Promise.all(cssSources.map((file) => readFile(file, "utf8"))),
-]);
-const css = cssFiles.join("\n");
-
-record(
-  /reportCover,[\s\S]*imageDisplay:\s*"full-document"/.test(portfolioData),
-  "localization-report card must opt into full-document display",
-);
-record(
-  projectGrid.includes('project.imageDisplay === "full-document"'),
-  "project grid must apply the full-document modifier",
-);
-record(
-  /\.project-entry-image--full-document img\s*\{[^}]*height:\s*auto !important;[^}]*object-fit:\s*contain;/s.test(css),
-  "full-document CSS must preserve the entire image",
-);
-record(!/object-fit\s*:\s*cover/.test(css), "site CSS must not crop evidence with object-fit: cover");
 
 const tracked = execFileSync("git", ["ls-files", "-z"], { cwd: root })
   .toString()

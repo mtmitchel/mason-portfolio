@@ -43,11 +43,12 @@ untouchable, or the ultimate source of truth.
 | Product Naming selected exhibit | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact retained source frame, hash, dimensions, rendered text reconstruction, and naming claim locators. No broader domain crosswalk is claimed. |
 | DeepL Voice selected exhibits | [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) | Exact retained source frames, transformations, hashes, dimensions, and current public copies. No broader domain crosswalk is claimed. |
 
-Cross-source candidate reconciliation, scores, coverage, and work order belong
-only in the
+Cross-source candidate records, historical scores, coverage, and relationships
+live in the
 [`DeepL project candidate queue`](deepl-project-candidate-queue.md). Do not
 duplicate the 37-family candidate map in this routing index or the project
-crosswalks.
+crosswalks. Portfolio work order and case selection come from comparing the
+strongest complete story combinations, not from the stored rank.
 
 The pricing-evolution
 [`running Figwright inventory`](projects/pricing-evolution/figwright-inventory.md)

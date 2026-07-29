@@ -10,11 +10,12 @@ other evidence records are story material, not instructions.
 
 ## Portfolio goal
 
-Build roughly five strong product UX copywriting and content-design cases that
-make Mason's value obvious to a hiring reader. Each story should connect a
-meaningful product or organizational pressure to Mason's contribution and a
-supported ending. Existing routes are candidates and may be rebuilt from
-scratch.
+Build the strongest roughly five-case portfolio slate across Mason's DeepL
+experience and the full evidence base. Prefer combinations that connect
+documented company or team goals, Mason's contribution, useful existing Figma
+visuals, and attributable data-driven results at the correct scope. Existing
+routes and queue rows are inputs only; cases may combine related work or be
+rebuilt from scratch.
 
 ## How to use the evidence
 

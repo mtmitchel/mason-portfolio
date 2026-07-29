@@ -11,16 +11,22 @@ not exact sciences, and passing checks does not make a case good. Mason's
 explicit criticism or rejection reopens the thesis, causal framing, structure,
 writing, evidence selection, and layout.
 
-Aim for roughly five strong UX copywriting and content-design cases. Each case
-should help a hiring reader understand:
+The goal is the strongest overall portfolio site: roughly five convincing UX
+copywriting and content-design cases selected across Mason's DeepL experience
+and the full available evidence base. Prefer case combinations that connect:
 
-- the product or organizational pressure;
-- Mason's role and collaborators;
-- the decisions and judgment that mattered;
-- the evidence that makes those decisions concrete; and
-- the supported result or other meaningful ending.
+- a documented company or team goal, commercial priority, or meaningful product
+  pressure;
+- Mason's role, collaborators, decisions, and judgment;
+- existing Figma visuals or other concrete artifacts that make the work
+  understandable; and
+- an attributable data-driven result at the correct team, program, experiment,
+  or campaign scope when one is supported.
 
-Do not turn those questions into mandatory public sections.
+Not every strong case will have every element, and a metric must never be
+invented or attached to one person or artifact without support. Judge the
+complete portfolio slate and each complete story, not isolated queue rows or
+screens. Do not turn these criteria into mandatory public sections.
 
 ## Evidence is a story library, not a workflow engine
 
@@ -39,7 +45,9 @@ Do not turn those questions into mandatory public sections.
   `required_tokens`, and route fields are inventory metadata, not acceptance
   criteria for copy, structure, or visual prominence.
 - The document inventory, achievement recovery, Figma crosswalks, and source
-  exports are lookup sources. Read only what the named story needs.
+  exports supply the relationships needed to discover strong story
+  combinations. Search them selectively from relevant queue leads rather than
+  reading the entire repository without a hypothesis.
 - `archive/` is history, never current direction.
 
 If important context is clearly missing from the active notes, search the
@@ -47,27 +55,32 @@ targeted evidence library or retained export material. Do not assume the
 current summary is exhaustive and do not flatten a story around whatever was
 already documented.
 
-## How to construct a case
+## Suggested slate-to-case workflow
 
-For a substantial case or rebuild, reason through a private skeleton before
-writing or laying out the page:
+Use this default for a substantial portfolio build or case-selection task. It
+guides discovery; it is not an approval pipeline or a public template.
 
-1. Put the events in causal order: organizational goal or product pressure,
-   team initiative, relevant experiments or workstreams, Mason's contribution,
-   important decisions, and result.
-2. Search the queue and targeted evidence for related material. Evaluate
-   combinations in totality. Prefer the set that creates the most complete,
-   coherent story—not the set with the highest-ranked individual row or the
-   most screenshots.
-3. Give every selected artifact a narrative job such as context, decision,
-   contrast, sequence, proof, consequence, or result. Leave it out when it
-   repeats another artifact or forces explanation the story does not need.
-4. Choose the narrative structure and visual grammar together. A case may be
-   chronological, thematic, experimental, comparative, tabbed, image-led,
-   text-led, or something else supported by the material.
-5. When Mason asked for implementation, implement the strongest supported
-   direction. Do not insert a separate proposal or approval gate unless he
-   requested one or the subject itself remains genuinely undecided.
+1. Start with the portfolio slate, not the existing routes. Use the queue to
+   find promising relationships among strategic goals, initiatives,
+   experiments, Mason's contributions, Figma artifacts, and outcomes.
+2. Form several candidate story clusters. Combine rows or workstreams when
+   their causal relationship creates one stronger, interview-defensible story;
+   do not combine unrelated work merely to make a case larger.
+3. Compare complete clusters in totality: hiring value, strategic stakes,
+   clarity of Mason's contribution, strength and complementarity of the
+   visuals, attributable result, factual defensibility, and distinctness from
+   the rest of the slate. Do not turn these factors into a mechanical score.
+4. Select the strongest roughly five-case slate. An existing route, historical
+   rank, status, or current asset selection does not reserve a place.
+5. For each selected case, build a private causal skeleton: goal or pressure,
+   team response, relevant initiatives or experiments, Mason's contribution
+   and decisions, and the supported result or other meaningful ending.
+6. Give each artifact a narrative job such as context, decision, contrast,
+   sequence, proof, consequence, or result. Then choose the narrative structure
+   and visual grammar together.
+7. When implementation is authorized, build the strongest supported direction.
+   Do not insert a separate proposal or approval gate unless Mason requested
+   one or a material decision genuinely cannot be resolved from the evidence.
 
 Use one independent hiring-reader review and at most one focused repair. This
 limit prevents hypothetical perfection. It does not make the first structure
@@ -75,17 +88,27 @@ or reviewer preference binding after Mason rejects it.
 
 ## Skill routing
 
-- `build-content-design-portfolio` is the default skill for portfolio
-  selection, narrative, evidence use, and reader review.
+- `build-content-design-portfolio` owns portfolio-wide discovery, story
+  clustering, slate selection, artifact combinations, case writing, and the
+  hiring-reader review.
+- For substantial slate selection or case architecture, use the
+  `sequential-thinking` MCP in two passes: first for the slate or causal
+  skeleton and evidence relationships, then again to turn the selected
+  combination into a full narrative and visual plan.
 - Do not automatically stack `narrative-writer` on top of it. Use
   `narrative-writer` only when Mason explicitly requests it or the task is a
-  separate deep narrative-architecture pass.
-- Use `frontend-design` for implementation or visual redesign. In this
-  repository, its normal preference for preserving an existing design system
-  does not make rejected case layouts or shared case components authoritative.
-- Use `research-deepl-product-intelligence` only when a volatile or externally
-  verifiable DeepL product fact is material. Local evidence and Mason's account
-  govern his role, team context, contribution, and outcomes.
+  genuinely separate deep narrative-architecture repair.
+- Use `research-deepl-product-intelligence` during discovery or draft
+  verification only when product relationships, terminology, commercial
+  history, audience, adoption, or current product state need external context.
+  Local evidence and Mason's account govern company or team goals, his role,
+  contribution, and attributable project outcomes.
+- Use `frontend-design` only after the selected story cluster, causal skeleton,
+  and artifact jobs are clear. Its preference for preserving an existing design
+  system does not make rejected case layouts or shared components authoritative.
+- After implementation, use the approved browser-control route for real
+  desktop, mobile, overflow, and keyboard inspection. Static checks do not
+  replace that visual review.
 
 ## Narrative and evidence boundaries
 

@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — 2026-07-29
+
+### Portfolio process
+
+- Reframed the candidate queue as a story-material database for discovering
+  relationships among DeepL experience, Figma artifacts, strategic goals, and
+  attributable outcomes.
+- Replaced the old rank-and-approval pipeline with a suggested slate-to-case
+  workflow: compare complete story combinations, select the strongest overall
+  portfolio slate, then develop each case's narrative and visual form together.
+- Kept one independent reader review and at most one focused repair while
+  removing automated checks that froze editorial or layout choices.
+
 ## Unreleased — 2026-07-24
 
 ### Changed
