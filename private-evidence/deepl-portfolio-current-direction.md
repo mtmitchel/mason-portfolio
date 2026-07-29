@@ -1,21 +1,77 @@
 # Current portfolio direction
 
-**Updated:** 2026-07-28
+**Updated:** 2026-07-29
 **Status:** Current decision owner
 
 This file records the current public structure. The
 [full previous direction](../archive/research/deepl-portfolio-direction-full-2026-07-24.md)
 is preserved for history and does not override this file.
 
+## Portfolio-wide status and case-study standard
+
+Mason is dissatisfied with most of the current portfolio case content. Existing
+routes, headings, narratives, assets, and tests are working candidates, not
+approved foundations. A useful general topic may survive while its current
+angle, structure, prose, visual selection, and ending are rebuilt from scratch.
+Do not defend or lightly polish an existing route merely because it is
+implemented.
+
+The working target is roughly five strong product UX copywriting and content
+design cases. Each one must give a hiring manager a convincing reason to hire
+Mason:
+
+- start with a meaningful product or organizational stake;
+- show how the work could help people understand, buy, adopt, use, expand, or
+  renew the product, or help the organization create and capture value;
+- make Mason's role, collaboration, judgment, and specific writing or content
+  decisions easy to identify;
+- use commercial results as the hook when they exist, while attributing them to
+  the correct experiment, program, or team;
+- use the body and visible artifacts to prove the content-design judgment behind
+  the result; and
+- end with what changed, what held, or what capability the work demonstrates.
+
+The candidate queue is a framework and parts inventory. It is never the public
+outline. Begin with the larger product problem, tension, decision, or
+organizational consequence, then select only the queue rows, existing route
+material, screenshots, excerpts, and metrics that help tell that story. A case
+may combine compatible candidates or ignore the queue's rank. It must not
+become:
+
+- a ticket rewritten as a chronology;
+- one candidate row stretched into a full case because it has evidence;
+- a tour of every screen in an export;
+- a catalog of marginal copy improvements;
+- a tools or process story with no writing payoff;
+- a mega-case that combines unrelated initiatives merely to look substantial;
+  or
+- an evidence defense whose caveats become more memorable than Mason's work.
+
+A bigger picture is not automatically a bigger scope. It is one clear,
+consequential subject that makes the selected details matter. The story should
+be expressible in one sentence covering the starting condition, the pressure,
+Mason's consequential move, and the supported ending. If compatible evidence
+from several candidates strengthens that sentence, use it. If an artifact does
+not advance it, leave the artifact out even when it is attractive or well
+documented.
+
+Choose the story before choosing the visuals. Then select complete screens,
+flows, focused crops, typeset copy, or metrics for the job each one needs to do.
+Do not let the visuals available in the queue determine the narrative, and do
+not reject a strong story only because every step lacks a matching screenshot.
+Work through one case at a time so its subject, evidence, writing, and layout
+can be judged as one reader experience.
+
 ## Homepage and About
 
-The homepage contains eight cards in this order:
+The current homepage implementation contains eight cards in this order. This is
+not the final approved portfolio composition:
 
 1. **Upgrade prompts across Translator and Write** — `/work/upgrade-prompts`
 2. **Making the more expensive plan explain itself** —
-   `/work/pricing-evolution` (frozen, preserved implementation; the displayed
-   title and story are rejected rather than approved direction)
-3. **Checkout across four purchase states** — `/work/checkout`
+   `/work/pricing-evolution` (preserved implementation; the displayed title and
+   story are rejected rather than approved direction)
+3. **How shortening DeepL's checkout flow added €2.4M ARR** — `/work/checkout`
 4. **Account recovery and team administration** — `/work/account-team-security`
 5. **Turning localization research into a multi-format campaign** — `/work/report-campaign`
 6. **Executive ghostwriting on global mobility** — `/work/localyze-executive-ghostwriting`
@@ -45,13 +101,30 @@ About stays at two short paragraphs:
 ## Current writing direction
 
 - Open with the complete story promised by the title.
+- Apply a direct “so what?” test: show how Mason's knowledge work helped the
+  product become easier to understand, buy, deploy, use, expand, or retain, or
+  helped the organization pursue a meaningful commercial or product goal.
+  State the supported connection without pretending one person or string caused
+  the full business result.
+- Start from the consequential product or organizational stake, then use queue
+  rows, tickets, screens, and metrics as story material. Do not turn a candidate
+  row, Jira ticket, chronology, or available image set into the public outline.
+- Treat spelling corrections, terminology cleanup, and sentence-level polish
+  as supporting evidence of craft unless they sit inside a larger decision with
+  a clear product or organizational consequence.
 - State Mason's role in normal prose.
 - Name visible problems instead of using generic problem statements.
 - Put each claim beside the image or excerpt that supports it.
 - Use before and after only for two real states.
 - Keep one idea per paragraph.
-- Use captions to tell the reader what to notice.
+- Use captions to tell the reader what to notice and why it matters; do not
+  restate labels or describe only what is already obvious.
+- Use bold and italics sparingly when they connect the prose to screen names,
+  navigation, actions, or a genuine conceptual turn.
 - Omit unsupported claims without displaying a disclaimer.
+- Work to an honest, interview-defensible standard. Do not demand courtroom
+  proof, an exact screenshot-to-variant match, or outside certification of
+  Mason's participation when the public claim does not depend on that identity.
 - Keep source handling, crop notes, Figma variables, claim review, and
   repository status out of public copy.
 - Let each case use its own story shape. Shared code handles presentation, not
@@ -80,35 +153,58 @@ their supported lifecycle.
 
 ### Pricing evolution
 
-**Status, 2026-07-27:** Frozen. Mason rejected the current Pricing direction.
-The implemented route and homepage card remain preserved as rejected candidate
-state; their displayed title, format, narrative, and evidence selection are not
-approved direction. Do not resume evidence reconstruction, story work, or site
-work unless Mason explicitly reopens Pricing.
+**Status, 2026-07-28:** Drafts rejected; subject open. On 2026-07-27 Mason
+rejected the Step 23 narrative, the Step 24 verdict, and the attempted repair.
+He rejected those drafts, not the subject. A later edit recorded this as a
+subject freeze that only he could lift; that was wrong and is corrected here.
 
-The current route and private candidate records remain preserved but are not a
-current candidate or rewrite source. The
-[`candidate queue`](deepl-project-candidate-queue.md) owns the freeze and
-disposition; the
-[`project index`](projects/pricing-evolution/README.md) routes the preserved
-evidence without authorizing continuation.
+The implemented route and homepage card stay preserved as rejected candidate
+state. Their displayed title, format, narrative, and evidence selection are not
+approved direction, and neither they nor the archived drafts may serve as a
+rewrite source. A new Pricing story needs an approved proposal before any prose
+or route change.
 
-### Checkout across four purchase states
+The [`candidate queue`](deepl-project-candidate-queue.md) owns route state and
+disposition; the [`project index`](projects/pricing-evolution/README.md) routes
+the preserved evidence.
 
-1. Carry the trial into account creation.
-2. Keep a two-product offer visible at commitment.
-3. Scale the order to a team.
-4. Change timing and consent when no trial applies.
-5. Show the trial FAQ as a separate checkout exploration unless its direct
-   relationship to the four states is confirmed.
-6. Explore the complete purchase states.
-7. End with observable differences.
+### How shortening DeepL's checkout flow added €2.4M ARR
 
-The crop-led story comes first. The accessible switcher follows it. Describe
-the selected screens as working states until final-string and launch status are
-confirmed. Add a project timeline or connect the FAQ only when the evidence
-supports them. Omit a completion, abandonment, or support-contact result unless
-a source supports it.
+Open with the commercial result, Mason's role on the Monetization team, and his
+partnership with the product designer. The body must then prove the
+content-design judgment that made the shorter flow viable.
+
+1. Establish the pressure: removing Review made checkout faster but transferred
+   its explanation of price, trial, payment, consent, and commitment into
+   Details.
+2. Show the complete old Details and Review screens as structural context. Then
+   show the complete consolidated Details screen and explain what moved
+   forward, changed form, or was genuinely removed.
+3. Make the two-payment-moment decision concrete: €0 due today stays primary,
+   while the €299.88 annual price remains visible as the later commitment in a
+   representative working order summary.
+4. Show the consent-and-action change twice for two different reader needs:
+   source-faithful typeset text makes Mason's writing legible, while focused
+   interface crops show how the same copy functioned in the product.
+5. End by connecting the shorter flow back to the experiment: 3.02% more Pro
+   purchases, 3.07% more 35-day net subscriptions, and about €2.4M in
+   incremental ARR.
+
+Mason approved the title and this revised story direction on 2026-07-29, then
+judged the implemented route **better, but not good**. It remains an advanced
+draft, not an approved final case. Mechanical desktop, mobile, overflow,
+lightbox, and browser checks passed, but they do not establish reader value or
+qualitative acceptance.
+
+The next review begins with additional context Mason will provide in a new
+chat. Receive that context before choosing the next semantic revision. The
+current headings, transitions, captions, section order, layout, and evidence
+selection remain open. Keep the complete before and after screens: Mason
+explicitly rejected the recommendation to replace them with crops alone.
+Focused crops and typeset comparisons may supplement the complete screens when
+they make the writing legible. The selected frames are representative working
+states from different iterations, not one continuous customer session or the
+exact tested or winning variant.
 
 ### Account recovery and team administration
 

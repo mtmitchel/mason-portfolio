@@ -1,8 +1,8 @@
 # Pricing evolution recovery and portfolio evidence work plan
 
-Status: Frozen at Mason's direction. Steps 1–28 are preserved completed history.
-Steps 29–30 and all new Pricing evidence, proposal, narrative, Figma, and site
-work are inactive unless Mason explicitly reopens the subject.
+Status: Closed as a plan. Steps 1–28 are preserved completed history and
+Steps 29–30 were never run. The Pricing subject is open, but a new story starts
+from a fresh approved direction, not by resuming these steps.
 
 Last updated: 2026-07-27
 
@@ -41,9 +41,9 @@ changed order, or became blocked:
 
 ## Current boundary
 
-- Pricing is frozen. The rejected pricing pages, private drafts, and rendered
-  `/work/pricing-evolution` route remain preserved but are not a current
-  candidate or active review assignment.
+- The Pricing route is frozen in place; the subject is not. The rejected
+  pricing pages, private drafts, and rendered `/work/pricing-evolution` route
+  remain preserved and may not be used as rewrite sources.
 - The paused pricing candidate is preserved on
   `pricing-case-presentation-wip` at `05df5d0`. Evidence recovery proceeds on
   `pricing-evidence-recovery` without changing that candidate or its linked
@@ -484,8 +484,8 @@ private provenance notes to understand it.
  A fresh Claude Opus 5 High session consolidated those repairs before the
  route was implemented. Mason now receives the rendered route as the single
  review surface.
-- [ ] 29. **Deferred while frozen.** Update direction or story records only if
-  Mason explicitly reopens Pricing and a newly approved direction warrants it.
+- [ ] 29. **Not run.** Update direction or story records only when a newly
+  approved Pricing direction warrants it.
 - [ ] 30. **Inactive as a work item.** Commit, push, deployment, publication,
   Figma writes, and destructive cleanup remain separate approval-gated phases.
 

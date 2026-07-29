@@ -61,7 +61,7 @@ are the primary supplemental sources. Their synthesis is
   discovery source across 23 possible projects.
 - [`../deepl-project-candidate-queue.md`](../deepl-project-candidate-queue.md) —
   current discipline-tagged source reconciliation, ranking, implemented-route
-  state, coverage, and freeze owner.
+  state, coverage, and disposition owner.
 - [`../deepl-document-inventory.json`](../deepl-document-inventory.json) —
   canonical source-occurrence inventory across the ChatGPT and Claude exports.
   It separates custody, origin, privacy, and the four claim dimensions.

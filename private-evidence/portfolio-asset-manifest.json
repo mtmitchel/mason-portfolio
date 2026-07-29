@@ -413,130 +413,108 @@
       "id": "DEEPL-SUBSCRIPTION-CHECKOUT",
       "project_id": "DEEPL-SUBSCRIPTION-CHECKOUT",
       "central_exhibit": {
-        "id": "checkout-four-purchase-states",
+        "id": "checkout-simplification-before-after",
         "route": "/work/checkout",
         "kind": "manifest-image-set",
         "public_refs": [
-          "site/public/work/checkout/trial-sign-up-detail.png",
-          "site/public/work/checkout/bundle-checkout-detail.png",
-          "site/public/work/checkout/team-purchase-detail.png",
-          "site/public/work/checkout/no-trial-checkout-detail.png"
+          "site/public/work/checkout/details-before-full.png",
+          "site/public/work/checkout/review-before-full.png",
+          "site/public/work/checkout/details-after-full.png",
+          "site/public/work/checkout/review-consent-action.png",
+          "site/public/work/checkout/details-consent-action.png",
+          "site/public/work/checkout/due-today-summary.png"
         ],
-        "relationship": "Four parallel purchase conditions with distinct product, seat, timing, consent, and action details."
+        "render_ref": "site/app/work/checkout/CheckoutCase.tsx",
+        "required_tokens": [
+          "Buy now",
+          "Begin subscription",
+          "No payment until end of trial"
+        ],
+        "relationship": "Complete working screens establish how the purchase moved from separate Details and Review steps into one consolidated Details screen. Source-faithful text and screenshot comparisons show the consent-and-action change, while the order-summary export shows the immediate-versus-later charge hierarchy."
       },
-      "source_path": "private-evidence/source-exports/figma/checkout",
+      "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "Keep all four complete frames for the accessible switcher. The crop-led story uses 1200x1220+240+270 for sign-up and the same 2500x1500+300+140 crop for the bundle, team and no-trial checkout frames.",
-      "caption": "Captions identify the condition that changes each purchase promise: sign-up continuity, product bundle, seat count or trial eligibility.",
-      "text_alternative": "Describe the product combination, seat count, trial state and payment timing visible in each frame.",
+      "crop_notes": "The route uses three unchanged complete working screens as structural overviews, plus two source-faithful crops of the consent-and-action regions. The consent copy is also transcribed as accessible text. The due-today component is an unchanged flattened export.",
+      "caption": "Captions explain how the old flow divided the decision, how the consolidated Details screen carried it, how consent and the final action changed, and how immediate and later charges were separated.",
+      "text_alternative": "Describe the complete old Details and Review screens, the consolidated two-step Details screen, the change from checkbox consent to consent tied to the subscription action, the trial reassurance, and the immediate-versus-later charge hierarchy.",
       "export_ready": false,
       "files": [
         {
-          "path": "start-my-free-trial.png",
-          "dimensions": "3024x1800",
-          "sha256": "c14505a4e602089cd1a6fb7813f210ad75068f328a8e4e641ed55737907e98cf",
-          "public_path": "site/public/work/checkout/start-my-free-trial.png",
-          "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
-        },
-        {
-          "path": "bundle-checkout.png",
-          "dimensions": "3024x2864",
-          "sha256": "37c79d9f65411ea1601fa54f3ff01f5f063642013006af82f8ae19f21da2e751",
-          "public_path": "site/public/work/checkout/bundle-checkout.png",
-          "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
-        },
-        {
-          "path": "team-license-checkout.png",
-          "dimensions": "3024x2864",
-          "sha256": "4a7b8812d96329817b166896026c16aff1f5e4dcd2d3921cf386ea17345886de",
-          "public_path": "site/public/work/checkout/team-license-checkout.png",
-          "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
-        },
-        {
-          "path": "no-trial-ultimate-checkout.png",
-          "dimensions": "3024x2738",
-          "sha256": "387b33b914237dfab4fa85c941803fef4b7dafff104ca5089c40d274d2fd9f66",
-          "public_path": "site/public/work/checkout/no-trial-ultimate-checkout.png",
-          "source_status": "missing",
-          "source_notes": "No independent source export is retained; the tracked public file is the only known repository copy."
-        },
-        {
-          "path": "checkout/trial-sign-up-detail.png",
-          "public_path": "site/public/work/checkout/trial-sign-up-detail.png",
-          "source_status": "derived",
-          "source_path": "site/public/work/checkout/start-my-free-trial.png",
-          "source_sha256": "c14505a4e602089cd1a6fb7813f210ad75068f328a8e4e641ed55737907e98cf",
-          "crop": "1200x1220+240+270",
-          "dimensions": "1200x1220",
-          "caption": "Repeat the selected 30-day trial in the page heading while keeping account creation as the button action.",
-          "text_alternative": "Detail of DeepL account creation showing the 30-day trial heading, form, terms and Create account action.",
-          "sha256": "7995eea15e60aee75ac709f00a3ec467293730975cf15c1909eef6531d7172ef"
-        },
-        {
-          "path": "checkout/bundle-checkout-detail.png",
-          "public_path": "site/public/work/checkout/bundle-checkout-detail.png",
-          "source_status": "derived",
-          "source_path": "site/public/work/checkout/bundle-checkout.png",
-          "source_sha256": "37c79d9f65411ea1601fa54f3ff01f5f063642013006af82f8ae19f21da2e751",
-          "crop": "2500x1500+300+140",
-          "dimensions": "2500x1500",
-          "caption": "Keep both products and one user visible beside €0 due today, the later charge and Begin subscription.",
-          "text_alternative": "Detail of a DeepL bundle checkout showing Translator and Write, one user, trial timing and the order summary.",
-          "sha256": "85e2e1c47ad3e83dbed02eb1974eb39d590800a62d889cb3506b1ff5f91b1c48"
-        },
-        {
-          "path": "checkout/team-purchase-detail.png",
-          "public_path": "site/public/work/checkout/team-purchase-detail.png",
-          "source_status": "derived",
-          "source_path": "site/public/work/checkout/team-license-checkout.png",
-          "source_sha256": "4a7b8812d96329817b166896026c16aff1f5e4dcd2d3921cf386ea17345886de",
-          "crop": "2500x1500+300+140",
-          "dimensions": "2500x1500",
-          "caption": "Repeat 20 users in the selector and order summary, then update price, savings and allowances to match.",
-          "text_alternative": "Detail of a DeepL team checkout showing twenty users, price, savings and included allowances.",
-          "sha256": "ba933b41527bed027075cc02e53dc7c9d64becf38fee4cb85984336db4899f86"
-        },
-        {
-          "path": "checkout/no-trial-checkout-detail.png",
-          "public_path": "site/public/work/checkout/no-trial-checkout-detail.png",
-          "source_status": "derived",
-          "source_path": "site/public/work/checkout/no-trial-ultimate-checkout.png",
-          "source_sha256": "387b33b914237dfab4fa85c941803fef4b7dafff104ca5089c40d274d2fd9f66",
-          "crop": "2500x1500+300+140",
-          "dimensions": "2500x1500",
-          "caption": "Remove the trial promise, show the amount due today and add the immediate-start acknowledgement before purchase.",
-          "text_alternative": "Detail of a DeepL no-trial checkout showing the immediate charge and withdrawal acknowledgement.",
-          "sha256": "d3490c80cc8e80b46ed5fe5d28e57e50cd1ad579ee62ea41593805ca8b418b83"
-        },
-        {
-          "path": "checkout/trial-faq-collapsed.png",
-          "public_path": "site/public/work/checkout/trial-faq-collapsed.png",
-          "artifact_genesis": "crop_of_recovered_historical_export",
+          "path": "checkout/details-before-full.png",
+          "public_path": "site/public/work/checkout/details-before-full.png",
+          "artifact_genesis": "recovered_historical_export",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/checkout/source-exports/trial-faq-collapsed-source.png",
-          "source_sha256": "4810c9042cca1ca19fa97492de58f73ed93f34e456bd7072b5aeea5ced762b38",
-          "crop": "1080x1590+1660+720",
-          "dimensions": "1080x1590",
-          "caption": "Three questions surface the uncertainties most likely to block a trial decision without competing with the order summary.",
-          "text_alternative": "DeepL trial checkout summary with collapsed questions about cancellation, charge timing and included Pro features.",
-          "sha256": "bf04b7a939f56606a3ffcef2b14dbce1b78a1e78509d7f1c65dc500fbcf68433"
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3735-14327.png",
+          "source_sha256": "103e7c58b801670a7689397962fca8096232e4990d719b939094ef2a43eff376",
+          "dimensions": "2880x2608",
+          "caption": "Customers chose billing and entered payment here, but the progress indicator still sent them onward before they could subscribe.",
+          "text_alternative": "Three-step DeepL checkout with Account completed, Details active, and Review still ahead.",
+          "sha256": "103e7c58b801670a7689397962fca8096232e4990d719b939094ef2a43eff376"
         },
         {
-          "path": "checkout/trial-faq-expanded.png",
-          "public_path": "site/public/work/checkout/trial-faq-expanded.png",
-          "artifact_genesis": "crop_of_recovered_historical_export",
+          "path": "checkout/review-before-full.png",
+          "public_path": "site/public/work/checkout/review-before-full.png",
+          "artifact_genesis": "recovered_historical_export",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/checkout/source-exports/trial-faq-expanded-source.png",
-          "source_sha256": "79427a71ec0192a98fc3608a31be63cec70250f98056fa465c6c528a7fc5b352",
-          "crop": "1080x1900+1660+720",
-          "dimensions": "1080x1900",
-          "caption": "The expanded state answers cancellation first, then explains charge timing and what the trial includes.",
-          "text_alternative": "DeepL trial checkout summary with expanded answers about cancellation, credit-card charge timing and included Pro features.",
-          "sha256": "fdf01253b4aa9ac6740b73ce104b915d69f0996de47b5a50002450e7020a38ac"
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
+          "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
+          "dimensions": "2880x2608",
+          "caption": "A separate page repeated the plan, trial, price, and payment details before collecting consent and the final action.",
+          "text_alternative": "DeepL Review screen repeating the selected plan, trial, price, payment details, features, consent, and purchase action.",
+          "sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24"
+        },
+        {
+          "path": "checkout/details-after-full.png",
+          "public_path": "site/public/work/checkout/details-after-full.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/06-two-step/5543-38726.png",
+          "source_sha256": "68d71c1f666408fa41aa243b37fcc41f5d286f0b1006927710abca55e64b210b",
+          "dimensions": "2560x4058",
+          "caption": "In the two-step flow, Details carries the offer, payment entry, consent, and subscription action on one screen.",
+          "text_alternative": "Two-step DeepL checkout with plan information, payment entry, consent, and the Begin subscription action consolidated in Details.",
+          "sha256": "68d71c1f666408fa41aa243b37fcc41f5d286f0b1006927710abca55e64b210b"
+        },
+        {
+          "path": "checkout/review-consent-action.png",
+          "public_path": "site/public/work/checkout/review-consent-action.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Focused crop of the consent, final action, and trial reassurance on the separate Review screen. No interface content was changed.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
+          "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
+          "crop": "1600x629+100+1500",
+          "dimensions": "1600x629",
+          "caption": "Consent required a separate checkbox before customers could press Buy now.",
+          "text_alternative": "Required acceptance checkbox followed by a Buy now button and trial cancellation reassurance.",
+          "sha256": "f13002afb6263df24180e0933c363d3fde477b7b1ab5db9c3352dc46430ad0e3"
+        },
+        {
+          "path": "checkout/details-consent-action.png",
+          "public_path": "site/public/work/checkout/details-consent-action.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Focused crop of the consent statement, Begin subscription action, and trial reassurance on the consolidated Details screen. No interface content was changed.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/06-two-step/5543-38726.png",
+          "source_sha256": "68d71c1f666408fa41aa243b37fcc41f5d286f0b1006927710abca55e64b210b",
+          "crop": "1500x590+100+3100",
+          "dimensions": "1500x590",
+          "caption": "The action area explains what Begin subscription authorizes and keeps the trial terms beside the button.",
+          "text_alternative": "Consent statement above a Begin subscription button and three trial reassurance messages.",
+          "sha256": "1d821d8ce0767cb5fdff4f7c0148e73f2787bece06b39895833229e781ea97e4"
+        },
+        {
+          "path": "checkout/due-today-summary.png",
+          "public_path": "site/public/work/checkout/due-today-summary.png",
+          "artifact_genesis": "recovered_historical_export",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/05-due-today-reassurance/6889-69299.png",
+          "source_sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d",
+          "dimensions": "800x736",
+          "caption": "€0 due today answers the immediate question first; the annual price remains visible as the later commitment.",
+          "text_alternative": "DeepL order summary showing zero euros due today and 299 euros 88 cents per year after the trial.",
+          "sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d"
         }
       ],
       "homepage_media": {
@@ -760,5 +738,5 @@
       "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428"
     }
   ],
-  "updated": "2026-07-28"
+  "updated": "2026-07-29"
 }

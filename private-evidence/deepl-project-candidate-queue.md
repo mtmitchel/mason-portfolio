@@ -1,6 +1,6 @@
 # DeepL project candidate queue
 
-**Updated and re-scored:** 2026-07-28
+**Updated and re-scored:** 2026-07-29
 **Status:** Current DeepL UX copy and content-design discovery, route
 reconciliation, and ranking owner
 
@@ -18,24 +18,38 @@ cannot disprove a contribution. Artifact, contribution, lifecycle, and outcome
 remain separate. A filename, assistant summary, or attractive frame cannot fill
 another dimension.
 
+This queue is a framework and parts inventory, not a case-study outline. A
+strong story may combine compatible rows, existing route material, and several
+artifacts around one larger product or organizational stake. Scores prioritize
+the material worth examining; they do not dictate the public subject, section
+order, or one-row-per-case structure.
+
 ## Viability and score
 
 A full case needs:
 
 - hiring-reader value;
 - a defensible account of Mason's contribution;
-- one held or independently inspectable central artifact with an exact locator;
+- one usable central artifact or source-faithful reconstruction;
 - a supported lifecycle or an honest artifact-level ending; and
 - a story-shaped decision, constraint, or trade-off.
 
 Metadata-only evidence can identify a lead, but cannot supply contents. An
 assistant synthesis is discovery-only.
 
+Exact locators preserve internal traceability. They are not a requirement to
+prove that a representative working artifact is the exact tested, winning, or
+production state unless the public claim identifies it that way. Mason's
+current account is direct evidence of his contribution; missing outside
+corroboration must not lower a candidate, hold a story, or trigger more source
+recovery by itself.
+
 Score viable candidates from `0` to `2` on four independent axes:
 
 1. **Reader value** — relevance and distinct hiring signal.
 2. **Source strength** — custody, origin, and claim coverage of the sources
-   needed for this story; not a single source tier.
+   needed for this story; not a single source tier or the presence of an
+   outside certificate of Mason's participation.
 3. **Evidence fit** — whether a specific held artifact can do a specific job in
    this story. Exact text, a typeset source-faithful comparison, and a product
    frame can each score `2`.
@@ -61,57 +75,185 @@ claims of public publication.
 [
   {"route":"/work/upgrade-prompts","project_id":"DEEPL-UPGRADE-PROMPTS","candidate_ids":["D06","D12"],"state":"advanced-draft","central_exhibit_id":"upgrade-allowance-escalation"},
   {"route":"/work/pricing-evolution","project_id":"DEEPL-PRICING-EVOLUTION","candidate_ids":["D14","D16"],"state":"frozen","central_exhibit_id":"pricing-working-layouts-preserved"},
-  {"route":"/work/checkout","project_id":"DEEPL-SUBSCRIPTION-CHECKOUT","candidate_ids":["D08","C28"],"state":"advanced-draft","central_exhibit_id":"checkout-four-purchase-states"},
+  {"route":"/work/checkout","project_id":"DEEPL-SUBSCRIPTION-CHECKOUT","candidate_ids":["C28"],"state":"advanced-draft","central_exhibit_id":"checkout-simplification-before-after"},
   {"route":"/work/account-team-security","project_id":"DEEPL-ACCOUNT-TEAM-SECURITY","candidate_ids":["D19","C30"],"state":"advanced-draft","central_exhibit_id":"account-and-team-state-sequences"},
   {"route":"/work/product-naming","project_id":"DEEPL-PRODUCT-NAMING","candidate_ids":["D17"],"state":"advanced-draft","central_exhibit_id":"write-naming-order-decision"},
   {"route":"/work/voice-product","project_id":"DEEPL-VOICE-PRODUCT","candidate_ids":["C24"],"state":"advanced-draft","central_exhibit_id":"voice-two-offers"}
 ]
 ```
 
-No implemented route remains in the active candidate list. A route can return
-to that list only after an explicit disposition change. Pricing remains frozen
-regardless of score.
+Implemented-route reconciliation prevents duplicate publication work; it does
+not remove the underlying candidates from story consideration. Represented rows
+remain available as evidence, chapters, or rebuild subjects, and a weak route
+must never lock its framing onto the work. The Pricing route is frozen in place
+— its implemented story is rejected and must not be edited until a new
+direction is approved — but the Pricing subject is open.
 
 ## Product content design
 
-Work only the highest active row in this lane. The re-score was run once after
-the rubric and route reconciliation were fixed.
+Use rank to decide what to inspect first when Mason has not already named a
+subject. For a portfolio slate or a larger story, combine compatible candidates
+when that creates a more meaningful and accurate account. The re-score was run
+once after the rubric and route reconciliation were fixed.
 
-| Rank | ID | Candidate | Score `(reader/source/fit/presentation)` | Form | Status | Next evidence gate |
+The final column is a claim boundary or useful next action, not a publication
+gate. A missing detail blocks only the exact claim that depends on it.
+
+| Rank | ID | Candidate | Score `(reader/source/fit/presentation)` | Form | Status | Use and remaining boundary |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | `C29` | DM-1417 anonymous-user account-creation soft block | `2/2/1/1` | Mini case | Active | Map the retained partial canvas excerpt to an exact interface artifact. Preserve the stopped/evaluate ending; do not fold it into paid upgrade prompts. |
-| 2 | `C26` | Desktop app and integration discovery | `2/1/2/2` | Mini or full case | Active | Select one coherent product-discovery story and confirm lifecycle for its exact artifact. |
-| 3 | `C27` | Website navigation and discovery surfaces | `2/1/2/1` | Mini or full case | Active | Crop the two mapped navigation variants and bound lifecycle by surface. |
-| 4 | `D03` | Apps and Integrations post-sign-up experiment | `2/1/1/1` | Mini case | Active | Link the proven-hypothesis account to one exact callout or sidebar state. |
-| 5 | `D10` | Plan changes and team-seat adjustment flows | `2/1/1/1` | Mini case | Active | Confirm whether the two flows are one initiative and locate clean full states. |
-| 6 | `D11` | Failed-payment and payment-method recovery | `2/1/1/1` | Full or mini case | Active | Find an exact failure-recovery artifact; the checkout FAQ is adjacent evidence only. |
-| 7 | `D20` | Custom-domain account administration | `1/1/2/2` | Mini case | Active | Confirm Mason's assignment and lifecycle for the selected neutral dialogs. |
-| 8 | `D23` | Full-page translation as a paid feature | `1/1/2/1` | Writing example | Active | Pair the mapped plan row with direct copy or assignment evidence. |
-| 9 | `D13` | Glossary plan repackaging | `1/1/2/1` | Writing example or mini case | Active | Build a source-faithful text comparison from selected audit rows. |
-| 10 | `D09` | True-up billing UX | `2/1/0/0` | Mini case | Reserve | Find a true-up-specific artifact; current exports duplicate `D10`. |
-| 11 | `F32` | Tier-aware cancellation, retention, and feature-loss copy | `2/0/2/1` | Mini case | Reserve | Establish Mason's contribution and initiative identity. |
-| 12 | `F34` | Email verification and signup optimization | `2/0/2/1` | Mini case | Reserve | Establish contribution, selected variant, lifecycle, and result. |
-| 13 | `F35` | Checkout abandonment and social-proof research | `2/0/2/1` | Mini case | Reserve | Establish Mason's role and connect the research to a decision. |
-| 14 | `F33` | US checkout consent | `1/0/2/1` | Writing example | Reserve | Establish contribution and lifecycle. |
-| 15 | `F36` | API usage-limit UI | `1/0/2/1` | Writing example | Reserve | Establish contribution and selected wording. |
-| 16 | `D15` | Project Rebound | `2/0/0/0` | Reserve | Reserve | Identify Mason's deliverable, decision, and held artifact. |
-| — | `D06` | DeepL Write Pro launch and monetization work | `2/2/2/2` | Implemented full case | Represented by `/work/upgrade-prompts` | Source-fidelity re-audit passed; retain the experiment-wave result scope and do not create a duplicate candidate. |
-| — | `D12` | Free/Pro status label and file-limit awareness | `1/1/2/2` | Implemented support | Represented by `/work/upgrade-prompts` | Keep outcome identity unresolved. |
-| — | `D08` | Country selection and delayed subscription activation | `1/2/2/1` | Implemented support | Represented by `/work/checkout` | Do not merge it with DM-1418 without exact project evidence. |
-| — | `C28` | DM-1418 checkout-flow simplification | `2/2/2/2` | Implemented support | Represented by `/work/checkout` | Retained metrics remain conditional on exact flow matching. |
-| — | `D19` | MFA recovery and authentication keys | `2/2/2/2` | Implemented full case | Represented by `/work/account-team-security` | Keep recovery and deletion as separate groups unless one workstream is confirmed. |
-| — | `C30` | Broader authentication and administration portfolio | `2/2/2/2` | Implemented support | Represented by `/work/account-team-security` | Keep lifecycle specific to each surface. |
+| 1 | `C29` | DM-1417 anonymous-user account-creation soft block | `2/2/2/2` | Mini case or experiment chapter | Active | Use the retained result at experiment level and the screenshot sequence as evidence of Mason's copy iteration. Because the documented cooldown and visible daily-limit timer differ, do not call a screenshot the tested DM-1417 variant unless Mason identifies it that way; this does not block a broader experimentation story. |
+| 2 | `C26` | Desktop app and integration discovery | `2/1/2/2` | Mini or full case | Active | Use the held pages as working artifacts. Scope lifecycle by surface only when making a lifecycle claim; do not require one artifact to represent the whole program. |
+| 3 | `C27` | Website navigation and discovery surfaces | `2/1/2/1` | Mini or full case | Active | Use as supporting evidence for a broader discovery story if selected. Keep the lifecycle of each surface distinct; no new crop is needed before selection. |
+| 4 | `D10` | Plan changes and team-seat adjustment flows | `2/1/1/1` | Mini case or subscription-management chapter | Active | The flows may appear as separate examples in a broader subscription-management story. Prove they are one initiative only if the prose claims they were. |
+| 5 | `D11` | Failed-payment and payment-method recovery | `2/1/1/1` | Mini case or checkout chapter | Active | The current material can support a broader failure-recovery story through source-faithful text. A distinct screen-led case still needs a usable failure state, not proof of exact production lineage. |
+| 6 | `D20` | Custom-domain account administration | `1/1/2/2` | Mini case or admin chapter | Active | Mason's account can establish collaborative involvement. Use artifact-level lifecycle unless a stronger lifecycle claim matters to the story. |
+| 7 | `D23` | Full-page translation as a paid feature | `1/1/2/1` | Writing example or monetization chapter | Active | Use the mapped plan row as a representative artifact when Mason identifies the contribution; ticket metadata is not a prerequisite. |
+| 8 | `D13` | Glossary plan repackaging | `1/1/2/1` | Writing example or mini case | Active | Select a source-faithful excerpt. Verify version order only if the story claims a before-and-after evolution. |
+| 9 | `D09` | True-up billing UX | `2/1/0/0` | Subscription-management chapter | Reserve | Current exports duplicate `D10`, so this adds no distinct standalone story yet; it may still supply context within a broader account-management case. |
+| 10 | `F32` | Tier-aware cancellation, retention, and feature-loss copy | `2/0/2/1` | Mini case | Reserve | Do not infer contribution from frames alone. Mason's identification of his collaborative work is sufficient; outside corroboration is not required. |
+| 11 | `F34` | Email verification and signup optimization | `2/0/2/1` | Mini case | Reserve | Mason's identification can establish contribution. Selected variant, lifecycle, and result matter only if the public story claims them. |
+| 12 | `F35` | Checkout abandonment and social-proof research | `2/0/2/1` | Mini case or experimentation chapter | Reserve | Mason's account can establish his role. Connect the research to a decision only if that connection is part of the story. |
+| 13 | `F33` | US checkout consent | `1/0/2/1` | Writing example | Reserve | Mason's account can establish contribution. Keep lifecycle at artifact level unless the story needs more. |
+| 14 | `F36` | API usage-limit UI | `1/0/2/1` | Writing example | Reserve | Mason's account can establish contribution. Exact selected wording matters only for a final-copy or shipment claim. |
+| 15 | `D15` | Project Rebound | `2/0/0/0` | Reserve | Reserve | No usable artifact or defined contribution is currently held; this is a genuine story gap rather than a corroboration gap. |
+| — | `D03` | Apps and Integrations post-sign-up experiment | `2/1/1/1` | — | Rejected as standalone | Mason rejected this proposal because the visuals are too weak. It may remain supporting context but must not be re-proposed as a case. |
+| — | `D06` | DeepL Write Pro launch and monetization work | `2/2/2/2` | Implemented full case | Represented by `/work/upgrade-prompts` | Use its prompts and experiment-wave result as components of a stronger monetization story. The existing route does not lock the framing. |
+| — | `D12` | Free/Pro status label and file-limit awareness | `1/1/2/2` | Implemented support | Represented by `/work/upgrade-prompts` | Use as state-aware monetization evidence. Keep any outcome at the wider supported experiment-wave level. |
+| — | `D08` | Country selection and delayed subscription activation | `1/2/2/1` | Mini case or checkout chapter | Not currently represented | It may support a future broader checkout story when the separate scopes are clear. Do not label it a tested DM-1418 state without support. |
+| — | `C28` | DM-1418 checkout-flow simplification | `2/2/2/2` | Implemented full-case candidate | Represented by `/work/checkout` | Use the retained metrics at DM-1418 experiment level. Representative checkout frames may illustrate the work; exact linkage is needed only to call one the tested or winning variant. The 2026-07-29 route is mechanically verified but remains an advanced draft after Mason judged it “better, but not good”; the next revision waits for his additional context. |
+| — | `D19` | MFA recovery and authentication keys | `2/2/2/2` | Implemented full case | Represented by `/work/account-team-security` | May combine with related admin work around enterprise deployment or access. Keep different lifecycle claims scoped; no single-ticket proof is required. |
+| — | `C30` | Broader authentication and administration portfolio | `2/2/2/2` | Implemented support | Represented by `/work/account-team-security` | Use as the larger administrative context. Individual surfaces may have different lifecycle endings without being forced into separate cases. |
 | — | `C24` | DeepL Voice product content | `2/1/2/2` | Implemented mini case | Represented by `/work/voice-product` | Central exhibits re-audited; keep the ending at artifact level unless lifecycle or outcome evidence is added. |
-| — | `D14` | Pricing-grid readability and cumulative tiers | `2/2/2/2` | Frozen route | Frozen | Mason must explicitly reopen Pricing. |
-| — | `D16` | Pricing and Packaging redesign research | `2/2/1/1` | Frozen support | Frozen | Keep with the frozen Pricing subject. |
+| — | `D14` | Pricing-grid readability and cumulative tiers | `2/2/2/2` | Implemented full case | Represented by `/work/pricing-evolution` | Story rejected 2026-07-27; the subject is open. Use its shipped cumulative structure as one component of a newly approved Pricing direction, not as a repair template. |
+| — | `D16` | Pricing and Packaging redesign research | `2/2/1/1` | Implemented support | Represented by `/work/pricing-evolution` | Use the held research and working context as components of a larger Pricing story; the ticket does not define the story. |
+
+### Evidence-batch visual findings
+
+The 2026-07-28 case-evidence batch contains 97 checkout images, 61
+upgrade-prompt images, and 33 signup images. All source images were inspected,
+including recurring layouts and copy variants. These findings identify useful
+story components; they do not select public evidence or establish lifecycle,
+shipment, or outcome.
+
+For `D06` and `D12`, the strongest larger story is one state-aware conversion
+system that changes with allowance, product, account state, eligibility, and
+user authority. The clearest central sequence is:
+
+- `08-character-limit-states/2-151122.png`
+- `08-character-limit-states/2-151131.png`
+- `08-character-limit-states/2-151134.png`
+- `08-character-limit-states/2-151125.png`
+
+It moves from a quiet allowance meter through declining capacity to a timed
+hard stop with a relevant upgrade offer. Useful supporting branches are the
+free-trial-versus-upgrade pair in
+`01-free-trial-vs-upgrade/3-176820.png` and `3-176821.png`, the document-limit
+states in `07-document-limits-pro/2-151050.png` and `2-151067.png`, and the
+Translator/Write variants in `10-write-and-cross-product-states/4-184736.png`,
+`4-186545.png`, `4-186552.png`, and `4-186561.png`. Several frames contain
+placeholders, annotations, clipped components, or historical prices. Treat
+those as visual leads or working-state evidence rather than production proof.
+None belongs in the focused checkout case.
+
+For `C29` and `F34`, the batch supports two compatible signup angles: explain
+the value of a free account before asking someone to register, and keep the
+signup route coherent across desktop, mobile, and in-product surfaces. The
+strongest benefit-led sequence is `01-for-dev/3-174721.png`,
+`3-174735.png`, and `3-174771.png`. The strongest clean cross-platform group is
+`03-cross-platform-signup/2-161040.png`, `2-161263.png`, and `2-161264.png`.
+Together they could broaden the C29 story from one interruption message into
+the path from an anonymous limit to a clear reason and route for creating an
+account. The five C29 iteration frames and experiment result remain the
+measurable spine; the Figma frames add product and cross-platform context and
+should not be called the exact tested C29 variant. Placeholder concepts,
+email-like values, and browser-password prompts require exclusion or careful
+framing before public selection. None belongs in the checkout case.
+
+The IAM and ATE batches contain 98 and 240 original source members,
+respectively. They support several components of a possible larger enterprise
+deployment story: a company has to add people at scale, give them the right
+access, secure their accounts, help them recover access, and remove access
+safely before the product can become dependable company infrastructure. This
+is not an approved case direction. If revisited, the organizational stake must
+lead; do not turn it into a tour of administration screens or a case about
+spelling corrections.
+
+The visually strongest ATE sequence is bulk onboarding that preserves valid
+work when part of a large input fails:
+
+- `10-flows/05-error-states-and-limit-reached/2-95352.png` keeps the first 40
+  entries and explains how to continue when the input exceeds the limit.
+- `10-flows/05-error-states-and-limit-reached/2-95073.png` identifies invalid
+  addresses without discarding the valid entries.
+- `10-flows/02-upload-csv-sub-flow/2-97522.png` offers CSV upload and connects
+  group assignment to subscription access.
+
+The strongest destructive-action pair is
+`05-bulk-delete/2-54113.png` and `05-bulk-delete/2-54189.png`: the first names
+the access consequence before deletion and the second provides visible
+confirmation afterward. KMS, custom-domain, custom-logo, invitation-revocation,
+user-table, and license-recycling states remain supporting enterprise context;
+their settings and table layouts are weaker central exhibits and should not
+inflate the scope of a case.
+
+The IAM batch contains five matched original and copy-suggestion flows plus 24
+matched component pairs; 21 component pairs differ. The end-to-end MFA setup,
+login, enforcement, and recovery flows can show how security language changes
+with the reader and moment. The recovery pivot at
+`01-original-flows/03-recovery-email/2-137634.png` makes the consequence
+concrete: regaining access invalidates the old authenticator setup and requires
+a new one. The original/revised component pair
+`03-original-copy-components/2-138740.png` and
+`04-copy-suggestion-components/2-139332.png` can support the writing detail,
+but terminology, compression, and defect fixes are evidence of craft—not a
+case thesis.
+
+Mason did not author the “Congrats! No users, no problems!” empty state or the
+“cant remove fromthe group” error in the ATE material. Do not use either as
+evidence of his judgment. Mason confirmed that user names, email addresses, and
+account data in the IAM and ATE Figma exports are mock data. Visually similar
+and copy-different variants remain separate in the retained batch; only exact
+byte-identical source members share a stored image.
+
+### C29 focused re-score
+
+The 2024-01-04 ChatGPT conversation
+`edd9331c-2d0b-4879-a4bc-c4843d280b62` retains five original PNG
+attachments. Together they show full-modal and compact timed states for the
+same anonymous-user problem: a daily translation limit, free-account signup,
+and an option to wait and return. Mason's messages define the constraint,
+introduce the benefit hierarchy, reject idiomatic language, revise repeated
+phrasing, and adapt the copy to the smaller timed state. These held frames can
+therefore carry the artifact, decision, and contribution parts of a mini case.
+Their date, surface, user state, and action connect them to the same broad
+anonymous-user conversion problem. The documented three-day cooldown and the
+visible daily-limit timer are different mechanics, so the frames should not be
+called the exact tested DM-1417 variant unless Mason identifies them that way.
+They remain usable evidence of his iterative message design without that claim.
+
+The retained DM-1417 canvas excerpt establishes that the experiment ran and
+then stopped for evaluation. It reports a `76.22%` increase in account creation
+(`+514/day`) alongside a `0.26%` session decline (`-5,741/day`). Those are
+experiment-level results, not proof that one visible variant caused the result
+or that Mason caused it. The screenshots remain working iterations. The
+selected, tested, or shipped variant is unknown, but that unknown limits only a
+variant-level claim; it does not block the experiment result or the craft story.
+
+The score changes from `2/2/1/1` to `2/2/2/2`: reader value and source strength
+remain strong, while the held interface sequence raises evidence fit and makes
+the proposed mini case presentation-ready after bounded selection. The
+supported story runs from the anonymous-user limit, through Mason's iterative
+message design, to a promising conversion result that was stopped because the
+experience also reduced translation sessions. Paid upgrade prompts and any
+variant-level outcome claim remain outside this story.
 
 ## Content systems
 
-| Rank | ID | Candidate | Score | Form | Status | Next evidence gate |
+| Rank | ID | Candidate | Score | Form | Status | Use and remaining boundary |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | `D18` | Figma content-review plugin prototype | `2/1/1/1` | Mini case | Active | Recover a product artifact or bounded demonstration and confirm deployment/adoption status. |
-| 2 | `R37` | Error-code clarity review and governance | `2/1/1/1` | Writing example or mini case | Reserve | Confirm Mason completed the review and recover before/after or final strings. The source proves the assignment, not completed revisions. |
-| — | `D17` | Product-and-plan naming framework | `2/2/2/2` | Implemented full case | Represented by `/work/product-naming` | Source-fidelity re-audit passed against the assigned-drafting ceiling; reader review remains before publication. |
+| 1 | `R37` | Error-code clarity review and governance | `2/1/1/1` | Writing example or mini case | Reserve | The held triage table can carry a decision-governance story without final strings. A before-and-after claim would still require both states. |
+| — | `D18` | Figma content-review plugin prototype | `2/1/1/1` | — | Rejected for this portfolio slate | Mason rejected it because the subject is tooling rather than writing. Do not re-propose it as a writing case. |
+| — | `D17` | Product-and-plan naming framework | `2/2/2/2` | Implemented full case | Represented by `/work/product-naming` | Use the framework as supporting evidence wherever naming and packaging carry the larger story. The existing route does not require it to remain standalone. |
 
 `R37` comes from
 [`cast-error-codes-270924-155624.md`](source-documents/recovered/cast-error-codes-270924-155624.md)
@@ -162,9 +304,9 @@ It lets discovery and scoring happen once against the same source inventory.
 | `D17` | Content Design System final, tracker, and plans; exact inventory IDs in `SYS-04` | Raises contribution from participation-only to assigned drafting and contributed draft content. Does not prove approval or adoption. |
 | `D06` | Write monetization key terms; upgrade/upsell modal guide; account terms | Strengthens terminology and offer-context evidence; does not prove selected variant or outcome. |
 | `D10` | Changes due to multiple subscriptions | Strengthens artifact and rules context; does not unify separate flows or prove shipment. |
-| `D13` | Content Style Guide variants, glossary, account terminology | Supports a source-faithful writing exhibit; versions and authorship still need checking. |
-| `C24` | Brand Voice and Tone and Voice-system material | Strengthens category-language context; does not prove Mason's exact assignment or commercial outcome. |
-| `D14`, `D16` | Pricing analysis, pricing-page records, DM-2112 | Adds held research and working context; does not reopen the frozen subject. |
+| `D13` | Content Style Guide variants, glossary, account terminology | Supports a source-faithful writing exhibit. Check version order only for an evolution claim; Mason's account can establish his contribution. |
+| `C24` | Brand Voice and Tone and Voice-system material | Strengthens category-language context. Mason's account establishes collaborative involvement; no commercial outcome is supported. |
+| `D14`, `D16` | Pricing analysis, pricing-page records, DM-2112 | Adds held research and working context; does not by itself supply a new Pricing direction. |
 | `R37` | CAST Error Codes | Adds a new reserve lead with a documented clarity-review assignment. |
 
 The four recovered assistant syntheses remain discovery-only and cannot raise a
@@ -182,8 +324,8 @@ score.
   transparent text layer and the other a complete card.
 - The terminology paper remains private because it identifies a colleague.
 - Voice full-page/FAQ, simplified/refined, and Meetings proposed/shipped pairs
-  remain unselected because relationship, chronology, or lifecycle is not
-  established by the filenames.
+  cannot be labeled as before/after or proposed/shipped from filenames alone.
+  They remain available as representative working states if Mason selects them.
 
 No additional qualified candidate emerged from the July 28 ZIP.
 
@@ -196,5 +338,5 @@ No additional qualified candidate emerged from the July 28 ZIP.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json)
 
 This queue owns candidate discipline, score, order, coverage, route
-reconciliation, freeze, and disposition. The repository-root workflow owns
-story proposals and writing.
+reconciliation, and disposition. The repository-root workflow owns story
+proposals and writing.

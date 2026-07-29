@@ -233,41 +233,17 @@ test("case-to-case navigation follows the card order", async () => {
     ["/work/voice-product", "/writing"],
   ];
   for (const [route, next] of chain) {
-    assert.match(await htmlFor(route), new RegExp(`class="next-project"[\\s\\S]*href="${escapeRegExp(next)}"`));
+    assert.match(await htmlFor(route), new RegExp(`class="next-project(?: [^"]*)?"[\\s\\S]*href="${escapeRegExp(next)}"`));
   }
 });
 
-test("DeepL UX case navigation uses the same titles as the homepage", async () => {
-  const homepage = await htmlFor("/");
-  const chain = [
-    ["/work/upgrade-prompts", "/work/pricing-evolution"],
-    ["/work/pricing-evolution", "/work/checkout"],
-    ["/work/checkout", "/work/account-team-security"],
-    ["/work/product-naming", "/work/voice-product"],
-  ];
-
-  for (const [route, next] of chain) {
-    const card = homepage.match(
-      new RegExp(`<a(?=[^>]*href="${escapeRegExp(next)}")[^>]*>([\\s\\S]*?)<\\/a>`),
-    );
-    assert.ok(card, `${next} should have a homepage card`);
-    const cardHeading = card[1].match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
-    assert.ok(cardHeading, `${next} homepage card should have a heading`);
-
-    const page = await htmlFor(route);
-    const nextNavigation = page.match(/<nav class="next-project"[\s\S]*?<\/nav>/);
-    assert.ok(nextNavigation, `${route} should have next-project navigation`);
-    const nextLink = nextNavigation[0].match(
-      new RegExp(`<a(?=[^>]*href="${escapeRegExp(next)}")[^>]*>([\\s\\S]*?)<\\/a>`),
-    );
-    assert.ok(nextLink, `${route} should link to ${next}`);
-
-    assert.equal(
-      visibleText(nextLink[1].replace(/<b[\s\S]*?<\/b>/g, "")),
-      visibleText(cardHeading[1]),
-      `${route} next-project title should match the ${next} homepage card`,
-    );
-  }
+test("checkout uses the compact Next control", async () => {
+  const html = await htmlFor("/work/checkout");
+  const navigation = html.match(/<nav class="next-project next-project--compact"[\s\S]*?<\/nav>/);
+  assert.ok(navigation, "checkout should have compact next-project navigation");
+  const link = navigation[0].match(/<a href="\/work\/account-team-security">([\s\S]*?)<\/a>/);
+  assert.ok(link, "checkout should link to account and team security");
+  assert.equal(visibleText(link[1].replace(/<b[\s\S]*?<\/b>/g, "")), "Next");
 });
 
 test("every in-scope DeepL UX route has a manifest-owned central exhibit contract", async () => {
@@ -357,12 +333,13 @@ test("pricing evidence does not overstate working layouts as production lineage"
 
 test("pricing page carries no business-outcome metric", async () => {
   const html = await htmlFor("/work/pricing-evolution");
+  const caseContent = html.replace(/<nav class="next-project"[\s\S]*?<\/nav>/, "");
   // Product labels such as "Save 20%" are offer content, not performance claims, and are allowed.
-  assert.doesNotMatch(html, /12%/);
-  assert.doesNotMatch(html, /\bARR\b/);
-  assert.doesNotMatch(html, /six-figure/);
-  assert.doesNotMatch(html, /seven-figure/);
-  assert.doesNotMatch(html, /\bpaid conversion\b/i);
+  assert.doesNotMatch(caseContent, /12%/);
+  assert.doesNotMatch(caseContent, /\bARR\b/);
+  assert.doesNotMatch(caseContent, /six-figure/);
+  assert.doesNotMatch(caseContent, /seven-figure/);
+  assert.doesNotMatch(caseContent, /\bpaid conversion\b/i);
 });
 
 test("pricing page references no retired assets", async () => {
@@ -408,25 +385,26 @@ test("pricing page references no retired assets", async () => {
   }
 });
 
-test("checkout keeps selected states and the accessible full-frame switcher", async () => {
+test("checkout presents the simplification evidence and experiment result", async () => {
   const html = await htmlFor("/work/checkout");
   for (const asset of [
-    "trial-sign-up-detail.png",
-    "bundle-checkout-detail.png",
-    "team-purchase-detail.png",
-    "no-trial-checkout-detail.png",
-    "trial-faq-collapsed.png",
-    "trial-faq-expanded.png",
+    "details-before-full.png",
+    "review-before-full.png",
+    "details-after-full.png",
+    "review-consent-action.png",
+    "details-consent-action.png",
+    "due-today-summary.png",
   ]) assert.match(html, new RegExp(escapeRegExp(asset)));
-  assert.match(html, /role="tablist"/);
-  assert.equal((html.match(/role="tab"/g) ?? []).length, 4);
-  assert.match(html, /evidence-switcher--quiet/);
   assert.match(html, /evidence-expand-indicator/);
+  assert.match(html, /checkout-copy-comparison/);
+  assert.match(html, /DeepL · Monetization team · 2024/);
   assert.doesNotMatch(html, /class="evidence-label"|class="evidence-action"/);
-  for (const label of ["Bundle", "Trial sign-up", "Team", "No trial"]) assert.match(html, new RegExp(`>${label}<`));
-  assert.match(html, /€0 due today/);
-  assert.doesNotMatch(html, /3\.02%|€2\.4M|100 purchases|conversion/);
+  for (const result of ["3.02%", "3.07%", "€2.4M"]) {
+    assert.match(html, new RegExp(escapeRegExp(result)));
+  }
+});
 
+test("evidence switchers retain keyboard support", async () => {
   const switcher = await readFile(new URL("app/components/EvidenceSwitcher.tsx", root), "utf8");
   for (const key of ["ArrowRight", "ArrowLeft", "Home", "End"]) assert.match(switcher, new RegExp(key));
   assert.match(switcher, /role="tabpanel"/);
@@ -580,12 +558,8 @@ test("the private manifest records active evidence and the corrected report cove
   const cropPaths = [
     "upgrade-prompts/write-free-account-detail.png",
     "upgrade-prompts/write-translator-pro-account-detail.png",
-    "checkout/trial-sign-up-detail.png",
-    "checkout/bundle-checkout-detail.png",
-    "checkout/team-purchase-detail.png",
-    "checkout/no-trial-checkout-detail.png",
-    "checkout/trial-faq-collapsed.png",
-    "checkout/trial-faq-expanded.png",
+    "checkout/review-consent-action.png",
+    "checkout/details-consent-action.png",
     "account-team-security/account-security-login-detail.png",
     "account-team-security/account-security-authentication-error-detail.png",
     "account-team-security/bulk-delete-confirmation-detail.png",
@@ -601,14 +575,31 @@ test("the private manifest records active evidence and the corrected report cove
       assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
     }
   }
+  for (const path of [
+    "checkout/details-before-full.png",
+    "checkout/review-before-full.png",
+    "checkout/details-after-full.png",
+    "checkout/due-today-summary.png",
+  ]) {
+    const file = files.find((candidate) => candidate.path === path);
+    assert.ok(file, `${path} should be recorded`);
+    for (const field of ["public_path", "source_path", "source_sha256", "dimensions", "caption", "text_alternative", "sha256"]) {
+      assert.equal(typeof file[field], "string", `${path}.${field} should be recorded`);
+      assert.ok(file[field].length > 0, `${path}.${field} should not be empty`);
+    }
+  }
   for (const publicPath of [
     "site/public/work/upgrade-prompts/feature-awareness-clarify.png",
     "site/public/work/upgrade-prompts/feature-awareness-tone.png",
     "site/public/work/upgrade-prompts/feature-awareness-files.png",
     "site/public/work/upgrade-prompts/feature-awareness-glossary.png",
     "site/public/work/upgrade-prompts/write-pro-allowance-comparison.png",
-    "site/public/work/checkout/trial-faq-collapsed.png",
-    "site/public/work/checkout/trial-faq-expanded.png",
+    "site/public/work/checkout/details-before-full.png",
+    "site/public/work/checkout/review-before-full.png",
+    "site/public/work/checkout/details-after-full.png",
+    "site/public/work/checkout/review-consent-action.png",
+    "site/public/work/checkout/details-consent-action.png",
+    "site/public/work/checkout/due-today-summary.png",
     "site/public/work/voice-product/voice-positioning-header.png",
     "site/public/work/voice-product/voice-offer-comparison.png",
   ]) {

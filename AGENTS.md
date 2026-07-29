@@ -78,13 +78,17 @@ selected case, claim, frame, or acceptance result.
 
 Use one simple three-stage workflow:
 
-1. **Rank the candidates and take the first active story.** Keep one current
-   work queue, which owns the score and tie rules. Review only its highest
-   active candidate in one pass and record what artifact exists, what Mason
-   contributed, the supported lifecycle, the supported outcome or ending, and
-   any material unknown. Do not split this into separate source, connection,
-   and claim-gate phases or create a project folder for every candidate. The
-   current DeepL queue lives in
+1. **Use the queue as evidence and story material, not as the public outline.**
+   Keep one current work queue, which owns the score and tie rules. Its rows
+   identify useful components; they do not require one row per case, force the
+   highest row to become the next story, or prevent a larger story from
+   combining compatible candidates and existing route material around one
+   meaningful stake. When Mason has not already chosen a subject, start with
+   the strongest unresolved story opportunity and record what artifact exists,
+   what Mason contributed, the supported lifecycle, the supported outcome or
+   ending, and any material unknown. Do not split this into separate source,
+   connection, and claim-gate phases or create a project folder for every
+   candidate. The current DeepL queue lives in
    [`private-evidence/deepl-project-candidate-queue.md`](private-evidence/deepl-project-candidate-queue.md).
 2. **Show Mason the story before writing it.** Generate one visual proposal or
    infographic in chat for every new full case, mini case, writing page, or
@@ -111,6 +115,11 @@ publication, deployment, access changes, Figma writes, or destructive action.
 - Treat Mason's request as the objective and finish every safe, authorized
   step through focused verification and final diff review.
 - Preserve unrelated dirty work.
+- Treat external-model and reader feedback as input to evaluate, not material
+  to accept or reject automatically. If a recommendation is declined, explain
+  the exact factual conflict, reader problem, or implementation cost and why a
+  smaller revision would not solve it. Do not dismiss a direction with a label
+  or preference alone.
 - In review, distinguish a demonstrated defect from a preference. Do not
   recommend a new gate, schema, owner, status, script, test, document, approval
   step, or other ceremony unless it prevents a specific observed failure and a
@@ -136,6 +145,16 @@ publication, deployment, access changes, Figma writes, or destructive action.
   tradeoffs, evidence that advances the story, and an ending that explains
   what changed or what the work demonstrates. An inventory of screens, strings,
   and rules does not meet this bar.
+- Build the story from its consequential product or organizational subject, not
+  from a candidate row, ticket, chronology, export folder, or the current route.
+  The queue provides components and boundaries only. A larger story may combine
+  compatible candidates, but “larger” means a stronger central stake—not more
+  unrelated scope, more screenshots, or a longer page.
+- Make the employer value clear without reducing every contribution to direct
+  personal revenue causation. When a measured team or experiment result exists,
+  use it at that scope and show Mason's judgment as the contribution behind the
+  case. When no metric exists, show the supported product, customer, operational,
+  or organizational value of the work.
 - Distinguish verified fact, documented account or recollection, intent,
   rationale, reasonable interpretation, and measured outcome. Missing metrics
   or user-testing records prevent validation claims; they do not erase
@@ -143,6 +162,18 @@ publication, deployment, access changes, Figma writes, or destructive action.
 - Claim ceilings qualify or remove unsupported factual assertions. They must
   not force a flat chronology, neutralize the candidate's judgment, or dictate
   sentence rhythm and case structure.
+- The working standard is an honest, interview-defensible account, not
+  courtroom proof or a complete chain of custody. Use evidence to prevent a
+  material falsehood, contradiction, unsupported sole-ownership claim, false
+  lifecycle claim, or misattributed result. Do not require an exact
+  ticket-to-frame, screenshot-to-variant, or working-file-to-production match
+  when the public story does not make that exact identity claim.
+- A representative working artifact may illustrate the product area, flow, or
+  content problem Mason worked on when his account and the surrounding record
+  support that relationship and no material conflict makes the illustration
+  misleading. Describe it according to what it is. Require exact linkage only
+  before calling a visible artifact the tested, winning, approved, shipped, or
+  production state.
 - Mason is the primary source for his own role, participation, contribution,
   intent, rationale, and recollection. His explicit current account is valid
   contribution evidence and outranks an absence of contributor metadata,

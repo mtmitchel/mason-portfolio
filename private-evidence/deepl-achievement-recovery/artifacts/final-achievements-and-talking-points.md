@@ -108,7 +108,10 @@ result.
 
 **CV wording:** Wrote UX copy for a post-signup Apps & Integrations experiment whose validated hypothesis led to a broader sidebar discovery concept.
 
-**Portfolio use:** High-value reserve candidate. Recover the exact callout/sidebar artifact before turning it into a visual mini case.
+**Portfolio use:** Mason rejected this as a standalone case because the available
+visuals are too weak. It may remain supporting context inside a broader
+discovery or experimentation story. Exact callout/sidebar linkage is necessary
+only before labeling a visible frame as the tested state.
 
 **Withhold:** Numeric lift, exact tested variant, shipment of an unmatched frame, and sole causation.
 
@@ -171,7 +174,9 @@ individual-variant causation.
 
 **CV wording:** Supported pricing and packaging initiatives through competitor research, value-proposition development, and test-ready copy for trials, plan comparison, cancellation, and conversion journeys.
 
-**Portfolio use:** One of the three strongest artifact-led full cases. Frame it as a conditional content system across plan, trial, tax, country, currency, customer, responsive, and CTA states.
+**Portfolio use:** Use the research, messaging analysis, and test-ready copy as
+components of a larger Pricing story. The DM-2112 ticket and its list of states
+do not define the narrative.
 
 **Withhold:** Exact test mapping, launch, conversion or ARR impact, causation, and sole ownership.
 
@@ -222,7 +227,9 @@ sole causation, measured usability improvement, conversion, or revenue impact.
 
 **CV wording:** Partnered with IAM to improve authentication and security messaging, clarifying setup, recovery, and administrator expectations across sensitive account journeys.
 
-**Portfolio use:** One of the three strongest artifact-led full cases. Focus on setup, next-login enforcement, recovery, disablement, and admin consequences while keeping exact authorship and lifecycle boundaries visible.
+**Portfolio use:** May support a larger story about whether an organization can
+deploy, secure, and retain access to the product. State Mason's collaborative
+role normally and keep lifecycle claims scoped to the surfaces that need them.
 
 **Withhold:** Internal ticket identifiers in public copy, authorship of every visible string, interaction-model ownership, shipment of every state, and security/adoption outcomes.
 
@@ -237,10 +244,12 @@ sole causation, measured usability improvement, conversion, or revenue impact.
 
 **CV wording:** Produced security- and account-management UX content across access authorization, audit logs, invitations, team groups, CSV member import, usage reports, and account-change alerts.
 
-**Portfolio use:** Supports the Team Administration bulk-action and CSV-import
-mini cases plus contextual process notes for account security. Confirm exact
-strings, lifecycle, and collaborator credit, and flag any concrete personal
-data, credentials, or internal identifiers for Mason.
+**Portfolio use:** Supports a larger administrative-deployment story as well as
+selected bulk-action or CSV-import examples. Representative working states are
+enough; exact strings or lifecycle are required only for exact final-state or
+shipment claims. Mason confirmed the user and account data in the retained IAM
+and ATE Figma batches is mock data. Credentials, internal identifiers, and
+unfinished or visually weak states still require selection judgment.
 
 **Withhold:** Ownership of team delivery processes, adoption of the proposed localization/process changes, shipment of every flow, and outcome metrics.
 
@@ -264,9 +273,10 @@ deployment, team-wide adoption, remediation, and time savings are not.
 
 **CV wording:** Built content-design tools and structured guidance, including a Figma review prototype and a dynamic-content inventory covering roughly 9,000 English Phrase keys.
 
-**Portfolio use:** Strong future methods mini case if Mason selects the actual
-plugin, documentation, or dataset. Current Figma content patterns are
-illustrative context only.
+**Portfolio use:** Do not propose the Figma plugin as a writing case; Mason
+rejected that direction. The naming guidance or dynamic-content inventory may
+support a larger writing or content-operations story if it earns a clear
+hiring-reader payoff.
 
 **Withhold:** Sole creation or ownership of the naming system, production
 status, organization-wide use, measured efficiency, and claims that the tool

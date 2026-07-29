@@ -38,10 +38,10 @@ or require outside corroboration before portfolio consideration.
 
 | Canonical area | Current relationship | Supported use | Boundary |
 | --- | --- | --- | --- |
-| `01 — MFA setup`; source nodes `2:139549`, `2:140341`, `2:139090` | Correlated with `IAM-01` to `IAM-03` | Setup, enrollment, and recovery-entry artifact/state evidence | Names, emails, comments, credentials, and internal URLs are concrete risks to flag for Mason if selected. |
+| `01 — MFA setup`; source nodes `2:139549`, `2:140341`, `2:139090` | Correlated with `IAM-01` to `IAM-03` | Setup, enrollment, and recovery-entry artifact/state evidence | Mason confirmed the visible user and account data is mock data. Comments, credentials, and internal URLs remain concrete selection risks. |
 | `02 — Login & authentication`; source nodes `2:139889`, `2:138588`, `2:139885` | Correlated with the MFA evidence family | Login, enforcement, retry, and recovery-route evidence | Exact lifecycle and shipment are unresolved. |
 | `03 — Recovery & disable flows`; source nodes `2:138949`, `2:138955`, `2:137609` | Correlated with `IAM-01` to `IAM-03` | Recovery-code, reset, disablement, and consequence copy | Recovery-email and credential-bearing states contain concrete risks for Mason to consider. |
-| `04 — Admin enforcement`; source node `2:139900` | Contextual to `IAM-02` | Administrator expectation and enforcement-state evidence | The long source may contain personal data or internal identifiers; flag any found for Mason. |
+| `04 — Admin enforcement`; source node `2:139900` | Contextual to `IAM-02` | Administrator expectation and enforcement-state evidence | Visible user and account data is mock data. Flag internal identifiers or unfinished states if selected. |
 | `80 — Copy & components` | Figma-supported or contextual only | Private content-pattern and component-process context | Canvas notes and comments do not prove contribution, lifecycle, or outcome. |
 | Historical, alias, and cross-domain pages `81–102` | Figma-only, contextual, or unresolved | Provenance and duplicate comparison only | They are not Account Security claim homes or public export sources. |
 

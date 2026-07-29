@@ -56,6 +56,18 @@ every story into the same sections. Do not add retired-route placeholders.
   unnecessary controls.
 - Keep media at its natural proportions. Never use `object-fit: cover`, fixed
   aspect ratios, or arbitrary positioning that hides evidence.
+- When a complete screen establishes the product structure, keep it as
+  contextual evidence and add focused crops or typeset excerpts when the exact
+  writing would otherwise be illegible. Do not treat complete screens and
+  detail evidence as mutually exclusive.
+- Put comparison labels above their visuals and captions below. Use one
+  consistent `Before:` / `After:` label pattern within a comparison, do not
+  repeat those labels in the captions, and keep each caption aligned to and no
+  wider than its own visual.
+- Paired visuals must sit on the same visible plane. Remove accidental baked-in
+  whitespace or correct the presentation frame when one asset creates an
+  unmatched band, height, or vertical offset; never hide evidence with cropping
+  merely to force symmetry.
 - The `chapter-shell` and `chapter-page` classes are reusable presentation
   tools, not a visual baseline or acceptance rule. Change their measure,
   spacing, media scale, or use in a case when its approved story and evidence
@@ -90,6 +102,10 @@ node --test tests/rendered-html.test.mjs
 
 Use browser inspection for behavior that static checks cannot prove. Do not
 create screenshots or recordings unless Mason asks for them.
+
+When Mason is actively reviewing a local route, do not hand off a site change
+until the hot-reload preview is running and the changed route returns HTTP 200.
+This is local preview continuity, not publication or production deployment.
 
 ## Narrative and visual acceptance
 

@@ -45,11 +45,13 @@ for current wording.
 ### 4. Supported a checkout experiment associated with purchase growth
 
 - **Growth objective:** Reduce checkout friction and improve paid-plan conversion.
-- **Mason's contribution:** Contributed content iterations and clarity improvements for DM-1418. The export does not establish that Mason owned the flow or experiment.
-- **Concrete outcome candidate:** **3.02% increase in Pro purchases**, approximately **100 additional purchases per day**, and about **€2.4M incremental ARR**.
-- **Evidence status:** **Supported by a retained partial source excerpt.** The
-  original experiment-canvas PDF and complete context are absent. Confirm that
-  the rendered checkout flow is the same flow before using these numbers.
+- **Mason's contribution:** Contributed content iterations and clarity improvements within the cross-functional DM-1418 experiment. Do not claim sole ownership of the flow or test.
+- **Concrete experiment outcome:** **3.02% increase in Pro purchases** (approximately **100 additional purchases per day**), **3.07% increase in `subscribed_net_35d`** (approximately **60 additional subscriptions per day**), and about **€2.4M incremental ARR**.
+- **Evidence status:** **Supported by a retained direct partial source excerpt
+  and Mason's performance-review account.** Use the numbers at DM-1418
+  experiment level. The absent original canvas binary is a historical source
+  limitation, not a use gate. Exact visual linkage is required only before
+  calling a visible frame the tested or winning variant.
 - **Source:** `conversations-015.json`, conversation `67934ac4-b938-8006-acc7-78ae99eacfce`; `conversations-018.json`, conversation `67d2da73-0148-8006-83c3-1bbb62aab9cb`.
 
 ### 5. Supported a soft-block experiment associated with user growth

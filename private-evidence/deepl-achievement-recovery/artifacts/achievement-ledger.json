@@ -476,12 +476,12 @@
       "team": "Monetization",
       "initiative": "DM-1418 checkout-flow simplification",
       "achievement": "Contributed content iterations to a checkout-flow experiment intended to remove friction and clarify plan information.",
-      "contribution": "Supported messaging and content refinement within a cross-functional experiment; the export does not establish that Mason designed the flow or owned the test.",
-      "outcome": "A direct partial canvas excerpt reports a 3.02% lift in Pro purchases and 100 additional purchases per day.",
+      "contribution": "Contributed content iterations and clarity improvements within a cross-functional experiment. Do not claim that Mason solely designed the flow or owned the test.",
+      "outcome": "A direct partial canvas excerpt reports a 3.02% lift in Pro purchases, 100 additional purchases per day, a 3.07% lift in subscribed_net_35d, 60 additional subscriptions per day, and €2.4M in incremental ARR.",
       "metrics": [
         {
-          "claim": "3.02% increase in Pro purchases, about 100 additional purchases per day, and €2.4M incremental ARR",
-          "status": "supported_retained_partial: direct canvas excerpt retained; original PDF absent; confirm the rendered flow matches before external use"
+          "claim": "3.02% increase in Pro purchases, about 100 additional purchases per day, 3.07% increase in subscribed_net_35d, about 60 additional subscriptions per day, and €2.4M incremental ARR",
+          "status": "supported_retained_partial: direct canvas excerpt retained; use at DM-1418 experiment level; exact visual linkage is required only for a tested- or winning-variant claim"
         }
       ],
       "confidence": "supported_retained_partial",

@@ -1,20 +1,20 @@
 # Pricing evolution project evidence
 
-Status: Frozen at Mason's direction. Evidence-recovery history, private records,
-and the unapproved pricing route remain preserved. Do not resume Pricing
-proposal, narrative, evidence-reconstruction, Figma, or site work unless Mason
-explicitly reopens it.
+Status: Drafts rejected; subject open. Mason rejected the Step 23 narrative,
+the Step 24 verdict, and the attempted repair on 2026-07-27. The route stays
+frozen in place until a new direction is approved, but the Pricing subject is
+available for a new story.
 
 This is the active private index for the pricing evolution and Write Pro
 recovery work. It routes readers to the records that own or support each part
 of the work. Mason chooses the story, claims, assets, and implementation.
 
 The rejected public pricing cases, private drafts, and rendered
-`/work/pricing-evolution` route remain preserved. None is a current candidate or
-an active review assignment. In particular,
+`/work/pricing-evolution` route remain preserved and may not be used as rewrite
+sources. In particular,
 [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md) is a
 preserved rejected candidate, not accepted narrative truth. The recovery plan
-records completed work and the freeze; it does not authorize continuation.
+records completed work only.
 
 Step 16 raw extraction and the Step 17 resume tracker are complete. The raw
 ledger covers 69 pages and 1,190 selected top-level roots. Step 18 reviewed all
@@ -53,7 +53,7 @@ from portfolio reconstructions created in 2026.
 
 | Area | Owner or supporting record | Current status |
 | --- | --- | --- |
-| Work status | [`deepl-project-candidate-queue.md`](../../deepl-project-candidate-queue.md) | Current freeze and disposition owner. The recovery plan below preserves the completed-work record only. |
+| Work status | [`deepl-project-candidate-queue.md`](../../deepl-project-candidate-queue.md) | Current route-state and disposition owner. The recovery plan below preserves the completed-work record only. |
 | Portfolio allocation and story diagnosis | [`portfolio-allocation-and-story-diagnosis.md`](portfolio-allocation-and-story-diagnosis.md) | Preserved Phase 6 evidence allocation. Its prior title, format, diagnosis, and narrative do not authorize new Pricing work. |
 | Chronology | [`pricing-evolution-chronology.md`](pricing-evolution-chronology.md) | Active dated sequence linking public product states, private direct-source work, and bounded unknowns. |
 | Contribution recovery | [`pricing-evolution-contribution-map.md`](pricing-evolution-contribution-map.md) and [`achievement-ledger.json`](../../deepl-achievement-recovery/artifacts/achievement-ledger.json) | Active separation of Write Pro launch work, the June-July Translator grid change, naming, repeatable review tooling, and Pricing Page V2. The ledger now states that Mason contributed to the cumulative structure that shipped while preserving the remaining claim limits. |
@@ -75,7 +75,7 @@ from portfolio reconstructions created in 2026.
   — preserved Phase 6 evidence allocation and rejected direction record. It is
   not a current story or layout baseline.
 - [`pricing-evolution-recovery-plan.md`](pricing-evolution-recovery-plan.md)
-  — preserved completed-work record; it does not own the current freeze or
+  — preserved completed-work record; it does not own the current route state or
   disposition.
 - [`ux-content-design-portfolio-deep-research-report-2026-07-27.md`](../../../archive/research/portfolio-method/ux-content-design-portfolio-deep-research-report-2026-07-27.md)
   — archived market and portfolio research input. Its citation markers are
@@ -119,7 +119,7 @@ Frozen, unapproved route:
 Other preserved records:
 
 - [`deepl-portfolio-current-direction.md`](../../deepl-portfolio-current-direction.md)
-  — current public-slate owner and binding Pricing freeze.
+  — current public-slate owner and current Pricing status.
 - [`pricing-evolution-story-spec.md`](pricing-evolution-story-spec.md)
   — preserved rejected candidate, not an accepted pricing-story owner.
 

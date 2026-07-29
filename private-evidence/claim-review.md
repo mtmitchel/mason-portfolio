@@ -1,6 +1,6 @@
 # Current portfolio claim review
 
-**Updated:** 2026-07-27
+**Updated:** 2026-07-29
 **Status:** Current claim owner
 
 This file states what the current portfolio may say. The
@@ -28,6 +28,13 @@ not override Mason's account of collaborative involvement. Every Figma frame,
 page, component, or mockup retains a margin of error, even when it resembles
 production. `Canonical` means a current organizing destination, not final,
 untouchable, or ultimate truth.
+
+The portfolio standard is an honest, interview-defensible account, not a
+complete chain of custody. A representative working artifact may illustrate a
+supported product area, flow, or content problem without being the exact tested
+or production file. Require exact file or variant linkage only when the public
+claim identifies that artifact as the tested, winning, approved, shipped, or
+production state.
 
 ## Portfolio-wide claims
 
@@ -112,13 +119,28 @@ untouchable, or ultimate truth.
 - Prices, discounts, limits, and usage rates may be described only as visible
   historical offer content. They are not outcome metrics.
 
-## Checkout across four purchase states
+## Checkout and DM-1418 simplification experiment
 
-- Include visible product, seat, price, timing, consent, and action differences.
-- Describe agreement between selected controls and the order summary only where
-  it is visible.
-- Do not claim a conversion result, a single source-of-truth model, sole
-  ownership, or causation.
+- State that DM-1418 was a Monetization-team initiative and that Mason
+  partnered with the product designer on content iterations and clarity
+  improvements within the cross-functional experiment.
+- Describe the supported experiment changes: removing the separate review
+  step, moving plan features onto the details screen, and changing active
+  consent to passive consent.
+- Attribute the measured result to the DM-1418 experiment: a **3.02% increase
+  in Pro purchases** (about **100 additional purchases per day**), a **3.07%
+  increase in `subscribed_net_35d`** (about **60 additional subscriptions per
+  day**), and about **€2.4M in incremental ARR**.
+- The simplification experiment covered both monthly and annual subscriptions.
+  Frames with annual billing selected are representative examples, not the
+  boundary of the experiment.
+- Representative checkout frames may illustrate the flow and content problem.
+  Do not call one the exact tested or winning variant unless that identity is
+  established.
+- Additional purchase states may support a broader checkout story when their
+  separate scopes are clear. Do not claim Mason owned the flow or test, that
+  his copy alone caused the result, or that every visible state was part of
+  DM-1418.
 
 ## Account recovery and team administration
 

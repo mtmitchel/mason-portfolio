@@ -1,148 +1,62 @@
 import Link from "next/link";
 import { ChapterBackLink, ChapterFigure } from "../../components/ChapterCaseElements";
-import EvidenceSwitcher from "../../components/EvidenceSwitcher";
 import ImageComparison from "../../components/ImageComparison";
 import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
-import type { StoryEvidenceView, StoryImage } from "../portfolioTypes";
+import type { StoryImage } from "../portfolioTypes";
 
-const trialSignUpFull: StoryImage = {
-  label: "Trial sign-up",
-  src: "/work/checkout/start-my-free-trial.png",
-  width: 3024,
-  height: 1800,
-  alt: "DeepL account-creation screen headed Start my 30-day free trial",
-  caption: "Repeat the selected trial in the heading while keeping account creation as the button action.",
+const detailsBefore: StoryImage = {
+  label: "Checkout Details before Review was removed",
+  src: "/work/checkout/details-before-full.png",
+  width: 2880,
+  height: 2608,
+  alt: "Three-step DeepL checkout with Account completed, Details active, and Review still ahead",
+  caption: "Customers chose billing and entered payment here, but the progress indicator still sent them onward before they could subscribe.",
 };
 
-const bundleFull: StoryImage = {
-  label: "Bundle checkout",
-  src: "/work/checkout/bundle-checkout.png",
-  width: 3024,
-  height: 2864,
-  alt: "DeepL checkout for a Translator and Write Pro bundle with plan, billing, payment and order summary",
-  caption: "Keep both products, the combined price, trial timing and final commitment together in the order summary.",
+const reviewBefore: StoryImage = {
+  label: "Separate Review step before checkout was shortened",
+  src: "/work/checkout/review-before-full.png",
+  width: 2880,
+  height: 2608,
+  alt: "DeepL Review screen repeating the selected plan, trial, price, payment details, features, consent, and purchase action",
+  caption: "A separate page repeated the plan, trial, price, and payment details before collecting consent and the final action.",
 };
 
-const teamFull: StoryImage = {
-  label: "Team purchase",
-  src: "/work/checkout/team-license-checkout.png",
-  width: 3024,
-  height: 2864,
-  alt: "DeepL checkout for twenty team licenses with seat-adjusted pricing and plan details",
-  caption: "Keep 20 users consistent across the selector, order summary, savings and included allowances.",
+const detailsAfter: StoryImage = {
+  label: "Consolidated Details step in the two-step checkout",
+  src: "/work/checkout/details-after-full.png",
+  width: 2560,
+  height: 4058,
+  alt: "Two-step DeepL checkout with plan information, payment entry, consent, and the Begin subscription action consolidated in Details",
+  caption: "In the two-step flow, Details carries the offer, payment entry, consent, and subscription action on one screen.",
 };
 
-const noTrialFull: StoryImage = {
-  label: "No-trial checkout",
-  src: "/work/checkout/no-trial-ultimate-checkout.png",
-  width: 3024,
-  height: 2738,
-  alt: "DeepL checkout without a free trial showing the immediate charge and withdrawal acknowledgement",
-  caption: "Remove the trial promise, show the amount due today and add the immediate-start acknowledgement.",
+const reviewConsent: StoryImage = {
+  label: "Consent and purchase action on the old Review screen",
+  src: "/work/checkout/review-consent-action.png",
+  width: 1600,
+  height: 629,
+  alt: "Required acceptance checkbox followed by a Buy now button and trial cancellation reassurance",
+  caption: "Consent required a separate checkbox before customers could press Buy now.",
 };
 
-const trialSignUpDetail: StoryImage = {
-  label: "Trial sign-up detail",
-  src: "/work/checkout/trial-sign-up-detail.png",
-  width: 1200,
-  height: 1220,
-  alt: "Detail of DeepL account creation showing the 30-day trial heading and account form",
-  caption: "Repeat the selected 30-day trial in the page heading while keeping account creation as the button action.",
+const detailsConsent: StoryImage = {
+  label: "Consent and subscription action in the new Details screen",
+  src: "/work/checkout/details-consent-action.png",
+  width: 1500,
+  height: 590,
+  alt: "Consent statement above a Begin subscription button and three trial reassurance messages",
+  caption: "The action area explains what Begin subscription authorizes and keeps the trial terms beside the button.",
 };
 
-const bundleDetail: StoryImage = {
-  label: "Bundle checkout detail",
-  src: "/work/checkout/bundle-checkout-detail.png",
-  width: 2500,
-  height: 1500,
-  alt: "Detail of a DeepL bundle checkout showing Translator and Write, trial timing and the order summary",
-  caption: "Keep both products and one user visible beside €0 due today, the later charge and “Begin subscription.”",
+const dueTodaySummary: StoryImage = {
+  label: "Trial price summary",
+  src: "/work/checkout/due-today-summary.png",
+  width: 800,
+  height: 736,
+  alt: "DeepL order summary showing zero euros due today and 299 euros 88 cents per year after the trial",
+  caption: "€0 due today answers the immediate question first; the annual price remains visible as the later commitment.",
 };
-
-const teamDetail: StoryImage = {
-  label: "Team checkout detail",
-  src: "/work/checkout/team-purchase-detail.png",
-  width: 2500,
-  height: 1500,
-  alt: "Detail of a DeepL team checkout showing twenty users, price, savings and included allowances",
-  caption: "Repeat 20 users in the selector and order summary, then update price, savings and allowances to match.",
-};
-
-const noTrialDetail: StoryImage = {
-  label: "No-trial checkout detail",
-  src: "/work/checkout/no-trial-checkout-detail.png",
-  width: 2500,
-  height: 1500,
-  alt: "Detail of a DeepL no-trial checkout showing the immediate charge and withdrawal acknowledgement",
-  caption: "Remove the trial promise, show the amount due today and add the immediate-start acknowledgement before purchase.",
-};
-
-const trialFaqCollapsed: StoryImage = {
-  label: "Trial questions collapsed",
-  src: "/work/checkout/trial-faq-collapsed.png",
-  width: 1080,
-  height: 1590,
-  alt: "DeepL trial checkout summary with collapsed questions about cancellation, charge timing and included Pro features",
-  caption: "Three questions surface the uncertainties most likely to block a trial decision without competing with the order summary.",
-};
-
-const trialFaqExpanded: StoryImage = {
-  label: "Trial questions expanded",
-  src: "/work/checkout/trial-faq-expanded.png",
-  width: 1080,
-  height: 1900,
-  alt: "DeepL trial checkout summary with expanded answers about cancellation, credit-card charge timing and included Pro features",
-  caption: "The expanded state answers cancellation first, then explains charge timing and what the trial includes.",
-};
-
-const completeStates: StoryEvidenceView[] = [
-  {
-    id: "bundle",
-    label: "Bundle",
-    summary: "Both products, the combined price, trial timing and the final commitment stay visible together.",
-    image: bundleFull,
-  },
-  {
-    id: "trial",
-    label: "Trial sign-up",
-    summary: "The selected trial promise carries into account creation without changing the immediate action.",
-    image: trialSignUpFull,
-  },
-  {
-    id: "team",
-    label: "Team",
-    summary: "Seat count updates the price, savings and included allowances as one connected state.",
-    image: teamFull,
-  },
-  {
-    id: "no-trial",
-    label: "No trial",
-    summary: "The trial promise disappears, the immediate charge becomes explicit and consent changes with it.",
-    image: noTrialFull,
-  },
-];
-
-function EvidenceSection({
-  id,
-  image,
-  intro,
-  title,
-}: {
-  id: string;
-  image: StoryImage;
-  intro: string;
-  title: string;
-}) {
-  return (
-    <section className="chapter-section" id={id}>
-      <h2 className="chapter-heading">{title}</h2>
-      <div className="chapter-blocks">
-        <div className="chapter-prose"><p>{intro}</p></div>
-        <ChapterFigure image={image} measure={id === "trial-sign-up" ? "compact" : "wide"} />
-      </div>
-    </section>
-  );
-}
 
 export default function CheckoutCase() {
   return (
@@ -152,97 +66,154 @@ export default function CheckoutCase() {
         <ChapterBackLink />
 
         <header className="chapter-hero">
-          <h1>Checkout across four purchase states</h1>
+          <h1>How shortening DeepL&apos;s checkout flow added €2.4M ARR</h1>
+          <p className="checkout-meta">DeepL · Monetization team · 2024</p>
           <div className="chapter-synopsis">
-            <p>A checkout cannot repeat one promise when the product mix, seat count, trial eligibility, and payment timing all change.</p>
-            <p>Working on UX writing and checkout content iterations with product design, content design, and monetization, my job was to keep the offer coherent as each purchase condition changed.</p>
-            <p>Across four parallel working states, the product, price, seats, timing, consent, and reassurance stay aligned—from account creation through the order summary.</p>
+            <p>I partnered with a product designer on DeepL&apos;s Monetization team to remove the final <strong>Review</strong> step while keeping pricing, trial, payment, and consent clear inside <strong>Details</strong>.</p>
+            <p>The experiment shortened checkout from three steps to two across monthly and annual subscriptions. It increased both immediate purchases and subscriptions still active at the later 35-day measurement point.</p>
           </div>
+          <dl className="checkout-impact" aria-label="Two-step checkout experiment results">
+            <div className="checkout-impact-item checkout-impact-item--primary">
+              <dt>Incremental ARR</dt>
+              <dd>+€2.4M</dd>
+            </div>
+            <div className="checkout-impact-item">
+              <dt>Pro purchases</dt>
+              <dd>+3.02%</dd>
+            </div>
+            <div className="checkout-impact-item">
+              <dt>35-day net subscriptions</dt>
+              <dd>+3.07%</dd>
+            </div>
+          </dl>
         </header>
 
-        <EvidenceSection
-          id="trial-sign-up"
-          title="Carry the trial into account creation"
-          intro="Account creation appears after trial selection, so the selected offer remains visible during sign-up."
-          image={trialSignUpDetail}
-        />
-
-        <EvidenceSection
-          id="bundle-checkout"
-          title="Keep a two-product offer visible at commitment"
-          intro="The bundle state brings two products into a one-user order."
-          image={bundleDetail}
-        />
-
-        <EvidenceSection
-          id="team-purchase"
-          title="Scale the order to a team"
-          intro="Seat count changes several values at once: total price, savings and plan allowances."
-          image={teamDetail}
-        />
-
-        <EvidenceSection
-          id="no-trial-checkout"
-          title="Change timing and consent when no trial applies"
-          intro="Trial eligibility changes when payment starts and what the customer acknowledges."
-          image={noTrialDetail}
-        />
-
-        <section className="chapter-section" id="trial-questions">
-          <h2 className="chapter-heading">Answer the questions that can stop the purchase</h2>
+        <section className="chapter-section" id="harder-content-problem">
+          <h2 className="chapter-heading">One less step created a harder content problem</h2>
           <div className="chapter-blocks">
             <div className="chapter-prose">
-              <p>In a separate trial-checkout exploration, the order summary already states price and timing, but a customer can still hesitate over cancellation, card charges, and what the trial includes. The FAQ keeps those questions inside the purchase context instead of sending the customer to the help center.</p>
-              <p>The collapsed state makes all three concerns scannable. The expanded state answers directly, putting the temporary verification charge inside the payment answer instead of turning it into a competing warning.</p>
+              <p>The old checkout divided the purchase across three steps. Customers selected a plan and entered payment information in <strong>Details</strong>, then continued to <strong>Review</strong> to confirm the price, trial, payment timing, consent, and final action.</p>
+              <p>Removing <strong>Review</strong> made the journey faster, but it also placed more responsibility on the remaining screen. <strong>Details</strong> now had to collect payment and explain the complete subscription commitment at the same time.</p>
+              <p>The task was not simply to delete what <strong>Review</strong> repeated. It was to decide what still mattered, where customers needed it, and what form it should take in the shorter flow.</p>
+              <p className="checkout-evidence-note">These representative working states come from different iterations. They show how the purchase was divided between <strong>Details</strong> and <strong>Review</strong>, rather than one continuous customer session.</p>
             </div>
-            <div className="chapter-media">
+            <div className="chapter-media checkout-structure-comparison">
               <ImageComparison
-                ariaLabel="Collapsed and expanded trial questions beside the checkout order summary"
+                ariaLabel="The old Details and Review screens"
                 chrome="overlay"
                 dialogPresentation="minimal"
                 dialogSizes="1440px"
                 items={[
-                  { label: "Questions visible", image: trialFaqCollapsed },
-                  { label: "Answers visible", image: trialFaqExpanded },
+                  { label: "Before: Details", image: detailsBefore, tallDialog: true },
+                  { label: "Before: Review", image: reviewBefore, tallDialog: true },
                 ]}
-                sizes="(max-width: 928px) calc(100vw - 48px), 880px"
+                sizes="(max-width: 720px) calc(100vw - 48px), 424px"
               />
             </div>
           </div>
         </section>
 
-        <section className="chapter-section" id="complete-purchase-states">
-          <h2 className="chapter-heading">Explore the complete purchase states</h2>
+        <section className="chapter-section" id="rebuilding-details">
+          <h2 className="chapter-heading">Rebuilding the purchase decision inside Details</h2>
           <div className="chapter-blocks">
             <div className="chapter-prose">
-              <p>Choose a tab to follow product, price, timing, and consent through one complete working state. These are parallel purchase conditions, not a before-and-after sequence.</p>
+              <p>Working with the product designer, I reorganized the purchase information around the questions customers needed answered before committing: What am I starting? What will I pay today? What will I pay after the trial? When does the trial end? What does pressing the final button authorize?</p>
+              <p>I treated the work as a redistribution problem: move decision-critical information forward, change its form when the old interaction no longer made sense, and remove only genuine repetition.</p>
             </div>
-            <div className="chapter-media chapter-media--reading">
-              <EvidenceSwitcher
-                ariaLabel="Choose a complete checkout state"
+            <ChapterFigure image={detailsAfter} measure="reading" />
+            <dl className="checkout-decision-list">
+              <div>
+                <dt>Moved forward</dt>
+                <dd>The selected plan, trial, price, and features stayed visible before commitment.</dd>
+              </div>
+              <div>
+                <dt>Changed form</dt>
+                <dd>Consent moved into the final action area, and <strong>Buy now</strong> became <strong>Begin subscription</strong>.</dd>
+              </div>
+              <div>
+                <dt>Consolidated</dt>
+                <dd>The repeated Review page disappeared without stripping out the decision it carried.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section className="chapter-section" id="payment-timing">
+          <h2 className="chapter-heading">Making a free trial feel free—without hiding the annual price</h2>
+          <div className="chapter-blocks">
+            <div className="chapter-prose">
+              <p>A 30-day trial creates two financial moments: what the customer owes now and what they will owe if they continue after the trial.</p>
+              <p>Giving both numbers equal prominence could make a free trial feel like an immediate €299.88 purchase. Emphasizing only €0 could make the later commitment too easy to miss.</p>
+              <p>The revised hierarchy answered the immediate question first—<strong>€0 due today</strong>—while keeping the annual charge directly beneath it as the next financial obligation. This working order-summary treatment shows that hierarchy in isolation.</p>
+            </div>
+            <ChapterFigure image={dueTodaySummary} measure="compact" />
+            <div className="chapter-prose checkout-transition">
+              <p>Clarifying the price settled what the customer would pay. The final action still had to explain what they were agreeing to.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="chapter-section" id="consent-and-action">
+          <h2 className="chapter-heading">Turning consent into a clearer final action</h2>
+          <div className="chapter-blocks">
+            <div className="chapter-prose">
+              <p>In the old flow, customers accepted the terms through a required checkbox on <strong>Review</strong>, then pressed <strong>Buy now</strong>. That label no longer matched the redesigned experience: customers were beginning a 30-day trial, not making an immediate payment.</p>
+              <p>In the shorter flow, I rewrote the action area so the consent statement explained what pressing the button meant. <strong>Begin subscription</strong> described the action more accurately, while the supporting lines answered the final questions about payment, cancellation, and the trial period.</p>
+            </div>
+
+            <div className="checkout-copy-comparison" role="group" aria-label="Consent and subscription action before and after checkout simplification">
+              <div className="checkout-copy-column">
+                <h3>Before: consent on Review</h3>
+                <div className="checkout-copy-panel checkout-copy-panel--before">
+                  <blockquote>
+                    I accept the Terms &amp; Conditions, Service Specification, and confirm that I have read and understood my Right of Withdrawal as a consumer.
+                  </blockquote>
+                  <span className="checkout-copy-action checkout-copy-action--before">Buy now</span>
+                </div>
+              </div>
+              <div className="checkout-copy-column">
+                <h3>After: consent in Details</h3>
+                <div className="checkout-copy-panel checkout-copy-panel--after">
+                  <blockquote>
+                    By pressing the &quot;Begin subscription&quot; button, you accept the DeepL Pro Terms and Conditions including the Service Specifications. Consumers have a 14-day Right of Withdrawal.
+                  </blockquote>
+                  <span className="checkout-copy-action checkout-copy-action--after">Begin subscription</span>
+                  <ul className="checkout-copy-reassurance" aria-label="Trial reassurance">
+                    <li>30-day trial included</li>
+                    <li>No payment until end of trial</li>
+                    <li>Cancel anytime</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="chapter-media checkout-action-comparison">
+              <ImageComparison
+                ariaLabel="The consent and action area before and after checkout simplification"
+                chrome="overlay"
                 dialogPresentation="minimal"
                 dialogSizes="1440px"
-                initialId="bundle"
-                presentation="quiet"
-                sizes="(max-width: 928px) calc(100vw - 48px), 740px"
-                views={completeStates}
+                items={[
+                  { label: "Before: separate acceptance", image: reviewConsent },
+                  { label: "After: integrated consent", image: detailsConsent },
+                ]}
+                sizes="(max-width: 720px) calc(100vw - 48px), 424px"
               />
             </div>
           </div>
         </section>
 
-        <section className="chapter-closing" id="observable-ending">
-          <h2 className="chapter-heading chapter-heading--closing">Observable ending</h2>
-          <div className="chapter-prose">
-            <p>The selected working states keep the plan controls and order summary in agreement. Trial purchases show €0 due today and the later charge; the no-trial purchase shows the immediate charge and adds consent for service to start now.</p>
-            <p>In a separate FAQ exploration, the collapsed view keeps the answer close to the order; expanding it explains both the free period and the later monthly charge without sending the customer elsewhere.</p>
+        <section className="chapter-closing" id="experiment-result">
+          <h2 className="chapter-heading chapter-heading--closing">The simpler checkout increased purchases—and the lift held</h2>
+          <div className="chapter-prose checkout-result-summary">
+            <p>The two-step checkout increased Pro purchases by 3.02%. The 3.07% increase in 35-day net subscriptions showed that the lift remained at a later measurement point, not only at purchase.</p>
+            <p>My contribution was making the shorter flow easier to understand at the point of commitment: clarifying the trial and price, aligning the action with what customers were actually doing, and keeping consent explicit without restoring another step.</p>
           </div>
         </section>
 
-        <nav className="next-project" aria-label="Next project">
-          <span>Next project</span>
+        <nav className="next-project next-project--compact" aria-label="Next project">
           <Link href="/work/account-team-security">
-            Account recovery and team administration
+            Next
             <b aria-hidden="true">→</b>
           </Link>
         </nav>

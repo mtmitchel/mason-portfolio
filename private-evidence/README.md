@@ -48,7 +48,11 @@ are evidence and working records, not deployable site content.
   generated MP4 files behind the selected homepage loops.
 - [`source-exports/figma/`](source-exports/figma/) — retained direct Checkout,
   MFA, pricing, Write Pro, team-administration, Product Naming, and Voice source
-  frames.
+  frames, plus the organized
+  [`2026-07-28 evidence batches`](source-exports/figma/evidence-batches/2026-07-28/README.md)
+  for Checkout, upgrade prompts, sign-up pressure, IAM, and ATE. Copy-different
+  and visually similar variants remain separate; the batch manifest maps
+  repeated source members that are byte-for-byte identical.
 - [`source-exports/public-product-pages/`](source-exports/public-product-pages/)
   — private reference captures and selected source illustrations from public
   DeepL product surfaces.
