@@ -1,0 +1,293 @@
+
+/* Pricing case layout. */
+
+/* The page is a single column with slightly wider figures, not a wide container
+   holding a narrow text block. At 1120px the prose ended 380px short of the
+   media edge, which marooned every paragraph on the left and let the evidence
+   dominate the reading column. The header and footer follow the same measure,
+   or the site chrome hangs 120px outside the column it sits above. */
+.chapter-page {
+  width: min(100% - 48px, 880px);
+  margin-inline: auto;
+  padding: 0 0 76px;
+}
+
+.pricing-shell .site-header,
+.pricing-shell .site-footer,
+.chapter-shell .site-header,
+.chapter-shell .site-footer {
+  width: min(100% - 48px, 880px);
+}
+
+.chapter-page > .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.chapter-page > .back-link > svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.chapter-page > .back-link > span {
+  display: block;
+  line-height: 1;
+}
+
+.chapter-hero {
+  width: 100%;
+  margin-inline: auto;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.chapter-hero h1 {
+  width: min(100%, 740px);
+  margin: 0;
+  font-size: clamp(2.3rem, 6vw, 3.35rem);
+  font-weight: 520;
+  letter-spacing: -.045em;
+  line-height: 1.02;
+}
+
+.chapter-synopsis {
+  width: min(100%, 740px);
+  margin: 24px 0 0;
+}
+
+.chapter-synopsis p {
+  margin: 0 0 20px;
+  color: #3f4943;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.chapter-synopsis p:last-child { margin-bottom: 0; }
+
+.chapter-section { margin: 0; }
+
+.chapter-heading {
+  width: min(100%, 740px);
+  margin: 128px 0 36px;
+  font-size: clamp(1.55rem, 3.6vw, 1.95rem);
+  font-weight: 540;
+  letter-spacing: -.03em;
+  line-height: 1.2;
+}
+
+.chapter-hero + .chapter-section .chapter-heading {
+  margin-top: 88px;
+}
+
+.chapter-heading--closing { margin-top: 128px; }
+
+.chapter-heading-title { font-weight: 540; }
+
+.chapter-blocks {
+  display: grid;
+  gap: 64px;
+}
+
+.chapter-blocks > * {
+  width: min(100%, 740px);
+}
+
+.chapter-blocks > .chapter-media {
+  width: min(100%, 880px);
+}
+
+/* Voice is two cards where Write and API are three. Given the full 880px
+   measure its two cards blow up to ~430px each against API's ~293px, and the
+   block runs ~873px tall. Match the card, not the block: two thirds of the
+   measure puts a Voice card at ~295px, level with API's. Width-driven on
+   purpose — capping image height collapses images that have not loaded.
+   Center only the preview; the caption stays on the 740px text edge. */
+#product-patterns [id$="-panel-voice"] .evidence-preview {
+  width: min(100%, 587px);
+  margin-inline: auto;
+}
+
+.chapter-page .chapter-media .evidence-figure,
+.chapter-page .chapter-media .evidence-button,
+.chapter-page .chapter-media .evidence-preview {
+  width: 100%;
+}
+
+.chapter-prose > p {
+  margin: 0 0 20px;
+  color: #3f4943;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.chapter-prose > p:last-child { margin-bottom: 0; }
+
+.chapter-media { width: 100%; }
+
+.chapter-figure {
+  width: 100%;
+  margin: 0;
+}
+
+.chapter-figure .evidence-preview {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid #dde2dd;
+  border-radius: 6px;
+}
+
+.chapter-figure .evidence-preview img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+}
+
+.chapter-figure .evidence-figure figcaption {
+  max-width: 740px;
+  margin: 12px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.chapter-page .evidence-switcher--quiet .evidence-figure figcaption {
+  max-width: 740px;
+  margin-top: 16px;
+  color: var(--quiet);
+  text-align: left;
+}
+
+/* No frame. The 24px pad and its near-invisible #dde2dd border read as dead
+   space rather than as a mat, and the same border is what full-width crops
+   appeared to collide with. Screenshots now sit directly on the page, so the
+   image edge is the text edge and the crop supplies its own boundary. */
+.pricing-page .evidence-preview,
+.pricing-page .story-comparison-item .evidence-preview {
+  padding: 0;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Pricing expanded evidence: wider panel, scrollable image pane, and a
+   materially larger crop. Horizontal overflow stays inside the image pane. */
+.pricing-page .lightbox-panel--minimal {
+  display: flex;
+  flex-direction: column;
+  width: min(96vw, 1600px);
+  max-height: 94vh;
+  overflow: hidden;
+}
+
+.pricing-page .lightbox-panel--minimal .lightbox-image {
+  flex: 1 1 auto;
+  min-height: 0;
+  justify-content: flex-start;
+  padding: 24px;
+  overflow: auto;
+}
+
+.pricing-page .lightbox-panel--minimal .lightbox-image img {
+  align-self: flex-start;
+  flex: 0 0 auto;
+  width: max(100%, 1440px);
+  max-width: none;
+  height: auto;
+}
+
+.pricing-page .lightbox-panel--minimal > p {
+  max-width: 740px;
+}
+
+.chapter-case-page .lightbox-panel--minimal {
+  display: flex;
+  flex-direction: column;
+  width: min(96vw, 1600px);
+  max-height: 94vh;
+  overflow: hidden;
+}
+
+.chapter-case-page .lightbox-panel--minimal .lightbox-image {
+  flex: 1 1 auto;
+  min-height: 0;
+  justify-content: flex-start;
+  padding: 24px;
+  overflow: auto;
+}
+
+.chapter-case-page .lightbox-panel--minimal .lightbox-image img {
+  align-self: flex-start;
+  flex: 0 0 auto;
+  width: max(100%, 1440px);
+  max-width: none;
+  height: auto;
+}
+
+.chapter-case-page .lightbox-panel--minimal > p {
+  max-width: 740px;
+}
+
+/* Width-driven, never height-driven. `width: auto` with a max-height was tried
+   to even out the switcher's differing proportions and reverted: it sizes from
+   the delivered bitmap rather than the column, so a short crop rendered at its
+   own 597px instead of filling the measure, and an image that had not loaded
+   yet collapsed to zero and reserved no space at all. */
+.pricing-page .evidence-preview img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+}
+
+.pricing-page .evidence-switcher--quiet .evidence-figure,
+.pricing-page .story-comparison-item .evidence-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Every caption on this page shares the prose measure, whichever component
+   renders it. Figures otherwise fall through to the 760px base rule, because
+   `.chapter-figure` belongs to the checkout and upgrade-prompts cases and never
+   matches this page's markup — which left two of the nine captions 20px wider
+   than the other seven. */
+.pricing-page .chapter-media .evidence-figure figcaption {
+  max-width: 740px;
+  width: 100%;
+  margin: 14px 0 0;
+  text-align: left;
+}
+
+.chapter-closing {
+  width: 100%;
+  margin-inline: auto;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.chapter-closing .chapter-prose,
+.chapter-page .next-project {
+  width: min(100%, 740px);
+  margin-inline: 0;
+}

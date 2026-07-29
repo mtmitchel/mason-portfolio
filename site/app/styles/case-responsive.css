@@ -1,0 +1,49 @@
+
+@media (max-width: 720px) {
+  .chapter-heading {
+    margin-top: 96px;
+  }
+
+  .chapter-hero + .chapter-section .chapter-heading {
+    margin-top: 72px;
+  }
+
+  .naming-decision__candidate { padding: 22px 24px; }
+
+  .naming-decision__name { font-size: 28px; }
+
+  .checkout-impact {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .checkout-impact-item--primary {
+    grid-column: 1 / -1;
+  }
+
+  .checkout-copy-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-copy-panel {
+    padding: 24px;
+  }
+
+  .checkout-decision-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .checkout-impact {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-impact-item--primary {
+    grid-column: auto;
+  }
+
+  .checkout-impact-item {
+    min-height: 132px;
+  }
+}

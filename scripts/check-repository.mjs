@@ -1,5 +1,4 @@
 import { createHash } from "node:crypto";
-import { execFileSync } from "node:child_process";
 import {
   access,
   readFile,
@@ -8,6 +7,8 @@ import {
 } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { checkProductionLineLimits } from "../site/scripts/check-production-line-limits.mjs";
+import { spawnSyncChecked } from "./spawn-sync.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const failures = [];
@@ -79,7 +80,7 @@ export function parseTrimGeometry(output, fileWidth, fileHeight) {
 function resolveMagickBinary() {
   for (const candidate of ["magick", "/usr/sbin/magick"]) {
     try {
-      execFileSync(candidate, ["-version"], { stdio: "ignore" });
+      spawnSyncChecked(candidate, ["-version"], { stdio: "ignore" });
       return candidate;
     } catch {
       // Try the next candidate.
@@ -92,6 +93,7 @@ const allowedRootEntries = new Set([
   ".agents",
   ".codex",
   ".git",
+  ".githooks",
   ".gitattributes",
   ".gitignore",
   "AGENTS.md",
@@ -138,11 +140,31 @@ const requiredFiles = [
   "site/README.md",
   "site/AGENTS.md",
   "site/CHANGELOG.md",
+  "site/scripts/check-production-line-limits.mjs",
+  "site/scripts/configure-git-hooks.mjs",
   "site/public/mason-cv.pdf",
+  ".githooks/pre-commit",
+  ".githooks/prepare-commit-msg",
+  "scripts/spawn-sync.mjs",
 ];
 
 for (const file of requiredFiles) {
   record(await exists(path.join(root, file)), `required file is missing: ${file}`);
+}
+
+for (const file of [".githooks/pre-commit", ".githooks/prepare-commit-msg"]) {
+  const absolute = path.join(root, file);
+  if (!await exists(absolute)) continue;
+  const details = await stat(absolute);
+  record((details.mode & 0o111) !== 0, `Git hook is not executable: ${file}`);
+}
+
+const lineLimitResult = await checkProductionLineLimits({ root });
+for (const violation of lineLimitResult.violations) {
+  record(
+    false,
+    `${violation.path} exceeds the ${lineLimitResult.maximumLines}-line production limit: ${violation.lineCount}`,
+  );
 }
 
 const bannedActivePaths = [
@@ -581,8 +603,11 @@ for (const relative of referencedPublicPaths) {
   record(await exists(path.join(root, relative)), `live application references a missing public asset: ${relative}`);
 }
 
-const tracked = execFileSync("git", ["ls-files", "-z"], { cwd: root })
-  .toString()
+const tracked = spawnSyncChecked(
+  "git",
+  ["ls-files", "-z"],
+  { cwd: root, encoding: "utf8" },
+).stdout
   .split("\0")
   .filter(Boolean);
 
@@ -644,11 +669,11 @@ if (!magickBinary) {
 
     let geometry;
     try {
-      geometry = execFileSync(
+      geometry = spawnSyncChecked(
         magickBinary,
         ["identify", "-format", "%@", absolutePublicPath],
         { encoding: "utf8" },
-      );
+      ).stdout;
     } catch {
       record(false, `${assetId}: ImageMagick identify failed for ${publicPath}`);
       continue;

@@ -47,6 +47,10 @@ with another case.
 
 ## Technical quality
 
+- Keep production source under `app/`, `build/`, and `worker/`, plus
+  `next.config.ts` and `vite.config.ts`, at 500 physical lines or fewer.
+- Run `npm run check:production-lines` after changing production source. The
+  tracked commit hooks enforce the same limit against the full staged snapshot.
 - Keep semantic landmarks and one useful page-level heading.
 - Keep keyboard access and visible focus for interactive elements.
 - Dialogs must close with Escape, manage focus, and avoid trapping the page in

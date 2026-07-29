@@ -1,0 +1,83 @@
+
+/* The fork is the case's central artifact, so it is typeset rather than
+   screenshotted: real text, legible at any width, no lightbox. The two
+   candidates stack so their names share a left edge and the product word's
+   move is visible by position. The reading beneath each name is the payoff,
+   not a footnote — a reader should not have to hunt for the difference. */
+.naming-decision {
+  width: 100%;
+  margin: 0;
+}
+
+.naming-decision__question {
+  max-width: 740px;
+  margin: 28px 0 20px;
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 560;
+  line-height: 1.45;
+}
+
+.naming-decision__candidates {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.naming-decision__candidate {
+  padding: 26px 28px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+
+.naming-decision__candidate--chosen { border-color: #b8d2c7; }
+
+.naming-decision__verdict {
+  display: flex;
+  gap: 9px;
+  align-items: baseline;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 560;
+  line-height: 1.3;
+}
+
+.naming-decision__candidate--chosen .naming-decision__verdict { color: var(--accent); }
+
+.naming-decision__candidate--rejected .naming-decision__verdict { color: #9b3527; }
+
+/* The name is the largest thing in the figure. Its product word is the only
+   marked element, so the mark needs no legend to read. */
+.naming-decision__name {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 34px;
+  font-weight: 560;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.naming-decision__name em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.naming-decision__reading {
+  max-width: 640px;
+  margin: 0;
+  color: #3f4943;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.naming-decision > figcaption {
+  max-width: 740px;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.5;
+}

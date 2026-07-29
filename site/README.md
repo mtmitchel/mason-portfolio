@@ -49,6 +49,7 @@ npm run dev
 ## Required checks
 
 ```bash
+npm run check:production-lines
 ./node_modules/.bin/eslint . --ignore-pattern dist --ignore-pattern .next
 WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vinext build
 node --test tests/rendered-html.test.mjs
@@ -57,6 +58,13 @@ node --test tests/rendered-html.test.mjs
 The production build is the type-integration check. Standalone `tsc --noEmit`
 is not authoritative because the Cloudflare worker ambient types are not
 declared.
+
+Production source under `app/`, `build/`, `worker/`, `next.config.ts`, and
+`vite.config.ts` is limited to 500 lines per file. `npm install` runs the
+`prepare` script, which configures the repository to use the tracked hooks in
+`../.githooks/`. Run `npm run prepare` to restore that setting manually. The
+repository-wide check runs the same line-limit rule, so bypassing a local hook
+does not bypass the repository boundary.
 
 ## Presentation direction
 
