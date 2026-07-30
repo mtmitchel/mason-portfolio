@@ -9,30 +9,49 @@ files to a provider, publishing them, or exposing the repository.
 - [`AGENTS.md`](../AGENTS.md) owns the trigger, access boundary, evidence rules,
   skill timing, and permissions.
 - [`external-agent/base/`](external-agent/base/) is the canonical tracked base
-  shared across external-agent tasks.
-- `tmp/external-agent-*` contains generated upload bundles only. Nothing in
-  `tmp/` is durable instruction or source truth.
+  already installed in the external web project spaces.
+- `tmp/external-agent-*` contains task-specific generated upload bundles only.
+  Never copy or restate the shared base inside those case-study folders.
+  Nothing in `tmp/` is durable instruction or source truth.
 - The relevant private-evidence owners remain authoritative for Mason's role,
   artifact status, claim scope, and results.
 
-Update the canonical base first when the shared instructions change. Then
-refresh any dated upload copy that Mason intends to use. Never make a dated
-`tmp/` copy the only updated version.
+Update the canonical base only when the shared instructions themselves change.
+That maintenance is separate from creating or refreshing a case-study packet.
+Never make a dated `tmp/` copy the only updated base, and never duplicate the
+base in a task packet.
 
 ## External-agent access model
 
-Assume the external agent can see only:
+Assume the external agent already has the separately installed shared base and
+can additionally see only the current task packet's:
 
-1. `PROJECT_INSTRUCTIONS.txt`;
-2. the four numbered base files;
-3. the current task file;
-4. the current packet's context and fact files; and
-5. the actual images, excerpts, or rendered captures attached to that packet.
+1. task instructions;
+2. case context, factual limits, asset index, and current draft when relevant;
+   and
+3. actual images, excerpts, or rendered captures attached to that packet.
 
 It cannot inspect the repository, follow a local path, search hidden evidence,
 read earlier conversations, open localhost, infer an omitted artifact, or
 recover a missing source. State every material fact and limitation needed for
-the task inside the packet.
+the current task inside the packet. Do not tell it to read or consult the shared
+base by filename or repository path. A single brief instruction to check the
+instructions and files already available in its project space is sufficient.
+
+## Case-packet file limit
+
+Every request to create, update, or refresh a new or existing
+`tmp/external-agent-*` case-study folder must leave that folder with no more
+than 10 files total. The separately installed shared base is not part of this
+count because it does not belong in the case-study folder.
+
+- Inspect the existing folder before writing.
+- Combine the task, context, facts and limits, asset index, and current draft
+  into fewer text files when necessary.
+- Preserve image slots for the smallest evidence set that can answer the task.
+- Move superseded and duplicate files to Trash. Do not keep identical or
+  obsolete material under new filenames.
+- Do not add a file merely to reach 10; fewer files are better when complete.
 
 ## Choose the packet mode first
 
@@ -120,6 +139,10 @@ For comprehensive design feedback, request judgment on:
 Do not ask for hidden chain-of-thought. A concise causal skeleton and artifact
 map are useful deliverables.
 
+The task, case context, facts and limits, asset index, and current draft may be
+combined into one clearly sectioned text file when needed to keep the complete
+case-study folder at or below 10 files.
+
 ### `CASE_CONTEXT.md`
 
 Include:
@@ -200,7 +223,12 @@ source.
 
 Confirm:
 
-- `PROJECT_INSTRUCTIONS.txt` is fewer than 8,000 characters;
+- the separately maintained `PROJECT_INSTRUCTIONS.txt` is fewer than 8,000
+  characters;
+- the case-study folder contains no shared-base copies, filenames, or paths; it
+  may contain only a brief instruction to check the existing project-space
+  instructions and files;
+- the case-study folder contains no more than 10 files;
 - the packet names its mode and exact deliverables;
 - comprehensive feedback explicitly covers both writing and design when Mason
   requested both;
@@ -217,8 +245,9 @@ Confirm:
 - generated files live under `tmp/external-agent-*`, not at repository root.
 
 Use `wc -m docs/external-agent/base/PROJECT_INSTRUCTIONS.txt` to check the
-character limit. Use filename and hash checks when copied visual evidence must
-match the selected source.
+character limit. Count the task packet with
+`find <case-packet-folder> -maxdepth 1 -type f | wc -l`. Use filename and hash
+checks when copied visual evidence must match the selected source.
 
 ## After the external review
 

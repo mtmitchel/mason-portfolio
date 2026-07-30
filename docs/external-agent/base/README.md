@@ -1,24 +1,32 @@
 # Canonical external-agent portfolio base
 
 This tracked directory is the source of truth for the provider-neutral context
-shared with an outside model or agent. Repository agents follow
-[`../../external-agent-packets.md`](../../external-agent-packets.md) and copy
-these files into a generated upload bundle when needed.
+shared with an outside model or agent. These files are installed separately in
+the external web project spaces. Repository agents follow
+[`../../external-agent-packets.md`](../../external-agent-packets.md). They may
+inspect this base while assembling a packet, but must not copy its contents or
+cite its filenames or paths inside a case-study task packet. A brief direction
+to check the existing project-space instructions and files is enough.
 
-The external agent receives `PROJECT_INSTRUCTIONS.txt`, the four numbered base
-files, and one current task packet. It does not receive repository access.
+The external agent receives this base through its project space and receives
+case-specific files through a separate current task packet. It does not receive
+repository access.
 
 ## How to use it
 
-1. Give the agent the complete contents of `PROJECT_INSTRUCTIONS.txt` as its
+1. Install the complete contents of `PROJECT_INSTRUCTIONS.txt` as the external
    project or custom instructions.
-2. Attach the four numbered Markdown files as persistent context.
-3. State which working mode applies: portfolio-slate discovery, case
+2. Install the four numbered Markdown files as persistent project context.
+3. In the separate case-study packet, state which working mode applies:
+   portfolio-slate discovery, case
    construction, rendered-case review, or an explicitly requested combination
    of construction and rendered review.
-4. Attach one small task packet built with
+4. Attach one task-specific packet built with
    `04-EXTERNAL-AGENT-PACKET-GUIDE.md`.
-5. When comparing agents, give each one the same base context and task packet.
+   Every new or refreshed case-study folder must contain no more than 10 files;
+   combine its text sections when necessary and never include base copies.
+5. When comparing agents, give each one the same installed base context and
+   task packet.
 
 No provider-specific model or interface is assumed. Keep
 `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. If a service has no

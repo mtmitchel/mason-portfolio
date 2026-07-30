@@ -117,11 +117,24 @@ external-agent packet, follow
 [`docs/external-agent-packets.md`](docs/external-agent-packets.md).
 
 - [`docs/external-agent/base/`](docs/external-agent/base/) is the canonical
-  tracked base. Edit it there, never in a dated `tmp/` copy.
-- The external agent receives only `PROJECT_INSTRUCTIONS.txt`, the four
-  numbered base files, and the files and images in the current task packet. It
-  cannot inspect this repository, hidden evidence, prior conversations, local
-  paths, or unshared source material.
+  tracked base for the shared instructions already installed in the external
+  web project spaces. Edit shared instructions there, never in a dated `tmp/`
+  copy. Repository agents may inspect the base to understand the installed
+  context. Do not copy or restate it inside a case-study packet unless Mason
+  explicitly asks to update the shared base itself.
+- The external agent already has the shared base. A generated case-study packet
+  contains only the current task's context, facts, draft, index, captures, and
+  selected artifacts. The external agent still cannot inspect this repository,
+  hidden evidence, prior conversations, local paths, or unshared source
+  material. A review packet may briefly tell the external agent to check the
+  instructions and files already available in its project space, but must not
+  cite base filenames or repository paths.
+- Every request to create, update, or refresh a new or existing
+  `tmp/external-agent-*` case-study folder must leave that folder with no more
+  than 10 files. Inspect the existing folder first. Combine task, context,
+  facts, asset-index, and draft sections into fewer text files when that
+  preserves slots for necessary images. Move superseded or duplicate files to
+  Trash; do not keep the same material under new names.
 - The repository agent may search the private evidence library to assemble a
   self-contained packet. Do not expose repository paths, raw private archives,
   credentials, unrelated personal data, or unsupported conclusions.
@@ -139,14 +152,16 @@ external-agent packet, follow
   currently accessible public URL or current desktop and mobile captures.
   Product screenshots alone support visual planning, not a rendered-page
   review. Do not create new captures unless Mason requested them.
-- Every case packet normally includes an exact task file, `CASE_CONTEXT.md`,
-  `FACTS_AND_LIMITS.md`, `ASSET_INDEX.md`, and the selected artifacts.
-  Add `CURRENT_DRAFT.md`, rendered captures, a slate context, or a narrowly
-  necessary source excerpt only when the chosen mode needs them.
+- Every case packet must still contain an exact task, case context, facts and
+  limits, an asset index, and the selected artifacts. These sections may share
+  one text file to stay within the 10-file limit. Add the reader-facing draft,
+  rendered captures, slate context, or a narrowly necessary source excerpt only
+  when the chosen mode needs them.
 - Keep `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. Before handoff,
-  verify every reference resolves, every selected asset is actually included,
-  rejected work is labelled or removed, and the packet assumes no hidden
-  access.
+  verify the separately maintained shared base, then verify the case-study
+  folder contains at most 10 task-specific files, every reference resolves,
+  every selected asset is actually included, rejected work is labelled or
+  removed, and the packet assumes no hidden access.
 
 ## Narrative and evidence boundaries
 

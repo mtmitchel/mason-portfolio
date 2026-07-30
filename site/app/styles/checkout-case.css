@@ -1,7 +1,7 @@
 
-/* Checkout keeps prose and evidence on one centered reading rail. */
+/* Checkout uses a wide rail for evidence and a centered reading rail for copy. */
 .checkout-page {
-  width: min(100% - 48px, 720px);
+  width: min(100% - 48px, 880px);
 }
 
 .checkout-page > .back-link {
@@ -17,7 +17,7 @@
 }
 
 .checkout-page .chapter-heading {
-  width: 100%;
+  width: min(100%, 720px);
   margin: 80px auto 24px;
 }
 
@@ -26,14 +26,18 @@
   margin-top: 80px;
 }
 
-.checkout-page .chapter-hero h1,
 .checkout-page .checkout-meta,
 .checkout-page .chapter-synopsis,
 .checkout-page .chapter-blocks > .chapter-prose,
 .checkout-page .chapter-closing .chapter-prose,
 .checkout-page .next-project {
-  width: 100%;
+  width: min(100%, 720px);
   margin-inline: auto;
+}
+
+.checkout-page .chapter-hero h1 {
+  width: min(100%, calc(50% + 360px));
+  margin-left: max(0px, calc(50% - 360px));
 }
 
 .checkout-meta {
@@ -136,9 +140,10 @@
 
 .checkout-flow-viewer__caption,
 .checkout-pair__caption {
-  margin: 16px 0 0;
+  width: min(100%, 720px);
+  margin: 16px auto 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
@@ -147,18 +152,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   align-items: start;
-}
-
-.checkout-pair--wide {
-  position: relative;
-  left: 50%;
-  width: min(960px, calc(100vw - 48px));
-  transform: translateX(-50%);
-}
-
-.checkout-pair--wide .checkout-pair__caption {
-  width: min(100%, 720px);
-  margin-inline: auto;
 }
 
 .checkout-pair .chapter-media,

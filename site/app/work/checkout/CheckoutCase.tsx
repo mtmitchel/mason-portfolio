@@ -84,7 +84,6 @@ function CheckoutPair({
   leftLabel,
   rightImage,
   rightLabel,
-  wide = false,
 }: {
   accessibleDescription: string;
   ariaLabel: string;
@@ -93,11 +92,10 @@ function CheckoutPair({
   leftLabel: string;
   rightImage: StoryImage;
   rightLabel: string;
-  wide?: boolean;
 }) {
   return (
     <div
-      className={`checkout-pair${wide ? " checkout-pair--wide" : ""}`}
+      className="checkout-pair"
       role="group"
       aria-label={ariaLabel}
     >
@@ -196,7 +194,6 @@ export default function CheckoutCase() {
               leftLabel="Old Review"
               rightImage={newConsent}
               rightLabel="New Details"
-              wide
             />
           </div>
         </section>
