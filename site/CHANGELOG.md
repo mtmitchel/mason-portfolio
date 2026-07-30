@@ -9,14 +9,15 @@
   his content-design contribution, and the experiment-level result.
 - Replaced the rejected diagram and crowded evidence modules with a coherent
   reconstructed Account, Details, and Review journey, the rebuilt Details
-  screen, a focused price comparison, and a source-faithful consent and
+  screen, a focused price comparison, and an exact typeset consent and
   final-action comparison.
 - Reduced the original journey viewer to three numbered steps and added a
   separate two-tab Account and Details viewer for the rebuilt two-step flow.
 - Replaced CSS-positioned journey crops with pixel-preserving inline assets
   that remove the repeated DeepL header and balance the outer canvas while
   retaining each complete progress indicator and checkout card. All five tabs
-  use balanced left, right, and bottom insets from the solid screen group.
+  use balanced left, right, and bottom insets from the solid screen group, and
+  their enlargements use the same headerless presentation crops.
 - Applied the approved Review presentation with additional spacing above
   “Features of your plan” to both the inline tab and its enlargement.
 - Added a consistent two-step progress indicator to both rebuilt-viewer tabs.
@@ -24,17 +25,34 @@
   interface. Because no separate two-step Account export is retained, its tab
   is documented as a representative composite of the unchanged Account form
   and a reconstructed two-step indicator.
-- Replaced side-by-side detail comparisons with single-column vertical
-  sequences, corrected the old price source to the matching €299.88 Review
-  state, and recropped the consent regions so controls and copy remain intact.
-  This stacked comparison treatment was subsequently rejected and remains a
-  checkpoint only.
+- Removed the stray partial DeepL logo at the extreme upper-left edge of the
+  rebuilt Details image with a localized background-color replacement, without
+  altering the checkout interface or the image dimensions.
+- Replaced the rejected stacked detail comparisons with accessible two-tab
+  viewers that show one Review or Details state at a time. The consent viewer
+  now typesets the exact source wording, actions, and reassurance instead of
+  forcing them into mismatched raster crops. The high-resolution Review price
+  crop retains the dark blue top rule while removing unnecessary right-side
+  canvas.
+- Added a dedicated section for the supported move of the plan features from
+  Review into the rebuilt Details summary. Its accessible two-tab comparison
+  pairs a simple location map with tight, lossless source crops. The map makes
+  the move from Review’s main column into Details’ summary rail visible without
+  adding neighboring plan content to the evidence crops. Mason subsequently
+  rejected this locator-map composition; it remains an unapproved checkpoint,
+  not a direction to refine or reuse.
+- Moved the comparison expand controls into the images, removed the repeated
+  state descriptors, and assigned new URLs to the rebuilt Details preview and
+  enlargement so the `€0 due today` repair cannot be hidden by cached bytes.
+- Removed visible caption text from every enlarged checkout image.
+- Preserved each focused crop's source scale on desktop instead of forcing both
+  tabs to the same width; mobile still uses the full text gutter for legibility.
+- Replaced the fixed-resolution Review crop with Mason's selected
+  high-resolution working image.
 - Constrained every checkout visual, label, tab row, caption, and mobile
   treatment to the same 720px maximum width and gutters as the body text.
-- Kept flow-viewer enlargement controls inside blank image canvas, kept
-  comparison enlargement controls below their evidence, tightened captions to
-  a consistent 14px system, and gave comparison labels one screen-name and
-  descriptor pattern. The lightbox supports touch panning and pinch zoom.
+- Kept enlargement controls inside their images and tightened captions to a
+  consistent 14px system. The lightbox supports touch panning and pinch zoom.
 - Removed decorative borders from complete checkout screens while retaining
   the restrained comparison-panel border, and aligned all checkout image
   controls and focus rings with the final accessibility specification.
@@ -46,10 +64,13 @@
   Updated the representative rebuilt screen to incorporate the separately
   retained `€0 due today` working summary, then rewrote the ending to return to
   the experiment result and close on the content judgment.
-- Recorded the remaining visual work without treating this checkpoint as
-  approved: convert both focused comparisons from stacked panels to tabs, and
-  recrop the Review plan-conditions panel so its dark blue top rule is visible
-  and its unnecessary right-side white canvas is removed.
+- Recorded the comparison repair without treating the checkpoint as visually
+  approved. The current route still includes working-placeholder copy in the
+  focused price and consent viewers, and Mason's explicit visual sign-off
+  remains outstanding.
+- Discarded the separate `/work/checkout-concept` experiment after Mason
+  rejected it in full. Its research input remains private background only and
+  does not define the next visual direction.
 
 ### Site and repository
 
@@ -57,9 +78,13 @@
   case routes. LinkedIn remains available in the primary navigation.
 - Added a repository-wide sentence-case rule for reader-facing text and removed
   all-caps styling from the live application.
+- Added repository layout rules that prohibit decorative numeric section
+  prefixes and the tiny-left-label/large-right-headline pattern.
 - Retired superseded checkout public assets, recorded the corrected
   reconstruction and focused crop provenance, and aligned the route, claim
   review, current direction, candidate queue, and asset manifest.
+- Removed four unreferenced `Bundles` and `Translator` PDF/PNG exports from the
+  private pricing-page screenshot set during the requested asset cleanup.
 - Made manifest date validation use the repository machine's local calendar
   date so valid documentation updates are not rejected around midnight.
 - Documented that visible public-image replacements require a new URL during

@@ -1,15 +1,18 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
-import type { KeyboardEvent, ReactNode } from "react";
+import type { CSSProperties, KeyboardEvent, ReactNode } from "react";
 import ImageLightbox from "../../components/ImageLightbox";
 import type { StoryImage } from "../portfolioTypes";
 
 type FlowView = "account" | "details" | "review";
 
 type FlowPreview = {
+  dialogMaxWidth?: number;
+  displayWidth?: string;
   height: number;
   src: string;
+  tallDialog?: boolean;
   width: number;
 };
 
@@ -32,24 +35,45 @@ type FlowTab = {
 };
 
 type TabbedCheckoutFlowViewerProps = {
+  accessibleDescription?: string;
   ariaLabel: string;
   caption: ReactNode;
-  heading: string;
+  heading?: string;
+  kind?: "comparison" | "flow";
   tabs: FlowTab[];
+};
+
+type CheckoutComparisonViewerProps = {
+  accessibleDescription: string;
+  afterDisplayWidth?: string;
+  afterDialogMaxWidth?: number;
+  afterImage: StoryImage;
+  afterLabel: string;
+  ariaLabel: string;
+  beforeDisplayWidth?: string;
+  beforeDialogMaxWidth?: number;
+  beforeImage: StoryImage;
+  beforeLabel: string;
+  caption: ReactNode;
+  heading?: string;
 };
 
 const originalFlowPreviews: Record<FlowView, FlowPreview> = {
   account: {
+    dialogMaxWidth: 800,
     src: "/work/checkout/original-account-flow-uniform.png",
     width: 2436,
     height: 1681,
   },
   details: {
+    dialogMaxWidth: 800,
     src: "/work/checkout/original-details-flow-uniform.png",
+    tallDialog: true,
     width: 2438,
     height: 3461,
   },
   review: {
+    dialogMaxWidth: 800,
     src: "/work/checkout/original-review-flow-spaced.png",
     width: 2048,
     height: 1811,
@@ -80,23 +104,31 @@ function FlowScreen({
   image: StoryImage;
   preview: FlowPreview;
 }) {
+  const screenStyle = preview.displayWidth
+    ? { "--checkout-preview-width": preview.displayWidth } as CSSProperties
+    : undefined;
+
   return (
-    <div className="checkout-flow-viewer__screen">
+    <div className="checkout-flow-viewer__screen" style={screenStyle}>
       <ImageLightbox
         alt={image.alt}
         caption={image.caption}
         chrome="overlay"
-        dialogHeight={image.height}
+        dialogHeight={preview.height}
+        dialogMaxWidth={preview.dialogMaxWidth}
         dialogPresentation="minimal"
-        dialogSizes="1440px"
-        dialogSrc={image.src}
-        dialogWidth={image.width}
+        dialogSizes={preview.dialogMaxWidth
+          ? `${preview.dialogMaxWidth}px`
+          : "1440px"}
+        dialogSrc={preview.src}
+        dialogWidth={preview.width}
         height={preview.height}
         label={image.label}
         previewCaption={caption}
         previewSrc={preview.src}
-        showDialogCaption={Boolean(image.caption)}
+        showDialogCaption={false}
         sizes="(max-width: 720px) calc(100vw - 40px), 720px"
+        tallDialog={preview.tallDialog}
         width={preview.width}
       />
     </div>
@@ -104,9 +136,11 @@ function FlowScreen({
 }
 
 function TabbedCheckoutFlowViewer({
+  accessibleDescription,
   ariaLabel,
   caption,
   heading,
+  kind = "flow",
   tabs,
 }: TabbedCheckoutFlowViewerProps) {
   const [activeView, setActiveView] = useState(tabs[0].id);
@@ -131,8 +165,8 @@ function TabbedCheckoutFlowViewer({
   };
 
   return (
-    <div className="checkout-flow-viewer">
-      <h3 className="checkout-flow-heading">{heading}</h3>
+    <div className={`checkout-flow-viewer checkout-flow-viewer--${kind}`}>
+      {heading ? <h3 className="checkout-flow-heading">{heading}</h3> : null}
       <div className="checkout-flow-viewer__tabs" role="tablist" aria-label={ariaLabel}>
         {tabs.map((tab, index) => {
           const selected = activeView === tab.id;
@@ -164,10 +198,73 @@ function TabbedCheckoutFlowViewer({
           key={tab.id}
           role="tabpanel"
         >
-          <FlowScreen caption={caption} image={tab.image} preview={tab.preview} />
+          <FlowScreen
+            caption={caption}
+            image={tab.image}
+            preview={tab.preview}
+          />
         </div>
       ))}
+      {accessibleDescription ? (
+        <p className="visually-hidden">{accessibleDescription}</p>
+      ) : null}
     </div>
+  );
+}
+
+export function CheckoutComparisonViewer({
+  accessibleDescription,
+  afterDisplayWidth,
+  afterDialogMaxWidth,
+  afterImage,
+  afterLabel,
+  ariaLabel,
+  beforeDisplayWidth,
+  beforeDialogMaxWidth,
+  beforeImage,
+  beforeLabel,
+  caption,
+  heading,
+}: CheckoutComparisonViewerProps) {
+  const maxSourceWidth = Math.max(beforeImage.width, afterImage.width);
+  const tabs: FlowTab[] = [
+    {
+      id: "before",
+      image: beforeImage,
+      label: `1. ${beforeLabel}`,
+      preview: {
+        dialogMaxWidth: beforeDialogMaxWidth,
+        displayWidth: beforeDisplayWidth
+          ?? `${((beforeImage.width / maxSourceWidth) * 100).toFixed(1)}%`,
+        height: beforeImage.height,
+        src: beforeImage.src,
+        width: beforeImage.width,
+      },
+    },
+    {
+      id: "after",
+      image: afterImage,
+      label: `2. ${afterLabel}`,
+      preview: {
+        dialogMaxWidth: afterDialogMaxWidth,
+        displayWidth: afterDisplayWidth
+          ?? `${((afterImage.width / maxSourceWidth) * 100).toFixed(1)}%`,
+        height: afterImage.height,
+        src: afterImage.src,
+        width: afterImage.width,
+      },
+    },
+  ];
+
+  return (
+    <TabbedCheckoutFlowViewer
+      accessibleDescription={accessibleDescription}
+      ariaLabel={ariaLabel}
+      caption={caption}
+      heading={heading}
+      kind="comparison"
+      tabs={tabs}
+    />
   );
 }
 
@@ -179,8 +276,9 @@ export function RebuiltCheckoutFlowViewer({
     {
       id: "account",
       image: accountAfter,
-      label: "1 Account",
+      label: "1. Account",
       preview: {
+        dialogMaxWidth: 800,
         src: "/work/checkout/rebuilt-account-flow-uniform-v2.png",
         width: 2436,
         height: 1652,
@@ -189,9 +287,11 @@ export function RebuiltCheckoutFlowViewer({
     {
       id: "details",
       image: detailsAfter,
-      label: "2 Details",
+      label: "2. Details",
       preview: {
-        src: "/work/checkout/rebuilt-details-flow-uniform-v3.png",
+        dialogMaxWidth: 800,
+        src: "/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
+        tallDialog: true,
         width: 2228,
         height: 3618,
       },
@@ -217,19 +317,19 @@ export default function CheckoutFlowViewer({
     {
       id: "account",
       image: accountBefore,
-      label: "1 Account",
+      label: "1. Account",
       preview: originalFlowPreviews.account,
     },
     {
       id: "details",
       image: detailsBefore,
-      label: "2 Details",
+      label: "2. Details",
       preview: originalFlowPreviews.details,
     },
     {
       id: "review",
       image: reviewBefore,
-      label: "3 Review",
+      label: "3. Review",
       preview: originalFlowPreviews.review,
     },
   ];

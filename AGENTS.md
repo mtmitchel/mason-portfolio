@@ -191,6 +191,16 @@ There is no universal case-study layout.
   use CSS `text-transform: uppercase`. Preserve exact capitalization only
   inside source evidence, quotations, legal text, product names, and technical
   identifiers that cannot be changed.
+- Never add decorative numeric prefixes or standalone sequence labels such as
+  `01`, `02`, `03`, or similar numbering to portfolio headings, sections,
+  figures, captions, cards, callouts, or visual modules. Functional numbers are
+  allowed only when they are part of the source evidence or Mason explicitly
+  requests them, such as numbered checkout steps or tab labels.
+- Never use a tiny eyebrow, kicker, category label, or metadata label in the
+  upper-left of a composition with a larger headline or primary message placed
+  to its right. Keep the primary heading in the clear leading position and do
+  not create hierarchy through that asymmetrical small-label/large-headline
+  pattern.
 - Existing `chapter-*` classes, comparisons, switchers, lightboxes, and
   adjacent cases are optional utilities. Reuse them only when they serve the
   new story; never reuse them merely for consistency.

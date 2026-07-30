@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
-import type { MouseEvent as ReactMouseEvent, ReactNode } from "react";
+import type {
+  CSSProperties,
+  MouseEvent as ReactMouseEvent,
+  ReactNode,
+} from "react";
 
 type ImageLightboxProps = {
   alt: string;
@@ -10,6 +14,7 @@ type ImageLightboxProps = {
   /** "full" shows text chrome; "footer" puts a persistent action below the image; "overlay" uses an expand icon; "image" shows only the preview; "link" is a text trigger. */
   chrome?: "footer" | "full" | "image" | "link" | "overlay";
   dialogHeight?: number;
+  dialogMaxWidth?: number;
   dialogPresentation?: "default" | "minimal";
   dialogSrc?: string;
   dialogWidth?: number;
@@ -39,6 +44,7 @@ export default function ImageLightbox({
   caption,
   chrome = "full",
   dialogHeight,
+  dialogMaxWidth,
   dialogPresentation = "default",
   dialogSrc,
   dialogWidth,
@@ -71,8 +77,12 @@ export default function ImageLightbox({
   const panelClassName = [
     "lightbox-panel",
     tallDialog ? "lightbox-panel--tall" : "",
+    dialogMaxWidth ? "lightbox-panel--image-capped" : "",
     minimalDialog ? "lightbox-panel--minimal" : "",
   ].filter(Boolean).join(" ");
+  const panelStyle = dialogMaxWidth
+    ? { "--lightbox-image-max-width": `${dialogMaxWidth}px` } as CSSProperties
+    : undefined;
 
   useEffect(() => {
     if (!open) return;
@@ -107,7 +117,7 @@ export default function ImageLightbox({
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = previousOverflow;
-      triggerElement?.focus();
+      triggerElement?.focus({ preventScroll: true });
     };
   }, [open]);
 
@@ -184,7 +194,7 @@ export default function ImageLightbox({
             if (event.target === event.currentTarget) setOpen(false);
           }}
         >
-          <div ref={panel} className={panelClassName}>
+          <div ref={panel} className={panelClassName} style={panelStyle}>
             <div className="lightbox-header">
               <h2 className={minimalDialog ? "visually-hidden" : undefined} id={titleId}>{label}</h2>
               <button

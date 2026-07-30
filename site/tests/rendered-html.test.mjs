@@ -279,7 +279,7 @@ test("selected evidence retains accessible lightbox behavior", async () => {
     /event\.key === "Escape"/,
     /event\.key !== "Tab"/,
     /document\.body\.style\.overflow = "hidden"/,
-    /triggerElement\?\.focus\(\)/,
+    /triggerElement\?\.focus\(\{\s*preventScroll:\s*true\s*\}\)/,
     /aria-describedby=\{showDialogCaption \? captionId : undefined\}/,
     /aria-label=\{minimalDialog \? "Close image viewer" : undefined\}/,
     /showDialogCaption \? <p id=\{captionId\}>\{caption\}<\/p> : null/,

@@ -71,35 +71,41 @@ The current checkout implementation follows these explicit corrections:
   DeepL header and excess outer canvas while preserving the full progress
   indicator and checkout card; apply the same 32px left, right, and bottom
   inset from the solid screen group across all five flow tabs; enlargement
-  opens the untouched source image;
+  uses the same headerless presentation crop shown inline;
 - retain a two-step progress indicator in both rebuilt-viewer tabs; because no
   separate two-step Account export is retained, document its Account screen as
   a representative composite that pairs the unchanged Account form with a
   reconstructed two-step indicator derived from retained original components;
-  pair it with a measured crop of the genuine two-step Details screen;
+  pair it with a measured crop of the genuine two-step Details screen; remove
+  only the stray repeated-logo fragment at the extreme upper-left edge by
+  replacing its pixels with the exact surrounding background;
 - compare the representative original Review terms with the separate
   `€0 due today` treatment in a two-tab viewer, with one state visible at a
   time;
+- give moving `Features of your plan` onto Details its own section and focused
+  two-tab comparison that preserves the distinct Review and Details feature
+  treatments without adding neighboring plan-condition or selected-plan
+  content; do not leave that supported experiment change buried inside the
+  complete journey screens;
 - compare the old and new consent-and-action regions in a second two-tab
-  viewer, with one state visible at a time, source-faithful crops, and the exact
-  wording retained in visually hidden HTML rather than a visible transcript;
+  viewer, with one state visible at a time and the exact source wording typeset
+  as accessible HTML; use the full journey screens elsewhere as visual source
+  context instead of forcing the focused content into arbitrary raster crops;
 - recrop the Review plan-conditions panel so the dark blue top rule remains
   visible and unused white canvas on the right is removed; do not stretch the
   crop to match the Details panel;
 - keep every visual within the same 720px maximum width as the body text on
   desktop and within the text gutters on mobile;
-- keep all figure captions at 14px, aligned to the figure and text rail and attached to
+- keep captions readable, aligned to the figure and text rail, and attached to
   their figure through a small caption gap and larger space before the next
-  section;
-- put the flow-viewer expand controls inside retained blank image canvas so
-  they do not cover interface content; keep the comparison expand controls
-  beneath their images and within the text gutters;
+  section; do not force every label, caption, or metadata line into one small
+  fixed type size;
+- put the flow-viewer and comparison expand controls inside their images;
 - keep complete screens borderless and use the restrained one-pixel border only
   on focused comparison panels;
 - let the mobile lightbox support touch panning and pinch zoom;
-- do not use the rejected dense comparison, abstract flow diagram,
-  side-annotation, stat-strip, oversized terms crop, or cramped consent
-  constructions;
+- do not reuse the rejected dense comparison, abstract flow diagram,
+  side-annotation, oversized terms crop, or cramped consent constructions;
 - use sentence case for every new reader-facing label and control;
 - the final case navigation displays only `Next` and the arrow, aligned at the
   far right, with no project name or “Next project” label.
@@ -113,13 +119,29 @@ summary so the complete screen and the focused price example communicate the
 same concept. None should be called the exact tested, winning, shipped, or
 production variant without additional evidence.
 
-The current checkpoint is not visually approved. Its flow viewers, narrative,
-assets, and interaction work are preserved for continuity, but the focused
-price and consent comparisons still use a rejected stacked layout. The Review
-price crop also omits the dark blue top rule and retains excessive blank canvas
-on the right. The next pass must address those specific defects before seeking
-Mason's visual sign-off. Mechanical checks establish implementation
-conformance only; they do not override this rejection.
+The current `/work/checkout` checkpoint is not visually approved. Its story,
+flow viewers, source-faithful price evidence, representative journey screens,
+and lightbox behavior are preserved for continuity. The current route also
+contains visible working-placeholder copy in the focused price and consent
+viewers.
+
+The dedicated feature section and its locator-map-plus-crop treatment are
+explicitly rejected. Do not refine, defend, or reuse that composition as the
+starting point for the next pass. The current typeset consent comparison and
+the wider repeated-tab treatment are also not visually approved.
+
+The separate `/work/checkout-concept` experiment was rejected in full and moved
+to Trash. It is not present in the repository and must not be resumed. The
+research that informed it is retained only as non-binding background in
+[`projects/monetization/checkout-visual-communication-deep-research-2026-07-30.md`](projects/monetization/checkout-visual-communication-deep-research-2026-07-30.md).
+Its recommendations do not override Mason's later rejection.
+
+The next visual pass must preserve the established case narrative, claim
+boundaries, and useful evidence while making a meaningful visual change to the
+current route. Repository layout rules now also prohibit decorative numeric
+section prefixes and the tiny-left-label/large-right-headline pattern.
+Mechanical checks establish implementation conformance only; they do not
+establish qualitative approval.
 
 ## Current route snapshot
 

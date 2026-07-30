@@ -1,0 +1,121 @@
+# Improving the visual communication of the checkout case study
+
+## Short diagnosis
+
+In `01-current-page-layout-overview.jpg`, the opening is doing too much work in prose and not enough in hierarchy. The business target, Mason’s contribution, the structural change from three steps to two, and the experiment-level result are all present, but they are embedded in running text rather than surfaced as an immediate scan path. On the web, readers usually scan the top and left edges first, and portfolio reviewers look for short, clear visual stories. The consequence is simple: the page asks for patient reading before it earns trust. citeturn8view0turn6view0turn5view9
+
+The full-screen evidence is directionally right but under-explained. `02-original-review-full.png` and `03-rebuilt-details-full.png` are the real story engine, yet the current layout treats them as separate tabbed galleries rather than one visible transformation. That makes readers see “screens” before they see “redistribution of decision support into a denser form.” Because the central argument is architectural, not decorative, the page needs one explicit transformation figure early. citeturn6view3turn6view4turn7view0
+
+The repeated local tabs flatten three different judgments into one repeated interaction pattern. NN/g warns that tabs are poor when users need to compare states, because repeated switching raises memory burden; GOV.UK likewise warns that tabs hide content and are a bad fit when content becomes long or comparison-heavy. In your current page, price, features, and consent all end up feeling mechanically “tabbed” instead of editorially distinct. citeturn5view0turn6view8turn9view0turn14view0
+
+Some evidence is also too small, too neutral, or too detached from the claim it is proving. `04`/`05` work because the hierarchy difference is strong; `06`/`07` work because relocation is visible; the consent section in the current page is hurt by placeholder framing and by having the explanation sit more clearly in the caption than in the visual itself. The consequence is that Mason’s judgment is understood as copy polish rather than as information architecture, prioritization, and commercial-risk management. citeturn5view5turn6view9turn12view3
+
+What already works and should remain:
+
+- Keep the full original Review screen and rebuilt Details screen once, near the top, as the context-setting evidence.
+- Keep controls local to the evidence they affect.
+- Keep the three detailed decisions separate in the narrative, but group them visually.
+- Keep truthful focused crops and quiet expand controls; do not turn the page into a dashboard, gallery, or style exercise. citeturn12view1turn13view0turn5view7
+
+## Reference patterns worth borrowing
+
+| Source | Relevant pattern | Why it applies here | What not to copy | Helps most |
+|---|---|---|---|---|
+| GOV.UK design portfolio guidance citeturn6view0 | Tell a **clear, short story with writing and visuals** for the audience reviewing the work. | Your hiring outcome is explicit: a manager should understand pressure, role, judgment, visible change, and result fast. This source supports a tighter opening frame and more scannable evidence. | Do not copy government-application conventions or turn the page into a CV appendix. | Context, pacing, hiring scan |
+| Learn UI on portfolio case studies citeturn5view9 | **Start with the end; show decisions, then results.** | The article already has the right content; what it lacks is visual surfacing of the decision points and result. This supports moving the case study’s “why it mattered / what changed / what happened” signal earlier. | Do not copy the “sales pitch” tone literally or overcompress nuance into a hype page. | Context, business impact |
+| GOV.UK accordion accessibility case study citeturn7view0 | Explain **one design change through constraints, exact changes, and consequences**. | This is a strong model for making invisible design judgment visible: what was changed, why, what constraint drove it, and how the team validated it. That is exactly the kind of knowledge work this case needs to show. | Do not copy component-level implementation depth where it does not serve the portfolio reader. | Decision-making, evidence |
+| NN/g on tabs and GOV.UK tabs guidance citeturn5view0turn6view8turn14view0 | Tabs are best when users do **not** need simultaneous comparison and when the content is relatively short and local. | Your later sections are often comparison tasks. Repeated tabbing across the article increases memory burden and makes the sections feel repetitive. This supports using tabs only where toggling is truly the cleanest local comparison. | Do not replace everything with tabs, and do not use tabs as long-range navigation. | Comparison, pacing |
+| NN/g on working memory and change blindness citeturn9view0turn5view5 | Good UI offloads memory and makes changed information conspicuous. | Readers should not have to remember what was on Review while viewing Details. The page needs either simultaneous visibility, very tight local toggles, or minimal on-image cues. | Do not add a “decision ledger” or complex explanatory apparatus that itself becomes more memory work. | Comparison, comprehension |
+| Edward Tufte on mapped pictures citeturn6view9 | Put **tight commentary close to the image** when explanation depends on seeing location and relationship. | The strongest improvement available here is light, truthful image annotation: a short callout, bracket, or connector that explains what migrated or changed form. | Do not cover the UI in speech bubbles, arrows, or labels that compete with the source evidence. | Evidence legibility, decision-making |
+| W3C APG on tabs, disclosure, accordion, and dialog citeturn5view6turn13view0turn13view1turn5view7 | Local controls and expanders need **predictable keyboard behavior, proper semantics, Escape support, and focus return**. | Your strongest direction still relies on local switching and quiet expand controls. These sources give the right accessibility floor for tabs, show/hide controls, and image expansion. | Do not build bespoke, animation-heavy switchers or inaccessible lightboxes. | Accessibility, interaction |
+| Baymard on checkout clarity and form complexity citeturn6view6turn12view0turn12view1turn12view2turn12view3 | Users need clear totals, integrated order-summary context, transparent buttons, and reduced visible complexity. | This is the commercial logic behind Mason’s work. It strengthens the case-study framing that the redesign was not “copy cleanup”; it was preservation of needed decision support inside a shorter, denser step. | Do not mimic ecommerce benchmarking visuals or overstate causation. | Business impact, content judgment |
+
+## Bounded visual concepts
+
+| Concept | Affects | What changes and what it reuses | How it makes Mason’s knowledge work clearer | Desktop and mobile behavior | Accessibility, effort, likely risk |
+|---|---|---|---|---|---|
+| **Project frame strip** | Title and opening | Reuse existing opening facts; add a compact four-line framing block immediately below the title: business target, experiment change, Mason’s contribution, experiment-level result. | It surfaces the hiring signal before the prose begins, without changing the story. | Desktop: two-column definition-list style at 720px. Mobile: single column, same order. | Accessible as plain HTML. **Small** effort. Risk: feels like a KPI card row if overdesigned. |
+| **Core redistribution figure** | Current sections on removing Review and rebuilding Details | Reuse `02-original-review-full.png` and `03-rebuilt-details-full.png`; combine them into one early transformation figure with three light callouts keyed to price, features, and consent/action. | It makes the central claim visible: Review did not vanish conceptually; its decision support was redistributed into Details. | Desktop: two-up figure, original on left, rebuilt on right, top-aligned, expandable. Mobile: a local switcher just for this figure. | Annotation must stay sparse and external-edge where possible. **Medium** effort. Risk: too many callouts turn it into a diagram instead of evidence. |
+| **Grouped trio wrapper** | Current sections on price, features, consent/action | Keep the three sections, but place them under one parent lead-in such as “Three decisions the shorter flow still had to support.” | The sections remain narratively separate, but readers understand them as one family of judgments rather than three unrelated screenshot exercises. | Pure layout and heading change on all viewports. | Native headings improve structure. **Small** effort. Risk: if the parent intro is too abstract, it adds another heading without helping. |
+| **Price split comparator** | Price section | Reuse `04` and `05`; use a local two-state switcher because price hierarchy is a true A/B comparison. Add one short caption outside the image: “Changed form: one block became an immediate payment answer plus a future-payment answer.” | It clarifies that the work was hierarchy design, not merely wordsmithing. | Desktop and mobile: switcher sits directly above the evidence. Expand opens raw crop only. | APG tabs or disclosure works well here. **Small** effort. Risk: still feels like “more tabs” if styled identically to every other section. |
+| **Features move composite** | Features section | Reuse `06` and `07`; on desktop show both focused crops at once with a thin directional connector between them; on mobile fall back to a local switcher. | This is a relocation story, not a copy-comparison story. Showing both at once on desktop proves the move faster than a toggle. | Desktop: simultaneous two-up because both crops are short and legible. Mobile: one-at-a-time to preserve size. | Minimal annotation only. **Medium** effort. Risk: if the connector starts explaining location more than meaning, it becomes the bland locator map you already rejected. |
+| **Consent lockup comparator** | Consent/action section | Reuse `08` and `09`; keep this as a local switcher, but tighten the crop emphasis around the consent statement, button, and trial/cancellation support. | It shows that the judgment was about authorization language and commitment visibility at the point of action. | Desktop and mobile: local switcher; same source for preview and expand. | Use button labels and focus states correctly. **Small** effort. Risk: if the surrounding caption overexplains, the image still won’t carry its share of the argument. |
+| **Shared evidence caption grammar** | All three detailed decision sections | Add one restrained caption line below each figure using the same formula: **what moved / what changed form / what was removed as repetition / why it still mattered**. | Shared grammar ties the trio together without forcing one repeated visual component. | Works identically across viewports. | Pure text, highly accessible. **Small** effort. Risk: too many micro-labels can feel managerial or schematic. |
+| **Quiet raw-evidence expander** | All figures | Keep expand controls but standardize them: top-right overlay button, modest enlargement, no title or caption inside the enlarged state, Escape closes, focus returns to trigger, no scroll jump. | It supports legibility without turning the assets into theatrical lightboxes. | Same control everywhere; enlarged view adapts to viewport. | APG dialog principles apply. **Small** effort if the pattern already exists. Risk: if enlargement becomes too large or heavily framed, it breaks the “raw evidence” feel. |
+
+## Adversarial hiring-reader test
+
+The standard is harsh and correct: if a hiring manager cannot explain the business pressure, Mason’s contribution, the key judgment, the visible change, and the experiment-level result after a 30-second scan, the design has failed. Fast scanning depends on strong early hierarchy, clear grouping, and low memory burden. citeturn8view0turn6view4turn9view0
+
+| Concept | 30-second scan result | Verdict |
+|---|---|---|
+| Project frame strip | Makes business pressure, role, and result visible before the reader commits to paragraphs. | **Keep** |
+| Core redistribution figure | Makes the thesis visible in one glance: Review support moved into Details. | **Keep** |
+| Grouped trio wrapper | Turns three later sections into one coherent proof set. | **Keep** |
+| Price split comparator | Quickly proves a real hierarchy decision. | **Keep** |
+| Features move composite | Clearly shows relocation of value information next to price/plan context. | **Keep** |
+| Consent lockup comparator | Proves naming, consent, and commitment alignment at the action point. | **Keep** |
+| Shared evidence caption grammar | Improves scanability if kept to one sentence. | **Keep, but restrain** |
+| Quiet raw-evidence expander | Helps legibility after the scan, not during it. Useful, but not a storytelling engine. | **Keep as support** |
+
+Concepts I would reject under this test:
+
+- A **single master Review/Details toggle** above all later sections. It fails locality and forces memory work.
+- A **locator map** that explains where a module sat but not why the move mattered.
+- A **dashboard-like results block** with multiple tiles, arrows, or scorecard styling; it overstates precision and turns the article toward marketing.
+- **Repeated identical tabs** across all proof sections; they look orderly but reduce explanation quality.
+- **Large theatrical lightboxes**; they improve neither the scan nor the editorial argument. citeturn5view0turn6view8turn9view0turn5view7
+
+## Recommended direction
+
+The strongest bounded direction is this: **one early redistribution figure, followed by one grouped trio of proof modules, each using the lightest comparison format that matches the decision being demonstrated**.
+
+This preserves the existing story and claim boundaries while fixing the page’s main editorial problem: the reader currently has to infer the transformation from repeated page furniture. The alternative is to state the transformation once, visually, and then prove it three times with focused evidence. That matches portfolio guidance to show the decision and the result, not just the process, and it aligns with research on hierarchy, working memory, and tabs. citeturn5view9turn6view4turn9view0turn5view0
+
+The artifacts should have distinct roles:
+
+- `02-original-review-full.png` becomes the **lost checkpoint**.
+- `03-rebuilt-details-full.png` becomes the **redistributed decision environment**.
+- `04` and `05` prove the **price hierarchy rewrite**.
+- `06` and `07` prove the **feature-list relocation beside plan and price**.
+- `08` and `09` prove the **consent-and-action rewrite at the point of commitment**.
+- `01-current-page-layout-overview.jpg` remains a diagnostic artifact for you, not a public-facing figure.
+
+That role clarity is the core improvement. It also answers the central hiring question faster: Mason’s work was not “shorter checkout copy”; it was the restructuring of decision support so a shorter checkout remained commercially and legally intelligible. Baymard’s checkout research is especially useful here: users need transparent totals, action labels that state what happens next, and reduced visible complexity; fewer visible fields and clearer summaries matter more than a simplistic obsession with step count alone. citeturn6view6turn12view0turn12view1turn12view2turn12view3
+
+I would keep sections on price, plan features, and consent/action as separate narrative beats, but visually group them under one parent section with a restrained shared grammar. The grammar should be textual, not decorative: each proof module gets a short subheading, one local figure, one one-sentence evidence caption, and the same quiet expand affordance. The figure type should vary by need: switcher for price, simultaneous composite for features on desktop, switcher for consent. This reduces the “mechanically tabbed” feeling while keeping each control local. GOV.UK and NN/g both support this restraint: tabs are appropriate when switching is fast and local, but not when they become a general-purpose page mechanism or when comparison requires too much memory. citeturn5view0turn6view8turn14view0
+
+Annotation should be minimal and purposeful. Use it where the relationship is otherwise hard to infer, especially in the early redistribution figure and, if needed, the features composite. Tufte’s mapped-pictures idea is the right transfer: put only the minimum commentary near the evidence that the reader needs in order to interpret the image correctly. Do **not** annotate the enlarged raw evidence, and do not place labels inside the screenshots themselves. A thin bracket, edge callout, faint highlight box, or a connector line is enough. Over-annotation would convert evidence into illustration and weaken credibility. citeturn6view9turn5view5turn6view3
+
+The result should be connected visually to the preceding work, but only at the **experiment** level. The right move is a quiet “experiment outcome” inset immediately after the grouped trio and then a fuller closing paragraph below. The inset should say, in plain language, that this two-step experiment ran across monthly and annual subscriptions and delivered **+3.02% paid subscriptions** and roughly **+€2.4M incremental ARR**. Under that, add one line of attribution: this was the result of the experiment and team, not of Mason alone or of any single string. That brings the metric back into view without implying that each detailed decision has its own quantified effect. NN/g’s case-study guidance on quantifying UX work supports surfacing outcome, but it does not require a dashboard treatment. citeturn6view2turn5view9
+
+A simpler fallback, if the early composite asset proves awkward, is to keep the original and rebuilt full-screen figures separate but add the same three numbered callouts and one shared legend beneath them. That is weaker than a combined transformation figure, but still much better than treating them as isolated tabbed journeys.
+
+## Text wireframe and implementation sequence
+
+The wireframe below is the shortest version that meaningfully changes understanding rather than surface polish. It is based on scan-path, hierarchy, local controls, and accessible disclosure patterns. citeturn8view0turn6view4turn13view0turn5view7
+
+| Page section | Desktop wireframe | Mobile wireframe | Remove, retain, combine, modify |
+|---|---|---|---|
+| **Title block** | Title, metadata, then immediately a compact project-frame strip at 720px width. Order: target → experiment change → Mason’s contribution → result. Then the current opening prose, tightened only by spacing and paragraph emphasis. | Same order in a single column. Keep the strongest line breaks after each framing item. | **Modify** current opener by surfacing what is already there; do not rewrite the story. |
+| **Removing Review meant rebuilding the decision** | Keep the section prose. Immediately below it, place the **core redistribution figure**: `02` and `03` in one figure. Add a short caption: “Representative working states. Review’s decision support was redistributed into Details.” Put three numbered callouts outside the images, keyed to price, features, consent/action. Quiet expand controls sit top-right on each panel. | Same prose. The figure becomes a local switcher: “1. Review checkpoint” / “2. Rebuilt Details.” The three numbered callout labels sit below the image in a short legend. Expand control remains local. | **Combine** the current full-flow evidence into one core figure. **Remove** the feeling of two isolated tab galleries. |
+| **I reorganized the Details step around the commitment customers were making** | Keep the prose, but shorten the visual distance from the previous figure. This section now acts as interpretation of the core figure rather than requiring another full-screen tabbed component. | Same. | **Remove** the second full-flow tabbed gallery as a separate repetitive component. The rebuilt Details screen has already appeared in the core transformation figure. |
+| **Three decisions the shorter flow still had to support** | Add one parent lead-in sentence before sections on price, features, consent/action. Use normal body width; no decorative box. | Same. | **Add** grouping; preserve the three existing subsections. |
+| **Price hierarchy** | After the prose, use a single local switcher with `04` and `05` at the main evidence width. Caption below: “Changed form: today’s charge and later commitment were separated, not simplified away.” Expand from the same source asset. No extra labels inside the image. | Same interaction, full width. Ensure the switcher stays immediately above the evidence and does not scroll away from it. | **Retain** local switching, but use it more decisively and at a larger readable scale. |
+| **Plan features moved forward** | After the prose, show `06` and `07` simultaneously in one two-up composite, labeled above the crops only: “Review checkpoint” and “Details summary rail.” Add one thin connector or directional cue between them. Caption below: “Moved forward: product value stayed beside plan and price.” | Do not show both at once if they become too small. Use a simple local switcher instead, still labeled the same way. | **Replace** the bland locator diagram attempt. **Modify** this section to prove relocation, not just placement. |
+| **Final action and consent** | After the prose, use a local switcher with `08` and `09`. Tighten the visible crop so the consent statement, CTA, and trial/cancellation support dominate. Caption below: “Changed form: checkbox consent became action-referential consent at the point of authorization.” | Same interaction, full width. | **Retain** comparison, but increase image priority and remove placeholder feel. |
+| **Experiment outcome** | Immediately after the trio, insert a quiet inset line or blockquote-style stat summary: “Experiment outcome across monthly and annual subscriptions: +3.02% paid subscriptions; ~+€2.4M incremental ARR.” Under it: “Result belongs to the experiment and team.” Then keep the current conclusion section, which can reiterate that the shorter flow still explained the commitment. | Same order, same wording, single column. | **Add** earlier result revisit; **retain** the final results prose. Avoid tiles, scorecards, or causal-arrow visuals. |
+
+### Economical implementation sequence
+
+**Smallest useful layout/CSS experiment**
+
+Build the project-frame strip, the grouped parent heading for the three proof sections, and the revised spacing rhythm first. Then prototype the paired early transformation figure **without** making any new raster assets yet: simply place `02` and `03` in one layout with temporary HTML callout labels outside the images. If the page feels faster to scan in static review, the direction is working. This first test is mostly hierarchy, spacing, captioning, and component reduction. citeturn6view4turn6view3turn8view0
+
+**Focused asset and crop changes if that test works**
+
+Then make only the assets that sharpen proof: one combined early transformation figure, one slightly cleaner price crop if needed, one desktop two-up composite for features, and one tighter consent crop if the current rendered images still carry too much placeholder framing. Keep source proportions truthful, reuse the same raw source for preview and expansion where possible, and keep annotations to the minimum needed to reveal what changed and why. citeturn6view9turn6view7
+
+**Final accessibility and mobile checks**
+
+Validate keyboard behavior for every local switcher or disclosure; verify that expanders open in a dialog with Escape support and focus return; test at narrow mobile widths, at 200% zoom, and with reduced-motion preferences; and make sure no control changes offscreen content. If any figure becomes too small on mobile, switch the format from simultaneous view to local one-at-a-time view rather than shrinking the evidence. That is the right tradeoff for legibility and cognitive load. citeturn5view6turn13view0turn13view1turn5view7turn14view0turn9view0

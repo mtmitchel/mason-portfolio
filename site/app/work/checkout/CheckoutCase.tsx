@@ -1,25 +1,28 @@
 import Link from "next/link";
-import type { CSSProperties, ReactNode } from "react";
 import { ChapterBackLink } from "../../components/ChapterCaseElements";
-import ImageLightbox from "../../components/ImageLightbox";
 import { SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryImage } from "../portfolioTypes";
-import CheckoutFlowViewer, { RebuiltCheckoutFlowViewer } from "./CheckoutFlowViewer";
+import CheckoutConsentViewer from "./CheckoutConsentViewer";
+import CheckoutFlowViewer, {
+  CheckoutComparisonViewer,
+  RebuiltCheckoutFlowViewer,
+} from "./CheckoutFlowViewer";
+import CheckoutPlanFeatures from "./CheckoutPlanFeatures";
 
 const accountBefore: StoryImage = {
   label: "Account step, original checkout",
-  src: "/work/checkout/original-account.png",
-  width: 2880,
-  height: 1960,
+  src: "/work/checkout/original-account-flow-uniform.png",
+  width: 2436,
+  height: 1681,
   alt: "DeepL checkout, original Account step — sign-up form with a three-step progress indicator.",
   caption: "Customers created an account before entering their subscription details.",
 };
 
 const detailsBefore: StoryImage = {
   label: "Details step, original checkout",
-  src: "/work/checkout/original-details.png",
-  width: 2880,
-  height: 3720,
+  src: "/work/checkout/original-details-flow-uniform.png",
+  width: 2438,
+  height: 3461,
   alt: "DeepL checkout, original Details step — plan selection, billing address and payment method, with Continue.",
   caption: "Customers entered their plan, billing and payment details, then continued to Review.",
 };
@@ -44,9 +47,9 @@ const accountAfter: StoryImage = {
 
 const detailsAfter: StoryImage = {
   label: "Details step, rebuilt checkout",
-  src: "/work/checkout/details-after-full.png",
-  width: 2560,
-  height: 4058,
+  src: "/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
+  width: 2228,
+  height: 3618,
   alt: "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
   caption: "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
 };
@@ -68,96 +71,6 @@ const newPrice: StoryImage = {
   alt: "Details plan summary showing €0 due today and €299.88 per year after the trial.",
   caption: "Details plan summary after the change.",
 };
-
-const oldConsent: StoryImage = {
-  label: "Review consent and final action, before the change",
-  src: "/work/checkout/review-consent-action-tight.png",
-  width: 1444,
-  height: 624,
-  alt: "Review region showing required and optional consent checkboxes, Back, Buy now and cancellation reassurance.",
-  caption: "Review consent and final action before the change.",
-};
-
-const newConsent: StoryImage = {
-  label: "Details consent and final action, after the change",
-  src: "/work/checkout/details-consent-action-tight.png",
-  width: 1147,
-  height: 520,
-  alt: "Details region showing a consent statement, Begin subscription and three trial reassurance lines.",
-  caption: "Details consent and final action after the change.",
-};
-
-function CheckoutPair({
-  accessibleDescription,
-  ariaLabel,
-  caption,
-  leftImage,
-  leftDescriptor,
-  leftScreen,
-  rightImage,
-  rightDescriptor,
-  rightScreen,
-  rightWidth,
-}: {
-  accessibleDescription: string;
-  ariaLabel: string;
-  caption: ReactNode;
-  leftImage: StoryImage;
-  leftDescriptor: string;
-  leftScreen: string;
-  rightImage: StoryImage;
-  rightDescriptor: string;
-  rightScreen: string;
-  rightWidth: number;
-}) {
-  const rightPanelStyle = {
-    "--checkout-caption-width": `${(10000 / rightWidth).toFixed(3)}%`,
-    "--checkout-panel-width": `${rightWidth}%`,
-  } as CSSProperties;
-
-  const renderPanel = (
-    image: StoryImage,
-    screen: string,
-    descriptor: string,
-    style?: CSSProperties,
-    previewCaption?: ReactNode,
-  ) => (
-    <div className="checkout-pair__item" style={style}>
-      <h3>
-        <strong>{screen}</strong>
-        <span>{descriptor}</span>
-      </h3>
-      <ImageLightbox
-        alt={image.alt}
-        caption={image.caption}
-        chrome="footer"
-        dialogPresentation="minimal"
-        dialogSizes="1440px"
-        height={image.height}
-        label={image.label}
-        previewCaption={previewCaption}
-        previewSrc={image.src}
-        showCaption={previewCaption !== undefined}
-        sizes="(max-width: 720px) calc(100vw - 40px), 720px"
-        width={image.width}
-      />
-    </div>
-  );
-
-  return (
-    <div
-      className="checkout-pair"
-      role="group"
-      aria-label={ariaLabel}
-    >
-      <div className="checkout-pair__stack">
-        {renderPanel(leftImage, leftScreen, leftDescriptor)}
-        {renderPanel(rightImage, rightScreen, rightDescriptor, rightPanelStyle, caption)}
-      </div>
-      <p className="visually-hidden">{accessibleDescription}</p>
-    </div>
-  );
-}
 
 export default function CheckoutCase() {
   return (
@@ -222,18 +135,31 @@ export default function CheckoutCase() {
               <p>Giving the annual price and today’s charge equal weight would have made a free trial look like an immediate €299.88 purchase. Emphasizing only €0 would have made the later commitment too easy to overlook.</p>
               <p>I structured the hierarchy to answer the immediate question first with <strong>€0 due today</strong>, while keeping <strong>€299.88 per year after the trial</strong> directly beneath it.</p>
             </div>
-            <CheckoutPair
+            <CheckoutComparisonViewer
               accessibleDescription="Review before the change: the 30-day trial, annual price, VAT, first payment date and payment method appeared in one text block. Details after the change: €0 due today appears above €299.88 per year after the trial."
+              afterDisplayWidth="400px"
+              afterDialogMaxWidth={800}
+              afterImage={newPrice}
+              afterLabel="Details"
               ariaLabel="Price and trial hierarchy before and after"
-              caption="Review ran the trial dates, the annual fee, the VAT and the first payment date together as one block of text. The summary answered what was due today first, then what the subscription cost after the trial. These are two working examples, not two views of one session — the summary panel kept iterating after the screen shown above."
-              leftImage={oldPrice}
-              leftDescriptor="plan conditions, before the change"
-              leftScreen="Review"
-              rightImage={newPrice}
-              rightDescriptor="plan summary, after the change"
-              rightScreen="Details"
-              rightWidth={55.4}
+              beforeDisplayWidth="479px"
+              beforeDialogMaxWidth={800}
+              beforeImage={oldPrice}
+              beforeLabel="Review"
+              caption="Working placeholder caption"
+              heading="Working placeholder headline"
             />
+          </div>
+        </section>
+
+        <section className="chapter-section" id="plan-features">
+          <h2 className="chapter-heading">The plan features moved forward with the subscription summary</h2>
+          <div className="chapter-blocks">
+            <div className="chapter-prose">
+              <p>Review also showed customers what their selected plan included. The exact feature list depended on the plan. Removing Review could not mean removing the product value and limits that helped customers confirm their choice.</p>
+              <p>I moved the selected plan’s feature list into the Details summary column, keeping what the customer would get beside what they would pay. Customers could check the plan before starting the subscription without needing a separate Review screen.</p>
+            </div>
+            <CheckoutPlanFeatures />
           </div>
         </section>
 
@@ -244,18 +170,7 @@ export default function CheckoutCase() {
               <p>In the old flow, customers accepted the terms through a required checkbox on Review before pressing <strong>Buy now</strong>. Once the purchase began with a 30-day trial, that label no longer described the action accurately.</p>
               <p>I rewrote the consent statement to explain what pressing the button authorized and replaced <strong>Buy now</strong> with <strong>Begin subscription</strong>. The action matched the commitment being made, and the surrounding content kept the trial, payment timing and cancellation visible at the point of action.</p>
             </div>
-            <CheckoutPair
-              accessibleDescription={"Old consent: I accept the Terms & Conditions, Service Specification, and confirm that I have read and understood my Right of Withdrawal as a consumer. Old action: Buy now. New consent: By pressing the \"Begin subscription\" button, you accept the DeepL Pro Terms and Conditions including the Service Specifications. Consumers have a 14-day Right of Withdrawal. New action: Begin subscription."}
-              ariaLabel="Consent and final action before and after"
-              caption={<>Review put consent in a required checkbox above <strong>Buy now</strong>. Details moved it into a statement naming the action, and kept the trial, the payment timing and cancellation beside <strong>Begin subscription</strong>.</>}
-              leftImage={oldConsent}
-              leftDescriptor="consent and final action, before the change"
-              leftScreen="Review"
-              rightImage={newConsent}
-              rightDescriptor="consent and final action, after the change"
-              rightScreen="Details"
-              rightWidth={79.4}
-            />
+            <CheckoutConsentViewer />
             <p className="checkout-transition">The plan summary, the price hierarchy and the consent statement all answered one question that the Review step used to answer on its own: what the customer was agreeing to, and when it would start costing them.</p>
           </div>
         </section>

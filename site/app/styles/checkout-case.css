@@ -55,15 +55,19 @@
   margin-bottom: 24px;
 }
 
-.checkout-flow-viewer,
-.checkout-pair {
+.checkout-flow-viewer {
   width: min(100%, 720px);
   margin-inline: auto;
 }
 
-.checkout-page .chapter-blocks > .checkout-flow-viewer,
-.checkout-page .chapter-blocks > .checkout-pair {
+.checkout-page .chapter-blocks > .checkout-flow-viewer {
   width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.checkout-flow-viewer--comparison .checkout-flow-viewer__tabs,
+.checkout-flow-viewer--comparison .checkout-flow-viewer__panel {
+  width: min(100%, 479px);
   margin-inline: auto;
 }
 
@@ -121,7 +125,7 @@
 }
 
 .checkout-flow-viewer__screen {
-  width: 100%;
+  width: var(--checkout-preview-width, 100%);
   margin-inline: auto;
 }
 
@@ -136,9 +140,24 @@
 .checkout-flow-viewer .evidence-expand-indicator {
   top: 12px;
   right: 12px;
-  border-color: rgba(20, 25, 22, .14);
-  background: rgba(255, 255, 255, .9);
-  box-shadow: 0 1px 2px rgba(20, 25, 22, .08);
+  width: 28px;
+  height: 28px;
+  border-color: rgba(20, 25, 22, .1);
+  background: rgba(255, 255, 255, .82);
+  color: rgba(20, 25, 22, .78);
+  box-shadow: 0 1px 2px rgba(20, 25, 22, .05);
+}
+
+.checkout-flow-viewer .evidence-expand-indicator svg {
+  width: 15px;
+  height: 15px;
+}
+
+.checkout-flow-viewer .evidence-button:hover .evidence-expand-indicator,
+.checkout-flow-viewer .evidence-button:focus-visible .evidence-expand-indicator {
+  border-color: rgba(20, 25, 22, .24);
+  background: rgba(255, 255, 255, .96);
+  color: var(--ink);
 }
 
 .checkout-flow-viewer .evidence-figure > figcaption {
@@ -161,37 +180,6 @@
   margin-top: 4px;
 }
 
-.checkout-pair__stack {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: flex-start;
-}
-
-.checkout-pair__item {
-  width: var(--checkout-panel-width, 100%);
-}
-
-.checkout-pair__item h3 {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  margin: 0 0 8px;
-  color: var(--ink);
-  line-height: 1.45;
-}
-
-.checkout-pair__item h3 strong {
-  font-size: 15px;
-  font-weight: 640;
-}
-
-.checkout-pair__item h3 span {
-  color: #57534e;
-  font-size: 14px;
-  font-weight: 400;
-}
-
 .checkout-flow-viewer .evidence-preview {
   width: 100%;
   max-width: none;
@@ -202,7 +190,7 @@
   border-radius: 0;
 }
 
-.checkout-pair .evidence-preview {
+.checkout-flow-viewer--comparison .evidence-preview {
   width: 100%;
   max-width: none;
   padding: 0;
@@ -212,7 +200,7 @@
   border-radius: 0;
 }
 
-.checkout-pair .evidence-preview img {
+.checkout-flow-viewer--comparison .evidence-preview img {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -221,77 +209,88 @@
 }
 
 .checkout-flow-viewer .evidence-button,
-.checkout-pair .evidence-button,
-.checkout-flow-viewer .evidence-figure,
-.checkout-pair .evidence-figure {
+.checkout-flow-viewer .evidence-figure {
   width: 100%;
   max-width: none;
 }
 
-.checkout-flow-viewer .evidence-button:focus-visible,
-.checkout-pair .evidence-button:focus-visible {
+.checkout-flow-viewer .evidence-button:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
 
-.checkout-page .evidence-footer {
-  display: flex;
-  width: 100%;
-  gap: 24px;
-  align-items: start;
-  justify-content: space-between;
-  margin: 12px 0 0;
-  color: #57534e;
-  font-size: 14px;
-  line-height: 1.5;
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped {
+  position: relative;
+  width: min(94vw, calc(var(--lightbox-image-max-width) + 32px));
+  max-height: 94vh;
+  overflow: hidden;
 }
 
-.checkout-page .evidence-footer > span {
-  width: min(100%, 640px);
-}
-
-.checkout-page .evidence-footer--action-only {
-  justify-content: flex-end;
-  margin-top: 6px;
-}
-
-.checkout-pair__item:last-child .evidence-footer {
-  width: var(--checkout-caption-width, 100%);
-}
-
-.checkout-page .evidence-expand-action {
-  display: inline-flex;
-  flex: 0 0 auto;
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-header {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 3;
   min-height: 44px;
-  gap: 6px;
-  align-items: center;
-  margin: -6px 0;
-  padding: 12px 0 12px 12px;
+  margin: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-header button {
+  position: relative;
   border: 0;
   background: transparent;
-  color: #57534e;
-  font-size: 13px;
-  line-height: 20px;
-  cursor: zoom-in;
+  box-shadow: none;
+  pointer-events: auto;
 }
 
-.checkout-page .evidence-expand-action:hover {
-  color: #1c1917;
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-header button::before {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(20, 25, 22, .2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 1px 3px rgba(20, 25, 22, .12);
+  content: "";
 }
 
-.checkout-page .evidence-expand-action:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-header button svg {
+  position: relative;
+  width: 16px;
+  height: 16px;
 }
 
-.checkout-page .evidence-expand-action svg {
-  width: 15px;
-  height: 15px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.5;
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-header button:hover {
+  background: transparent;
+}
+
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-header button:hover::before {
+  background: #fff;
+}
+
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-image {
+  flex: 0 1 auto;
+  min-height: auto;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-image img {
+  align-self: auto;
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: var(--lightbox-image-max-width);
+  height: auto;
+  margin: auto;
+}
+
+.checkout-page .lightbox-panel--minimal.lightbox-panel--image-capped .lightbox-image--tall {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: calc(94vh - 32px);
+  overflow: auto;
 }
 
 .checkout-page .chapter-blocks > .checkout-transition {

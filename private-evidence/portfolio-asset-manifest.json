@@ -417,52 +417,38 @@
         "route": "/work/checkout",
         "kind": "manifest-image-set",
         "public_refs": [
-          "site/public/work/checkout/original-account.png",
           "site/public/work/checkout/original-account-flow-uniform.png",
-          "site/public/work/checkout/original-details.png",
           "site/public/work/checkout/original-details-flow-uniform.png",
           "site/public/work/checkout/original-review-flow-spaced.png",
           "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
-          "site/public/work/checkout/rebuilt-details-flow-uniform-v3.png",
+          "site/public/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
           "site/public/work/checkout/review-plan-conditions.px-318ab1239763.png",
-          "site/public/work/checkout/details-after-full.png",
-          "site/public/work/checkout/review-consent-action-tight.png",
-          "site/public/work/checkout/details-consent-action-tight.png",
-          "site/public/work/checkout/due-today-summary.png"
+          "site/public/work/checkout/due-today-summary.png",
+          "site/public/work/checkout/checkout-review-plan-features.px-f09888002e2c.png",
+          "site/public/work/checkout/checkout-details-plan-features.px-d583f6ecfa18.png"
         ],
         "render_ref": "site/app/work/checkout/CheckoutCase.tsx",
         "required_tokens": [
           "Buy now",
           "Begin subscription",
-          "No payment until end of trial"
+          "No payment until end of trial",
+          "Features of your plan"
         ],
-        "relationship": "The coherent Account, Details, and Review reconstructions establish the original three-step journey. A second two-tab viewer then pairs the retained Account form with a representative rebuilt Details composite that incorporates the separately retained due-today summary, followed by focused comparisons of the price hierarchy and the consent-and-action change."
+        "relationship": "The coherent Account, Details, and Review reconstructions establish the original three-step journey. A second two-tab viewer then pairs the retained Account form with a representative rebuilt Details composite that incorporates the separately retained due-today summary. The price comparison uses focused source crops. The plan-feature comparison pairs a simplified location map with focused source crops so the move from Review’s main column into Details’ summary rail is visible without adding neighboring plan content to the evidence. The consent comparison uses exact, source-faithful HTML excerpts so the wording, action, and reassurance remain crisp and balanced."
       },
       "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "The route first shows measured presentation crops of the coherent reconstructed Account, Details, and Review journey. The crops remove the repeated DeepL header and excess outer canvas while retaining each complete progress indicator and checkout card. Account and Details enlargement opens their full source; Review uses the same approved presentation inline and in enlargement so its adjusted feature-list spacing stays consistent. A second viewer retains a two-step progress indicator in both tabs. The representative rebuilt Details composite incorporates the separately retained due-today working summary and preserves the genuine two-step indicator and all other interface content. Because no separate two-step Account export is retained, the Account tab is a documented representative composite: the unchanged Account card is paired with a reconstructed two-step indicator derived from retained original stepper components. The source-faithful old Review conditions crop, the focused due-today source export, and two tighter consent-and-action crops follow. Exact consent wording remains in visually hidden HTML.",
-      "caption": "The original and rebuilt tabbed flows establish what customers did before and after the step was removed. Focused comparisons then explain how price hierarchy, consent and the final action changed.",
-      "text_alternative": "Describe the reconstructed original Account, Details, and Review journey, the shorter Account and Details journey, the consolidated two-step Details screen, the old and new price hierarchy, and the change from checkbox consent and Buy now to consent tied to Begin subscription.",
+      "crop_notes": "The route first shows measured presentation crops of the coherent reconstructed Account, Details, and Review journey. The crops remove the repeated DeepL header and excess outer canvas while retaining each complete progress indicator and checkout card. Every journey enlargement uses the same headerless presentation crop shown inline, so expanding a tab does not reintroduce the repeated page header or switch evidence boundaries. A second viewer retains a two-step progress indicator in both tabs. The representative rebuilt Details composite incorporates the separately retained due-today working summary and preserves the genuine two-step indicator and all other interface content. Because no separate two-step Account export is retained, the Account tab is a documented representative composite: the unchanged Account card is paired with a reconstructed two-step indicator derived from retained original stepper components. The source-faithful old Review conditions crop and the focused due-today source export follow. The feature comparison uses tight, lossless source crops of only the real Review section and Details card, with their heading scale matched in the shared viewer. A simplified HTML locator beside the crop shows the module’s position without reproducing neighboring interface copy. The consent comparison is typeset in accessible HTML from the exact retained source wording; it is not a raster crop or an invented product state.",
+      "caption": "The original and rebuilt tabbed flows establish what customers did before and after the step was removed. Focused image comparisons explain the price hierarchy. A location map beside the source evidence shows the plan-feature module moving into Details. An exact typeset comparison isolates how consent and the final action changed.",
+      "text_alternative": "Describe the reconstructed original Account, Details, and Review journey, the shorter Account and Details journey, the consolidated two-step Details screen, the old and new price hierarchy, the distinct Review and Details plan-feature treatments, and the exact typeset change from checkbox consent and Buy now to consent tied to Begin subscription.",
       "export_ready": false,
       "files": [
-        {
-          "path": "checkout/original-account.png",
-          "public_path": "site/public/work/checkout/original-account.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-account.png",
-          "source_sha256": "583ea5a4c97f880ca876a21af310d6159df2888c8cf7afff5ca3cd45ad8e671f",
-          "dimensions": "2880x1960",
-          "caption": "Customers created an account before entering their subscription details.",
-          "text_alternative": "DeepL checkout, original Account step — sign-up form with a three-step progress indicator.",
-          "sha256": "583ea5a4c97f880ca876a21af310d6159df2888c8cf7afff5ca3cd45ad8e671f"
-        },
         {
           "path": "checkout/original-account-flow-uniform.png",
           "public_path": "site/public/work/checkout/original-account-flow-uniform.png",
           "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Inline-only crop that removes the repeated DeepL header and excess outer canvas while retaining the complete progress indicator and Account card.",
+          "artifact_genesis_notes": "Inline and enlargement crop that removes the repeated DeepL header and excess outer canvas while retaining the complete progress indicator and Account card.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-account.png",
           "source_sha256": "583ea5a4c97f880ca876a21af310d6159df2888c8cf7afff5ca3cd45ad8e671f",
@@ -471,22 +457,10 @@
           "sha256": "ac1175849669baebba10a1c5d56bde744757f578e56416fa612b1e6b907abc42"
         },
         {
-          "path": "checkout/original-details.png",
-          "public_path": "site/public/work/checkout/original-details.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-details.png",
-          "source_sha256": "02ab99bb63f80a29dde7ad62a838c4013f4f65e41855afc91363beaff29b819d",
-          "dimensions": "2880x3720",
-          "caption": "Customers entered their plan, billing and payment details, then continued to Review.",
-          "text_alternative": "DeepL checkout, original Details step — plan selection, billing address and payment method, with Continue.",
-          "sha256": "02ab99bb63f80a29dde7ad62a838c4013f4f65e41855afc91363beaff29b819d"
-        },
-        {
           "path": "checkout/original-details-flow-uniform.png",
           "public_path": "site/public/work/checkout/original-details-flow-uniform.png",
           "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Inline-only crop that removes the repeated DeepL header and excess outer canvas while retaining the complete progress indicator, Details card, sidebar and Continue action.",
+          "artifact_genesis_notes": "Inline and enlargement crop that removes the repeated DeepL header and excess outer canvas while retaining the complete progress indicator, Details card, sidebar and Continue action.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-details.png",
           "source_sha256": "02ab99bb63f80a29dde7ad62a838c4013f4f65e41855afc91363beaff29b819d",
@@ -535,59 +509,18 @@
           "sha256": "d398839da5d498c8e4ac2673a61c59ef79d92bdce0098e32c3bcf6748bed416c"
         },
         {
-          "path": "checkout/rebuilt-details-flow-uniform-v3.png",
-          "public_path": "site/public/work/checkout/rebuilt-details-flow-uniform-v3.png",
-          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Inline-only crop that removes the repeated DeepL header, page footer, and excess outer canvas while retaining the genuine two-step progress indicator, complete Details card, sidebar, consent statement, and final action. It matches the original Details tab's content boundary. No interface content is redrawn or stretched.",
+          "path": "checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
+          "public_path": "site/public/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
+          "artifact_genesis": "pixel_cleanup_of_portfolio_reconstruction_crop_2026",
+          "artifact_genesis_notes": "Inline and enlargement crop that removes the repeated DeepL header, page footer, and excess outer canvas while retaining the genuine two-step progress indicator, complete Details card, sidebar, consent statement, and final action. A stray 67x30-pixel fragment of the repeated DeepL logo at the extreme upper-left edge was replaced with the exact surrounding #F1F1F1 background. No checkout interface content is redrawn, resized, stretched, or moved.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/rebuilt-details-due-today.png",
           "source_sha256": "79e29dc7cdf0d31e92367b898c7d66d74ee56a28762c0f0a7e70356f931d85f2",
-          "crop": "2228x3618+168+20; the repeated top-left logo and page footer are excluded. The solid screen group uses the shared 32px left, right, and bottom inset.",
+          "crop": "2228x3618+168+20; the page footer is excluded. After cropping, only the stray repeated-logo fragment at local x0-66 y48-77 was replaced with the exact surrounding #F1F1F1 background. The solid screen group uses the shared 32px left, right, and bottom inset.",
           "dimensions": "2228x3618",
           "caption": "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
           "text_alternative": "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
-          "sha256": "9fa1b8ce0057e17305104c81cfa2e1535d4d5ddc4173bbee3b01cf0bd3ee2b4e"
-        },
-        {
-          "path": "checkout/details-after-full.png",
-          "public_path": "site/public/work/checkout/details-after-full.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Representative rebuilt Details composite updated in the source design to incorporate the separately retained due-today working summary. It remains illustrative evidence, not an exact tested, winning, shipped, or production state.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/rebuilt-details-due-today.png",
-          "source_sha256": "79e29dc7cdf0d31e92367b898c7d66d74ee56a28762c0f0a7e70356f931d85f2",
-          "dimensions": "2560x4058",
-          "caption": "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
-          "text_alternative": "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
-          "sha256": "79e29dc7cdf0d31e92367b898c7d66d74ee56a28762c0f0a7e70356f931d85f2"
-        },
-        {
-          "path": "checkout/review-consent-action-tight.png",
-          "public_path": "site/public/work/checkout/review-consent-action-tight.png",
-          "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Focused crop of the required and optional consent checkboxes, final action, and cancellation reassurance on the separate Review screen. The full Buy now button and clear space to its right are preserved. No interface content was changed.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
-          "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
-          "crop": "1444x624+256+1524",
-          "dimensions": "1444x624",
-          "caption": "Review consent and final action before the change.",
-          "text_alternative": "Review region showing required and optional consent checkboxes, Back, Buy now and cancellation reassurance.",
-          "sha256": "b907ddd09f63632ae212bfd5778b83b48d55fa09d9d5bcfeb9c42397e8785e1a"
-        },
-        {
-          "path": "checkout/details-consent-action-tight.png",
-          "public_path": "site/public/work/checkout/details-consent-action-tight.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Focused crop of the consent statement, Begin subscription action, and trial reassurance on the consolidated Details screen.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-29/checkout/details-after-full.png",
-          "source_sha256": "c0f9eaed50438365626522d647ad14b6e1a0f2253f5ef2e898f8af9aa3aabf4e",
-          "crop": "1147x520+266+3060",
-          "dimensions": "1147x520",
-          "caption": "Details consent and final action after the change.",
-          "text_alternative": "Details region showing a consent statement, Begin subscription and three trial reassurance lines.",
-          "sha256": "a8aa23f237e58dcb0869b2774c39d53468f393038746c3a536e51100e3311ff2"
+          "sha256": "870bd93067c35b83c35e94b97d6bfabc64dc5d4682ddf8846d800784c8f39f7d"
         },
         {
           "path": "checkout/due-today-summary.png",
@@ -600,6 +533,34 @@
           "caption": "The new hierarchy leads with €0 due today and keeps the annual price directly beneath it.",
           "text_alternative": "Details plan summary showing €0 due today and €299.88 per year after the trial.",
           "sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d"
+        },
+        {
+          "path": "checkout/checkout-review-plan-features.px-f09888002e2c.png",
+          "public_path": "site/public/work/checkout/checkout-review-plan-features.px-f09888002e2c.png",
+          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Focused Review feature evidence cropped from the approved Review presentation. It preserves the original plain heading, grey vertical rule, complete selected-plan feature list and source whitespace without resizing, redrawing, stretching or synthetic margins. The PNG was losslessly optimized without changing visible pixels.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-review-flow-spaced.png",
+          "source_sha256": "4df222a33e007a66b486f7d9c1781234f2f978bfd5d5f4e9f632e6cc3d7f82a9",
+          "crop": "820x460+64+760",
+          "dimensions": "820x460",
+          "caption": "Review presented the selected plan’s features as a plain section.",
+          "text_alternative": "Review feature module with a plain heading and a grey vertical rule beside the selected plan’s feature list.",
+          "sha256": "860fc3a31cff68bed4df686a0d5424224715c663f062c0fc36abc1c6bde82d75"
+        },
+        {
+          "path": "checkout/checkout-details-plan-features.px-d583f6ecfa18.png",
+          "public_path": "site/public/work/checkout/checkout-details-plan-features.px-d583f6ecfa18.png",
+          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Focused Details feature evidence cropped from the representative rebuilt Details screen. It preserves the separate card, dark top rule, green checks and complete selected-plan feature list without resizing, redrawing, stretching or synthetic margins. The PNG was losslessly optimized without changing visible pixels.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/rebuilt-details-due-today.png",
+          "source_sha256": "79e29dc7cdf0d31e92367b898c7d66d74ee56a28762c0f0a7e70356f931d85f2",
+          "crop": "840x540+1540+1360",
+          "dimensions": "840x540",
+          "caption": "Details presented the selected plan’s features in a separate summary card.",
+          "text_alternative": "Details feature card with a dark blue top rule and green checks beside the selected plan’s feature list.",
+          "sha256": "a18b257deeb6019f965037a87df987931961504f0c875211afcf4d3786b9a962"
         }
       ],
       "homepage_media": {
