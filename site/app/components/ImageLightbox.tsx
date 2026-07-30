@@ -2,18 +2,23 @@
 
 import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
+import type { MouseEvent as ReactMouseEvent, ReactNode } from "react";
 
 type ImageLightboxProps = {
   alt: string;
   caption: string;
-  /** "full" shows text chrome; "overlay" uses an expand icon; "image" shows only the preview; "link" is a text trigger. */
-  chrome?: "full" | "image" | "link" | "overlay";
+  /** "full" shows text chrome; "footer" puts a persistent action below the image; "overlay" uses an expand icon; "image" shows only the preview; "link" is a text trigger. */
+  chrome?: "footer" | "full" | "image" | "link" | "overlay";
+  dialogHeight?: number;
   dialogPresentation?: "default" | "minimal";
+  dialogSrc?: string;
+  dialogWidth?: number;
   showDialogCaption?: boolean;
   showCaption?: boolean;
   height: number;
   label: string;
   linkLabel?: string;
+  previewCaption?: ReactNode;
   previewClassName?: string;
   previewSrc: string;
   /** Fetch hint for the preview image; defaults to the legacy 760px story column. */
@@ -33,10 +38,14 @@ export default function ImageLightbox({
   alt,
   caption,
   chrome = "full",
+  dialogHeight,
   dialogPresentation = "default",
+  dialogSrc,
+  dialogWidth,
   height,
   label,
   linkLabel,
+  previewCaption,
   previewClassName = "",
   previewSrc,
   showDialogCaption = true,
@@ -48,6 +57,7 @@ export default function ImageLightbox({
   width,
 }: ImageLightboxProps) {
   const minimalDialog = dialogPresentation === "minimal";
+  const showFooterChrome = chrome === "footer";
   const showChrome = chrome === "full";
   const showExpandIndicator = chrome === "overlay";
   const linkOnly = chrome === "link";
@@ -56,6 +66,7 @@ export default function ImageLightbox({
   const titleId = useId();
   const closeButton = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLDivElement>(null);
+  const returnFocusTarget = useRef<HTMLButtonElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const panelClassName = [
     "lightbox-panel",
@@ -67,7 +78,7 @@ export default function ImageLightbox({
     if (!open) return;
 
     const previousOverflow = document.body.style.overflow;
-    const triggerElement = trigger.current;
+    const triggerElement = returnFocusTarget.current ?? trigger.current;
     document.body.style.overflow = "hidden";
     closeButton.current?.focus();
 
@@ -100,14 +111,33 @@ export default function ImageLightbox({
     };
   }, [open]);
 
+  const openFrom = (event: ReactMouseEvent<HTMLButtonElement>) => {
+    returnFocusTarget.current = event.currentTarget;
+    setOpen(true);
+  };
+
+  const expandAction = (
+    <button
+      aria-label={`Expand: ${label}`}
+      className="evidence-expand-action"
+      type="button"
+      onClick={openFrom}
+    >
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+        <path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7" />
+      </svg>
+      <span>Expand</span>
+    </button>
+  );
+
   return (
     <figure className="evidence-figure">
       <button
         ref={trigger}
         className={linkOnly ? `evidence-link-trigger ${triggerClassName}`.trim() : `evidence-button ${triggerClassName}`.trim()}
         type="button"
-        onClick={() => setOpen(true)}
-        aria-label={linkOnly ? (linkLabel ?? label) : `View ${label.toLowerCase()} at full size`}
+        onClick={openFrom}
+        aria-label={linkOnly ? (linkLabel ?? label) : `Expand: ${label}`}
       >
         {linkOnly ? (
           <span className="evidence-link-label">{linkLabel ?? label}</span>
@@ -128,7 +158,20 @@ export default function ImageLightbox({
           </>
         )}
       </button>
-      {showCaption && !linkOnly && <figcaption>{caption}</figcaption>}
+      {showFooterChrome && !linkOnly ? (
+        showCaption ? (
+          <figcaption className="evidence-footer">
+            <span>{previewCaption ?? caption}</span>
+            {expandAction}
+          </figcaption>
+        ) : (
+          <div className="evidence-footer evidence-footer--action-only">
+            {expandAction}
+          </div>
+        )
+      ) : (
+        showCaption && !linkOnly && <figcaption>{previewCaption ?? caption}</figcaption>
+      )}
 
       {open && (
         <div
@@ -159,10 +202,10 @@ export default function ImageLightbox({
             </div>
             <div className={`lightbox-image${tallDialog ? " lightbox-image--tall" : ""}`}>
               <Image
-                src={previewSrc}
+                src={dialogSrc ?? previewSrc}
                 alt={alt}
-                width={width}
-                height={height}
+                width={dialogWidth ?? width}
+                height={dialogHeight ?? height}
                 sizes={dialogSizes}
               />
             </div>

@@ -1,52 +1,115 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
-import type { KeyboardEvent } from "react";
+import type { KeyboardEvent, ReactNode } from "react";
 import ImageLightbox from "../../components/ImageLightbox";
 import type { StoryImage } from "../portfolioTypes";
 
-type FlowView = "account" | "details" | "review" | "rebuilt";
+type FlowView = "account" | "details" | "review";
+
+type FlowPreview = {
+  height: number;
+  src: string;
+  width: number;
+};
 
 type CheckoutFlowViewerProps = {
   accountBefore: StoryImage;
-  detailsAfter: StoryImage;
   detailsBefore: StoryImage;
   reviewBefore: StoryImage;
 };
 
-function FlowScreen({ image }: { image: StoryImage }) {
+type RebuiltCheckoutFlowViewerProps = {
+  accountAfter: StoryImage;
+  detailsAfter: StoryImage;
+};
+
+type FlowTab = {
+  id: string;
+  image: StoryImage;
+  label: string;
+  preview: FlowPreview;
+};
+
+type TabbedCheckoutFlowViewerProps = {
+  ariaLabel: string;
+  caption: ReactNode;
+  heading: string;
+  tabs: FlowTab[];
+};
+
+const originalFlowPreviews: Record<FlowView, FlowPreview> = {
+  account: {
+    src: "/work/checkout/original-account-flow-uniform.png",
+    width: 2436,
+    height: 1681,
+  },
+  details: {
+    src: "/work/checkout/original-details-flow-uniform.png",
+    width: 2438,
+    height: 3461,
+  },
+  review: {
+    src: "/work/checkout/original-review-flow-spaced.png",
+    width: 2048,
+    height: 1811,
+  },
+};
+
+const originalJourneyCaption = (
+  <>
+    Checkout ran in three steps. Review assembled the subscription decision —
+    trial terms, annual price, payment date, consent and the final action —
+    after Details had collected billing and payment.
+  </>
+);
+
+const rebuiltJourneyCaption = (
+  <>
+    The shorter flow kept Account as the first step. Details then carried the
+    plan summary, billing, payment, consent and final action.
+  </>
+);
+
+function FlowScreen({
+  caption,
+  image,
+  preview,
+}: {
+  caption: ReactNode;
+  image: StoryImage;
+  preview: FlowPreview;
+}) {
   return (
     <div className="checkout-flow-viewer__screen">
       <ImageLightbox
         alt={image.alt}
         caption={image.caption}
         chrome="overlay"
+        dialogHeight={image.height}
         dialogPresentation="minimal"
         dialogSizes="1440px"
-        height={image.height}
+        dialogSrc={image.src}
+        dialogWidth={image.width}
+        height={preview.height}
         label={image.label}
-        previewSrc={image.src}
-        showCaption={false}
-        sizes="(max-width: 767px) calc(100vw - 40px), 520px"
-        width={image.width}
+        previewCaption={caption}
+        previewSrc={preview.src}
+        showDialogCaption={Boolean(image.caption)}
+        sizes="(max-width: 720px) calc(100vw - 40px), 720px"
+        width={preview.width}
       />
     </div>
   );
 }
 
-export default function CheckoutFlowViewer({
-  accountBefore,
-  detailsAfter,
-  detailsBefore,
-  reviewBefore,
-}: CheckoutFlowViewerProps) {
-  const tabs: Array<{ id: FlowView; image: StoryImage; label: string }> = [
-    { id: "account", image: accountBefore, label: "Account" },
-    { id: "details", image: detailsBefore, label: "Details" },
-    { id: "review", image: reviewBefore, label: "Review" },
-    { id: "rebuilt", image: detailsAfter, label: "Rebuilt" },
-  ];
-  const [activeView, setActiveView] = useState<FlowView>("account");
+function TabbedCheckoutFlowViewer({
+  ariaLabel,
+  caption,
+  heading,
+  tabs,
+}: TabbedCheckoutFlowViewerProps) {
+  const [activeView, setActiveView] = useState(tabs[0].id);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const instanceId = useId().replaceAll(":", "");
 
@@ -69,7 +132,8 @@ export default function CheckoutFlowViewer({
 
   return (
     <div className="checkout-flow-viewer">
-      <div className="checkout-flow-viewer__tabs" role="tablist" aria-label="Checkout steps before and after">
+      <h3 className="checkout-flow-heading">{heading}</h3>
+      <div className="checkout-flow-viewer__tabs" role="tablist" aria-label={ariaLabel}>
         {tabs.map((tab, index) => {
           const selected = activeView === tab.id;
           return (
@@ -100,13 +164,82 @@ export default function CheckoutFlowViewer({
           key={tab.id}
           role="tabpanel"
         >
-          <FlowScreen image={tab.image} />
+          <FlowScreen caption={caption} image={tab.image} preview={tab.preview} />
         </div>
       ))}
-
-      <p className="checkout-flow-viewer__caption">
-        Removing Review shortened checkout from three steps to two and moved the full subscription decision into Details.
-      </p>
     </div>
+  );
+}
+
+export function RebuiltCheckoutFlowViewer({
+  accountAfter,
+  detailsAfter,
+}: RebuiltCheckoutFlowViewerProps) {
+  const tabs: FlowTab[] = [
+    {
+      id: "account",
+      image: accountAfter,
+      label: "1 Account",
+      preview: {
+        src: "/work/checkout/rebuilt-account-flow-uniform-v2.png",
+        width: 2436,
+        height: 1652,
+      },
+    },
+    {
+      id: "details",
+      image: detailsAfter,
+      label: "2 Details",
+      preview: {
+        src: "/work/checkout/rebuilt-details-flow-uniform-v3.png",
+        width: 2228,
+        height: 3618,
+      },
+    },
+  ];
+
+  return (
+    <TabbedCheckoutFlowViewer
+      ariaLabel="Rebuilt checkout steps"
+      caption={rebuiltJourneyCaption}
+      heading="Rebuilt two-step checkout"
+      tabs={tabs}
+    />
+  );
+}
+
+export default function CheckoutFlowViewer({
+  accountBefore,
+  detailsBefore,
+  reviewBefore,
+}: CheckoutFlowViewerProps) {
+  const tabs: FlowTab[] = [
+    {
+      id: "account",
+      image: accountBefore,
+      label: "1 Account",
+      preview: originalFlowPreviews.account,
+    },
+    {
+      id: "details",
+      image: detailsBefore,
+      label: "2 Details",
+      preview: originalFlowPreviews.details,
+    },
+    {
+      id: "review",
+      image: reviewBefore,
+      label: "3 Review",
+      preview: originalFlowPreviews.review,
+    },
+  ];
+
+  return (
+    <TabbedCheckoutFlowViewer
+      ariaLabel="Original checkout steps"
+      caption={originalJourneyCaption}
+      heading="Original three-step checkout"
+      tabs={tabs}
+    />
   );
 }

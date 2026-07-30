@@ -149,11 +149,15 @@ production state.
   Frames with annual billing selected are representative examples, not the
   boundary of the experiment.
 - The reconstructed Account, Details, and Review screens form one coherent
-  representative original journey. The rebuilt Details screen and the
-  `€0 due today` summary remain separate representative working states. These
-  artifacts may illustrate the flow and content problem, but must not be
-  called the exact tested, winning, shipped, or production variant unless that
-  identity is established.
+  representative original journey. No separate two-step Account export is
+  retained, so the shorter-flow Account screen is a documented representative
+  composite of the unchanged Account form and a reconstructed two-step
+  indicator. The rebuilt Details screen is a representative composite that now
+  incorporates the separate `€0 due today` working summary. The focused
+  `€0 due today` asset remains a separately retained source example. These
+  artifacts may illustrate the flow and content problem, but must not be called
+  the exact tested, winning, shipped, or production variant unless that identity
+  is established.
 - Additional purchase states may support a broader checkout story when their
   separate scopes are clear. Do not claim Mason owned the flow or test, that
   his copy alone caused the result, or that every visible state was part of

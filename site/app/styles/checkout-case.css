@@ -1,5 +1,5 @@
 
-/* Checkout uses a wide rail for evidence and a centered reading rail for copy. */
+/* Checkout keeps copy and evidence on the same centered reading rail. */
 .checkout-page {
   width: min(100% - 48px, 880px);
 }
@@ -13,17 +13,17 @@
 }
 
 .checkout-page .chapter-blocks {
-  gap: 28px;
+  gap: 48px;
 }
 
 .checkout-page .chapter-heading {
   width: min(100%, 720px);
-  margin: 80px auto 24px;
+  margin: 88px auto 24px;
 }
 
 .checkout-page .chapter-hero + .chapter-section .chapter-heading,
 .checkout-page .chapter-heading--closing {
-  margin-top: 80px;
+  margin-top: 88px;
 }
 
 .checkout-page .checkout-meta,
@@ -51,9 +51,29 @@
   margin-top: 28px;
 }
 
+.checkout-page .chapter-prose > p {
+  margin-bottom: 24px;
+}
+
 .checkout-flow-viewer,
 .checkout-pair {
-  width: 100%;
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.checkout-page .chapter-blocks > .checkout-flow-viewer,
+.checkout-page .chapter-blocks > .checkout-pair {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.checkout-flow-heading {
+  width: min(100%, 720px);
+  margin: 0 auto 12px;
+  font-size: 22px;
+  font-weight: 540;
+  letter-spacing: -.02em;
+  line-height: 1.3;
 }
 
 .checkout-flow-viewer__tabs {
@@ -70,14 +90,14 @@
 
 .checkout-flow-viewer__tabs button {
   flex: 0 0 auto;
-  min-height: 48px;
+  min-height: 44px;
   padding: 0;
   border: 0;
   border-bottom: 2px solid transparent;
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -89,7 +109,7 @@
 
 .checkout-flow-viewer__tabs button:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  outline-offset: 2px;
 }
 
 .checkout-flow-viewer__panel {
@@ -105,26 +125,93 @@
   margin-inline: auto;
 }
 
-.checkout-pair__item h3 {
-  margin: 0 0 10px;
-  color: var(--ink);
-  font-size: 17px;
-  font-weight: 640;
-  line-height: 1.4;
+.checkout-flow-viewer .evidence-preview img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
 }
 
-.checkout-flow-viewer .evidence-preview,
+.checkout-flow-viewer .evidence-expand-indicator {
+  top: 12px;
+  right: 12px;
+  border-color: rgba(20, 25, 22, .14);
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 1px 2px rgba(20, 25, 22, .08);
+}
+
+.checkout-flow-viewer .evidence-figure > figcaption {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: #57534e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.checkout-question-list {
+  margin: -4px 0 24px;
+  padding-left: 1.25em;
+  color: #3f4943;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.checkout-question-list li + li {
+  margin-top: 4px;
+}
+
+.checkout-pair__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.checkout-pair__item {
+  width: var(--checkout-panel-width, 100%);
+}
+
+.checkout-pair__item h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 0 0 8px;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.checkout-pair__item h3 strong {
+  font-size: 15px;
+  font-weight: 640;
+}
+
+.checkout-pair__item h3 span {
+  color: #57534e;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.checkout-flow-viewer .evidence-preview {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 0;
+  border-radius: 0;
+}
+
 .checkout-pair .evidence-preview {
   width: 100%;
   max-width: none;
   padding: 0;
   overflow: hidden;
-  background: #f7f9f8;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
+  background: var(--surface);
+  border: 1px solid #e4e1da;
+  border-radius: 0;
 }
 
-.checkout-flow-viewer .evidence-preview img,
 .checkout-pair .evidence-preview img {
   display: block;
   width: 100%;
@@ -133,30 +220,84 @@
   max-height: none;
 }
 
-.checkout-flow-viewer .evidence-figure > figcaption,
-.checkout-pair .evidence-figure > figcaption {
-  display: none;
-}
-
-.checkout-flow-viewer__caption,
-.checkout-pair__caption {
-  width: min(100%, 720px);
-  margin: 16px auto 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.55;
-}
-
-.checkout-pair__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  align-items: start;
-}
-
-.checkout-pair .chapter-media,
-.checkout-pair .evidence-figure,
-.checkout-pair .evidence-button {
+.checkout-flow-viewer .evidence-button,
+.checkout-pair .evidence-button,
+.checkout-flow-viewer .evidence-figure,
+.checkout-pair .evidence-figure {
   width: 100%;
   max-width: none;
+}
+
+.checkout-flow-viewer .evidence-button:focus-visible,
+.checkout-pair .evidence-button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.checkout-page .evidence-footer {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  align-items: start;
+  justify-content: space-between;
+  margin: 12px 0 0;
+  color: #57534e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.checkout-page .evidence-footer > span {
+  width: min(100%, 640px);
+}
+
+.checkout-page .evidence-footer--action-only {
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.checkout-pair__item:last-child .evidence-footer {
+  width: var(--checkout-caption-width, 100%);
+}
+
+.checkout-page .evidence-expand-action {
+  display: inline-flex;
+  flex: 0 0 auto;
+  min-height: 44px;
+  gap: 6px;
+  align-items: center;
+  margin: -6px 0;
+  padding: 12px 0 12px 12px;
+  border: 0;
+  background: transparent;
+  color: #57534e;
+  font-size: 13px;
+  line-height: 20px;
+  cursor: zoom-in;
+}
+
+.checkout-page .evidence-expand-action:hover {
+  color: #1c1917;
+}
+
+.checkout-page .evidence-expand-action:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.checkout-page .evidence-expand-action svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.checkout-page .chapter-blocks > .checkout-transition {
+  width: min(100%, 720px);
+  margin: 40px auto 0;
+  color: #3f4943;
+  font-size: 20px;
+  line-height: 1.65;
 }

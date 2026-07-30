@@ -51,6 +51,8 @@
 .lightbox-image {
   overflow: auto;
   background: #eef0ed;
+  touch-action: pan-x pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
 }
 
 .lightbox-image img {
@@ -58,6 +60,7 @@
   max-width: 100%;
   height: auto;
   margin: auto;
+  touch-action: pinch-zoom;
 }
 
 .lightbox-panel--tall {
@@ -122,7 +125,7 @@
 
 .lightbox-panel--minimal .lightbox-header button:focus-visible {
   outline: 2px solid var(--ink);
-  outline-offset: -2px;
+  outline-offset: 2px;
 }
 
 .lightbox-panel--minimal .lightbox-image {

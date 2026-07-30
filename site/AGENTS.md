@@ -66,6 +66,28 @@ with another case.
 - Use readable type, spacing, line length, and contrast. Do not enforce one
   global pixel size for every label, caption, metadata line, and paragraph.
 
+## Live development preview
+
+- During application work, keep one hot-reloading Vinext development server
+  running at `http://127.0.0.1:4173`.
+- Check that endpoint before making changes. If it is unavailable, start the
+  server from `site/` with
+  `npm run dev -- --hostname 127.0.0.1 --port 4173`.
+- Keep the process alive for the full task so Mason can inspect changes as they
+  land. A production build is a separate verification step; it must not replace
+  or stop the development server.
+- Hot reload does not reliably invalidate a browser-cached file under an
+  unchanged `public/` URL. When replacing a visible public asset during active
+  review, give the approved replacement a new filename and update every preview,
+  enlargement, metadata, and manifest reference. Do not rely on overwriting the
+  existing file or asking Mason to hard-refresh.
+- Before saying that a replacement is visible, fetch its exact URL from the
+  development server, verify that the served bytes match the intended local
+  file, and confirm that the rendered component references the new URL.
+- After builds and tests, confirm the same endpoint still returns HTTP 200.
+  Do not start a second server when port 4173 is already owned by the current
+  workspace.
+
 ## What tests may enforce
 
 Automated tests may protect:

@@ -1,79 +1,90 @@
 import Link from "next/link";
-import { ChapterBackLink, ChapterFigure } from "../../components/ChapterCaseElements";
+import type { CSSProperties, ReactNode } from "react";
+import { ChapterBackLink } from "../../components/ChapterCaseElements";
+import ImageLightbox from "../../components/ImageLightbox";
 import { SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryImage } from "../portfolioTypes";
-import CheckoutFlowViewer from "./CheckoutFlowViewer";
+import CheckoutFlowViewer, { RebuiltCheckoutFlowViewer } from "./CheckoutFlowViewer";
 
 const accountBefore: StoryImage = {
-  label: "Original checkout Account screen",
+  label: "Account step, original checkout",
   src: "/work/checkout/original-account.png",
   width: 2880,
   height: 1960,
-  alt: "Original Account screen showing account creation as the first step in a three-step checkout",
+  alt: "DeepL checkout, original Account step — sign-up form with a three-step progress indicator.",
   caption: "Customers created an account before entering their subscription details.",
 };
 
 const detailsBefore: StoryImage = {
-  label: "Original checkout Details screen",
+  label: "Details step, original checkout",
   src: "/work/checkout/original-details.png",
   width: 2880,
   height: 3720,
-  alt: "Original Details screen showing plan selection, billing information, payment entry, and a three-step progress indicator leading to Review",
+  alt: "DeepL checkout, original Details step — plan selection, billing address and payment method, with Continue.",
   caption: "Customers entered their plan, billing and payment details, then continued to Review.",
 };
 
 const reviewBefore: StoryImage = {
-  label: "Original checkout Review screen",
-  src: "/work/checkout/original-review.png",
-  width: 2880,
-  height: 2608,
-  alt: "Original Review screen showing subscription conditions, consent checkboxes, the Buy now action, and cancellation reassurance",
-  caption: "Customers checked the subscription terms, accepted required consent and selected Buy now.",
+  label: "Review step, original checkout",
+  src: "/work/checkout/original-review-flow-spaced.png",
+  width: 2048,
+  height: 1811,
+  alt: "DeepL checkout, original Review step — plan conditions, features, two consent checkboxes and Buy now.",
+  caption: "",
+};
+
+const accountAfter: StoryImage = {
+  label: "Account step, representative shorter checkout",
+  src: "/work/checkout/rebuilt-account-flow-uniform-v2.png",
+  width: 2436,
+  height: 1652,
+  alt: "Representative DeepL Account step — the retained sign-up form with a two-step progress indicator.",
+  caption: "The Account form remained the first step of the shorter flow.",
 };
 
 const detailsAfter: StoryImage = {
-  label: "New checkout Details screen",
+  label: "Details step, rebuilt checkout",
   src: "/work/checkout/details-after-full.png",
   width: 2560,
   height: 4058,
-  alt: "New two-step Details screen showing the selected annual plan, trial and price summary, billing and payment entry, consent statement, and Begin subscription action",
-  caption: "The new Details step brought plan, billing, payment, consent and the subscription action together.",
+  alt: "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
+  caption: "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
 };
 
 const oldPrice: StoryImage = {
-  label: "Price and trial terms on the old Review screen",
+  label: "Review plan conditions, before the change",
   src: "/work/checkout/review-plan-conditions.png",
-  width: 1100,
-  height: 650,
-  alt: "Old Review detail showing the 30-day trial, cancellation date, annual subscription fee, VAT, first payment date, and masked credit card",
-  caption: "Review bundled the trial length, annual price, billing date and payment method in one text block.",
+  width: 1444,
+  height: 616,
+  alt: "Review plan conditions showing a 30-day trial, €299.88 annual price, VAT, first payment date and masked credit card.",
+  caption: "Review plan conditions before the change.",
 };
 
 const newPrice: StoryImage = {
-  label: "New price and trial hierarchy",
+  label: "Details plan summary, after the change",
   src: "/work/checkout/due-today-summary.png",
   width: 800,
   height: 736,
-  alt: "DeepL order summary showing zero euros due today and 299 euros 88 cents per year after the trial",
-  caption: "The new hierarchy leads with €0 due today and keeps the annual price directly beneath it.",
+  alt: "Details plan summary showing €0 due today and €299.88 per year after the trial.",
+  caption: "Details plan summary after the change.",
 };
 
 const oldConsent: StoryImage = {
-  label: "Consent and action on the old Review screen",
+  label: "Review consent and final action, before the change",
   src: "/work/checkout/review-consent-action-tight.png",
-  width: 1300,
-  height: 570,
-  alt: "Old Review detail showing required and optional consent checkboxes, the Buy now button, and cancellation reassurance",
-  caption: "The old Review step separated required consent from the Buy now action.",
+  width: 1444,
+  height: 624,
+  alt: "Review region showing required and optional consent checkboxes, Back, Buy now and cancellation reassurance.",
+  caption: "Review consent and final action before the change.",
 };
 
 const newConsent: StoryImage = {
-  label: "Consent and action on the new Details screen",
+  label: "Details consent and final action, after the change",
   src: "/work/checkout/details-consent-action-tight.png",
-  width: 1220,
-  height: 530,
-  alt: "New Details detail showing consent linked to the action, the Begin subscription button, and trial reassurance",
-  caption: "The new Details step links consent to Begin subscription and keeps the trial reassurance beside the action.",
+  width: 1147,
+  height: 520,
+  alt: "Details region showing a consent statement, Begin subscription and three trial reassurance lines.",
+  caption: "Details consent and final action after the change.",
 };
 
 function CheckoutPair({
@@ -81,35 +92,68 @@ function CheckoutPair({
   ariaLabel,
   caption,
   leftImage,
-  leftLabel,
+  leftDescriptor,
+  leftScreen,
   rightImage,
-  rightLabel,
+  rightDescriptor,
+  rightScreen,
+  rightWidth,
 }: {
   accessibleDescription: string;
   ariaLabel: string;
-  caption: string;
+  caption: ReactNode;
   leftImage: StoryImage;
-  leftLabel: string;
+  leftDescriptor: string;
+  leftScreen: string;
   rightImage: StoryImage;
-  rightLabel: string;
+  rightDescriptor: string;
+  rightScreen: string;
+  rightWidth: number;
 }) {
+  const rightPanelStyle = {
+    "--checkout-caption-width": `${(10000 / rightWidth).toFixed(3)}%`,
+    "--checkout-panel-width": `${rightWidth}%`,
+  } as CSSProperties;
+
+  const renderPanel = (
+    image: StoryImage,
+    screen: string,
+    descriptor: string,
+    style?: CSSProperties,
+    previewCaption?: ReactNode,
+  ) => (
+    <div className="checkout-pair__item" style={style}>
+      <h3>
+        <strong>{screen}</strong>
+        <span>{descriptor}</span>
+      </h3>
+      <ImageLightbox
+        alt={image.alt}
+        caption={image.caption}
+        chrome="footer"
+        dialogPresentation="minimal"
+        dialogSizes="1440px"
+        height={image.height}
+        label={image.label}
+        previewCaption={previewCaption}
+        previewSrc={image.src}
+        showCaption={previewCaption !== undefined}
+        sizes="(max-width: 720px) calc(100vw - 40px), 720px"
+        width={image.width}
+      />
+    </div>
+  );
+
   return (
     <div
       className="checkout-pair"
       role="group"
       aria-label={ariaLabel}
     >
-      <div className="checkout-pair__grid">
-        <div className="checkout-pair__item">
-          <h3>{leftLabel}</h3>
-          <ChapterFigure image={leftImage} measure="reading" />
-        </div>
-        <div className="checkout-pair__item">
-          <h3>{rightLabel}</h3>
-          <ChapterFigure image={rightImage} measure="reading" />
-        </div>
+      <div className="checkout-pair__stack">
+        {renderPanel(leftImage, leftScreen, leftDescriptor)}
+        {renderPanel(rightImage, rightScreen, rightDescriptor, rightPanelStyle, caption)}
       </div>
-      <p className="checkout-pair__caption">{caption}</p>
       <p className="visually-hidden">{accessibleDescription}</p>
     </div>
   );
@@ -127,8 +171,8 @@ export default function CheckoutCase() {
           <p className="checkout-meta">DeepL · Monetization · 2024</p>
           <div className="chapter-synopsis">
             <p>DeepL’s Monetization roadmap included measurable commercial goals, including a <strong>+2% checkout-conversion target</strong>. Our product manager, product designer, and I worked on a series of experiments intended to advance those goals.</p>
-            <p>One experiment removed the separate Review step, reducing checkout from three steps to two. The flow became shorter, but the remaining Details screen now had to explain the subscription without that final checkpoint.</p>
-            <p>My contribution was reorganizing and rewriting how the shorter flow explained the selected plan, price, trial, payment timing, consent, and final action—so removing a step did not remove the information customers needed to understand the commitment. The experiment delivered <strong>+3.02% paid subscriptions</strong> and approximately <strong>+€2.4M incremental annual recurring revenue</strong>.</p>
+            <p>One experiment removed the separate Review step, reducing checkout from three steps to two. The flow became shorter, but the Details step had to explain the subscription without that final checkpoint.</p>
+            <p>My contribution was reorganizing and rewriting how the shorter flow explained the selected plan, price, trial, payment timing, consent and final action, so that removing a step did not remove the information customers needed to understand the commitment. The experiment delivered <strong>+3.02% paid subscriptions</strong> and approximately <strong>+€2.4M incremental annual recurring revenue</strong>.</p>
           </div>
         </header>
 
@@ -142,7 +186,6 @@ export default function CheckoutCase() {
 
             <CheckoutFlowViewer
               accountBefore={accountBefore}
-              detailsAfter={detailsAfter}
               detailsBefore={detailsBefore}
               reviewBefore={reviewBefore}
             />
@@ -150,12 +193,24 @@ export default function CheckoutCase() {
         </section>
 
         <section className="chapter-section" id="rebuilding-details">
-          <h2 className="chapter-heading">I reorganized Details around the commitment customers were making</h2>
+          <h2 className="chapter-heading">I reorganized the Details step around the commitment customers were making</h2>
           <div className="chapter-blocks">
             <div className="chapter-prose">
-              <p>The remaining step needed to answer six questions before the final action: which subscription the customer was starting, what was due today, what they would pay after the trial, when payment would begin, whether they could cancel, and what the final action authorized.</p>
+              <p>The Details step needed to answer six questions before the final action:</p>
+              <ul className="checkout-question-list">
+                <li>Which subscription was the customer starting?</li>
+                <li>What was due today?</li>
+                <li>What would they pay after the trial?</li>
+                <li>When would payment begin?</li>
+                <li>Could they cancel?</li>
+                <li>What did the final action authorize?</li>
+              </ul>
               <p>Rather than paste the old Review content into a longer page, I changed its hierarchy and wording. The selected plan, price, trial, billing, payment, consent, and action became one decision path.</p>
             </div>
+            <RebuiltCheckoutFlowViewer
+              accountAfter={accountAfter}
+              detailsAfter={detailsAfter}
+            />
           </div>
         </section>
 
@@ -164,17 +219,20 @@ export default function CheckoutCase() {
           <div className="chapter-blocks">
             <div className="chapter-prose">
               <p>A free trial creates two financial moments: what the customer owes when starting and what they will owe if the subscription continues.</p>
-              <p>Giving the annual price and today’s charge equal weight could make a free trial look like an immediate €299.88 purchase. Emphasizing only €0 could make the later commitment too easy to overlook.</p>
+              <p>Giving the annual price and today’s charge equal weight would have made a free trial look like an immediate €299.88 purchase. Emphasizing only €0 would have made the later commitment too easy to overlook.</p>
               <p>I structured the hierarchy to answer the immediate question first with <strong>€0 due today</strong>, while keeping <strong>€299.88 per year after the trial</strong> directly beneath it.</p>
             </div>
             <CheckoutPair
-              accessibleDescription="Old Review: the 30-day trial, annual price, VAT, first payment date and payment method appeared in one text block. New hierarchy: €0 due today appears above €299.88 per year after the trial."
+              accessibleDescription="Review before the change: the 30-day trial, annual price, VAT, first payment date and payment method appeared in one text block. Details after the change: €0 due today appears above €299.88 per year after the trial."
               ariaLabel="Price and trial hierarchy before and after"
-              caption="The old Review text bundled timing and price. The new hierarchy answered what was due today without hiding the annual cost. The new example comes from a separate checkout iteration."
+              caption="Review ran the trial dates, the annual fee, the VAT and the first payment date together as one block of text. The summary answered what was due today first, then what the subscription cost after the trial. These are two working examples, not two views of one session — the summary panel kept iterating after the screen shown above."
               leftImage={oldPrice}
-              leftLabel="Old Review"
+              leftDescriptor="plan conditions, before the change"
+              leftScreen="Review"
               rightImage={newPrice}
-              rightLabel="New price summary"
+              rightDescriptor="plan summary, after the change"
+              rightScreen="Details"
+              rightWidth={55.4}
             />
           </div>
         </section>
@@ -184,24 +242,29 @@ export default function CheckoutCase() {
           <div className="chapter-blocks">
             <div className="chapter-prose">
               <p>In the old flow, customers accepted the terms through a required checkbox on Review before pressing <strong>Buy now</strong>. Once the purchase began with a 30-day trial, that label no longer described the action accurately.</p>
-              <p>I rewrote the consent statement to explain what pressing the button authorized and replaced <strong>Buy now</strong> with <strong>Begin subscription</strong>. The action now matched the commitment being made, while the surrounding content kept the trial, payment timing, and cancellation visible at the point of action.</p>
+              <p>I rewrote the consent statement to explain what pressing the button authorized and replaced <strong>Buy now</strong> with <strong>Begin subscription</strong>. The action matched the commitment being made, and the surrounding content kept the trial, payment timing and cancellation visible at the point of action.</p>
             </div>
             <CheckoutPair
               accessibleDescription={"Old consent: I accept the Terms & Conditions, Service Specification, and confirm that I have read and understood my Right of Withdrawal as a consumer. Old action: Buy now. New consent: By pressing the \"Begin subscription\" button, you accept the DeepL Pro Terms and Conditions including the Service Specifications. Consumers have a 14-day Right of Withdrawal. New action: Begin subscription."}
               ariaLabel="Consent and final action before and after"
-              caption="The old Review step used a required checkbox and Buy now. The new Details step tied consent to Begin subscription and kept trial reassurance beside the action."
+              caption={<>Review put consent in a required checkbox above <strong>Buy now</strong>. Details moved it into a statement naming the action, and kept the trial, the payment timing and cancellation beside <strong>Begin subscription</strong>.</>}
               leftImage={oldConsent}
-              leftLabel="Old Review"
+              leftDescriptor="consent and final action, before the change"
+              leftScreen="Review"
               rightImage={newConsent}
-              rightLabel="New Details"
+              rightDescriptor="consent and final action, after the change"
+              rightScreen="Details"
+              rightWidth={79.4}
             />
+            <p className="checkout-transition">The plan summary, the price hierarchy and the consent statement all answered one question that the Review step used to answer on its own: what the customer was agreeing to, and when it would start costing them.</p>
           </div>
         </section>
 
         <section className="chapter-closing" id="experiment-result">
-          <h2 className="chapter-heading chapter-heading--closing">The simpler checkout increased paid subscriptions</h2>
+          <h2 className="chapter-heading chapter-heading--closing">Two steps converted better than three</h2>
           <div className="chapter-prose checkout-result-summary">
-            <p>The team removed an entire purchase step while keeping the information customers needed at the point of commitment. My contribution was restructuring that decision inside Details: separating today’s charge from the later annual price, aligning the final action with starting a trial, and keeping consent explicit.</p>
+            <p>The experiment ran across monthly and annual subscriptions and delivered <strong>+3.02% paid subscriptions</strong>, roughly <strong>+€2.4M in incremental annual recurring revenue</strong>. The shorter flow did not tell customers less. It told them the same things in the place where they were already deciding.</p>
+            <p>The judgment was in deciding what could go. I removed what Review genuinely repeated. The trial terms, the payment date, the price after the trial and the consent statement could not go — and none of them could simply be pasted into a screen that was already collecting an address and a card number. Each had to be rewritten to work at a different point in the decision.</p>
           </div>
         </section>
 

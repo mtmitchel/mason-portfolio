@@ -60,19 +60,43 @@ The current checkout implementation follows these explicit corrections:
 - do not display the 35-day net-subscription metric;
 - do not call the result “Pro purchases”; use “paid subscriptions”;
 - show `+3.02%` and `+€2.4M` with leading plus signs;
-- state the two experiment results once in the opening rather than repeating
-  them in a closing stat treatment;
-- show the coherent reconstructed Account, Details, and Review journey
-  alongside the rebuilt Details screen before zooming into individual content
-  decisions;
-- use one horizontal Account, Details, Review, and Rebuilt tab viewer on
-  desktop and mobile, with one complete screen visible at a time and no
-  redundant screen headings;
-- compare the old Review terms with the separate `€0 due today` treatment at a
-  restrained scale;
-- compare the old and new consent and final-action regions with source-faithful
-  crops, while keeping the exact wording in visually hidden HTML rather than a
-  visible transcript;
+- use the experiment results as the opening hook and return to them in the
+  conclusion, where they establish scope and support the transferable judgment;
+- show the coherent reconstructed Account, Details, and Review journey in one
+  three-tab viewer, then show the shorter Account and Details journey in a
+  separate two-tab viewer before zooming into individual content decisions;
+- use numbered Account, Details, and Review tabs on desktop and mobile, with
+  one complete original screen visible at a time;
+- use measured inline crops for those three screens that remove the repeated
+  DeepL header and excess outer canvas while preserving the full progress
+  indicator and checkout card; apply the same 32px left, right, and bottom
+  inset from the solid screen group across all five flow tabs; enlargement
+  opens the untouched source image;
+- retain a two-step progress indicator in both rebuilt-viewer tabs; because no
+  separate two-step Account export is retained, document its Account screen as
+  a representative composite that pairs the unchanged Account form with a
+  reconstructed two-step indicator derived from retained original components;
+  pair it with a measured crop of the genuine two-step Details screen;
+- compare the representative original Review terms with the separate
+  `€0 due today` treatment in a two-tab viewer, with one state visible at a
+  time;
+- compare the old and new consent-and-action regions in a second two-tab
+  viewer, with one state visible at a time, source-faithful crops, and the exact
+  wording retained in visually hidden HTML rather than a visible transcript;
+- recrop the Review plan-conditions panel so the dark blue top rule remains
+  visible and unused white canvas on the right is removed; do not stretch the
+  crop to match the Details panel;
+- keep every visual within the same 720px maximum width as the body text on
+  desktop and within the text gutters on mobile;
+- keep all figure captions at 14px, aligned to the figure and text rail and attached to
+  their figure through a small caption gap and larger space before the next
+  section;
+- put the flow-viewer expand controls inside retained blank image canvas so
+  they do not cover interface content; keep the comparison expand controls
+  beneath their images and within the text gutters;
+- keep complete screens borderless and use the restrained one-pixel border only
+  on focused comparison panels;
+- let the mobile lightbox support touch panning and pinch zoom;
 - do not use the rejected dense comparison, abstract flow diagram,
   side-annotation, stat-strip, oversized terms crop, or cramped consent
   constructions;
@@ -81,15 +105,21 @@ The current checkout implementation follows these explicit corrections:
   far right, with no project name or “Next project” label.
 
 The reconstructed Account, Details, and Review screens form one coherent
-representative original journey. The rebuilt Details screen remains a separate
-representative working state, and the `€0 due today` order summary is a separate
-working example rather than a literal crop of that screen. None should be
-called the exact tested, winning, shipped, or production variant without
-additional evidence.
+representative original journey. The rebuilt viewer uses a crop of that
+representative Account form to show the retained first step alongside the
+rebuilt Details working state. That Details screen is a representative
+composite that incorporates the separately retained `€0 due today` working
+summary so the complete screen and the focused price example communicate the
+same concept. None should be called the exact tested, winning, shipped, or
+production variant without additional evidence.
 
-The current route has passed its mechanical checks and a local desktop and
-mobile browser inspection. That establishes implementation conformance, not
-Mason's qualitative approval or a permanent layout template.
+The current checkpoint is not visually approved. Its flow viewers, narrative,
+assets, and interaction work are preserved for continuity, but the focused
+price and consent comparisons still use a rejected stacked layout. The Review
+price crop also omits the dark blue top rule and retains excessive blank canvas
+on the right. The next pass must address those specific defects before seeking
+Mason's visual sign-off. Mechanical checks establish implementation
+conformance only; they do not override this rejection.
 
 ## Current route snapshot
 

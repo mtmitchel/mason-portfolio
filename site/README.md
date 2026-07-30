@@ -43,8 +43,20 @@ or external runtime state.
 
 ```bash
 npm install
-npm run dev
+npm run dev -- --hostname 127.0.0.1 --port 4173
 ```
+
+The local preview is `http://127.0.0.1:4173`. Keep this hot-reloading
+development server running throughout site work so changes remain immediately
+available for review. Production builds are additional checks, not a
+replacement for the live development server.
+
+Hot reload does not reliably replace a browser-cached file when a visible asset
+is overwritten at the same `public/` URL. Give each approved replacement a new
+filename, update every preview and enlargement reference, and verify that the
+development server returns the intended bytes at the new URL. The canonical
+implementation rule and verification steps live in
+[`AGENTS.md`](AGENTS.md#live-development-preview).
 
 ## Required checks
 

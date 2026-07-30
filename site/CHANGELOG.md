@@ -11,15 +11,45 @@
   reconstructed Account, Details, and Review journey, the rebuilt Details
   screen, a focused price comparison, and a source-faithful consent and
   final-action comparison.
-- Changed the checkout journey viewer to show Account, Details, Review, and
-  Rebuilt one screen at a time. Removed the redundant old-screen headings and
-  the obsolete public continuity caveat.
+- Reduced the original journey viewer to three numbered steps and added a
+  separate two-tab Account and Details viewer for the rebuilt two-step flow.
+- Replaced CSS-positioned journey crops with pixel-preserving inline assets
+  that remove the repeated DeepL header and balance the outer canvas while
+  retaining each complete progress indicator and checkout card. All five tabs
+  use balanced left, right, and bottom insets from the solid screen group.
+- Applied the approved Review presentation with additional spacing above
+  “Features of your plan” to both the inline tab and its enlargement.
+- Added a consistent two-step progress indicator to both rebuilt-viewer tabs.
+  The Details crop retains the genuine two-step indicator and complete
+  interface. Because no separate two-step Account export is retained, its tab
+  is documented as a representative composite of the unchanged Account form
+  and a reconstructed two-step indicator.
+- Replaced side-by-side detail comparisons with single-column vertical
+  sequences, corrected the old price source to the matching €299.88 Review
+  state, and recropped the consent regions so controls and copy remain intact.
+  This stacked comparison treatment was subsequently rejected and remains a
+  checkpoint only.
+- Constrained every checkout visual, label, tab row, caption, and mobile
+  treatment to the same 720px maximum width and gutters as the body text.
+- Kept flow-viewer enlargement controls inside blank image canvas, kept
+  comparison enlargement controls below their evidence, tightened captions to
+  a consistent 14px system, and gave comparison labels one screen-name and
+  descriptor pattern. The lightbox supports touch panning and pinch zoom.
+- Removed decorative borders from complete checkout screens while retaining
+  the restrained comparison-panel border, and aligned all checkout image
+  controls and focus rings with the final accessibility specification.
 - Kept `+3.02% paid subscriptions` and approximately `+€2.4M incremental annual
   recurring revenue` together in the opening; removed the public 35-day result
   and the “Pro purchases” terminology.
 - Kept the reconstructed original journey distinct from the rebuilt Details
-  screen and the separate `€0 due today` working example without presenting any
-  of them as the exact tested or production variant.
+  screen without presenting either as the exact tested or production variant.
+  Updated the representative rebuilt screen to incorporate the separately
+  retained `€0 due today` working summary, then rewrote the ending to return to
+  the experiment result and close on the content judgment.
+- Recorded the remaining visual work without treating this checkpoint as
+  approved: convert both focused comparisons from stacked panels to tabs, and
+  recrop the Review plan-conditions panel so its dark blue top rule is visible
+  and its unnecessary right-side white canvas is removed.
 
 ### Site and repository
 
@@ -32,6 +62,9 @@
   review, current direction, candidate queue, and asset manifest.
 - Made manifest date validation use the repository machine's local calendar
   date so valid documentation updates are not rejected around midnight.
+- Documented that visible public-image replacements require a new URL during
+  live review, because hot reload does not invalidate a browser-cached asset
+  served from an unchanged path.
 
 ## Unreleased — 2026-07-29
 
