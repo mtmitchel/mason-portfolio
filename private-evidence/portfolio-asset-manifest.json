@@ -417,8 +417,9 @@
         "route": "/work/checkout",
         "kind": "manifest-image-set",
         "public_refs": [
-          "site/public/work/checkout/details-before-full.png",
-          "site/public/work/checkout/review-before-full.png",
+          "site/public/work/checkout/original-account.png",
+          "site/public/work/checkout/original-details.png",
+          "site/public/work/checkout/original-review.png",
           "site/public/work/checkout/review-plan-conditions.png",
           "site/public/work/checkout/details-after-full.png",
           "site/public/work/checkout/review-consent-action-tight.png",
@@ -431,39 +432,51 @@
           "Begin subscription",
           "No payment until end of trial"
         ],
-        "relationship": "The complete old Details and Review screens establish the original three-step journey, and the complete reconstructed Details screen shows the two-step journey. Focused source-faithful pairs then compare the price hierarchy and the consent-and-action change."
+        "relationship": "The coherent Account, Details, and Review reconstructions establish the original three-step journey, and the complete reconstructed Details screen shows the two-step journey. Focused source-faithful pairs then compare the price hierarchy and the consent-and-action change."
       },
       "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "The route first shows the unchanged complete old Details and Review screens against the complete reconstructed Details screen. It then uses the source-faithful old Review conditions crop with a separate unchanged due-today export, followed by two tighter source-faithful consent-and-action crops. The selected annual screens are representative working states from separate iterations, not one continuous customer session or necessarily the exact tested variant. Exact consent wording remains in visually hidden HTML. The due-today component is a separate unchanged flattened export and is not presented as a crop of the complete new Details screen.",
+      "crop_notes": "The route first shows the coherent reconstructed Account, Details, and Review journey, followed by the complete reconstructed two-step Details screen. It then uses the source-faithful old Review conditions crop with a separate unchanged due-today export, followed by two tighter source-faithful consent-and-action crops. Exact consent wording remains in visually hidden HTML. The due-today component is a separate unchanged flattened export and is not presented as a crop of the complete new Details screen.",
       "caption": "The full screens establish what customers did before and after the step was removed. Focused comparisons then explain how price hierarchy, consent and the final action changed.",
-      "text_alternative": "Describe the complete old Details and Review screens, the consolidated two-step Details screen, the old and new price hierarchy, and the change from checkbox consent and Buy now to consent tied to Begin subscription.",
+      "text_alternative": "Describe the reconstructed original Account, Details, and Review journey, the consolidated two-step Details screen, the old and new price hierarchy, and the change from checkbox consent and Buy now to consent tied to Begin subscription.",
       "export_ready": false,
       "files": [
         {
-          "path": "checkout/details-before-full.png",
-          "public_path": "site/public/work/checkout/details-before-full.png",
-          "artifact_genesis": "recovered_historical_export",
+          "path": "checkout/original-account.png",
+          "public_path": "site/public/work/checkout/original-account.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3735-14327.png",
-          "source_sha256": "103e7c58b801670a7689397962fca8096232e4990d719b939094ef2a43eff376",
-          "dimensions": "2880x2608",
-          "caption": "Customers entered their plan, billing and payment details, then continued to Review.",
-          "text_alternative": "Old Details screen showing plan selection, billing information, payment entry, and a three-step progress indicator leading to Review.",
-          "sha256": "103e7c58b801670a7689397962fca8096232e4990d719b939094ef2a43eff376"
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-account.png",
+          "source_sha256": "583ea5a4c97f880ca876a21af310d6159df2888c8cf7afff5ca3cd45ad8e671f",
+          "dimensions": "2880x1960",
+          "caption": "Customers created an account before entering their subscription details.",
+          "text_alternative": "Original Account screen showing account creation as the first step in a three-step checkout.",
+          "sha256": "583ea5a4c97f880ca876a21af310d6159df2888c8cf7afff5ca3cd45ad8e671f"
         },
         {
-          "path": "checkout/review-before-full.png",
-          "public_path": "site/public/work/checkout/review-before-full.png",
-          "artifact_genesis": "recovered_historical_export",
+          "path": "checkout/original-details.png",
+          "public_path": "site/public/work/checkout/original-details.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
-          "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-details.png",
+          "source_sha256": "02ab99bb63f80a29dde7ad62a838c4013f4f65e41855afc91363beaff29b819d",
+          "dimensions": "2880x3720",
+          "caption": "Customers entered their plan, billing and payment details, then continued to Review.",
+          "text_alternative": "Original Details screen showing plan selection, billing information, payment entry, and a three-step progress indicator leading to Review.",
+          "sha256": "02ab99bb63f80a29dde7ad62a838c4013f4f65e41855afc91363beaff29b819d"
+        },
+        {
+          "path": "checkout/original-review.png",
+          "public_path": "site/public/work/checkout/original-review.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-review.png",
+          "source_sha256": "9ab69b015c599f88eccb8add16cd0664af6841140fcd014f922b7e141fea6c40",
           "dimensions": "2880x2608",
           "caption": "Customers checked the subscription terms, accepted required consent and selected Buy now.",
-          "text_alternative": "Old Review screen showing subscription conditions, consent checkboxes, the Buy now action, and cancellation reassurance.",
-          "sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24"
+          "text_alternative": "Original Review screen showing subscription conditions, consent checkboxes, the Buy now action, and cancellation reassurance.",
+          "sha256": "9ab69b015c599f88eccb8add16cd0664af6841140fcd014f922b7e141fea6c40"
         },
         {
           "path": "checkout/review-plan-conditions.png",

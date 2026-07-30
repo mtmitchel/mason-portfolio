@@ -4,21 +4,30 @@ import { SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryImage } from "../portfolioTypes";
 import CheckoutFlowViewer from "./CheckoutFlowViewer";
 
-const detailsBefore: StoryImage = {
-  label: "Old checkout Details screen",
-  src: "/work/checkout/details-before-full.png",
+const accountBefore: StoryImage = {
+  label: "Original checkout Account screen",
+  src: "/work/checkout/original-account.png",
   width: 2880,
-  height: 2608,
-  alt: "Old Details screen showing plan selection, billing information, payment entry, and a three-step progress indicator leading to Review",
+  height: 1960,
+  alt: "Original Account screen showing account creation as the first step in a three-step checkout",
+  caption: "Customers created an account before entering their subscription details.",
+};
+
+const detailsBefore: StoryImage = {
+  label: "Original checkout Details screen",
+  src: "/work/checkout/original-details.png",
+  width: 2880,
+  height: 3720,
+  alt: "Original Details screen showing plan selection, billing information, payment entry, and a three-step progress indicator leading to Review",
   caption: "Customers entered their plan, billing and payment details, then continued to Review.",
 };
 
 const reviewBefore: StoryImage = {
-  label: "Old checkout Review screen",
-  src: "/work/checkout/review-before-full.png",
+  label: "Original checkout Review screen",
+  src: "/work/checkout/original-review.png",
   width: 2880,
   height: 2608,
-  alt: "Old Review screen showing subscription conditions, consent checkboxes, the Buy now action, and cancellation reassurance",
+  alt: "Original Review screen showing subscription conditions, consent checkboxes, the Buy now action, and cancellation reassurance",
   caption: "Customers checked the subscription terms, accepted required consent and selected Buy now.",
 };
 
@@ -134,6 +143,7 @@ export default function CheckoutCase() {
             </div>
 
             <CheckoutFlowViewer
+              accountBefore={accountBefore}
               detailsAfter={detailsAfter}
               detailsBefore={detailsBefore}
               reviewBefore={reviewBefore}

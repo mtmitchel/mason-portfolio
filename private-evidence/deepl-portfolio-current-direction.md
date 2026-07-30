@@ -62,10 +62,12 @@ The current checkout implementation follows these explicit corrections:
 - show `+3.02%` and `+€2.4M` with leading plus signs;
 - state the two experiment results once in the opening rather than repeating
   them in a closing stat treatment;
-- show the real old Details and Review screens against the rebuilt Details
-  screen before zooming into individual content decisions;
-- use desktop tabs for the original and rebuilt journeys, then unroll the three
-  complete screens into a linear mobile sequence;
+- show the coherent reconstructed Account, Details, and Review journey
+  alongside the rebuilt Details screen before zooming into individual content
+  decisions;
+- use one horizontal Account, Details, Review, and Rebuilt tab viewer on
+  desktop and mobile, with one complete screen visible at a time and no
+  redundant screen headings;
 - compare the old Review terms with the separate `€0 due today` treatment at a
   restrained scale;
 - compare the old and new consent and final-action regions with source-faithful
@@ -78,11 +80,12 @@ The current checkout implementation follows these explicit corrections:
 - the final case navigation displays only `Next` and the arrow, aligned at the
   far right, with no project name or “Next project” label.
 
-The complete old and rebuilt annual screens come from separate working
-iterations. They establish the structural change but do not represent one
-continuous customer session or necessarily the exact tested variant. The
-`€0 due today` order summary is also a separate representative iteration, not
-a literal crop of the complete rebuilt screen.
+The reconstructed Account, Details, and Review screens form one coherent
+representative original journey. The rebuilt Details screen remains a separate
+representative working state, and the `€0 due today` order summary is a separate
+working example rather than a literal crop of that screen. None should be
+called the exact tested, winning, shipped, or production variant without
+additional evidence.
 
 The current route has passed its mechanical checks and a local desktop and
 mobile browser inspection. That establishes implementation conformance, not

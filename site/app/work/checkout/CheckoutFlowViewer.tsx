@@ -5,24 +5,18 @@ import type { KeyboardEvent } from "react";
 import ImageLightbox from "../../components/ImageLightbox";
 import type { StoryImage } from "../portfolioTypes";
 
-type FlowView = "original" | "rebuilt";
+type FlowView = "account" | "details" | "review" | "rebuilt";
 
 type CheckoutFlowViewerProps = {
+  accountBefore: StoryImage;
   detailsAfter: StoryImage;
   detailsBefore: StoryImage;
   reviewBefore: StoryImage;
 };
 
-function FlowScreen({
-  heading,
-  image,
-}: {
-  heading: string;
-  image: StoryImage;
-}) {
+function FlowScreen({ image }: { image: StoryImage }) {
   return (
     <div className="checkout-flow-viewer__screen">
-      <h3>{heading}</h3>
       <ImageLightbox
         alt={image.alt}
         caption={image.caption}
@@ -41,15 +35,18 @@ function FlowScreen({
 }
 
 export default function CheckoutFlowViewer({
+  accountBefore,
   detailsAfter,
   detailsBefore,
   reviewBefore,
 }: CheckoutFlowViewerProps) {
-  const tabs: Array<{ id: FlowView; label: string }> = [
-    { id: "original", label: "Original flow" },
-    { id: "rebuilt", label: "Rebuilt flow" },
+  const tabs: Array<{ id: FlowView; image: StoryImage; label: string }> = [
+    { id: "account", image: accountBefore, label: "Account" },
+    { id: "details", image: detailsBefore, label: "Details" },
+    { id: "review", image: reviewBefore, label: "Review" },
+    { id: "rebuilt", image: detailsAfter, label: "Rebuilt" },
   ];
-  const [activeView, setActiveView] = useState<FlowView>("original");
+  const [activeView, setActiveView] = useState<FlowView>("account");
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const instanceId = useId().replaceAll(":", "");
 
@@ -72,62 +69,43 @@ export default function CheckoutFlowViewer({
 
   return (
     <div className="checkout-flow-viewer">
-      <div className="checkout-flow-viewer__desktop">
-        <div className="checkout-flow-viewer__tabs" role="tablist" aria-label="Checkout before and after">
-          {tabs.map((tab, index) => {
-            const selected = activeView === tab.id;
-            return (
-              <button
-                ref={(node) => { tabRefs.current[index] = node; }}
-                aria-controls={`${instanceId}-${tab.id}`}
-                aria-selected={selected}
-                id={`${instanceId}-${tab.id}-tab`}
-                key={tab.id}
-                onClick={() => setActiveView(tab.id)}
-                onKeyDown={(event) => handleKeyDown(event, index)}
-                role="tab"
-                tabIndex={selected ? 0 : -1}
-                type="button"
-              >
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
-
-        <div
-          aria-labelledby={`${instanceId}-original-tab`}
-          className="checkout-flow-viewer__panel checkout-flow-viewer__panel--original"
-          hidden={activeView !== "original"}
-          id={`${instanceId}-original`}
-          role="tabpanel"
-        >
-          <FlowScreen heading="Old Details" image={detailsBefore} />
-          <FlowScreen heading="Old Review" image={reviewBefore} />
-        </div>
-
-        <div
-          aria-labelledby={`${instanceId}-rebuilt-tab`}
-          className="checkout-flow-viewer__panel checkout-flow-viewer__panel--rebuilt"
-          hidden={activeView !== "rebuilt"}
-          id={`${instanceId}-rebuilt`}
-          role="tabpanel"
-        >
-          <FlowScreen heading="New Details" image={detailsAfter} />
-        </div>
+      <div className="checkout-flow-viewer__tabs" role="tablist" aria-label="Checkout steps before and after">
+        {tabs.map((tab, index) => {
+          const selected = activeView === tab.id;
+          return (
+            <button
+              ref={(node) => { tabRefs.current[index] = node; }}
+              aria-controls={`${instanceId}-${tab.id}`}
+              aria-selected={selected}
+              id={`${instanceId}-${tab.id}-tab`}
+              key={tab.id}
+              onClick={() => setActiveView(tab.id)}
+              onKeyDown={(event) => handleKeyDown(event, index)}
+              role="tab"
+              tabIndex={selected ? 0 : -1}
+              type="button"
+            >
+              {tab.label}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="checkout-flow-viewer__mobile" aria-label="Checkout before and after">
-        <FlowScreen heading="Old Details" image={detailsBefore} />
-        <FlowScreen heading="Old Review" image={reviewBefore} />
-        <FlowScreen heading="New Details" image={detailsAfter} />
-      </div>
+      {tabs.map((tab) => (
+        <div
+          aria-labelledby={`${instanceId}-${tab.id}-tab`}
+          className="checkout-flow-viewer__panel"
+          hidden={activeView !== tab.id}
+          id={`${instanceId}-${tab.id}`}
+          key={tab.id}
+          role="tabpanel"
+        >
+          <FlowScreen image={tab.image} />
+        </div>
+      ))}
 
       <p className="checkout-flow-viewer__caption">
         Removing Review shortened checkout from three steps to two and moved the full subscription decision into Details.
-      </p>
-      <p className="checkout-flow-viewer__note">
-        These annual screens come from separate working iterations. They show the product change, not one continuous customer session.
       </p>
     </div>
   );

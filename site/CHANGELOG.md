@@ -7,15 +7,19 @@
 - Rebuilt the opening around DeepL's Monetization roadmap, the experiment
   program, Mason's collaboration with the product manager and product designer,
   his content-design contribution, and the experiment-level result.
-- Replaced the rejected diagram and crowded evidence modules with the real old
-  Details and Review screens, the rebuilt Details screen, a focused price
-  comparison, and a source-faithful consent and final-action comparison.
+- Replaced the rejected diagram and crowded evidence modules with a coherent
+  reconstructed Account, Details, and Review journey, the rebuilt Details
+  screen, a focused price comparison, and a source-faithful consent and
+  final-action comparison.
+- Changed the checkout journey viewer to show Account, Details, Review, and
+  Rebuilt one screen at a time. Removed the redundant old-screen headings and
+  the obsolete public continuity caveat.
 - Kept `+3.02% paid subscriptions` and approximately `+€2.4M incremental annual
   recurring revenue` together in the opening; removed the public 35-day result
   and the “Pro purchases” terminology.
-- Documented that the annual screens and `€0 due today` summary come from
-  separate working iterations and do not represent one continuous session or
-  necessarily the exact tested variant.
+- Kept the reconstructed original journey distinct from the rebuilt Details
+  screen and the separate `€0 due today` working example without presenting any
+  of them as the exact tested or production variant.
 
 ### Site and repository
 
@@ -23,9 +27,9 @@
   case routes. LinkedIn remains available in the primary navigation.
 - Added a repository-wide sentence-case rule for reader-facing text and removed
   all-caps styling from the live application.
-- Retired the superseded checkout crops, recorded the corrected reconstruction
-  and focused crop provenance, and aligned the route, claim review, current
-  direction, candidate queue, and asset manifest.
+- Retired superseded checkout public assets, recorded the corrected
+  reconstruction and focused crop provenance, and aligned the route, claim
+  review, current direction, candidate queue, and asset manifest.
 - Made manifest date validation use the repository machine's local calendar
   date so valid documentation updates are not rejected around midnight.
 

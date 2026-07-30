@@ -148,10 +148,12 @@ production state.
 - The simplification experiment covered both monthly and annual subscriptions.
   Frames with annual billing selected are representative examples, not the
   boundary of the experiment.
-- The selected annual screens are representative working states from separate
-  iterations, not one continuous customer session. They may illustrate the
-  flow and content problem, but must not be called the exact tested, winning,
-  shipped, or production variant unless that identity is established.
+- The reconstructed Account, Details, and Review screens form one coherent
+  representative original journey. The rebuilt Details screen and the
+  `€0 due today` summary remain separate representative working states. These
+  artifacts may illustrate the flow and content problem, but must not be
+  called the exact tested, winning, shipped, or production variant unless that
+  identity is established.
 - Additional purchase states may support a broader checkout story when their
   separate scopes are clear. Do not claim Mason owned the flow or test, that
   his copy alone caused the result, or that every visible state was part of

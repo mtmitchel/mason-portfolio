@@ -36,20 +36,6 @@
 }
 
 @media (max-width: 767px) {
-  .checkout-flow-viewer__desktop {
-    display: none;
-  }
-
-  .checkout-flow-viewer__mobile {
-    display: grid;
-    gap: 28px;
-  }
-
-  .checkout-flow-viewer__mobile .checkout-flow-viewer__screen + .checkout-flow-viewer__screen {
-    padding-top: 28px;
-    border-top: 1px solid var(--rule);
-  }
-
   .checkout-pair__grid {
     grid-template-columns: 1fr;
     gap: 28px;
