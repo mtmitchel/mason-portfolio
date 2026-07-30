@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PortfolioProjectGrid from "./PortfolioProjectGrid";
-import { SiteFooter, SiteHeader } from "./PortfolioChrome";
+import { SiteHeader } from "./PortfolioChrome";
 import { selectedWorkCards, writingEntries } from "../work/portfolioData";
 
 function WorkSwitcher({ active }: { active: "selected" | "writing" }) {
@@ -86,7 +86,6 @@ export default function WorkIndexPage({ active }: { active: "selected" | "writin
       </section>
 
       <AboutSection />
-      <SiteFooter />
     </main>
   );
 }

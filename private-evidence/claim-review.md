@@ -121,22 +121,37 @@ production state.
 
 ## Checkout and DM-1418 simplification experiment
 
-- State that DM-1418 was a Monetization-team initiative and that Mason
-  partnered with the product designer on content iterations and clarity
-  improvements within the cross-functional experiment.
+- Recovered roadmap notes list a **+2% checkout-conversion target** alongside
+  the Monetization team's other commercial work. A retained assistant summary
+  of the missing August 2024 “Monetization — Roadmap & Goals” PDF also records
+  a target of more than **€1.5M incremental self-serve revenue**. Treat that
+  summary as a discovery lead, not as verbatim primary evidence.
+- Mason's account establishes that he was part of the Monetization team and
+  worked with the product manager and product designer on a series of
+  experiments intended to advance the roadmap goals.
+- State that DM-1418 was one experiment in that program. Mason partnered with
+  the product designer on the information structure, content iterations, and
+  clarity improvements within the cross-functional experiment.
 - Describe the supported experiment changes: removing the separate review
   step, moving plan features onto the details screen, and changing active
   consent to passive consent.
-- Attribute the measured result to the DM-1418 experiment: a **3.02% increase
-  in Pro purchases** (about **100 additional purchases per day**), a **3.07%
-  increase in `subscribed_net_35d`** (about **60 additional subscriptions per
-  day**), and about **€2.4M in incremental ARR**.
+- Public copy may attribute these measured results to the DM-1418 experiment:
+  **+3.02% paid subscriptions** and approximately **+€2.4M incremental ARR**.
+  Include both leading plus signs.
+- The source record uses “Pro purchases” for the 3.02% metric. Mason corrected
+  the public terminology to **paid subscriptions**; do not publish “Pro
+  purchases.”
+- The private source record also contains a **+3.07% increase in
+  `subscribed_net_35d`** (about **60 additional subscriptions per day**).
+  Retain it only as unused private evidence. Do not display it publicly or
+  describe it as proof of comprehension.
 - The simplification experiment covered both monthly and annual subscriptions.
   Frames with annual billing selected are representative examples, not the
   boundary of the experiment.
-- Representative checkout frames may illustrate the flow and content problem.
-  Do not call one the exact tested or winning variant unless that identity is
-  established.
+- The selected annual screens are representative working states from separate
+  iterations, not one continuous customer session. They may illustrate the
+  flow and content problem, but must not be called the exact tested, winning,
+  shipped, or production variant unless that identity is established.
 - Additional purchase states may support a broader checkout story when their
   separate scopes are clear. Do not claim Mason owned the flow or test, that
   his copy alone caused the result, or that every visible state was part of

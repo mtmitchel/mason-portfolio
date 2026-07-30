@@ -68,7 +68,6 @@ img {
 .site-shell { min-height: 100vh; }
 
 .site-header,
-.site-footer,
 .home-section {
   width: min(100% - 48px, 1120px);
   margin-inline: auto;
@@ -300,16 +299,4 @@ img {
   color: var(--muted);
   font-size: 20px;
   line-height: 1.6;
-}
-
-.site-footer {
-  display: flex;
-  gap: 20px;
-  padding: 22px 0 42px;
-  border-top: 1px solid var(--rule);
-}
-
-.site-footer a {
-  color: var(--muted);
-  font-size: 18px;
 }

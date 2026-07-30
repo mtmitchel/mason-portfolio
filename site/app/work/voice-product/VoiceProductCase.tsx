@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChapterBackLink, ChapterFigure } from "../../components/ChapterCaseElements";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryImage } from "../portfolioTypes";
 
 const voiceHeader: StoryImage = {
@@ -74,7 +74,6 @@ export default function VoiceProductCase() {
           </Link>
         </nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

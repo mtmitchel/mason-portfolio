@@ -88,6 +88,7 @@ node scripts/check-repository.mjs
 Run application checks from `site/`:
 
 ```bash
+npm run check:production-lines
 ./node_modules/.bin/eslint . --ignore-pattern dist --ignore-pattern .next
 WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vinext build
 node --test tests/rendered-html.test.mjs

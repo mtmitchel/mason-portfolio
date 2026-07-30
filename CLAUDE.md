@@ -13,14 +13,14 @@ imported below and applies in full. Where the two ever appear to differ,
 
 - Working anywhere under `site/`: read [`site/AGENTS.md`](site/AGENTS.md) first,
   then [`site/README.md`](site/README.md). Those files own application
-  implementation, visual rules, and the change-to-proof table.
+  implementation, visual rules, and verification requirements.
 - Everything else: follow the task routing section of `AGENTS.md` and read only
   the owners it names.
 
 ## Commands
 
-`site/AGENTS.md` owns the change-to-proof table — which of these a given change
-requires. The mechanics below are what the table assumes but does not spell out.
+`site/AGENTS.md` owns which checks a given change requires. The commands below
+match its current verification sequence.
 
 Repository-wide, from the repository root:
 
@@ -33,6 +33,7 @@ Application, from `site/`:
 
 ```bash
 npm run dev                                                      # vinext dev server
+npm run check:production-lines
 ./node_modules/.bin/eslint . --ignore-pattern dist --ignore-pattern .next
 WRANGLER_LOG_PATH=.wrangler/wrangler.log ./node_modules/.bin/vinext build
 node --test tests/rendered-html.test.mjs

@@ -1,6 +1,7 @@
 # DeepL project candidate queue
 
-**Updated and re-scored:** 2026-07-29
+**Updated:** 2026-07-30
+**Last full re-score:** 2026-07-29
 **Status:** DeepL UX copy and content-design story-material database
 
 This database reconciles the ChatGPT audit, current CV, achievement ledger,
@@ -78,7 +79,7 @@ exhibit, title, or state authoritative.
 [
   {"route":"/work/upgrade-prompts","project_id":"DEEPL-UPGRADE-PROMPTS","candidate_ids":["D06","D12"],"state":"advanced-draft","central_exhibit_id":"upgrade-allowance-escalation"},
   {"route":"/work/pricing-evolution","project_id":"DEEPL-PRICING-EVOLUTION","candidate_ids":["D14","D16"],"state":"frozen","central_exhibit_id":"pricing-working-layouts-preserved"},
-  {"route":"/work/checkout","project_id":"DEEPL-SUBSCRIPTION-CHECKOUT","candidate_ids":["C28"],"state":"advanced-draft","central_exhibit_id":"checkout-simplification-before-after"},
+  {"route":"/work/checkout","project_id":"DEEPL-SUBSCRIPTION-CHECKOUT","candidate_ids":["C28"],"state":"advanced-draft","central_exhibit_id":"checkout-simplification-evidence-system"},
   {"route":"/work/account-team-security","project_id":"DEEPL-ACCOUNT-TEAM-SECURITY","candidate_ids":["D19","C30"],"state":"advanced-draft","central_exhibit_id":"account-and-team-state-sequences"},
   {"route":"/work/product-naming","project_id":"DEEPL-PRODUCT-NAMING","candidate_ids":["D17"],"state":"advanced-draft","central_exhibit_id":"write-naming-order-decision"},
   {"route":"/work/voice-product","project_id":"DEEPL-VOICE-PRODUCT","candidate_ids":["C24"],"state":"advanced-draft","central_exhibit_id":"voice-two-offers"}
@@ -119,7 +120,7 @@ gate. A missing detail blocks only the exact claim that depends on it.
 | — | `D06` | DeepL Write Pro launch and monetization work | `2/2/2/2` | Implemented full case | Represented by `/work/upgrade-prompts` | Use its prompts and experiment-wave result as components of a stronger monetization story. The existing route does not lock the framing. |
 | — | `D12` | Free/Pro status label and file-limit awareness | `1/1/2/2` | Implemented support | Represented by `/work/upgrade-prompts` | Use as state-aware monetization evidence. Keep any outcome at the wider supported experiment-wave level. |
 | — | `D08` | Country selection and delayed subscription activation | `1/2/2/1` | Mini case or checkout chapter | Not currently represented | It may support a future broader checkout story when the separate scopes are clear. Do not label it a tested DM-1418 state without support. |
-| — | `C28` | DM-1418 checkout-flow simplification | `2/2/2/2` | Implemented full-case candidate | Represented by `/work/checkout` | Combine the Monetization roadmap, experiment program, Mason's work with the product manager and product designer, the content decisions that made a shorter flow viable, representative checkout evidence, and the experiment-level result. Exact frame linkage is needed only to call one the tested or winning variant. The current route remains rejected and does not own the next structure or asset combination. |
+| — | `C28` | DM-1418 checkout-flow simplification | `2/2/2/2` | Implemented full-case candidate | Represented by `/work/checkout` | The current route combines the Monetization roadmap, experiment program, Mason's work with the product manager and product designer, the content decisions that made a shorter flow viable, representative checkout evidence, and the experiment-level result. Exact frame linkage is needed only to call one the tested or winning variant. The current implementation remains a candidate rather than a permanent template. |
 | — | `D19` | MFA recovery and authentication keys | `2/2/2/2` | Implemented full case | Represented by `/work/account-team-security` | May combine with related admin work around enterprise deployment or access. Keep different lifecycle claims scoped; no single-ticket proof is required. |
 | — | `C30` | Broader authentication and administration portfolio | `2/2/2/2` | Implemented support | Represented by `/work/account-team-security` | Use as the larger administrative context. Individual surfaces may have different lifecycle endings without being forced into separate cases. |
 | — | `C24` | DeepL Voice product content | `2/1/2/2` | Implemented mini case | Represented by `/work/voice-product` | Central exhibits re-audited; keep the ending at artifact level unless lifecycle or outcome evidence is added. |
@@ -152,8 +153,8 @@ Translator/Write variants in `10-write-and-cross-product-states/4-184736.png`,
 `4-186545.png`, `4-186552.png`, and `4-186561.png`. Several frames contain
 placeholders, annotations, clipped components, or historical prices. Treat
 those as visual leads or working-state evidence rather than production proof.
-These were not selected for the July 29 checkout candidate. Reconsider them
-only if a new story skeleton gives them a clear, non-duplicative job.
+These are not part of the current checkout route. Reconsider them only if a
+new story skeleton gives them a clear, non-duplicative job.
 
 For `C29` and `F34`, the batch supports two compatible signup angles: explain
 the value of a free account before asking someone to register, and keep the
@@ -167,8 +168,8 @@ account. The five C29 iteration frames and experiment result remain the
 measurable spine; the Figma frames add product and cross-platform context and
 should not be called the exact tested C29 variant. Placeholder concepts,
 email-like values, and browser-password prompts require exclusion or careful
-framing before public selection. They were not selected for the July 29
-checkout candidate, but a new story combination may reassess them.
+framing before public selection. They are not part of the current checkout
+route, but a new story combination may reassess them.
 
 The IAM and ATE batches contain 98 and 240 original source members,
 respectively. They support several components of a possible larger enterprise

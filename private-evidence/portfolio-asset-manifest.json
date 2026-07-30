@@ -413,15 +413,16 @@
       "id": "DEEPL-SUBSCRIPTION-CHECKOUT",
       "project_id": "DEEPL-SUBSCRIPTION-CHECKOUT",
       "central_exhibit": {
-        "id": "checkout-simplification-before-after",
+        "id": "checkout-simplification-evidence-system",
         "route": "/work/checkout",
         "kind": "manifest-image-set",
         "public_refs": [
           "site/public/work/checkout/details-before-full.png",
           "site/public/work/checkout/review-before-full.png",
+          "site/public/work/checkout/review-plan-conditions.png",
           "site/public/work/checkout/details-after-full.png",
-          "site/public/work/checkout/review-consent-action.png",
-          "site/public/work/checkout/details-consent-action.png",
+          "site/public/work/checkout/review-consent-action-tight.png",
+          "site/public/work/checkout/details-consent-action-tight.png",
           "site/public/work/checkout/due-today-summary.png"
         ],
         "render_ref": "site/app/work/checkout/CheckoutCase.tsx",
@@ -430,14 +431,14 @@
           "Begin subscription",
           "No payment until end of trial"
         ],
-        "relationship": "Complete working screens establish how the purchase moved from separate Details and Review steps into one consolidated Details screen. Source-faithful text and screenshot comparisons show the consent-and-action change, while the order-summary export shows the immediate-versus-later charge hierarchy."
+        "relationship": "The complete old Details and Review screens establish the original three-step journey, and the complete reconstructed Details screen shows the two-step journey. Focused source-faithful pairs then compare the price hierarchy and the consent-and-action change."
       },
       "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "The route uses three unchanged complete working screens as structural overviews, plus two source-faithful crops of the consent-and-action regions. The consent copy is also transcribed as accessible text. The due-today component is an unchanged flattened export.",
-      "caption": "Captions explain how the old flow divided the decision, how the consolidated Details screen carried it, how consent and the final action changed, and how immediate and later charges were separated.",
-      "text_alternative": "Describe the complete old Details and Review screens, the consolidated two-step Details screen, the change from checkbox consent to consent tied to the subscription action, the trial reassurance, and the immediate-versus-later charge hierarchy.",
+      "crop_notes": "The route first shows the unchanged complete old Details and Review screens against the complete reconstructed Details screen. It then uses the source-faithful old Review conditions crop with a separate unchanged due-today export, followed by two tighter source-faithful consent-and-action crops. The selected annual screens are representative working states from separate iterations, not one continuous customer session or necessarily the exact tested variant. Exact consent wording remains in visually hidden HTML. The due-today component is a separate unchanged flattened export and is not presented as a crop of the complete new Details screen.",
+      "caption": "The full screens establish what customers did before and after the step was removed. Focused comparisons then explain how price hierarchy, consent and the final action changed.",
+      "text_alternative": "Describe the complete old Details and Review screens, the consolidated two-step Details screen, the old and new price hierarchy, and the change from checkbox consent and Buy now to consent tied to Begin subscription.",
       "export_ready": false,
       "files": [
         {
@@ -448,8 +449,8 @@
           "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3735-14327.png",
           "source_sha256": "103e7c58b801670a7689397962fca8096232e4990d719b939094ef2a43eff376",
           "dimensions": "2880x2608",
-          "caption": "Customers chose billing and entered payment here, but the progress indicator still sent them onward before they could subscribe.",
-          "text_alternative": "Three-step DeepL checkout with Account completed, Details active, and Review still ahead.",
+          "caption": "Customers entered their plan, billing and payment details, then continued to Review.",
+          "text_alternative": "Old Details screen showing plan selection, billing information, payment entry, and a three-step progress indicator leading to Review.",
           "sha256": "103e7c58b801670a7689397962fca8096232e4990d719b939094ef2a43eff376"
         },
         {
@@ -460,49 +461,63 @@
           "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
           "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
           "dimensions": "2880x2608",
-          "caption": "A separate page repeated the plan, trial, price, and payment details before collecting consent and the final action.",
-          "text_alternative": "DeepL Review screen repeating the selected plan, trial, price, payment details, features, consent, and purchase action.",
+          "caption": "Customers checked the subscription terms, accepted required consent and selected Buy now.",
+          "text_alternative": "Old Review screen showing subscription conditions, consent checkboxes, the Buy now action, and cancellation reassurance.",
           "sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24"
+        },
+        {
+          "path": "checkout/review-plan-conditions.png",
+          "public_path": "site/public/work/checkout/review-plan-conditions.png",
+          "artifact_genesis": "crop_of_recovered_historical_export",
+          "artifact_genesis_notes": "Focused crop of the trial timing, annual price, first payment date, and masked payment method on the separate Review screen. No interface content was changed.",
+          "source_status": "verified",
+          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
+          "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
+          "crop": "1100x650+254+370",
+          "dimensions": "1100x650",
+          "caption": "Review bundled the trial length, annual price, billing date and payment method in one text block.",
+          "text_alternative": "Old Review detail showing the 30-day trial, cancellation date, annual subscription fee, VAT, first payment date, and masked credit card.",
+          "sha256": "95c95c97270b5c651b429ad1c910aa61570d89cd1c50a6a6db2ebe8e1c6e7053"
         },
         {
           "path": "checkout/details-after-full.png",
           "public_path": "site/public/work/checkout/details-after-full.png",
-          "artifact_genesis": "recovered_historical_export",
+          "artifact_genesis": "portfolio_reconstruction_2026",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/06-two-step/5543-38726.png",
-          "source_sha256": "68d71c1f666408fa41aa243b37fcc41f5d286f0b1006927710abca55e64b210b",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-29/checkout/details-after-full.png",
+          "source_sha256": "c0f9eaed50438365626522d647ad14b6e1a0f2253f5ef2e898f8af9aa3aabf4e",
           "dimensions": "2560x4058",
-          "caption": "In the two-step flow, Details carries the offer, payment entry, consent, and subscription action on one screen.",
-          "text_alternative": "Two-step DeepL checkout with plan information, payment entry, consent, and the Begin subscription action consolidated in Details.",
-          "sha256": "68d71c1f666408fa41aa243b37fcc41f5d286f0b1006927710abca55e64b210b"
+          "caption": "The new Details step brought plan, billing, payment, consent and the subscription action together.",
+          "text_alternative": "New two-step Details screen showing the selected annual plan, trial and price summary, billing and payment entry, consent statement, and Begin subscription action.",
+          "sha256": "c0f9eaed50438365626522d647ad14b6e1a0f2253f5ef2e898f8af9aa3aabf4e"
         },
         {
-          "path": "checkout/review-consent-action.png",
-          "public_path": "site/public/work/checkout/review-consent-action.png",
+          "path": "checkout/review-consent-action-tight.png",
+          "public_path": "site/public/work/checkout/review-consent-action-tight.png",
           "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Focused crop of the consent, final action, and trial reassurance on the separate Review screen. No interface content was changed.",
+          "artifact_genesis_notes": "Tight crop of the required and optional consent checkboxes, final action, and cancellation reassurance on the separate Review screen. No interface content was changed.",
           "source_status": "verified",
           "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/08-stepper/3736-16466.png",
           "source_sha256": "6bb641d09b685266bf97f6c9e04c4d8c9747900167934f36afc112f95f249c24",
-          "crop": "1600x629+100+1500",
-          "dimensions": "1600x629",
-          "caption": "Consent required a separate checkbox before customers could press Buy now.",
-          "text_alternative": "Required acceptance checkbox followed by a Buy now button and trial cancellation reassurance.",
-          "sha256": "f13002afb6263df24180e0933c363d3fde477b7b1ab5db9c3352dc46430ad0e3"
+          "crop": "1300x570+320+1550",
+          "dimensions": "1300x570",
+          "caption": "The old Review step separated required consent from the Buy now action.",
+          "text_alternative": "Old Review detail showing required and optional consent checkboxes, the Buy now button, and cancellation reassurance.",
+          "sha256": "239c2a0fe9dc546c2108b77ff15e4bc29c7c58e07339aedf52a4aeb2f84f595b"
         },
         {
-          "path": "checkout/details-consent-action.png",
-          "public_path": "site/public/work/checkout/details-consent-action.png",
-          "artifact_genesis": "crop_of_recovered_historical_export",
-          "artifact_genesis_notes": "Focused crop of the consent statement, Begin subscription action, and trial reassurance on the consolidated Details screen. No interface content was changed.",
+          "path": "checkout/details-consent-action-tight.png",
+          "public_path": "site/public/work/checkout/details-consent-action-tight.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Tight crop of the consent statement, Begin subscription action, and trial reassurance on the consolidated Details screen.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/06-two-step/5543-38726.png",
-          "source_sha256": "68d71c1f666408fa41aa243b37fcc41f5d286f0b1006927710abca55e64b210b",
-          "crop": "1500x590+100+3100",
-          "dimensions": "1500x590",
-          "caption": "The action area explains what Begin subscription authorizes and keeps the trial terms beside the button.",
-          "text_alternative": "Consent statement above a Begin subscription button and three trial reassurance messages.",
-          "sha256": "1d821d8ce0767cb5fdff4f7c0148e73f2787bece06b39895833229e781ea97e4"
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-29/checkout/details-after-full.png",
+          "source_sha256": "c0f9eaed50438365626522d647ad14b6e1a0f2253f5ef2e898f8af9aa3aabf4e",
+          "crop": "1220x530+250+3060",
+          "dimensions": "1220x530",
+          "caption": "The new Details step links consent to Begin subscription and keeps the trial reassurance beside the action.",
+          "text_alternative": "New Details detail showing consent linked to the action, the Begin subscription button, and trial reassurance.",
+          "sha256": "953d54ede8509bfd88cbbca056ecffd6d5e6fe9c59033cad6342a8f9e48ae930"
         },
         {
           "path": "checkout/due-today-summary.png",
@@ -512,7 +527,7 @@
           "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/05-due-today-reassurance/6889-69299.png",
           "source_sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d",
           "dimensions": "800x736",
-          "caption": "€0 due today answers the immediate question first; the annual price remains visible as the later commitment.",
+          "caption": "The new hierarchy leads with €0 due today and keeps the annual price directly beneath it.",
           "text_alternative": "DeepL order summary showing zero euros due today and 299 euros 88 cents per year after the trial.",
           "sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d"
         }
@@ -738,5 +753,5 @@
       "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428"
     }
   ],
-  "updated": "2026-07-29"
+  "updated": "2026-07-30"
 }

@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased — 2026-07-30
+
+### Checkout case
+
+- Rebuilt the opening around DeepL's Monetization roadmap, the experiment
+  program, Mason's collaboration with the product manager and product designer,
+  his content-design contribution, and the experiment-level result.
+- Replaced the rejected diagram and crowded evidence modules with the real old
+  Details and Review screens, the rebuilt Details screen, a focused price
+  comparison, and a source-faithful consent and final-action comparison.
+- Kept `+3.02% paid subscriptions` and approximately `+€2.4M incremental annual
+  recurring revenue` together in the opening; removed the public 35-day result
+  and the “Pro purchases” terminology.
+- Documented that the annual screens and `€0 due today` summary come from
+  separate working iterations and do not represent one continuous session or
+  necessarily the exact tested variant.
+
+### Site and repository
+
+- Removed the email and LinkedIn footer from the homepage, writing index, and
+  case routes. LinkedIn remains available in the primary navigation.
+- Added a repository-wide sentence-case rule for reader-facing text and removed
+  all-caps styling from the live application.
+- Retired the superseded checkout crops, recorded the corrected reconstruction
+  and focused crop provenance, and aligned the route, claim review, current
+  direction, candidate queue, and asset manifest.
+- Made manifest date validation use the repository machine's local calendar
+  date so valid documentation updates are not rejected around midnight.
+
 ## Unreleased — 2026-07-29
 
 ### Portfolio process

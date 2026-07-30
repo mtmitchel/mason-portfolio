@@ -1,6 +1,6 @@
 # Current portfolio working notes
 
-**Updated:** 2026-07-29
+**Updated:** 2026-07-30
 **Status:** Nonbinding editorial snapshot
 
 This file preserves recent decisions and explicit corrections. It is not a
@@ -33,7 +33,7 @@ Useful combinations usually include several different jobs:
 
 One artifact may do several jobs. More artifacts are not automatically better.
 
-## Checkout context and current corrections
+## Checkout route and current boundaries
 
 The checkout story belongs inside Monetization's wider roadmap and experiment
 program. The retained roadmap notes explicitly list checkout improvements and a
@@ -53,22 +53,40 @@ Mason's current account establishes the causal frame:
 5. The supported public result is `+3.02%` paid subscriptions and approximately
    `+€2.4M` incremental annual recurring revenue at experiment level.
 
-Current explicit corrections for the next checkout revision:
+The current checkout implementation follows these explicit corrections:
 
 - no subheadline; carry its useful meaning in the opening paragraph;
 - metadata: `DeepL · Monetization · 2024`;
 - do not display the 35-day net-subscription metric;
 - do not call the result “Pro purchases”; use “paid subscriptions”;
 - show `+3.02%` and `+€2.4M` with leading plus signs;
-- do not use the rejected dense comparison, side-annotation, stat-strip, or
-  cramped consent constructions;
-- when complete screens are useful, a restrained horizontal tab treatment is a
-  valid option;
+- state the two experiment results once in the opening rather than repeating
+  them in a closing stat treatment;
+- show the real old Details and Review screens against the rebuilt Details
+  screen before zooming into individual content decisions;
+- use desktop tabs for the original and rebuilt journeys, then unroll the three
+  complete screens into a linear mobile sequence;
+- compare the old Review terms with the separate `€0 due today` treatment at a
+  restrained scale;
+- compare the old and new consent and final-action regions with source-faithful
+  crops, while keeping the exact wording in visually hidden HTML rather than a
+  visible transcript;
+- do not use the rejected dense comparison, abstract flow diagram,
+  side-annotation, stat-strip, oversized terms crop, or cramped consent
+  constructions;
+- use sentence case for every new reader-facing label and control;
 - the final case navigation displays only `Next` and the arrow, aligned at the
   far right, with no project name or “Next project” label.
 
-These corrections do not prescribe the rest of the story or layout. Rebuild
-the skeleton and artifact combination before implementing the next revision.
+The complete old and rebuilt annual screens come from separate working
+iterations. They establish the structural change but do not represent one
+continuous customer session or necessarily the exact tested variant. The
+`€0 due today` order summary is also a separate representative iteration, not
+a literal crop of the complete rebuilt screen.
+
+The current route has passed its mechanical checks and a local desktop and
+mobile browser inspection. That establishes implementation conformance, not
+Mason's qualitative approval or a permanent layout template.
 
 ## Current route snapshot
 

@@ -3,7 +3,6 @@
   body { font-size: 18px; }
 
   .site-header,
-  .site-footer,
   .home-section,
   .story-page {
     width: min(100% - 32px, 1120px);

@@ -165,6 +165,11 @@ external-agent packet, follow
 
 There is no universal case-study layout.
 
+- Use sentence case for every reader-facing heading, label, caption, control,
+  diagram, metadata line, and navigation item. Never style text as all caps or
+  use CSS `text-transform: uppercase`. Preserve exact capitalization only
+  inside source evidence, quotations, legal text, product names, and technical
+  identifiers that cannot be changed.
 - Existing `chapter-*` classes, comparisons, switchers, lightboxes, and
   adjacent cases are optional utilities. Reuse them only when they serve the
   new story; never reuse them merely for consistency.

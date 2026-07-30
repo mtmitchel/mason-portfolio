@@ -1,7 +1,7 @@
 import Link from "next/link";
 import EvidenceSwitcher from "../../components/EvidenceSwitcher";
 import ImageLightbox from "../../components/ImageLightbox";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryEvidenceView, StoryImage } from "../portfolioTypes";
 
 const pricingImageSizes = "(max-width: 928px) calc(100vw - 48px), 880px";
@@ -135,7 +135,6 @@ export default function PricingCase({ story }: { story: PricingCaseStory }) {
           <Link href={story.next.href}>{story.next.label}<b aria-hidden="true">→</b></Link>
         </nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

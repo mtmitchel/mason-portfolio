@@ -236,7 +236,12 @@ for (const file of markdownFiles) {
 
 const manifestPath = path.join(root, "private-evidence/portfolio-asset-manifest.json");
 const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
-const currentDate = new Date().toISOString().slice(0, 10);
+const now = new Date();
+const currentDate = [
+  now.getFullYear(),
+  String(now.getMonth() + 1).padStart(2, "0"),
+  String(now.getDate()).padStart(2, "0"),
+].join("-");
 const manifestAssets = Array.isArray(manifest.assets) ? manifest.assets : [];
 const sha256Pattern = /^[a-f0-9]{64}$/;
 const allowedArtifactGenesis = new Set([

@@ -23,6 +23,8 @@ Do not introduce a universal case template.
 
 Treat every substantial case as its own editorial design problem.
 
+- Follow the repository sentence-case rule for all visible interface text.
+  Never use CSS `text-transform: uppercase` for labels or headings.
 - Let the story determine section order, reading width, media scale, rhythm,
   comparison treatment, and interaction.
 - Existing `chapter-shell`, `chapter-page`, `story-comparison`, card, rail,

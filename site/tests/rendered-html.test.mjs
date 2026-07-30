@@ -79,13 +79,11 @@ test("homepage renders a public project index without private review language", 
   assert.doesNotMatch(html, /Draft needs|What is still missing|Evidence boundary|claim review/i);
 });
 
-test("selected work and writing share the header, About and footer", async () => {
+test("selected work and writing share the header and About section", async () => {
   const [selected, writing] = await Promise.all([htmlFor("/"), htmlFor("/writing")]);
   for (const marker of [
     "Mason Mitchel",
-    "mtmitchel@gmail.com",
     'href="/writing"',
-    'class="site-footer"',
   ]) {
     assert.match(selected, new RegExp(escapeRegExp(marker)));
     assert.match(writing, new RegExp(escapeRegExp(marker)));
@@ -168,8 +166,28 @@ test("pricing page carries no business-outcome metric", async () => {
 test("evidence switchers retain keyboard support", async () => {
   const switcher = await readFile(new URL("app/components/EvidenceSwitcher.tsx", root), "utf8");
   for (const key of ["ArrowRight", "ArrowLeft", "Home", "End"]) assert.match(switcher, new RegExp(key));
+  assert.match(switcher, /role="tablist"/);
+  assert.match(switcher, /role="tab"/);
   assert.match(switcher, /role="tabpanel"/);
+  assert.match(switcher, /aria-controls=/);
+  assert.match(switcher, /aria-selected=\{selected\}/);
+  assert.match(switcher, /tabIndex=\{selected \? 0 : -1\}/);
+  assert.match(switcher, /tabRefs\.current\[index\]\?\.focus\(\)/);
   assert.match(switcher, /hidden=\{!selected\}/);
+});
+
+test("checkout keeps its public metric terminology and evidence boundaries", async () => {
+  const [html, caseSource, pageSource] = await Promise.all([
+    htmlFor("/work/checkout"),
+    readFile(new URL("app/work/checkout/CheckoutCase.tsx", root), "utf8"),
+    readFile(new URL("app/work/checkout/page.tsx", root), "utf8"),
+  ]);
+  const publicSource = [html, caseSource, pageSource].join("\n");
+
+  assert.doesNotMatch(publicSource, /3\.07%/);
+  assert.doesNotMatch(publicSource, /35[- ]day/i);
+  assert.doesNotMatch(publicSource, /\bPro purchases\b/i);
+  assert.doesNotMatch(publicSource, /DeepL wanted to shorten checkout/i);
 });
 
 test("DeepL cases avoid known unsupported ownership, lifecycle and outcome claims", async () => {

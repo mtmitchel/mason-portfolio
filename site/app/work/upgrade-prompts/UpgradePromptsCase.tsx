@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ChapterBackLink, ChapterFigure } from "../../components/ChapterCaseElements";
 import EvidenceSwitcher from "../../components/EvidenceSwitcher";
 import ImageComparison from "../../components/ImageComparison";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 import type { StoryEvidenceView, StoryImage } from "../portfolioTypes";
 
 const usageLimit: StoryImage = {
@@ -267,7 +267,6 @@ export default function UpgradePromptsCase() {
           <Link href="/work/pricing-evolution">Making the more expensive plan explain itself<b aria-hidden="true">→</b></Link>
         </nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

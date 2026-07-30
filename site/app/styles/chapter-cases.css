@@ -4,8 +4,7 @@
 /* The page is a single column with slightly wider figures, not a wide container
    holding a narrow text block. At 1120px the prose ended 380px short of the
    media edge, which marooned every paragraph on the left and let the evidence
-   dominate the reading column. The header and footer follow the same measure,
-   or the site chrome hangs 120px outside the column it sits above. */
+   dominate the reading column. The header follows the same measure. */
 .chapter-page {
   width: min(100% - 48px, 880px);
   margin-inline: auto;
@@ -13,9 +12,7 @@
 }
 
 .pricing-shell .site-header,
-.pricing-shell .site-footer,
-.chapter-shell .site-header,
-.chapter-shell .site-footer {
+.chapter-shell .site-header {
   width: min(100% - 48px, 880px);
 }
 
@@ -290,4 +287,76 @@
 .chapter-page .next-project {
   width: min(100%, 740px);
   margin-inline: 0;
+}
+
+.chapter-case-page .chapter-media .evidence-preview,
+.chapter-case-page .story-comparison-item .evidence-preview {
+  padding: 0;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.chapter-case-page .chapter-media .evidence-preview img,
+.chapter-case-page .story-comparison-item .evidence-preview img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+}
+
+.chapter-case-page .chapter-media .evidence-figure figcaption,
+.chapter-case-page .story-comparison-item .evidence-figure figcaption {
+  max-width: 740px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.chapter-case-page .chapter-media .evidence-preview {
+  width: min(100%, 587px);
+  margin-inline: auto;
+}
+
+.chapter-case-page .chapter-media > .evidence-switcher {
+  width: min(100%, 587px);
+  margin-inline: auto;
+}
+
+.chapter-case-page .story-comparison {
+  width: min(100%, 740px);
+  margin-inline: auto;
+}
+
+.chapter-media--compact .evidence-preview {
+  width: min(100%, 360px);
+  margin-inline: auto;
+}
+
+.chapter-media--reading > .evidence-switcher {
+  width: min(100%, 587px);
+  margin-inline: auto;
+}
+
+.chapter-media--reading > .evidence-figure .evidence-preview {
+  width: min(100%, 587px);
+  margin-inline: auto;
+}
+
+.chapter-case-page .evidence-switcher--quiet .evidence-figure,
+.chapter-case-page .story-comparison-item .evidence-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.chapter-case-page .chapter-media .evidence-switcher--quiet .evidence-figure figcaption {
+  max-width: 740px;
+  margin-top: 14px;
+  color: var(--muted);
+  text-align: left;
 }

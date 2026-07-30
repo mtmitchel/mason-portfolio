@@ -96,7 +96,7 @@ const localyzeVideo = {
 export const selectedWorkCards: PortfolioCard[] = [
   { href: "/work/upgrade-prompts", title: "Upgrade prompts across Translator and Write", meta: "DeepL · Monetization", image: upgradePromptsCover },
   { href: "/work/pricing-evolution", title: "Making the more expensive plan explain itself", meta: "DeepL · Pricing evolution", image: pricingEvolutionCover, video: pricingEvolutionVideo },
-  { href: "/work/checkout", title: "How shortening DeepL's checkout flow added €2.4M ARR", meta: "DeepL · Monetization experiment", image: checkoutCover },
+  { href: "/work/checkout", title: "How simplifying DeepL’s checkout helped add €2.4M ARR", meta: "DeepL · Monetization experiment", image: checkoutCover },
   { href: "/work/account-team-security", title: "Account recovery and team administration", meta: "DeepL · Account and team journeys", image: accountTeamSecurityCover, video: accountTeamSecurityVideo },
   {
     href: "/work/report-campaign",

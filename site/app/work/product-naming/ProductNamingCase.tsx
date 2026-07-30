@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChapterBackLink } from "../../components/ChapterCaseElements";
 import NamingDecision from "../../components/NamingDecision";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 
 export default function ProductNamingCase() {
   return (
@@ -88,7 +88,6 @@ export default function ProductNamingCase() {
           </Link>
         </nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

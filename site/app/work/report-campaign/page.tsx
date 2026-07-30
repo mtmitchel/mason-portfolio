@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ImageLightbox from "../../components/ImageLightbox";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -108,7 +108,6 @@ export default function ReportCampaignPage() {
 
         <nav className="next-project" aria-label="Next project"><span>Next project</span><Link href="/work/localyze-executive-ghostwriting">Executive ghostwriting on global mobility<b aria-hidden="true">→</b></Link></nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

@@ -21,14 +21,3 @@ export function SiteHeader({ homeHeading = false, summary }: { homeHeading?: boo
     </header>
   );
 }
-
-export function SiteFooter() {
-  return (
-    <footer className="site-footer">
-      <a href="mailto:mtmitchel@gmail.com">mtmitchel@gmail.com</a>
-      <a href="https://www.linkedin.com/in/mtmitchel" target="_blank" rel="noreferrer">
-        LinkedIn
-      </a>
-    </footer>
-  );
-}

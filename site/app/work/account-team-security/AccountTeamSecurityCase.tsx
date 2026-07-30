@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChapterBackLink, ChapterFigure } from "../../components/ChapterCaseElements";
 import ImageComparison from "../../components/ImageComparison";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 import { authenticationStates, recoverySections } from "./accountTeamSecurityData";
 
 export default function AccountTeamSecurityCase() {
@@ -70,7 +70,6 @@ export default function AccountTeamSecurityCase() {
           </Link>
         </nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

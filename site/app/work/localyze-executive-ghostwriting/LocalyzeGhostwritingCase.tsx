@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SiteFooter, SiteHeader } from "../../components/PortfolioChrome";
+import { SiteHeader } from "../../components/PortfolioChrome";
 import { publishedArguments } from "./localyzeGhostwritingData";
 
 export default function LocalyzeGhostwritingCase() {
@@ -59,7 +59,6 @@ export default function LocalyzeGhostwritingCase() {
           </Link>
         </nav>
       </article>
-      <SiteFooter />
     </main>
   );
 }

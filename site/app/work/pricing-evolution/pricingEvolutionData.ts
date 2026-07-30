@@ -80,5 +80,5 @@ export const pricingEvolutionCase: PricingCaseStory = {
  "Six repeated lines came off Ultimate in that working layout. They could come off only because I called for the line above them—the one naming what Ultimate keeps—to be restored. A plan card can drop what the reader already has, as long as it still says what the reader is getting. Under different plan names, that is still how the page works.",
     ],
   },
-  next: { href: "/work/checkout", label: "How shortening DeepL's checkout flow added €2.4M ARR" },
+  next: { href: "/work/checkout", label: "How simplifying DeepL’s checkout helped add €2.4M ARR" },
 };
