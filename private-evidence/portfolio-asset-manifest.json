@@ -424,7 +424,7 @@
           "site/public/work/checkout/original-review-flow-spaced.png",
           "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
           "site/public/work/checkout/rebuilt-details-flow-uniform-v3.png",
-          "site/public/work/checkout/review-plan-conditions.png",
+          "site/public/work/checkout/review-plan-conditions.px-318ab1239763.png",
           "site/public/work/checkout/details-after-full.png",
           "site/public/work/checkout/review-consent-action-tight.png",
           "site/public/work/checkout/details-consent-action-tight.png",
@@ -507,18 +507,18 @@
           "sha256": "4df222a33e007a66b486f7d9c1781234f2f978bfd5d5f4e9f632e6cc3d7f82a9"
         },
         {
-          "path": "checkout/review-plan-conditions.png",
-          "public_path": "site/public/work/checkout/review-plan-conditions.png",
-          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Focused crop of the trial timing, €299.88 annual price, first payment date, and masked payment method on the representative original Review reconstruction. No interface content was changed.",
+          "path": "checkout/review-plan-conditions-selected.png",
+          "public_path": "site/public/work/checkout/review-plan-conditions.px-318ab1239763.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "User-selected high-resolution working presentation of the representative Review plan conditions. The complete supplied raster is used without further cropping, sharpening, redrawing or stretching. It is portfolio reconstruction evidence, not an exact tested, winning, approved, shipped or production screen.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-review.png",
-          "source_sha256": "9ab69b015c599f88eccb8add16cd0664af6841140fcd014f922b7e141fea6c40",
-          "crop": "1444x616+256+430",
-          "dimensions": "1444x616",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/review-plan-conditions-selected.png",
+          "source_sha256": "8364ebc64c07539c9bd11c5fbac92c6b87fa73b23d5c8a00a8a1b44c9378f3f2",
+          "crop": "none; complete user-selected 1605x980 raster",
+          "dimensions": "1605x980",
           "caption": "Review plan conditions before the change.",
           "text_alternative": "Review plan conditions showing a 30-day trial, €299.88 annual price, VAT, first payment date and masked credit card.",
-          "sha256": "8e58dfc26329dda2b4730477871ef7ca95b0dbde26f297f38779b8acc36a625e"
+          "sha256": "274b3371555531f05bf9b0fd1203b7fa85c2724ccf0da04a9826c1d0e14a6e09"
         },
         {
           "path": "checkout/rebuilt-account-flow-uniform-v2.png",

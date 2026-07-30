@@ -53,9 +53,9 @@ const detailsAfter: StoryImage = {
 
 const oldPrice: StoryImage = {
   label: "Review plan conditions, before the change",
-  src: "/work/checkout/review-plan-conditions.png",
-  width: 1444,
-  height: 616,
+  src: "/work/checkout/review-plan-conditions.px-318ab1239763.png",
+  width: 1605,
+  height: 980,
   alt: "Review plan conditions showing a 30-day trial, €299.88 annual price, VAT, first payment date and masked credit card.",
   caption: "Review plan conditions before the change.",
 };

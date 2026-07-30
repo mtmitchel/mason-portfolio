@@ -103,6 +103,12 @@ or reviewer preference binding after Mason rejects it.
   history, audience, adoption, or current product state need external context.
   Local evidence and Mason's account govern company or team goals, his role,
   contribution, and attributable project outcomes.
+- Use `crop-optimize-web-images` when a selected raster screenshot needs
+  canonical-source confirmation, an exact crop, lossless optimization, a
+  hash-based public filename, a paired-image scale check, or served-byte
+  verification. It owns only the image-byte workflow. The repository agent
+  owns copying into `site/public`, reference and manifest updates, build and
+  browser review, and cleanup. Follow the repository capture policy.
 - Use `frontend-design` only after the selected story cluster, causal skeleton,
   and artifact jobs are clear. Its preference for preserving an existing design
   system does not make rejected case layouts or shared components authoritative.
