@@ -31,11 +31,29 @@ An unknown lifecycle is not proof that something did not ship.
   or market context. It cannot establish Mason's role, a private team goal, or
   project causation.
 
+## Professional analysis is not fabrication
+
+Agents may extrapolate and explain what a UX, microcopy, or content-design
+change would help a user do when Figma mockups, Mason's recollection, or other
+artifacts support the reading and established professional practice supports
+the reasoning. Use that tradecraft in case-study rationales and explanations,
+and cite the relevant best practice or public standard when useful. Keep the
+inferred user benefit distinct from a claim that the project observed or
+measured that benefit.
+
+For example, when a Figma comparison uses consistent plan names and parallel
+headings, it is valid to explain that the structure would help users compare
+plans and find relevant differences with less effort, based on information
+hierarchy, scannability, and recognition-over-recall practice. Project-specific
+testing or a conversion metric is not required for that professional analysis.
+
 ## Facts, leads, and gaps
 
 Keep these categories distinct:
 
 - **Supported fact:** may be used at the scope described in the packet.
+- **Professional interpretation:** a user benefit or rationale extrapolated
+  from artifacts and established practice.
 - **Discovery lead:** useful for finding a stronger source or story
   relationship, but not ready for a public claim.
 - **Material gap:** missing information that changes whether the story can be

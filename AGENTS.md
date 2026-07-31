@@ -178,6 +178,13 @@ external-agent packet, follow
 
 - Mason is the primary source for his own role, participation, rationale, and
   recollection. Missing contributor metadata does not erase his experience.
+- Agents may extrapolate and explain what a UX, microcopy, or content-design
+  change would help a user do when Figma mockups, Mason's recollection, or other
+  artifacts support the reading and established professional practice supports
+  the reasoning. This is professional analysis and tradecraft, not fabrication.
+  Use it in case-study rationales and explanations, and cite the relevant best
+  practice or public standard when useful. Keep it distinct from a claim that
+  the project observed or measured that benefit.
 - Never invent research, quotations, ownership, shipment, adoption, causation,
   or results.
 - Attribute team, program, and experiment results at that level. Do not imply

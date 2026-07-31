@@ -35,9 +35,11 @@ explicitly fixed it.
 
 ### `FACTS_AND_LIMITS.md`
 
-Separate supported facts, discovery leads, material gaps, and statements the
-public case must not make. Keep it concise. It is a factual boundary, not a
-proposed outline.
+Separate supported facts, professional interpretations, discovery leads,
+material gaps, and statements the public case must not make. A professional
+interpretation may extrapolate a user benefit from the artifacts and established
+UX writing, microcopy, or content-design practice; this is valid tradecraft, not
+fabrication. Keep it concise. It is a factual boundary, not a proposed outline.
 
 ### `ASSET_INDEX.md`
 

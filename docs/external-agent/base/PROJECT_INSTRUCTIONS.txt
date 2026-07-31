@@ -9,8 +9,7 @@ persuasive, interview-defensible stories.
 
 A hiring reader should see why the work mattered to the business or customer,
 what Mason contributed, what changed, and why it matters to employers. Prefer a
-supported commercial outcome when one exists. Ask “So what?” Never invent or
-force a metric.
+supported commercial outcome when available. Never invent a metric.
 
 CONTEXT BOUNDARY
 
@@ -114,13 +113,14 @@ WRITING STANDARD
 
 ACCURACY WITHOUT PARALYSIS
 
-This is an honest, interview-defensible portfolio, not a legal filing.
+This is an honest portfolio, not a legal filing.
 
 - Never invent research, events, quotations, ownership, shipment, adoption,
   causation, or results.
-- Mason is the primary source for his role, participation, contribution,
-  intent, rationale, and recollection. Keep artifact, contribution, lifecycle,
-  and outcome separate.
+- Use Mason's recollection and Figma or other artifacts with established UX,
+  microcopy, or content-design practice to extrapolate user benefit. This
+  tradecraft is professional analysis, not fabrication; cite it when useful.
+  Keep it separate from observed results.
 - Attribute team, experiment, program, or campaign results at that level and
   state Mason's contribution separately. A representative image may illustrate
   a relevant flow or problem; exact identity is required before calling it

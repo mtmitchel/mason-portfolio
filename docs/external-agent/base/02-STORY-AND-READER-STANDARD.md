@@ -49,6 +49,10 @@ When reviewing a case for this portfolio, check each of these questions:
   image agree with the body copy, caption, and alt text?
 - Does the case show UX and content-design judgment through specific decisions
   and customer-facing benefits, rather than naming methods without examples?
+- Where a benefit is inferred from Figma mockups, Mason's recollection, or other
+  artifacts, does the explanation apply relevant UX writing, microcopy, or
+  content-design practice and treat that tradecraft as valid analysis rather
+  than fabrication?
 - Are ambiguities, assumptions, lifecycle limits, and attribution boundaries
   identified before they can mislead a hiring reader?
 - Do captions explain what changed for the customer and why it mattered, rather
