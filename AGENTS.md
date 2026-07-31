@@ -223,6 +223,16 @@ Do not keep a visual merely because it is available, attractive, or broadly
 related to the subject. This rule governs story planning, visual selection,
 temporary concepts, implementation, and rendered review.
 
+The following construction is forbidden without exception across portfolio
+exploration, temporary previews, and implementation:
+
+- Never split a headline, section heading, or figure caption into parallel
+  label and message columns, including a short bold label on the left and
+  larger or longer text on the right. The primary message must lead as one
+  left-aligned block in normal reading order. If supporting identification or
+  explanation is needed, combine it with the primary text or stack it
+  vertically on the same left edge.
+
 ### Current approved visual-language profile
 
 The following rules are an approved Portfolio visual-language profile. They

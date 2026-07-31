@@ -70,6 +70,12 @@ from personal taste. A review may recommend replacing the composition rather
 than repairing the existing one. Product screenshots alone do not prove the
 rendered Portfolio page.
 
+Also ask whether the page makes the business, customer, or organizational
+stake legible and whether the work's supported value is visible. The review
+should judge the written case and its visuals together: transitions,
+terminology, headings, captions, image scale, and evidence should explain why
+the work mattered, not merely document interface changes.
+
 ## Mode D: combined construction and rendered review
 
 Use only when the task explicitly requests both. Include the Mode B context,

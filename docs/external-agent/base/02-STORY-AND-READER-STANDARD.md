@@ -29,6 +29,34 @@ contrast, choice, or consequence—not merely “first, then, next.”
 A case does not need a dramatic crisis or a metric. It does need something more
 meaningful than a catalog of screens and corrected strings.
 
+## Case-review checklist
+
+When reviewing a case for this portfolio, check each of these questions:
+
+- Does the opening establish the larger company, team, customer, or product
+  pressure and the experiment's or initiative's goal before narrowing to
+  Mason's contribution?
+- Does it make the business or organizational value legible, especially when a
+  supported commercial target or outcome exists?
+- Do the sections move in a clear sequence, with each transition explaining a
+  change in situation, decision, or consequence?
+- Are unfamiliar products, screens, controls, roles, and terms explained before
+  they become shorthand? Are modifiers used when they clarify scope, actor,
+  state, or causal status?
+- Are headings concise, concrete, and sharp enough to form a readable outline
+  when scanned alone?
+- Does every image support the adjacent argument, and does the text inside the
+  image agree with the body copy, caption, and alt text?
+- Does the case show UX and content-design judgment through specific decisions
+  and customer-facing benefits, rather than naming methods without examples?
+- Are ambiguities, assumptions, lifecycle limits, and attribution boundaries
+  identified before they can mislead a hiring reader?
+- Do captions explain what changed for the customer and why it mattered, rather
+  than merely naming an internal state or repeating a visible label?
+- Does the ending interpret what Mason's contribution made possible and why it
+  matters, instead of recapping the page or claiming that one screen, string,
+  or person caused a team result?
+
 ## Give artifacts narrative jobs
 
 Before choosing a layout, decide what each candidate artifact contributes.

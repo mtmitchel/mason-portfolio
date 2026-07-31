@@ -150,10 +150,16 @@ State:
 For comprehensive written feedback, request judgment on:
 
 - the case thesis and hiring signal;
+- the larger business, customer, or organizational stake and whether the case
+  makes supported value legible;
 - causal structure and narrative movement;
 - clarity of Mason's role and collaborators;
 - title, opening, headings, transitions, body copy, and ending;
 - captions, labels, and result wording; and
+- whether UX and content-design judgment is shown through specific decisions
+  and customer-facing benefits rather than named as an abstract method;
+- whether every supplied visual agrees with the body copy, caption, and alt
+  text;
 - one complete recommended rewrite when a rewrite is requested.
 
 For comprehensive design feedback, request judgment on:
@@ -183,6 +189,8 @@ Include:
 - the program, initiative, or experiment created in response;
 - Mason's role, collaborators, contribution, and important decisions;
 - the supported outcome or other meaningful ending; and
+- the supported business, customer, or organizational value the case could
+  demonstrate; and
 - the distinct hiring signal the case could add.
 
 Do not prescribe a title, outline, or visual template unless Mason explicitly

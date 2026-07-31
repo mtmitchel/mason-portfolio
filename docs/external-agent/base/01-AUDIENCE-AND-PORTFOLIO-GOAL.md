@@ -72,3 +72,16 @@ impact or relevance. Do not compress the whole case into the card.
 The portfolio should be memorable because the work, judgment, and evidence are
 concrete—not because the prose exaggerates their importance or every page uses
 the same construction.
+
+## Business value is part of the hiring signal
+
+Companies hire portfolios to judge whether a candidate can help a product or
+organization create value. When a case has a documented commercial goal or
+measured business outcome, make that context visible early and connect Mason's
+work to it without claiming unsupported causation. Do not reduce the case to a
+metric: explain the customer or product change that made the outcome relevant.
+
+When no direct revenue result exists, state the strongest supported value at
+the correct scope—such as conversion, adoption, retention, task completion,
+trust, reduced support burden, or operational scale. Never invent a business
+impact to make a case sound more commercial.

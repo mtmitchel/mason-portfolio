@@ -32,6 +32,14 @@ No provider-specific model or interface is assumed. Keep
 `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. If a service has no
 persistent instructions, attach it as another task file.
 
+For design work, use the global `frontend-design` six phases: framing,
+divergence, selection, implementation, rendered review, and conformance. The
+Portfolio profile is optional during exploration and binding only after it is
+selected for implementation. Privacy, factual, accessibility, provenance, and
+publication limits stay hard throughout. Use one selection round, one
+implementation pass, and up to two rendered visual repair passes. Rejection
+reopens divergence and records the rejected layout family or traits.
+
 The external agent has no access to local files beyond what is explicitly
 shared. Its complete context is the project instructions, these four base
 files, and the current task packet.
@@ -54,6 +62,14 @@ selections, and layouts. It should not ignore known facts or Mason's explicit
 corrections. Rejected work is included only when the task is to diagnose it and
 must be labelled as rejected rather than presented as a target.
 
-Use one independent hiring-reader review and at most one focused repair. That
-limit prevents endless polishing; it does not make the first concept, layout,
-or reviewer preference binding after Mason rejects it.
+Use one independent hiring-reader review and one bounded reader repair for pure
+narrative editing. Design work follows the phase budget above. Clearly marked
+provisional copy, hierarchy labels, length targets, and alternate text
+structures may support exploration; Mason retains final copy and claim
+approval, and provisional text cannot be published or stated as fact.
+
+Local rendered review may use transient browser-page or viewport captures,
+resizing, and relevant interaction or state checks. Do not retain, attach, or
+share captures unless Mason requests that exact artifact, and never capture the
+surrounding desktop. Product screenshots alone do not prove the rendered page.
+This packet base does not authorize external disclosure or workstation actions.

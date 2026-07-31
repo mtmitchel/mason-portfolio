@@ -7,10 +7,10 @@ experience and supplied evidence. Do not preserve existing pages by default.
 Find combinations of goals, decisions, artifacts, and outcomes that make
 persuasive, interview-defensible stories.
 
-A hiring reader should understand why the work mattered, what Mason
-contributed, which judgment mattered, what changed, and why it matters. Ask
-“So what?” Revenue is one answer; work may also help people buy, adopt, use,
-trust, deploy, renew, or recover, help teams scale, or reduce confusion.
+A hiring reader should see why the work mattered to the business or customer,
+what Mason contributed, what changed, and why it matters to employers. Prefer a
+supported commercial outcome when one exists. Ask “So what?” Never invent or
+force a metric.
 
 CONTEXT BOUNDARY
 
@@ -59,39 +59,36 @@ narrative and visual direction.
 
 ADAPTIVE DESIGN WORKFLOW AND BUDGET
 
-Use the global `frontend-design` adaptive workflow. Infer from the request and
-available context whether this is a new design, redesign, direct iteration,
-faithful reproduction, or visual bug fix. Mason uses ordinary language and
-must not be asked to name phases, skills, profiles, handoffs, budgets, or
-routine thread changes. Stay in one chat by default.
+Use the global `frontend-design` workflow. Infer whether the request is a new
+design, redesign, direct iteration, faithful reproduction, or visual bug fix.
+Do not ask Mason to name phases, skills, profiles, or budgets. Stay in one chat.
 
-For a substantial new design or redesign where materially different directions
-would change the outcome, develop three genuinely structural directions and
-pause once for Mason's choice. The Portfolio profile is not universal during
-exploration; privacy, factual, accessibility, provenance, and publication rules
-stay hard. For clear, routine, reversible, faithful, or bug-fix work, choose
-the strongest direction and proceed. A rejection abandons the rejected layout
-family or defining traits, reopens the design problem with a materially
-different direction, and does not consume a repair or authorize cosmetic repair.
-Implementation is one pass; rendered review has up to two focused visual
-repairs. A rendered qualitative decision precedes build/accessibility/
-conformance closure. Pure narrative editing may retain one independent
-hiring-reader review and one bounded reader repair.
+For a substantial redesign where structural choices would change the outcome,
+develop three genuinely different directions and pause once. For clear,
+routine, reversible work, choose the strongest direction and proceed. Privacy,
+factual, accessibility, provenance, and publication rules stay hard. Rejection
+abandons the defining layout family; do not cosmetically repair it. Use one
+implementation pass and up to two focused rendered repairs.
 
-Clearly mark provisional copy, hierarchy labels, length targets, and alternate
-text structures. Mason retains final copy and claim approval; provisional text
-cannot be published or represented as fact. Local rendered review may use
-transient browser-page or viewport captures, resizing, and relevant interaction
-or state checks. Do not retain, attach, or share captures unless Mason requests
-that exact artifact, and never capture the surrounding desktop. A product
-screenshot alone does not prove the rendered page.
+Mark provisional copy and alternate structures clearly. Mason retains final
+copy and claim approval; provisional text is not fact or publishable. Local
+review may use transient page captures, resizing, and relevant state checks.
+Do not retain or share captures unless requested, and never capture the
+surrounding desktop. A product screenshot does not prove the rendered page.
 
 STORY AND VISUAL JUDGMENT
 
-- Let each major section change the situation or reader's understanding,
-  introduce pressure, show a decision, provide proof, or establish the ending.
-- Choose narrative structure and visual grammar together after artifact jobs are
-  clear. Evidence need not sit beside every sentence it supports.
+Text and visual design have the same job: communicate the case's core ideas.
+They must make the same argument together. Every retained visual must clarify,
+demonstrate, or prove the idea advanced by the surrounding narrative. Redesign
+or remove a visual that merely depicts related material, repeats what is
+already clear, or obscures the relationship being explained. Do not keep a
+visual because it is available, attractive, interactive, or broadly related.
+
+- Give every artifact a specific narrative job before choosing the structure.
+- Let each section change the situation or reader's understanding, introduce
+  pressure, show a decision, provide proof, or establish the ending.
+- Evidence need not sit beside every sentence it supports.
 - Screens, crops, tabs, sequences, excerpts, diagrams, text-only passages, and
   result treatments are optional. Do not cram prose, annotations, screens, and
   metrics into one construction.
@@ -100,13 +97,20 @@ STORY AND VISUAL JUDGMENT
 
 WRITING STANDARD
 
-- Use plain English, concrete verbs, and clear agency without overstating sole
-  ownership. Explain decisions and tradeoffs rather than listing screens.
-- Make titles and headings factual, specific, and interesting. Give
-  collaborators credit once without hedging Mason's contribution.
-- Cut jargon, inflated stakes, synthetic polish, repetition, and generic
-  phrases. Reject changelogs, screen tours, inventories, and chronology posing
-  as stories.
+- Use plain English, concrete verbs, and clear agency. Explain decisions and
+  tradeoffs rather than listing screens; credit collaborators without
+  understating Mason's contribution.
+- Make titles and headings specific and interesting.
+- Orient first-time readers. Explain the overall journey and only unfamiliar
+  labels needed to follow the argument; add details when relevant, then keep
+  each term stable.
+- Keep one stable term per concept. Treat repetition as a problem only when a
+  nearby echo adds no clarity. Exact repetition is often clearer than renaming.
+- Cut or recast before substituting; change words only when equally exact.
+  A diction edit must preserve meaning, emphasis, supported detail, and
+  structure.
+- Cut jargon, inflated stakes, synthetic polish, generic phrases, screen tours,
+  inventories, and chronology posing as story.
 
 ACCURACY WITHOUT PARALYSIS
 
@@ -128,17 +132,15 @@ This is an honest, interview-defensible portfolio, not a legal filing.
 
 SKILL AND TOOL ROUTING WHEN AVAILABLE
 
-- Use a portfolio-content capability from slate discovery through case writing and
-  hiring-reader review. For substantial slate or case architecture, use two
-  reasoning passes: causal skeleton/evidence relationships, then the complete
-  narrative and visual plan.
+- Use a portfolio-content capability throughout. For substantial architecture,
+  reason first about the causal skeleton and evidence, then the full narrative
+  and visual plan.
 - Use product research only for public product relationships, terminology,
   commercial history, audience, adoption, or current state. It cannot establish
   Mason's role, a private team goal, or project causation.
-- Use visual/frontend design only after story, causal skeleton, and artifact
-  jobs are clear. Use a real browser after implementation for desktop, mobile,
-  overflow, and interaction review. Use separate narrative writing only when
-  requested or for a distinct deep repair.
+- Use visual design only after the story and artifact jobs are clear. After
+  implementation, use a real browser for desktop, mobile, overflow, and
+  interaction review. Use separate narrative writing only when requested.
 
 RESPONSE AND STOPPING
 
