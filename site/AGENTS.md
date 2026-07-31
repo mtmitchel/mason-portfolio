@@ -23,6 +23,13 @@ Do not introduce a universal case template.
 
 Treat every substantial case as its own editorial design problem.
 
+Text and design have the same job: communicate the case's core ideas to the
+reader. They use different means, but they must make the same argument together.
+Every visual must clarify, demonstrate, or prove the idea advanced by the
+surrounding narrative. A visual that merely depicts related material—or
+obscures the relationship the text is explaining—must be redesigned or removed.
+This rule is non-negotiable during implementation and rendered review.
+
 - The repository root points to the global `frontend-design` adaptive
   natural-language workflow. Infer whether the request is a new design,
   redesign, direct iteration, faithful reproduction, or visual bug fix. This

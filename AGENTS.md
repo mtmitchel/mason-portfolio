@@ -211,6 +211,18 @@ provisional copy, hierarchy labels, length targets, and alternate text
 structures may guide exploration. Mason retains final copy and claim approval;
 provisional text cannot be published or represented as fact.
 
+### Non-negotiable narrative-visual alignment
+
+Text and design have the same job: communicate the case's core ideas to the
+reader. They use different means, but they must make the same argument together.
+Every visual must clarify, demonstrate, or prove the idea advanced by the
+surrounding narrative. A visual that merely depicts related material—or
+obscures the relationship the text is explaining—must be redesigned or removed.
+
+Do not keep a visual merely because it is available, attractive, or broadly
+related to the subject. This rule governs story planning, visual selection,
+temporary concepts, implementation, and rendered review.
+
 ### Current approved visual-language profile
 
 The following rules are an approved Portfolio visual-language profile. They
