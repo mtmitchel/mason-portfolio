@@ -35,11 +35,13 @@ When reviewing a case for this portfolio, check each of these questions:
 
 - Does the opening establish the larger company, team, customer, or product
   pressure and the experiment's or initiative's goal before narrowing to
-  Mason's contribution?
+  Mason's contribution? Does it introduce the case without summarizing the
+  whole story before it has developed?
 - Does it make the business or organizational value legible, especially when a
   supported commercial target or outcome exists?
 - Do the sections move in a clear sequence, with each transition explaining a
-  change in situation, decision, or consequence?
+  change in situation, decision, or consequence? Does the end of one section
+  create a reason for the next rather than relying on a generic time marker?
 - Are unfamiliar products, screens, controls, roles, and terms explained before
   they become shorthand? Are modifiers used when they clarify scope, actor,
   state, or causal status?
@@ -57,9 +59,12 @@ When reviewing a case for this portfolio, check each of these questions:
   identified before they can mislead a hiring reader?
 - Do captions explain what changed for the customer and why it mattered, rather
   than merely naming an internal state or repeating a visible label?
+- Has the finished prose been line-edited and proofread for grammar, sentence
+  boundaries, punctuation, parallelism, and unnatural phrasing?
 - Does the ending interpret what Mason's contribution made possible and why it
-  matters, instead of recapping the page or claiming that one screen, string,
-  or person caused a team result?
+  matters, and does it feel like a deliberate landing rather than a recap or an
+  abrupt stop? It must not claim that one screen, string, or person caused a
+  team result.
 
 ## Give artifacts narrative jobs
 
@@ -104,29 +109,77 @@ Every major section should do at least one useful job:
 - provide visible proof; or
 - establish the ending.
 
-## Writing and page rhythm
+## Introductions introduce
 
 The page itself should demonstrate the clarity and judgment Mason is being
 hired to provide. A sound story is not finished if the reader has to excavate
 it.
 
-Near the top, provide a fast path to the stake, Mason's role, his important
-contribution, and the supported change or ending. This may be an opening,
-compact metadata, a result preview, or another concise treatment. Do not
-require a fixed summary block or repeat the same facts in several formats.
+Use the introduction to orient the reader to the company or product, the
+relevant situation, the pressure or opportunity, and why the work began. It may
+establish the central question or promise, but it should not summarize every
+decision, artifact, and result before the story has developed. Use a result-led
+opening only when that structure is deliberately chosen and the reader still
+receives the context needed to understand the result.
 
-Front-load useful facts. Use plain English and concrete verbs. Use bullets only
-for genuinely scannable sets and emphasis only when it improves meaning. Long
-paragraphs, long sentences, and wide text measures are reasons to inspect the
-passage, not automatic failures.
+Front-load the useful point within each paragraph and section. Do not interpret
+front-loading as an instruction to compress the entire case into its first
+screen. A compact summary, metadata block, or result preview may supplement the
+introduction when it reduces reader effort without repeating or replacing it.
+
+## Transitions create movement
+
+Make the end of each major section establish a changed condition, decision,
+consequence, or unresolved question that makes the next section necessary.
+Begin the next section by taking up that pressure or consequence. Use the real
+relationship: because, but, therefore, despite, once, or instead. Do not rely
+on a generic marker such as `Next`, `Another challenge`, or `From there`.
+
+A heading can signal a turn, but it does not replace a prose transition. The
+reader should understand why the case moves from one section to the next, not
+merely notice that the topic changed.
+
+For example, replace `Next, I revised the confirmation message` with the actual
+turn: `The earlier copy named the choice but not its consequence. Closing that
+gap in the confirmation message became the next problem to solve.` The
+transition now carries the unresolved problem forward instead of announcing a
+new topic.
+
+## Sentence and punctuation control
+
+After the structure is sound, complete a full line edit and proofread. Correct
+accidental fragments, run-ons, comma splices, faulty parallelism, unclear
+pronouns, apostrophe errors, quotation-mark errors, and punctuation that hides
+the sentence's structure. Preserve deliberate fragments or irregular rhythm
+when they serve the voice and remain clear.
+
+Prefer periods and commas for ordinary clarity. Use colons, semicolons,
+parentheses, and em dashes according to their grammatical function, not as
+interchangeable decoration. Avoid repeated em dashes and other generated prose
+habits. Read the finished copy aloud before delivery.
+
+Use plain English and concrete verbs. Use bullets only for genuinely scannable
+sets and emphasis only when it improves meaning. Long paragraphs, long
+sentences, and wide text measures are reasons to inspect the passage, not
+automatic failures.
 
 Headings should contain concrete facts, tension, choices, turns, or
 consequences. Read them alone: they should form a short version of the story.
 
+## Conclusions land the case
+
+Give the case a deliberate conclusion, not merely a final paragraph. Synthesize
+rather than recap. Return to the pressure, question, or promise established in
+the introduction and show what is now different. Interpret what Mason's
+contribution made possible, what judgment the work demonstrates, and why that
+capability matters.
+
 When a result exists, end on the result and its meaning. When no metric exists,
 end on the strongest supported product change, organizational consequence, or
-judgment the work demonstrates. Do not end on a generic lesson, future work, or
-defensive caveat.
+demonstrated judgment. Let the final sentence carry a concrete, case-specific
+consequence or insight. Do not end on `In conclusion`, a checklist summary, a
+generic lesson, future work, defensive caveat, unseen evidence, or a sentence
+that could close an unrelated case.
 
 ## Hiring-reader test
 

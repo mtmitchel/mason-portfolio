@@ -154,13 +154,22 @@ For comprehensive written feedback, request judgment on:
   makes supported value legible;
 - causal structure and narrative movement;
 - clarity of Mason's role and collaborators;
-- title, opening, headings, transitions, body copy, and ending;
-- captions, labels, and result wording; and
+- whether the introduction orients and creates forward movement without
+  summarizing the whole case prematurely;
+- whether paragraph and section transitions express real causal, contrastive,
+  or consequential relationships rather than generic time markers;
+- title, headings, body copy, captions, and result wording;
+- grammar, sentence boundaries, punctuation, parallelism, and unnatural
+  phrasing after the structural revision is complete;
+- whether the conclusion synthesizes the case and lands on a specific result,
+  consequence, or demonstrated judgment rather than recapping or stopping
+  abruptly;
+- labels and interface terminology;
 - whether UX and content-design judgment is shown through specific decisions
   and customer-facing benefits rather than named as an abstract method;
 - whether every supplied visual agrees with the body copy, caption, and alt
   text;
-- one complete recommended rewrite when a rewrite is requested.
+- and one complete recommended rewrite when a rewrite is requested.
 
 For comprehensive design feedback, request judgment on:
 
@@ -270,6 +279,8 @@ Confirm:
 - the packet names its mode and exact deliverables;
 - comprehensive feedback explicitly covers both writing and design when Mason
   requested both;
+- comprehensive writing feedback checks the introduction, transitions,
+  punctuation, and conclusion against the installed story and reader standard;
 - every filename mentioned in the task, facts, or asset index is attached;
 - current draft text and rendered captures are included when the requested
   review depends on them;

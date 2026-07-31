@@ -32,13 +32,21 @@ No provider-specific model or interface is assumed. Keep
 `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. If a service has no
 persistent instructions, attach it as another task file.
 
-For design work, use the global `frontend-design` six phases: framing,
-divergence, selection, implementation, rendered review, and conformance. The
-Portfolio profile is optional during exploration and binding only after it is
-selected for implementation. Privacy, factual, accessibility, provenance, and
-publication limits stay hard throughout. Use one selection round, one
-implementation pass, and up to two rendered visual repair passes. Rejection
-reopens divergence and records the rejected layout family or traits.
+## Instruction responsibilities
+
+`PROJECT_INSTRUCTIONS.txt` contains compact non-negotiable behavior. The
+numbered files expand it by responsibility: `01` owns audience and hiring value;
+`02` owns story and prose quality; `03` owns evidence and accuracy; and `04`
+owns packet contents. Mason's current task and explicit corrections govern
+case-specific decisions. When the compact file is less specific, apply the
+detailed numbered standard rather than inventing a compromise.
+
+For design work, use the installed adaptive design guidance without asking
+Mason to name phases or repeat internal workflow language. The Portfolio
+profile is optional during exploration and binding only after selection.
+Privacy, factual, accessibility, provenance, and publication limits remain
+hard. Rejection abandons the rejected layout family rather than authorizing a
+cosmetic repair.
 
 The external agent has no access to local files beyond what is explicitly
 shared. Its complete context is the project instructions, these four base
@@ -63,7 +71,7 @@ corrections. Rejected work is included only when the task is to diagnose it and
 must be labelled as rejected rather than presented as a target.
 
 Use one independent hiring-reader review and one bounded reader repair for pure
-narrative editing. Design work follows the phase budget above. Clearly marked
+narrative editing. Design work follows the adaptive budget in `04`. Clearly marked
 provisional copy, hierarchy labels, length targets, and alternate text
 structures may support exploration; Mason retains final copy and claim
 approval, and provisional text cannot be published or stated as fact.

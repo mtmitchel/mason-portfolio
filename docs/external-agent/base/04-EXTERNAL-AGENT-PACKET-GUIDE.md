@@ -3,6 +3,16 @@
 Create one small packet for the exact task. Do not make every packet imitate a
 case-review bundle.
 
+## How the shared base fits together
+
+Mason's current task and explicit corrections govern case-specific decisions.
+`01-AUDIENCE-AND-PORTFOLIO-GOAL.md` owns audience and hiring value;
+`02-STORY-AND-READER-STANDARD.md` owns public narrative and prose quality;
+`03-EVIDENCE-AND-ACCURACY-STANDARD.md` owns claim status; and this file owns
+packet contents. Apply the detailed numbered standard when the compact project
+instructions are less specific. Do not weaken one standard to solve a problem
+owned by another.
+
 ## Mode A: portfolio-slate discovery
 
 Supply a selective story-library extract containing:
@@ -74,9 +84,11 @@ rendered Portfolio page.
 
 Also ask whether the page makes the business, customer, or organizational
 stake legible and whether the work's supported value is visible. The review
-should judge the written case and its visuals together: transitions,
-terminology, headings, captions, image scale, and evidence should explain why
-the work mattered, not merely document interface changes.
+should judge the written case and its visuals together. Apply the story and
+reader standard to the introduction's function, causal transitions, headings,
+body copy, punctuation, captions, and deliberate conclusion. Image scale and
+evidence should help explain why the work mattered, not merely document
+interface changes.
 
 ## Mode D: combined construction and rendered review
 

@@ -157,8 +157,9 @@ external-agent packet, follow
   combination. A single-case packet cannot make a final slate comparison
   without the competing cases.
 - For comprehensive written feedback, include the reader-facing draft when one
-  exists and ask for narrative, structure, role clarity, headings, transitions,
-  body copy, captions, result treatment, and ending.
+  exists and ask for narrative, structure, role clarity, the introduction's
+  function, headings, causal transitions, body copy, punctuation, captions,
+  result treatment, and the conclusion's landing.
 - For comprehensive design feedback on an implemented page, also include a
   currently accessible public URL or current desktop and mobile captures.
   Product screenshots alone support visual planning, not a rendered-page
