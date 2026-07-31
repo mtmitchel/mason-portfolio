@@ -6,14 +6,18 @@ recovery, or an explicitly authorized Figma edit. The repository-root
 
 ## Access and source safety
 
-- Use Mason's logged-in Figma desktop app when the desktop or plugin workflow is
-  practical. Mason's logged-in Chrome profile remains an allowed direct-access
-  route.
-- The unofficial Figwright MCP server and its required local desktop or
-  development-plugin bridge are allowed. Never use Figma's official native MCP
-  server, `use_figma`, a direct API, an unrelated plugin, or Playwright.
-- MCP access does not authorize a Figma write. The same read-only default and
-  explicit edit approval below apply to every permitted access route.
+- Do not assume that Linux has a Figma desktop app or any selection-based
+  desktop-only behavior. Use an approved browser route only when the current
+  task and connection support it.
+- Official Figma remote MCP/browser access is allowed only for new, isolated
+  benchmark draft files inside the approved design benchmark. It must never be
+  used on canonical or private DeepL evidence files. The benchmark allowance
+  does not authorize access to, or edits in, existing evidence work.
+- Existing evidence work remains read-only unless Mason explicitly authorizes
+  the exact edit in the current task. Keep secrets and private evidence out of
+  Figma, including benchmark drafts.
+- MCP or browser access does not authorize a Figma write. The same read-only
+  default and explicit edit approval below apply to every permitted route.
 - Keep one Figma tab open. Work on one file and one bounded cluster at a time.
 - Figma remains read-only unless Mason explicitly authorizes an edit in the
   current task.
