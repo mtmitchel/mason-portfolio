@@ -82,9 +82,11 @@ guides discovery; it is not an approval pipeline or a public template.
    Do not insert a separate proposal or approval gate unless Mason requested
    one or a material decision genuinely cannot be resolved from the evidence.
 
-Use one independent hiring-reader review and at most one focused repair. This
-limit prevents hypothetical perfection. It does not make the first structure
-or reviewer preference binding after Mason rejects it.
+Pure narrative editing may use one independent hiring-reader review and one
+bounded reader repair. For design work, use the adaptive natural-language
+workflow in the global `frontend-design` skill; a reader review must not
+consume or expand its separate design budget. Neither review makes a first
+structure or reviewer preference binding after Mason rejects it.
 
 ## Skill routing
 
@@ -109,12 +111,15 @@ or reviewer preference binding after Mason rejects it.
   verification. It owns only the image-byte workflow. The repository agent
   owns copying into `site/public`, reference and manifest updates, build and
   browser review, and cleanup. Follow the repository capture policy.
-- Use `frontend-design` only after the selected story cluster, causal skeleton,
-  and artifact jobs are clear. Its preference for preserving an existing design
-  system does not make rejected case layouts or shared components authoritative.
+- Use `frontend-design` after the selected story cluster, causal skeleton, and
+  artifact jobs are clear. Let it infer whether the task needs a new design,
+  redesign, direct iteration, faithful reproduction, or visual bug fix. Do not
+  duplicate its adaptive workflow here; apply the Portfolio meanings below. Its
+  preference for preserving an existing design system does not make rejected
+  case layouts or shared components authoritative.
 - After implementation, use the approved browser-control route for real
-  desktop, mobile, overflow, and keyboard inspection. Static checks do not
-  replace that visual review.
+  desktop, mobile, overflow, interaction-state, and keyboard inspection. Static
+  checks do not replace that visual review.
 
 ## External-agent packet requests
 
@@ -182,9 +187,36 @@ external-agent packet, follow
   identity.
 - Evidence limits the factual claim, not the creativity of the narrative.
 
-## Layout freedom
+## Portfolio design workflow and visual-language profile
 
-There is no universal case-study layout.
+There is no universal case-study layout. Use the global `frontend-design` skill
+as an adaptive agent-owned workflow. Infer from Mason's ordinary request and
+the repository whether this is a new design, redesign, direct iteration,
+faithful reproduction, or visual bug fix. Do not ask Mason to name a phase,
+skill, profile, handoff, budget, or routine thread transition. Stay in one chat
+by default. For a substantial new design or redesign where materially
+different directions would change the outcome, develop three genuinely
+structural directions and pause once for Mason's choice. For clear, routine,
+reversible, faithful, or bug-fix work, choose the strongest direction and
+proceed directly.
+
+An explicit or natural rejection abandons the rejected layout family and its
+defining traits, then pursues a materially different composition; it does not
+authorize cosmetic repair or consume the rendered repair budget. Preserve
+privacy, factual, accessibility, provenance, and publication rules throughout.
+Use one implementation pass and up to two focused rendered visual repair
+passes. Make the rendered qualitative decision before build, accessibility, or
+other conformance checks; passing checks do not replace it. Clearly marked
+provisional copy, hierarchy labels, length targets, and alternate text
+structures may guide exploration. Mason retains final copy and claim approval;
+provisional text cannot be published or represented as fact.
+
+### Current approved visual-language profile
+
+The following rules are an approved Portfolio visual-language profile. They
+become binding only after the profile is intentionally selected for
+implementation. During framing, divergence, and selection, they are candidate
+traits rather than universal prohibitions.
 
 - Use sentence case for every reader-facing heading, label, caption, control,
   diagram, metadata line, and navigation item. Never style text as all caps or
@@ -201,6 +233,11 @@ There is no universal case-study layout.
   to its right. Keep the primary heading in the clear leading position and do
   not create hierarchy through that asymmetrical small-label/large-headline
   pattern.
+- In every case-study body, prose and media use the same content column. Images,
+  figures, comparisons, interactive evidence, and their captions must match the
+  narrative text width and align to the same left and right edges at every
+  viewport. Never let case-study media break wider than its text column,
+  overflow that column, or use a full-bleed or wide-breakout treatment.
 - Existing `chapter-*` classes, comparisons, switchers, lightboxes, and
   adjacent cases are optional utilities. Reuse them only when they serve the
   new story; never reuse them merely for consistency.
@@ -209,8 +246,8 @@ There is no universal case-study layout.
 - Evidence must be available and understandable, but it does not need to sit
   beside every sentence that refers to it.
 - Do not cram prose, annotations, metrics, and complete screens into one small
-  construction. Use space, sequence, tabs, focused details, full-width media,
-  or text-only passages according to the material.
+  construction. Use space, sequence, tabs, focused details, or text-only
+  passages according to the material while keeping media on the text column.
 - Do not encode exact prose, metadata, asset sets, section order, component
   names, media placement, or visual treatment in automated tests.
 
@@ -222,8 +259,13 @@ There is no universal case-study layout.
   [`docs/figma-workflow.md`](docs/figma-workflow.md) for an approved Figma task.
 - Commit, push, publication, deployment, access changes, Figma writes, and
   destructive actions require their normal separate approvals.
-- Do not create screenshots, recordings, PDFs, or visual-diff artifacts unless
-  Mason asks for that artifact.
+- When rendered design quality is in scope, transient local browser-page or
+  viewport captures, desktop/mobile resizing, relevant interaction/state
+  checks, and visual inspection are allowed. Do not retain, attach, or share
+  captures unless Mason requests that exact artifact. Never capture the
+  surrounding desktop. Publishing, deployment, and external disclosure remain
+  separately protected. Product screenshots alone do not prove the rendered
+  Portfolio page.
 - Preserve unrelated dirty work. Use Trash for approved cleanup.
 
 ## Verification

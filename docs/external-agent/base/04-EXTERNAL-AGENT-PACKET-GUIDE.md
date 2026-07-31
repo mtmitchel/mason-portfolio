@@ -56,7 +56,8 @@ exhibit” unless the task genuinely requires it.
 
 Include a reader-facing draft only when it helps the task. Label a rejected
 draft or page capture clearly and do not let it masquerade as the target
-structure.
+structure. Record the rejected layout family or defining traits; rejection
+reopens divergence rather than authorizing cosmetic repair of that concept.
 
 ## Mode C: rendered-case review
 
@@ -66,7 +67,8 @@ hierarchy, pacing, image scale, or responsive behavior.
 
 Ask the agent to distinguish demonstrated comprehension or usability problems
 from personal taste. A review may recommend replacing the composition rather
-than repairing the existing one.
+than repairing the existing one. Product screenshots alone do not prove the
+rendered Portfolio page.
 
 ## Mode D: combined construction and rendered review
 
@@ -84,6 +86,29 @@ by one coherent replacement direction.
 
 These passes support judgment; they are not approval gates. Do not add more
 rounds after the requested deliverable is complete.
+
+## Adaptive design review budget
+
+Use the global `frontend-design` adaptive workflow. Mason should describe the
+request in ordinary language; do not ask for phase names, skill or profile
+names, handoff formats, budgets, or routine thread changes. For a substantial
+new design or redesign where materially different directions would change the
+outcome, develop three genuinely structural directions and pause once for
+Mason's choice. For clear, routine, reversible, faithful, or bug-fix work,
+choose the strongest direction and proceed. A rejection abandons the rejected
+layout family and defining traits, so pursue a materially different direction
+instead of cosmetic repair. Implementation is one pass and rendered review
+allows up to two focused visual repair passes. Make the rendered qualitative
+decision before build or accessibility/conformance closure. Pure narrative
+editing may use one independent hiring-reader review and one bounded reader
+repair.
+
+Clearly mark provisional copy, hierarchy labels, length targets, and alternate
+text structures. Mason retains final copy and claim approval; provisional text
+cannot be published or represented as fact. Local rendered review may use
+transient browser-page or viewport captures, resizing, and relevant interaction
+or state checks. Do not retain, attach, or share captures unless Mason requests
+that exact artifact, and never capture the surrounding desktop.
 
 ## Keep packets safe and useful
 

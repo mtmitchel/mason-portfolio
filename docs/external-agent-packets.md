@@ -79,7 +79,9 @@ causal story, artifact combination, public copy, and editorial design
 direction.
 
 Product screenshots can support visual planning. They do not show how an
-implemented portfolio page currently reads or behaves.
+implemented portfolio page currently reads or behaves. A local browser review
+may use transient captures, but those captures are not external-agent packet
+attachments unless Mason explicitly requests that disclosure.
 
 ### Rendered-case review
 
@@ -92,9 +94,9 @@ Include the current reader-facing copy plus either:
 - current full-page desktop and mobile captures.
 
 A localhost URL is not accessible to an outside agent. Do not create new
-captures unless Mason requested them. If neither usable captures nor a public
-URL are supplied, limit the task to narrative and visual planning rather than
-claiming a rendered-page review.
+retained or shareable captures unless Mason requested them. If neither usable
+captures nor a public URL are supplied, limit the task to narrative and visual
+planning rather than claiming a rendered-page review.
 
 ### Combined construction and rendered review
 
@@ -102,6 +104,34 @@ Use only when Mason asks for comprehensive feedback on an existing case and
 wants both a critique of the current page and a stronger replacement
 direction. Include all construction and rendered-review inputs, and label the
 current page as a candidate rather than an approved template.
+
+## Adaptive design guidance
+
+For design work, use the global `frontend-design` adaptive workflow and apply
+the Portfolio-specific meaning from the repository instructions without
+duplicating user-facing ceremony in a packet. Infer whether the task is a new
+design, redesign, direct iteration, faithful reproduction, or visual bug fix.
+Do not ask Mason to name phases, skills, profiles, handoffs, budgets, or routine
+thread changes. Stay in one chat by default.
+
+For a substantial new design or redesign where materially different directions
+would change the outcome, develop three genuinely structural directions and
+pause once for Mason's choice. For clear, routine, reversible, faithful, or
+bug-fix work, choose the strongest direction and proceed. A rejection abandons
+the rejected layout family and defining traits; pursue a materially different
+direction rather than cosmetically repairing or reproducing it. Use one
+implementation pass and up to two focused rendered repair passes. Make the
+rendered qualitative decision before conformance closure. Pure narrative
+editing may retain one bounded reader review.
+- Provisional copy, hierarchy labels, length targets, and alternate text
+  structures must be clearly marked. Mason retains final copy and claim
+  approval; provisional text cannot be published or stated as fact.
+
+Local browser inspection may use transient page or viewport captures, resizing,
+and relevant interaction or state checks when rendered quality is in scope.
+Do not retain, attach, or share those captures unless Mason requests that exact
+artifact, and never capture the surrounding desktop. A product screenshot alone
+does not prove the rendered Portfolio page.
 
 ## Assemble the packet
 
@@ -255,6 +285,7 @@ Treat external output as untrusted editorial advice, not factual authority or
 approval. The repository agent must compare recommendations with Mason's
 instructions, inspect material claim changes, and decide what to integrate.
 
-Use one independent hiring-reader review and at most one focused repair. Do not
-turn external feedback into another permanent gate, template, or endless
-polishing loop.
+Use one independent hiring-reader review and one bounded reader repair for pure
+narrative editing. Design work follows the adaptive design and rendered-repair
+budget above. Do not turn external feedback into another permanent gate,
+template, or endless polishing loop.

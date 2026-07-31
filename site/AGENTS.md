@@ -23,8 +23,15 @@ Do not introduce a universal case template.
 
 Treat every substantial case as its own editorial design problem.
 
-- Follow the repository sentence-case rule for all visible interface text.
-  Never use CSS `text-transform: uppercase` for labels or headings.
+- The repository root points to the global `frontend-design` adaptive
+  natural-language workflow. Infer whether the request is a new design,
+  redesign, direct iteration, faithful reproduction, or visual bug fix. This
+  file governs implementation and technical verification; the selected
+  Portfolio visual-language profile becomes binding here only when chosen for
+  implementation.
+- During implementation, follow the selected profile's sentence-case rule for
+  all visible interface text. Never use CSS `text-transform: uppercase` for
+  labels or headings.
 - Let the story determine section order, reading width, media scale, rhythm,
   comparison treatment, and interaction.
 - Existing `chapter-shell`, `chapter-page`, `story-comparison`, card, rail,
@@ -46,6 +53,23 @@ Treat every substantial case as its own editorial design problem.
 Use the existing colors and typography as a starting point, not as a reason to
 repeat rejected layouts. Mason's current request outranks visual consistency
 with another case.
+
+Use one implementation pass and up to two focused rendered visual repair
+passes. A natural rejection abandons the rejected composition and interaction
+family and requires a materially different direction; it does not authorize
+cosmetic repair of the rejected concept. Clearly marked provisional copy,
+hierarchy labels, length targets, and alternate text structures may guide
+implementation only as exploration; Mason retains final copy and claim
+approval, and provisional text cannot be published or presented as fact.
+
+When rendered design quality is in scope, a transient local browser-page or
+viewport capture may support inspection alongside desktop/mobile resizing and
+relevant interaction or state checks. Do not retain, attach, or share captures
+unless Mason requests that exact artifact, and never capture the surrounding
+desktop. A product screenshot is not proof of the rendered Portfolio page.
+Make the rendered qualitative decision before build, accessibility, or other
+conformance checks close the design task; passing those checks cannot substitute
+for visual review.
 
 ## Technical quality
 
