@@ -28,6 +28,12 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    const conceptPath = "/work/checkout/concepts";
+    const isConceptRoute = url.pathname === conceptPath || url.pathname.startsWith(`${conceptPath}/`);
+    if (isConceptRoute && !["localhost", "127.0.0.1", "::1", "[::1]"].includes(url.hostname)) {
+      return new Response("Not found", { status: 404 });
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       const fetchAsset = (path: string) => {

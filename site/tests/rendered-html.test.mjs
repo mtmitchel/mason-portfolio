@@ -14,11 +14,11 @@ async function siteCss() {
   return [entry, ...modules].join("\n");
 }
 
-async function render(pathname = "/") {
+async function render(pathname = "/", origin = "http://localhost") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
   const { default: worker } = await import(workerUrl.href);
-  return worker.fetch(new Request(new URL(pathname, "http://localhost"), { headers: { accept: "text/html" } }), {
+  return worker.fetch(new Request(new URL(pathname, origin), { headers: { accept: "text/html" } }), {
     ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
   }, { waitUntil() {}, passThroughOnException() {} });
 }
@@ -73,10 +73,78 @@ const selectedRoutes = [
   "/work/voice-product",
 ];
 
+const checkoutConceptRoutes = [
+  "/work/checkout/concepts",
+  "/work/checkout/concepts/four-jobs-map",
+  "/work/checkout/concepts/same-scale-silhouettes",
+  "/work/checkout/concepts/six-question-map",
+  "/work/checkout/concepts/price-tradeoff",
+  "/work/checkout/concepts/summary-rail",
+  "/work/checkout/concepts/consent-manuscript",
+  "/work/checkout/concepts/counter-figure",
+  "/work/checkout/concepts/traveling-spotlight",
+  "/work/checkout/concepts/scroll-camera",
+];
+
 test("homepage renders a public project index without private review language", async () => {
   const html = await htmlFor("/");
   assert.ok((html.match(/class="project-entry"/g) ?? []).length > 0);
   assert.doesNotMatch(html, /Draft needs|What is still missing|Evidence boundary|claim review/i);
+});
+
+test("checkout concepts are local-only, private, and explicit routes", async () => {
+  for (const pathname of checkoutConceptRoutes) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, `${pathname} should render locally`);
+    const html = await response.text();
+    const headings = html.match(/<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>/g) ?? [];
+    assert.equal(headings.length, 1);
+    assert.ok(visibleText(headings[0]).length > 0);
+    assert.match(html, /name="robots"[^>]+content="[^\"]*noindex[^\"]*nofollow/i);
+    assert.doesNotMatch(html, /rel="canonical"/);
+  }
+});
+
+test("checkout concepts stay out of homepage navigation and discarded routes stay absent", async () => {
+  const homepage = await htmlFor("/");
+  assert.doesNotMatch(homepage, /\/work\/checkout\/concepts(?:\/|")/);
+  for (const pathname of [
+    "/work/checkout/concepts/unknown",
+    "/work/checkout/concepts/quiet-proof",
+    "/work/checkout/concepts/writers-proof",
+    "/work/checkout/concepts/three-into-two",
+    "/work/checkout/concepts/inspection-room",
+    "/work/checkout-concept",
+  ]) {
+    assert.equal((await render(pathname)).status, 404, `${pathname} should be absent`);
+  }
+});
+
+test("checkout concepts return 404 on non-local hosts", async () => {
+  for (const pathname of checkoutConceptRoutes) {
+    assert.equal((await render(pathname, "https://portfolio.example")).status, 404);
+  }
+});
+
+test("checkout concept index accepts IPv4 and IPv6 loopback hosts", async () => {
+  for (const origin of ["http://127.0.0.1", "http://[::1]"]) {
+    assert.equal((await render("/work/checkout/concepts", origin)).status, 200);
+  }
+});
+
+test("canonical checkout remains public while concepts carry no unsupported claims", async () => {
+  const canonical = await htmlFor("/work/checkout");
+  assert.equal((canonical.match(/rel="canonical"/g) ?? []).length, 1);
+  assert.doesNotMatch(canonical, /name="robots"[^>]+noindex/i);
+  const concepts = (await Promise.all(checkoutConceptRoutes.map((route) => htmlFor(route)))).join("\n");
+  for (const banned of [
+    /3\.07%/,
+    /35[- ]day/i,
+    /\bPro purchases\b/i,
+    /60 additional subscriptions\/day/i,
+    /sole[- ]causation|single[- ]handedly|sole owner/i,
+    /(?:is|are|was|were) (?:the )?(?:exact(?:ly)? )?(?:tested|winning|approved|shipped|production) (?:screen|state|variant)/i,
+  ]) assert.doesNotMatch(concepts, banned);
 });
 
 test("selected work and writing share the header and About section", async () => {
