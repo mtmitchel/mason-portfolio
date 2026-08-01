@@ -1,6 +1,6 @@
 # External-agent packet guide
 
-Shared-base version: `2026-08-01.1`
+Shared-base version: `2026-08-01.2`
 
 Create one small packet for the exact task. Do not make every packet imitate a
 case-review bundle.
@@ -30,16 +30,20 @@ If outside research is not explicitly allowed, treat the packet as the complete
 source set. A request to review does not imply permission to rewrite, redesign,
 implement, add agents, or expand the deliverables.
 
-When a packet supplies two or more interface states, put the multi-state claim
-check before narrative or language review. Require one state-ledger row per
-image and one claim-to-state row for every sentence, caption, or alt text that
-uses or interprets visible labels, amounts, dates, conditions, controls, or
-actions. Do not permit a revised draft until no state conflict remains.
+When a packet supplies any screenshot or captured interface state, put the
+interface-state claim check before narrative or language review. Require one
+state-ledger row per image, including known conditions and variants that limit
+what it proves, and one claim-to-state row for every sentence, caption, or alt
+text that uses or interprets visible labels, amounts, dates, conditions,
+controls, or actions. Reject claims that merge states or treat one captured
+state as universal, exhaustive, default, or guaranteed. Do not permit a revised
+draft until no state or scope conflict remains.
 
 Require the response to begin with a receipt stating the shared-base version,
-every state checked, unresolved state conflicts, and whether rewriting was
-allowed or blocked. Record the writer model and effort when the interface
-exposes them; otherwise write `unknown` rather than inferring them.
+every state checked, its conditions and limits, unresolved state or scope
+conflicts, and whether rewriting was allowed or blocked. Record the writer
+model and effort when the interface exposes them; otherwise write `unknown`
+rather than inferring them.
 
 ## Mode A: portfolio-slate discovery
 
@@ -85,6 +89,8 @@ For every supplied screenshot or excerpt, state:
 
 - what it shows;
 - whether it is historical, representative, reconstructed, or exact;
+- the conditions shown and any known product, plan, offer, eligibility, account,
+  or experiment variations that limit what it proves;
 - which narrative jobs it could perform; and
 - any claim it cannot support.
 

@@ -72,9 +72,9 @@ demonstrate, or prove the nearby idea. Redesign or remove one that merely
 depicts related material, repeats the prose, or obscures the point.
 
 - Give every artifact a narrative job before choosing structure.
-- With multiple interface states, read every visible line before revising. Map
-  each UI-specific claim to one named state; label comparisons and
-  counterfactuals. Any unresolved mismatch blocks the rewrite.
+- Treat each captured screen as one possible state, not a complete product
+  model. Read every line; map each UI claim to its state; reject merged or
+  universalized states. Any unresolved mismatch blocks the rewrite.
 - Let each section change the situation or reader's understanding, introduce
   pressure, show a decision, provide proof, or establish the ending.
 

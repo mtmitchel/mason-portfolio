@@ -69,6 +69,14 @@ problem Mason worked on. It does not need an unbroken file-to-production chain
 unless the public copy calls it the exact tested, winning, approved, shipped,
 or production version.
 
+A screenshot proves only what appears in its captured state. It does not prove
+that the state is universal, exhaustive, default, or guaranteed. Do not infer
+that every customer sees the shown product, plan, selection, billing period,
+offer, trial, eligibility condition, account state, or experiment variant
+unless the packet supplies broader evidence. The absence of another option does
+not prove that it was unavailable. Name the applicable condition when known;
+otherwise describe only the illustrated state.
+
 Describe the image according to what it is. Do not make its internal provenance
 the public story.
 

@@ -158,26 +158,32 @@ State:
 - important user corrections;
 - what the external agent must not assume.
 
-### Multi-state interface evidence gate
+### Interface-state evidence gate
 
-When two or more screenshots or interface states support the copy, require this
+When any screenshot or captured interface state supports the copy, require this
 order before any narrative or language revision:
 
 1. Inspect every image at readable resolution and read every visible line.
 2. Create one state-ledger row per image with its exact labels, amounts, dates,
-   conditions, controls, and actions relevant to the draft.
+   conditions, controls, and actions relevant to the draft; the conditions
+   shown; any known variants; and what the image cannot prove.
 3. Map every sentence, caption, and alt text that uses or interprets visible UI
    content to its supporting state.
 4. Fail claims that present content from different states as coexisting or
    observed together. Identify comparisons explicitly and mark supported
    counterfactuals as counterfactuals.
-5. Report every conflict. Do not produce or accept a revised draft until no
-   state conflict remains.
+5. Fail claims that treat a captured state as universal, exhaustive, default,
+   or guaranteed. Do not generalize shown products, plans, selections, billing
+   periods, offers, trials, eligibility conditions, account states, or
+   experiment variants without broader evidence.
+6. Report every conflict. Do not produce or accept a revised draft until no
+   state or scope conflict remains.
 
 The response must begin with a compact receipt naming the shared-base version,
-writer model and effort when exposed, every state checked, unresolved conflicts,
-and whether rewriting was allowed or blocked. Use `unknown` for model or effort
-when the interface does not expose them; never infer them.
+writer model and effort when exposed, every state checked, its conditions and
+limits, unresolved state or scope conflicts, and whether rewriting was allowed
+or blocked. Use `unknown` for model or effort when the interface does not expose
+them; never infer them.
 
 For comprehensive written feedback, request judgment on:
 
@@ -263,6 +269,8 @@ For every attached image or excerpt, state:
 - the exact attached filename;
 - what it shows;
 - whether it is historical, representative, reconstructed, or exact;
+- the conditions shown and any known product, plan, offer, eligibility, account,
+  or experiment variations that limit what it proves;
 - possible narrative jobs such as context, decision, contrast, sequence,
   proof, consequence, or result; and
 - what claim it cannot support.
@@ -316,9 +324,9 @@ Confirm:
   repeat it;
 - the packet states whether outside research or browsing is allowed; if it does
   not allow them, the packet identifies itself as the complete source set;
-- a packet with multiple interface states puts the state ledger and
-  claim-to-state check before editorial revision and blocks a rewrite while any
-  conflict remains;
+- a packet with any captured interface state puts the state ledger and
+  claim-to-state check before editorial revision, records conditions and known
+  variants, and blocks a rewrite while any state or scope conflict remains;
 - comprehensive feedback explicitly covers both writing and design when Mason
   requested both;
 - comprehensive writing feedback checks the introduction, transitions,
@@ -346,11 +354,11 @@ Treat external output as untrusted editorial advice, not factual authority or
 approval. The repository agent must compare recommendations with Mason's
 instructions, inspect material claim changes, and decide what to integrate.
 
-Before presenting or integrating externally revised copy supported by multiple
-interface states, the repository agent must independently repeat the
-claim-to-state check against the supplied images. The external receipt does not
-prove that check passed. Any unresolved state conflict blocks the rewrite from
-presentation or integration.
+Before presenting or integrating externally revised copy supported by any
+captured interface state, the repository agent must independently repeat the
+claim-to-state and captured-state scope checks against the supplied images. The
+external receipt does not prove that check passed. Any unresolved state or
+scope conflict blocks the rewrite from presentation or integration.
 
 For pure narrative editing, one review and one repair are maximums, not required
 stages. Do not add another agent or round unless Mason requests it. Design work

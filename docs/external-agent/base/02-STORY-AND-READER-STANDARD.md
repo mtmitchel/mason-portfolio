@@ -66,25 +66,31 @@ When reviewing a case for this portfolio, check each of these questions:
   abrupt stop? It must not claim that one screen, string, or person caused a
   team result.
 
-## Prove multi-state interface claims before revising
+## Prove interface-state claims before revising
 
-When two or more screenshots or interface states support factual prose:
+When any screenshot or captured interface state supports factual prose:
 
 1. Inspect every supplied image at readable resolution and read every visible
    line. Do not rely on its filename, alt text, evidence-index summary, or the
    draft's account.
-2. Record each state and the exact visible labels, amounts, dates, conditions,
-   controls, and actions that any draft claim uses or interprets.
+2. Record each state; the exact visible labels, amounts, dates, conditions,
+   controls, and actions that any draft claim uses or interprets; and any known
+   conditions or variants that limit what the image can prove.
 3. Map every such sentence, caption, and alt text to its supporting state.
 4. Fail any claim that presents content from different states as coexisting or
    observed together. Identify cross-state comparisons explicitly. Mark a
    counterfactual as one and support it with the supplied evidence.
-5. Report every conflict before revising. Do not draft, rewrite, or accept copy
-   until no state conflict remains.
+5. Fail any claim that treats a captured state as universal, exhaustive,
+   default, or guaranteed. Do not generalize a shown product, plan, selection,
+   billing period, offer, trial, eligibility condition, account state, or
+   experiment variant without broader evidence.
+6. Report every conflict before revising. Do not draft, rewrite, or accept copy
+   until no state or scope conflict remains.
 
 Return the state and claim rows required by the current packet plus a compact
-receipt outside the public copy naming every state checked, unresolved
-conflicts, and whether rewriting is allowed or blocked.
+receipt outside the public copy naming every state checked, its conditions and
+limits, unresolved state or scope conflicts, and whether rewriting is allowed
+or blocked.
 
 ## Give artifacts narrative jobs
 
