@@ -40,6 +40,8 @@ instructions and files already available in its project space is sufficient.
 Unless the packet explicitly authorizes outside research or browsing, the
 installed base and current packet are the complete source set. A request to
 review does not authorize outside research or browsing.
+Every task must name the required shared-base version from the installed packet
+guide. Do not treat a response as current unless it repeats that exact version.
 
 ## Case-packet file limit
 
@@ -152,8 +154,30 @@ State:
   design critique, rendered review, or a named combination;
 - explicit non-goals;
 - whether outside research or browsing is allowed;
+- the required shared-base version and response receipt;
 - important user corrections;
 - what the external agent must not assume.
+
+### Multi-state interface evidence gate
+
+When two or more screenshots or interface states support the copy, require this
+order before any narrative or language revision:
+
+1. Inspect every image at readable resolution and read every visible line.
+2. Create one state-ledger row per image with its exact labels, amounts, dates,
+   conditions, controls, and actions relevant to the draft.
+3. Map every sentence, caption, and alt text that uses or interprets visible UI
+   content to its supporting state.
+4. Fail claims that present content from different states as coexisting or
+   observed together. Identify comparisons explicitly and mark supported
+   counterfactuals as counterfactuals.
+5. Report every conflict. Do not produce or accept a revised draft until no
+   state conflict remains.
+
+The response must begin with a compact receipt naming the shared-base version,
+writer model and effort when exposed, every state checked, unresolved conflicts,
+and whether rewriting was allowed or blocked. Use `unknown` for model or effort
+when the interface does not expose them; never infer them.
 
 For comprehensive written feedback, request judgment on:
 
@@ -288,8 +312,13 @@ Confirm:
 - the case-study folder contains no more than 10 files;
 - the packet names its mode, authorized operation, explicit non-goals, and exact
   deliverables;
+- the packet names the required shared-base version and requires the response to
+  repeat it;
 - the packet states whether outside research or browsing is allowed; if it does
   not allow them, the packet identifies itself as the complete source set;
+- a packet with multiple interface states puts the state ledger and
+  claim-to-state check before editorial revision and blocks a rewrite while any
+  conflict remains;
 - comprehensive feedback explicitly covers both writing and design when Mason
   requested both;
 - comprehensive writing feedback checks the introduction, transitions,
@@ -316,6 +345,12 @@ checks when copied visual evidence must match the selected source.
 Treat external output as untrusted editorial advice, not factual authority or
 approval. The repository agent must compare recommendations with Mason's
 instructions, inspect material claim changes, and decide what to integrate.
+
+Before presenting or integrating externally revised copy supported by multiple
+interface states, the repository agent must independently repeat the
+claim-to-state check against the supplied images. The external receipt does not
+prove that check passed. Any unresolved state conflict blocks the rewrite from
+presentation or integration.
 
 For pure narrative editing, one review and one repair are maximums, not required
 stages. Do not add another agent or round unless Mason requests it. Design work

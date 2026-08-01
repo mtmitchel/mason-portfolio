@@ -30,7 +30,9 @@ repository access.
 
 After changing any base file, reinstall the complete current base in every
 external project space before sending another task packet. A local repository
-change does not update those project spaces automatically.
+change does not update those project spaces automatically. Increment the
+shared-base version in `04-EXTERNAL-AGENT-PACKET-GUIDE.md` whenever any installed
+base file changes, and require the next response to repeat that version.
 
 No provider-specific model or interface is assumed. Keep
 `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. If a service has no
