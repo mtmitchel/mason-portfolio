@@ -1,5 +1,30 @@
 # Changelog
 
+## Unreleased — 2026-08-01
+
+### Checkout working state
+
+- Removed the superseded local-only `/work/checkout/concepts/*` exploration
+  routes, their dedicated stylesheets, and the worker and test scaffolding that
+  existed only to hide and verify those routes.
+- Promoted the approved Camera Preview 2 structure and five full-screen assets
+  to `/work/checkout`, and replaced the older focused comparison modules with
+  the externally revised reader-facing draft.
+- Added captured-state limits for the five checkout images, including the plan,
+  billing-period, trial, payment-method, action, and result-attribution
+  boundaries that must be checked before external copy is accepted.
+
+### Repository maintenance
+
+- Removed obsolete ignored prompts, logs, external-run output, duplicate
+  workshop files, generated build output, and empty scratch directories while
+  preserving the active checkout preview and external-review packet.
+- Pruned eight extraneous packages and their stale lockfile entries; the
+  installed top-level dependency tree now matches `package.json`.
+- Kept intentional archive duplicates whose retired path or misleading
+  filename is itself provenance, and clarified that exception in the archive
+  index.
+
 ## Unreleased — 2026-07-30
 
 ### Checkout case

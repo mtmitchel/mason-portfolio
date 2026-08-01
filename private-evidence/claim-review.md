@@ -1,6 +1,6 @@
 # Current portfolio claim review
 
-**Updated:** 2026-07-29
+**Updated:** 2026-08-01
 **Status:** Current claim owner
 
 This file states what the current portfolio may say. The
@@ -136,8 +136,9 @@ production state.
   step, moving plan features onto the details screen, and changing active
   consent to passive consent.
 - Public copy may attribute these measured results to the DM-1418 experiment:
-  **+3.02% paid subscriptions** and approximately **+€2.4M incremental ARR**.
-  Include both leading plus signs.
+  a **3.02% increase in paid subscriptions** and approximately **€2.4 million
+  in incremental ARR**. Omit leading plus signs in ordinary prose. Compact
+  metric labels may use **+3.02%** and **+€2.4M**.
 - The source record uses “Pro purchases” for the 3.02% metric. Mason corrected
   the public terminology to **paid subscriptions**; do not publish “Pro
   purchases.”
@@ -158,6 +159,23 @@ production state.
   artifacts may illustrate the flow and content problem, but must not be called
   the exact tested, winning, shipped, or production variant unless that identity
   is established.
+- The five current review images prove only their captured states. DeepL Pro
+  Advanced is the selected plan shown, not the only available plan. The plan
+  was selected on DeepL's pricing page before checkout. Annual and monthly are
+  billing-period choices inside checkout. One user, annual billing, and credit
+  card are visible selections, not universal customer conditions.
+- Trial statements apply only to the illustrated trial states. Do not imply
+  that every customer received or saw a trial. Information absent from one
+  image may have been available elsewhere.
+- Keep the original Review and rebuilt Details states separate. Original Review
+  shows a 30-day trial, a later first payment date, a completed payment method
+  summary, two consent checkboxes, and `Buy now`; it does not show `€0 due
+  today` or `Begin subscription`. Rebuilt Details shows `€0 due today`, the
+  post-trial annual price, passive consent, and `Begin subscription`; it does
+  not show `Buy now`.
+- Review summarized the payment method customers had entered. Customers did
+  not enter a “payment method summary.” Removing Review removed that repeated
+  summary, not every billing or card field.
 - Additional purchase states may support a broader checkout story when their
   separate scopes are clear. Do not claim Mason owned the flow or test, that
   his copy alone caused the result, or that every visible state was part of

@@ -42,5 +42,6 @@ indexed in [`../private-evidence/README.md`](../private-evidence/README.md).
 Archive contents may retain historical wording and original filenames because
 they record past work. Do not add forwarding stubs or links from current code
 to archived files. When a current document replaces an old one, move the whole
-old document here and keep one clear current owner. Exact copies already kept
-in a current private source package are not repeated here.
+old document here and keep one clear current owner. Do not add an exact copy
+merely as a backup. An archived path may match current bytes only when that
+retired path or misleading filename is itself documented historical evidence.

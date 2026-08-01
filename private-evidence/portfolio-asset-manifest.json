@@ -421,11 +421,7 @@
           "site/public/work/checkout/original-details-flow-uniform.png",
           "site/public/work/checkout/original-review-flow-spaced.png",
           "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
-          "site/public/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
-          "site/public/work/checkout/review-plan-conditions.px-318ab1239763.png",
-          "site/public/work/checkout/due-today-summary.png",
-          "site/public/work/checkout/checkout-review-plan-features.px-f09888002e2c.png",
-          "site/public/work/checkout/checkout-details-plan-features.px-d583f6ecfa18.png"
+          "site/public/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png"
         ],
         "render_ref": "site/app/work/checkout/CheckoutCase.tsx",
         "required_tokens": [
@@ -434,14 +430,14 @@
           "No payment until end of trial",
           "Features of your plan"
         ],
-        "relationship": "The coherent Account, Details, and Review reconstructions establish the original three-step journey. A second two-tab viewer then pairs the retained Account form with a representative rebuilt Details composite that incorporates the separately retained due-today summary. The price comparison uses focused source crops. The plan-feature comparison pairs a simplified location map with focused source crops so the move from Review’s main column into Details’ summary rail is visible without adding neighboring plan content to the evidence. The consent comparison uses exact, source-faithful HTML excerpts so the wording, action, and reassurance remain crisp and balanced."
+        "relationship": "One tabbed viewer establishes the original Account, Details, and Review journey. A second tabbed viewer pairs the materially unchanged Account form with the representative rebuilt Details composite so the complete shorter journey remains visible without separate focused crops or reconstructed interface excerpts."
       },
       "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "The route first shows measured presentation crops of the coherent reconstructed Account, Details, and Review journey. The crops remove the repeated DeepL header and excess outer canvas while retaining each complete progress indicator and checkout card. Every journey enlargement uses the same headerless presentation crop shown inline, so expanding a tab does not reintroduce the repeated page header or switch evidence boundaries. A second viewer retains a two-step progress indicator in both tabs. The representative rebuilt Details composite incorporates the separately retained due-today working summary and preserves the genuine two-step indicator and all other interface content. Because no separate two-step Account export is retained, the Account tab is a documented representative composite: the unchanged Account card is paired with a reconstructed two-step indicator derived from retained original stepper components. The source-faithful old Review conditions crop and the focused due-today source export follow. The feature comparison uses tight, lossless source crops of only the real Review section and Details card, with their heading scale matched in the shared viewer. A simplified HTML locator beside the crop shows the module’s position without reproducing neighboring interface copy. The consent comparison is typeset in accessible HTML from the exact retained source wording; it is not a raster crop or an invented product state.",
-      "caption": "The original and rebuilt tabbed flows establish what customers did before and after the step was removed. Focused image comparisons explain the price hierarchy. A location map beside the source evidence shows the plan-feature module moving into Details. An exact typeset comparison isolates how consent and the final action changed.",
-      "text_alternative": "Describe the reconstructed original Account, Details, and Review journey, the shorter Account and Details journey, the consolidated two-step Details screen, the old and new price hierarchy, the distinct Review and Details plan-feature treatments, and the exact typeset change from checkbox consent and Buy now to consent tied to Begin subscription.",
+      "crop_notes": "The route shows measured presentation crops of the representative original Account, Details, and Review journey and the shorter Account and Details journey. The crops remove the repeated DeepL header and excess outer canvas while retaining each complete progress indicator and checkout card. The rebuilt Details composite retains its genuine two-step indicator and complete interface content. Because no separate two-step Account export is retained, the Account tab is a documented representative composite: the unchanged Account card is paired with a reconstructed two-step indicator derived from retained original stepper components.",
+      "caption": "The original and rebuilt tabbed flows establish the captured three-step and two-step journeys.",
+      "text_alternative": "Describe the representative original Account, Details, and Review journey and the shorter Account and Details journey, including the consolidated rebuilt Details state.",
       "export_ready": false,
       "files": [
         {
@@ -481,20 +477,6 @@
           "sha256": "4df222a33e007a66b486f7d9c1781234f2f978bfd5d5f4e9f632e6cc3d7f82a9"
         },
         {
-          "path": "checkout/review-plan-conditions-selected.png",
-          "public_path": "site/public/work/checkout/review-plan-conditions.px-318ab1239763.png",
-          "artifact_genesis": "portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "User-selected high-resolution working presentation of the representative Review plan conditions. The complete supplied raster is used without further cropping, sharpening, redrawing or stretching. It is portfolio reconstruction evidence, not an exact tested, winning, approved, shipped or production screen.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/review-plan-conditions-selected.png",
-          "source_sha256": "8364ebc64c07539c9bd11c5fbac92c6b87fa73b23d5c8a00a8a1b44c9378f3f2",
-          "crop": "none; complete user-selected 1605x980 raster",
-          "dimensions": "1605x980",
-          "caption": "Review plan conditions before the change.",
-          "text_alternative": "Review plan conditions showing a 30-day trial, €299.88 annual price, VAT, first payment date and masked credit card.",
-          "sha256": "274b3371555531f05bf9b0fd1203b7fa85c2724ccf0da04a9826c1d0e14a6e09"
-        },
-        {
           "path": "checkout/rebuilt-account-flow-uniform-v2.png",
           "public_path": "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
           "artifact_genesis": "representative_composite_from_portfolio_reconstruction_2026",
@@ -521,46 +503,6 @@
           "caption": "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
           "text_alternative": "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
           "sha256": "870bd93067c35b83c35e94b97d6bfabc64dc5d4682ddf8846d800784c8f39f7d"
-        },
-        {
-          "path": "checkout/due-today-summary.png",
-          "public_path": "site/public/work/checkout/due-today-summary.png",
-          "artifact_genesis": "recovered_historical_export",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification/05-due-today-reassurance/6889-69299.png",
-          "source_sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d",
-          "dimensions": "800x736",
-          "caption": "The new hierarchy leads with €0 due today and keeps the annual price directly beneath it.",
-          "text_alternative": "Details plan summary showing €0 due today and €299.88 per year after the trial.",
-          "sha256": "7f49cc435745a2ff5ea7bcbad71f6b9cb583e28454e71d35cd90f229b1838e3d"
-        },
-        {
-          "path": "checkout/checkout-review-plan-features.px-f09888002e2c.png",
-          "public_path": "site/public/work/checkout/checkout-review-plan-features.px-f09888002e2c.png",
-          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Focused Review feature evidence cropped from the approved Review presentation. It preserves the original plain heading, grey vertical rule, complete selected-plan feature list and source whitespace without resizing, redrawing, stretching or synthetic margins. The PNG was losslessly optimized without changing visible pixels.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-review-flow-spaced.png",
-          "source_sha256": "4df222a33e007a66b486f7d9c1781234f2f978bfd5d5f4e9f632e6cc3d7f82a9",
-          "crop": "820x460+64+760",
-          "dimensions": "820x460",
-          "caption": "Review presented the selected plan’s features as a plain section.",
-          "text_alternative": "Review feature module with a plain heading and a grey vertical rule beside the selected plan’s feature list.",
-          "sha256": "860fc3a31cff68bed4df686a0d5424224715c663f062c0fc36abc1c6bde82d75"
-        },
-        {
-          "path": "checkout/checkout-details-plan-features.px-d583f6ecfa18.png",
-          "public_path": "site/public/work/checkout/checkout-details-plan-features.px-d583f6ecfa18.png",
-          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Focused Details feature evidence cropped from the representative rebuilt Details screen. It preserves the separate card, dark top rule, green checks and complete selected-plan feature list without resizing, redrawing, stretching or synthetic margins. The PNG was losslessly optimized without changing visible pixels.",
-          "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/rebuilt-details-due-today.png",
-          "source_sha256": "79e29dc7cdf0d31e92367b898c7d66d74ee56a28762c0f0a7e70356f931d85f2",
-          "crop": "840x540+1540+1360",
-          "dimensions": "840x540",
-          "caption": "Details presented the selected plan’s features in a separate summary card.",
-          "text_alternative": "Details feature card with a dark blue top rule and green checks beside the selected plan’s feature list.",
-          "sha256": "a18b257deeb6019f965037a87df987931961504f0c875211afcf4d3786b9a962"
         }
       ],
       "homepage_media": {

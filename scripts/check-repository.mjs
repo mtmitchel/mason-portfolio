@@ -183,6 +183,7 @@ const bannedActivePaths = [
   "private-evidence/retired-public-assets-2026-07-22",
   "private-evidence/retired-public-assets-2026-07-24",
   "private-evidence/team-administration-full-export-review",
+  "site/app/work/checkout/concepts",
 ];
 
 for (const target of bannedActivePaths) {

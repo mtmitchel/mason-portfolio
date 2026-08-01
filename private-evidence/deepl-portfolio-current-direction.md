@@ -1,6 +1,6 @@
 # Current portfolio working notes
 
-**Updated:** 2026-07-30
+**Updated:** 2026-08-01
 **Status:** Nonbinding editorial snapshot
 
 This file preserves recent decisions and explicit corrections. It is not a
@@ -50,16 +50,19 @@ Mason's current account establishes the causal frame:
 3. Simplifying checkout from three steps to two was one of those experiments.
 4. Mason's contribution was the content-design work needed to make the shorter
    flow understandable and viable.
-5. The supported public result is `+3.02%` paid subscriptions and approximately
-   `+€2.4M` incremental annual recurring revenue at experiment level.
+5. The supported public result is a 3.02% increase in paid subscriptions and
+   approximately €2.4 million in incremental annual recurring revenue at
+   experiment level.
 
-The current checkout implementation follows these explicit corrections:
+The tracked `/work/checkout` checkpoint follows these explicit corrections:
 
 - no subheadline; carry its useful meaning in the opening paragraph;
 - metadata: `DeepL · Monetization · 2024`;
 - do not display the 35-day net-subscription metric;
 - do not call the result “Pro purchases”; use “paid subscriptions”;
-- show `+3.02%` and `+€2.4M` with leading plus signs;
+- in ordinary prose, describe a 3.02% increase in paid subscriptions and
+  approximately €2.4 million in incremental annual recurring revenue without
+  leading plus signs; compact metric labels may retain `+3.02%` and `+€2.4M`;
 - use the experiment results as the opening hook and return to them in the
   conclusion, where they establish scope and support the transferable judgment;
 - show the coherent reconstructed Account, Details, and Review journey in one
@@ -119,6 +122,22 @@ summary so the complete screen and the focused price example communicate the
 same concept. None should be called the exact tested, winning, shipped, or
 production variant without additional evidence.
 
+The five current review images have narrower state limits:
+
+- DeepL Pro Advanced is the selected plan shown, not the only available plan;
+  customers selected a plan on DeepL's pricing page before checkout;
+- annual and monthly are billing-period choices inside checkout, while one
+  user, annual billing, and credit card are visible selections rather than
+  universal conditions;
+- the trial statements apply only to the illustrated trial states and do not
+  prove that every customer received or saw a trial;
+- the original Review state shows `Buy now`, the first payment date, and a
+  completed payment method summary, but not `€0 due today`;
+- the rebuilt Details state shows `€0 due today`, the post-trial annual price,
+  passive consent, and `Begin subscription`, but not `Buy now`; and
+- removing Review removed the repeated payment method summary, not every
+  billing or card field.
+
 The current `/work/checkout` checkpoint is not visually approved. Its story,
 flow viewers, source-faithful price evidence, representative journey screens,
 and lightbox behavior are preserved for continuity. The current route also
@@ -136,12 +155,24 @@ research that informed it is retained only as non-binding background in
 [`projects/monetization/checkout-visual-communication-deep-research-2026-07-30.md`](projects/monetization/checkout-visual-communication-deep-research-2026-07-30.md).
 Its recommendations do not override Mason's later rejection.
 
-The next visual pass must preserve the established case narrative, claim
-boundaries, and useful evidence while making a meaningful visual change to the
-current route. Repository layout rules now also prohibit decorative numeric
-section prefixes and the tiny-left-label/large-right-headline pattern.
-Mechanical checks establish implementation conformance only; they do not
-establish qualitative approval.
+The later local-only `/work/checkout/concepts/*` studies were also superseded
+by Camera Preview 2 and removed from the live application. Git history retains
+them if their diagnostic history is ever needed.
+
+The active working candidate is Camera Preview 2 in ignored `tmp/` space, with
+the same repaired passages copied into the seven-file external-review packet.
+It is working material, not a durable source of truth or an approved replacement
+for `/work/checkout`. Its current title is “How simplifying DeepL's checkout
+helped add €2.4M ARR.” It explicitly separates the original Review state from
+the rebuilt Details state and says that Review summarized the payment method
+customers had just entered.
+
+The next action is to check both external responses against all five images,
+then synthesize factual corrections and useful editorial advice without
+integrating either rewrite wholesale. Repository layout rules prohibit
+decorative numeric section prefixes and the
+tiny-left-label/large-right-headline pattern. Mechanical checks establish
+implementation conformance only; they do not establish qualitative approval.
 
 ## Current route snapshot
 
