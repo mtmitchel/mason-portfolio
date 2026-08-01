@@ -13,6 +13,20 @@ packet contents. Apply the detailed numbered standard when the compact project
 instructions are less specific. Do not weaken one standard to solve a problem
 owned by another.
 
+## State the authorized operation
+
+Every packet must name:
+
+- the working mode;
+- the authorized operation: review only, review and rewrite, construction,
+  design critique, rendered review, or a named combination;
+- explicit non-goals; and
+- whether external research or browsing is allowed.
+
+If outside research is not explicitly allowed, treat the packet as the complete
+source set. A request to review does not imply permission to rewrite, redesign,
+implement, add agents, or expand the deliverables.
+
 ## Mode A: portfolio-slate discovery
 
 Supply a selective story-library extract containing:
@@ -120,8 +134,8 @@ layout family and defining traits, so pursue a materially different direction
 instead of cosmetic repair. Implementation is one pass and rendered review
 allows up to two focused visual repair passes. Make the rendered qualitative
 decision before build or accessibility/conformance closure. Pure narrative
-editing may use one independent hiring-reader review and one bounded reader
-repair.
+editing allows at most one review and one repair; neither is a required stage.
+Do not add another reviewer, agent, or round unless Mason requests it.
 
 Clearly mark provisional copy, hierarchy labels, length targets, and alternate
 text structures. Mason retains final copy and claim approval; provisional text

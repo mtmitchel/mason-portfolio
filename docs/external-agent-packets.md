@@ -37,6 +37,9 @@ recover a missing source. State every material fact and limitation needed for
 the current task inside the packet. Do not tell it to read or consult the shared
 base by filename or repository path. A single brief instruction to check the
 instructions and files already available in its project space is sufficient.
+Unless the packet explicitly authorizes outside research or browsing, the
+installed base and current packet are the complete source set. A request to
+review does not authorize outside research or browsing.
 
 ## Case-packet file limit
 
@@ -121,8 +124,10 @@ bug-fix work, choose the strongest direction and proceed. A rejection abandons
 the rejected layout family and defining traits; pursue a materially different
 direction rather than cosmetically repairing or reproducing it. Use one
 implementation pass and up to two focused rendered repair passes. Make the
-rendered qualitative decision before conformance closure. Pure narrative
-editing may retain one bounded reader review.
+rendered qualitative decision before conformance closure. For pure narrative
+editing, one reader review and one repair are maximums, not required stages; do
+not add another agent or round.
+
 - Provisional copy, hierarchy labels, length targets, and alternate text
   structures must be clearly marked. Mason retains final copy and claim
   approval; provisional text cannot be published or stated as fact.
@@ -143,9 +148,12 @@ State:
 - the hiring outcome;
 - the exact question or decision;
 - the required deliverables;
+- the authorized operation: review only, review and rewrite, construction,
+  design critique, rendered review, or a named combination;
+- explicit non-goals;
+- whether outside research or browsing is allowed;
 - important user corrections;
-- what the external agent must not assume; and
-- whether it should diagnose, rewrite, design, or do all three.
+- what the external agent must not assume.
 
 For comprehensive written feedback, request judgment on:
 
@@ -272,11 +280,16 @@ Confirm:
 
 - the separately maintained `PROJECT_INSTRUCTIONS.txt` is fewer than 8,000
   characters;
+- every external project space that will receive a task has the complete current
+  shared base installed;
 - the case-study folder contains no shared-base copies, filenames, or paths; it
   may contain only a brief instruction to check the existing project-space
   instructions and files;
 - the case-study folder contains no more than 10 files;
-- the packet names its mode and exact deliverables;
+- the packet names its mode, authorized operation, explicit non-goals, and exact
+  deliverables;
+- the packet states whether outside research or browsing is allowed; if it does
+  not allow them, the packet identifies itself as the complete source set;
 - comprehensive feedback explicitly covers both writing and design when Mason
   requested both;
 - comprehensive writing feedback checks the introduction, transitions,
@@ -304,7 +317,8 @@ Treat external output as untrusted editorial advice, not factual authority or
 approval. The repository agent must compare recommendations with Mason's
 instructions, inspect material claim changes, and decide what to integrate.
 
-Use one independent hiring-reader review and one bounded reader repair for pure
-narrative editing. Design work follows the adaptive design and rendered-repair
-budget above. Do not turn external feedback into another permanent gate,
-template, or endless polishing loop.
+For pure narrative editing, one review and one repair are maximums, not required
+stages. Do not add another agent or round unless Mason requests it. Design work
+follows the adaptive design and rendered-repair budget above. Do not turn
+external feedback into another permanent gate, template, or endless polishing
+loop.

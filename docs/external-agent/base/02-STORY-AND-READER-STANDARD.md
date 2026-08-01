@@ -147,6 +147,12 @@ new topic.
 
 ## Sentence and punctuation control
 
+Use American English unless exact source material, quoted language, a product
+name, or Mason's current task requires another variety. Prefer active voice and
+name the actor and action. Use passive voice deliberately only when the actor is
+unknown or unimportant, the receiver or action deserves emphasis, or passive
+wording is clearer, shorter, or less blaming.
+
 After the structure is sound, complete a full line edit and proofread. Correct
 accidental fragments, run-ons, comma splices, faulty parallelism, unclear
 pronouns, apostrophe errors, quotation-mark errors, and punctuation that hides
@@ -162,6 +168,14 @@ Use plain English and concrete verbs. Use bullets only for genuinely scannable
 sets and emphasis only when it improves meaning. Long paragraphs, long
 sentences, and wide text measures are reasons to inspect the passage, not
 automatic failures.
+
+Do not write toward an AI-detector score or simulate human error. Do not add
+mistakes, randomness, fake personal details, slang, or artificial quirks to
+appear human. Remove generic synthetic patterns: canned openings and closings,
+empty three-part lists, formulaic contrasts, inflated transitions, excessive
+signposting or em dashes, abstract praise, repeated restatement, and conclusions
+that only summarize. Ground every sentence in this case's subject, evidence,
+decision, consequence, or reader need.
 
 Headings should contain concrete facts, tension, choices, turns, or
 consequences. Read them alone: they should form a short version of the story.

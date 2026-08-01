@@ -9,10 +9,11 @@ recovery, or an explicitly authorized Figma edit. The repository-root
 - Do not assume that Linux has a Figma desktop app or any selection-based
   desktop-only behavior. Use an approved browser route only when the current
   task and connection support it.
-- Official Figma remote MCP/browser access is allowed only for new, isolated
-  benchmark draft files inside the approved design benchmark. It must never be
-  used on canonical or private DeepL evidence files. The benchmark allowance
-  does not authorize access to, or edits in, existing evidence work.
+- Figma remote MCP access is currently unavailable under workstation policy;
+  this repository does not create an exception. Use only the approved browser
+  route above. A future explicitly routed benchmark exception must remain
+  limited to new isolated benchmark drafts and must never access canonical or
+  private DeepL evidence files.
 - Existing evidence work remains read-only unless Mason explicitly authorizes
   the exact edit in the current task. Keep secrets and private evidence out of
   Figma, including benchmark drafts.

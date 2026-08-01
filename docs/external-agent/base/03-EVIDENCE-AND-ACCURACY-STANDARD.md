@@ -27,9 +27,9 @@ An unknown lifecycle is not proof that something did not ship.
 - Attribute team, experiment, program, or campaign outcomes at that level.
 - Do not imply sole ownership or personal causation unless the case packet
   supports it.
-- External product research can clarify public product history, terminology,
-  or market context. It cannot establish Mason's role, a private team goal, or
-  project causation.
+- Only when the current packet explicitly authorizes it, external product
+  research may clarify public product history, terminology, or market context.
+  It cannot establish Mason's role, a private team goal, or project causation.
 
 ## Professional analysis is not fabrication
 

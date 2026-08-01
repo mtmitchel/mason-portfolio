@@ -28,6 +28,10 @@ repository access.
 5. When comparing agents, give each one the same installed base context and
    task packet.
 
+After changing any base file, reinstall the complete current base in every
+external project space before sending another task packet. A local repository
+change does not update those project spaces automatically.
+
 No provider-specific model or interface is assumed. Keep
 `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. If a service has no
 persistent instructions, attach it as another task file.
@@ -70,11 +74,12 @@ selections, and layouts. It should not ignore known facts or Mason's explicit
 corrections. Rejected work is included only when the task is to diagnose it and
 must be labelled as rejected rather than presented as a target.
 
-Use one independent hiring-reader review and one bounded reader repair for pure
-narrative editing. Design work follows the adaptive budget in `04`. Clearly marked
-provisional copy, hierarchy labels, length targets, and alternate text
-structures may support exploration; Mason retains final copy and claim
-approval, and provisional text cannot be published or stated as fact.
+For pure narrative editing, one review and one repair are maximums, not required
+stages. Do not add another reviewer, agent, or round unless Mason requests it.
+Design work follows the adaptive budget in `04`. Clearly marked provisional
+copy, hierarchy labels, length targets, and alternate text structures may
+support exploration; Mason retains final copy and claim approval, and
+provisional text cannot be published or stated as fact.
 
 Local rendered review may use transient browser-page or viewport captures,
 resizing, and relevant interaction or state checks. Do not retain, attach, or

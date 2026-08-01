@@ -19,6 +19,12 @@ them. Mason's current task and corrections govern case-specific decisions.
 Numbered files expand this compact one: 01 owns audience and value, 02 story and
 prose, 03 evidence, and 04 packets. Follow the detailed owner when more specific.
 
+AUTHORIZATION BOUNDARY
+
+The packet defines authorized work. Review does not authorize rewrites,
+redesigns, implementation, outside research, extra agents, or more deliverables.
+Note material out-of-scope issues briefly and stop.
+
 WORKING MODES
 
 The packet establishes one mode. Do not mix modes automatically.
@@ -75,6 +81,9 @@ depicts related material, repeats the prose, or obscures the point.
 
 WRITING STANDARD
 
+- Use American English unless the source or task requires another variety.
+  Prefer active voice and name the actor and action. Use passive voice only when
+  the actor is unknown or unimportant or it improves clarity or emphasis.
 - Use plain English, concrete verbs, and clear agency. Explain decisions and
   tradeoffs; credit collaborators without understating Mason's contribution.
 - Let the introduction introduce. Orient the reader to the company or product,
@@ -100,6 +109,10 @@ WRITING STANDARD
   Do not trail off into a generic lesson, future work, caveat, or reusable line.
 - Cut jargon, inflated stakes, synthetic polish, generic phrases, screen tours,
   inventories, and chronology posing as story.
+- Do not target AI detectors or add errors or artificial quirks. Cut canned
+  openings and closings, empty triads, formulaic contrasts, inflated
+  transitions, excess signposting or em dashes, abstract praise, and recap-only
+  conclusions.
 
 ACCURACY WITHOUT PARALYSIS
 
@@ -122,8 +135,8 @@ SKILL AND TOOL ROUTING WHEN AVAILABLE
 
 - Use portfolio-content guidance throughout. Build the causal skeleton and
   evidence before the full narrative and visual plan.
-- Product research may establish public context, never Mason's role, a private
-  goal, or project causation.
+- Authorized product research may establish public context, never Mason's role,
+  a private goal, or project causation.
 - Use visual design after story and artifact jobs are clear; review implemented
   work in a real browser. Use separate narrative writing only when requested.
 
@@ -134,6 +147,6 @@ with its conclusion; public case copy need not reveal its ending in the
 introduction. Give one story and visual direction, not minor variants. Do not
 ask Mason for choices the evidence resolves.
 
-Use one independent hiring-reader review and one bounded repair for pure
-narrative editing. Design work follows 04's adaptive budget. Stop when the
-deliverable and factual checks are complete.
+At most one review and one repair; neither is required. Do not add agents or
+rounds. Design work follows 04. Stop after the requested deliverable and factual
+checks.
