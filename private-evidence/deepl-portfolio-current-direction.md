@@ -67,48 +67,22 @@ The tracked `/work/checkout` checkpoint follows these explicit corrections:
   conclusion, where they establish scope and support the transferable judgment;
 - show the coherent reconstructed Account, Details, and Review journey in one
   three-tab viewer, then show the shorter Account and Details journey in a
-  separate two-tab viewer before zooming into individual content decisions;
-- use numbered Account, Details, and Review tabs on desktop and mobile, with
-  one complete original screen visible at a time;
-- use measured inline crops for those three screens that remove the repeated
-  DeepL header and excess outer canvas while preserving the full progress
-  indicator and checkout card; apply the same 32px left, right, and bottom
-  inset from the solid screen group across all five flow tabs; enlargement
-  uses the same headerless presentation crop shown inline;
+  separate two-tab viewer;
+- keep one complete screen visible at a time and use unnumbered Account,
+  Details, and Review tabs connected by directional arrows;
 - retain a two-step progress indicator in both rebuilt-viewer tabs; because no
   separate two-step Account export is retained, document its Account screen as
   a representative composite that pairs the unchanged Account form with a
   reconstructed two-step indicator derived from retained original components;
-  pair it with a measured crop of the genuine two-step Details screen; remove
-  only the stray repeated-logo fragment at the extreme upper-left edge by
-  replacing its pixels with the exact surrounding background;
-- compare the representative original Review terms with the separate
-  `€0 due today` treatment in a two-tab viewer, with one state visible at a
-  time;
-- give moving `Features of your plan` onto Details its own section and focused
-  two-tab comparison that preserves the distinct Review and Details feature
-  treatments without adding neighboring plan-condition or selected-plan
-  content; do not leave that supported experiment change buried inside the
-  complete journey screens;
-- compare the old and new consent-and-action regions in a second two-tab
-  viewer, with one state visible at a time and the exact source wording typeset
-  as accessible HTML; use the full journey screens elsewhere as visual source
-  context instead of forcing the focused content into arbitrary raster crops;
-- recrop the Review plan-conditions panel so the dark blue top rule remains
-  visible and unused white canvas on the right is removed; do not stretch the
-  crop to match the Details panel;
+  pair it with the representative rebuilt Details screen;
 - keep every visual within the same 720px maximum width as the body text on
   desktop and within the text gutters on mobile;
 - keep captions readable, aligned to the figure and text rail, and attached to
   their figure through a small caption gap and larger space before the next
   section; do not force every label, caption, or metadata line into one small
   fixed type size;
-- put the flow-viewer and comparison expand controls inside their images;
-- keep complete screens borderless and use the restrained one-pixel border only
-  on focused comparison panels;
-- let the mobile lightbox support touch panning and pinch zoom;
-- do not reuse the rejected dense comparison, abstract flow diagram,
-  side-annotation, oversized terms crop, or cramped consent constructions;
+- keep the complete screens borderless and do not add lightboxes or focused
+  comparison components unless a later approved design requires them;
 - use sentence case for every new reader-facing label and control;
 - the final case navigation displays only `Next` and the arrow, aligned at the
   far right, with no project name or “Next project” label.
@@ -116,11 +90,8 @@ The tracked `/work/checkout` checkpoint follows these explicit corrections:
 The reconstructed Account, Details, and Review screens form one coherent
 representative original journey. The rebuilt viewer uses a crop of that
 representative Account form to show the retained first step alongside the
-rebuilt Details working state. That Details screen is a representative
-composite that incorporates the separately retained `€0 due today` working
-summary so the complete screen and the focused price example communicate the
-same concept. None should be called the exact tested, winning, shipped, or
-production variant without additional evidence.
+rebuilt Details working state. None should be called the exact tested, winning,
+shipped, or production variant without additional evidence.
 
 The five current review images have narrower state limits:
 
@@ -138,41 +109,25 @@ The five current review images have narrower state limits:
 - removing Review removed the repeated payment method summary, not every
   billing or card field.
 
-The current `/work/checkout` checkpoint is not visually approved. Its story,
-flow viewers, source-faithful price evidence, representative journey screens,
-and lightbox behavior are preserved for continuity. The current route also
-contains visible working-placeholder copy in the focused price and consent
-viewers.
+The tracked `/work/checkout` route now integrates the Camera Preview 2
+structure, complete-screen viewers, and current reader-facing draft as the
+working checkpoint. The obsolete focused price, feature, and consent viewers,
+their unused assets, and the local `/work/checkout/concepts/*` studies have
+been removed. Git history retains them if their diagnostic history is ever
+needed.
 
-The dedicated feature section and its locator-map-plus-crop treatment are
-explicitly rejected. Do not refine, defend, or reuse that composition as the
-starting point for the next pass. The current typeset consent comparison and
-the wider repeated-tab treatment are also not visually approved.
+The ignored seven-file external-review packet mirrors the current route copy in
+`CURRENT_DRAFT.md`. Its task now requests one focused clarity, concision, and
+conclusion repair. The packet is working output, not a second durable source of
+truth, and preparing it does not authorize sending it to an external provider.
 
-The separate `/work/checkout-concept` experiment was rejected in full and moved
-to Trash. It is not present in the repository and must not be resumed. The
-research that informed it is retained only as non-binding background in
-[`projects/monetization/checkout-visual-communication-deep-research-2026-07-30.md`](projects/monetization/checkout-visual-communication-deep-research-2026-07-30.md).
-Its recommendations do not override Mason's later rejection.
-
-The later local-only `/work/checkout/concepts/*` studies were also superseded
-by Camera Preview 2 and removed from the live application. Git history retains
-them if their diagnostic history is ever needed.
-
-The active working candidate is Camera Preview 2 in ignored `tmp/` space, with
-the same repaired passages copied into the seven-file external-review packet.
-It is working material, not a durable source of truth or an approved replacement
-for `/work/checkout`. Its current title is “How simplifying DeepL's checkout
-helped add €2.4M ARR.” It explicitly separates the original Review state from
-the rebuilt Details state and says that Review summarized the payment method
-customers had just entered.
-
-The next action is to check both external responses against all five images,
-then synthesize factual corrections and useful editorial advice without
-integrating either rewrite wholesale. Repository layout rules prohibit
-decorative numeric section prefixes and the
-tiny-left-label/large-right-headline pattern. Mechanical checks establish
-implementation conformance only; they do not establish qualitative approval.
+The next action is to inspect the external agent's response against all five
+images and the packet's state limits, then separate factual corrections from
+useful editorial advice and unsupported claims. Do not integrate the response
+automatically. Repository layout rules prohibit decorative numeric section
+prefixes and the tiny-left-label/large-right-headline pattern. Mechanical checks
+establish implementation conformance only; they do not establish reader value
+or final qualitative approval.
 
 ## Current route snapshot
 
