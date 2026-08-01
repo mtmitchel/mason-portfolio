@@ -1,6 +1,6 @@
 # External-agent packet guide
 
-Shared-base version: `2026-08-01.2`
+Shared-base version: `2026-08-01.3`
 
 Create one small packet for the exact task. Do not make every packet imitate a
 case-review bundle.
@@ -30,6 +30,16 @@ If outside research is not explicitly allowed, treat the packet as the complete
 source set. A request to review does not imply permission to rewrite, redesign,
 implement, add agents, or expand the deliverables.
 
+Keep authorization separate from editorial operation. When writing is authorized,
+name exactly one operation: `draft from evidence` (an existing draft is not
+binding), `structural rebuild` (discard rejected framing, headings, paragraph
+order, and conclusion), `focused structural repair` (preserve the larger arc and
+replace only named sections or relationships), or `line edit only` (preserve
+claim meaning, structure, and paragraph order while fixing clarity and
+mechanics). Include these four short private fields in the task instructions:
+`Editorial operation`, `Governing tension or decision`, `Contribution boundary`,
+and `Evidence boundary`. Keep them out of public case copy.
+
 When a packet supplies any screenshot or captured interface state, put the
 interface-state claim check before narrative or language review. Require one
 state-ledger row per image, including known conditions and variants that limit
@@ -44,6 +54,33 @@ every state checked, its conditions and limits, unresolved state or scope
 conflicts, and whether rewriting was allowed or blocked. Record the writer
 model and effort when the interface exposes them; otherwise write `unknown`
 rather than inferring them.
+
+## Blind hiring-reader mode
+
+Use this mode after a new case draft, case construction or reconstruction, or a
+structural rebuild. Use a fresh reader context that did not write or repair the
+candidate; for a focused structural repair or line edit only, use it only when a
+prior reader failure remains or Mason explicitly requests it. Give the reader
+one sentence naming the intended hiring audience and the rendered case with
+actual headings, captions, images, and layout. Before implementation, use the
+complete reader-facing draft plus selected visuals in intended order.
+
+The blind-reader input excludes the evidence packet, editorial contract,
+protected-claims list, writer explanation, source notes, and prior review. After
+one read, the reviewer states the business or product pressure; Mason's
+assignment and specific contribution; the decisive change and rationale; the
+supported result and attribution boundary; and what the case demonstrates about
+Mason's judgment. The reviewer flags contradictions, ambiguity, and visual-text
+mismatches and does not rewrite. Regardless of whether those five facts are
+reconstructable, require two separate judgments: paragraph/section movement
+names any interface inventory, missing dominant narrative move, or repeated
+material; ending integration states whether the ending resolves or integrates
+the governing tension and Mason's significance from established evidence, or
+mainly repeats the heading, opening, body, or metric, with a short reason. No
+novel insight or numerical score is required. The repository agent compares the
+response with the artifact and factual record and assigns the verdict; reviewer
+self-approval is not acceptance. One material reader failure permits one
+focused repair. The ending must not add a new claim.
 
 ## Mode A: portfolio-slate discovery
 
@@ -105,6 +142,10 @@ draft or page capture clearly and do not let it masquerade as the target
 structure. Record the rejected layout family or defining traits; rejection
 reopens divergence rather than authorizing cosmetic repair of that concept.
 
+If a named failure or editorial operation needs an example, include only the
+relevant failed/passing pair as a temporary delivery copy. Never include the
+full regression fixture or turn its mechanisms into a packet checklist.
+
 ## Mode C: rendered-case review
 
 Supply the current public copy plus a live URL or current desktop and mobile
@@ -134,8 +175,9 @@ by one coherent replacement direction.
 
 ## Two reasoning passes for substantial work
 
-1. Build a causal skeleton and map relationships among goals, initiatives,
-   Mason's decisions, artifacts, and outcomes.
+1. Fill the four-field editorial contract and map relationships among goals,
+   initiatives, Mason's decisions, artifacts, and outcomes; give each artifact
+   its narrative job.
 2. Turn the selected combination into one full narrative and visual plan.
 
 These passes support judgment; they are not approval gates. Do not add more
@@ -153,9 +195,12 @@ choose the strongest direction and proceed. A rejection abandons the rejected
 layout family and defining traits, so pursue a materially different direction
 instead of cosmetic repair. Implementation is one pass and rendered review
 allows up to two focused visual repair passes. Make the rendered qualitative
-decision before build or accessibility/conformance closure. Pure narrative
-editing allows at most one review and one repair; neither is a required stage.
-Do not add another reviewer, agent, or round unless Mason requests it.
+decision before build or accessibility/conformance closure. For pure narrative
+editing, the blind check above is required after a new draft, construction,
+reconstruction, or structural rebuild; it is optional for focused repairs and
+line edits unless a prior reader failure remains or Mason asks. Allow at most
+one focused repair after a material reader failure. Do not add another reviewer,
+agent, or round unless Mason requests it.
 
 Clearly mark provisional copy, hierarchy labels, length targets, and alternate
 text structures. Mason retains final copy and claim approval; provisional text

@@ -127,8 +127,11 @@ the rejected layout family and defining traits; pursue a materially different
 direction rather than cosmetically repairing or reproducing it. Use one
 implementation pass and up to two focused rendered repair passes. Make the
 rendered qualitative decision before conformance closure. For pure narrative
-editing, one reader review and one repair are maximums, not required stages; do
-not add another agent or round.
+editing, the blind check is required after a new draft, construction,
+reconstruction, or structural rebuild; it is optional for focused repairs and
+line edits unless a prior reader failure remains or Mason asks. Allow one
+focused repair only after a material reader failure; do not add another agent or
+round.
 
 - Provisional copy, hierarchy labels, length targets, and alternate text
   structures must be clearly marked. Mason retains final copy and claim
@@ -158,6 +161,16 @@ State:
 - important user corrections;
 - what the external agent must not assume.
 
+Keep authorization separate from editorial operation. Review-only work does not
+authorize writing. When writing is authorized, name exactly one operation:
+`draft from evidence` (existing draft is not binding), `structural rebuild`
+(discard rejected framing, headings, paragraph order, and conclusion), `focused
+structural repair` (preserve the larger arc and replace only named sections or
+relationships), or `line edit only` (preserve claim meaning, structure, and
+paragraph order while fixing clarity and mechanics). Carry these four private
+fields in the task text: Editorial operation; Governing tension or decision;
+Contribution boundary; Evidence boundary. Keep the contract out of public copy.
+
 ### Interface-state evidence gate
 
 When any screenshot or captured interface state supports the copy, require this
@@ -185,29 +198,36 @@ limits, unresolved state or scope conflicts, and whether rewriting was allowed
 or blocked. Use `unknown` for model or effort when the interface does not expose
 them; never infer them.
 
-For comprehensive written feedback, request judgment on:
+For written feedback, ask only the case-specific question and include the
+reader-facing draft when needed; the installed shared base owns general prose
+standards. A requested rewrite still needs the named editorial operation and
+contract fields above.
 
-- the case thesis and hiring signal;
-- the larger business, customer, or organizational stake and whether the case
-  makes supported value legible;
-- causal structure and narrative movement;
-- clarity of Mason's role and collaborators;
-- whether the introduction orients and creates forward movement without
-  summarizing the whole case prematurely;
-- whether paragraph and section transitions express real causal, contrastive,
-  or consequential relationships rather than generic time markers;
-- title, headings, body copy, captions, and result wording;
-- grammar, sentence boundaries, punctuation, parallelism, and unnatural
-  phrasing after the structural revision is complete;
-- whether the conclusion synthesizes the case and lands on a specific result,
-  consequence, or demonstrated judgment rather than recapping or stopping
-  abruptly;
-- labels and interface terminology;
-- whether UX and content-design judgment is shown through specific decisions
-  and customer-facing benefits rather than named as an abstract method;
-- whether every supplied visual agrees with the body copy, caption, and alt
-  text;
-- and one complete recommended rewrite when a rewrite is requested.
+### Blind hiring-reader mode
+
+Use after a new case draft, case construction or reconstruction, or a structural
+rebuild. Use a fresh reader context that did not write or repair the candidate;
+for a focused structural repair or line edit only, use it only when a prior
+reader failure remains or Mason asks. Supply one sentence naming the intended
+hiring audience and the rendered case with actual headings, captions, images,
+and layout; before implementation, supply the complete reader-facing draft plus
+selected visuals in intended order. Keep the evidence packet, editorial
+contract, protected-claims list, writer explanation, source notes, and prior
+review out of the blind-reader input.
+
+After one read, require the pressure; Mason's assignment and contribution; the
+decisive change and rationale; the supported result and attribution boundary; and
+what the case demonstrates about his judgment. The reader flags contradictions,
+ambiguity, and visual-text mismatch and does not rewrite. Regardless of whether
+those five facts are reconstructable, require two separate judgments: paragraph/
+section movement must name any interface inventory, missing dominant narrative
+move, or repeated material; ending integration must state whether the ending
+resolves or integrates the governing tension and Mason's significance from
+established evidence, or mainly repeats the heading, opening, body, or metric,
+with a short reason. No novel insight or numerical score is required. The
+repository agent compares the response with the artifact and factual record and
+assigns the verdict; reviewer self-approval is not acceptance. One material
+reader failure permits one focused repair. The ending must not add a new claim.
 
 For comprehensive design feedback, request judgment on:
 
@@ -219,8 +239,8 @@ For comprehensive design feedback, request judgment on:
 - interaction and accessibility where relevant; and
 - one coherent design direction rather than a menu of style variants.
 
-Do not ask for hidden chain-of-thought. A concise causal skeleton and artifact
-map are useful deliverables.
+Do not ask for hidden chain-of-thought. The four-field editorial contract and an
+artifact relationship/job map are useful deliverables.
 
 The task, case context, facts and limits, asset index, and current draft may be
 combined into one clearly sectioned text file when needed to keep the complete
@@ -282,6 +302,9 @@ the file is not evidence available to the external agent.
 
 - `CURRENT_DRAFT.md`: only reader-facing title, metadata, body copy, captions,
   results, and navigation wording. Exclude source code and tests.
+- If a named failure or operation needs an example, include only the relevant
+  failed/passing pair as a temporary delivery copy. Never include the full
+  regression fixture or turn its mechanisms into a checklist.
 - `CURRENT-PAGE-DESKTOP.*` and `CURRENT-PAGE-MOBILE.*`: only when current
   captures already exist or Mason requested their creation.
 - A short exact source excerpt: only when exact wording, a decision record, or
@@ -360,8 +383,9 @@ claim-to-state and captured-state scope checks against the supplied images. The
 external receipt does not prove that check passed. Any unresolved state or
 scope conflict blocks the rewrite from presentation or integration.
 
-For pure narrative editing, one review and one repair are maximums, not required
-stages. Do not add another agent or round unless Mason requests it. Design work
-follows the adaptive design and rendered-repair budget above. Do not turn
-external feedback into another permanent gate, template, or endless polishing
-loop.
+For pure narrative editing, the blind check above is required for new drafts,
+construction, reconstruction, and structural rebuilds; otherwise it is optional.
+One focused repair is allowed only after a material reader failure. Do not add
+another agent or round unless Mason requests it. Design work follows the adaptive
+design and rendered-repair budget above. Do not turn external feedback into
+another permanent gate, template, or endless polishing loop.

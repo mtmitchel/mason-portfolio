@@ -72,9 +72,9 @@ guides discovery; it is not an approval pipeline or a public template.
    the rest of the slate. Do not turn these factors into a mechanical score.
 4. Select the strongest roughly five-case slate. An existing route, historical
    rank, status, or current asset selection does not reserve a place.
-5. For each selected case, build a private causal skeleton: goal or pressure,
-   team response, relevant initiatives or experiments, Mason's contribution
-   and decisions, and the supported result or other meaningful ending.
+5. For each selected case, fill the private editorial contract with its
+   governing tension or decision, contribution boundary, and evidence boundary;
+   map the relevant initiatives, artifacts, decisions, and supported ending.
 6. Give each artifact a narrative job such as context, decision, contrast,
    sequence, proof, consequence, or result. Then choose the narrative structure
    and visual grammar together.
@@ -82,11 +82,21 @@ guides discovery; it is not an approval pipeline or a public template.
    Do not insert a separate proposal or approval gate unless Mason requested
    one or a material decision genuinely cannot be resolved from the evidence.
 
-Pure narrative editing may use one independent hiring-reader review and one
-bounded reader repair. For design work, use the adaptive natural-language
-workflow in the global `frontend-design` skill; a reader review must not
-consume or expand its separate design budget. Neither review makes a first
-structure or reviewer preference binding after Mason rejects it.
+For writing, use `build-content-design-portfolio`'s private editorial contract
+and blind-reader check. Keep review authorization separate from the named
+operation; the blind check is required after new drafts, constructions,
+reconstructions, and structural rebuilds, but is optional for focused repairs or
+line edits unless a prior reader failure remains or Mason asks. Use a fresh
+reader context that did not write or repair the candidate. Require the five-part
+reconstruction plus separate paragraph/section-movement and ending-integration
+judgments even when those facts are reconstructable; compare them with the
+artifact and factual record before assigning the verdict. One material failure
+permits one focused repair; Mason's rejection overrides reviewer or mechanical
+approval.
+External work follows [`docs/external-agent-packets.md`](docs/external-agent-packets.md)
+and its installed shared base. For design, use the adaptive natural-language
+workflow in the global `frontend-design` skill; a reader review must not consume
+or expand its separate design budget.
 
 ## Skill routing
 
@@ -94,9 +104,9 @@ structure or reviewer preference binding after Mason rejects it.
   clustering, slate selection, artifact combinations, case writing, and the
   hiring-reader review.
 - For substantial slate selection or case architecture, use the
-  `sequential-thinking` MCP in two passes: first for the slate or causal
-  skeleton and evidence relationships, then again to turn the selected
-  combination into a full narrative and visual plan.
+  `sequential-thinking` MCP in two passes: first to fill the editorial contract
+  and map evidence/artifact relationships, then to turn the selected combination
+  into a full narrative and visual plan.
 - Do not automatically stack `narrative-writer` on top of it. Use
   `narrative-writer` only when Mason explicitly requests it or the task is a
   genuinely separate deep narrative-architecture repair.
@@ -111,7 +121,7 @@ structure or reviewer preference binding after Mason rejects it.
   verification. It owns only the image-byte workflow. The repository agent
   owns copying into `site/public`, reference and manifest updates, build and
   browser review, and cleanup. Follow the repository capture policy.
-- Use `frontend-design` after the selected story cluster, causal skeleton, and
+- Use `frontend-design` after the selected story cluster, editorial contract, and
   artifact jobs are clear. Let it infer whether the task needs a new design,
   redesign, direct iteration, faithful reproduction, or visual bug fix. Do not
   duplicate its adaptive workflow here; apply the Portfolio meanings below. Its
@@ -156,10 +166,9 @@ external-agent packet, follow
   case construction or reconstruction, rendered-case review, or an explicit
   combination. A single-case packet cannot make a final slate comparison
   without the competing cases.
-- For comprehensive written feedback, include the reader-facing draft when one
-  exists and ask for narrative, structure, role clarity, the introduction's
-  function, headings, causal transitions, body copy, punctuation, captions,
-  result treatment, and the conclusion's landing.
+- For written feedback, include the current reader-facing draft when one exists
+  and state the case-specific question. The installed shared base owns general
+  prose standards; do not restate them in the task packet.
 - For comprehensive design feedback on an implemented page, also include a
   currently accessible public URL or current desktop and mobile captures.
   Product screenshots alone support visual planning, not a rendered-page
@@ -169,6 +178,11 @@ external-agent packet, follow
   one text file to stay within the 10-file limit. Add the reader-facing draft,
   rendered captures, slate context, or a narrowly necessary source excerpt only
   when the chosen mode needs them.
+- If a named failure or operation needs an example, include only the relevant
+  regression pair as a temporary delivery copy. Never include the full fixture or
+  turn its mechanisms into a checklist. A blind-reader input must contain only
+  its audience sentence and the rendered case; keep packets, contracts, claims
+  lists, source notes, explanations, and prior reviews out of that input.
 - Keep `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. Before handoff,
   verify the separately maintained shared base, then verify the case-study
   folder contains at most 10 task-specific files, every reference resolves,

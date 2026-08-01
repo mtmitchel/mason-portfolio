@@ -6,15 +6,28 @@ For portfolio-wide work, first find several promising clusters among company
 goals, team initiatives, experiments, Mason's contributions, artifacts, and
 outcomes. Compare the complete clusters, then select the strongest slate.
 
-For a selected case, write the causal arc in one plain sentence:
+For a selected case, create a compact private editorial contract before
+drafting. Keep authorization separate from editorial operation: review-only work
+does not authorize writing. When writing is authorized, choose exactly one:
 
-> Something important started in one state; pressure or change made that state
-> inadequate; Mason made a consequential contribution or decision; and the
-> work reached a supported new state or result.
+- `draft from evidence`: an existing draft is not binding;
+- `structural rebuild`: discard rejected framing, headings, paragraph order, and
+  conclusion;
+- `focused structural repair`: preserve the larger arc, replacing only sections
+  or relationships explicitly named by the task; or
+- `line edit only`: preserve claim meaning, structure, and paragraph order while
+  fixing clarity and mechanics.
 
-This is a private diagnostic tool, not a public template. A chronology is not
-automatically a story. Sections should connect through cause, pressure,
-contrast, choice, or consequence—not merely “first, then, next.”
+Record only these four short private fields:
+
+- `Editorial operation:`
+- `Governing tension or decision:`
+- `Contribution boundary:`
+- `Evidence boundary:`
+
+The contract is private planning material, never public case copy. A chronology
+is not automatically a story; sections should connect through cause, pressure,
+contrast, choice, or consequence rather than “first, then, next.”
 
 ## What a substantial case needs
 
@@ -221,16 +234,47 @@ consequence or insight. Do not end on `In conclusion`, a checklist summary, a
 generic lesson, future work, defensive caveat, unseen evidence, or a sentence
 that could close an unrelated case.
 
-## Hiring-reader test
+## Blind hiring-reader check
 
-After one quick read, a fresh reader should be able to restate:
+Run this check after a new case draft, case construction or reconstruction, or a
+structural rebuild. Use a fresh reader context that did not write or repair the
+candidate; the reviewer cannot self-approve it. For a focused structural repair
+or line edit only, run it only when a prior reader failure remains or Mason
+explicitly requests it.
 
-1. why the work mattered;
-2. what Mason did;
-3. the key judgment or tradeoff;
-4. what changed;
-5. what the evidence proves; and
-6. why the case is relevant to the role.
+Give the blind reader one sentence naming the intended hiring audience and the
+rendered case with its actual headings, captions, images, and layout. Before
+implementation, use the complete reader-facing draft plus the selected visuals
+in their intended order. The blind-reader input must not include the evidence
+packet, editorial contract, protected-claims list, writer explanation, source
+notes, or prior review.
 
-If the page is accurate but dull, rebuild its subject, selection, structure,
-and ending before line editing.
+After one read, the reviewer states:
+
+1. the business or product pressure;
+2. Mason's assignment and specific contribution;
+3. the decisive change and its rationale;
+4. the supported result and attribution boundary; and
+5. what the case demonstrates about Mason's judgment.
+
+The reviewer flags any contradiction, ambiguous passage, visual-text mismatch,
+or ending that prevented reconstruction. The reviewer must not rewrite.
+Regardless of whether the five facts are reconstructable, the reviewer also
+reports two separate judgments: (1) paragraph/section movement, naming any
+passage that inventories interface elements, lacks one dominant narrative move,
+or repeats earlier material instead of advancing the argument; and (2) ending
+integration, stating whether the ending resolves or integrates the governing
+tension and the significance of Mason's judgment using established evidence, or
+mainly repeats the heading, opening, body, or metric, with a short reason. No
+novel insight or numerical score is required. The repository agent compares the
+response with the artifact and factual record afterward and assigns the verdict;
+reviewer self-approval is not acceptance. Factual validation remains separate.
+A material reader failure permits one focused repair.
+
+The ending must resolve the governing tension and make the significance of
+Mason's judgment clear using evidence already established. Do not merely repeat
+the heading, opening, body, or metric, introduce a new factual claim, or require
+a novel insight that invites invention.
+
+If the page is accurate but dull, rebuild its subject, selection, structure, and
+ending before line editing.
