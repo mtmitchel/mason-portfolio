@@ -773,6 +773,17 @@ record(
   "Portfolio Flash route must stop after three material-only repairs",
 );
 record(
+  /Mechanical presentation conformance is not a material prose failure/i.test(rootInstructions)
+    && /convert an\s+accepted Flash headline to sentence case instead of rejecting it/i.test(rootInstructions)
+    && /Do not send the passage back, consume a repair, keep weaker\s+live copy, or ask Mason to make the correction/i.test(rootInstructions),
+  "Portfolio Flash route must normalize accepted mechanical formatting without spending a repair",
+);
+record(
+  /accepted writer copy violates only sentence-case capitalization/i.test(siteInstructions)
+    && /Do not reject it, retain weaker existing copy, spend a\s+writer repair, or ask Mason to make the correction/i.test(siteInstructions),
+  "site implementation must normalize accepted writer copy instead of rejecting it",
+);
+record(
   !/Acceptance,\s*not a numerical repair limit, ends the loop/i.test(rootInstructions),
   "Portfolio Flash route must not restore an unbounded repair loop",
 );

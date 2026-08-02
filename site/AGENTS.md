@@ -39,6 +39,11 @@ This rule is non-negotiable during implementation and rendered review.
 - During implementation, follow the selected profile's sentence-case rule for
   all visible interface text. Never use CSS `text-transform: uppercase` for
   labels or headings.
+- When accepted writer copy violates only sentence-case capitalization or
+  another mechanical markup constraint, normalize it locally and use the
+  accepted copy. Preserve its words and meaning plus product names, acronyms,
+  and official labels. Do not reject it, retain weaker existing copy, spend a
+  writer repair, or ask Mason to make the correction.
 - Let the story determine section order, reading width, media scale, rhythm,
   comparison treatment, and interaction.
 - Existing `chapter-shell`, `chapter-page`, `story-comparison`, card, rail,

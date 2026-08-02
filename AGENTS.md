@@ -67,6 +67,16 @@ sentence construction, word choice, rhythm, transitions, and whether optional
 terminology or plain language is clearest. Sol may reject only material
 failures, not stylistic preference.
 
+Mechanical presentation conformance is not a material prose failure. When a
+Flash-authored passage passes but differs only in sentence-case capitalization,
+quotation style, escaping, response markers, or required JSX wrapping, the root
+must apply the smallest meaning-preserving normalization and integrate it.
+Preserve Flash's words, order, tone, meaning, product names, acronyms, and
+official labels. Do not send the passage back, consume a repair, keep weaker
+live copy, or ask Mason to make the correction. In particular, convert an
+accepted Flash headline to sentence case instead of rejecting it. This permits
+mechanical integration only, never Sol-authored wording.
+
 After the initial candidate, use the smallest repair that can resolve the open
 ledger entries. A full-candidate repair is appropriate only while the structure
 is broadly failing. Otherwise, freeze every accepted passage and protected fact
