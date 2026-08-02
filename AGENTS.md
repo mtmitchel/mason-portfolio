@@ -79,26 +79,33 @@ preserve all other accepted work, and narrow the next brief to the defects still
 open. Never regenerate correct prose merely to repair an unrelated passage.
 
 Treat Mason's request to draft, write, rewrite, edit, fix, or otherwise change
-Portfolio prose as authorization for the initial Flash candidate and every
-same-model correction cycle needed to reach acceptance. Do not ask Mason to
-authorize Gemini, its launch, or any correction cycle separately. Acceptance,
-not a numerical repair limit, ends the loop. Each new launch must target the
-current open ledger and narrow the failing surface when a defect repeats. A
-repeated model-authored defect is not by itself a reason to stop while another
-safe, in-scope Flash correction can be requested. Stop only when the assembled
-candidate passes; Mason stops or changes scope; the exact model or provider is
-unavailable; required evidence or a required decision is missing; or no further
-correction can be requested without Sol writing the prose. No Opus/model
-fallback or separate style loop.
+Portfolio prose as authorization for the initial Flash candidate and up to
+three same-model repair launches. Do not ask Mason to authorize Gemini, its
+launch, or any of those repairs separately. Acceptance can end the loop sooner;
+the third repair is the hard ceiling. Each repair must target the current open
+ledger and narrow the failing surface when a defect repeats. Sol may reject only
+material factual, conceptual, attribution, scope, logic, evidence, or
+reader-comprehension failures and returned-passage regressions. It must not add
+preference-only polish or keep searching for a hypothetical perfect state.
+
+After the third repair, assemble every validated Flash-authored passage and keep
+the current live passage wherever its replacement still fails. Then close the
+writing attempt as `PARTIAL` with the exact unresolved material defects; do not
+launch another writer or let Sol rewrite the prose. Stop sooner when the
+assembled candidate passes; Mason stops or changes scope; the exact model or
+provider is unavailable; required evidence or a required decision is missing;
+or another correction would require unsupported content. No Opus/model fallback
+or separate style loop.
 
 Context compaction is not a completion or stop condition. Reconstruct the open
 ledger from the current draft, latest provider output, and latest validation,
 then continue. Never call rejected output final, claim the requested rewrite is
-complete, or close the task while material defects remain and the authorized
-route can continue. If a real stop condition occurs, state plainly which output
-was rejected and not integrated, which accepted passages were integrated, what
-remains open, and why the next correction cannot run. External output remains
-untrusted: the root inspects the actual text. No provider-side file writes.
+complete, or close the task while material defects remain and an authorized
+repair remains. When a stop condition occurs or the three-repair budget is
+exhausted, state plainly which output was rejected and not integrated, which
+accepted passages were integrated, what remains open, and why no further repair
+will run. External output remains untrusted: the root inspects the actual text.
+No provider-side file writes.
 Keep this local route out of external persistent context; it does not alter
 external persistent files 01, 02, 03, or 05 or the external project workflow.
 
@@ -158,8 +165,15 @@ the external model must not ask Mason to name local workflow states.
 Because 05 is persistent, the external Portfolio project is not an independent
 blind-reader or factual-validator context. Use a fresh projectless context
 without 05, project instructions, prior feedback, or local rationale for those
-checks. Packet preparation does not authorize provider delivery or publication.
-External output remains untrusted advice, not factual authority or approval.
+checks. When the current task authorizes external writing or review, that
+authorization includes delivering the task-relevant draft, curated facts and
+claim limits, screenshots or artifacts, contribution details, and experiment
+metrics to the selected or repository-required writer or reviewer.
+`private-evidence`, non-public, or publication-denied labels do not trigger a
+second delivery or disclosure confirmation. A different provider or model,
+unrelated or raw source material, credentials or secrets, or broader scope does.
+Publication remains separate. External output remains untrusted advice, not
+factual authority or approval.
 
 ## Design and implementation
 
@@ -171,9 +185,12 @@ Keep provisional copy clearly marked and preserve privacy, provenance,
 accessibility, responsive, and publication boundaries.
 
 When rendered quality is in scope, use the approved local browser route for
-transient page or viewport review only. Do not retain or share captures, capture
-the surrounding desktop, publish, deploy, or perform other machine-bound actions
-without their separate authorization. Read the machine owner before such work.
+transient page or viewport review only. Task-relevant page or product captures
+may be supplied to the writer or reviewer already authorized by the current
+task without a second artifact-sharing request. Do not capture the surrounding
+desktop, retain captures outside the task, share unrelated data, publish,
+deploy, or perform other machine-bound actions without their separate
+authorization. Read the machine owner before such work.
 
 ## Visual-language profile
 

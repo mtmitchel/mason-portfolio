@@ -51,7 +51,7 @@ other portfolio work.
 | --- | --- | --- |
 | `custody` | What bytes or text are held? | Custody says nothing about who created the content. |
 | `origin` | What kind of source created the content? | Unknown stays unknown until checked; a polished document is not automatically an organizational record. |
-| `privacy` | May it be published? | Every retained internal or unknown-private document defaults to `deny`; assess each proposed quotation separately. |
+| `privacy` | May it be published? | Every retained internal or unknown-private document defaults to `deny`; assess each proposed quotation separately. This is a public-use field, not provider-processing consent for an authorized task. |
 | `claim_coverage` | Which of artifact, contribution, lifecycle, and outcome does this occurrence support? | Strength in one dimension never fills another. |
 
 Custody values are:
@@ -116,7 +116,8 @@ retained document is non-publishable by default. Before using any excerpt:
 2. inspect the exact passage and surrounding context;
 3. check names, addresses, identifiers, commercial detail, and confidentiality;
 4. record the public-safe paraphrase or quotation separately; and
-5. keep the source private unless Mason explicitly selects it for use.
+5. keep it out of public copy and the public site unless Mason explicitly
+   selects it for public use.
 
 ## Claim and exhibit rule
 

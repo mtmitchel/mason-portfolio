@@ -754,8 +754,68 @@ record(
   "local external-agent workflow must keep packets optional and the provider set exact",
 );
 
+const rootInstructions = await readFile(path.join(root, "AGENTS.md"), "utf8");
+const siteInstructions = await readFile(path.join(root, "site/AGENTS.md"), "utf8");
+const currentDirection = await readFile(
+  path.join(root, "private-evidence/deepl-portfolio-current-direction.md"),
+  "utf8",
+);
+record(
+  /current task authorizes external writing or review/i.test(rootInstructions)
+    && /do not trigger a\s+second delivery or disclosure confirmation/i.test(rootInstructions)
+    && /Publication remains separate/i.test(rootInstructions),
+  "root instructions must inherit bounded external-writer delivery without merging publication",
+);
+record(
+  /initial Flash candidate and up to\s+three same-model repair launches/i.test(rootInstructions)
+    && /third repair is the hard ceiling/i.test(rootInstructions)
+    && /must not add\s+preference-only polish or keep searching for a hypothetical perfect state/i.test(rootInstructions),
+  "Portfolio Flash route must stop after three material-only repairs",
+);
+record(
+  !/Acceptance,\s*not a numerical repair limit, ends the loop/i.test(rootInstructions),
+  "Portfolio Flash route must not restore an unbounded repair loop",
+);
+record(
+  /inherits authorization from the current task/i.test(externalPacketWorkflow)
+    && /do not require another confirmation/i.test(externalPacketWorkflow),
+  "packet workflow must inherit bounded external delivery without a second confirmation",
+);
+record(
+  /repository route selects an external writer or\s+reviewer/i.test(localPacketRunbook)
+    && /do not require a second delivery or disclosure confirmation/i.test(localPacketRunbook),
+  "local packet runbook must inherit bounded external delivery without a second confirmation",
+);
+record(
+  /already authorized by the\s+current task without a second artifact-sharing request/i.test(siteInstructions),
+  "site instructions must allow task-relevant capture delivery to an authorized writer or reviewer",
+);
+record(
+  /Later external writing and review authorization is\s+governed by the repository-root `AGENTS\.md`/i.test(currentDirection),
+  "current direction must route external-writer authorization to the repository owner",
+);
+
+const obsoleteDeliveryGatePatterns = [
+  /Packet preparation does not authorize provider delivery/i,
+  /External delivery remains separately authorized/i,
+  /preparing it did not authorize sending it to an external provider/i,
+  /not an external attachment unless Mason explicitly requests that disclosure/i,
+  /Do not retain, attach, or share captures unless Mason requests that exact artifact/i,
+];
 for (const [file, source] of [
-  ["AGENTS.md", await readFile(path.join(root, "AGENTS.md"), "utf8")],
+  ["AGENTS.md", rootInstructions],
+  [externalPacketWorkflowPath, externalPacketWorkflow],
+  [localPacketRunbookPath, localPacketRunbook],
+  ["site/AGENTS.md", siteInstructions],
+  ["private-evidence/deepl-portfolio-current-direction.md", currentDirection],
+]) {
+  for (const pattern of obsoleteDeliveryGatePatterns) {
+    record(!pattern.test(source), `${file} must not restore a redundant external-delivery confirmation gate`);
+  }
+}
+
+for (const [file, source] of [
+  ["AGENTS.md", rootInstructions],
   ["README.md", await readFile(path.join(root, "README.md"), "utf8")],
   [externalBaseReadmePath, externalBaseReadme],
   [externalPacketWorkflowPath, externalPacketWorkflow],

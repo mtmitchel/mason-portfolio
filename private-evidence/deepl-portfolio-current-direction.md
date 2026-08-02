@@ -118,8 +118,9 @@ if their diagnostic history is ever needed.
 
 The ignored seven-file external-review packet records the pre-repair route copy
 in `CURRENT_DRAFT.md` and the evidence set used for the review. It is completed
-working output, not a second durable source of truth, and preparing it did not
-authorize sending it to an external provider.
+working output, not a second durable source of truth, and it was not sent during
+that preparation task. Later external writing and review authorization is
+governed by the repository-root `AGENTS.md`.
 
 Mason approved the earlier bounded clarity and concision repair after its claims
 were checked against all five images and their state limits. He later reopened

@@ -15,6 +15,15 @@ The external prompt may be a direct request with attached material or a
 locally assembled bundle. Do not require Mason or the external model to use the
 word packet, provide a form, or name a local workflow state.
 
+When the current task or repository route selects an external writer or
+reviewer, that authorization includes delivery of the minimum task-relevant
+draft, curated facts and claim limits, screenshots or artifacts, contribution
+details, and supported metrics. Private, non-public, or publication-denied
+labels do not require a second delivery or disclosure confirmation. A different
+provider or model, unrelated or raw source material, credentials or secrets, or
+broader scope does. Publication and persistent provider-project synchronization
+remain separate actions.
+
 When the task needs a written brief, state only what the external model needs:
 
 - the requested work and deliverable;
@@ -159,10 +168,11 @@ conclusion. Independent readers and factual validators never see fixtures or
 ## Design and local review
 
 Use the global adaptive design workflow for design requests. A local browser
-capture is transient review evidence only; it is not an external attachment
-unless Mason explicitly requests that disclosure. Do not capture the surrounding
-desktop, publish, deploy, or perform another machine-bound action through a
-packet.
+capture is transient review evidence. Task-relevant page or product captures may
+be supplied to the writer or reviewer already authorized by the current task
+without a second artifact-sharing request. Do not capture the surrounding
+desktop, retain captures outside the task, share unrelated data, publish,
+deploy, or perform another machine-bound action through a packet.
 
 ## Provider synchronization and feedback
 

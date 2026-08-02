@@ -1,8 +1,11 @@
 # External-agent packet workflow
 
 This document owns local packet assembly, protection, and handoff validation. It
-does not authorize external delivery, publication, or disclosure. A packet is a
-local preparation aid, not a required interface for Mason or an outside model.
+inherits authorization from the current task. When that task calls for external
+writing or review, it includes delivery of the minimum task-relevant material to
+the selected or repository-required writer or reviewer without a second
+delivery or disclosure confirmation. A packet is a local preparation aid, not a
+required interface for Mason or an outside model. Publication remains separate.
 
 ## Canonical owners
 
@@ -50,7 +53,12 @@ instructions, prior feedback, or local rationale.
 Mason's current request and supplied materials are the complete source set
 unless he explicitly allows outside research. A formal packet is never
 required. Review does not authorize rewriting, design, implementation, or extra
-deliverables. External delivery remains separately authorized.
+deliverables. The authorized external task includes its current draft, curated
+facts and claim limits, necessary screenshots or artifacts, contribution
+details, and supported metrics. `private-evidence`, non-public, or
+publication-denied labels do not require another confirmation. A different
+provider or model, unrelated or raw source material, credentials or secrets, or
+broader scope does.
 
 ## Case-packet file budget and protection
 
@@ -80,10 +88,10 @@ owner of a draft, fact, screenshot, or decision.
 3. Keep a stable filename when the file represents the same logical artifact.
    When an image or evidence state materially changes, use a state-specific
    filename and update every task-file and asset-index reference to it.
-4. Keep exactly one current copy of each deliverable or artifact. Move obsolete
-   copies to Trash only when cleanup is authorized. If obsolete files would
-   remain and cleanup is not authorized, stop before delivery and report that
-   the folder is not ready.
+4. Keep exactly one current copy of each deliverable or artifact in the
+   delivered set. Move obsolete copies to Trash only when cleanup is authorized.
+   If obsolete local files remain, omit them from delivery, report the residue,
+   and continue with the verified current set.
 5. Recheck the 10-file limit, referenced filenames, image states, source limits,
    and absence of persistent-context files before using the folder externally.
 

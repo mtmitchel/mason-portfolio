@@ -71,9 +71,11 @@ approval, and provisional text cannot be published or presented as fact.
 
 When rendered design quality is in scope, a transient local browser-page or
 viewport capture may support inspection alongside desktop/mobile resizing and
-relevant interaction or state checks. Do not retain, attach, or share captures
-unless Mason requests that exact artifact, and never capture the surrounding
-desktop. A product screenshot is not proof of the rendered Portfolio page.
+relevant interaction or state checks. Task-relevant page or product captures may
+be supplied to the external writer or reviewer already authorized by the
+current task without a second artifact-sharing request. Do not retain captures
+outside the task, share unrelated data, or capture the surrounding desktop. A
+product screenshot is not proof of the rendered Portfolio page.
 Make the rendered qualitative decision before build, accessibility, or other
 conformance checks close the design task; passing those checks cannot substitute
 for visual review.
