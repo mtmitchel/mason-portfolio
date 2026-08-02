@@ -1,280 +1,142 @@
 # Story and reader standard
 
-## Discover the right story before polishing a draft
+This file owns external narrative and prose guidance. It is delivery copy for an
+agent that cannot access the native build-content-design-portfolio skill.
+Packet mechanics and blind-reader isolation belong to
+04-EXTERNAL-AGENT-PACKET-GUIDE.md. Factual and screenshot-state validation
+belongs to 03-EVIDENCE-AND-ACCURACY-STANDARD.md.
 
-For portfolio-wide work, first find several promising clusters among company
-goals, team initiatives, experiments, Mason's contributions, artifacts, and
-outcomes. Compare the complete clusters, then select the strongest slate.
+## Authorization and private editorial contract
 
-For a selected case, create a compact private editorial contract before
-drafting. Keep authorization separate from editorial operation: review-only work
-does not authorize writing. When writing is authorized, choose exactly one:
+Review or diagnosis does not authorize rewriting. Mason must explicitly ask to
+draft, write, rewrite, edit, fix, or otherwise change prose before any writing
+occurs. Once writing is authorized, infer one internal operation from Mason's
+ordinary language, requested preservation level, and supplied evidence:
 
-- `draft from evidence`: an existing draft is not binding;
-- `structural rebuild`: discard rejected framing, headings, paragraph order, and
+- draft from evidence: an existing draft is not binding;
+- structural rebuild: discard rejected framing, headings, paragraph order, and
   conclusion;
-- `focused structural repair`: preserve the larger arc, replacing only sections
-  or relationships explicitly named by the task; or
-- `line edit only`: preserve claim meaning, structure, and paragraph order while
+- focused structural repair: preserve the larger arc and replace only named
+  sections or relationships; or
+- line edit only: preserve claim meaning, structure, and paragraph order while
   fixing clarity and mechanics.
 
-Record only these four short private fields:
+Keep only these four private fields:
 
-- `Editorial operation:`
-- `Governing tension or decision:`
-- `Contribution boundary:`
-- `Evidence boundary:`
+- Editorial operation
+- Governing tension or decision
+- Contribution boundary
+- Evidence boundary
 
-The contract is private planning material, never public case copy. A chronology
-is not automatically a story; sections should connect through cause, pressure,
-contrast, choice, or consequence rather than “first, then, next.”
+Mason never has to name an operation or fill a form. Ask only when inspection
+leaves two materially different preservation outcomes. The fields are planning
+material, never public headings, paragraph order, sentence count, or conclusion
+contents.
 
-## What a substantial case needs
+## Find the story before polishing
 
-- a meaningful product, customer, or organizational stake;
-- a clear account of Mason's role and contribution;
-- at least one judgment, tradeoff, challenge, or non-obvious decision;
-- evidence the reader can actually understand;
-- movement from a starting state to a changed understanding, artifact, system,
-  or measured result; and
-- an ending that answers why the work matters.
+For portfolio-wide work, compare several supported clusters among company or team
+goals, product pressures, initiatives, experiments, Mason's contribution,
+artifacts, collaborators, and outcomes. Select the strongest defensible slate;
+do not reserve a place for an existing route or rank.
 
-A case does not need a dramatic crisis or a metric. It does need something more
-meaningful than a catalog of screens and corrected strings.
+For a selected case, identify the pressure, decision, relationship, or question
+that gives the work stakes. Map Mason's contribution and collaborators, then
+choose the smallest set of artifacts that makes the story understandable. A
+chronology is not automatically a story; use cause, pressure, contrast, choice,
+or consequence to create movement.
 
-## Case-review checklist
+A case needs a meaningful stake, a clear contribution, at least one judgment or
+tradeoff, evidence the reader can understand, and a changed condition,
+consequence, or demonstrated capability. A metric is useful when supported but
+not required. Do not turn these qualities into fixed public sections.
 
-When reviewing a case for this portfolio, check each of these questions:
+## Build the narrative and visual argument
 
-- Does the opening establish the larger company, team, customer, or product
-  pressure and the experiment's or initiative's goal before narrowing to
-  Mason's contribution? Does it introduce the case without summarizing the
-  whole story before it has developed?
-- Does it make the business or organizational value legible, especially when a
-  supported commercial target or outcome exists?
-- Do the sections move in a clear sequence, with each transition explaining a
-  change in situation, decision, or consequence? Does the end of one section
-  create a reason for the next rather than relying on a generic time marker?
-- Are unfamiliar products, screens, controls, roles, and terms explained before
-  they become shorthand? Are modifiers used when they clarify scope, actor,
-  state, or causal status?
-- Are headings concise, concrete, and sharp enough to form a readable outline
-  when scanned alone?
-- Does every image support the adjacent argument, and does the text inside the
-  image agree with the body copy, caption, and alt text?
-- Does the case show UX and content-design judgment through specific decisions
-  and customer-facing benefits, rather than naming methods without examples?
-- Where a benefit is inferred from Figma mockups, Mason's recollection, or other
-  artifacts, does the explanation apply relevant UX writing, microcopy, or
-  content-design practice and treat that tradecraft as valid analysis rather
-  than fabrication?
-- Are ambiguities, assumptions, lifecycle limits, and attribution boundaries
-  identified before they can mislead a hiring reader?
-- Do captions explain what changed for the customer and why it mattered, rather
-  than merely naming an internal state or repeating a visible label?
-- Has the finished prose been line-edited and proofread for grammar, sentence
-  boundaries, punctuation, parallelism, and unnatural phrasing?
-- Does the ending interpret what Mason's contribution made possible and why it
-  matters, and does it feel like a deliberate landing rather than a recap or an
-  abrupt stop? It must not claim that one screen, string, or person caused a
-  team result.
+Choose structure and visual treatment together after artifact jobs are clear.
+A case may be chronological, thematic, comparative, image-led, text-led,
+sequential, or another form supported by the material. Do not force Problem,
+Process, Solution, Outcome or any other universal template.
 
-## Prove interface-state claims before revising
+Give every retained artifact a job such as context, decision, contrast, sequence,
+proof, consequence, or result. Remove an artifact that only repeats another,
+requires too much explanation, or weakens the central argument. Every visual
+must clarify, demonstrate, or prove the nearby idea. Captions and alt text must
+describe the same state as visible image text and body copy.
 
-When any screenshot or captured interface state supports factual prose:
+Explain unfamiliar products, screens, controls, steps, roles, and internal terms
+before relying on their labels as shorthand. Headings should carry a concrete
+pressure, decision, change, or consequence and form a useful outline when read
+alone. Do not let an attractive screenshot become the story by itself.
 
-1. Inspect every supplied image at readable resolution and read every visible
-   line. Do not rely on its filename, alt text, evidence-index summary, or the
-   draft's account.
-2. Record each state; the exact visible labels, amounts, dates, conditions,
-   controls, and actions that any draft claim uses or interprets; and any known
-   conditions or variants that limit what the image can prove.
-3. Map every such sentence, caption, and alt text to its supporting state.
-4. Fail any claim that presents content from different states as coexisting or
-   observed together. Identify cross-state comparisons explicitly. Mark a
-   counterfactual as one and support it with the supplied evidence.
-5. Fail any claim that treats a captured state as universal, exhaustive,
-   default, or guaranteed. Do not generalize a shown product, plan, selection,
-   billing period, offer, trial, eligibility condition, account state, or
-   experiment variant without broader evidence.
-6. Report every conflict before revising. Do not draft, rewrite, or accept copy
-   until no state or scope conflict remains.
+## Introductions and movement
 
-Return the state and claim rows required by the current packet plus a compact
-receipt outside the public copy naming every state checked, its conditions and
-limits, unresolved state or scope conflicts, and whether rewriting is allowed
-or blocked.
+Orient the opening to the company or product, situation, pressure or
+opportunity, and why the work began. Do not summarize every decision, artifact,
+and result before the story develops. A result-led opening is valid only when it
+still gives the context needed to understand the result.
 
-## Give artifacts narrative jobs
+Make each section change the situation or reader's understanding, introduce a
+constraint, show a decision, provide proof, or establish an ending. The end of
+a section should create the condition, consequence, or unresolved question that
+makes the next section necessary. Use the real relation: because, but,
+therefore, despite, once, or instead. Do not rely on generic markers.
 
-Before choosing a layout, decide what each candidate artifact contributes.
-Useful jobs include:
+## Prose and line editing
 
-- context for the product or pressure;
-- evidence of Mason's role or collaboration;
-- a decision or tradeoff made visible;
-- contrast between states;
-- sequence over time;
-- proof of a consequence; or
-- a measured result.
+Use American English unless source material, a product name, a quotation, or
+Mason's task requires another variety. Prefer plain words, concrete verbs, and
+clear agency. Use passive voice only when the actor is unknown or unimportant,
+the receiver deserves emphasis, or it is clearer, shorter, or less blaming.
 
-Select the smallest combination that makes the complete story convincing.
-More artifacts are not automatically better. One artifact may do several jobs.
-Do not let one visually impressive screen become the whole story when another
-artifact is needed to explain the decision or result.
+After the structure is sound, line-edit for sentence boundaries, fragments,
+run-ons, comma splices, parallelism, pronouns, apostrophes, quotation marks,
+punctuation, and unnatural phrasing. Preserve deliberate rhythm when it remains
+clear. Prefer periods and commas for ordinary clarity. Do not write toward an
+AI-detector score or add false details, quirks, canned openings, empty lists,
+formulaic contrasts, inflated transitions, jargon, screen tours, or repeated
+restatement.
 
-## Structure and visual grammar
-
-Use the smallest structure that carries the material. A case may be an
-experiment, an evolution, a set of conditional states, a focused collection, a
-system story, or another form that fits.
-
-Do not force reusable sections such as Problem, Process, Solution, and Outcome.
-Do not preserve an existing case structure, reusable component, or page pattern
-when it weakens the story. Choose the narrative structure and visual treatment
-together after the artifact jobs are clear.
-
-Evidence does not have to sit beside every sentence that refers to it. It may
-appear before a claim, after an explanation, as a sequence, in tabs, as a
-full-width screen, as a focused crop, or in another treatment that gives it
-space and meaning. Do not cram long prose, annotations, complete screens, and
-metrics into one small construction.
-
-Every major section should do at least one useful job:
-
-- change the situation or the reader's understanding;
-- introduce pressure or a constraint;
-- show a meaningful decision;
-- provide visible proof; or
-- establish the ending.
-
-## Introductions introduce
-
-The page itself should demonstrate the clarity and judgment Mason is being
-hired to provide. A sound story is not finished if the reader has to excavate
-it.
-
-Use the introduction to orient the reader to the company or product, the
-relevant situation, the pressure or opportunity, and why the work began. It may
-establish the central question or promise, but it should not summarize every
-decision, artifact, and result before the story has developed. Use a result-led
-opening only when that structure is deliberately chosen and the reader still
-receives the context needed to understand the result.
-
-Front-load the useful point within each paragraph and section. Do not interpret
-front-loading as an instruction to compress the entire case into its first
-screen. A compact summary, metadata block, or result preview may supplement the
-introduction when it reduces reader effort without repeating or replacing it.
-
-## Transitions create movement
-
-Make the end of each major section establish a changed condition, decision,
-consequence, or unresolved question that makes the next section necessary.
-Begin the next section by taking up that pressure or consequence. Use the real
-relationship: because, but, therefore, despite, once, or instead. Do not rely
-on a generic marker such as `Next`, `Another challenge`, or `From there`.
-
-A heading can signal a turn, but it does not replace a prose transition. The
-reader should understand why the case moves from one section to the next, not
-merely notice that the topic changed.
-
-For example, replace `Next, I revised the confirmation message` with the actual
-turn: `The earlier copy named the choice but not its consequence. Closing that
-gap in the confirmation message became the next problem to solve.` The
-transition now carries the unresolved problem forward instead of announcing a
-new topic.
-
-## Sentence and punctuation control
-
-Use American English unless exact source material, quoted language, a product
-name, or Mason's current task requires another variety. Prefer active voice and
-name the actor and action. Use passive voice deliberately only when the actor is
-unknown or unimportant, the receiver or action deserves emphasis, or passive
-wording is clearer, shorter, or less blaming.
-
-After the structure is sound, complete a full line edit and proofread. Correct
-accidental fragments, run-ons, comma splices, faulty parallelism, unclear
-pronouns, apostrophe errors, quotation-mark errors, and punctuation that hides
-the sentence's structure. Preserve deliberate fragments or irregular rhythm
-when they serve the voice and remain clear.
-
-Prefer periods and commas for ordinary clarity. Use colons, semicolons,
-parentheses, and em dashes according to their grammatical function, not as
-interchangeable decoration. Avoid repeated em dashes and other generated prose
-habits. Read the finished copy aloud before delivery.
-
-Use plain English and concrete verbs. Use bullets only for genuinely scannable
-sets and emphasis only when it improves meaning. Long paragraphs, long
-sentences, and wide text measures are reasons to inspect the passage, not
-automatic failures.
-
-Do not write toward an AI-detector score or simulate human error. Do not add
-mistakes, randomness, fake personal details, slang, or artificial quirks to
-appear human. Remove generic synthetic patterns: canned openings and closings,
-empty three-part lists, formulaic contrasts, inflated transitions, excessive
-signposting or em dashes, abstract praise, repeated restatement, and conclusions
-that only summarize. Ground every sentence in this case's subject, evidence,
-decision, consequence, or reader need.
-
-Headings should contain concrete facts, tension, choices, turns, or
-consequences. Read them alone: they should form a short version of the story.
+Keep professional interpretation distinct from observed or measured outcome.
+Mason's account supports his own participation, rationale, and recollection.
+Never invent research, quotations, ownership, shipment, adoption, causation,
+metrics, or results. Attribute team, program, experiment, and campaign outcomes
+at their supported scope. Use the evidence standard for factual disputes and
+captured interface states.
 
 ## Conclusions land the case
 
-Give the case a deliberate conclusion, not merely a final paragraph. Synthesize
-rather than recap. Return to the pressure, question, or promise established in
-the introduction and show what is now different. Interpret what Mason's
-contribution made possible, what judgment the work demonstrates, and why that
-capability matters.
+A conclusion may resolve or integrate the case's governing pressure, decision,
+consequence, relationship, through-line, or demonstrated judgment using facts
+already established. Choose the landing that makes this case legible. It need
+not mention the metric, every private contract field, Mason's contribution,
+attribution, or a novel insight. Do not force a fixed tension/contribution/
+attribution/result/insight sequence.
 
-When a result exists, end on the result and its meaning. When no metric exists,
-end on the strongest supported product change, organizational consequence, or
-demonstrated judgment. Let the final sentence carry a concrete, case-specific
-consequence or insight. Do not end on `In conclusion`, a checklist summary, a
-generic lesson, future work, defensive caveat, unseen evidence, or a sentence
-that could close an unrelated case.
+Treat an ending as failing when it mainly repeats the heading, opening, body,
+metric, role statement, or attribution disclaimer; could move to the
+introduction unchanged; introduces an unsupported fact; inventories evidence
+instead of interpreting it; or forces a polished contrast the case does not
+support. The ending should not be a generic lesson, defensive caveat, or slogan,
+but it also need not manufacture a new insight. Same-agent rationale, sentence
+counts, checklist coverage, and self-verdict are diagnostic only, never
+acceptance.
 
-## Blind hiring-reader check
+Call an ending integrated only when it changes, completes, connects, or resolves
+the reader's understanding of already-established parts. An accurate,
+case-specific restatement or distillation of the heading, body distinction,
+role, result, or attribution is still recap. If no changed or completed
+understanding exists, report the ending as recap-only. Do not require a fixed
+slot, new fact, metric, or novel insight.
 
-Run this check after a new case draft, case construction or reconstruction, or a
-structural rebuild. Use a fresh reader context that did not write or repair the
-candidate; the reviewer cannot self-approve it. For a focused structural repair
-or line edit only, run it only when a prior reader failure remains or Mason
-explicitly requests it.
+Mason's explicit qualitative rejection invalidates acceptance and reopens the
+rejected structure instead of inviting cosmetic repair. A conclusion is judged
+as part of the complete case, not as an isolated slot.
 
-Give the blind reader one sentence naming the intended hiring audience and the
-rendered case with its actual headings, captions, images, and layout. Before
-implementation, use the complete reader-facing draft plus the selected visuals
-in their intended order. The blind-reader input must not include the evidence
-packet, editorial contract, protected-claims list, writer explanation, source
-notes, or prior review.
+## Reader and evidence handoff
 
-After one read, the reviewer states:
-
-1. the business or product pressure;
-2. Mason's assignment and specific contribution;
-3. the decisive change and its rationale;
-4. the supported result and attribution boundary; and
-5. what the case demonstrates about Mason's judgment.
-
-The reviewer flags any contradiction, ambiguous passage, visual-text mismatch,
-or ending that prevented reconstruction. The reviewer must not rewrite.
-Regardless of whether the five facts are reconstructable, the reviewer also
-reports two separate judgments: (1) paragraph/section movement, naming any
-passage that inventories interface elements, lacks one dominant narrative move,
-or repeats earlier material instead of advancing the argument; and (2) ending
-integration, stating whether the ending resolves or integrates the governing
-tension and the significance of Mason's judgment using established evidence, or
-mainly repeats the heading, opening, body, or metric, with a short reason. No
-novel insight or numerical score is required. The repository agent compares the
-response with the artifact and factual record afterward and assigns the verdict;
-reviewer self-approval is not acceptance. Factual validation remains separate.
-A material reader failure permits one focused repair.
-
-The ending must resolve the governing tension and make the significance of
-Mason's judgment clear using evidence already established. Do not merely repeat
-the heading, opening, body, or metric, introduce a new factual claim, or require
-a novel insight that invites invention.
-
-If the page is accurate but dull, rebuild its subject, selection, structure, and
-ending before line editing.
+Use 04-EXTERNAL-AGENT-PACKET-GUIDE.md for blind-reader isolation and reporting.
+Use 03-EVIDENCE-AND-ACCURACY-STANDARD.md for factual validation. Keep those
+diagnostic and evidence checks separate from this prose standard; do not add
+another agent, round, template, worksheet, score, or permanent evaluation
+report.

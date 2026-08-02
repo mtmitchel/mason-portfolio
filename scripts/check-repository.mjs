@@ -131,6 +131,11 @@ const requiredFiles = [
   "AGENTS.md",
   "archive/README.md",
   "docs/figma-workflow.md",
+  "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
+  "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
+  "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
+  "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md",
+  "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt",
   "private-evidence/README.md",
   "private-evidence/claim-review.md",
   "private-evidence/deepl-portfolio-current-direction.md",
@@ -616,6 +621,46 @@ const tracked = spawnSyncChecked(
 ).stdout
   .split("\0")
   .filter(Boolean);
+
+const projectInstructionsPath = path.join(root, "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt");
+const projectInstructions = await readFile(projectInstructionsPath, "utf8");
+record(
+  [...projectInstructions].length < 8000,
+  `PROJECT_INSTRUCTIONS.txt must be fewer than 8,000 Unicode characters: ${[...projectInstructions].length}`,
+);
+
+const expectedSharedBaseVersion = "2026-08-01.4";
+const sharedBaseVersionPattern = /^\s*Shared-base version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
+const sharedBaseGuidePath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
+const sharedBaseGuide = await readFile(path.join(root, sharedBaseGuidePath), "utf8");
+const guideVersionDeclarations = [...sharedBaseGuide.matchAll(sharedBaseVersionPattern)]
+  .map((match) => match[1]);
+record(
+  guideVersionDeclarations.length === 1,
+  `${sharedBaseGuidePath} must contain exactly one Shared-base version declaration`,
+);
+record(
+  guideVersionDeclarations.length === 1 && guideVersionDeclarations[0] === expectedSharedBaseVersion,
+  `${sharedBaseGuidePath} must declare Shared-base version ${expectedSharedBaseVersion}`,
+);
+
+const trackedExternalBaseDeclarations = [];
+for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
+  const source = await readFile(path.join(root, file), "utf8");
+  for (const match of source.matchAll(sharedBaseVersionPattern)) {
+    trackedExternalBaseDeclarations.push({ file, version: match[1] });
+  }
+}
+record(
+  trackedExternalBaseDeclarations.length === 1,
+  "tracked external-base files must contain one canonical Shared-base version declaration",
+);
+record(
+  trackedExternalBaseDeclarations.length === 1
+    && trackedExternalBaseDeclarations[0].file === sharedBaseGuidePath
+    && trackedExternalBaseDeclarations[0].version === expectedSharedBaseVersion,
+  `tracked external-base version declarations must resolve to ${expectedSharedBaseVersion} in ${sharedBaseGuidePath}`,
+);
 
 const generatedPrefixes = [
   ".agents/",

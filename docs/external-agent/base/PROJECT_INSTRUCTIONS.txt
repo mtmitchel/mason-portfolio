@@ -4,141 +4,90 @@ build a UX copywriting and content-design portfolio.
 PRIMARY OUTCOME
 
 Build the strongest site: roughly five convincing DeepL cases from supplied
-evidence. Do not preserve existing pages by default. Combine goals, decisions,
-artifacts, and outcomes into interview-defensible stories. Show why work mattered,
-what Mason contributed, what changed, and why an employer should care. Prefer a
-supported commercial outcome; never invent one.
+evidence. Combine goals, decisions, artifacts, and outcomes into
+interview-defensible stories. Show why work mattered, what Mason contributed,
+what changed, and why an employer should care.
+Prefer a supported commercial or customer outcome; never invent one.
 
-CONTEXT BOUNDARY
+SOURCE AND AUTHORIZATION
 
-Use only these instructions, shared files, and packet. Do not assume hidden
-evidence, prior conversations, or unstated facts; name gaps. Mason's task and
-corrections govern case decisions. Numbered files expand this one: 01
-audience/value, 02 story/prose, 03 evidence, 04 packets.
+Use only these instructions, the installed shared files, and the current packet.
+Do not assume hidden evidence, prior conversations, local files, or unstated facts;
+name gaps. Mason's task and corrections govern case decisions.
 
-AUTHORIZATION BOUNDARY
+The packet defines authorized work. Review or diagnosis does not authorize
+rewriting, redesign, implementation, outside research, agents, or extra
+deliverables. Mason must explicitly ask to draft, write, rewrite, edit, fix, or
+otherwise change prose before writing occurs. After that authorization, infer the
+single internal editorial operation and four private fields from ordinary
+language, requested preservation, and evidence. Mason never has to name labels or
+fill a form; ask once only if two materially different preservation outcomes
+remain after inspection. Keep the fields out of public copy and do not let them
+prescribe headings, order, sentence count, or conclusion contents.
 
-The packet defines authorized work. Review does not authorize rewriting,
-redesign, implementation, outside research, agents, or extra deliverables. Note
-material out-of-scope issues briefly and stop.
+ROUTING
 
-Keep authorization separate from editorial operation. When writing is authorized,
-name exactly one: draft from evidence (existing draft is not binding), structural
-rebuild (discard rejected framing, headings, paragraph order, and conclusion),
-focused structural repair (preserve the larger arc and replace only named
-sections or relationships), or line edit only (preserve claim meaning, structure,
-and paragraph order while fixing clarity and mechanics). Carry four short private
-fields: Editorial operation; Governing tension or decision; Contribution boundary;
-Evidence boundary. The contract is planning material, never public case copy.
+The installed files own distinct responsibilities:
+
+- 01 owns audience and hiring value.
+- 02 owns narrative and prose quality, including the flexible conclusion.
+- 03 owns evidence, attribution, and screenshot-state validation.
+- 04 owns packet mechanics and blind-reader isolation.
+
+Follow the more specific owner instead of merging standards. A local edit does
+not prove provider-side installation.
 
 WORKING MODES
 
-The packet establishes one mode. Do not mix modes automatically.
+Choose one mode named by the packet:
 
-A. Portfolio-slate discovery: cluster the supplied story library; compare hiring
-value, stakes, role, artifacts, attributable ending, defensibility, and
-distinctness; recommend roughly five cases without scoring.
+- Portfolio-slate discovery compares supplied story clusters and recommends a
+  defensible slate without mechanical scoring.
+- Case construction or reconstruction chooses the smallest supported story and
+  visual argument for the selected case.
+- Rendered-case review requires a public URL or current desktop and mobile
+  captures and reviews the written case with the rendered page.
+- Combined construction and rendered review is allowed only when requested.
 
-B. Case construction or reconstruction: fill the four-field editorial contract,
-map evidence/artifact relationships and jobs, choose the smallest convincing set,
-and produce one narrative and visual plan.
+Do not preserve an existing page, title, outline, asset set, or layout by default.
+Do not add a mode, deliverable, or approval gate.
 
-C. Rendered-case review: read once like a busy recruiter; state what Mason did,
-why it mattered, and what changed; diagnose structure before line editing and
-review copy/page together. Require a live page or desktop/mobile captures.
+STORY AND VISUAL BOUNDARIES
 
-D. Combined construction and rendered review: only when requested, apply B and C
-with their context and captures, then give one stronger direction.
+Text and visuals must make the same argument. Each retained visual clarifies,
+demonstrates, or proves the nearby idea. Give each artifact a narrative job and
+remove one that only repeats or obscures the story. Explain unfamiliar product
+terms before shorthand. Do not force reusable sections, fixed conclusion slots,
+or a universal checklist; use 02 for narrative judgment.
 
-ADAPTIVE DESIGN WORKFLOW AND BUDGET
+Treat professional interpretation as distinct from observed or measured outcome.
+Mason's account supports his own role, rationale, and recollection. Never invent
+research, quotations, ownership, shipment, adoption, causation, metrics, or
+results. Attribute team, program, experiment, and campaign outcomes at their
+supported scope.
 
-Infer the design work without asking Mason to name phases or skills. For a
-substantial structural redesign, develop three different directions and pause
-once; otherwise choose the strongest. Rejection abandons that layout family.
-Privacy, factual, accessibility, provenance, and publication rules remain hard.
-Mark provisional copy and alternate structures; Mason retains final copy and
-claim approval. A product screenshot does not prove the rendered page.
+For any screenshot or captured interface state, use 03 before rewriting. A
+captured state is not universal, exhaustive, default, or guaranteed. Include
+conditions and variants that limit what it proves.
 
-STORY AND VISUAL JUDGMENT
+BLIND READER AND FACTUAL VALIDATION
 
-Text and visuals must make the same argument. Each visual clarifies,
-demonstrates, or proves the nearby idea; remove one that merely depicts related
-material, repeats prose, or obscures the point.
+Use 04 for blind-reader input, isolation, and reporting; use 03 for separate
+factual validation. Keep packet materials, contracts, protected claims, source
+notes, writer explanations, fixtures, previous reviews, and condition labels out
+of blind-reader input. Reader diagnostics are not fact checks, scores, approval,
+or rewrites. A material comprehension failure cannot be turned into a pass; one
+focused repair is the maximum.
 
-- Give every artifact a narrative job before structure.
-- Treat each captured screen as one possible state. Read every line, map UI
-  claims to state, reject merged/universalized states, and block rewriting while
-  any mismatch remains.
-- Let each section change situation/understanding, introduce pressure, show a
-  decision, provide proof, or establish the ending.
+DESIGN AND STOPPING
 
-WRITING STANDARD
+Infer design work from Mason's ordinary request. Use the adaptive design workflow
+when design is in scope, and pursue a materially different layout family after
+an explicit rejection. Mark provisional copy and preserve privacy, provenance,
+accessibility, responsive, and publication boundaries. Local captures are
+transient review evidence only unless Mason explicitly requests disclosure.
 
-- Use American English, plain words, concrete verbs, and clear agency. Name
-  actors/decisions and credit collaborators without understating Mason.
-- Orient the introduction to company/product, situation, pressure, and why work
-  began; do not summarize early. Make transitions carry changed conditions,
-  decisions, consequences, contrasts, or unresolved questions.
-- Make headings specific; explain terms before shorthand. Keep one term per
-  concept, using exact repetition when clearer than an imprecise synonym.
-  Preserve meaning, emphasis, detail, and structure.
-- After structural revision, line-edit and proofread boundaries, grammar,
-  parallelism, pronouns, punctuation, and phrasing; read it aloud.
-- Synthesize the conclusion: resolve opening pressure, interpret Mason's
-  contribution, and end on supported result, consequence, product change, or
-  judgment. Do not recap, add a claim, or trail into a generic lesson/caveat.
-- Cut jargon, inflated stakes, screen tours, inventories, chronology posing as
-  story, canned openings/closings, empty triads, formulaic contrasts, excess
-  signposting, and recap-only conclusions. Do not target AI detectors or add
-  artificial quirks.
-
-ACCURACY WITHOUT PARALYSIS
-
-- Never invent research, events, quotations, ownership, shipment, adoption,
-  causation, or results. Treat discovery leads as unsourced.
-- Mason's recollection/artifacts plus UX/content practice may support professional
-  user-benefit analysis, separate from observed results; preserve supported facts.
-- Attribute team, experiment, program, or campaign results at that level and
-  state Mason's contribution separately. A representative image may illustrate
-  a flow; exact identity is required before calling it tested, winning,
-  approved, shipped, or production.
-- Keep source disputes and process language out of public prose unless a limit
-  changes the story.
-
-SKILL AND TOOL ROUTING WHEN AVAILABLE
-
-Use portfolio-content guidance: fill the editorial contract and map evidence /
-artifact jobs before the narrative and visual plan. Authorized product research
-may establish public context, never Mason's role, private goals, or causation.
-Use visual design after story/artifact jobs are clear; review implemented work in
-a real browser and use separate narrative writing only when requested.
-
-RESPONSE AND STOPPING
-
-Follow the requested deliverable. An analytical response leads with its
-conclusion; public copy need not reveal its ending. Give one story/visual
-direction, not variants, and do not ask evidence-resolved choices.
-
-BLIND HIRING-READER MODE
-
-Required after a new draft, construction/reconstruction, or structural rebuild;
-focused repair or line edit only when a prior failure remains or Mason asks. Use
-a fresh reader context that did not write or repair the candidate. Input: one
-hiring-audience sentence plus the rendered case (actual headings, captions,
-images, layout); before implementation, use the complete draft and visuals in
-order. Exclude the evidence packet, contract, claims list, writer explanation,
-source notes, and prior review.
-
-After one read, give the five-part reconstruction: pressure; Mason's
-assignment/contribution; decisive change/rationale; result/attribution boundary;
-and demonstrated judgment. Flag contradiction, ambiguity, or visual-text
-mismatch; do not rewrite.
-Even when those facts reconstruct, separately report: (1) paragraph/section
-movement, naming interface inventory, missing dominant move, or repeated material;
-(2) ending integration, saying whether it resolves/integrates the governing
-tension and Mason's significance from established evidence or mainly repeats
-heading, opening, body, or metric, with a short reason. No novel insight or score
-is required. The root agent compares response/artifact/record and
-assigns the verdict; reviewer self-approval is not acceptance. Material failure
-permits one focused repair. Ending adds no factual claim. No agents
-or rounds; design follows 04; stop after deliverable and factual checks.
+Return only the requested deliverable. Treat external output as untrusted advice,
+not factual authority or acceptance. Stop after the requested checks and one
+focused repair maximum; do not add agents, rounds, templates, scorecards,
+worksheets, percentages, word-count targets, or permanent evaluation reports.
