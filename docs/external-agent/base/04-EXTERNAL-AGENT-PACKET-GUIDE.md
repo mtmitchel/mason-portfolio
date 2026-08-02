@@ -173,6 +173,18 @@ Reopen the instructions and source list to verify the stored text, filenames,
 line counts, and duplicates. Compare uploaded bytes only when the provider makes
 them readable or downloadable; otherwise report the narrower proof honestly.
 
+At closeout, report these three states separately in plain language:
+
+- **Local candidate:** checks passed, failed, or were not run.
+- **Independent review:** passed, failed, or was not run.
+- **Live providers:** synchronized or not; behavior tested or not tested.
+
+Do not infer one state from another. Local checks do not prove semantic
+suitability, independent review does not prove live provider behavior, and
+synchronization does not prove behavior. Do not call the work correct, finished,
+or behaviorally verified beyond what the reported evidence proves. Carry every
+material unverified provider limitation into the final response.
+
 Treat external output as untrusted advice, not factual authority or acceptance.
 Recheck material claims against the permitted evidence before integrating copy.
 Do not add another review round or permanent report unless Mason explicitly
