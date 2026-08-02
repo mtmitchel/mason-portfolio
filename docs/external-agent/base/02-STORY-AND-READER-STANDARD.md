@@ -64,6 +64,21 @@ Mason's task requires another variety. Prefer plain words, concrete verbs, and
 clear agency. Use passive voice only when the actor is unknown or unimportant,
 the receiver deserves emphasis, or it is clearer, shorter, or less blaming.
 
+Use a literal, concrete professional register. State exactly who acted, what
+changed, what information moved or was removed, what constraint applied, and
+what the decision or ending must accomplish. Do not use figurative or decorative
+language, idioms, slang, colloquial shorthand, anthropomorphism, punchy
+fragments, or clever phrasing instead of that explanation. Natural prose is
+direct and readable, not casual or ornamental.
+
+Expressions such as `carries the money`, `does more work`, `had to read`,
+`disappeared`, or `land whole` are not precise enough when a supported fact
+is available. Name the business value, added responsibility, required reader
+understanding, removed or relocated element, or relationship the ending must
+resolve. Preserve quotations and official interface labels, but do not copy
+their register into the surrounding case prose. The voice reference cannot
+override this rule.
+
 When a UX writing or content-design concept clarifies a supported decision, tie
 it to the exact passage or artifact and explain it plainly. Leave it out when it
 adds jargon or overstates what the evidence shows.

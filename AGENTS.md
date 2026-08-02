@@ -67,6 +67,14 @@ sentence construction, word choice, rhythm, transitions, and whether optional
 terminology or plain language is clearest. Sol may reject only material
 failures, not stylistic preference.
 
+A register failure is material when figurative, decorative, clever, slangy, or
+colloquial wording substitutes for the exact supported actor, action,
+constraint, interface change, relationship, or consequence. Natural Portfolio
+prose must be direct, literal, concrete, and professional; rhythm and warmth do
+not justify ornament or shorthand. Sol must name the obscured fact or relation
+in the acceptance ledger without proposing replacement wording, and Flash must
+repair the prose.
+
 Mechanical presentation conformance is not a material prose failure. When a
 Flash-authored passage passes but differs only in sentence-case capitalization,
 quotation style, escaping, response markers, or required JSX wrapping, the root

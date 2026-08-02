@@ -633,13 +633,15 @@ record(
 const externalBaseReadmePath = "docs/external-agent/base/README.md";
 const localPacketRunbookPath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
 const externalPacketWorkflowPath = "docs/external-agent-packets.md";
+const storyStandardPath = "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md";
 const writingVoicePath = "docs/external-agent/base/05-MASON-WRITING-VOICE.md";
 const externalBaseReadme = await readFile(path.join(root, externalBaseReadmePath), "utf8");
 const localPacketRunbook = await readFile(path.join(root, localPacketRunbookPath), "utf8");
 const externalPacketWorkflow = await readFile(path.join(root, externalPacketWorkflowPath), "utf8");
+const storyStandard = await readFile(path.join(root, storyStandardPath), "utf8");
 const writingVoice = await readFile(path.join(root, writingVoicePath), "utf8");
 
-const expectedExternalContextVersion = "2026-08-02.5";
+const expectedExternalContextVersion = "2026-08-02.6";
 const externalContextVersionPattern = /^\s*External-context version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
 const versionDeclarations = [];
 for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
@@ -681,6 +683,22 @@ record(
   /Use outside research only\s+when Mason explicitly requests it/i.test(projectInstructions)
     && /style\s+guidance; it never supplies case facts, claims, structure, or conclusions/i.test(projectInstructions),
   "external project instructions must bound outside research and voice-sample use",
+);
+record(
+  /Use a literal, concrete professional register/i.test(storyStandard)
+    && /Do not use figurative or decorative\s+language, idioms, slang, colloquial shorthand/i.test(storyStandard)
+    && /The voice reference cannot\s+override this rule/i.test(storyStandard),
+  "external story standard must require literal, precise Portfolio prose",
+);
+record(
+  /figurative, decorative, slangy, or colloquial phrasing that substitutes\s+for the literal, concrete professional register required by 02/i.test(writingVoice),
+  "external voice guidance must not override the literal professional register",
+);
+record(
+  /For Portfolio case-study prose, the literal, concrete professional register\s+in 02 is binding/i.test(writingVoice)
+    && /None of the samples below authorizes analogy, idiom, wit,\s+conversational filler, rhetorical questions, slang, or ornamental phrasing/i.test(writingVoice)
+    && /Do not make case-study prose chatty or colloquial/i.test(writingVoice),
+  "external voice samples must not license decorative or colloquial case-study prose",
 );
 record(
   /go\s+on/i.test(projectInstructions)
@@ -777,6 +795,12 @@ record(
     && /convert an\s+accepted Flash headline to sentence case instead of rejecting it/i.test(rootInstructions)
     && /Do not send the passage back, consume a repair, keep weaker\s+live copy, or ask Mason to make the correction/i.test(rootInstructions),
   "Portfolio Flash route must normalize accepted mechanical formatting without spending a repair",
+);
+record(
+  /A register failure is material when figurative, decorative, clever, slangy, or\s+colloquial wording substitutes for the exact supported actor/i.test(rootInstructions)
+    && /Natural Portfolio\s+prose must be direct, literal, concrete, and professional/i.test(rootInstructions)
+    && /without proposing replacement wording/i.test(rootInstructions),
+  "Portfolio Flash route must treat imprecise decorative register as a material prose defect",
 );
 record(
   /accepted writer copy violates only sentence-case capitalization/i.test(siteInstructions)

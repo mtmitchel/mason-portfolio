@@ -22,6 +22,11 @@ structure, conclusions, or authorization.
   CV bullets, technical documentation, email, or another person's writing.
 - Treat these samples as style guidance only. They are never evidence for the
   facts, claims, structure, or conclusion of another case.
+- For Portfolio case-study prose, the literal, concrete professional register
+  in 02 is binding. None of the samples below authorizes analogy, idiom, wit,
+  conversational filler, rhetorical questions, slang, or ornamental phrasing.
+  Use only cadence, directness, warmth, and explanation density that remain
+  precise and professional.
 
 ## Selected corpus
 
@@ -42,14 +47,14 @@ voice.
   concrete language without inflating it.
 - **Clear with complexity.** Define unfamiliar terms, provide enough context,
   and use plain transitions so a reader can follow a dense subject.
-- **Close to the reader.** Use direct address, contractions, and occasional
-  questions when they create genuine conversation.
+- **Close to the reader.** Use direct address or contractions only when they
+  make the meaning clearer. Do not make case-study prose chatty or colloquial.
 - **Natural in its turns.** Use supported contrast and consequence without
   canned pivots, theatrical reveals, or inflated signposting.
 - **Varied in rhythm.** Let longer explanatory sentences carry context and use
   shorter sentences for emphasis. Do not make every paragraph sound alike.
 - **Informed but human.** Prefer concrete nouns, confident explanation, warmth,
-  and restrained wit over institutional distance.
+  and restraint over institutional distance.
 
 ## Default annotated samples
 
@@ -81,8 +86,9 @@ From [Everything You Need to Know About Onboarding](https://www.smartrecruiters.
 
 > Think of onboarding as an extended handshake and hello.
 
-Use this piece for approachable explanatory language and sparing human analogies,
-not its older rhetorical flourishes or every analogy.
+This is an older editorial example of analogy, not a case-study model. Do not
+reproduce its figurative method in Portfolio case prose; take only the
+underlying aim of making an explanation easy to follow.
 
 ### Bring curiosity into an interview or profile
 
@@ -90,9 +96,10 @@ From [Discussions on Hiring as a Global Humanism](https://hiringsuccess.com/epis
 
 > The discussion that followed is one that you're sure to appreciate.
 
-Use the edited introduction and Mason's questions for conversational curiosity,
-concise question framing, and responsive follow-ups. Do not copy transcript
-fillers or spoken sentence fragments into polished prose.
+For an interview or profile task, use the edited introduction and Mason's
+questions for concise question framing and responsive follow-ups. Do not carry
+that conversational register, transcript fillers, or spoken sentence fragments
+into case-study prose.
 
 ### Move from external change to product response
 
@@ -100,8 +107,8 @@ From [Localyze 2.0: The next generation of global mobility tech](https://www.loc
 
 > This isn't your run-of-the-mill product release, though.
 
-Use this piece for energetic but grounded product language that balances
-business context with concrete feature detail.
+Use this piece only for the sequence from business context to concrete feature
+detail. Do not import its idiom or promotional energy into case-study prose.
 
 ### Turn research into an argument
 
@@ -142,7 +149,9 @@ UK- and US-facing assignments. Preserve their strengths without copying:
 
 - unsupported promotional claims, superlatives, or causal certainty;
 - dated facts, statistics, product descriptions, or terminology;
-- frequent clichés, idioms, rhetorical questions, or decorative metaphors;
+- any figurative, decorative, slangy, or colloquial phrasing that substitutes
+  for the literal, concrete professional register required by 02;
+- clichés, idioms, rhetorical questions, or decorative metaphors;
 - repeated transition words such as `undoubtedly`, `evidently`, or `ultimately`;
 - legacy grammar, punctuation, capitalization, or spelling choices;
 - the CEO persona of the Forbes posts;

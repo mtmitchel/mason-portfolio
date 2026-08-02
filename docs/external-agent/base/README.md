@@ -1,6 +1,6 @@
 # Canonical external web-agent portfolio context
 
-External-context version: `2026-08-02.5`
+External-context version: `2026-08-02.6`
 
 This README is a local installation manifest. Do not upload it. The persistent
 provider context is deliberately separate from the local Codex workflow.
