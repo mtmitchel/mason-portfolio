@@ -40,8 +40,8 @@
 .checkout-page .chapter-prose p,
 .checkout-page .chapter-prose li {
   color: #3f4943;
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: 22px;
+  line-height: 1.6;
 }
 
 .checkout-page .chapter-synopsis p,
@@ -125,7 +125,7 @@
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer;
 }
 
@@ -180,12 +180,16 @@
 .checkout-flow__figure figcaption {
   margin-top: 12px;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .checkout-flow__figure figcaption strong {
   font-weight: 650;
+}
+
+.checkout-flow + .chapter-prose {
+  margin-top: 48px;
 }
 
 .checkout-page .chapter-closing {
@@ -218,7 +222,7 @@
   .checkout-page .chapter-synopsis p,
   .checkout-page .chapter-prose p,
   .checkout-page .chapter-prose li {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .checkout-page .chapter-hero + .chapter-section {
@@ -246,7 +250,11 @@
   }
 
   .checkout-flow__figure figcaption {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .checkout-flow + .chapter-prose {
+    margin-top: 40px;
   }
 
   .checkout-page .chapter-closing {

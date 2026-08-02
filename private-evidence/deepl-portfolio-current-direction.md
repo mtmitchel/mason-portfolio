@@ -1,6 +1,6 @@
 # Current portfolio working notes
 
-**Updated:** 2026-08-01
+**Updated:** 2026-08-02
 **Status:** Nonbinding editorial snapshot
 
 This file preserves recent decisions and explicit corrections. It is not a
@@ -110,24 +110,28 @@ The five current review images have narrower state limits:
   billing or card field.
 
 The tracked `/work/checkout` route now integrates the Camera Preview 2
-structure, complete-screen viewers, and current reader-facing draft as the
-working checkpoint. The obsolete focused price, feature, and consent viewers,
-their unused assets, and the local `/work/checkout/concepts/*` studies have
-been removed. Git history retains them if their diagnostic history is ever
-needed.
+structure, complete-screen viewers, Mason's approved clarity and concision
+repair, and the current conclusion candidate. The obsolete focused price,
+feature, and consent viewers, their unused assets, and the local
+`/work/checkout/concepts/*` studies have been removed. Git history retains them
+if their diagnostic history is ever needed.
 
-The ignored seven-file external-review packet mirrors the current route copy in
-`CURRENT_DRAFT.md`. Its task now requests one focused clarity, concision, and
-conclusion repair. The packet is working output, not a second durable source of
-truth, and preparing it does not authorize sending it to an external provider.
+The ignored seven-file external-review packet records the pre-repair route copy
+in `CURRENT_DRAFT.md` and the evidence set used for the review. It is completed
+working output, not a second durable source of truth, and preparing it did not
+authorize sending it to an external provider.
 
-The next action is to inspect the external agent's response against all five
-images and the packet's state limits, then separate factual corrections from
-useful editorial advice and unsupported claims. Do not integrate the response
-automatically. Repository layout rules prohibit decorative numeric section
-prefixes and the tiny-left-label/large-right-headline pattern. Mechanical checks
-establish implementation conformance only; they do not establish reader value
-or final qualitative approval.
+Mason approved the earlier bounded clarity and concision repair after its claims
+were checked against all five images and their state limits. He later reopened
+the conclusion. The current candidate interprets the shorter checkout as having
+to carry the full subscription decision inside `Details`; one independent local
+hiring-reader check found that ending integrated, though its synthesis remains
+incremental because the body already establishes the one-decision logic. The
+candidate still requires Mason's qualitative judgment. Repository layout rules
+prohibit decorative numeric section prefixes and the
+tiny-left-label/large-right-headline pattern. Mechanical checks establish
+implementation conformance only; they do not replace Mason's copy approval or
+a rendered browser review.
 
 ## Current route snapshot
 
