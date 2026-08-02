@@ -21,6 +21,9 @@ It does not govern facts, claims, terminology, case structure, or authorization.
   CV bullets, technical documentation, email, or another person's writing.
 - Load this file only for an authorized Portfolio drafting, rewriting, editing,
   or line-editing task. Never load it for a blind reader or factual validator.
+- Do not add this file to persistent external-project knowledge or sources.
+  Attach it only to the individual authorized writing chat, and never to a
+  review or factual-validation chat.
 
 ## Selected corpus
 

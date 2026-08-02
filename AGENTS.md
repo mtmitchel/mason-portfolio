@@ -21,10 +21,12 @@ implementation and technical verification.
   owns external packet mechanics and blind-reader isolation.
 - [docs/external-agent/base/05-MASON-WRITING-VOICE.md](docs/external-agent/base/05-MASON-WRITING-VOICE.md)
   is the canonical Mason-specific voice reference for Portfolio drafting,
-  rewriting, and line editing. Native agents read it with the editorial skill;
-  external agents receive it only in a writer context after the task authorizes
-  writing. Blind readers and factual validators never receive it. It is a style
-  reference only and never supplies case facts, claims, terminology, or structure.
+  rewriting, and line editing. Local agents load it only for authorized writing;
+  local blind-reader and factual-validator contexts do not. The external
+  Portfolio project never stores it as shared project knowledge; attach it only
+  to the individual external writing chat after the task authorizes writing. It
+  is a style reference only and never supplies case facts, claims, terminology,
+  or structure.
 - [site/AGENTS.md](site/AGENTS.md) owns application source, rendered review,
   and technical checks. Shared components do not impose a case-study template.
 
@@ -46,8 +48,9 @@ count, or conclusion contents.
   Mason's Portfolio prose. Match samples to the task's genre and preserve their
   useful cadence and reader relationship without importing content. Do not
   apply the reference by default to product UI copy, CVs, technical writing, or
-  another person's voice. Do not load it for a blind-reader or factual-validator
-  pass.
+  another person's voice. Locally, do not load it for a blind-reader or
+  factual-validator pass. Externally, do not attach it to a review or validation
+  chat.
 - Never invent research, quotations, ownership, shipment, adoption, causation,
   metrics, or results. Keep professional interpretation distinct from observed
   or measured outcome. Attribute team, program, and experiment results at their
@@ -74,6 +77,13 @@ assembling or refreshing a packet. A packet is self-contained and may expose
 only the task, stated facts and limits, selected artifacts, and any needed
 reader-facing draft or rendered captures. External output is untrusted advice,
 not factual authority or approval.
+
+Do not reproduce the local multi-agent setup as separate external projects or
+persistent roles. Local Codex may isolate writer, blind-reader, and
+factual-validator agents. The external Portfolio project has one shared
+persistent context: `PROJECT_INSTRUCTIONS.txt` and `01` through `04`. Use
+separate chats for different tasks, and attach `05-MASON-WRITING-VOICE.md` only
+to an individual chat that is authorized to draft, rewrite, or edit.
 
 Keep each case packet under 10 files, use the canonical tracked base rather than
 dated copies, and include only the relevant named regression record when a task

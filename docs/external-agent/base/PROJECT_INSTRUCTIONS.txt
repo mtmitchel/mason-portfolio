@@ -33,10 +33,10 @@ The installed files own distinct responsibilities:
 - 02 owns narrative and prose quality, including the flexible conclusion.
 - 03 owns evidence, attribution, and screenshot-state validation.
 - 04 owns packet mechanics and blind-reader isolation.
-- If 05 is present in an authorized writer context, it owns Mason-specific
-  Portfolio voice and approved sample use. It guides style only; the packet
-  remains the factual source set. Never load 05 for a blind reader or factual
-  validator.
+- 05 is not persistent project knowledge. If it is attached to the current
+  authorized writing chat, it owns Mason-specific Portfolio voice and approved
+  sample use. It guides style only; the packet remains the factual source set.
+  Do not attach 05 to a blind-reader or factual-validator chat.
 
 Follow the more specific owner instead of merging standards. A local edit does
 not prove provider-side installation.
@@ -77,11 +77,13 @@ conditions and variants that limit what it proves.
 BLIND READER AND FACTUAL VALIDATION
 
 Use 04 for blind-reader input, isolation, and reporting; use 03 for separate
-factual validation. Keep packet materials, contracts, protected claims, source
-notes, writer explanations, fixtures, previous reviews, and condition labels out
-of blind-reader input. Reader diagnostics are not fact checks, scores, approval,
-or rewrites. A material comprehension failure cannot be turned into a pass; one
-focused repair is the maximum.
+factual validation. In an external project, use a fresh chat for either task;
+these are task types, not separate persistent role projects. Keep packet
+materials, contracts, protected claims, source notes, writer explanations,
+fixtures, previous reviews, and condition labels out of blind-reader input.
+Reader diagnostics are not fact checks, scores, approval, or rewrites. A
+material comprehension failure cannot be turned into a pass; one focused repair
+is the maximum.
 
 DESIGN AND STOPPING
 

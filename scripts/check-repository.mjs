@@ -630,7 +630,7 @@ record(
   `PROJECT_INSTRUCTIONS.txt must be fewer than 8,000 Unicode characters: ${[...projectInstructions].length}`,
 );
 
-const expectedSharedBaseVersion = "2026-08-02.2";
+const expectedSharedBaseVersion = "2026-08-02.3";
 const sharedBaseVersionPattern = /^\s*Shared-base version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
 const sharedBaseGuidePath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
 const sharedBaseGuide = await readFile(path.join(root, sharedBaseGuidePath), "utf8");
@@ -692,14 +692,42 @@ for (const [file, source] of [
 }
 
 record(
-  /four core/i.test(externalBaseReadme) && /authorized writer/i.test(externalBaseReadme),
-  "external-agent base README must distinguish the four core files from conditional writer context",
+  /one external Portfolio project/i.test(externalBaseReadme)
+    && /four core persistent files/i.test(externalBaseReadme)
+    && /individual chat/i.test(externalBaseReadme),
+  "external-agent base README must define one shared project and a chat-only writing-voice attachment",
 );
 record(
-  /writer context/i.test(externalPacketWorkflow)
+  /Use one external Portfolio project/i.test(externalPacketWorkflow)
+    && /persistent project knowledge/i.test(externalPacketWorkflow)
+    && /individual writing chat/i.test(externalPacketWorkflow)
     && /05-MASON-WRITING-VOICE\.md/.test(externalPacketWorkflow),
-  "external-agent packet workflow must define the conditional writing-voice context",
+  "external-agent packet workflow must define shared project context and a chat-only writing-voice attachment",
 );
+record(
+  /not persistent project knowledge/i.test(projectInstructions)
+    && /authorized writing chat/i.test(projectInstructions),
+  "external project instructions must keep the writing-voice file out of persistent project knowledge",
+);
+record(
+  /persistent external-project knowledge or sources/i.test(writingVoice)
+    && /authorized writing chat/i.test(writingVoice),
+  "writing-voice file must state its external project storage boundary",
+);
+
+for (const [file, source] of [
+  ["AGENTS.md", await readFile(path.join(root, "AGENTS.md"), "utf8")],
+  ["README.md", await readFile(path.join(root, "README.md"), "utf8")],
+  [sharedBaseGuidePath, sharedBaseGuide],
+  ["docs/external-agent/base/README.md", externalBaseReadme],
+  ["docs/external-agent-packets.md", externalPacketWorkflow],
+]) {
+  record(
+    !/separate writer(?:-only)? (?:context|project)/i.test(source)
+      && !/every external role receives/i.test(source),
+    `${file} must not prescribe separate external writer projects or persistent role contexts`,
+  );
+}
 
 const generatedPrefixes = [
   ".agents/",

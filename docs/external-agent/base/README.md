@@ -1,8 +1,8 @@
 # Canonical external-agent portfolio base
 
 This tracked directory is the source of truth for the provider-neutral context
-shared with an outside model or agent. These files are installed separately in
-the external web project spaces. Repository agents follow
+shared with an outside model or agent. The persistent files are installed in
+one external Portfolio project. Repository agents follow
 [`../../external-agent-packets.md`](../../external-agent-packets.md). They may
 inspect this base while assembling a packet, but must not copy its contents or
 cite its filenames or paths inside a case-study task packet. A brief direction
@@ -16,12 +16,12 @@ repository access.
 
 1. Install the complete contents of `PROJECT_INSTRUCTIONS.txt` as the external
    project or custom instructions.
-2. Install `01` through `04` as the four core persistent context files for every
-   external role.
-3. Add `05-MASON-WRITING-VOICE.md` only to a separate writer context after the
-   task explicitly authorizes drafting, rewriting, editing, or line editing
-   Mason's Portfolio prose. Never give `05` to a blind reader or factual
-   validator.
+2. Install `01` through `04` as the four core persistent files in that same
+   Portfolio project.
+3. Do not install `05-MASON-WRITING-VOICE.md` as persistent project knowledge.
+   Attach it directly to an individual chat only after the task explicitly
+   authorizes drafting, rewriting, editing, or line editing Mason's Portfolio
+   prose. Do not attach it to a blind-reader or factual-validator chat.
 4. In the separate case-study packet, state which working mode applies:
    portfolio-slate discovery, case
    construction, rendered-case review, or an explicitly requested combination
@@ -30,12 +30,14 @@ repository access.
    `04-EXTERNAL-AGENT-PACKET-GUIDE.md`.
    Every new or refreshed case-study folder must contain no more than 10 files;
    combine its text sections when necessary and never include base copies.
-6. When comparing agents in the same role, give each one the same applicable
-   context and task packet.
+6. Use separate chats for distinct drafting, review, or validation tasks when
+   useful, but do not create separate role projects. Those chats share the
+   project's persistent instructions and four core files.
 
 After changing any base file, reinstall the four-file core wherever it is used
-and refresh `05` only in writer contexts before sending another task packet. A
-local repository change does not update those project spaces automatically.
+and replace the project instructions before sending another task packet. Attach
+the current canonical `05` only when an authorized writing chat needs it. A
+local repository change does not update the external project automatically.
 Increment the shared-base version in `04-EXTERNAL-AGENT-PACKET-GUIDE.md` whenever
 any installed base file changes, and require the next response to repeat that
 version.
@@ -49,7 +51,8 @@ persistent instructions, attach it as another task file.
 `PROJECT_INSTRUCTIONS.txt` contains compact non-negotiable behavior. The
 numbered files expand it by responsibility: `01` owns audience and hiring value;
 `02` owns story and prose quality; `03` owns evidence and accuracy; `04` owns
-packet contents; and conditional file `05` owns Mason-specific Portfolio voice.
+packet contents; and optional chat attachment `05` owns Mason-specific Portfolio
+voice.
 Mason's current task and explicit corrections govern case-specific decisions.
 When the compact file is less specific, apply the detailed numbered standard
 rather than inventing a compromise.
@@ -62,9 +65,9 @@ hard. Rejection abandons the rejected layout family rather than authorizing a
 cosmetic repair.
 
 The external agent has no access to local files beyond what is explicitly
-shared. Its complete context is the project instructions, the four core base
-files, and the current task packet. An authorized writer also receives `05`;
-blind readers and factual validators do not.
+shared. Every chat's persistent context is the project instructions and four
+core base files; its task-specific context is the current packet. An authorized
+writing chat may also receive `05`; review and factual-validation chats do not.
 
 ## Keep the context selective
 

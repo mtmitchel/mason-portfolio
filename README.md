@@ -61,10 +61,12 @@ The canonical shared instructions and base files live in
 self-contained, provider-neutral case or slate packets.
 
 Generated upload bundles remain under ignored `tmp/external-agent-*`. Every
-external role receives the shared instructions, four core base files, and the
-current packet. A writer may also receive the fifth, voice-specific file after
-writing is authorized; blind readers and factual validators never receive it.
-No role receives implied repository access.
+chat in the external Portfolio project shares the installed instructions and
+four core base files, then receives the current task packet. Do not create
+separate writer, reader, or validator projects. After writing is authorized,
+attach the fifth, voice-specific file only to that individual writing chat; do
+not attach it to a review or factual-validation chat. No external chat receives
+implied repository access.
 
 ## Repository layout
 

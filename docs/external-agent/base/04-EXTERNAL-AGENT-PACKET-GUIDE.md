@@ -1,6 +1,6 @@
 # External-agent packet guide
 
-Shared-base version: `2026-08-02.2`
+Shared-base version: `2026-08-02.3`
 
 This file owns packet mechanics and blind-reader isolation. The current task and
 Mason's corrections govern the case. 02-STORY-AND-READER-STANDARD.md owns
@@ -26,15 +26,17 @@ have to name those labels. Keep all fields out of public case copy.
 
 ## Shared-context isolation
 
-Install `PROJECT_INSTRUCTIONS.txt` and `01` through `04` as the core context for
-every external role. Add `05-MASON-WRITING-VOICE.md` only to a writer context
-after the current task explicitly authorizes drafting, rewriting, editing, or
-line editing Mason's Portfolio prose. It guides style, never facts or claims.
+Install `PROJECT_INSTRUCTIONS.txt` and `01` through `04` as the persistent
+context in one external Portfolio project. Its chats share those project sources
+and instructions. Do not create separate writer, reader, or validator projects
+to reproduce the local multi-agent workflow.
 
-Never give `05` to a blind reader or factual validator. Keep those roles in
-fresh contexts containing only the core files and their allowed task inputs.
-If a provider cannot vary persistent files by role, use a separate writer-only
-project or attach `05` only for the authorized writer turn.
+Keep `05-MASON-WRITING-VOICE.md` out of persistent project knowledge. After the
+current task explicitly authorizes drafting, rewriting, editing, or line editing
+Mason's Portfolio prose, attach `05` only to that individual writing chat. It
+guides style, never facts or claims. For external blind-reader or factual-
+validation work, use a fresh chat with only its allowed task inputs and do not
+attach `05`. Local review may instead use separate isolated agent contexts.
 
 ## File budget and access isolation
 
@@ -110,8 +112,8 @@ copy. The blind reader does not fact-check.
 
 Run a blind-reader check after a new draft, construction, reconstruction, or
 structural rebuild. For a focused repair or line edit, run it only when a prior
-reader failure remains or Mason asks. Use a fresh reader context that did not
-write or repair the candidate.
+reader failure remains or Mason asks. Use a fresh external review chat or
+isolated local reader context that did not write or repair the candidate.
 
 Give the reader exactly one audience sentence and the rendered case, including
 actual headings, captions, visuals, and layout in order. Before implementation,
