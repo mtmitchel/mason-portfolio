@@ -43,6 +43,36 @@ authorized step. When material work remains outside the current authorization,
 recommend one next action in ordinary language instead of asking Mason to choose
 or restate the workflow.
 
+### Local Sol-to-Flash prose route
+
+For authorized drafting, rewriting, focused structural repair, and line
+editing, Sol owns the evidence, private editorial contract, concepts, structural
+direction, protected facts, attribution limits, and validation. The sole
+reader-facing prose writer is exact model `gemini-3.6-flash-high`, launched
+read-only through `agy` plan+sandbox via
+`/home/mason/.codex/skills/delegate-coding-agent/scripts/delegate_agent.py`.
+Require live `agy models` proof for that exact slug; if it is unavailable, stop
+with no fallback or substitution. Review-only work must not launch Flash or
+rewrite.
+
+Flash writes the full reader-facing candidate and its one possible repair. Sol
+may return only one correction brief containing the passage location; the
+factual, conceptual, attribution, logic, or comprehension defect; supporting
+evidence or principle; protected labels, numbers, facts, and claim limits; and
+what the reader must understand. Sol must not send replacement sentences,
+preferred wording, synonyms, cadence instructions, or rewritten conclusions.
+Flash owns sentence construction, word choice, rhythm, transitions, and
+whether optional terminology or plain language is clearest. Sol may reject
+only material factual, conceptual, attribution, scope, logic, evidence, or
+reader-comprehension failures, not stylistic preference.
+
+Allow one consolidated correction brief to the same exact Flash model. If a
+material failure remains, stop `PARTIAL`; no Opus/model fallback or style loop.
+External output remains untrusted: the root inspects the actual text. No
+provider-side file writes. Keep this local route out of external persistent
+context; it does not alter external persistent files 01, 02, 03, or 05 or the
+external project workflow.
+
 ## Durable source and acceptance boundaries
 
 - Treat the supplied evidence boundary as complete unless Mason expands it.

@@ -36,7 +36,8 @@ Give every retained artifact a job such as context, decision, contrast, sequence
 proof, consequence, or result. Remove an artifact that only repeats another,
 requires too much explanation, or weakens the central argument. Every visual
 must clarify, demonstrate, or prove the nearby idea. Captions and alt text must
-describe the same state as visible image text and body copy.
+describe the same state as visible image text and body copy. Captions should
+point the reader to the evidence and what to notice.
 
 Explain unfamiliar products, screens, controls, steps, roles, and internal terms
 before relying on their labels as shorthand. Headings should carry a concrete
@@ -63,6 +64,10 @@ Mason's task requires another variety. Prefer plain words, concrete verbs, and
 clear agency. Use passive voice only when the actor is unknown or unimportant,
 the receiver deserves emphasis, or it is clearer, shorter, or less blaming.
 
+When a UX writing or content-design concept clarifies a supported decision, tie
+it to the exact passage or artifact and explain it plainly. Leave it out when it
+adds jargon or overstates what the evidence shows.
+
 After the structure is sound, line-edit for sentence boundaries, fragments,
 run-ons, comma splices, parallelism, pronouns, apostrophes, quotation marks,
 punctuation, and unnatural phrasing. Preserve deliberate rhythm when it remains
@@ -77,6 +82,13 @@ Never invent research, quotations, ownership, shipment, adoption, causation,
 metrics, or results. Attribute team, program, experiment, and campaign outcomes
 at their supported scope. Use the evidence standard for factual disputes and
 captured interface states.
+
+Credit Mason, collaborators, the team, or product state according to the
+evidence. When collaboration materially changed or constrained a decision,
+show the supported interaction or ownership rather than merely listing
+collaborators. Never invent collaboration detail. Do not assign human judgment
+to an experiment or flow or hide supported contribution behind unnecessary
+hedging.
 
 ## Conclusions land the case
 

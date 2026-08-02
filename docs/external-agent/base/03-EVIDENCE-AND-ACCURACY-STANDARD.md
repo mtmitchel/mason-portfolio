@@ -83,6 +83,13 @@ when known; otherwise describe only the illustrated state.
 Describe the image according to what it is. Do not make its internal provenance
 the public story.
 
+For related before-and-after states, check consequential differences in wording,
+values, dates, controls, placement, hierarchy, and emphasis. Flag prose that
+flattens a material change into “stayed,” “moved,” or “removed,” or leaves a
+removed or changed control unexplained when it materially affects the case. Do
+not require exhaustive screen narration. Screens prove change, not Mason's
+ownership or rationale.
+
 ## Evidence floor and ceiling
 
 The **ceiling** removes or qualifies claims the evidence cannot support.
@@ -93,6 +100,10 @@ scope, the lifecycle, the result, or the hiring value.
 
 Do not use caution in only one direction. Missing paperwork is not proof of a
 negative. Missing metrics do not erase supported judgment or product value.
+
+Keep differently named target and outcome metrics distinct. Do not place or
+phrase them to imply equivalence, target attainment, or a direct comparison
+unless the evidence explicitly connects them.
 
 ## Public prose
 
