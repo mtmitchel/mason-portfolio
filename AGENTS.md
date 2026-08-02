@@ -55,19 +55,25 @@ Require live `agy models` proof for that exact slug; if it is unavailable, stop
 with no fallback or substitution. Review-only work must not launch Flash or
 rewrite.
 
-Flash writes the full reader-facing candidate and its one possible repair. Sol
-may return only one correction brief containing the passage location; the
-factual, conceptual, attribution, logic, or comprehension defect; supporting
-evidence or principle; protected labels, numbers, facts, and claim limits; and
-what the reader must understand. Sol must not send replacement sentences,
-preferred wording, synonyms, cadence instructions, or rewritten conclusions.
-Flash owns sentence construction, word choice, rhythm, transitions, and
-whether optional terminology or plain language is clearest. Sol may reject
-only material factual, conceptual, attribution, scope, logic, evidence, or
-reader-comprehension failures, not stylistic preference.
+Flash writes the full reader-facing candidate and up to three possible repairs.
+For each repair round, Sol may return one consolidated correction brief
+containing the passage location; the factual, conceptual, attribution, logic,
+or comprehension defect; supporting evidence or principle; protected labels,
+numbers, facts, and claim limits; and what the reader must understand. Sol must
+not send replacement sentences, preferred wording, synonyms, cadence
+instructions, or rewritten conclusions. Flash owns sentence construction, word
+choice, rhythm, transitions, and whether optional terminology or plain language
+is clearest. Sol may reject only material factual, conceptual, attribution,
+scope, logic, evidence, or reader-comprehension failures, not stylistic
+preference.
 
-Allow one consolidated correction brief to the same exact Flash model. If a
-material failure remains, stop `PARTIAL`; no Opus/model fallback or style loop.
+Treat Mason's request to draft, write, rewrite, edit, fix, or otherwise change
+Portfolio prose as authorization for the initial Flash candidate and up to three
+repair rounds with the same exact model. Do not ask Mason to authorize Gemini,
+its launch, or any repair round separately. Stop as soon as a candidate passes.
+Each brief must consolidate all material defects in the latest candidate while
+following the same no-replacement-prose boundary. If a material failure remains
+after the third repair, stop `PARTIAL`; no Opus/model fallback or style loop.
 External output remains untrusted: the root inspects the actual text. No
 provider-side file writes. Keep this local route out of external persistent
 context; it does not alter external persistent files 01, 02, 03, or 05 or the
