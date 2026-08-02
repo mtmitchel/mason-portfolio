@@ -57,7 +57,7 @@ Mason's current account establishes the causal frame:
 The tracked `/work/checkout` checkpoint follows these explicit corrections:
 
 - no subheadline; carry its useful meaning in the opening paragraph;
-- metadata: `DeepL · Monetization · 2024`;
+- metadata: `DeepL · Monetization · 2025`;
 - do not display the 35-day net-subscription metric;
 - do not call the result “Pro purchases”; use “paid subscriptions”;
 - in ordinary prose, describe a 3.02% increase in paid subscriptions and

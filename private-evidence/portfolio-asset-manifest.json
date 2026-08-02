@@ -418,10 +418,10 @@
         "kind": "manifest-image-set",
         "public_refs": [
           "site/public/work/checkout/original-account-flow-uniform.png",
-          "site/public/work/checkout/original-details-flow-uniform.png",
-          "site/public/work/checkout/original-review-flow-spaced.png",
+          "site/public/work/checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
+          "site/public/work/checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
           "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
-          "site/public/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png"
+          "site/public/work/checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png"
         ],
         "render_ref": "site/app/work/checkout/CheckoutCase.tsx",
         "required_tokens": [
@@ -453,28 +453,28 @@
           "sha256": "ac1175849669baebba10a1c5d56bde744757f578e56416fa612b1e6b907abc42"
         },
         {
-          "path": "checkout/original-details-flow-uniform.png",
-          "public_path": "site/public/work/checkout/original-details-flow-uniform.png",
-          "artifact_genesis": "crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Inline and enlargement crop that removes the repeated DeepL header and excess outer canvas while retaining the complete progress indicator, Details card, sidebar and Continue action.",
+          "path": "checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
+          "public_path": "site/public/work/checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
+          "artifact_genesis": "scale_matched_crop_of_portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Inline and enlargement presentation matched to the previous route asset's exact 2438x3461 dimensions and composition. It retains the complete progress indicator, Details card, sidebar and Continue action, with the supplied US-format June 27, 2025 trial date and no DeepL header.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-details.png",
-          "source_sha256": "02ab99bb63f80a29dde7ad62a838c4013f4f65e41855afc91363beaff29b819d",
-          "crop": "2438x3461+208+151; shared 32px left, right, and bottom inset from the solid screen group",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/original-details-us-dates.png",
+          "source_sha256": "e52ba532eecd55477215c2b5927948a5efae9812b26936a019789304078a1a4e",
+          "crop": "Complete 2880x4088 supplied presentation downsampled to the previous route asset's exact 2438x3461 dimensions; no additional crop, stretching, logo removal, or interface-content edit",
           "dimensions": "2438x3461",
-          "sha256": "a9e61601faf5ea00c46cc6ebc20874aea1227e273eb66877e633736ccec2e611"
+          "sha256": "59d78ad59f44b12978105784a36b2c139a74835625ad8fcf29760c7117596f54"
         },
         {
-          "path": "checkout/original-review-flow-spaced.png",
-          "public_path": "site/public/work/checkout/original-review-flow-spaced.png",
+          "path": "checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
+          "public_path": "site/public/work/checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
           "artifact_genesis": "user_approved_raster_adjustment_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Approved Review presentation used inline and in enlargement. It removes the repeated DeepL header and excess outer canvas, retains the complete progress indicator, Review card, sidebar and final action, and adds 48 raster pixels above Features of your plan by moving the subsequent left-card content down without changing the interface copy.",
+          "artifact_genesis_notes": "Approved Review presentation used inline and in enlargement. It matches the previous route asset's exact 2048x1811 dimensions and composition, removes the repeated DeepL header and excess outer canvas, retains the complete progress indicator, Review card, sidebar and final action, and preserves the added spacing above Features of your plan. The supplied US-format dates read June 27 and June 28, 2025. The trailing s in Accounts was replaced only with the exact surrounding background so the step label reads Account; no other interface text was redrawn.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-review-flow-spaced.png",
-          "source_sha256": "4df222a33e007a66b486f7d9c1781234f2f978bfd5d5f4e9f632e6cc3d7f82a9",
-          "crop": "2048x1811 approved presentation crop with 48px added spacing above the feature list",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/original-review-us-dates-account-fixed.png",
+          "source_sha256": "2e9a4e39a9429e2f1ec8ad4716a820144478fa46178e95bfb3a34de9edef2404",
+          "crop": "2438x2156+208+151 from the corrected 2880x2608 source, downsampled to the previous route asset's exact 2048x1811 dimensions; subsequent left-card content moved 49px down relative to the normalized source to match the approved live spacing above Features of your plan",
           "dimensions": "2048x1811",
-          "sha256": "4df222a33e007a66b486f7d9c1781234f2f978bfd5d5f4e9f632e6cc3d7f82a9"
+          "sha256": "02906a20ab17410de3ab0355490306b9ef5b92da0e4b2aca9bd784812b14f1de"
         },
         {
           "path": "checkout/rebuilt-account-flow-uniform-v2.png",
@@ -491,18 +491,18 @@
           "sha256": "d398839da5d498c8e4ac2673a61c59ef79d92bdce0098e32c3bcf6748bed416c"
         },
         {
-          "path": "checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
-          "public_path": "site/public/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
+          "path": "checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png",
+          "public_path": "site/public/work/checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png",
           "artifact_genesis": "pixel_cleanup_of_portfolio_reconstruction_crop_2026",
-          "artifact_genesis_notes": "Inline and enlargement crop that removes the repeated DeepL header, page footer, and excess outer canvas while retaining the genuine two-step progress indicator, complete Details card, sidebar, consent statement, and final action. A stray 67x30-pixel fragment of the repeated DeepL logo at the extreme upper-left edge was replaced with the exact surrounding #F1F1F1 background. No checkout interface content is redrawn, resized, stretched, or moved.",
+          "artifact_genesis_notes": "Inline and enlargement crop matched to the previous route asset's exact 2228x3618 dimensions and composition. It removes the repeated DeepL header, page footer and excess outer canvas while retaining the genuine two-step progress indicator, complete Details card, sidebar, consent statement and final action. It shows the US-format June 27, 2025 trial date. The same stray 67x30-pixel fragment of the repeated DeepL logo at the extreme upper-left edge was replaced with the exact surrounding #F1F1F1 background; no checkout interface content was redrawn, resized, stretched or moved.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/rebuilt-details-due-today.png",
-          "source_sha256": "79e29dc7cdf0d31e92367b898c7d66d74ee56a28762c0f0a7e70356f931d85f2",
-          "crop": "2228x3618+168+20; the page footer is excluded. After cropping, only the stray repeated-logo fragment at local x0-66 y48-77 was replaced with the exact surrounding #F1F1F1 background. The solid screen group uses the shared 32px left, right, and bottom inset.",
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/rebuilt-details-us-dates.png",
+          "source_sha256": "3f2e296794cfbfe54c0b99fa25f0d668c95b330b067578c99761899de524c94e",
+          "crop": "2228x3618+168+20 from the supplied 2560x4058 source; page footer excluded. After cropping, only the stray repeated-logo fragment at local x0-66 y48-77 was replaced with the exact surrounding #F1F1F1 background.",
           "dimensions": "2228x3618",
           "caption": "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
           "text_alternative": "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
-          "sha256": "870bd93067c35b83c35e94b97d6bfabc64dc5d4682ddf8846d800784c8f39f7d"
+          "sha256": "c2b5cedba63e936a69f934d9608f7429f6908ed71c9a3913ba006a08586a5687"
         }
       ],
       "homepage_media": {

@@ -10,25 +10,25 @@ const originalAccount: StoryImage = {
   width: 2436,
   height: 1681,
   alt: "Representative original Account step with sign-up fields, an existing-account link, and a 30-day trial message, with Details and Review ahead.",
-  caption: "Customers created an account or used the existing-account link, entered their billing and payment information, and then moved to a separate Review step to confirm and authorize the subscription.",
+  caption: "Original step 1 of 3: account entry, displaying an unsubmitted registration form alongside an existing-account sign-in link.",
 };
 
 const originalDetails: StoryImage = {
   label: "Details step, original checkout",
-  src: "/work/checkout/original-details-flow-uniform.png",
+  src: "/work/checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
   width: 2438,
   height: 3461,
   alt: "Representative original Details step with Annual subscription selected, billing and payment fields, a selected plan summary, an applicable trial explainer, and Review ahead.",
-  caption: originalAccount.caption,
+  caption: "Original step 2 of 3: checkout details, showing billing period options, empty address and payment fields, plan pricing with 30-day trial terms, and the Continue action.",
 };
 
 const originalReview: StoryImage = {
   label: "Review step, original checkout",
-  src: "/work/checkout/original-review-flow-spaced.png",
+  src: "/work/checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
   width: 2048,
   height: 1811,
   alt: "Representative original Review step with trial conditions, the annual price and first payment date, a payment method summary, plan features, consent checkboxes, and Buy now.",
-  caption: originalAccount.caption,
+  caption: "The third step summarized the payment method entered on the previous screen alongside trial conditions, plan features, two consent checkboxes, and the Buy now button.",
 };
 
 const rebuiltAccount: StoryImage = {
@@ -42,11 +42,11 @@ const rebuiltAccount: StoryImage = {
 
 const rebuiltDetails: StoryImage = {
   label: "Details step, shorter checkout",
-  src: "/work/checkout/rebuilt-details-flow-logo-cleaned.px-23599eb66f02.png",
+  src: "/work/checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png",
   width: 2228,
   height: 3618,
   alt: "Representative two-step Details state combining billing and payment fields with the selected plan summary. It shows Due today €0, Total price after trial €299.88 per year, plan features, consent text, and Begin subscription.",
-  caption: "The remaining step combined payment entry with the information and consent customers needed to authorize the subscription.",
+  caption: "Rebuilt step 2 of 2: final details screen combining billing and payment inputs with trial pricing, plan features, passive terms acceptance, and the Begin subscription action.",
 };
 
 const originalSteps = [
@@ -69,10 +69,10 @@ export default function CheckoutCase() {
 
         <header className="chapter-hero">
           <h1>How simplifying DeepL’s checkout helped add €2.4M ARR</h1>
-          <p className="checkout-meta">DeepL · Monetization · 2024</p>
+          <p className="checkout-meta">DeepL · Monetization · 2025</p>
           <div className="chapter-synopsis">
-            <p>DeepL’s 2024 Monetization roadmap included a target to increase checkout conversion by 2%. I worked with the team’s product manager and product designer on a series of experiments intended to advance that goal.</p>
-            <p>One experiment tested shortening subscription checkout from three steps to two. The hypothesis was that removing a step, along with the payment method summary restating information customers had just entered, would make checkout easier to finish. My contribution focused on the UX writing and content design for the shorter flow.</p>
+            <p>DeepL’s 2025 Monetization roadmap included a target to increase checkout conversion by 2%. I worked with the team’s product manager and product designer on a series of experiments intended to advance that goal.</p>
+            <p>One experiment tested shortening subscription checkout from three steps to two by removing the separate Review step and its repeated payment method summary. I partnered with the product designer on the information structure, content iterations, and clarity improvements for the shorter flow.</p>
             <p>Across monthly and annual subscriptions, that experiment increased paid subscriptions by 3.02% and generated approximately €2.4 million in incremental annual recurring revenue.</p>
           </div>
         </header>
@@ -93,8 +93,8 @@ export default function CheckoutCase() {
           />
 
           <div className="chapter-prose">
-            <p>That summary made <strong>Review</strong> look like a step the flow could do without. It was the material the experiment treated as redundant: it showed customers what they had entered a moment earlier. The selected plan, the price, and the trial terms had also been shown in <strong>Details</strong>.</p>
-            <p>But <strong>Review</strong> was also where customers confirmed the subscription and authorized the charge, and the shorter flow still needed that. So the experiment separated the step’s two jobs. The team removed <strong>Review</strong> as a separate screen, dropped the payment method summary, and moved confirmation, authorization, and the final action into <strong>Details</strong>.</p>
+            <p>The payment method summary made <strong>Review</strong> look redundant by repeating card details customers had entered moments earlier on <strong>Details</strong>, where the selected plan, price, and trial terms were already visible in the right-hand plan-and-price area.</p>
+            <p>However, <strong>Review</strong> was also where customers confirmed the subscription and authorized the charge. To shorten checkout, the team separated those two roles: we removed <strong>Review</strong> as a standalone screen, dropped the repeated payment method summary, and moved confirmation, terms acceptance, and the final action into <strong>Details</strong>.</p>
           </div>
         </section>
 
@@ -107,21 +107,21 @@ export default function CheckoutCase() {
               <li>What will I pay, and when?</li>
               <li>What happens when I continue?</li>
             </ul>
-            <p>The questions separated what customers still needed to know from what they had already supplied. To answer them, I helped reorganize <strong>Details</strong>:</p>
+            <p>The questions separated what customers needed to know before committing from what they had already supplied. To answer them, I reorganized the content in the right-hand plan-and-price summary:</p>
             <ul>
-              <li>The selected plan and price stayed beside the entry fields, showing customers what they were subscribing to.</li>
-              <li>The <strong>Features of your plan</strong> block moved from <strong>Review</strong> into the <strong>Details</strong> rail, showing what the subscription included beside those fields. The representative states show it in both places.</li>
-              <li>In the trial state shown, the trial terms sat across several elements. The explainer gave the 30-day trial and the date to cancel by, and the price summary showed <strong>Due today €0</strong>, with the total price applying after the trial. Beneath the button, three lines named the trial, said payment would not begin until it ended, and offered cancellation at any time.</li>
+              <li>The right-hand plan-and-price summary established a clearer price hierarchy beside the entry fields, making the selected plan and billing terms visible while customers filled in their information.</li>
+              <li>The <strong>Features of your plan</strong> block moved from <strong>Review</strong> into the right-hand summary. In the representative rebuilt state, the list was reworded to clarify per-user pricing and shared glossary scope, reordered, and formatted with bold quantities to emphasize key limits.</li>
+              <li>In the representative trial state shown, the trial terms were aligned across the screen. The explainer gave the 30-day duration and cancellation date, the summary displayed <strong>Due today €0</strong> above the post-trial total, and three lines beneath the button confirmed that payment would not begin until the trial ended.</li>
             </ul>
-            <p>Structure answered the first two questions. The third came down to wording: several elements described what continuing would do, and with the final action now in <strong>Details</strong>, they all had to describe the same outcome.</p>
+            <p>Structure answered what customers were buying and what they would pay. The final question came down to alignment: with the commitment now happening on <strong>Details</strong>, every element had to describe the exact same outcome.</p>
           </div>
         </section>
 
         <section className="chapter-section" id="trial-consistency">
           <h2 className="chapter-heading">The trial price, action, and consent had to agree</h2>
           <div className="chapter-prose">
-            <p>In the original <strong>Review</strong> screen, the final action was <strong>Buy now</strong>, and that screen showed no <strong>Due today</strong> line. In the rebuilt <strong>Details</strong> screen, the summary showed <strong>Due today €0</strong> and <strong>Total price after trial €299.88 per year</strong>. Both are representative states.</p>
-            <p>In the trial state shown, nothing was due that day, so <strong>Begin subscription</strong> described the action more accurately than <strong>Buy now</strong>: the button would start the subscription, and payment would follow the trial unless the customer canceled.</p>
+            <p>In the original <strong>Review</strong> screen, the final action was <strong>Buy now</strong>, on a step that showed no breakdown of immediate versus post-trial charges. In the rebuilt <strong>Details</strong> screen, the right-hand summary explicitly separated immediate charges from future commitments, displaying <strong>Due today €0</strong> above <strong>Total price after trial €299.88 per year</strong>. Both screens represent annual trial states.</p>
+            <p>Because nothing was due on the day of checkout, changing the action label to <strong>Begin subscription</strong> described the transaction more accurately than <strong>Buy now</strong>: pressing the button started the trial subscription, with payment following only if the customer did not cancel before the trial ended.</p>
           </div>
 
           <CheckoutFlowViewer
@@ -132,15 +132,15 @@ export default function CheckoutCase() {
           />
 
           <div className="chapter-prose">
-            <p>Consent followed the same logic. I helped replace the terms-acceptance checkbox with acceptance language tied to the final action, so that accepting the terms became part of pressing <strong>Begin subscription</strong> rather than a separate interaction before it.</p>
-            <p>In that trial state, the price summary, the trial lines, the acceptance language, and the button pointed to one outcome: begin the subscription now, pay the annual price when the trial ends, or cancel before then and pay nothing.</p>
+            <p>Consent followed the same alignment logic. The original <strong>Review</strong> step required selecting a terms-acceptance checkbox alongside a separate, optional marketing-email checkbox. In the rebuilt <strong>Details</strong> step, required terms acceptance was integrated into a passive consent statement tied directly to the main action—stating that by pressing <strong>Begin subscription</strong>, customers accepted the terms.</p>
+            <p>In the trial state shown, the price breakdown, trial explainer, passive consent statement, and button text worked together toward a single outcome: start the trial immediately, pay after 30 days, or cancel before then without being charged.</p>
           </div>
         </section>
 
         <section className="chapter-closing" id="experiment-result">
-          <h2 className="chapter-heading">The shorter checkout had to carry the full subscription decision</h2>
+          <h2 className="chapter-heading">Preserving decision clarity in a shorter flow</h2>
           <div className="chapter-prose">
-            <p>Removing <strong>Review</strong> changed where customers confirmed the subscription, but not what they were being asked to authorize. I treated the plan context, trial price, payment timing, consent, and final action as parts of that one decision inside <strong>Details</strong>. That was the content-design judgment I brought to the experiment: organize the remaining step around the subscription itself, so the team was evaluating a complete two-step checkout.</p>
+            <p>Removing the <strong>Review</strong> step was more than deleting a screen; it required restructuring content and information hierarchy so the shorter flow preserved a complete, clear subscription decision, creating a coherent two-step experiment for the team to evaluate.</p>
           </div>
         </section>
 
