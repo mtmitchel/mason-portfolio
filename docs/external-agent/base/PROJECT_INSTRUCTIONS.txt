@@ -33,6 +33,10 @@ The installed files own distinct responsibilities:
 - 02 owns narrative and prose quality, including the flexible conclusion.
 - 03 owns evidence, attribution, and screenshot-state validation.
 - 04 owns packet mechanics and blind-reader isolation.
+- If 05 is present in an authorized writer context, it owns Mason-specific
+  Portfolio voice and approved sample use. It guides style only; the packet
+  remains the factual source set. Never load 05 for a blind reader or factual
+  validator.
 
 Follow the more specific owner instead of merging standards. A local edit does
 not prove provider-side installation.

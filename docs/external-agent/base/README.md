@@ -16,23 +16,29 @@ repository access.
 
 1. Install the complete contents of `PROJECT_INSTRUCTIONS.txt` as the external
    project or custom instructions.
-2. Install the four numbered Markdown files as persistent project context.
-3. In the separate case-study packet, state which working mode applies:
+2. Install `01` through `04` as the four core persistent context files for every
+   external role.
+3. Add `05-MASON-WRITING-VOICE.md` only to a separate writer context after the
+   task explicitly authorizes drafting, rewriting, editing, or line editing
+   Mason's Portfolio prose. Never give `05` to a blind reader or factual
+   validator.
+4. In the separate case-study packet, state which working mode applies:
    portfolio-slate discovery, case
    construction, rendered-case review, or an explicitly requested combination
    of construction and rendered review.
-4. Attach one task-specific packet built with
+5. Attach one task-specific packet built with
    `04-EXTERNAL-AGENT-PACKET-GUIDE.md`.
    Every new or refreshed case-study folder must contain no more than 10 files;
    combine its text sections when necessary and never include base copies.
-5. When comparing agents, give each one the same installed base context and
-   task packet.
+6. When comparing agents in the same role, give each one the same applicable
+   context and task packet.
 
-After changing any base file, reinstall the complete current base in every
-external project space before sending another task packet. A local repository
-change does not update those project spaces automatically. Increment the
-shared-base version in `04-EXTERNAL-AGENT-PACKET-GUIDE.md` whenever any installed
-base file changes, and require the next response to repeat that version.
+After changing any base file, reinstall the four-file core wherever it is used
+and refresh `05` only in writer contexts before sending another task packet. A
+local repository change does not update those project spaces automatically.
+Increment the shared-base version in `04-EXTERNAL-AGENT-PACKET-GUIDE.md` whenever
+any installed base file changes, and require the next response to repeat that
+version.
 
 No provider-specific model or interface is assumed. Keep
 `PROJECT_INSTRUCTIONS.txt` below 8,000 characters. If a service has no
@@ -42,10 +48,11 @@ persistent instructions, attach it as another task file.
 
 `PROJECT_INSTRUCTIONS.txt` contains compact non-negotiable behavior. The
 numbered files expand it by responsibility: `01` owns audience and hiring value;
-`02` owns story and prose quality; `03` owns evidence and accuracy; and `04`
-owns packet contents. Mason's current task and explicit corrections govern
-case-specific decisions. When the compact file is less specific, apply the
-detailed numbered standard rather than inventing a compromise.
+`02` owns story and prose quality; `03` owns evidence and accuracy; `04` owns
+packet contents; and conditional file `05` owns Mason-specific Portfolio voice.
+Mason's current task and explicit corrections govern case-specific decisions.
+When the compact file is less specific, apply the detailed numbered standard
+rather than inventing a compromise.
 
 For design work, use the installed adaptive design guidance without asking
 Mason to name phases or repeat internal workflow language. The Portfolio
@@ -55,8 +62,9 @@ hard. Rejection abandons the rejected layout family rather than authorizing a
 cosmetic repair.
 
 The external agent has no access to local files beyond what is explicitly
-shared. Its complete context is the project instructions, these four base
-files, and the current task packet.
+shared. Its complete context is the project instructions, the four core base
+files, and the current task packet. An authorized writer also receives `05`;
+blind readers and factual validators do not.
 
 ## Keep the context selective
 

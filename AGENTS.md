@@ -19,6 +19,12 @@ implementation and technical verification.
   owns external factual and screenshot-state validation.
 - [docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md](docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md)
   owns external packet mechanics and blind-reader isolation.
+- [docs/external-agent/base/05-MASON-WRITING-VOICE.md](docs/external-agent/base/05-MASON-WRITING-VOICE.md)
+  is the canonical Mason-specific voice reference for Portfolio drafting,
+  rewriting, and line editing. Native agents read it with the editorial skill;
+  external agents receive it only in a writer context after the task authorizes
+  writing. Blind readers and factual validators never receive it. It is a style
+  reference only and never supplies case facts, claims, terminology, or structure.
 - [site/AGENTS.md](site/AGENTS.md) owns application source, rendered review,
   and technical checks. Shared components do not impose a case-study template.
 
@@ -36,6 +42,12 @@ count, or conclusion contents.
 - Treat the supplied evidence boundary as complete unless Mason expands it.
   Current private-evidence owners and Mason's account govern his role,
   contribution, rationale, artifact status, and supported outcomes.
+- Use the approved voice reference only when drafting, rewriting, or editing
+  Mason's Portfolio prose. Match samples to the task's genre and preserve their
+  useful cadence and reader relationship without importing content. Do not
+  apply the reference by default to product UI copy, CVs, technical writing, or
+  another person's voice. Do not load it for a blind-reader or factual-validator
+  pass.
 - Never invent research, quotations, ownership, shipment, adoption, causation,
   metrics, or results. Keep professional interpretation distinct from observed
   or measured outcome. Attribute team, program, and experiment results at their

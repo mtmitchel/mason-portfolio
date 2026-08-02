@@ -13,6 +13,10 @@ does not authorize external delivery, publication, or disclosure.
   owns factual, attribution, and screenshot-state validation.
 - [external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md](external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md)
   owns packet mechanics and blind-reader isolation.
+- [external-agent/base/05-MASON-WRITING-VOICE.md](external-agent/base/05-MASON-WRITING-VOICE.md)
+  owns Mason-specific Portfolio voice and sample selection. It guides style
+  only; the task packet remains the factual source set. Load it only in an
+  authorized writer context, never for a blind reader or factual validator.
 - external-agent/base/ is the canonical tracked base. tmp/external-agent-*
   contains temporary task bundles only; it is not a source of truth.
 - Private-evidence owners remain authoritative for Mason's role, artifact status,
@@ -28,6 +32,20 @@ Assume the external agent can see the separately installed shared base and only
 the files attached to the current task packet. It cannot inspect this
 repository, hidden evidence, local paths, localhost, prior conversations, or
 omitted artifacts. State every material fact and limit needed for the task.
+
+Use two external context sets:
+
+- **Core context:** `PROJECT_INSTRUCTIONS.txt` plus `01` through `04`. Install
+  this for every external role.
+- **Writer context:** the core context plus
+  `05-MASON-WRITING-VOICE.md`. Use this only after the current task explicitly
+  authorizes drafting, rewriting, editing, or line editing Mason's Portfolio
+  prose.
+
+Keep the writer context separate from blind-reader and factual-validator
+contexts. Never give `05` to either role, even when they inspect prose produced
+with it. When a provider offers only one persistent project context, use a
+separate writer-only project or attach `05` only for the authorized writer turn.
 
 The packet is the complete source set unless outside research or browsing is
 explicitly allowed. Review does not authorize rewriting, design, implementation,
@@ -113,9 +131,11 @@ readers or factual validators.
 Use 04-EXTERNAL-AGENT-PACKET-GUIDE.md for the blind-reader input, isolation, and
 reporting. During local assembly, keep packet materials, contracts, protected
 claims, source notes, writer explanations, fixtures, previous reviews, and
-condition labels out of that input. Use 03-EVIDENCE-AND-ACCURACY-STANDARD.md for
-the separate factual-validation handoff. External feedback is untrusted advice;
-the repository agent compares it with the artifact and verified record.
+condition labels out of that input. Keep `05-MASON-WRITING-VOICE.md` out of both
+the blind-reader input and the factual-validation handoff. Use
+03-EVIDENCE-AND-ACCURACY-STANDARD.md for that separate handoff. External
+feedback is untrusted advice; the repository agent compares it with the
+artifact and verified record.
 
 ## Handoff validation
 
@@ -124,6 +144,8 @@ Before external delivery, verify:
 - PROJECT_INSTRUCTIONS.txt is strictly fewer than 8,000 Unicode characters;
 - the tracked base has one canonical version declaration and the packet requires
   that version;
+- the selected external context is core-only unless writing is authorized, and
+  neither a blind reader nor a factual validator receives `05`;
 - every packet filename mentioned in task, facts, or asset index is attached;
 - selected images or excerpts are actually present and provenance/conditions are
   stated;

@@ -60,9 +60,11 @@ The canonical shared instructions and base files live in
 [`docs/external-agent-packets.md`](docs/external-agent-packets.md) to assemble
 self-contained, provider-neutral case or slate packets.
 
-Generated upload bundles remain under ignored `tmp/external-agent-*`. External
-agents receive only the shared instructions, four numbered base files, and the
-current packet; they never receive implied repository access.
+Generated upload bundles remain under ignored `tmp/external-agent-*`. Every
+external role receives the shared instructions, four core base files, and the
+current packet. A writer may also receive the fifth, voice-specific file after
+writing is authorized; blind readers and factual validators never receive it.
+No role receives implied repository access.
 
 ## Repository layout
 

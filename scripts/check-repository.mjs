@@ -135,6 +135,7 @@ const requiredFiles = [
   "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
   "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
   "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md",
+  "docs/external-agent/base/05-MASON-WRITING-VOICE.md",
   "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt",
   "private-evidence/README.md",
   "private-evidence/claim-review.md",
@@ -629,7 +630,7 @@ record(
   `PROJECT_INSTRUCTIONS.txt must be fewer than 8,000 Unicode characters: ${[...projectInstructions].length}`,
 );
 
-const expectedSharedBaseVersion = "2026-08-01.4";
+const expectedSharedBaseVersion = "2026-08-02.2";
 const sharedBaseVersionPattern = /^\s*Shared-base version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
 const sharedBaseGuidePath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
 const sharedBaseGuide = await readFile(path.join(root, sharedBaseGuidePath), "utf8");
@@ -660,6 +661,44 @@ record(
     && trackedExternalBaseDeclarations[0].file === sharedBaseGuidePath
     && trackedExternalBaseDeclarations[0].version === expectedSharedBaseVersion,
   `tracked external-base version declarations must resolve to ${expectedSharedBaseVersion} in ${sharedBaseGuidePath}`,
+);
+
+const externalBaseReadme = await readFile(
+  path.join(root, "docs/external-agent/base/README.md"),
+  "utf8",
+);
+const externalPacketWorkflow = await readFile(
+  path.join(root, "docs/external-agent-packets.md"),
+  "utf8",
+);
+const writingVoice = await readFile(
+  path.join(root, "docs/external-agent/base/05-MASON-WRITING-VOICE.md"),
+  "utf8",
+);
+
+for (const [file, source] of [
+  ["PROJECT_INSTRUCTIONS.txt", projectInstructions],
+  [sharedBaseGuidePath, sharedBaseGuide],
+  ["docs/external-agent/base/README.md", externalBaseReadme],
+  ["docs/external-agent-packets.md", externalPacketWorkflow],
+  ["docs/external-agent/base/05-MASON-WRITING-VOICE.md", writingVoice],
+]) {
+  const normalizedSource = source.replace(/\s+/g, " ");
+  record(
+    /blind reader|blind-reader/i.test(normalizedSource)
+      && /factual validator|factual-validator/i.test(normalizedSource),
+    `${file} must exclude the writing-voice file from blind-reader and factual-validator contexts`,
+  );
+}
+
+record(
+  /four core/i.test(externalBaseReadme) && /authorized writer/i.test(externalBaseReadme),
+  "external-agent base README must distinguish the four core files from conditional writer context",
+);
+record(
+  /writer context/i.test(externalPacketWorkflow)
+    && /05-MASON-WRITING-VOICE\.md/.test(externalPacketWorkflow),
+  "external-agent packet workflow must define the conditional writing-voice context",
 );
 
 const generatedPrefixes = [

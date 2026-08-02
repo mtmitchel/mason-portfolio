@@ -1,6 +1,6 @@
 # External-agent packet guide
 
-Shared-base version: `2026-08-01.4`
+Shared-base version: `2026-08-02.2`
 
 This file owns packet mechanics and blind-reader isolation. The current task and
 Mason's corrections govern the case. 02-STORY-AND-READER-STANDARD.md owns
@@ -23,6 +23,18 @@ extra deliverables. Keep authorization separate from the private editorial
 contract. When Mason explicitly authorizes writing, the packet may carry the
 four private fields and one operation from the story standard; Mason does not
 have to name those labels. Keep all fields out of public case copy.
+
+## Shared-context isolation
+
+Install `PROJECT_INSTRUCTIONS.txt` and `01` through `04` as the core context for
+every external role. Add `05-MASON-WRITING-VOICE.md` only to a writer context
+after the current task explicitly authorizes drafting, rewriting, editing, or
+line editing Mason's Portfolio prose. It guides style, never facts or claims.
+
+Never give `05` to a blind reader or factual validator. Keep those roles in
+fresh contexts containing only the core files and their allowed task inputs.
+If a provider cannot vary persistent files by role, use a separate writer-only
+project or attach `05` only for the authorized writer turn.
 
 ## File budget and access isolation
 
@@ -105,7 +117,8 @@ Give the reader exactly one audience sentence and the rendered case, including
 actual headings, captions, visuals, and layout in order. Before implementation,
 give the complete draft plus selected visuals in intended order. Exclude the
 packet, editorial contract, protected claims, source notes, writer explanation,
-fixtures, previous review, and condition label.
+fixtures, previous review, condition label, and
+`05-MASON-WRITING-VOICE.md`.
 
 After one read, the reader reports what it understood about:
 
@@ -135,6 +148,7 @@ record and only its failure and semantic distinction. A writer-visible passing
 example requires verified content disjointness from the target; if none exists,
 inject none. Never include the full fixture, a target repair, or a full passing
 conclusion. Blind readers and factual validators never see fixtures.
+They also never see `05-MASON-WRITING-VOICE.md`.
 
 ## Design and local review
 
