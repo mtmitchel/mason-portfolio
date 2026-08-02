@@ -55,29 +55,52 @@ Require live `agy models` proof for that exact slug; if it is unavailable, stop
 with no fallback or substitution. Review-only work must not launch Flash or
 rewrite.
 
-Flash writes the full reader-facing candidate and up to three possible repairs.
-For each repair round, Sol may return one consolidated correction brief
-containing the passage location; the factual, conceptual, attribution, logic,
-or comprehension defect; supporting evidence or principle; protected labels,
-numbers, facts, and claim limits; and what the reader must understand. Sol must
-not send replacement sentences, preferred wording, synonyms, cadence
-instructions, or rewritten conclusions. Flash owns sentence construction, word
-choice, rhythm, transitions, and whether optional terminology or plain language
-is clearest. Sol may reject only material factual, conceptual, attribution,
-scope, logic, evidence, or reader-comprehension failures, not stylistic
-preference.
+Flash writes the initial full reader-facing candidate and every reader-facing
+repair. Sol maintains a current acceptance ledger for the assembled draft. For
+each material defect, record the passage location; the factual, conceptual,
+attribution, scope, logic, evidence, or reader-comprehension failure; its
+supporting evidence or principle; protected labels, numbers, facts, and claim
+limits; what the reader must understand; and whether the defect is open,
+resolved, or regressed. Sol must not send replacement sentences, preferred
+wording, synonyms, cadence instructions, or rewritten conclusions. Flash owns
+sentence construction, word choice, rhythm, transitions, and whether optional
+terminology or plain language is clearest. Sol may reject only material
+failures, not stylistic preference.
+
+After the initial candidate, use the smallest repair that can resolve the open
+ledger entries. A full-candidate repair is appropriate only while the structure
+is broadly failing. Otherwise, freeze every accepted passage and protected fact
+and ask Flash for complete replacement prose only for the named failing
+passages, with stable insertion locations. The root validates each returned
+passage before integration and may assemble accepted Flash-authored passages
+without rewriting them. Keep the current live passage when its replacement
+fails. Reject a regression only in the returned passage that introduced it,
+preserve all other accepted work, and narrow the next brief to the defects still
+open. Never regenerate correct prose merely to repair an unrelated passage.
 
 Treat Mason's request to draft, write, rewrite, edit, fix, or otherwise change
-Portfolio prose as authorization for the initial Flash candidate and up to three
-repair rounds with the same exact model. Do not ask Mason to authorize Gemini,
-its launch, or any repair round separately. Stop as soon as a candidate passes.
-Each brief must consolidate all material defects in the latest candidate while
-following the same no-replacement-prose boundary. If a material failure remains
-after the third repair, stop `PARTIAL`; no Opus/model fallback or style loop.
-External output remains untrusted: the root inspects the actual text. No
-provider-side file writes. Keep this local route out of external persistent
-context; it does not alter external persistent files 01, 02, 03, or 05 or the
-external project workflow.
+Portfolio prose as authorization for the initial Flash candidate and every
+same-model correction cycle needed to reach acceptance. Do not ask Mason to
+authorize Gemini, its launch, or any correction cycle separately. Acceptance,
+not a numerical repair limit, ends the loop. Each new launch must target the
+current open ledger and narrow the failing surface when a defect repeats. A
+repeated model-authored defect is not by itself a reason to stop while another
+safe, in-scope Flash correction can be requested. Stop only when the assembled
+candidate passes; Mason stops or changes scope; the exact model or provider is
+unavailable; required evidence or a required decision is missing; or no further
+correction can be requested without Sol writing the prose. No Opus/model
+fallback or separate style loop.
+
+Context compaction is not a completion or stop condition. Reconstruct the open
+ledger from the current draft, latest provider output, and latest validation,
+then continue. Never call rejected output final, claim the requested rewrite is
+complete, or close the task while material defects remain and the authorized
+route can continue. If a real stop condition occurs, state plainly which output
+was rejected and not integrated, which accepted passages were integrated, what
+remains open, and why the next correction cannot run. External output remains
+untrusted: the root inspects the actual text. No provider-side file writes.
+Keep this local route out of external persistent context; it does not alter
+external persistent files 01, 02, 03, or 05 or the external project workflow.
 
 ## Durable source and acceptance boundaries
 
