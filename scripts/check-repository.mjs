@@ -630,102 +630,140 @@ record(
   `PROJECT_INSTRUCTIONS.txt must be fewer than 8,000 Unicode characters: ${[...projectInstructions].length}`,
 );
 
-const expectedSharedBaseVersion = "2026-08-02.3";
-const sharedBaseVersionPattern = /^\s*Shared-base version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
-const sharedBaseGuidePath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
-const sharedBaseGuide = await readFile(path.join(root, sharedBaseGuidePath), "utf8");
-const guideVersionDeclarations = [...sharedBaseGuide.matchAll(sharedBaseVersionPattern)]
-  .map((match) => match[1]);
-record(
-  guideVersionDeclarations.length === 1,
-  `${sharedBaseGuidePath} must contain exactly one Shared-base version declaration`,
-);
-record(
-  guideVersionDeclarations.length === 1 && guideVersionDeclarations[0] === expectedSharedBaseVersion,
-  `${sharedBaseGuidePath} must declare Shared-base version ${expectedSharedBaseVersion}`,
-);
+const externalBaseReadmePath = "docs/external-agent/base/README.md";
+const localPacketRunbookPath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
+const externalPacketWorkflowPath = "docs/external-agent-packets.md";
+const writingVoicePath = "docs/external-agent/base/05-MASON-WRITING-VOICE.md";
+const externalBaseReadme = await readFile(path.join(root, externalBaseReadmePath), "utf8");
+const localPacketRunbook = await readFile(path.join(root, localPacketRunbookPath), "utf8");
+const externalPacketWorkflow = await readFile(path.join(root, externalPacketWorkflowPath), "utf8");
+const writingVoice = await readFile(path.join(root, writingVoicePath), "utf8");
 
-const trackedExternalBaseDeclarations = [];
+const expectedExternalContextVersion = "2026-08-02.5";
+const externalContextVersionPattern = /^\s*External-context version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
+const versionDeclarations = [];
 for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
   const source = await readFile(path.join(root, file), "utf8");
-  for (const match of source.matchAll(sharedBaseVersionPattern)) {
-    trackedExternalBaseDeclarations.push({ file, version: match[1] });
+  for (const match of source.matchAll(externalContextVersionPattern)) {
+    versionDeclarations.push({ file, version: match[1] });
   }
 }
 record(
-  trackedExternalBaseDeclarations.length === 1,
-  "tracked external-base files must contain one canonical Shared-base version declaration",
-);
-record(
-  trackedExternalBaseDeclarations.length === 1
-    && trackedExternalBaseDeclarations[0].file === sharedBaseGuidePath
-    && trackedExternalBaseDeclarations[0].version === expectedSharedBaseVersion,
-  `tracked external-base version declarations must resolve to ${expectedSharedBaseVersion} in ${sharedBaseGuidePath}`,
+  versionDeclarations.length === 1
+    && versionDeclarations[0].file === externalBaseReadmePath
+    && versionDeclarations[0].version === expectedExternalContextVersion,
+  `external context must declare version ${expectedExternalContextVersion} once in ${externalBaseReadmePath}`,
 );
 
-const externalBaseReadme = await readFile(
-  path.join(root, "docs/external-agent/base/README.md"),
-  "utf8",
-);
-const externalPacketWorkflow = await readFile(
-  path.join(root, "docs/external-agent-packets.md"),
-  "utf8",
-);
-const writingVoice = await readFile(
-  path.join(root, "docs/external-agent/base/05-MASON-WRITING-VOICE.md"),
-  "utf8",
-);
-
-for (const [file, source] of [
-  ["PROJECT_INSTRUCTIONS.txt", projectInstructions],
-  [sharedBaseGuidePath, sharedBaseGuide],
-  ["docs/external-agent/base/README.md", externalBaseReadme],
-  ["docs/external-agent-packets.md", externalPacketWorkflow],
-  ["docs/external-agent/base/05-MASON-WRITING-VOICE.md", writingVoice],
-]) {
-  const normalizedSource = source.replace(/\s+/g, " ");
-  record(
-    /blind reader|blind-reader/i.test(normalizedSource)
-      && /factual validator|factual-validator/i.test(normalizedSource),
-    `${file} must exclude the writing-voice file from blind-reader and factual-validator contexts`,
-  );
+const persistentExternalPaths = [
+  "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
+  "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
+  "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
+  writingVoicePath,
+];
+const persistentExternalSources = new Map();
+for (const file of persistentExternalPaths) {
+  persistentExternalSources.set(file, await readFile(path.join(root, file), "utf8"));
 }
 
 record(
-  /one external Portfolio project/i.test(externalBaseReadme)
-    && /four core persistent files/i.test(externalBaseReadme)
-    && /individual chat/i.test(externalBaseReadme),
-  "external-agent base README must define one shared project and a chat-only writing-voice attachment",
+  /neutral portfolio collaborator/i.test(projectInstructions)
+    && /current ordinary-language request/i.test(projectInstructions)
+    && /materials supplied in that\s+chat define the task, scope, and authorization/i.test(projectInstructions),
+  "external project instructions must define a neutral collaborator governed by the current request and supplied materials",
 );
 record(
-  /Use one external Portfolio project/i.test(externalPacketWorkflow)
-    && /persistent project knowledge/i.test(externalPacketWorkflow)
-    && /individual writing chat/i.test(externalPacketWorkflow)
-    && /05-MASON-WRITING-VOICE\.md/.test(externalPacketWorkflow),
-  "external-agent packet workflow must define shared project context and a chat-only writing-voice attachment",
+  /Review and diagnosis do not authorize rewriting/i.test(projectInstructions)
+    && /explicit request to draft,\s*write, rewrite, revise, edit, or fix prose/i.test(projectInstructions),
+  "external project instructions must preserve the review-versus-rewrite boundary",
 );
 record(
-  /not persistent project knowledge/i.test(projectInstructions)
-    && /authorized writing chat/i.test(projectInstructions),
-  "external project instructions must keep the writing-voice file out of persistent project knowledge",
+  /Use outside research only\s+when Mason explicitly requests it/i.test(projectInstructions)
+    && /style\s+guidance; it never supplies case facts, claims, structure, or conclusions/i.test(projectInstructions),
+  "external project instructions must bound outside research and voice-sample use",
 );
 record(
-  /persistent external-project knowledge or sources/i.test(writingVoice)
-    && /authorized writing chat/i.test(writingVoice),
-  "writing-voice file must state its external project storage boundary",
+  /go\s+on/i.test(projectInstructions)
+    && /one useful\s+next step/i.test(projectInstructions),
+  "external project instructions must support ordinary continuation and one useful next step",
+);
+
+const providerLeakagePatterns = [
+  [/\bpacket\b/i, "packet mechanics"],
+  [/\b(?:working|workflow|editorial) mode\b/i, "internal modes"],
+  [/private (?:field|contract)/i, "private workflow fields"],
+  [/build-content-design-portfolio|native skill/i, "local skill names"],
+  [/repository (?:agent|path)|local path|localhost|tmp\//i, "repository or local-path mechanics"],
+  [/model effort|writer model|response receipt|shared-base version/i, "model or receipt rules"],
+  [/blind[- ]reader|factual[- ]validator/i, "specialized local review roles"],
+  [/adaptive design|browser (?:capture|procedure)|\bCodex\b/i, "local design or browser procedures"],
+  [/one focused repair|repair round/i, "repair-round machinery"],
+  [/same-agent rationale/i, "local review rationale"],
+  [/04-EXTERNAL-AGENT-PACKET-GUIDE/i, "local runbook references"],
+];
+for (const [file, source] of [
+  ["docs/external-agent/base/PROJECT_INSTRUCTIONS.txt", projectInstructions],
+  ...persistentExternalSources.entries(),
+]) {
+  for (const [pattern, label] of providerLeakagePatterns) {
+    record(!pattern.test(source), `${file} must not expose ${label}`);
+  }
+}
+
+record(
+  /explicitly asks to evaluate, select, or rebuild the overall portfolio/i.test(persistentExternalSources.get(persistentExternalPaths[0]))
+    && /For any focused request/i.test(persistentExternalSources.get(persistentExternalPaths[0]))
+    && /homepage, navigation element, or site component/i.test(persistentExternalSources.get(persistentExternalPaths[0])),
+  "01 must scope slate-wide guidance to portfolio-wide work",
+);
+record(
+  /Review or diagnosis does not authorize rewriting/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /Use 03 for\s+evidence and accuracy and 05 for Mason's writing voice/i.test(persistentExternalSources.get(persistentExternalPaths[1])),
+  "02 must keep a plain review boundary and route evidence and voice guidance",
+);
+record(
+  /Use outside research only when Mason's current request explicitly authorizes/i.test(persistentExternalSources.get(persistentExternalPaths[2]))
+    && /supplied materials provide broader evidence/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
+  "03 must make the current request and supplied materials the evidence boundary",
+);
+record(
+  /persistent Portfolio voice reference/i.test(writingVoice)
+    && /style guidance only/i.test(writingVoice)
+    && /never evidence/i.test(writingVoice)
+    && /Open a linked full\s+piece only when Mason explicitly requests outside research/i.test(writingVoice)
+    && !/Begin with the pressure|End a section or case|reopen the voice and structure|before touring its features/i.test(writingVoice),
+  "05 must be persistent style guidance and never factual evidence",
+);
+
+record(
+  /Install exactly these four knowledge files once\s+each/i.test(externalBaseReadme)
+    && persistentExternalPaths.every((file) => externalBaseReadme.includes(path.basename(file)))
+    && /Do not install `04-EXTERNAL-AGENT-PACKET-GUIDE\.md`/i.test(externalBaseReadme),
+  "external base README must declare the exact persistent 01, 02, 03, and 05 set and exclude 04",
+);
+record(
+  /Local only\. Never install or attach this file/i.test(localPacketRunbook)
+    && /exactly 01, 02, 03, and 05 once each/i.test(localPacketRunbook)
+    && /fresh projectless external context/i.test(localPacketRunbook),
+  "04 must remain a local sender and QA runbook with projectless independent checks",
+);
+record(
+  /A formal packet is never\s+required/i.test(externalPacketWorkflow)
+    && /fresh projectless context/i.test(externalPacketWorkflow)
+    && /01, 02, 03, and 05/i.test(externalPacketWorkflow),
+  "local external-agent workflow must keep packets optional and the provider set exact",
 );
 
 for (const [file, source] of [
   ["AGENTS.md", await readFile(path.join(root, "AGENTS.md"), "utf8")],
   ["README.md", await readFile(path.join(root, "README.md"), "utf8")],
-  [sharedBaseGuidePath, sharedBaseGuide],
-  ["docs/external-agent/base/README.md", externalBaseReadme],
-  ["docs/external-agent-packets.md", externalPacketWorkflow],
+  [externalBaseReadmePath, externalBaseReadme],
+  [externalPacketWorkflowPath, externalPacketWorkflow],
+  [localPacketRunbookPath, localPacketRunbook],
 ]) {
   record(
-    !/separate writer(?:-only)? (?:context|project)/i.test(source)
-      && !/every external role receives/i.test(source),
-    `${file} must not prescribe separate external writer projects or persistent role contexts`,
+    !/persistent context[^\n]*(?:01 through 04|01` through `04)|05[^\n]*(?:not persistent|chat-only attachment)/i.test(source),
+    `${file} must not retain the obsolete external persistent-set description`,
   );
 }
 

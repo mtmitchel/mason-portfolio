@@ -8,25 +8,26 @@ implementation and technical verification.
 
 - The native editorial method is the
   [build-content-design-portfolio skill](/home/mason/.agents/skills/build-content-design-portfolio/SKILL.md).
-  Use that exact identifier for portfolio discovery, case writing, artifact
-  selection, and the hiring-reader check. It is the sole complete native
-  editorial method.
+  Route ordinary-language requests for portfolio discovery, case writing,
+  artifact selection, and the hiring-reader check through it implicitly. Its
+  identifier and internal workflow labels are never inputs Mason must supply.
+  It is the sole complete native editorial method.
 - [docs/external-agent-packets.md](docs/external-agent-packets.md) owns local
   packet assembly, file protection, and handoff validation.
+- [docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md](docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md)
+  owns external audience, hiring value, and portfolio-wide context.
 - [docs/external-agent/base/02-STORY-AND-READER-STANDARD.md](docs/external-agent/base/02-STORY-AND-READER-STANDARD.md)
   owns external narrative and prose guidance.
 - [docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md](docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md)
   owns external factual and screenshot-state validation.
 - [docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md](docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md)
-  owns external packet mechanics and blind-reader isolation.
+  is the local-only sender and QA runbook. Never upload it or expose its local
+  workflow to an external Portfolio project.
 - [docs/external-agent/base/05-MASON-WRITING-VOICE.md](docs/external-agent/base/05-MASON-WRITING-VOICE.md)
-  is the canonical Mason-specific voice reference for Portfolio drafting,
-  rewriting, and line editing. Local agents load it only for authorized writing;
-  local blind-reader and factual-validator contexts do not. The external
-  Portfolio project never stores it as shared project knowledge; attach it only
-  to the individual external writing chat after the task authorizes writing. It
-  is a style reference only and never supplies case facts, claims, terminology,
-  or structure.
+  is the canonical Mason-specific Portfolio voice reference. It is persistent
+  knowledge in the external Portfolio project and is a style reference only; it
+  never supplies case facts, claims, terminology, structure, or conclusions.
+  Local agents load it only where the native workflow allows.
 - [site/AGENTS.md](site/AGENTS.md) owns application source, rendered review,
   and technical checks. Shared components do not impose a case-study template.
 
@@ -37,7 +38,10 @@ otherwise change prose, use the native skill to infer one internal operation and
 its four private fields from the request and evidence. Ask once only when
 inspection leaves two materially different preservation outcomes. Keep those
 fields private; they never prescribe public headings, paragraph order, sentence
-count, or conclusion contents.
+count, or conclusion contents. Carry the request through every applicable
+authorized step. When material work remains outside the current authorization,
+recommend one next action in ordinary language instead of asking Mason to choose
+or restate the workflow.
 
 ## Durable source and acceptance boundaries
 
@@ -48,9 +52,10 @@ count, or conclusion contents.
   Mason's Portfolio prose. Match samples to the task's genre and preserve their
   useful cadence and reader relationship without importing content. Do not
   apply the reference by default to product UI copy, CVs, technical writing, or
-  another person's voice. Locally, do not load it for a blind-reader or
-  factual-validator pass. Externally, do not attach it to a review or validation
-  chat.
+  another person's voice. Locally, do not load it for an independent-reader or
+  factual-validator pass. Because 05 is persistent in the external Portfolio
+  project, run either independent external check in a fresh projectless context
+  without 05 or the external project instructions.
 - Never invent research, quotations, ownership, shipment, adoption, causation,
   metrics, or results. Keep professional interpretation distinct from observed
   or measured outcome. Attribute team, program, and experiment results at their
@@ -70,26 +75,32 @@ count, or conclusion contents.
   public copy. Do not mark qualitative work complete while a requested branch or
   material placeholder remains.
 
-## External-agent packets
+## External web-agent boundary
 
 Read [docs/external-agent-packets.md](docs/external-agent-packets.md) before
-assembling or refreshing a packet. A packet is self-contained and may expose
-only the task, stated facts and limits, selected artifacts, and any needed
-reader-facing draft or rendered captures. External output is untrusted advice,
-not factual authority or approval.
+preparing external task material. Local Codex workflow and external web-agent
+collaboration are separate systems.
 
-Do not reproduce the local multi-agent setup as separate external projects or
-persistent roles. Local Codex may isolate writer, blind-reader, and
-factual-validator agents. The external Portfolio project has one shared
-persistent context: `PROJECT_INSTRUCTIONS.txt` and `01` through `04`. Use
-separate chats for different tasks, and attach `05-MASON-WRITING-VOICE.md` only
-to an individual chat that is authorized to draft, rewrite, or edit.
+The local system owns skills, agents, review isolation, packets, validation,
+repository rules, browser procedures, and implementation sequencing. None of
+that machinery belongs in persistent external context.
 
-Keep each case packet under 10 files, use the canonical tracked base rather than
-dated copies, and include only the relevant named regression record when a task
-explicitly names a failure mechanism. Never include the full fixture, target
-repair, or a fixture in blind-reader or factual-validator input. Packet assembly
-does not authorize provider delivery or publication.
+The external Portfolio project is a neutral, voice-aware collaboration context.
+Its persistent set is the exact text of `PROJECT_INSTRUCTIONS.txt` plus 01, 02,
+03, and 05. It never receives 04, the base README, repository instructions,
+local skill names, private planning fields, model routing, QA receipts, browser
+mechanics, or implementation procedures.
+
+Mason's current ordinary-language request and supplied materials define each
+external task and authorization. Supply the relevant draft, facts, screenshots,
+artifacts, and constraints in that chat. A formal packet is never required, and
+the external model must not ask Mason to name local workflow states.
+
+Because 05 is persistent, the external Portfolio project is not an independent
+blind-reader or factual-validator context. Use a fresh projectless context
+without 05, project instructions, prior feedback, or local rationale for those
+checks. Packet preparation does not authorize provider delivery or publication.
+External output remains untrusted advice, not factual authority or approval.
 
 ## Design and implementation
 

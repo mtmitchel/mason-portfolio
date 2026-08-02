@@ -1,37 +1,11 @@
 # Story and reader standard
 
-This file owns external narrative and prose guidance. It is delivery copy for an
-agent that cannot access the native build-content-design-portfolio skill.
-Packet mechanics and blind-reader isolation belong to
-04-EXTERNAL-AGENT-PACKET-GUIDE.md. Factual and screenshot-state validation
-belongs to 03-EVIDENCE-AND-ACCURACY-STANDARD.md.
+This file guides narrative, visual argument, and prose quality. Use 03 for
+evidence and accuracy and 05 for Mason's writing voice.
 
-## Authorization and private editorial contract
-
-Review or diagnosis does not authorize rewriting. Mason must explicitly ask to
-draft, write, rewrite, edit, fix, or otherwise change prose before any writing
-occurs. Once writing is authorized, infer one internal operation from Mason's
-ordinary language, requested preservation level, and supplied evidence:
-
-- draft from evidence: an existing draft is not binding;
-- structural rebuild: discard rejected framing, headings, paragraph order, and
-  conclusion;
-- focused structural repair: preserve the larger arc and replace only named
-  sections or relationships; or
-- line edit only: preserve claim meaning, structure, and paragraph order while
-  fixing clarity and mechanics.
-
-Keep only these four private fields:
-
-- Editorial operation
-- Governing tension or decision
-- Contribution boundary
-- Evidence boundary
-
-Mason never has to name an operation or fill a form. Ask only when inspection
-leaves two materially different preservation outcomes. The fields are planning
-material, never public headings, paragraph order, sentence count, or conclusion
-contents.
+Review or diagnosis does not authorize rewriting. Change prose only when Mason
+explicitly asks to draft, write, rewrite, revise, edit, or fix it. Preserve the
+scope and level of change stated in his request.
 
 ## Find the story before polishing
 
@@ -109,18 +83,17 @@ captured interface states.
 A conclusion may resolve or integrate the case's governing pressure, decision,
 consequence, relationship, through-line, or demonstrated judgment using facts
 already established. Choose the landing that makes this case legible. It need
-not mention the metric, every private contract field, Mason's contribution,
-attribution, or a novel insight. Do not force a fixed tension/contribution/
-attribution/result/insight sequence.
+not mention the metric, every aspect of Mason's contribution, attribution, or a
+novel insight. Do not force a fixed tension/contribution/attribution/result/
+insight sequence.
 
 Treat an ending as failing when it mainly repeats the heading, opening, body,
 metric, role statement, or attribution disclaimer; could move to the
 introduction unchanged; introduces an unsupported fact; inventories evidence
 instead of interpreting it; or forces a polished contrast the case does not
 support. The ending should not be a generic lesson, defensive caveat, or slogan,
-but it also need not manufacture a new insight. Same-agent rationale, sentence
-counts, checklist coverage, and self-verdict are diagnostic only, never
-acceptance.
+but it also need not manufacture a new insight. Sentence counts, checklist
+coverage, and self-verdict are diagnostic only, never acceptance.
 
 Call an ending integrated only when it changes, completes, connects, or resolves
 the reader's understanding of already-established parts. An accurate,
@@ -132,11 +105,3 @@ slot, new fact, metric, or novel insight.
 Mason's explicit qualitative rejection invalidates acceptance and reopens the
 rejected structure instead of inviting cosmetic repair. A conclusion is judged
 as part of the complete case, not as an isolated slot.
-
-## Reader and evidence handoff
-
-Use 04-EXTERNAL-AGENT-PACKET-GUIDE.md for blind-reader isolation and reporting.
-Use 03-EVIDENCE-AND-ACCURACY-STANDARD.md for factual validation. Keep those
-diagnostic and evidence checks separate from this prose standard; do not add
-another agent, round, template, worksheet, score, or permanent evaluation
-report.

@@ -1,8 +1,9 @@
 # Mason writing voice and sample notes
 
-This file is the canonical Mason-specific voice reference for Portfolio
-drafting, rewriting, and line editing. It complements the story method in 02.
-It does not govern facts, claims, terminology, case structure, or authorization.
+This file is Mason's persistent Portfolio voice reference. It supports both
+evaluation and authorized drafting, rewriting, and line editing. It complements
+the story guidance in 02. It does not govern facts, claims, terminology, case
+structure, conclusions, or authorization.
 
 ## Precedence and limits
 
@@ -19,11 +20,8 @@ It does not govern facts, claims, terminology, case structure, or authorization.
   Brand editing may be present.
 - Do not use this editorial voice as the default for product-interface copy,
   CV bullets, technical documentation, email, or another person's writing.
-- Load this file only for an authorized Portfolio drafting, rewriting, editing,
-  or line-editing task. Never load it for a blind reader or factual validator.
-- Do not add this file to persistent external-project knowledge or sources.
-  Attach it only to the individual authorized writing chat, and never to a
-  review or factual-validation chat.
+- Treat these samples as style guidance only. They are never evidence for the
+  facts, claims, structure, or conclusion of another case.
 
 ## Selected corpus
 
@@ -40,32 +38,24 @@ voice.
 
 ## Durable voice traits
 
-- **Begin with the pressure.** Establish the business, social, or reader
-  problem before introducing the product, recommendation, or detailed proof.
-- **Make complex subjects navigable.** Define unfamiliar terms, divide the
-  argument into meaningful parts, and move from context to examples to
-  practical meaning.
-- **Keep the reader close.** Use direct address, contractions, and occasional
-  questions when they create genuine conversation or clarify the next issue.
-- **Use real turns.** Favor supported contrast and consequence: a familiar idea
-  becomes complicated, evidence changes the initial reading, or a constraint
-  makes the next decision necessary.
-- **Pair proof with interpretation.** Do not drop a statistic, feature, or quote
-  into the page without explaining what the reader should understand from it.
-- **Vary sentence pressure.** Longer explanatory sentences can carry context;
-  a short sentence can sharpen a turn or conclusion. Preserve natural rhythm
-  without making every paragraph follow the same pattern.
-- **Sound informed but human.** Prefer concrete language and confident
-  explanation over institutional distance. Warmth and wit are welcome when
-  they fit the subject.
-- **Land on meaning.** End a section or case by resolving its governing issue or
-  showing the consequence, not by repeating the opening or inventorying what
-  the reader just saw.
+- **Direct and grounded.** State the real pressure or practical concern in
+  concrete language without inflating it.
+- **Clear with complexity.** Define unfamiliar terms, provide enough context,
+  and use plain transitions so a reader can follow a dense subject.
+- **Close to the reader.** Use direct address, contractions, and occasional
+  questions when they create genuine conversation.
+- **Natural in its turns.** Use supported contrast and consequence without
+  canned pivots, theatrical reveals, or inflated signposting.
+- **Varied in rhythm.** Let longer explanatory sentences carry context and use
+  shorter sentences for emphasis. Do not make every paragraph sound alike.
+- **Informed but human.** Prefer concrete nouns, confident explanation, warmth,
+  and restrained wit over institutional distance.
 
 ## Default annotated samples
 
-These short excerpts are memory cues, not copy templates. Use the linked full
-piece only when the task permits browsing or provides it as a source.
+These short excerpts are memory cues, not copy templates. Open a linked full
+piece only when Mason explicitly requests outside research in the current chat
+or supplies the full piece as a source in that chat.
 
 ### Complicate a familiar idea
 
@@ -73,9 +63,8 @@ From [The Problem With Culture Fit and What Can Be Done About It](https://www.sm
 
 > Put them together, however, and things change a bit.
 
-Use this piece for argument-led writing that introduces a familiar concept,
-shows why it is not as simple as it appears, then works toward a practical
-response.
+Use this piece for measured pivots that complicate a familiar assumption without
+theatrical framing.
 
 ### Connect commercial stakes to a concrete case
 
@@ -83,8 +72,8 @@ From [How SmartRecruiters Could Save You a Million Dollars](https://www.smartrec
 
 > For some this may be inconvenient; for others it may be a blessing in disguise.
 
-Use this piece for business-facing writing that moves from market pressure to a
-specific customer situation, supported result, and relevant product detail.
+Use this piece for business-facing prose that sounds confident, concrete, and
+restrained rather than promotional.
 
 ### Explain through a human analogy
 
@@ -92,9 +81,8 @@ From [Everything You Need to Know About Onboarding](https://www.smartrecruiters.
 
 > Think of onboarding as an extended handshake and hello.
 
-Use this piece for approachable explanatory writing. Borrow the instinct to
-make an abstract process familiar, not its older rhetorical flourishes or
-every analogy.
+Use this piece for approachable explanatory language and sparing human analogies,
+not its older rhetorical flourishes or every analogy.
 
 ### Bring curiosity into an interview or profile
 
@@ -103,8 +91,8 @@ From [Discussions on Hiring as a Global Humanism](https://hiringsuccess.com/epis
 > The discussion that followed is one that you're sure to appreciate.
 
 Use the edited introduction and Mason's questions for conversational curiosity,
-topic synthesis, and follow-ups that build on what the subject just said. Do not
-copy transcript fillers or spoken sentence fragments into polished prose.
+concise question framing, and responsive follow-ups. Do not copy transcript
+fillers or spoken sentence fragments into polished prose.
 
 ### Move from external change to product response
 
@@ -112,9 +100,8 @@ From [Localyze 2.0: The next generation of global mobility tech](https://www.loc
 
 > This isn't your run-of-the-mill product release, though.
 
-Use this piece for product storytelling that explains why a release became
-necessary before touring its features. Keep the user or customer problem in
-view as the product detail becomes more specific.
+Use this piece for energetic but grounded product language that balances
+business context with concrete feature detail.
 
 ### Turn research into an argument
 
@@ -122,9 +109,9 @@ From [Hiring Overseas Talent to Tackle the UK Labour Shortage](https://media.jou
 
 > The primary purpose of this report, though, is not to outline the merits of international hiring.
 
-Use this report for evidence-led writing that states the question, explains the
-method, groups findings into claims, and interprets what the evidence means.
-The report serves a UK audience and uses British English; do not transfer that
+Use this report for evidence-led prose with explicit questions, restrained
+claims, and readable transitions between findings and interpretation. The
+report serves a UK audience and uses British English; do not transfer that
 spelling to current Portfolio copy.
 
 ## Complete corpus index
@@ -163,5 +150,5 @@ UK- and US-facing assignments. Preserve their strengths without copying:
 - a source's outline, heading pattern, or conclusion as a reusable template.
 
 Current Mason corrections outrank every sample. If he rejects a draft as not
-sounding like him, reopen the voice and structure instead of defending a
+sounding like him, reconsider the voice choices instead of defending a
 mechanically compliant imitation.

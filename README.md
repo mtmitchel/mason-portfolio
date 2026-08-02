@@ -53,20 +53,20 @@ current routes. The default path is:
 current-direction notes, manifest, and existing routes are inputs to judgment,
 not approval gates or templates.
 
-## External-agent packets
+## External web-agent context
 
 The canonical shared instructions and base files live in
-[`docs/external-agent/base/`](docs/external-agent/base/). Repository agents use
-[`docs/external-agent-packets.md`](docs/external-agent-packets.md) to assemble
-self-contained, provider-neutral case or slate packets.
+[`docs/external-agent/base/`](docs/external-agent/base/). The external Portfolio
+project receives the project instructions plus 01, 02, 03, and 05 as persistent
+context. File 04 and [`docs/external-agent-packets.md`](docs/external-agent-packets.md)
+remain local sender and QA guidance and are never uploaded.
 
-Generated upload bundles remain under ignored `tmp/external-agent-*`. Every
-chat in the external Portfolio project shares the installed instructions and
-four core base files, then receives the current task packet. Do not create
-separate writer, reader, or validator projects. After writing is authorized,
-attach the fifth, voice-specific file only to that individual writing chat; do
-not attach it to a review or factual-validation chat. No external chat receives
-implied repository access.
+Each external chat receives Mason's ordinary-language request and only the
+relevant draft, facts, screenshots, artifacts, and constraints. A formal packet
+is optional local preparation, never a prerequisite. Because 05 is persistent,
+independent reader or factual checks use a fresh projectless context without the
+voice file or external project instructions. No external chat receives implied
+repository access or local Codex workflow.
 
 ## Repository layout
 

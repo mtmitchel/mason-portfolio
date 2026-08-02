@@ -5,10 +5,13 @@ growth, subscriptions, pricing, enterprise accounts, and product marketing.
 
 ## The portfolio goal
 
-Build the strongest overall portfolio site: roughly five convincing cases
-selected across Mason's DeepL experience and the full available evidence base.
-Do not assume that existing case pages, old case names, prior groupings, or
-current screens are the right portfolio.
+When Mason explicitly asks to evaluate, select, or rebuild the overall portfolio
+slate, build the strongest overall site: roughly five convincing cases selected
+across Mason's DeepL experience and the full available evidence base. Do not
+assume that existing case pages, old case names, prior groupings, or current
+screens are the right portfolio. For any focused request—including a case,
+passage, page, card, homepage, navigation element, or site component—use this
+goal as context without reopening the full slate.
 
 Look for combinations that connect:
 
@@ -85,8 +88,3 @@ When no direct revenue result exists, state the strongest supported value at
 the correct scope—such as conversion, adoption, retention, task completion,
 trust, reduced support burden, or operational scale. Never invent a business
 impact to make a case sound more commercial.
-
-Agents may also extrapolate and explain what a UX, microcopy, or content-design
-change would help a user do when Figma mockups, Mason's recollection, or other
-artifacts support the reading and established professional practice supports
-the reasoning. This is professional analysis and tradecraft, not fabrication.

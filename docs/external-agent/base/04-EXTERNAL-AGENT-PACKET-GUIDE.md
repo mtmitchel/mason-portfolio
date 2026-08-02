@@ -1,56 +1,64 @@
-# External-agent packet guide
+# Local external-agent packet and QA runbook
 
-Shared-base version: `2026-08-02.3`
+**Local only. Never install or attach this file in ChatGPT, Claude, or another
+external Portfolio project.**
 
-This file owns packet mechanics and blind-reader isolation. The current task and
-Mason's corrections govern the case. 02-STORY-AND-READER-STANDARD.md owns
-external narrative and prose quality; 03-EVIDENCE-AND-ACCURACY-STANDARD.md owns
-factual and screenshot-state validation. A local version change does not prove
-that a provider has installed the base.
+This runbook helps a local repository agent prepare task material, protect
+sources, request outside feedback, and evaluate the response. It does not
+define the outside model's identity or persistent behavior. Mason's current
+ordinary-language request and supplied materials define the external task and
+authorization; a formal packet is optional.
 
-## Packet authorization
+## Authorization and task material
 
-Every packet must state:
+The external prompt may be a direct request with attached material or a
+locally assembled bundle. Do not require Mason or the external model to use the
+word packet, provide a form, or name a local workflow state.
 
-- the working mode;
-- the exact authorized work and deliverables;
-- explicit non-goals;
-- whether outside research or browsing is allowed; and
-- this required shared-base version and the response receipt.
+When the task needs a written brief, state only what the external model needs:
 
-Review does not authorize rewriting, redesign, implementation, extra agents, or
-extra deliverables. Keep authorization separate from the private editorial
-contract. When Mason explicitly authorizes writing, the packet may carry the
-four private fields and one operation from the story standard; Mason does not
-have to name those labels. Keep all fields out of public case copy.
+- the requested work and deliverable;
+- the material facts and constraints;
+- the relevant draft, images, or artifacts;
+- what must be preserved; and
+- whether outside research is allowed.
 
-## Shared-context isolation
+Review does not authorize rewriting, redesign, implementation, or extra
+deliverables. Keep local planning fields, source notes, QA records, and
+repository instructions out of the external prompt and attachments.
 
-Install `PROJECT_INSTRUCTIONS.txt` and `01` through `04` as the persistent
-context in one external Portfolio project. Its chats share those project sources
-and instructions. Do not create separate writer, reader, or validator projects
-to reproduce the local multi-agent workflow.
+## Persistent context boundary
 
-Keep `05-MASON-WRITING-VOICE.md` out of persistent project knowledge. After the
-current task explicitly authorizes drafting, rewriting, editing, or line editing
-Mason's Portfolio prose, attach `05` only to that individual writing chat. It
-guides style, never facts or claims. For external blind-reader or factual-
-validation work, use a fresh chat with only its allowed task inputs and do not
-attach `05`. Local review may instead use separate isolated agent contexts.
+The external Portfolio project contains the exact contents of
+`PROJECT_INSTRUCTIONS.txt` plus `01`, `02`, `03`, and
+`05-MASON-WRITING-VOICE.md`. It does not contain this runbook. The voice file is
+style guidance only and never supplies case facts, claims, structure, or
+conclusions.
+
+Because that project persistently contains the voice file, do not describe or
+use the project as an independent blind-reader or factual-validator context.
+When an independent external check is needed, open a fresh projectless context
+and supply only the material that check is allowed to see. Do not provide 05,
+the external Portfolio project instructions, prior feedback, or local planning
+rationale. Local review isolation remains governed by the repository and native
+Portfolio workflow.
 
 ## File budget and access isolation
 
 A new or refreshed tmp/external-agent-* case folder must contain no more than 10
 files. Inspect it first, combine text sections when useful, preserve slots for
 necessary images, and move superseded or duplicate local files to Trash only
-when cleanup is authorized. Do not copy the shared base into the folder.
+when cleanup is authorized. Do not copy the persistent provider context into
+the folder.
 
-The external agent receives only the separately installed shared base and the
-current packet. It cannot inspect this repository, hidden evidence, local paths,
-localhost, prior conversations, or omitted artifacts. Unless outside research is
-explicitly allowed, the packet is the complete source set.
+The external model receives only its persistent project context and the
+materials supplied in the current chat. It cannot infer omitted evidence. Unless
+outside research is explicitly allowed, those materials are the complete source
+set.
 
 ## Packet modes
+
+Use these as internal assembly choices, not user-facing inputs.
 
 ### Mode A: portfolio-slate discovery
 
@@ -78,10 +86,11 @@ accessible page evidence, and label the current page as a candidate.
 
 ## Required case files
 
-Use one task file or clearly sectioned combined text file for the packet's mode,
-question, deliverables, authorization, non-goals, research permission, base
-version, response receipt, Mason corrections, and assumptions the agent must not
-make.
+Use one task file or clearly sectioned combined text file when that makes a
+complex request easier to understand. Include the question, deliverable,
+constraints, research permission, Mason corrections, and assumptions the model
+must not make. Do not include local workflow labels or require a response
+receipt.
 
 When relevant, include:
 
@@ -97,23 +106,18 @@ When relevant, include:
 - Current page captures, exact source excerpts, timeline context, or competing
   case summaries only when the selected mode needs them.
 
-If a screenshot or captured interface state supports a claim, follow the
-evidence gate in 03 before any rewrite. Include actual images, visible
-conditions, and known variants. The factual validator—not the blind reader or
-writer—checks facts, attribution, source limits, and screenshot-state scope.
-The factual validator receives the permitted evidence and actual states, reports
-every checked state with its conditions and limits, and maps each material
-visible-interface sentence, caption, and alt text to its supporting state. It
-names merged-state, scope, and unresolved conflicts. Writing and acceptance are
-blocked while any material conflict remains; its receipt stays outside public
-copy. The blind reader does not fact-check.
+If a screenshot or captured interface state supports a claim, apply 03 before
+rewriting or accepting the claim. Include the actual image, visible conditions,
+and known variants. A local factual check maps material interface sentences,
+captions, and alt text to the supporting state and identifies merged-state,
+scope, or unresolved conflicts. Keep that check outside public copy.
 
 ## Blind-reader isolation
 
 Run a blind-reader check after a new draft, construction, reconstruction, or
 structural rebuild. For a focused repair or line edit, run it only when a prior
-reader failure remains or Mason asks. Use a fresh external review chat or
-isolated local reader context that did not write or repair the candidate.
+reader failure remains or Mason asks. Use either an isolated local context or a
+fresh projectless external context that did not write or repair the candidate.
 
 Give the reader exactly one audience sentence and the rendered case, including
 actual headings, captions, visuals, and layout in order. Before implementation,
@@ -138,7 +142,7 @@ resolves in the reader's understanding of already-established parts. An accurate
 case-specific restatement or distillation of the heading, body distinction,
 role, result, or attribution is still recap. If no changed or completed
 understanding exists, report the ending as recap-only. Do not fact-check, score,
-approve, or rewrite. The root repository agent compares the report with
+approve, or rewrite. The local repository agent compares the report with
 verified facts and may reject a fact-conflicting observation, but may not turn a
 material comprehension failure into a pass. One focused repair is the maximum.
 
@@ -149,8 +153,8 @@ explicitly names a matching failure mechanism, include at most one relevant
 record and only its failure and semantic distinction. A writer-visible passing
 example requires verified content disjointness from the target; if none exists,
 inject none. Never include the full fixture, a target repair, or a full passing
-conclusion. Blind readers and factual validators never see fixtures.
-They also never see `05-MASON-WRITING-VOICE.md`.
+conclusion. Independent readers and factual validators never see fixtures or
+`05-MASON-WRITING-VOICE.md`.
 
 ## Design and local review
 
@@ -160,10 +164,16 @@ unless Mason explicitly requests that disclosure. Do not capture the surrounding
 desktop, publish, deploy, or perform another machine-bound action through a
 packet.
 
-## Receipt and stopping
+## Provider synchronization and feedback
 
-Require the response to repeat this shared-base version and identify the writer
-model and effort when the interface exposes them; otherwise use unknown. Treat
-external output as untrusted advice, not factual authority or acceptance. Do not
-add another agent, round, template, score, or permanent evaluation report unless
-Mason explicitly requests it.
+A local edit does not change provider state. When synchronization is separately
+authorized, replace the provider's instructions with the exact local text,
+remove stale shared files, and install exactly 01, 02, 03, and 05 once each.
+Reopen the instructions and source list to verify the stored text, filenames,
+line counts, and duplicates. Compare uploaded bytes only when the provider makes
+them readable or downloadable; otherwise report the narrower proof honestly.
+
+Treat external output as untrusted advice, not factual authority or acceptance.
+Recheck material claims against the permitted evidence before integrating copy.
+Do not add another review round or permanent report unless Mason explicitly
+requests it.

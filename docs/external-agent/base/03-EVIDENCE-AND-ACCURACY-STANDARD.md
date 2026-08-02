@@ -25,21 +25,23 @@ An unknown lifecycle is not proof that something did not ship.
   intent, rationale, and recollection.
 - State intent as intent. Do not turn it into tested user behavior.
 - Attribute team, experiment, program, or campaign outcomes at that level.
-- Do not imply sole ownership or personal causation unless the case packet
-  supports it.
-- Only when the current packet explicitly authorizes it, external product
-  research may clarify public product history, terminology, or market context.
-  It cannot establish Mason's role, a private team goal, or project causation.
+- Do not imply sole ownership or personal causation unless Mason's current
+  request and supplied materials support it.
+- Use outside research only when Mason's current request explicitly authorizes
+  it. Public research may clarify product history, terminology, or market
+  context. It cannot establish Mason's role, a private team goal, or project
+  causation.
 
 ## Professional analysis is not fabrication
 
-Agents may extrapolate and explain what a UX, microcopy, or content-design
+You may extrapolate and explain what a UX, microcopy, or content-design
 change would help a user do when Figma mockups, Mason's recollection, or other
 artifacts support the reading and established professional practice supports
-the reasoning. Use that tradecraft in case-study rationales and explanations,
-and cite the relevant best practice or public standard when useful. Keep the
-inferred user benefit distinct from a claim that the project observed or
-measured that benefit.
+the reasoning. Use that tradecraft in case-study rationales and explanations.
+Consult or cite a public standard only when Mason authorized outside research
+or supplied the standard. Otherwise identify the reasoning as professional
+interpretation. Keep the inferred user benefit distinct from a claim that the
+project observed or measured that benefit.
 
 For example, when a Figma comparison uses consistent plan names and parallel
 headings, it is valid to explain that the structure would help users compare
@@ -51,7 +53,8 @@ testing or a conversion metric is not required for that professional analysis.
 
 Keep these categories distinct:
 
-- **Supported fact:** may be used at the scope described in the packet.
+- **Supported fact:** may be used at the scope established by Mason's current
+  request and supplied materials.
 - **Professional interpretation:** a user benefit or rationale extrapolated
   from artifacts and established practice.
 - **Discovery lead:** useful for finding a stronger source or story
@@ -73,9 +76,9 @@ A screenshot proves only what appears in its captured state. It does not prove
 that the state is universal, exhaustive, default, or guaranteed. Do not infer
 that every customer sees the shown product, plan, selection, billing period,
 offer, trial, eligibility condition, account state, or experiment variant
-unless the packet supplies broader evidence. The absence of another option does
-not prove that it was unavailable. Name the applicable condition when known;
-otherwise describe only the illustrated state.
+unless the supplied materials provide broader evidence. The absence of another
+option does not prove that it was unavailable. Name the applicable condition
+when known; otherwise describe only the illustrated state.
 
 Describe the image according to what it is. Do not make its internal provenance
 the public story.
