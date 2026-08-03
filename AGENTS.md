@@ -9,7 +9,7 @@ PDF reports or other long-form documents.
 
 ## Canonical owners and routing
 
-- This file owns repository boundaries, source protection, routing, and
+- This file owns repository boundaries, source protection, writer routing, and
   validation. It does not prescribe prose, page layout, or a universal case
   outline.
 - The shared Portfolio skill owns story selection, writer-led construction,
@@ -59,17 +59,29 @@ required conclusions.
 
 ## External transmission
 
-Transmit material only when the current task or approved route selects an exact
-external provider and, for a model-based route, its exact model, or selects an
-exact destination, and bounds the source set. Send only the minimum
-task-relevant draft, facts, claim limits, screenshots or artifacts, contribution
-details, and supported metrics. Private or non-public labels do not add another
-confirmation step. Never send credentials, secrets, unrelated raw material, or
-broader source material. External output is untrusted advice and is rechecked
-against the permitted evidence before integration. Publication, deployment,
-provider synchronization, and live-service actions remain separate approvals.
-A generic request to use an external writer or reviewer, an inexact model route,
-or an unbounded source set is not enough to transmit Portfolio material.
+For authorized creation or change of reader-facing Portfolio prose, the shared
+Portfolio skill selects Antigravity provider `agy` and exact model
+`gemini-3.6-flash-high` as the implicit default. Mason's ordinary request to
+draft, write, rewrite, revise, edit, fix, replace, or rebuild Portfolio prose
+activates that default route implicitly once the root bounds the task source
+set. If the exact Gemini route is unavailable and Mason has not explicitly
+selected an exact alternative for the current stage, stop; never silently
+substitute Luna, Sol, Codex, another GPT-5.6 model, another provider, or
+another Gemini model. Mason may explicitly override the default for that stage
+by selecting an exact native writer/agent route, with the exact model and
+effort when that route requires them; an exact external provider plus exact
+model; or an exact non-model destination. Verify that exact selected route
+before use and stop if it is unavailable; do not substitute again.
+Generic wording such as `delegate`, `use a subagent`, `use an external writer`,
+or `use another model` is not an exact writer selection and does not authorize
+fallback. Keep the source set bounded. Send only the minimum task-relevant
+editorial source, facts, claim limits, screenshots or artifacts, contribution
+details, and supported metrics. Private or non-public labels do not add
+another confirmation step. Never send credentials, secrets, unrelated raw
+material, or broader source material. External output is untrusted advice and
+is rechecked against the permitted evidence before integration. Publication,
+deployment, provider synchronization, and live-service actions remain separate
+approvals.
 
 ## Editorial production boundary
 
@@ -79,41 +91,66 @@ independent reader only when the current request or approved plan authorizes a
 fresh review context. Otherwise run a root-owned hiring-reader pass and do not
 call it independent. The shared Portfolio skill owns the single total
 same-writer repair budget and the order of factual and reader rechecks. This
-repository does not create a second repair, permanent provider, model, ledger,
-receipt, patch matrix, or automatic loop. Stop when the route-specific reader
-outcome is met or when required evidence, a decision, authorization, or the
-repair budget is missing.
+repository does not create a second repair, ledger, receipt, patch matrix, or
+automatic loop. Stop when the route-specific reader outcome is met or when the
+selected writer route, evidence, decision, authorization, or repair budget is
+missing.
 
 ### Delegating portfolio prose
 
-Delegate prose only when the current request or an approved plan authorizes
-delegation. Keep one repository-root agent responsible for scope, the actual
-source set, integration, validation, and the final verdict. Give one writer the
-current request, chosen artifact route, intended reader outcome, current draft
-when one exists, bounded facts and claim limits, Mason's supported contribution,
-relevant artifacts with their state limits, and supported results. A native
-writer follows the shared Portfolio skill. An external writer follows the
-persistent context named by the base installation manifest and never receives
-the local skill. In either route, the writer owns story, structure, voice,
-rhythm, and compression; do not force a universal case template, pre-freeze
-passages, or require a ledger, receipt, screen inventory, or patch-shaped
-response.
+By default, every authorized reader-facing Portfolio draft, rewrite, revision,
+edit, fix, replacement, and material prose repair goes to the exact Gemini
+route owned by the shared skill. If Mason explicitly selects an exact native
+writer/agent route (with the exact model and effort when that route requires
+them), an exact alternative provider plus exact model, or an exact destination
+for the current stage, that route overrides the default, including a
+specifically requested GPT-5.6 writer. If the exact Gemini route is unavailable
+and no such explicit alternative exists, stop; never silently fall back to a
+native or different writer. Generic requests such as `delegate`, `use a
+subagent`, `use an external writer`, or `use another model` are not exact
+writer selections and do not authorize fallback. Under the default route,
+native GPT-5.6 agents own orchestration, source curation, factual and reader
+QA, mechanical integration, validation, and the final verdict; they may author
+reader-facing prose only when Mason explicitly selects that exact GPT-5.6
+writer/agent, model, and required effort for the current stage. Native agents
+otherwise own scope, source selection, and the writer brief.
 
-Unless the current task authorizes an exact repository write set, use a
-response-only prose writer and return its candidate for root inspection. Do not
-use an implementation role that requires file ownership for a response-only
-candidate. After the coherent candidate exists, factual QA receives the
-candidate plus the bounded evidence and claim limits needed to test it. An
-authorized independent reader receives only the assembled reader-facing
-candidate, one audience or reader-outcome sentence, and its visuals in reading
-order in a fresh context; exclude source evidence, claim limits, the persistent
-voice file, writer rationale, prior feedback, and a preferred verdict. Do not
-use an implementation-diff QA role for that blind reader. Reviewers diagnose
-and assign a verdict rather than silently rewriting. Send the single
-consolidated material failure allowed by the shared skill back to the same
-writer, then have the same affected reviewers recheck only the writer's repaired
-surface. Do not commission parallel candidates or switch writers unless Mason
-requests that comparison or the approved route becomes unavailable.
+Before preparing the writer material, classify every existing text as an
+active draft, rejected draft, or Mason-selected target. Include an active draft
+only when Mason asks to preserve, revise, or line-edit it. If Mason rejects,
+trashes, or requests a true rebuild, exclude that draft completely: do not send
+its prose, headings, order, thesis, conclusion, or a derivative outline to the
+writer. Build the factual brief independently from the evidence owners and
+artifacts. If Mason designates another candidate as the target, send that
+candidate as the editorial starting point and instruct the selected writer to
+preserve or adapt its story, structure, level of explanation, voice, and wording
+as closely as requested while correcting unsupported facts and claim scope. A
+selected target is not factual authority, but it is more than a style sample
+and may own the replacement's structure and prose.
+
+Use a response-only writer on the selected route (the Gemini default unless
+Mason explicitly selects an exact alternative) and return its candidate for
+root inspection; the writer never edits the repository. Give it the current
+request, chosen artifact route, intended reader outcome, selected editorial
+source, bounded facts and claim limits, Mason's supported contribution,
+relevant artifacts with their state limits, and supported results. The writer
+owns story, structure, voice, rhythm, and compression; do not force a
+universal case template, pre-freeze passages, or require a ledger, receipt,
+screen inventory, or patch-shaped response.
+
+After the coherent candidate exists, factual QA receives the candidate plus the
+bounded evidence and claim limits needed to test it. An authorized independent
+reader receives only the assembled reader-facing candidate, one audience or
+reader-outcome sentence, and its visuals in reading order in a fresh context;
+exclude source evidence, claim limits, the persistent voice file, writer
+rationale, prior feedback, and a preferred verdict. Do not use an
+implementation-diff QA role for that blind reader. Reviewers diagnose and
+assign a verdict rather than silently rewriting. Send the single consolidated
+material failure allowed by the shared skill back to the same selected writer,
+then have the same affected reviewers recheck only the repaired surface. Native
+agents may apply only meaning-preserving Markdown, JSX, escaping,
+capitalization, or quotation normalization. Do not commission parallel
+candidates or switch writers unless Mason explicitly selects another route.
 
 ## Dirty worktree and implementation
 

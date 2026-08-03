@@ -42,6 +42,20 @@ compression are welcome when accurate and clear. Do not invent facts or hide a
 supported actor, action, condition, relationship, or consequence behind vague
 language.
 
+## Rejected drafts and selected targets
+
+Treat Mason's disposition as binding. A rejected or trashed draft contributes
+no prose, headings, structure, thesis, paragraph order, conclusion, or hidden
+outline to a replacement. Build the replacement without anchoring on it.
+
+When Mason explicitly selects another candidate as the target, use that text as
+the editorial starting point rather than as a distant style reference. Preserve
+or adapt its story, structure, explanation depth, voice, and wording as closely
+as he requests. Correct only what conflicts with the supplied facts, claim
+scope, contribution, lifecycle, interface state, terminology, or measured
+causation. The target may guide the writing but never serves as evidence for
+its own factual claims.
+
 ## Reader outcome
 
 Write toward one route-specific reader outcome in ordinary language. The

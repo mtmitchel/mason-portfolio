@@ -11,6 +11,9 @@ and working records, not deployable site content.
 - [`deepl-portfolio-current-direction.md`](deepl-portfolio-current-direction.md)
   — nonbinding snapshot of recent decisions and explicit corrections. It does
   not own the portfolio slate, case structure, or layout.
+- [`deepl-checkout-kimi-editorial-target.md`](deepl-checkout-kimi-editorial-target.md)
+  — Mason-selected editorial starting point for the checkout replacement. It
+  may guide story, structure, voice, and prose but is not factual evidence.
 - [`claim-review.md`](claim-review.md) — factual claim ceilings; it does not own
   narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected

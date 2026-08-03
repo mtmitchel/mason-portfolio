@@ -139,6 +139,7 @@ const requiredFiles = [
   "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt",
   "private-evidence/README.md",
   "private-evidence/claim-review.md",
+  "private-evidence/deepl-checkout-kimi-editorial-target.md",
   "private-evidence/deepl-portfolio-current-direction.md",
   "private-evidence/deepl-document-inventory.json",
   "private-evidence/deepl-project-candidate-queue.md",
@@ -641,7 +642,7 @@ const externalPacketWorkflow = await readFile(path.join(root, externalPacketWork
 const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
 const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
 
-const expectedExternalContextVersion = "2026-08-03.3";
+const expectedExternalContextVersion = "2026-08-03.4";
 const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
 const versionDeclarations = [];
 for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
@@ -680,32 +681,47 @@ record(
     && localPacketRunbook.includes("[README](README.md)")
     && localPacketRunbook.includes("../../external-agent-packets.md")
     && /factual[\s\S]*reviewer/i.test(localPacketRunbook)
-    && /independent[\s\S]*reader/i.test(localPacketRunbook),
-  "04 must remain local, point to the canonical manifest and folder owner, and separate factual QA from reader review",
+    && /independent[\s\S]*reader/i.test(localPacketRunbook)
+    && /Exclude a rejected or trashed draft\s+completely/i.test(localPacketRunbook)
+    && /selects another candidate as the target/i.test(localPacketRunbook),
+  "04 must remain local, separate review contexts, exclude rejected drafts, and carry selected targets",
 );
 record(
   externalPacketWorkflow.includes("## Folder lifecycle")
     && externalPacketWorkflow.includes("external-agent/base/README.md")
     && externalPacketWorkflow.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md")
-    && /task brief, draft, and artifacts/i.test(externalPacketWorkflow)
     && /authorized write set/i.test(externalPacketWorkflow)
-    && /do not silently reuse/i.test(externalPacketWorkflow),
-  "local external-agent workflow must own optional task-folder refresh, write boundaries, and stale-folder handling",
+    && /do not silently reuse/i.test(externalPacketWorkflow)
+    && /must not contain a[\s\S]*rejected draft/i.test(externalPacketWorkflow)
+    && /Mason-selected target/i.test(externalPacketWorkflow),
+  "local external-agent workflow must protect write boundaries, stale folders, rejected drafts, and selected targets",
 );
 record(
   rootAgents.includes("### Delegating portfolio prose")
-    && /response-only prose writer/i.test(rootAgents)
+    && /response-only writer on the selected route/i.test(rootAgents)
     && /factual QA/i.test(rootAgents)
     && /independent reader/i.test(rootAgents)
     && /single total/i.test(rootAgents),
   "root instructions must retain the delegated-prose boundary and one total repair",
 );
 record(
-  /exact\s+external provider[\s\S]*exact model/i.test(rootAgents)
-    && /exact destination/i.test(rootAgents)
-    && /(?:bounds the|bounded) source set/i.test(rootAgents)
-    && /generic request to use an external writer or reviewer/i.test(rootAgents),
-  "root instructions must require an exact eligible external route and bounded source set",
+  /provider `agy`[\s\S]*`gemini-3\.6-flash-high`/i.test(rootAgents)
+    && /activates that default[\s\S]*route implicitly/i.test(rootAgents)
+    && /If the exact Gemini route is unavailable[\s\S]*has not explicitly[\s\S]*selected an exact alternative/i.test(rootAgents)
+    && /Mason may explicitly override the default[\s\S]*exact native writer\/agent route[\s\S]*exact model and[\s\S]*effort[\s\S]*exact external provider plus exact[\s\S]*model[\s\S]*exact non-model destination/i.test(rootAgents)
+    && /including a[\s\S]*GPT-5\.6[\s\S]*writer/i.test(rootAgents)
+    && /Generic wording such as[\s\S]*not an exact writer selection[\s\S]*fallback/i.test(rootAgents),
+  "root instructions must select the implicit Gemini route, stop on unavailable default, and require exact explicit alternatives",
+);
+record(
+  /Under the default\s+route,\s+native GPT-5\.6 agents[\s\S]*may\s+author[\s\S]*reader-facing prose only\s+when Mason explicitly\s+selects/i.test(rootAgents),
+  "root instructions must keep GPT-5.6 agents QA-only unless Mason explicitly selects that writer",
+);
+record(
+  /classify every existing text as an[\s\S]*active draft, rejected draft, or Mason-selected target/i.test(rootAgents)
+    && /exclude that draft completely/i.test(rootAgents)
+    && /candidate as the target[\s\S]*editorial starting point/i.test(rootAgents),
+  "root instructions must exclude rejected drafts and honor Mason-selected editorial targets",
 );
 record(
   rootReadme.includes("docs/external-agent/base/README.md")
@@ -716,8 +732,10 @@ record(
 record(
   persistentExternalSources.get(persistentExternalPaths[1]).includes("does not instruct it to run")
     && persistentExternalSources.get(persistentExternalPaths[1]).includes("simulate an independent review")
+    && /rejected or trashed draft[\s\S]*no prose, headings, structure/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /selects another candidate as the target[\s\S]*editorial starting point/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
     && /does not authorize[\s\S]*additional rewrite or repair turn/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
-  "persistent story and evidence guidance must not simulate local review or authorize a separate repair",
+  "persistent guidance must separate review, exclude rejected drafts, honor selected targets, and avoid extra repairs",
 );
 
 const providerLeakagePatterns = [

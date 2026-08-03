@@ -9,13 +9,18 @@ task-folder lifecycle.
 
 ## Prepare the minimum material
 
-Read the current request and the canonical owners. Supply only the material
-needed for that task: the draft or source excerpt, supported facts and claim
-limits, relevant screenshots or artifacts with conditions, Mason's
-contribution details, and supported metrics. External delivery requires an
-exact provider plus exact model for a model route, or an exact destination, and
-a bounded source set. Keep credentials, unrelated raw archives, local paths,
-and publication or deployment work out of the delivery.
+Read the current request and the canonical owners. Classify existing prose
+before assembling anything. Include an active draft only when Mason asks to
+preserve, revise, or line-edit it. Exclude a rejected or trashed draft
+completely, including derivative outlines or summaries of its structure. If
+Mason selects another candidate as the target, include that candidate as the
+editorial starting point and label its factual claims untrusted pending 03.
+Supply only the material needed for the task: the selected editorial source,
+supported facts and claim limits, relevant screenshots or artifacts with
+conditions, Mason's contribution details, and supported metrics. External
+delivery requires an exact provider plus exact model for a model route, or an
+exact destination, and a bounded source set. Keep credentials, unrelated raw
+archives, local paths, and publication or deployment work out of the delivery.
 
 Use a small task folder when it reduces confusion. Keep no more than 10 files,
 one current copy of each artifact, and no persistent-context copies. A formal
@@ -27,15 +32,16 @@ folder was prepared.
 
 ## Separate writer and review contexts
 
-The writer may receive the authorized draft and task material. A factual
-reviewer receives the candidate plus only the bounded evidence and claim limits
-needed to test material accuracy. An authorized independent reader receives the
-assembled reader-facing candidate, one audience or reader-outcome sentence, and
-its visuals in reading order in a fresh context that did not write the
-candidate. Do not give that reader source evidence, claim limits, local workflow
-notes, prior feedback, writer rationale, a preferred verdict, or the persistent
-voice file. The repository-root agent retains scope, integration, validation,
-and the final verdict as defined in the root `AGENTS.md`.
+The writer receives the selected editorial source and task material, never a
+rejected draft. A factual reviewer receives the candidate plus only the bounded
+evidence and claim limits needed to test material accuracy. An authorized
+independent reader receives the assembled reader-facing candidate, one audience
+or reader-outcome sentence, and its visuals in reading order in a fresh context
+that did not write the candidate. Do not give that reader source evidence,
+claim limits, local workflow notes, prior feedback, writer rationale, a
+preferred verdict, or the persistent voice file. The repository-root agent
+retains scope, integration, validation, and the final verdict as defined in the
+root `AGENTS.md`.
 
 ## Handle a repaired delta
 

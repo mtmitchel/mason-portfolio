@@ -1,6 +1,6 @@
 # Current portfolio working notes
 
-**Updated:** 2026-08-02
+**Updated:** 2026-08-03
 **Status:** Nonbinding editorial snapshot
 
 This file preserves recent decisions and explicit corrections. It is not a
@@ -69,9 +69,10 @@ The tracked `/work/checkout` route preserves these factual boundaries:
   additional evidence.
 
 The reconstructed Account, Details, and Review screens form one coherent
-representative original journey. The rebuilt viewer uses a crop of that
-representative Account form to show the retained first step alongside the
-rebuilt Details working state. None should be called the exact tested, winning,
+representative original journey, and the route preserves that representative
+Account state. The new focused summary crop is derived from rebuilt Details and
+shows its selected-plan, price, and plan-feature cards. Neither the composite
+screens nor the focused crop should be called the exact tested, winning,
 shipped, or production variant without additional evidence.
 
 The five current review images have narrower state limits:
@@ -90,30 +91,27 @@ The five current review images have narrower state limits:
 - removing Review removed the repeated payment method summary, not every
   billing or card field.
 
-The tracked `/work/checkout` route now integrates the Camera Preview 2
-structure, complete-screen viewers, Mason's approved clarity and concision
-repair, and the current conclusion candidate. The obsolete focused price,
-feature, and consent viewers, their unused assets, and the local
-`/work/checkout/concepts/*` studies have been removed. Git history retains them
-if their diagnostic history is ever needed.
+Mason rejected the entire reader-facing checkout draft on 2026-08-03. Its
+headline, headings, sentences, paragraph order, three-question spine, argument,
+and conclusion are not an active draft and must not be supplied to a writer,
+summarized into a writer outline, preserved, repaired, or used as a baseline.
+This rejection does not discard the verified facts, screenshots, state limits,
+focused rebuilt-Details crop, or application implementation.
 
-The ignored seven-file external-review packet records the pre-repair route copy
-in `CURRENT_DRAFT.md` and the evidence set used for the review. It is completed
-working output, not a second durable source of truth, and it was not sent during
-that preparation task. Later external writing and review authorization is
-governed by the repository-root `AGENTS.md`.
+[`deepl-checkout-kimi-editorial-target.md`](deepl-checkout-kimi-editorial-target.md)
+is Mason's selected editorial starting point for the replacement. The
+assignment is to make the new case as close to that target as the supported
+facts, defensible professional reconstruction, contribution boundary,
+interface-state evidence, and experiment-level causation allow. The target's
+story, structure, explanation depth, voice, and wording may be preserved or
+adapted; its factual claims do not verify themselves.
 
-Mason approved the earlier bounded clarity and concision repair after its claims
-were checked against all five images and their state limits. He later reopened
-the conclusion. The current candidate interprets the shorter checkout as having
-to carry the full subscription decision inside `Details`; one independent local
-hiring-reader check found that ending integrated, though its synthesis remains
-incremental because the body already establishes the one-decision logic. The
-candidate still requires Mason's qualitative judgment. Repository layout rules
-prohibit decorative numeric section prefixes and the
-tiny-left-label/large-right-headline pattern. Mechanical checks establish
-implementation conformance only; they do not replace Mason's copy approval or
-a rendered browser review.
+The ignored `tmp/external-agent-checkout-conclusion-2026-08-02/` folder and its
+`CURRENT_DRAFT.md` are rejected working history. Do not refresh or reuse that
+folder for the replacement. If grouped handoff files are useful, create a new
+isolated task folder containing the Kimi target, a fact brief built independently
+from the evidence owners, and the relevant screenshots. Mechanical checks prove
+implementation conformance only; they do not establish reader quality.
 
 ## Current route snapshot
 

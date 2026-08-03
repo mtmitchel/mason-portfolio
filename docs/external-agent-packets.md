@@ -9,8 +9,10 @@ delivery and context separation live in
 ## Before handoff
 
 1. Read the base README and the canonical context owners it lists.
-2. Read the current request and inspect the live draft, source boundary, and
-   relevant assets.
+2. Read the current request and determine whether existing prose is active,
+   rejected, or replaced by a Mason-selected target. Inspect a live draft only
+   when Mason wants it preserved or revised; never copy a rejected draft into a
+   new writer handoff.
 3. Follow local mechanics in
    [`docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md`](external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md).
 4. Assemble only the minimum task material. Keep the handoff optional and
@@ -36,15 +38,17 @@ Keep the two folder types distinct:
   If refresh would overwrite ownership-uncertain work or require cleanup, create
   a new isolated dated folder instead.
 
-A task folder may contain a short task brief, the current draft or source
-excerpt, and the few relevant artifacts. Follow the ten-file limit in 04. Do not
-copy the persistent context into the task folder, treat packet copies as source
-truth, or edit a packet copy and back-propagate it into the repository. Keep
-writer and independent-review inputs in separate folders or external contexts;
-keep returned output separate from the input set until it has been checked and
-explicitly integrated. Put every task-folder write in the authorized write set;
-delegated writers receive the input folder but do not mutate it unless the
-current task gives them that exact folder boundary.
+A task folder may contain a short task brief, the active draft or
+Mason-selected target, and the few relevant artifacts. It must not contain a
+rejected draft, its outline, or a summary that preserves its narrative spine.
+Follow the ten-file limit in 04. Do not copy the persistent context into the
+task folder, treat packet copies as factual source truth, or edit a packet copy
+and back-propagate it into the repository. Keep writer and independent-review
+inputs in separate folders or external contexts; keep returned output separate
+from the input set until it has been checked and explicitly integrated. Put
+every task-folder write in the authorized write set; delegated writers receive
+the input folder but do not mutate it unless the current task gives them that
+exact folder boundary.
 
 An older folder may remain as working history, but its existence does not make
 it current. Do not silently reuse it. Cleanup is a separate Trash-first action,

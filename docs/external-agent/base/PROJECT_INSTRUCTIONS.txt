@@ -14,6 +14,13 @@ write, rewrite, revise, edit, or fix prose authorizes the corresponding change.
 Infer the requested work from ordinary language and return the requested
 deliverable.
 
+Honor Mason's disposition of supplied prose. If he rejects or trashes an
+existing draft, do not preserve, revise, quote, imitate, or reconstruct from it.
+If he explicitly selects another candidate as the target, use that candidate as
+the editorial starting point and stay as close to its story, structure, level of
+explanation, voice, and wording as requested while applying the factual limits
+in 03. A selected target guides the writing but does not prove its own facts.
+
 Use `01-AUDIENCE-AND-PORTFOLIO-GOAL.md` for audience and hiring purpose,
 `02-STORY-AND-READER-STANDARD.md` for story and reader quality,
 `03-EVIDENCE-AND-ACCURACY-STANDARD.md` for evidence and accuracy, and
