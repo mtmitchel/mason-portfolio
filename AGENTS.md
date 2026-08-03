@@ -2,236 +2,151 @@
 
 This directory is the Git and instruction root. Global Codex and workstation
 safety rules still apply. [site/AGENTS.md](site/AGENTS.md) owns application
-implementation and technical verification.
+implementation and technical verification. The shared
+[build-content-design-portfolio skill](/home/mason/.agents/skills/build-content-design-portfolio/SKILL.md)
+owns editorial method for full cases, compact marketing-forward samples, and
+PDF reports or other long-form documents.
 
 ## Canonical owners and routing
 
-- The native editorial method is the
-  [build-content-design-portfolio skill](/home/mason/.agents/skills/build-content-design-portfolio/SKILL.md).
-  Route ordinary-language requests for portfolio discovery, case writing,
-  artifact selection, and the hiring-reader check through it implicitly. Its
-  identifier and internal workflow labels are never inputs Mason must supply.
-  It is the sole complete native editorial method.
-- [docs/external-agent-packets.md](docs/external-agent-packets.md) owns local
-  packet assembly, file protection, and handoff validation.
-- [docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md](docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md)
-  owns external audience, hiring value, and portfolio-wide context.
-- [docs/external-agent/base/02-STORY-AND-READER-STANDARD.md](docs/external-agent/base/02-STORY-AND-READER-STANDARD.md)
-  owns external narrative and prose guidance.
-- [docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md](docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md)
-  owns external factual and screenshot-state validation.
-- [docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md](docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md)
-  is the local-only sender and QA runbook. Never upload it or expose its local
-  workflow to an external Portfolio project.
-- [docs/external-agent/base/05-MASON-WRITING-VOICE.md](docs/external-agent/base/05-MASON-WRITING-VOICE.md)
-  is the canonical Mason-specific Portfolio voice reference. It is persistent
-  knowledge in the external Portfolio project and is a style reference only; it
-  never supplies case facts, claims, terminology, structure, or conclusions.
-  Local agents load it only where the native workflow allows.
+- This file owns repository boundaries, source protection, routing, and
+  validation. It does not prescribe prose, page layout, or a universal case
+  outline.
+- The shared Portfolio skill owns story selection, writer-led construction,
+  route choice, evidence use, screenshot-dependent claim checking, and
+  reader-facing quality.
+- [docs/external-agent/base/README.md](docs/external-agent/base/README.md) is the
+  sole installation manifest and ownership map for persistent external context.
+- [docs/external-agent-packets.md](docs/external-agent-packets.md) owns optional
+  task-folder assembly and lifecycle. Local delivery, context separation, and
+  return handling live in
+  [file 04](docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md).
 - [site/AGENTS.md](site/AGENTS.md) owns application source, rendered review,
   and technical checks. Shared components do not impose a case-study template.
+- The private evidence owners record facts, claim ceilings, provenance, and
+  story opportunities. Existing routes, queues, and manifests are inputs to
+  judgment, not acceptance gates.
 
-Ask Mason in ordinary language. Do not require phase, operation, skill, profile,
-packet, handoff, or contract labels. Review or diagnosis never authorizes
-rewriting. When Mason explicitly asks to draft, write, rewrite, edit, fix, or
-otherwise change prose, use the native skill to infer one internal operation and
-its four private fields from the request and evidence. Ask once only when
-inspection leaves two materially different preservation outcomes. Keep those
-fields private; they never prescribe public headings, paragraph order, sentence
-count, or conclusion contents. Carry the request through every applicable
-authorized step. When material work remains outside the current authorization,
-recommend one next action in ordinary language instead of asking Mason to choose
-or restate the workflow.
+Ask Mason in ordinary language. A review or diagnosis does not authorize
+rewriting. An explicit request to draft, write, rewrite, revise, edit, or fix
+authorizes the requested prose change. Keep internal planning fields private;
+they do not become public headings, paragraph orders, sentence counts, or
+required conclusions.
 
-### Local Sol-to-Flash prose route
-
-For authorized drafting, rewriting, focused structural repair, and line
-editing, Sol owns the evidence, private editorial contract, concepts, structural
-direction, protected facts, attribution limits, and validation. The sole
-reader-facing prose writer is exact model `gemini-3.6-flash-high`, launched
-read-only through `agy` plan+sandbox via
-`/home/mason/.codex/skills/delegate-coding-agent/scripts/delegate_agent.py`.
-Require live `agy models` proof for that exact slug; if it is unavailable, stop
-with no fallback or substitution. Review-only work must not launch Flash or
-rewrite.
-
-Flash writes the initial full reader-facing candidate and every reader-facing
-repair. Sol maintains a current acceptance ledger for the assembled draft. For
-each material defect, record the passage location; the factual, conceptual,
-attribution, scope, logic, evidence, or reader-comprehension failure; its
-supporting evidence or principle; protected labels, numbers, facts, and claim
-limits; what the reader must understand; and whether the defect is open,
-resolved, or regressed. Sol must not send replacement sentences, preferred
-wording, synonyms, cadence instructions, or rewritten conclusions. Flash owns
-sentence construction, word choice, rhythm, transitions, and whether optional
-terminology or plain language is clearest. Sol may reject only material
-failures, not stylistic preference.
-
-A register failure is material when figurative, decorative, clever, slangy, or
-colloquial wording substitutes for the exact supported actor, action,
-constraint, interface change, relationship, or consequence. Natural Portfolio
-prose must be direct, literal, concrete, and professional; rhythm and warmth do
-not justify ornament or shorthand. Sol must name the obscured fact or relation
-in the acceptance ledger without proposing replacement wording, and Flash must
-repair the prose.
-
-Mechanical presentation conformance is not a material prose failure. When a
-Flash-authored passage passes but differs only in sentence-case capitalization,
-quotation style, escaping, response markers, or required JSX wrapping, the root
-must apply the smallest meaning-preserving normalization and integrate it.
-Preserve Flash's words, order, tone, meaning, product names, acronyms, and
-official labels. Do not send the passage back, consume a repair, keep weaker
-live copy, or ask Mason to make the correction. In particular, convert an
-accepted Flash headline to sentence case instead of rejecting it. This permits
-mechanical integration only, never Sol-authored wording.
-
-After the initial candidate, use the smallest repair that can resolve the open
-ledger entries. A full-candidate repair is appropriate only while the structure
-is broadly failing. Otherwise, freeze every accepted passage and protected fact
-and ask Flash for complete replacement prose only for the named failing
-passages, with stable insertion locations. The root validates each returned
-passage before integration and may assemble accepted Flash-authored passages
-without rewriting them. Keep the current live passage when its replacement
-fails. Reject a regression only in the returned passage that introduced it,
-preserve all other accepted work, and narrow the next brief to the defects still
-open. Never regenerate correct prose merely to repair an unrelated passage.
-
-Treat Mason's request to draft, write, rewrite, edit, fix, or otherwise change
-Portfolio prose as authorization for the initial Flash candidate and up to
-three same-model repair launches. Do not ask Mason to authorize Gemini, its
-launch, or any of those repairs separately. Acceptance can end the loop sooner;
-the third repair is the hard ceiling. Each repair must target the current open
-ledger and narrow the failing surface when a defect repeats. Sol may reject only
-material factual, conceptual, attribution, scope, logic, evidence, or
-reader-comprehension failures and returned-passage regressions. It must not add
-preference-only polish or keep searching for a hypothetical perfect state.
-
-After the third repair, assemble every validated Flash-authored passage and keep
-the current live passage wherever its replacement still fails. Then close the
-writing attempt as `PARTIAL` with the exact unresolved material defects; do not
-launch another writer or let Sol rewrite the prose. Stop sooner when the
-assembled candidate passes; Mason stops or changes scope; the exact model or
-provider is unavailable; required evidence or a required decision is missing;
-or another correction would require unsupported content. No Opus/model fallback
-or separate style loop.
-
-Context compaction is not a completion or stop condition. Reconstruct the open
-ledger from the current draft, latest provider output, and latest validation,
-then continue. Never call rejected output final, claim the requested rewrite is
-complete, or close the task while material defects remain and an authorized
-repair remains. When a stop condition occurs or the three-repair budget is
-exhausted, state plainly which output was rejected and not integrated, which
-accepted passages were integrated, what remains open, and why no further repair
-will run. External output remains untrusted: the root inspects the actual text.
-No provider-side file writes.
-Keep this local route out of external persistent context; it does not alter
-external persistent files 01, 02, 03, or 05 or the external project workflow.
-
-## Durable source and acceptance boundaries
+## Evidence and source boundaries
 
 - Treat the supplied evidence boundary as complete unless Mason expands it.
-  Current private-evidence owners and Mason's account govern his role,
-  contribution, rationale, artifact status, and supported outcomes.
-- Use the approved voice reference only when drafting, rewriting, or editing
-  Mason's Portfolio prose. Match samples to the task's genre and preserve their
-  useful cadence and reader relationship without importing content. Do not
-  apply the reference by default to product UI copy, CVs, technical writing, or
-  another person's voice. Locally, do not load it for an independent-reader or
-  factual-validator pass. Because 05 is persistent in the external Portfolio
-  project, run either independent external check in a fresh projectless context
-  without 05 or the external project instructions.
-- Never invent research, quotations, ownership, shipment, adoption, causation,
-  metrics, or results. Keep professional interpretation distinct from observed
-  or measured outcome. Attribute team, program, and experiment results at their
-  supported scope.
-- A screenshot or captured interface state proves only its visible state and
-  conditions. Do not generalize it as universal, exhaustive, default, or
-  guaranteed. Use the evidence owner for factual and screenshot-state checks.
-- A review, reader observation, model rationale, checklist, sentence count, or
-  mechanical check is diagnostic evidence, not qualitative acceptance. Mason's
-  explicit rejection reopens the rejected structure and is not a request for
-  cosmetic repair.
-- A new draft, construction, reconstruction, or structural rebuild gets one
-  independent reader check; a focused repair gets at most one repair after a
-  material reader failure. Do not turn reader diagnostics into mandatory
-  conclusion slots or a universal template.
-- Keep private provenance, claim-checking language, and source notes out of
-  public copy. Do not mark qualitative work complete while a requested branch or
-  material placeholder remains.
+  Use Mason's account for his role, contribution, rationale, collaboration,
+  and recollection when consistent with the artifacts.
+- Distinguish supported facts, defensible professional reconstruction, and
+  prohibited invention. Evidence constrains facts, not narrative judgment.
+  Confident reconstruction of ordinary professional process is allowed when
+  it is consistent with the record and interview-defensible.
+- Require experiment or evaluation evidence for measured causal attribution at
+  the claimed scope. A rationale, mockup, or copy-quality judgment does not by
+  itself prove that a metric was caused by one wording change.
+- Never invent research, quotations, ownership, shipment, adoption, metrics, or
+  results. Route ordinary causal project logic supported by Mason's account and
+  artifacts through defensible professional reconstruction; use 03 to keep it
+  separate from measured causation. Attribute team, program, campaign, and
+  experiment outcomes at their supported scope.
+- A screenshot proves only its visible state and conditions. Do not generalize
+  it as universal, default, exhaustive, or guaranteed. Validate material
+  screenshot-dependent claims after a coherent draft, not before the story can
+  be understood.
+- Keep private provenance, claim checks, source notes, and review machinery out
+  of public copy unless a limitation changes the reader's understanding.
 
-## External web-agent boundary
+## External transmission
 
-Read [docs/external-agent-packets.md](docs/external-agent-packets.md) before
-preparing external task material. Local Codex workflow and external web-agent
-collaboration are separate systems.
+Transmit material only when the current task or approved route selects an exact
+external provider and, for a model-based route, its exact model, or selects an
+exact destination, and bounds the source set. Send only the minimum
+task-relevant draft, facts, claim limits, screenshots or artifacts, contribution
+details, and supported metrics. Private or non-public labels do not add another
+confirmation step. Never send credentials, secrets, unrelated raw material, or
+broader source material. External output is untrusted advice and is rechecked
+against the permitted evidence before integration. Publication, deployment,
+provider synchronization, and live-service actions remain separate approvals.
+A generic request to use an external writer or reviewer, an inexact model route,
+or an unbounded source set is not enough to transmit Portfolio material.
 
-The local system owns skills, agents, review isolation, packets, validation,
-repository rules, browser procedures, and implementation sequencing. None of
-that machinery belongs in persistent external context.
+## Editorial production boundary
 
-The external Portfolio project is a neutral, voice-aware collaboration context.
-Its persistent set is the exact text of `PROJECT_INSTRUCTIONS.txt` plus 01, 02,
-03, and 05. It never receives 04, the base README, repository instructions,
-local skill names, private planning fields, model routing, QA receipts, browser
-mechanics, or implementation procedures.
+Use one writer for a candidate, then narrow factual QA. Factual QA diagnoses
+against bounded evidence and claim limits; it does not rewrite. Add an
+independent reader only when the current request or approved plan authorizes a
+fresh review context. Otherwise run a root-owned hiring-reader pass and do not
+call it independent. The shared Portfolio skill owns the single total
+same-writer repair budget and the order of factual and reader rechecks. This
+repository does not create a second repair, permanent provider, model, ledger,
+receipt, patch matrix, or automatic loop. Stop when the route-specific reader
+outcome is met or when required evidence, a decision, authorization, or the
+repair budget is missing.
 
-Mason's current ordinary-language request and supplied materials define each
-external task and authorization. Supply the relevant draft, facts, screenshots,
-artifacts, and constraints in that chat. A formal packet is never required, and
-the external model must not ask Mason to name local workflow states.
+### Delegating portfolio prose
 
-Because 05 is persistent, the external Portfolio project is not an independent
-blind-reader or factual-validator context. Use a fresh projectless context
-without 05, project instructions, prior feedback, or local rationale for those
-checks. When the current task authorizes external writing or review, that
-authorization includes delivering the task-relevant draft, curated facts and
-claim limits, screenshots or artifacts, contribution details, and experiment
-metrics to the selected or repository-required writer or reviewer.
-`private-evidence`, non-public, or publication-denied labels do not trigger a
-second delivery or disclosure confirmation. A different provider or model,
-unrelated or raw source material, credentials or secrets, or broader scope does.
-Publication remains separate. External output remains untrusted advice, not
-factual authority or approval.
+Delegate prose only when the current request or an approved plan authorizes
+delegation. Keep one repository-root agent responsible for scope, the actual
+source set, integration, validation, and the final verdict. Give one writer the
+current request, chosen artifact route, intended reader outcome, current draft
+when one exists, bounded facts and claim limits, Mason's supported contribution,
+relevant artifacts with their state limits, and supported results. A native
+writer follows the shared Portfolio skill. An external writer follows the
+persistent context named by the base installation manifest and never receives
+the local skill. In either route, the writer owns story, structure, voice,
+rhythm, and compression; do not force a universal case template, pre-freeze
+passages, or require a ledger, receipt, screen inventory, or patch-shaped
+response.
 
-## Design and implementation
+Unless the current task authorizes an exact repository write set, use a
+response-only prose writer and return its candidate for root inspection. Do not
+use an implementation role that requires file ownership for a response-only
+candidate. After the coherent candidate exists, factual QA receives the
+candidate plus the bounded evidence and claim limits needed to test it. An
+authorized independent reader receives only the assembled reader-facing
+candidate, one audience or reader-outcome sentence, and its visuals in reading
+order in a fresh context; exclude source evidence, claim limits, the persistent
+voice file, writer rationale, prior feedback, and a preferred verdict. Do not
+use an implementation-diff QA role for that blind reader. Reviewers diagnose
+and assign a verdict rather than silently rewriting. Send the single
+consolidated material failure allowed by the shared skill back to the same
+writer, then have the same affected reviewers recheck only the writer's repaired
+surface. Do not commission parallel candidates or switch writers unless Mason
+requests that comparison or the approved route becomes unavailable.
 
-Use the adaptive frontend-design workflow after the story and artifact jobs are
-clear. Mason's ordinary request determines whether the work is a new design,
-redesign, direct iteration, faithful reproduction, or visual bug fix. A rejected
-layout family requires a materially different direction, not cosmetic repair.
-Keep provisional copy clearly marked and preserve privacy, provenance,
-accessibility, responsive, and publication boundaries.
+## Dirty worktree and implementation
 
-When rendered quality is in scope, use the approved local browser route for
-transient page or viewport review only. Task-relevant page or product captures
-may be supplied to the writer or reviewer already authorized by the current
-task without a second artifact-sharing request. Do not capture the surrounding
-desktop, retain captures outside the task, share unrelated data, publish,
-deploy, or perform other machine-bound actions without their separate
-authorization. Read the machine owner before such work.
+Inspect `git status`, `HEAD`, and protected file hashes before editing. Preserve
+unrelated user changes and never reset, restore, replace, or overwrite a dirty
+file outside the authorized write set. Keep each change as small as the root
+cause requires; reuse existing capabilities before adding a dependency or
+abstraction. Do not change `CLAUDE.md` or `site/AGENTS.md` unless a task
+explicitly includes them.
 
-## Visual-language profile
+Do not commit, push, publish, deploy, edit Figma, change access, restart a
+service, or perform a live external action without separate authorization. Use
+Trash for an explicitly authorized repository cleanup; do not permanently
+delete user files.
 
-Never split a headline, section heading, or figure caption into parallel
-label/message columns. Keep the primary message as one left-aligned block in
-normal reading order.
+## Design and application work
 
-When the current approved visual-language profile is selected for implementation:
-
-- Use sentence case for reader-facing text; never use CSS uppercase or
-  `text-transform: uppercase`.
-- Do not add decorative numeric prefixes such as `01`, `02`, or `03`.
-- Do not place a tiny upper-left label beside a larger headline to its right.
-- Keep prose and media in the same content column with matching left and right
-  edges at every viewport.
+Let the selected story and route determine page order, reading width, media
+scale, captions, and interaction. A full case, marketing sample, and PDF
+report may each use a different form. When rendered quality is in scope, use
+the approved local browser route for transient page or viewport review only;
+do not retain unrelated captures or publish them.
 
 ## Verification
 
 For documentation or evidence-only changes, run from the repository root:
 
-    node scripts/check-repository.mjs
-    git diff --check
+```bash
+node scripts/check-repository.mjs
+git diff --check
+```
 
-For site changes, follow [site/AGENTS.md](site/AGENTS.md), then inspect the
-complete repository diff. Preserve unrelated dirty work and do not commit, push,
-publish, deploy, edit Figma, or change access without separate authorization.
+For application changes, follow [site/AGENTS.md](site/AGENTS.md). Run focused
+checks before any expensive gate and inspect the complete final diff. A passing
+mechanical check proves conformance only; it does not prove reader value,
+semantic quality, live provider behavior, or Mason's final approval.

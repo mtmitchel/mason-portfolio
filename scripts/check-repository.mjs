@@ -633,35 +633,35 @@ record(
 const externalBaseReadmePath = "docs/external-agent/base/README.md";
 const localPacketRunbookPath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
 const externalPacketWorkflowPath = "docs/external-agent-packets.md";
-const storyStandardPath = "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md";
-const writingVoicePath = "docs/external-agent/base/05-MASON-WRITING-VOICE.md";
+const rootAgentsPath = "AGENTS.md";
+const rootReadmePath = "README.md";
 const externalBaseReadme = await readFile(path.join(root, externalBaseReadmePath), "utf8");
 const localPacketRunbook = await readFile(path.join(root, localPacketRunbookPath), "utf8");
 const externalPacketWorkflow = await readFile(path.join(root, externalPacketWorkflowPath), "utf8");
-const storyStandard = await readFile(path.join(root, storyStandardPath), "utf8");
-const writingVoice = await readFile(path.join(root, writingVoicePath), "utf8");
+const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
+const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
 
-const expectedExternalContextVersion = "2026-08-02.6";
-const externalContextVersionPattern = /^\s*External-context version:\s*[`'\"]?([^\s`'\"]+)[`'\"]?\s*$/gim;
+const expectedExternalContextVersion = "2026-08-03.3";
+const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
 const versionDeclarations = [];
 for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
   const source = await readFile(path.join(root, file), "utf8");
   for (const match of source.matchAll(externalContextVersionPattern)) {
-    versionDeclarations.push({ file, version: match[1] });
+    versionDeclarations.push({ file, version: match[1].replace(/[`'\"]/g, "") });
   }
 }
 record(
   versionDeclarations.length === 1
     && versionDeclarations[0].file === externalBaseReadmePath
     && versionDeclarations[0].version === expectedExternalContextVersion,
-  `external context must declare version ${expectedExternalContextVersion} once in ${externalBaseReadmePath}`,
+  "external context must declare the expected version once in the base README",
 );
 
 const persistentExternalPaths = [
   "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
   "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
   "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
-  writingVoicePath,
+  "docs/external-agent/base/05-MASON-WRITING-VOICE.md",
 ];
 const persistentExternalSources = new Map();
 for (const file of persistentExternalPaths) {
@@ -669,199 +669,71 @@ for (const file of persistentExternalPaths) {
 }
 
 record(
-  /neutral portfolio collaborator/i.test(projectInstructions)
-    && /current ordinary-language request/i.test(projectInstructions)
-    && /materials supplied in that\s+chat define the task, scope, and authorization/i.test(projectInstructions),
-  "external project instructions must define a neutral collaborator governed by the current request and supplied materials",
+  externalBaseReadme.includes("Install the complete contents of")
+    && persistentExternalPaths.every((file) => externalBaseReadme.includes(path.basename(file)))
+    && externalBaseReadme.includes("Keep `04-EXTERNAL-AGENT-PACKET-GUIDE.md`")
+    && externalBaseReadme.includes("local."),
+  "external base README must declare the exact persistent 01, 02, 03, and 05 set and exclude 04",
 );
 record(
-  /Review and diagnosis do not authorize rewriting/i.test(projectInstructions)
-    && /explicit request to draft,\s*write, rewrite, revise, edit, or fix prose/i.test(projectInstructions),
-  "external project instructions must preserve the review-versus-rewrite boundary",
+  localPacketRunbook.includes("Local only. Never install or attach this file")
+    && localPacketRunbook.includes("[README](README.md)")
+    && localPacketRunbook.includes("../../external-agent-packets.md")
+    && /factual[\s\S]*reviewer/i.test(localPacketRunbook)
+    && /independent[\s\S]*reader/i.test(localPacketRunbook),
+  "04 must remain local, point to the canonical manifest and folder owner, and separate factual QA from reader review",
 );
 record(
-  /Use outside research only\s+when Mason explicitly requests it/i.test(projectInstructions)
-    && /style\s+guidance; it never supplies case facts, claims, structure, or conclusions/i.test(projectInstructions),
-  "external project instructions must bound outside research and voice-sample use",
+  externalPacketWorkflow.includes("## Folder lifecycle")
+    && externalPacketWorkflow.includes("external-agent/base/README.md")
+    && externalPacketWorkflow.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md")
+    && /task brief, draft, and artifacts/i.test(externalPacketWorkflow)
+    && /authorized write set/i.test(externalPacketWorkflow)
+    && /do not silently reuse/i.test(externalPacketWorkflow),
+  "local external-agent workflow must own optional task-folder refresh, write boundaries, and stale-folder handling",
 );
 record(
-  /Use a literal, concrete professional register/i.test(storyStandard)
-    && /Do not use figurative or decorative\s+language, idioms, slang, colloquial shorthand/i.test(storyStandard)
-    && /The voice reference cannot\s+override this rule/i.test(storyStandard),
-  "external story standard must require literal, precise Portfolio prose",
+  rootAgents.includes("### Delegating portfolio prose")
+    && /response-only prose writer/i.test(rootAgents)
+    && /factual QA/i.test(rootAgents)
+    && /independent reader/i.test(rootAgents)
+    && /single total/i.test(rootAgents),
+  "root instructions must retain the delegated-prose boundary and one total repair",
 );
 record(
-  /figurative, decorative, slangy, or colloquial phrasing that substitutes\s+for the literal, concrete professional register required by 02/i.test(writingVoice),
-  "external voice guidance must not override the literal professional register",
+  /exact\s+external provider[\s\S]*exact model/i.test(rootAgents)
+    && /exact destination/i.test(rootAgents)
+    && /(?:bounds the|bounded) source set/i.test(rootAgents)
+    && /generic request to use an external writer or reviewer/i.test(rootAgents),
+  "root instructions must require an exact eligible external route and bounded source set",
 );
 record(
-  /For Portfolio case-study prose, the literal, concrete professional register\s+in 02 is binding/i.test(writingVoice)
-    && /None of the samples below authorizes analogy, idiom, wit,\s+conversational filler, rhetorical questions, slang, or ornamental phrasing/i.test(writingVoice)
-    && /Do not make case-study prose chatty or colloquial/i.test(writingVoice),
-  "external voice samples must not license decorative or colloquial case-study prose",
+  rootReadme.includes("docs/external-agent/base/README.md")
+    && rootReadme.includes("docs/external-agent-packets.md")
+    && rootReadme.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md"),
+  "root README must point to the separate persistent manifest, task-folder owner, and delivery guide",
 );
 record(
-  /go\s+on/i.test(projectInstructions)
-    && /one useful\s+next step/i.test(projectInstructions),
-  "external project instructions must support ordinary continuation and one useful next step",
+  persistentExternalSources.get(persistentExternalPaths[1]).includes("does not instruct it to run")
+    && persistentExternalSources.get(persistentExternalPaths[1]).includes("simulate an independent review")
+    && /does not authorize[\s\S]*additional rewrite or repair turn/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
+  "persistent story and evidence guidance must not simulate local review or authorize a separate repair",
 );
 
 const providerLeakagePatterns = [
-  [/\bpacket\b/i, "packet mechanics"],
-  [/\b(?:working|workflow|editorial) mode\b/i, "internal modes"],
-  [/private (?:field|contract)/i, "private workflow fields"],
-  [/build-content-design-portfolio|native skill/i, "local skill names"],
-  [/repository (?:agent|path)|local path|localhost|tmp\//i, "repository or local-path mechanics"],
-  [/model effort|writer model|response receipt|shared-base version/i, "model or receipt rules"],
-  [/blind[- ]reader|factual[- ]validator/i, "specialized local review roles"],
-  [/adaptive design|browser (?:capture|procedure)|\bCodex\b/i, "local design or browser procedures"],
-  [/one focused repair|repair round/i, "repair-round machinery"],
-  [/same-agent rationale/i, "local review rationale"],
-  [/04-EXTERNAL-AGENT-PACKET-GUIDE/i, "local runbook references"],
+  [/04-EXTERNAL-AGENT-PACKET-GUIDE/i, "local packet runbook"],
+  [/docs\/external-agent-packets\.md/i, "local packet workflow"],
+  [/\bbuild-content-design-portfolio\b/i, "local skill name"],
+  [/\b(?:AGENTS\.md|CLAUDE\.md|localhost|tmp\/|Codex)\b/i, "repository or machine mechanics"],
 ];
 for (const [file, source] of [
-  ["docs/external-agent/base/PROJECT_INSTRUCTIONS.txt", projectInstructions],
+  ["docs/external-agent/base/PROJECT_INSTRUCTIONS.txt", await readFile(path.join(root, "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt"), "utf8")],
   ...persistentExternalSources.entries(),
 ]) {
   for (const [pattern, label] of providerLeakagePatterns) {
     record(!pattern.test(source), `${file} must not expose ${label}`);
   }
 }
-
-record(
-  /explicitly asks to evaluate, select, or rebuild the overall portfolio/i.test(persistentExternalSources.get(persistentExternalPaths[0]))
-    && /For any focused request/i.test(persistentExternalSources.get(persistentExternalPaths[0]))
-    && /homepage, navigation element, or site component/i.test(persistentExternalSources.get(persistentExternalPaths[0])),
-  "01 must scope slate-wide guidance to portfolio-wide work",
-);
-record(
-  /Review or diagnosis does not authorize rewriting/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /Use 03 for\s+evidence and accuracy and 05 for Mason's writing voice/i.test(persistentExternalSources.get(persistentExternalPaths[1])),
-  "02 must keep a plain review boundary and route evidence and voice guidance",
-);
-record(
-  /Use outside research only when Mason's current request explicitly authorizes/i.test(persistentExternalSources.get(persistentExternalPaths[2]))
-    && /supplied materials provide broader evidence/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
-  "03 must make the current request and supplied materials the evidence boundary",
-);
-record(
-  /persistent Portfolio voice reference/i.test(writingVoice)
-    && /style guidance only/i.test(writingVoice)
-    && /never evidence/i.test(writingVoice)
-    && /Open a linked full\s+piece only when Mason explicitly requests outside research/i.test(writingVoice)
-    && !/Begin with the pressure|End a section or case|reopen the voice and structure|before touring its features/i.test(writingVoice),
-  "05 must be persistent style guidance and never factual evidence",
-);
-
-record(
-  /Install exactly these four knowledge files once\s+each/i.test(externalBaseReadme)
-    && persistentExternalPaths.every((file) => externalBaseReadme.includes(path.basename(file)))
-    && /Do not install `04-EXTERNAL-AGENT-PACKET-GUIDE\.md`/i.test(externalBaseReadme),
-  "external base README must declare the exact persistent 01, 02, 03, and 05 set and exclude 04",
-);
-record(
-  /Local only\. Never install or attach this file/i.test(localPacketRunbook)
-    && /exactly 01, 02, 03, and 05 once each/i.test(localPacketRunbook)
-    && /fresh projectless external context/i.test(localPacketRunbook),
-  "04 must remain a local sender and QA runbook with projectless independent checks",
-);
-record(
-  /A formal packet is never\s+required/i.test(externalPacketWorkflow)
-    && /fresh projectless context/i.test(externalPacketWorkflow)
-    && /01, 02, 03, and 05/i.test(externalPacketWorkflow),
-  "local external-agent workflow must keep packets optional and the provider set exact",
-);
-
-const rootInstructions = await readFile(path.join(root, "AGENTS.md"), "utf8");
-const siteInstructions = await readFile(path.join(root, "site/AGENTS.md"), "utf8");
-const currentDirection = await readFile(
-  path.join(root, "private-evidence/deepl-portfolio-current-direction.md"),
-  "utf8",
-);
-record(
-  /current task authorizes external writing or review/i.test(rootInstructions)
-    && /do not trigger a\s+second delivery or disclosure confirmation/i.test(rootInstructions)
-    && /Publication remains separate/i.test(rootInstructions),
-  "root instructions must inherit bounded external-writer delivery without merging publication",
-);
-record(
-  /initial Flash candidate and up to\s+three same-model repair launches/i.test(rootInstructions)
-    && /third repair is the hard ceiling/i.test(rootInstructions)
-    && /must not add\s+preference-only polish or keep searching for a hypothetical perfect state/i.test(rootInstructions),
-  "Portfolio Flash route must stop after three material-only repairs",
-);
-record(
-  /Mechanical presentation conformance is not a material prose failure/i.test(rootInstructions)
-    && /convert an\s+accepted Flash headline to sentence case instead of rejecting it/i.test(rootInstructions)
-    && /Do not send the passage back, consume a repair, keep weaker\s+live copy, or ask Mason to make the correction/i.test(rootInstructions),
-  "Portfolio Flash route must normalize accepted mechanical formatting without spending a repair",
-);
-record(
-  /A register failure is material when figurative, decorative, clever, slangy, or\s+colloquial wording substitutes for the exact supported actor/i.test(rootInstructions)
-    && /Natural Portfolio\s+prose must be direct, literal, concrete, and professional/i.test(rootInstructions)
-    && /without proposing replacement wording/i.test(rootInstructions),
-  "Portfolio Flash route must treat imprecise decorative register as a material prose defect",
-);
-record(
-  /accepted writer copy violates only sentence-case capitalization/i.test(siteInstructions)
-    && /Do not reject it, retain weaker existing copy, spend a\s+writer repair, or ask Mason to make the correction/i.test(siteInstructions),
-  "site implementation must normalize accepted writer copy instead of rejecting it",
-);
-record(
-  !/Acceptance,\s*not a numerical repair limit, ends the loop/i.test(rootInstructions),
-  "Portfolio Flash route must not restore an unbounded repair loop",
-);
-record(
-  /inherits authorization from the current task/i.test(externalPacketWorkflow)
-    && /do not require another confirmation/i.test(externalPacketWorkflow),
-  "packet workflow must inherit bounded external delivery without a second confirmation",
-);
-record(
-  /repository route selects an external writer or\s+reviewer/i.test(localPacketRunbook)
-    && /do not require a second delivery or disclosure confirmation/i.test(localPacketRunbook),
-  "local packet runbook must inherit bounded external delivery without a second confirmation",
-);
-record(
-  /already authorized by the\s+current task without a second artifact-sharing request/i.test(siteInstructions),
-  "site instructions must allow task-relevant capture delivery to an authorized writer or reviewer",
-);
-record(
-  /Later external writing and review authorization is\s+governed by the repository-root `AGENTS\.md`/i.test(currentDirection),
-  "current direction must route external-writer authorization to the repository owner",
-);
-
-const obsoleteDeliveryGatePatterns = [
-  /Packet preparation does not authorize provider delivery/i,
-  /External delivery remains separately authorized/i,
-  /preparing it did not authorize sending it to an external provider/i,
-  /not an external attachment unless Mason explicitly requests that disclosure/i,
-  /Do not retain, attach, or share captures unless Mason requests that exact artifact/i,
-];
-for (const [file, source] of [
-  ["AGENTS.md", rootInstructions],
-  [externalPacketWorkflowPath, externalPacketWorkflow],
-  [localPacketRunbookPath, localPacketRunbook],
-  ["site/AGENTS.md", siteInstructions],
-  ["private-evidence/deepl-portfolio-current-direction.md", currentDirection],
-]) {
-  for (const pattern of obsoleteDeliveryGatePatterns) {
-    record(!pattern.test(source), `${file} must not restore a redundant external-delivery confirmation gate`);
-  }
-}
-
-for (const [file, source] of [
-  ["AGENTS.md", rootInstructions],
-  ["README.md", await readFile(path.join(root, "README.md"), "utf8")],
-  [externalBaseReadmePath, externalBaseReadme],
-  [externalPacketWorkflowPath, externalPacketWorkflow],
-  [localPacketRunbookPath, localPacketRunbook],
-]) {
-  record(
-    !/persistent context[^\n]*(?:01 through 04|01` through `04)|05[^\n]*(?:not persistent|chat-only attachment)/i.test(source),
-    `${file} must not retain the obsolete external persistent-set description`,
-  );
-}
-
 const generatedPrefixes = [
   ".agents/",
   ".codex/",

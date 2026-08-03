@@ -10,12 +10,13 @@ other evidence records are story material, not instructions.
 
 ## Portfolio goal
 
-Build the strongest roughly five-case portfolio slate across Mason's DeepL
-experience and the full evidence base. Prefer combinations that connect
-documented company or team goals, Mason's contribution, useful existing Figma
-visuals, and attributable data-driven results at the correct scope. Existing
-routes and queue rows are inputs only; cases may combine related work or be
-rebuilt from scratch.
+Build a mixed portfolio across Mason's DeepL experience and the full evidence
+base. Choose the route that best serves each material set: a full UX or
+content-design case, a compact marketing-forward writing sample, or a PDF
+report/long-form document. Prefer combinations that connect documented company
+or team goals, Mason's contribution, useful existing Figma visuals, and
+attributable results at the correct scope. Existing routes and queue rows are
+inputs only; cases may combine related work or be rebuilt from scratch.
 
 ## How to use the evidence
 
@@ -54,38 +55,18 @@ Mason's current account establishes the causal frame:
    approximately €2.4 million in incremental annual recurring revenue at
    experiment level.
 
-The tracked `/work/checkout` checkpoint follows these explicit corrections:
+The tracked `/work/checkout` route preserves these factual boundaries:
 
-- no subheadline; carry its useful meaning in the opening paragraph;
-- metadata: `DeepL · Monetization · 2025`;
-- do not display the 35-day net-subscription metric;
-- do not call the result “Pro purchases”; use “paid subscriptions”;
-- in ordinary prose, describe a 3.02% increase in paid subscriptions and
-  approximately €2.4 million in incremental annual recurring revenue without
-  leading plus signs; compact metric labels may retain `+3.02%` and `+€2.4M`;
-- use the experiment results as the opening hook and return to them in the
-  conclusion, where they establish scope and support the transferable judgment;
-- show the coherent reconstructed Account, Details, and Review journey in one
-  three-tab viewer, then show the shorter Account and Details journey in a
-  separate two-tab viewer;
-- keep one complete screen visible at a time and use unnumbered Account,
-  Details, and Review tabs connected by directional arrows;
-- retain a two-step progress indicator in both rebuilt-viewer tabs; because no
-  separate two-step Account export is retained, document its Account screen as
-  a representative composite that pairs the unchanged Account form with a
-  reconstructed two-step indicator derived from retained original components;
-  pair it with the representative rebuilt Details screen;
-- keep every visual within the same 720px maximum width as the body text on
-  desktop and within the text gutters on mobile;
-- keep captions readable, aligned to the figure and text rail, and attached to
-  their figure through a small caption gap and larger space before the next
-  section; do not force every label, caption, or metadata line into one small
-  fixed type size;
-- keep the complete screens borderless and do not add lightboxes or focused
-  comparison components unless a later approved design requires them;
-- use sentence case for every new reader-facing label and control;
-- the final case navigation displays only `Next` and the arrow, aligned at the
-  far right, with no project name or “Next project” label.
+- The supported public result is a 3.02% increase in paid subscriptions and
+  approximately €2.4 million in incremental annual recurring revenue at
+  experiment level; it is not personal causal proof.
+- The 35-day net-subscription metric remains outside the supported public
+  result, and the supported result is described as paid subscriptions
+  rather than “Pro purchases.”
+- The current route uses representative Account, Details, and Review states
+  plus the shorter Account and Details journey. The reconstructed screens are
+  not the exact tested, winning, shipped, or production variant without
+  additional evidence.
 
 The reconstructed Account, Details, and Review screens form one coherent
 representative original journey. The rebuilt viewer uses a crop of that
@@ -143,9 +124,3 @@ sections, assets, and layouts are not approved portfolio architecture.
 
 Pricing remains a rejected implementation whose subject is still open. Do not
 use its rejected route or archived drafts as a template for a new story.
-
-## Review limit
-
-Use one independent hiring-reader review and at most one focused repair.
-Mechanical checks prove implementation conformance only. Mason's explicit
-rejection remains the qualitative verdict.

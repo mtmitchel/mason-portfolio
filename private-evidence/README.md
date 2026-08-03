@@ -1,8 +1,10 @@
 # Private evidence
 
 This directory contains the current private owners and source material used to
-check the portfolio. Mason selects what appears in the portfolio; these files
-are evidence and working records, not deployable site content.
+check the portfolio. Mason selects what appears in the portfolio; the shared
+Portfolio skill owns story selection and artifact construction, while the
+repository root owns routing and source protection. These files are evidence
+and working records, not deployable site content.
 
 ## Current owners
 
@@ -70,14 +72,14 @@ rationale, and tradeoffs when their source status remains clear.
 Broad source-side audits may identify candidates and relationships, but they do
 not become new portfolio owners. Use the queue to connect relevant DeepL UX
 copy and content-design experience, Figma artifacts, strategic goals, and
-attributable outcomes into candidate story clusters. The repository-root
-instructions own portfolio-wide comparison, slate selection, and case
-construction.
+attributable outcomes into candidate story clusters. The shared Portfolio skill
+owns portfolio-wide comparison, slate selection, and artifact construction;
+repository-root instructions own routing, source protection, and validation.
 
 DeepL product, commercial, audience, and adoption context is routed through the
-`research-deepl-product-intelligence` skill named in the repository-root
-instructions. The two raw research reports used to assemble its curated,
-direct-link reference pack are archived under
+current request and permitted evidence boundary. Outside research or a research
+skill requires explicit authorization; no private evidence record expands that
+source set. Two older raw product-intelligence reports are archived under
 [`../archive/research/deepl-product-intelligence/`](../archive/research/deepl-product-intelligence/)
 because their opaque citation tokens are not usable source locators.
 

@@ -22,11 +22,9 @@ structure, conclusions, or authorization.
   CV bullets, technical documentation, email, or another person's writing.
 - Treat these samples as style guidance only. They are never evidence for the
   facts, claims, structure, or conclusion of another case.
-- For Portfolio case-study prose, the literal, concrete professional register
-  in 02 is binding. None of the samples below authorizes analogy, idiom, wit,
-  conversational filler, rhetorical questions, slang, or ornamental phrasing.
-  Use only cadence, directness, warmth, and explanation density that remain
-  precise and professional.
+- These samples guide style only. Natural voice, rhythm, analogy, and
+  compression remain available when they are accurate and clear; do not import
+  a sample's facts or rhetorical habits into another case.
 
 ## Selected corpus
 
@@ -47,8 +45,8 @@ voice.
   concrete language without inflating it.
 - **Clear with complexity.** Define unfamiliar terms, provide enough context,
   and use plain transitions so a reader can follow a dense subject.
-- **Close to the reader.** Use direct address or contractions only when they
-  make the meaning clearer. Do not make case-study prose chatty or colloquial.
+- **Close to the reader.** Use direct address or contractions when they make
+  the meaning clearer and fit the route and audience.
 - **Natural in its turns.** Use supported contrast and consequence without
   canned pivots, theatrical reveals, or inflated signposting.
 - **Varied in rhythm.** Let longer explanatory sentences carry context and use
@@ -86,9 +84,8 @@ From [Everything You Need to Know About Onboarding](https://www.smartrecruiters.
 
 > Think of onboarding as an extended handshake and hello.
 
-This is an older editorial example of analogy, not a case-study model. Do not
-reproduce its figurative method in Portfolio case prose; take only the
-underlying aim of making an explanation easy to follow.
+This is an older editorial example of analogy. Use it only as a style cue for
+making an explanation easy to follow; do not import its facts or assumptions.
 
 ### Bring curiosity into an interview or profile
 
@@ -149,9 +146,8 @@ UK- and US-facing assignments. Preserve their strengths without copying:
 
 - unsupported promotional claims, superlatives, or causal certainty;
 - dated facts, statistics, product descriptions, or terminology;
-- any figurative, decorative, slangy, or colloquial phrasing that substitutes
-  for the literal, concrete professional register required by 02;
-- clichés, idioms, rhetorical questions, or decorative metaphors;
+- rhetorical habits that obscure the supported actor, action, condition, or
+  consequence;
 - repeated transition words such as `undoubtedly`, `evidently`, or `ultimately`;
 - legacy grammar, punctuation, capitalization, or spelling choices;
 - the CEO persona of the Forbes posts;
