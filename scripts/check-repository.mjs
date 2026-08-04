@@ -642,7 +642,7 @@ const externalPacketWorkflow = await readFile(path.join(root, externalPacketWork
 const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
 const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
 
-const expectedExternalContextVersion = "2026-08-03.4";
+const expectedExternalContextVersion = "2026-08-04.1";
 const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
 const versionDeclarations = [];
 for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
@@ -736,6 +736,14 @@ record(
     && /selects another candidate as the target[\s\S]*editorial starting point/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
     && /does not authorize[\s\S]*additional rewrite or repair turn/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
   "persistent guidance must separate review, exclude rejected drafts, honor selected targets, and avoid extra repairs",
+);
+record(
+  persistentExternalSources.get(persistentExternalPaths[1]).includes("## Captions and image sequences")
+    && /short editorial bridge/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /each caption one clear job beside its own image/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /clarity outranks lexical variety and strict grammatical\s+parallelism/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /captions explain why an image is relevant[\s\S]*alt\s+text conveys the visual content or function/i.test(persistentExternalSources.get(persistentExternalPaths[1])),
+  "02 must keep captions contextual, locally clear, coherent as a set, and distinct from alt text",
 );
 
 const providerLeakagePatterns = [
