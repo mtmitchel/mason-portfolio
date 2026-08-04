@@ -45,18 +45,29 @@ language.
 ## Captions and image sequences
 
 A caption is a short editorial bridge between an image and the surrounding
-story. Add the context or significance a reader needs to interpret that image.
-A caption may identify something visible when necessary, but it should not stop
-at a label, repeat obvious step numbers or interface text, inventory the whole
-screen, duplicate a nearby paragraph, or force an argument when direct context
-is enough.
+story. Borrow microcopy's clarity, brevity, stable terminology, scannability,
+and attention to context, but not interface-level minimalism. Unlike interface
+microcopy, a portfolio caption explains an artifact to a reader who may see it
+small or out of sequence, so allow enough context to connect it to the case. A
+caption may identify something visible when necessary, but it should not stop
+at a label, repeat obvious step numbers or interface text, inventory
+the whole screen, or duplicate a nearby paragraph.
 
-Give each caption one clear job beside its own image. Then read the complete set
-for repeated facts, gaps, inconsistent product terms, and monotonous sentence
-patterns. Preserve exact interface labels. Improve repetition by changing the
-sentence construction or cutting redundant material before substituting a less
-precise word; clarity outranks lexical variety and strict grammatical
-parallelism.
+Lead with the customer's or user's task when it is the clearest anchor. Name
+the concrete relationship that matters: what had already happened, what
+remained elsewhere, or what the team moved or changed. Give each caption one
+clear job. When it needs interpretation, state one clear significance instead
+of stacking several. A baseline screenshot may document the starting journey
+rather than a design decision; do not force a rationale or effect into every
+caption.
+
+Use `task + design move + significance` as a review question, not a sentence
+template. Include only the parts the image and story need. Make each caption
+clear beside its own image, then read the complete set for repeated facts,
+gaps, inconsistent product terms, and monotonous sentence patterns. Preserve
+exact interface labels. Improve repetition by changing the sentence
+construction or cutting redundant material before substituting a less precise
+word; clarity outranks lexical variety and strict grammatical parallelism.
 
 Use literal, natural American English unless the task requires another variety.
 Name the person as the actor when describing entry, choice, consent, or another

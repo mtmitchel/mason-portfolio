@@ -1,6 +1,6 @@
 # Canonical external Portfolio context
 
-External-context version: `2026-08-04.1`
+External-context version: `2026-08-04.2`
 
 This file is the sole local installation manifest and ownership map. Do not
 upload it or duplicate its persistent-set/version declarations elsewhere.
