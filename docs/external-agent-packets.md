@@ -19,6 +19,55 @@ delivery and context separation live in
    local unless the current task selects an exact provider plus exact model for
    a model route, or an exact destination, with a bounded source set.
 
+## Design the task brief
+
+Before assembling a review packet, the repo agent must choose and accurately
+name one review type:
+
+- **Targeted editorial review** — a narrow set of copy, structure, or presentation questions.
+- **Factual and claim review** — a check against the supplied facts, evidence, and claim limits.
+- **Guided comprehensive review** — a broad review directed by supplied questions and context.
+- **Blind hiring-reader review** — a fresh first-read check from the perspective of the intended hiring audience.
+
+A guided review or any facts-backed review is not blind. Every review brief must state
+the intended audience and decision; the exact review surface and questions; the
+complete source set and assumptions boundary; whether diagnosis, exact
+replacement proposals, rewriting, or design work is authorized; fixed
+corrections and exclusions; and the required response shape.
+
+For review outputs, answer the requested decision directly; separate material
+issues from preferences, identify useful strengths to preserve, and give the
+smallest prioritized changes. Request exact replacement prose only when the
+brief authorizes it.
+
+Before the final external review packet for a case, run a lightweight internal
+coverage check. Check the hiring story (company pressure or goal; Mason's
+assignment and contribution; collaboration and judgment; supported outcome; and
+relevance to another employer), editorial quality (title and opening; causal
+flow, transitions, and section balance; headings; captions and alt text; and
+conclusion), accuracy (actor and ownership; tense; stable terminology;
+screenshot conditions; lifecycle; measurement; and causal attribution), and the
+rendered experience when in scope (hierarchy; reading width and pacing; media
+selection, order, and legibility; interaction; desktop and mobile; and visible
+accessibility). A focused brief includes only relevant questions. If a guided
+comprehensive packet is already part of the authorized workflow, the last
+comprehensive packet fills material gaps instead of repeating every prior
+question; the coverage check does not create a new review round merely to fill
+gaps. Do not require a ledger, receipt, matrix file, prior-feedback upload, or
+universal template.
+
+A blind hiring-reader packet follows the context-separation owner: use a fresh
+context containing only the assembled reader-facing candidate, one
+audience/outcome sentence, and visuals in reading order. Exclude facts and
+limits, persistent guidance or voice, prior feedback, rationale, local workflow
+notes, and a preferred verdict. If a web-provider project has persistent
+Portfolio guidance installed, use a fresh chat or context outside that project.
+
+Preparing a packet is local preparation only. It does not authorize external
+transmission, rewriting beyond the request, new review rounds, publication, or
+integration. Keep this workflow local; do not bump or synchronize the
+persistent external-context version.
+
 ## Folder lifecycle
 
 Keep the two folder types distinct:
