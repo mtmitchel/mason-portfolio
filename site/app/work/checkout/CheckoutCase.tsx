@@ -123,7 +123,7 @@ export default function CheckoutCase() {
               <li><strong>Remove effort, preserve context:</strong> Eliminate duplicated content and extra interactions without hiding the information users needed before committing.</li>
               <li><strong>Concentrate the decision:</strong> Bring plan value, price, reassurance, consent, and the primary action into <strong>Details</strong>, then use hierarchy and wording to clarify how they relate.</li>
             </ul>
-            <p>These principles helped us decide what could disappear with <strong>Review</strong>, what had to move into <strong>Details</strong>, and what I needed to rewrite.</p>
+            <p>These principles helped us decide what could be cut along with <strong>Review</strong>, what had to move into <strong>Details</strong>, and what I needed to rewrite.</p>
           </div>
         </section>
 
@@ -204,8 +204,8 @@ export default function CheckoutCase() {
         <section className="chapter-closing" id="key-takeaway">
           <h2 className="chapter-heading">Lessons carried forward</h2>
           <div className="chapter-prose">
-            <p>Shortening the flow forced a decision about every element on <strong>Review</strong>: did it repeat something users had already seen or entered, or did it help them evaluate and authorize the subscription? The payment method summary was repetition. The plan features, price and payment timing, terms, and final action still supported the decision.</p>
-            <p>That distinction is the standard I bring to monetization work now: simplify the path, not the decision. In practice, the screen that remains still has to explain what users are paying, when, and what pressing the button commits them to. A shorter checkout can support conversion without asking users to trade understanding for speed.</p>
+            <p>Shortening the flow forced a decision about every element on <strong>Review</strong>: did it repeat something users had already seen or entered, or did it help them decide and commit? The payment method summary was repetition. The plan features, price and payment timing, terms, and final action still supported the decision.</p>
+            <p>That distinction is the standard I bring to monetization work now: simplify the path, not the decision. Fewer steps only help if what&apos;s left still tells users how much they&apos;ll pay, when, and what they&apos;re agreeing to. A shorter checkout can support conversion without asking users to trade understanding for speed.</p>
           </div>
         </section>
 

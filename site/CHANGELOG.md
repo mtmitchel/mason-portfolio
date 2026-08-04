@@ -4,6 +4,11 @@
 
 ### Checkout case
 
+- Tightened the decision language in the Review-removal rationale and revised
+  the conclusion to distinguish shortening the checkout from reducing the
+  information customers need to understand and authorize a subscription.
+- Kept the rendered lightbox test aligned with each image's optional dialog
+  caption while preserving the visible-caption fallback.
 - Updated the opening, section structure, decision rationale, and conclusion to
   foreground the checkout experiment, Mason's content-design contribution, and
   the experiment-level increase in paid subscriptions and incremental ARR.
