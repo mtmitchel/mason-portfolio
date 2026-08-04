@@ -418,10 +418,10 @@
         "kind": "manifest-image-set",
         "public_refs": [
           "site/public/work/checkout/original-account-flow-uniform.png",
-          "site/public/work/checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
+          "site/public/work/checkout/original-details-controlled.px-9310aff5ce82.png",
           "site/public/work/checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
-          "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
-          "site/public/work/checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png"
+          "site/public/work/checkout/rebuilt-details-controlled.px-d69ba1ce5ada.png",
+          "site/public/work/checkout/rebuilt-details-summary-controlled.px-e59e20b8e9ff.png"
         ],
         "render_ref": "site/app/work/checkout/CheckoutCase.tsx",
         "required_tokens": [
@@ -430,14 +430,14 @@
           "No payment until end of trial",
           "Features of your plan"
         ],
-        "relationship": "One tabbed viewer establishes the original Account, Details, and Review journey. A second tabbed viewer pairs the materially unchanged Account form with the representative rebuilt Details composite so the complete shorter journey remains visible without separate focused crops or reconstructed interface excerpts."
+        "relationship": "One tabbed viewer establishes the original Account, Details, and Review journey and defaults to Details. A second non-sequential tab set compares the original and rebuilt Details screens and defaults to the rebuilt state. A focused crop makes the rebuilt price hierarchy and plan-feature summary readable at prose width."
       },
-      "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/case-evidence/01-checkout-simplification",
+      "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-04/checkout",
       "source_type": "design",
       "editability": "flattened",
-      "crop_notes": "The route shows measured presentation crops of the representative original Account, Details, and Review journey and the shorter Account and Details journey. The crops remove the repeated DeepL header and excess outer canvas while retaining each complete progress indicator and checkout card. The rebuilt Details composite retains its genuine two-step indicator and complete interface content. Because no separate two-step Account export is retained, the Account tab is a documented representative composite: the unchanged Account card is paired with a reconstructed two-step indicator derived from retained original stepper components.",
-      "caption": "The original and rebuilt tabbed flows establish the captured three-step and two-step journeys.",
-      "text_alternative": "Describe the representative original Account, Details, and Review journey and the shorter Account and Details journey, including the consolidated rebuilt Details state.",
+      "crop_notes": "The route retains the representative original Account and Review presentations, replaces both Details screens with controlled 2560-pixel-wide Figma exports, and adds a separately exported 964x1504 crop of the rebuilt selected-plan and plan-feature summary. The controlled Details exports preserve their complete progress indicators and checkout content. Public copies are losslessly optimized without changing visible pixels.",
+      "caption": "The original journey, controlled Details comparison, and focused rebuilt summary show how the three-step checkout became a two-step flow.",
+      "text_alternative": "Describe the original Account, Details, and Review journey, compare the original and rebuilt Details screens, and identify the rebuilt summary's immediate and post-trial price hierarchy and plan features.",
       "export_ready": false,
       "files": [
         {
@@ -453,16 +453,16 @@
           "sha256": "ac1175849669baebba10a1c5d56bde744757f578e56416fa612b1e6b907abc42"
         },
         {
-          "path": "checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
-          "public_path": "site/public/work/checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
-          "artifact_genesis": "scale_matched_crop_of_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Inline and enlargement presentation matched to the previous route asset's exact 2438x3461 dimensions and composition. It retains the complete progress indicator, Details card, sidebar and Continue action, with the supplied US-format June 27, 2025 trial date and no DeepL header.",
+          "path": "checkout/original-details-controlled.px-9310aff5ce82.png",
+          "public_path": "site/public/work/checkout/original-details-controlled.px-9310aff5ce82.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Controlled original Details reconstruction used inline and in enlargement. It retains the complete three-step progress indicator, Details form, selected-plan summary, trial explanation and Continue action so the screen can be compared directly with the rebuilt controlled export.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/original-details-us-dates.png",
-          "source_sha256": "e52ba532eecd55477215c2b5927948a5efae9812b26936a019789304078a1a4e",
-          "crop": "Complete 2880x4088 supplied presentation downsampled to the previous route asset's exact 2438x3461 dimensions; no additional crop, stretching, logo removal, or interface-content edit",
-          "dimensions": "2438x3461",
-          "sha256": "59d78ad59f44b12978105784a36b2c139a74835625ad8fcf29760c7117596f54"
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-04/checkout/original-details-controlled.png",
+          "source_sha256": "8539f65c57dd79b612f519034173630fe3de92bc6cdf37f289a6594f9efcdecd",
+          "crop": "none; complete controlled 2560x3800 Figma export; public copy losslessly optimized with no visible-pixel change",
+          "dimensions": "2560x3800",
+          "sha256": "592771cfbba9ea14970f96b70672e89786d53c41a89104f701777bd3a87a5a59"
         },
         {
           "path": "checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
@@ -477,32 +477,32 @@
           "sha256": "02906a20ab17410de3ab0355490306b9ef5b92da0e4b2aca9bd784812b14f1de"
         },
         {
-          "path": "checkout/rebuilt-account-flow-uniform-v2.png",
-          "public_path": "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
-          "artifact_genesis": "representative_composite_from_portfolio_reconstruction_2026",
-          "artifact_genesis_notes": "Representative shorter-flow Account screen. The unchanged Account card comes from the retained original reconstruction. Because no separate two-step Account export is retained, the header reconstructs a two-step Account-to-Details indicator from retained original stepper components. This is not an exact tested, winning, approved, shipped, or production screen.",
+          "path": "checkout/rebuilt-details-controlled.px-d69ba1ce5ada.png",
+          "public_path": "site/public/work/checkout/rebuilt-details-controlled.px-d69ba1ce5ada.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Controlled rebuilt Details reconstruction used inline and in enlargement. It retains the complete two-step progress indicator, Details form, rewritten selected-plan summary, plan features, passive-consent text, Begin subscription action and consolidated trial reassurance.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-account.png",
-          "source_sha256": "583ea5a4c97f880ca876a21af310d6159df2888c8cf7afff5ca3cd45ad8e671f",
-          "crop": "Account body 2436x1462+208+370; two-step header reconstructed from the original Account stepper and centered on a 2436x190 canvas. The solid screen group uses the shared 32px left, right, and bottom inset.",
-          "dimensions": "2436x1652",
-          "caption": "The Account form remained the first step of the shorter flow.",
-          "text_alternative": "Representative DeepL Account step — the retained sign-up form with a reconstructed two-step progress indicator.",
-          "sha256": "d398839da5d498c8e4ac2673a61c59ef79d92bdce0098e32c3bcf6748bed416c"
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-04/checkout/rebuilt-details-controlled.png",
+          "source_sha256": "082bedc52941427c34e68a3f6c309e8a59687d55b82b8b33b19fa26440f9c6e0",
+          "crop": "none; complete controlled 2560x4158 Figma export; public copy losslessly optimized with no visible-pixel change",
+          "dimensions": "2560x4158",
+          "caption": "The rebuilt Details screen combines payment, plan confirmation, price timing, passive consent and the final action.",
+          "text_alternative": "DeepL checkout rebuilt Details screen with a two-step progress indicator, billing and payment fields, selected-plan summary, plan features, passive consent, Begin subscription and trial reassurance.",
+          "sha256": "cc2c9ed2705df59c8e71cfb905cee44e23b0da3877002096b17f6bae83ab8cc4"
         },
         {
-          "path": "checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png",
-          "public_path": "site/public/work/checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png",
-          "artifact_genesis": "pixel_cleanup_of_portfolio_reconstruction_crop_2026",
-          "artifact_genesis_notes": "Inline and enlargement crop matched to the previous route asset's exact 2228x3618 dimensions and composition. It removes the repeated DeepL header, page footer and excess outer canvas while retaining the genuine two-step progress indicator, complete Details card, sidebar, consent statement and final action. It shows the US-format June 27, 2025 trial date. The same stray 67x30-pixel fragment of the repeated DeepL logo at the extreme upper-left edge was replaced with the exact surrounding #F1F1F1 background; no checkout interface content was redrawn, resized, stretched or moved.",
+          "path": "checkout/rebuilt-details-summary-controlled.px-e59e20b8e9ff.png",
+          "public_path": "site/public/work/checkout/rebuilt-details-summary-controlled.px-e59e20b8e9ff.png",
+          "artifact_genesis": "portfolio_reconstruction_2026",
+          "artifact_genesis_notes": "Focused export from the controlled rebuilt Details reconstruction. It keeps the complete selected-plan price hierarchy and plan-feature card readable at prose width without presenting the crop as a separate tested state.",
           "source_status": "verified",
-          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/rebuilt-details-us-dates.png",
-          "source_sha256": "3f2e296794cfbfe54c0b99fa25f0d668c95b330b067578c99761899de524c94e",
-          "crop": "2228x3618+168+20 from the supplied 2560x4058 source; page footer excluded. After cropping, only the stray repeated-logo fragment at local x0-66 y48-77 was replaced with the exact surrounding #F1F1F1 background.",
-          "dimensions": "2228x3618",
-          "caption": "With Review gone, the plan summary, billing, payment, consent and the final action all had to work on one screen.",
-          "text_alternative": "DeepL checkout, rebuilt Details step — plan selection, billing, payment, a plan summary panel, a consent statement and Begin subscription, with a two-step progress indicator.",
-          "sha256": "c2b5cedba63e936a69f934d9608f7429f6908ed71c9a3913ba006a08586a5687"
+          "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-04/checkout/rebuilt-details-summary-controlled.png",
+          "source_sha256": "8bdbeba358483f6234fd14e8e2cdb9dcb67d5a2a787d0eb5df0443b6faa43457",
+          "crop": "none; complete controlled 964x1504 Figma crop; public copy losslessly optimized with no visible-pixel change",
+          "dimensions": "964x1504",
+          "caption": "The focused summary separates Due today €0 from the annual price after the trial and keeps the selected plan's features alongside that price context.",
+          "text_alternative": "Selected-plan summary showing Due today €0, Total price after trial €299.88 per year, and the Features of your plan card.",
+          "sha256": "d5a5b46026a104e0d084a229f992c7e7ade4be550060abdb8fc780c6ec8b9ec5"
         }
       ],
       "homepage_media": {
@@ -726,5 +726,5 @@
       "poster_sha256": "b9424a94e15484ba4618ad0aa6fa39186b6ece060d16b659536474d05a336428"
     }
   ],
-  "updated": "2026-07-30"
+  "updated": "2026-08-04"
 }

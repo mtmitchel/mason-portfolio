@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased — 2026-08-04
+
+### Checkout case
+
+- Updated the opening, section structure, decision rationale, and conclusion to
+  foreground the checkout experiment, Mason's content-design contribution, and
+  the experiment-level increase in paid subscriptions and incremental ARR.
+- Replaced the original and rebuilt Details screens with controlled Figma
+  exports, retained the focused rebuilt summary crop, and assigned cache-safe
+  public filenames to every replacement.
+- Defaulted the original journey viewer to Details and added a separate
+  Original Details/Rebuilt Details comparison that uses non-sequential tabs and
+  opens on the rebuilt state.
+- Added visible enlarge controls to the checkout evidence, preserved native
+  source limits in the dialog, restored emphasis for interface strings in
+  captions, and constrained enlarged captions to a centered 68-character
+  reading block.
+- Strengthened the H2/H3 hierarchy and reduced the focused summary preview to a
+  centered 520-pixel maximum width while preserving responsive mobile scaling.
+- Retired the superseded public Details and reconstructed shorter-flow Account
+  images after the controlled exports and focused comparison replaced them.
+
 ## Unreleased — 2026-08-01
 
 ### Checkout working state
