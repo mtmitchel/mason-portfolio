@@ -47,14 +47,15 @@ editorial method; [`AGENTS.md`](AGENTS.md) owns repository boundaries and
 delegation routing.
 
 By default, authorized reader-facing Portfolio prose is written through the
-exact `gemini-3.6-flash-high` Antigravity route. Mason may explicitly select an
-exact alternative writer and model for a stage. Otherwise, native GPT-5.6 agents
-assemble the bounded source material, run factual and hiring-reader QA, and
-integrate accepted copy mechanically; they never draft, rewrite, polish, or
-repair the prose and never substitute themselves if Gemini is unavailable. A
-rejected draft is excluded from a clean rebuild, while a Mason-selected target
-candidate may serve as the new editorial starting point subject to factual
-review.
+exact native `gpt-5.6-sol` writer at `High` effort. Mason may explicitly select
+an exact alternative writer route for a stage, including exact model and effort
+for a native route or exact provider and model for an external route. Otherwise,
+the root and reviewer agents assemble the bounded source material, run factual
+and hiring-reader QA, and integrate accepted copy mechanically; they do not
+replace the selected writer or silently fall back if the default is unavailable.
+A rejected draft is excluded from a clean rebuild, while a Mason-selected
+target candidate may serve as the new editorial starting point subject to
+factual review.
 
 ## External web-agent context
 

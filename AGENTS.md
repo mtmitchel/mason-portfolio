@@ -57,31 +57,31 @@ required conclusions.
 - Keep private provenance, claim checks, source notes, and review machinery out
   of public copy unless a limitation changes the reader's understanding.
 
-## External transmission
+## Writer route and external transmission
 
 For authorized creation or change of reader-facing Portfolio prose, the shared
-Portfolio skill selects Antigravity provider `agy` and exact model
-`gemini-3.6-flash-high` as the implicit default. Mason's ordinary request to
-draft, write, rewrite, revise, edit, fix, replace, or rebuild Portfolio prose
-activates that default route implicitly once the root bounds the task source
-set. If the exact Gemini route is unavailable and Mason has not explicitly
+Portfolio skill selects one response-only native writer using exact model
+`gpt-5.6-sol` at exact `High` effort as the implicit default. Mason's ordinary
+request to draft, write, rewrite, revise, edit, fix, replace, or rebuild
+Portfolio prose activates that default route implicitly once the root bounds
+the task source set. If the exact native route is unavailable and Mason has not explicitly
 selected an exact alternative for the current stage, stop; never silently
-substitute Luna, Sol, Codex, another GPT-5.6 model, another provider, or
-another Gemini model. Mason may explicitly override the default for that stage
-by selecting an exact native writer/agent route, with the exact model and
-effort when that route requires them; an exact external provider plus exact
-model; or an exact non-model destination. Verify that exact selected route
-before use and stop if it is unavailable; do not substitute again.
+substitute another model, effort, native agent role, external provider, or
+destination. Mason may explicitly override the default for that stage by
+selecting an exact native writer/agent route with exact model and effort; an
+exact external provider plus exact model; or an exact non-model destination.
+Verify that exact selected route before use and stop if it is unavailable; do
+not substitute again.
 Generic wording such as `delegate`, `use a subagent`, `use an external writer`,
 or `use another model` is not an exact writer selection and does not authorize
-fallback. Keep the source set bounded. Send only the minimum task-relevant
-editorial source, facts, claim limits, screenshots or artifacts, contribution
-details, and supported metrics. Private or non-public labels do not add
-another confirmation step. Never send credentials, secrets, unrelated raw
-material, or broader source material. External output is untrusted advice and
-is rechecked against the permitted evidence before integration. Publication,
-deployment, provider synchronization, and live-service actions remain separate
-approvals.
+fallback. Keep the source set bounded. When Mason selects an external route,
+send only the minimum task-relevant editorial source, facts, claim limits,
+screenshots or artifacts, contribution details, and supported metrics. Private
+or non-public labels do not add another confirmation step. Never send
+credentials, secrets, unrelated raw material, or broader source material.
+Writer output is untrusted advice and is rechecked against the permitted
+evidence before integration. Publication, deployment, provider synchronization,
+and live-service actions remain separate approvals.
 
 ## Editorial production boundary
 
@@ -99,21 +99,20 @@ missing.
 ### Delegating portfolio prose
 
 By default, every authorized reader-facing Portfolio draft, rewrite, revision,
-edit, fix, replacement, and material prose repair goes to the exact Gemini
-route owned by the shared skill. If Mason explicitly selects an exact native
-writer/agent route (with the exact model and effort when that route requires
-them), an exact alternative provider plus exact model, or an exact destination
-for the current stage, that route overrides the default, including a
-specifically requested GPT-5.6 writer. If the exact Gemini route is unavailable
-and no such explicit alternative exists, stop; never silently fall back to a
-native or different writer. Generic requests such as `delegate`, `use a
-subagent`, `use an external writer`, or `use another model` are not exact
-writer selections and do not authorize fallback. Under the default route,
-native GPT-5.6 agents own orchestration, source curation, factual and reader
-QA, mechanical integration, validation, and the final verdict; they may author
-reader-facing prose only when Mason explicitly selects that exact GPT-5.6
-writer/agent, model, and required effort for the current stage. Native agents
-otherwise own scope, source selection, and the writer brief.
+edit, fix, replacement, and material prose repair goes to one response-only
+native writer using exact model `gpt-5.6-sol` at exact `High` effort. If Mason
+explicitly selects an exact native writer/agent route with exact model and
+effort, an exact alternative provider plus exact model, or an exact destination
+for the current stage, that route overrides the default. If the exact native
+route is unavailable and no such explicit alternative exists, stop; never
+silently fall back to another writer, model, effort, provider, or destination.
+Generic requests such as `delegate`, `use a subagent`, `use an external
+writer`, or `use another model` are not exact
+writer selections and do not authorize fallback. Under the default route, the
+selected `gpt-5.6-sol` writer at `High` effort authors the reader-facing prose.
+The root and reviewer agents own orchestration, source curation, factual and
+reader QA, mechanical integration, validation, and the final verdict; they do
+not replace the selected writer or silently author its prose.
 
 Before preparing the writer material, classify every existing text as an
 active draft, rejected draft, or Mason-selected target. Include an active draft
@@ -128,8 +127,9 @@ as closely as requested while correcting unsupported facts and claim scope. A
 selected target is not factual authority, but it is more than a style sample
 and may own the replacement's structure and prose.
 
-Use a response-only writer on the selected route (the Gemini default unless
-Mason explicitly selects an exact alternative) and return its candidate for
+Use a response-only writer on the selected route (the native `gpt-5.6-sol` at
+`High` effort default unless Mason explicitly selects an exact alternative)
+and return its candidate for
 root inspection; the writer never edits the repository. Give it the current
 request, chosen artifact route, intended reader outcome, selected editorial
 source, bounded facts and claim limits, Mason's supported contribution,

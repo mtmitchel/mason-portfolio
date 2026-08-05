@@ -52,6 +52,126 @@ function record(condition, message) {
   if (!condition) failures.push(message);
 }
 
+function normalizeMarkdownWhitespace(value) {
+  return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function markdownHeadingDepth(line) {
+  const match = String(line ?? "").match(/^\s*(#{1,6})(?:\s+|$)/);
+  return match ? match[1].length : null;
+}
+
+function markdownOutsideFenceLines(lines) {
+  let fence = null;
+  return lines.map((line) => {
+    if (fence) {
+      const closing = new RegExp(`^\\s{0,3}${fence.char}{${fence.length},}\\s*$`);
+      if (closing.test(line)) fence = null;
+      return false;
+    }
+
+    const opening = String(line).match(/^\s{0,3}(`{3,}|~{3,})(?:.*)$/);
+    if (opening) {
+      fence = { char: opening[1][0], length: opening[1].length };
+      return false;
+    }
+    return true;
+  });
+}
+
+function extractMarkdownSection(markdown, heading) {
+  const lines = String(markdown ?? "").replace(/\r\n?/g, "\n").split("\n");
+  const outsideFence = markdownOutsideFenceLines(lines);
+  const headingIndexes = lines
+    .map((line, index) => (outsideFence[index] && line.trim() === heading ? index : -1))
+    .filter((index) => index >= 0);
+  if (headingIndexes.length !== 1) return "";
+
+  const headingIndex = headingIndexes[0];
+  const headingDepth = markdownHeadingDepth(lines[headingIndex]);
+  if (headingDepth === null) return "";
+
+  const start = headingIndex + 1;
+  const end = lines.findIndex(
+    (line, index) => {
+      if (index < start || !outsideFence[index]) return false;
+      const candidateDepth = markdownHeadingDepth(line);
+      return candidateDepth !== null && candidateDepth <= headingDepth;
+    },
+  );
+  return normalizeMarkdownWhitespace(lines.slice(start, end < 0 ? lines.length : end).join("\n"));
+}
+
+function relocateSectionUnderImmediateSibling(markdown, heading, siblingHeading) {
+  const lines = String(markdown ?? "").replace(/\r\n?/g, "\n").split("\n");
+  const outsideFence = markdownOutsideFenceLines(lines);
+  const headingIndex = lines.findIndex(
+    (line, index) => outsideFence[index] && line.trim() === heading,
+  );
+  if (headingIndex < 0) return String(markdown ?? "");
+
+  const headingDepth = markdownHeadingDepth(lines[headingIndex]);
+  if (headingDepth === null) return String(markdown ?? "");
+
+  const end = lines.findIndex((line, index) => {
+    if (index < headingIndex + 1 || !outsideFence[index]) return false;
+    const candidateDepth = markdownHeadingDepth(line);
+    return candidateDepth !== null && candidateDepth <= headingDepth;
+  });
+  const sectionEnd = end < 0 ? lines.length : end;
+
+  return [
+    ...lines.slice(0, headingIndex + 1),
+    siblingHeading,
+    ...lines.slice(headingIndex + 1, sectionEnd),
+    ...lines.slice(sectionEnd),
+  ].join("\n");
+}
+
+function fenceSectionAcrossFollowingBoundary(markdown, heading, marker) {
+  const lines = String(markdown ?? "").replace(/\r\n?/g, "\n").split("\n");
+  const outsideFence = markdownOutsideFenceLines(lines);
+  const headingIndex = lines.findIndex(
+    (line, index) => outsideFence[index] && line.trim() === heading,
+  );
+  if (headingIndex < 0) return String(markdown ?? "");
+
+  const headingDepth = markdownHeadingDepth(lines[headingIndex]);
+  if (headingDepth === null) return String(markdown ?? "");
+
+  const boundaryIndex = lines.findIndex((line, index) => {
+    if (index < headingIndex + 1 || !outsideFence[index]) return false;
+    const candidateDepth = markdownHeadingDepth(line);
+    return candidateDepth !== null && candidateDepth <= headingDepth;
+  });
+  const fencedEnd = boundaryIndex < 0 ? lines.length : boundaryIndex + 1;
+  return [
+    ...lines.slice(0, headingIndex),
+    marker,
+    ...lines.slice(headingIndex, fencedEnd),
+    marker,
+    ...lines.slice(fencedEnd),
+  ].join("\n");
+}
+
+function canonicalRoutingDigest(sourceAgents, sourceReadme) {
+  const projection = {
+    writer_route: extractMarkdownSection(
+      sourceAgents,
+      "## Writer route and external transmission",
+    ),
+    delegating_route: extractMarkdownSection(
+      sourceAgents,
+      "### Delegating portfolio prose",
+    ),
+    readme_workflow: extractMarkdownSection(
+      sourceReadme,
+      "## Portfolio content workflow",
+    ),
+  };
+  return createHash("sha256").update(JSON.stringify(projection)).digest("hex");
+}
+
 function pngDimensions(buffer) {
   if (buffer.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a") return null;
   return {
@@ -641,6 +761,115 @@ const localPacketRunbook = await readFile(path.join(root, localPacketRunbookPath
 const externalPacketWorkflow = await readFile(path.join(root, externalPacketWorkflowPath), "utf8");
 const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
 const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
+const rootWriterRoute = extractMarkdownSection(
+  rootAgents,
+  "## Writer route and external transmission",
+);
+const rootDelegatingRoute = extractMarkdownSection(
+  rootAgents,
+  "### Delegating portfolio prose",
+);
+const rootPortfolioWorkflow = extractMarkdownSection(
+  rootReadme,
+  "## Portfolio content workflow",
+);
+const normalizedPortfolioWorkflow = normalizeMarkdownWhitespace(rootPortfolioWorkflow);
+
+record(
+  rootPortfolioWorkflow.length > 0,
+  "root README must contain exactly one Portfolio content workflow section",
+);
+record(
+  extractMarkdownSection("## Target\n## Sibling\nsibling", "## Target") === "",
+  "section extractor must stop at an immediately adjacent equal-rank heading",
+);
+record(
+  extractMarkdownSection("### Target\nown content\n### Sibling\nsibling", "### Target")
+    === "own content",
+  "section extractor must stop an H3 at an immediately adjacent H3 sibling",
+);
+record(
+  extractMarkdownSection("```\n## Target\nfenced\n```\n## Target\nreal", "## Target") === "real"
+    && extractMarkdownSection("~~~~\n## Target\nfenced\n~~~\n## Target\nstill fenced\n~~~~\n## Target\nreal", "## Target") === "real",
+  "section extractor must ignore headings inside compatible fenced blocks",
+);
+
+const relocatedRootWriterRoute = extractMarkdownSection(
+  relocateSectionUnderImmediateSibling(
+    rootAgents,
+    "## Writer route and external transmission",
+    "## Relocated writer route",
+  ),
+  "## Writer route and external transmission",
+);
+record(
+  !relocatedRootWriterRoute.includes(normalizeMarkdownWhitespace(
+    "selects one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort as the implicit default.",
+  )),
+  "routing-section relocation probe must not stitch content from an immediate sibling heading",
+);
+const relocatedRootDelegatingRoute = extractMarkdownSection(
+  relocateSectionUnderImmediateSibling(
+    rootAgents,
+    "### Delegating portfolio prose",
+    "### Relocated delegating route",
+  ),
+  "### Delegating portfolio prose",
+);
+record(
+  !relocatedRootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+    "Use a response-only writer on the selected route",
+  )),
+  "delegating-route relocation probe must not stitch content from an immediate sibling heading",
+);
+const relocatedRootPortfolioWorkflow = extractMarkdownSection(
+  relocateSectionUnderImmediateSibling(
+    rootReadme,
+    "## Portfolio content workflow",
+    "## Relocated Portfolio workflow",
+  ),
+  "## Portfolio content workflow",
+);
+record(
+  !relocatedRootPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
+    "By default, authorized reader-facing Portfolio prose is written through the exact native `gpt-5.6-sol` writer at `High` effort.",
+  )),
+  "README workflow relocation probe must not stitch content from an immediate sibling heading",
+);
+for (const [label, heading, marker, expectedText] of [
+  [
+    "Writer route and external transmission",
+    "## Writer route and external transmission",
+    "```",
+    "selects one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort as the implicit default.",
+  ],
+  [
+    "Delegating portfolio prose",
+    "### Delegating portfolio prose",
+    "~~~",
+    "Use a response-only writer on the selected route",
+  ],
+  [
+    "README Portfolio content workflow",
+    "## Portfolio content workflow",
+    "```",
+    "By default, authorized reader-facing Portfolio prose is written through the exact native `gpt-5.6-sol` writer at `High` effort.",
+  ],
+]) {
+  const fencedAgents = label === "README Portfolio content workflow"
+    ? rootAgents
+    : fenceSectionAcrossFollowingBoundary(rootAgents, heading, marker);
+  const fencedReadme = label === "README Portfolio content workflow"
+    ? fenceSectionAcrossFollowingBoundary(rootReadme, heading, marker)
+    : rootReadme;
+  const fencedSection = label === "README Portfolio content workflow"
+    ? extractMarkdownSection(fencedReadme, heading)
+    : extractMarkdownSection(fencedAgents, heading);
+  record(
+    !fencedSection.includes(normalizeMarkdownWhitespace(expectedText)),
+    `fence mutation probe must reject ${label} owner content`,
+  );
+}
 
 const expectedExternalContextVersion = "2026-08-04.2";
 const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
@@ -697,30 +926,52 @@ record(
   "local external-agent workflow must protect write boundaries, stale folders, rejected drafts, and selected targets",
 );
 record(
-  rootAgents.includes("### Delegating portfolio prose")
-    && /response-only writer on the selected route/i.test(rootAgents)
-    && /factual QA/i.test(rootAgents)
-    && /independent reader/i.test(rootAgents)
-    && /single total/i.test(rootAgents),
+    rootDelegatingRoute.includes(normalizeMarkdownWhitespace("Use a response-only writer on the selected route"))
+    && rootDelegatingRoute.includes("factual QA")
+    && rootDelegatingRoute.includes("independent reader")
+    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+      "single consolidated material failure allowed by the shared skill",
+    )),
   "root instructions must retain the delegated-prose boundary and one total repair",
 );
 record(
-  /provider `agy`[\s\S]*`gemini-3\.6-flash-high`/i.test(rootAgents)
-    && /activates that default[\s\S]*route implicitly/i.test(rootAgents)
-    && /If the exact Gemini route is unavailable[\s\S]*has not explicitly[\s\S]*selected an exact alternative/i.test(rootAgents)
-    && /Mason may explicitly override the default[\s\S]*exact native writer\/agent route[\s\S]*exact model and[\s\S]*effort[\s\S]*exact external provider plus exact[\s\S]*model[\s\S]*exact non-model destination/i.test(rootAgents)
-    && /including a[\s\S]*GPT-5\.6[\s\S]*writer/i.test(rootAgents)
-    && /Generic wording such as[\s\S]*not an exact writer selection[\s\S]*fallback/i.test(rootAgents),
-  "root instructions must select the implicit Gemini route, stop on unavailable default, and require exact explicit alternatives",
+  rootWriterRoute.includes(normalizeMarkdownWhitespace(
+    "selects one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort as the implicit default.",
+  ))
+    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
+      "Mason's ordinary request to draft, write, rewrite, revise, edit, fix, replace, or rebuild Portfolio prose activates that default route implicitly once the root bounds the task source set.",
+    ))
+    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
+      "If the exact native route is unavailable and Mason has not explicitly selected an exact alternative for the current stage, stop; never silently substitute another model, effort, native agent role, external provider, or destination.",
+    ))
+    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
+      "Mason may explicitly override the default for that stage by selecting an exact native writer/agent route with exact model and effort; an exact external provider plus exact model; or an exact non-model destination.",
+    ))
+    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
+      "Generic wording such as `delegate`, `use a subagent`, `use an external writer`, or `use another model` is not an exact writer selection and does not authorize fallback.",
+    )),
+  "root instructions must select the implicit native gpt-5.6-sol High route, stop on unavailable default, and require exact explicit alternatives",
 );
 record(
-  /Under the default\s+route,\s+native GPT-5\.6 agents[\s\S]*may\s+author[\s\S]*reader-facing prose only\s+when Mason explicitly\s+selects/i.test(rootAgents),
-  "root instructions must keep GPT-5.6 agents QA-only unless Mason explicitly selects that writer",
+  rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+    "By default, every authorized reader-facing Portfolio draft, rewrite, revision, edit, fix, replacement, and material prose repair goes to one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort.",
+  ))
+    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+      "Under the default route, the selected `gpt-5.6-sol` writer at `High` effort authors the reader-facing prose.",
+    ))
+    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+      "The root and reviewer agents own orchestration, source curation, factual and reader QA, mechanical integration, validation, and the final verdict; they do not replace the selected writer or silently author its prose.",
+    )),
+  "root instructions must assign prose to the exact native writer while keeping review roles separate",
 );
 record(
-  /classify every existing text as an[\s\S]*active draft, rejected draft, or Mason-selected target/i.test(rootAgents)
-    && /exclude that draft completely/i.test(rootAgents)
-    && /candidate as the target[\s\S]*editorial starting point/i.test(rootAgents),
+  rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+    "classify every existing text as an active draft, rejected draft, or Mason-selected target",
+  ))
+    && rootDelegatingRoute.includes("exclude that draft completely")
+    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
+      "another candidate as the target, send that candidate as the editorial starting point",
+    )),
   "root instructions must exclude rejected drafts and honor Mason-selected editorial targets",
 );
 record(
@@ -729,6 +980,54 @@ record(
     && rootReadme.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md"),
   "root README must point to the separate persistent manifest, task-folder owner, and delivery guide",
 );
+record(
+  normalizedPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
+    "By default, authorized reader-facing Portfolio prose is written through the exact native `gpt-5.6-sol` writer at `High` effort.",
+  ))
+    && normalizedPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
+      "Mason may explicitly select an exact alternative writer route for a stage, including exact model and effort for a native route or exact provider and model for an external route.",
+    ))
+    && normalizedPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
+      "they do not replace the selected writer or silently fall back if the default is unavailable.",
+    )),
+  "root README must summarize the native gpt-5.6-sol High default and exact override rules",
+);
+const expectedCanonicalRoutingDigest =
+  "fc26d6fe95ea2395b518d2e829714b0c9436fa5942032e6ffb2aa9a5f28778fd";
+record(
+  canonicalRoutingDigest(rootAgents, rootReadme) === expectedCanonicalRoutingDigest,
+  "canonical Portfolio routing sections do not match the expected digest",
+);
+for (const [label, mutate] of [
+  [
+    "writer route",
+    (source) => source.replace(
+      "Publication, deployment, provider synchronization,\nand live-service actions remain separate approvals.",
+      "Publication, deployment, provider synchronization, and live-service actions remain separate approvals. Mutation.",
+    ),
+  ],
+  [
+    "delegating route",
+    (source) => source.replace(
+      "Do not commission parallel\ncandidates or switch writers unless Mason explicitly selects another route.",
+      "Do not commission parallel candidates or switch writers unless Mason explicitly selects another route. Mutation.",
+    ),
+  ],
+  [
+    "README workflow",
+    (source) => source.replace(
+      "A rejected draft is excluded from a clean rebuild, while a Mason-selected\ntarget candidate may serve as the new editorial starting point subject to\nfactual review.",
+      "A rejected draft is excluded from a clean rebuild, while a Mason-selected target candidate may serve as the new editorial starting point subject to factual review. Mutation.",
+    ),
+  ],
+]) {
+  const mutatedAgents = label === "README workflow" ? rootAgents : mutate(rootAgents);
+  const mutatedReadme = label === "README workflow" ? mutate(rootReadme) : rootReadme;
+  record(
+    canonicalRoutingDigest(mutatedAgents, mutatedReadme) !== expectedCanonicalRoutingDigest,
+    `canonical Portfolio routing digest mutation probe must fail for ${label}`,
+  );
+}
 record(
   persistentExternalSources.get(persistentExternalPaths[1]).includes("does not instruct it to run")
     && persistentExternalSources.get(persistentExternalPaths[1]).includes("simulate an independent review")
