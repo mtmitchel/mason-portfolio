@@ -42,6 +42,17 @@ compression are welcome when accurate and clear. Do not invent facts or hide a
 supported actor, action, condition, relationship, or consequence behind vague
 language.
 
+## Choose visuals for reader value
+
+Choose visuals first for polished presentation and clarity, believable product
+context, and a legible content-design or UX-copywriting decision. Review the
+available image before deciding; packets, filenames, folder placement, and
+earlier suggestions are discovery aids, not a fixed shortlist. Use the
+[`portfolio visual-selection catalog`](../../../private-evidence/portfolio-asset-manifest.json)
+to find candidates and revisit stronger alternatives when the story needs them.
+Provenance limits lifecycle, adoption, and results language; it does not by
+itself disqualify a visually strong asset.
+
 ## Rejected drafts and selected targets
 
 Treat Mason's disposition as binding. A rejected or trashed draft contributes

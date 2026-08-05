@@ -18,8 +18,10 @@ and working records, not deployable site content.
   narrative structure or tone.
 - [`portfolio-asset-manifest.json`](portfolio-asset-manifest.json) — selected
   public visual and text exhibits, their private sources, transformations,
-  exact locators, captions, alternative text, dimensions, and hashes. It
-  records provenance rather than editorial priority.
+  exact locators, captions, alternative text, dimensions, hashes, and the
+  current [`visual_selection_catalog`](portfolio-asset-manifest.json). The
+  catalog records reader-facing visual priority after visual review; provenance
+  remains a claim-safety constraint, not an automatic suitability gate.
 - [`projects/pricing-evolution/README.md`](projects/pricing-evolution/README.md)
   — active pricing-project index. It records the pause and routes to work
   status, evidence owners, source locations, and rejected or superseded drafts.
@@ -78,6 +80,17 @@ copy and content-design experience, Figma artifacts, strategic goals, and
 attributable outcomes into candidate story clusters. The shared Portfolio skill
 owns portfolio-wide comparison, slate selection, and artifact construction;
 repository-root instructions own routing, source protection, and validation.
+
+## Visual selection rule
+
+For DeepL case-study visuals, choose for reader value first: polished
+presentation and clarity, believable product context, and a real content-design
+or UX-copywriting decision that a hiring reader can see. Review the image before
+deciding; packets, filenames, folder placement, and earlier suggestions are
+discovery aids only. Use the manifest catalog to start, then revisit stronger
+alternatives when the story calls for them. Provenance limits what public copy
+may say about lifecycle, adoption, or results, but it does not disqualify a
+visually strong asset.
 
 DeepL product, commercial, audience, and adoption context is routed through the
 current request and permitted evidence boundary. Outside research or a research

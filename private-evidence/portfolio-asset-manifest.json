@@ -10,6 +10,318 @@
     "crop_of_recovered_historical_export": "A portfolio crop made from a retained historical working or product artifact.",
     "portfolio_reconstruction_2026": "A frame or crop created or materially reconstructed in 2026 to demonstrate a portfolio idea; it is not historical product evidence."
   },
+  "visual_selection_catalog": {
+    "scope": "Image-bearing files in the DeepL case-study records below; text-only exhibits and non-DeepL media remain outside this image shortlist.",
+    "reviewed_visually": "2026-08-05",
+    "decision_rule": "Choose for reader value first: polished presentation and clarity, believable product context, and a real content-design or UX-copywriting decision that a hiring reader can see. Review the available image itself before deciding. Packets, filenames, folder placement, and earlier suggestions are discovery aids only. Provenance limits lifecycle, adoption, and results language; it does not automatically disqualify a visually strong asset.",
+    "tiers": {
+      "A": "First-look candidate: strong presentation, product context, and a legible content decision.",
+      "B": "Strong reserve: useful reader value, but narrower, more iterative, or more context-dependent.",
+      "C": "Supporting candidate: usable for a specific state or comparison, but not a lead exhibit."
+    },
+    "entries": [
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-limit-working-baseline.px-59727d264b11.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — anonymous daily translation limit, full modal",
+        "content_moment": "Baseline message combines the limit, account route, benefits, and wait-later option in one dense block.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Working iteration; the visible state does not prove the tested, shipped, or winning variant.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-limit-benefit-draft.px-aec00d771965.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — anonymous daily translation limit, full modal",
+        "content_moment": "Benefit-led draft turns reasons to create an account into a scannable list beside the limit.",
+        "visual_quality": "high",
+        "portfolio_suitability": "excluded",
+        "state_caveat": "Do not use in the portfolio: this unfinished screenshot visibly contains an active text selection and typing caret.",
+        "tier": "excluded"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-limit-refined-modal.px-833e6d3e50bb.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — anonymous daily translation limit, full modal",
+        "content_moment": "Refined hierarchy separates the immediate signup route from the option to return later.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Working iteration; do not call this the exact tested or shipped variant.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-limit-compact-first-pass.px-e3413a6c78a5.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — anonymous daily translation limit, compact timed state",
+        "content_moment": "First compact pass tests how much of the full-modal value message can survive beside a countdown.",
+        "visual_quality": "medium-high",
+        "portfolio_suitability": "reserve",
+        "state_caveat": "Small working state with a denser message; best used beside the refined compact state.",
+        "tier": "C"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-limit-compact-refined.px-b50c7b29d69e.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — anonymous daily translation limit, compact timed state",
+        "content_moment": "Shorter headline and one-line value proposition keep the timer, account route, and immediate benefit visible.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Working iteration; the image shows a copy decision in a compact state, not its lifecycle or result.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-signup-benefit-form.px-e5a721d05b35.png",
+        "source_path": null,
+        "product_surface": "DeepL account creation — desktop signup form",
+        "content_moment": "Email-first signup keeps the reasons to create an account visible beside the first required action.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Working concept; it demonstrates a value-and-action hierarchy without proving implementation or adoption.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-signup-desktop-route.px-74bb4eb9d9fe.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — desktop in-product signup route",
+        "content_moment": "Focused email-first entry point shows how the account-creation transition can stay inside the product context.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Related working state; do not use it to claim a universal desktop route or tested variant.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/upgrade-prompts/anonymous-signup-mobile-route.px-16af103da712.png",
+        "source_path": null,
+        "product_surface": "DeepL Translator — mobile in-product signup route",
+        "content_moment": "Mobile state carries the same focused email-first account route into a narrower product surface.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Complete working frame; pair with the desktop route rather than generalizing it to every mobile state.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/pricing-evolution/pricing-page-context.px-3d1f0c26cdee.png",
+        "source_path": "private-evidence/source-exports/figma/pricing-page-screenshots/1920px (2).png",
+        "product_surface": "DeepL Translator pricing page — plan grid and comparison table",
+        "content_moment": "Context frame shows the two information layers a pricing decision has to connect: plan choice and detailed comparison.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Historical working layout; text is small at page scale, so use it as context beside a focused comparison.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/pricing-evolution/repeated-tier-working-layout.px-b8ec50d79a43.png",
+        "source_path": "private-evidence/projects/pricing-evolution/gpt-export-evidence/attachments/file-tWhO0PSkFda3Tfh3Hi24u5rQ.png",
+        "product_surface": "DeepL Translator pricing page — repeated tier benefits",
+        "content_moment": "Working layout makes the content problem visible: Advanced and Ultimate repeat most benefits while only a few limits change.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Historical working layout; it is not a controlled before-and-after or proof of production lineage.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/pricing-evolution/cumulative-tier-working-layout.px-99fcb07cf2d3.png",
+        "source_path": "private-evidence/projects/pricing-evolution/gpt-export-evidence/attachments/file-bkypvx2q2LfL56qYugZ3wwbK.png",
+        "product_surface": "DeepL Translator pricing page — cumulative tier benefits",
+        "content_moment": "Inheritance headings make each higher plan's additions legible without repeating the full benefit list.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Historical working layout; use the visible information structure without claiming exact shipment or measured impact.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/account-team-security/bulk-add-limit-and-access.px-6c8a9c4eaf61.png",
+        "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/ate/10-flows/05-error-states-and-limit-reached/2-95352.png",
+        "product_surface": "DeepL team administration — add users modal",
+        "content_moment": "Limit message keeps the valid first batch in view and offers CSV continuation and group-access guidance.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Focused source-pixel crop; use it as artifact-level evidence of the visible admin state, not a lifecycle claim.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/account-team-security/csv-group-access.px-7b8f725e78b3.png",
+        "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/ate/10-flows/02-upload-csv-sub-flow/2-97522.png",
+        "product_surface": "DeepL team administration — CSV upload and group assignment",
+        "content_moment": "CSV selection and group menu connect scale with the access decision inside one add-users task.",
+        "visual_quality": "medium-high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Working product frame with a file-picker overlay and mock data; the organizational placement does not establish lifecycle.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/account-team-security/account-security-login-detail.png",
+        "source_path": "private-evidence/source-exports/figma/mfa/mfa-recovery-01-entry.png",
+        "product_surface": "DeepL account security — MFA login state",
+        "content_moment": "Normal code entry keeps recovery-code and recovery-email routes visible for people who lose authenticator access.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Clean product frame; use for the recovery-flow context, not as proof of a universal login state or shipment.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/account-team-security/mfa-error-copy-original.px-78ee0ef21d62.png",
+        "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/iam/03-original-copy-components/2-138740.png",
+        "product_surface": "DeepL account security — MFA error component, earlier copy",
+        "content_moment": "Earlier error refers to the user's device while recovery-code and recovery-email guidance sit apart from the main message.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Before-state working component; pair with the revised copy and keep the claim at visible copy comparison.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/account-team-security/mfa-error-copy-revised.px-5b5fe54c9b2e.png",
+        "source_path": "private-evidence/source-exports/figma/evidence-batches/2026-07-28/iam/04-copy-suggestion-components/2-139332.png",
+        "product_surface": "DeepL account security — MFA error component, revised copy",
+        "content_moment": "Revised error directs people to the authenticator app and presents recovery code and recovery email as parallel options.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Revised working component; the copy comparison shows craft and intent, not approval, shipment, or outcome.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/account-team-security/bulk-delete-confirmation-detail.png",
+        "source_path": "private-evidence/source-exports/figma/team-administration/bulk-deletion/bulk-delete-05-confirmation.png",
+        "product_surface": "DeepL team administration — bulk-delete confirmation",
+        "content_moment": "Confirmation names the access consequence before an administrator removes selected users.",
+        "visual_quality": "medium-high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Focused destructive-action state with mock data and a dimmed product backdrop; do not infer its lifecycle from the folder.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/checkout/original-account-flow-uniform.png",
+        "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-account.png",
+        "product_surface": "DeepL subscription checkout — original Account step",
+        "content_moment": "Account entry establishes the first step of the original checkout journey and the transition into purchase.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "2026 portfolio reconstruction of a representative state; account creation and existing-account sign-in remain separate states.",
+        "tier": "C"
+      },
+      {
+        "asset_path": "site/public/work/checkout/original-details-flow-us-dates.px-59d78ad59f44.png",
+        "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/original-details-us-dates.png",
+        "product_surface": "DeepL subscription checkout — original Details step",
+        "content_moment": "Original Details carries plan, billing, payment, and summary information before the final review step.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "2026 portfolio reconstruction; the visual represents the journey state and does not prove the exact tested or shipped frame.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/checkout/original-review-flow-us-dates-spaced.px-02906a20ab17.png",
+        "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/original-review-us-dates-account-fixed.png",
+        "product_surface": "DeepL subscription checkout — original Review step",
+        "content_moment": "Review concentrates the final plan, terms, and purchase action that the shorter flow later has to absorb.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "2026 portfolio reconstruction with a representative visible state; keep its `Buy now` action distinct from rebuilt Details.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/checkout/rebuilt-account-flow-uniform-v2.png",
+        "source_path": "private-evidence/source-exports/figma/manual-exports/2026-07-30/checkout/original-account.png",
+        "product_surface": "DeepL subscription checkout — rebuilt Account step",
+        "content_moment": "Account remains the first step while the journey becomes a shorter two-step flow.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Representative 2026 composite; it is useful for journey context but not a standalone copy decision.",
+        "tier": "C"
+      },
+      {
+        "asset_path": "site/public/work/checkout/rebuilt-details-flow-us-dates.px-c2b5cedba63e.png",
+        "source_path": "private-evidence/source-exports/figma/manual-exports/2026-08-02/checkout/rebuilt-details-us-dates.png",
+        "product_surface": "DeepL subscription checkout — rebuilt Details step",
+        "content_moment": "With Review gone, one Details screen makes plan summary, billing, payment, consent, and the final action work together.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "2026 portfolio reconstruction; keep `€0 due today` and `Begin subscription` scoped to this illustrated state, not original Review.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/voice-product/voice-positioning-header.png",
+        "source_path": "private-evidence/source-exports/figma/voice-product/voice-positioning-header-source.png",
+        "product_surface": "DeepL Voice — positioning header",
+        "content_moment": "Headline and supporting statements establish the category promise across performance, translation quality, and security.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Marketing/product-positioning frame rather than an interaction state; use when the story is about framing the offer.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/voice-product/voice-offer-comparison.png",
+        "source_path": "private-evidence/source-exports/figma/pricing-evolution/pricing-voice-clean.png",
+        "product_surface": "DeepL Voice — Meetings and Conversations comparison",
+        "content_moment": "Shared structure makes the offers comparable while distinct headlines, illustrations, benefits, and sales actions give each use case a job.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "2026 portfolio reconstruction from a historical source; use it for visible positioning and information structure, not lifecycle or adoption.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/report-campaign/report-cover.png",
+        "source_path": "private-evidence/source-exports/publications/localization-report/report-cover.png",
+        "product_surface": "DeepL report campaign — report cover",
+        "content_moment": "Cover frames translation and localization as a business question for a marketing-leader audience.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Editorial campaign artifact rather than a product UI; keep any performance or adoption claim in the supplied report evidence.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/report-campaign/key-findings.png",
+        "source_path": null,
+        "product_surface": "DeepL report campaign — executive summary",
+        "content_moment": "Executive-summary page turns multiple findings into a scan path with headings, percentages, and supporting explanation.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Independent source is not retained; use for visible editorial structure only and do not expand claims beyond the permitted report record.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/report-campaign/ai-content-generation.png",
+        "source_path": null,
+        "product_surface": "DeepL report campaign — AI content-generation finding",
+        "content_moment": "Large statistic and supporting illustration make a finding about AI-assisted writing easy to scan.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Independent source is not retained; visual quality does not establish the statistic's scope, cause, or campaign result.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/report-campaign/report-ai-findings-source.png",
+        "source_path": "site/public/work/report-campaign/key-findings.png",
+        "product_surface": "DeepL report campaign — findings detail",
+        "content_moment": "Focused crop groups the two adoption figures into one editorial finding.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Derived from a public file whose independent source is not retained; keep it paired with nearby text and the report's evidence boundary.",
+        "tier": "B"
+      },
+      {
+        "asset_path": "site/public/work/report-campaign/hubspot-story-focus.png",
+        "source_path": "private-evidence/source-exports/publications/localization-report/hubspot-case-study.png",
+        "product_surface": "DeepL report campaign — HubSpot customer story",
+        "content_moment": "Challenge and solution labels turn operational detail into a customer-story route the reader can scan.",
+        "visual_quality": "high",
+        "portfolio_suitability": "primary",
+        "state_caveat": "Editorial customer-story crop; keep the customer's outcome and attribution at the supplied source scope.",
+        "tier": "A"
+      },
+      {
+        "asset_path": "site/public/work/report-campaign/phrase-story-focus.png",
+        "source_path": "private-evidence/source-exports/publications/localization-report/phrase-case-study.png",
+        "product_surface": "DeepL report campaign — Phrase customer story",
+        "content_moment": "The repeated story structure adapts to a different customer's technical challenge and keeps the page scannable.",
+        "visual_quality": "high",
+        "portfolio_suitability": "supporting",
+        "state_caveat": "Editorial customer-story crop; use as a companion example, not as evidence of a product-interface decision.",
+        "tier": "B"
+      }
+    ]
+  },
   "assets": [
     {
       "id": "DEEPL-UPGRADE-PROMPTS",
