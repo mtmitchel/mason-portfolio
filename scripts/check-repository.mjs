@@ -642,7 +642,7 @@ const externalPacketWorkflow = await readFile(path.join(root, externalPacketWork
 const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
 const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
 
-const expectedExternalContextVersion = "2026-08-03.4";
+const expectedExternalContextVersion = "2026-08-04.2";
 const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
 const versionDeclarations = [];
 for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
@@ -736,6 +736,17 @@ record(
     && /selects another candidate as the target[\s\S]*editorial starting point/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
     && /does not authorize[\s\S]*additional rewrite or repair turn/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
   "persistent guidance must separate review, exclude rejected drafts, honor selected targets, and avoid extra repairs",
+);
+record(
+  persistentExternalSources.get(persistentExternalPaths[1]).includes("## Captions and image sequences")
+    && /short editorial bridge/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /Borrow microcopy's clarity[\s\S]*not interface-level minimalism/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /Lead with the customer's or user's task[\s\S]*what had already happened[\s\S]*remained elsewhere[\s\S]*moved or changed/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /state one[\s\S]*clear significance[\s\S]*instead[\s\S]*of stacking several[\s\S]*baseline screenshot[\s\S]*do not force a[\s\S]*rationale or effect/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /task \+ design move \+ significance[\s\S]*review question, not a sentence[\s\S]*template/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /clarity outranks lexical variety and strict grammatical\s+parallelism/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
+    && /captions explain why an image is relevant[\s\S]*alt\s+text conveys the visual content or function/i.test(persistentExternalSources.get(persistentExternalPaths[1])),
+  "02 must adapt microcopy principles, keep captions concrete and coherent as a set, and distinguish them from alt text",
 );
 
 const providerLeakagePatterns = [

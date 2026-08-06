@@ -14,6 +14,7 @@ type ImageLightboxProps = {
   /** "full" shows text chrome; "footer" puts a persistent action below the image; "overlay" uses an expand icon; "image" shows only the preview; "link" is a text trigger. */
   chrome?: "footer" | "full" | "image" | "link" | "overlay";
   dialogHeight?: number;
+  dialogCaption?: ReactNode;
   dialogMaxWidth?: number;
   dialogPresentation?: "default" | "minimal";
   dialogSrc?: string;
@@ -23,6 +24,8 @@ type ImageLightboxProps = {
   height: number;
   label: string;
   linkLabel?: string;
+  /** Fit the high-resolution dialog image to the pane without enlarging it beyond its source width. */
+  fitDialogToSource?: boolean;
   previewCaption?: ReactNode;
   previewClassName?: string;
   previewSrc: string;
@@ -44,6 +47,7 @@ export default function ImageLightbox({
   caption,
   chrome = "full",
   dialogHeight,
+  dialogCaption,
   dialogMaxWidth,
   dialogPresentation = "default",
   dialogSrc,
@@ -51,6 +55,7 @@ export default function ImageLightbox({
   height,
   label,
   linkLabel,
+  fitDialogToSource = false,
   previewCaption,
   previewClassName = "",
   previewSrc,
@@ -82,6 +87,13 @@ export default function ImageLightbox({
   ].filter(Boolean).join(" ");
   const panelStyle = dialogMaxWidth
     ? { "--lightbox-image-max-width": `${dialogMaxWidth}px` } as CSSProperties
+    : undefined;
+  const dialogImageStyle = fitDialogToSource
+    ? {
+        height: "auto",
+        maxWidth: `${dialogWidth ?? width}px`,
+        width: "100%",
+      } as CSSProperties
     : undefined;
 
   useEffect(() => {
@@ -217,9 +229,10 @@ export default function ImageLightbox({
                 width={dialogWidth ?? width}
                 height={dialogHeight ?? height}
                 sizes={dialogSizes}
+                style={dialogImageStyle}
               />
             </div>
-            {showDialogCaption ? <p id={captionId}>{caption}</p> : null}
+            {showDialogCaption ? <p id={captionId}>{dialogCaption ?? caption}</p> : null}
           </div>
         </div>
       )}

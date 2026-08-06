@@ -1,6 +1,6 @@
 # Canonical external Portfolio context
 
-External-context version: `2026-08-03.4`
+External-context version: `2026-08-04.2`
 
 This file is the sole local installation manifest and ownership map. Do not
 upload it or duplicate its persistent-set/version declarations elsewhere.
@@ -26,7 +26,7 @@ synchronize a provider.
 - `01-AUDIENCE-AND-PORTFOLIO-GOAL.md` — audience, hiring purpose, and mixed
   portfolio context.
 - `02-STORY-AND-READER-STANDARD.md` — route choice, writer-led story quality,
-  and reader outcome.
+  captions and image sequences, and reader outcome.
 - `03-EVIDENCE-AND-ACCURACY-STANDARD.md` — evidence classes, causation, and
   screenshot-dependent factual checks.
 - `05-MASON-WRITING-VOICE.md` — style-only voice reference and source limits.

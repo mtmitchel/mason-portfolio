@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useId, useRef, useState } from "react";
 import type { KeyboardEvent } from "react";
+import ImageLightbox from "../../components/ImageLightbox";
 import type { StoryImage } from "../portfolioTypes";
 
 export type CheckoutFlowStep = {
+  captionEmphasis?: string[];
   id: string;
   image: StoryImage;
   label: string;
@@ -15,13 +16,26 @@ type CheckoutFlowViewerProps = {
   ariaLabel: string;
   heading: string;
   initialStep: string;
+  showArrows?: boolean;
   steps: CheckoutFlowStep[];
+};
+
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const formatCaption = (caption: string, emphasis: string[] = []) => {
+  if (emphasis.length === 0) return caption;
+
+  const matcher = new RegExp(`(${emphasis.map(escapeRegExp).join("|")})`, "g");
+  return caption.split(matcher).map((part, index) => (
+    emphasis.includes(part) ? <strong key={`${part}-${index}`}>{part}</strong> : part
+  ));
 };
 
 export default function CheckoutFlowViewer({
   ariaLabel,
   heading,
   initialStep,
+  showArrows = true,
   steps,
 }: CheckoutFlowViewerProps) {
   const [activeStep, setActiveStep] = useState(initialStep);
@@ -52,14 +66,14 @@ export default function CheckoutFlowViewer({
 
   return (
     <section className="checkout-flow" aria-labelledby={`${instanceId}-heading`}>
-      <h3 id={`${instanceId}-heading`}>{heading}</h3>
+      <h3 className="visually-hidden" id={`${instanceId}-heading`}>{heading}</h3>
 
       <div className="checkout-flow__tabs" role="tablist" aria-label={ariaLabel}>
         {steps.map((step, index) => {
           const selected = activeStep === step.id;
           return (
             <div className="checkout-flow__tab-item" key={step.id}>
-              {index > 0 ? (
+              {showArrows && index > 0 ? (
                 <span className="checkout-flow__arrow" aria-hidden="true">→</span>
               ) : null}
               <button
@@ -81,26 +95,33 @@ export default function CheckoutFlowViewer({
       </div>
 
       {steps.map((step) => (
-        <div
-          aria-labelledby={`${instanceId}-${step.id}-tab`}
-          className="checkout-flow__panel"
-          hidden={activeStep !== step.id}
-          id={`${instanceId}-${step.id}-panel`}
-          key={step.id}
-          role="tabpanel"
-          tabIndex={0}
-        >
-          <figure className="checkout-flow__figure">
-            <Image
+          <div
+            aria-labelledby={`${instanceId}-${step.id}-tab`}
+            className="checkout-flow__panel"
+            hidden={activeStep !== step.id}
+            id={`${instanceId}-${step.id}-panel`}
+            key={step.id}
+            role="tabpanel"
+            tabIndex={0}
+          >
+            <ImageLightbox
               alt={step.image.alt}
+              caption={step.image.caption}
+              chrome="overlay"
+              dialogCaption={formatCaption(step.image.caption, step.captionEmphasis)}
+              dialogPresentation="minimal"
+              dialogSizes={`${step.image.width}px`}
+              fitDialogToSource
               height={step.image.height}
+              label={step.image.label}
+              previewCaption={formatCaption(step.image.caption, step.captionEmphasis)}
+              previewClassName="checkout-flow__preview"
+              previewSrc={step.image.src}
               sizes="(max-width: 760px) calc(100vw - 40px), 720px"
-              src={step.image.src}
+              triggerClassName="checkout-flow__image-trigger"
               width={step.image.width}
             />
-            <figcaption>{step.image.caption}</figcaption>
-          </figure>
-        </div>
+          </div>
       ))}
     </section>
   );

@@ -282,7 +282,7 @@ test("selected evidence retains accessible lightbox behavior", async () => {
     /triggerElement\?\.focus\(\{\s*preventScroll:\s*true\s*\}\)/,
     /aria-describedby=\{showDialogCaption \? captionId : undefined\}/,
     /aria-label=\{minimalDialog \? "Close image viewer" : undefined\}/,
-    /showDialogCaption \? <p id=\{captionId\}>\{caption\}<\/p> : null/,
+    /showDialogCaption \? <p id=\{captionId\}>\{dialogCaption \?\? caption\}<\/p> : null/,
   ]) assert.match(lightbox, behavior);
 });
 
