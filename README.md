@@ -8,6 +8,9 @@ work. The deployable application lives in [`site/`](site/).
 
 - [`AGENTS.md`](AGENTS.md) — repository boundaries, evidence limits,
   approvals, routing, and validation.
+- [`docs/portfolio-case-production.md`](docs/portfolio-case-production.md) —
+  the canonical local case-production sequence, candidate-validity rules, and
+  shared presentation guardrails.
 - [`docs/external-agent-packets.md`](docs/external-agent-packets.md) — local
   external handoff mechanics and source protection.
 - [`site/README.md`](site/README.md) — implemented routes, application
@@ -42,20 +45,21 @@ Choose the form that best serves the material and the reader:
   format.
 
 The queue, current-direction notes, manifest, and existing routes are inputs to
-judgment, not approval gates or templates. The shared Portfolio skill owns
-editorial method; [`AGENTS.md`](AGENTS.md) owns repository boundaries and
-delegation routing.
+judgment, not approval gates or templates. The shared Portfolio skill owns the
+editorial method and current writer route; [`AGENTS.md`](AGENTS.md) owns
+repository boundaries and delegation routing. Use the
+[`local case-production runbook`](docs/portfolio-case-production.md) for the
+stages after route and source selection, candidate validity, and shared
+case-page presentation guardrails.
 
-By default, authorized reader-facing Portfolio prose is written through the
-exact native `gpt-5.6-sol` writer at `High` effort. Mason may explicitly select
-an exact alternative writer route for a stage, including exact model and effort
-for a native route or exact provider and model for an external route. Otherwise,
-the root and reviewer agents assemble the bounded source material, run factual
-and hiring-reader QA, and integrate accepted copy mechanically; they do not
-replace the selected writer or silently fall back if the default is unavailable.
-A rejected draft is excluded from a clean rebuild, while a Mason-selected
-target candidate may serve as the new editorial starting point subject to
-factual review.
+Mason may explicitly select an exact writer route for a stage, including the
+required model and effort for a native route or the exact provider and model
+for an external route. Verify the selected route and never substitute it.
+Otherwise, the root and reviewer agents assemble bounded source material, run
+factual and hiring-reader QA, and integrate accepted copy mechanically; they do
+not replace the selected writer. A rejected draft is excluded from a clean
+rebuild, while a Mason-selected target candidate may serve as the new editorial
+starting point subject to factual review.
 
 ## External web-agent context
 

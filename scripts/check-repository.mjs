@@ -102,76 +102,6 @@ function extractMarkdownSection(markdown, heading) {
   return normalizeMarkdownWhitespace(lines.slice(start, end < 0 ? lines.length : end).join("\n"));
 }
 
-function relocateSectionUnderImmediateSibling(markdown, heading, siblingHeading) {
-  const lines = String(markdown ?? "").replace(/\r\n?/g, "\n").split("\n");
-  const outsideFence = markdownOutsideFenceLines(lines);
-  const headingIndex = lines.findIndex(
-    (line, index) => outsideFence[index] && line.trim() === heading,
-  );
-  if (headingIndex < 0) return String(markdown ?? "");
-
-  const headingDepth = markdownHeadingDepth(lines[headingIndex]);
-  if (headingDepth === null) return String(markdown ?? "");
-
-  const end = lines.findIndex((line, index) => {
-    if (index < headingIndex + 1 || !outsideFence[index]) return false;
-    const candidateDepth = markdownHeadingDepth(line);
-    return candidateDepth !== null && candidateDepth <= headingDepth;
-  });
-  const sectionEnd = end < 0 ? lines.length : end;
-
-  return [
-    ...lines.slice(0, headingIndex + 1),
-    siblingHeading,
-    ...lines.slice(headingIndex + 1, sectionEnd),
-    ...lines.slice(sectionEnd),
-  ].join("\n");
-}
-
-function fenceSectionAcrossFollowingBoundary(markdown, heading, marker) {
-  const lines = String(markdown ?? "").replace(/\r\n?/g, "\n").split("\n");
-  const outsideFence = markdownOutsideFenceLines(lines);
-  const headingIndex = lines.findIndex(
-    (line, index) => outsideFence[index] && line.trim() === heading,
-  );
-  if (headingIndex < 0) return String(markdown ?? "");
-
-  const headingDepth = markdownHeadingDepth(lines[headingIndex]);
-  if (headingDepth === null) return String(markdown ?? "");
-
-  const boundaryIndex = lines.findIndex((line, index) => {
-    if (index < headingIndex + 1 || !outsideFence[index]) return false;
-    const candidateDepth = markdownHeadingDepth(line);
-    return candidateDepth !== null && candidateDepth <= headingDepth;
-  });
-  const fencedEnd = boundaryIndex < 0 ? lines.length : boundaryIndex + 1;
-  return [
-    ...lines.slice(0, headingIndex),
-    marker,
-    ...lines.slice(headingIndex, fencedEnd),
-    marker,
-    ...lines.slice(fencedEnd),
-  ].join("\n");
-}
-
-function canonicalRoutingDigest(sourceAgents, sourceReadme) {
-  const projection = {
-    writer_route: extractMarkdownSection(
-      sourceAgents,
-      "## Writer route and external transmission",
-    ),
-    delegating_route: extractMarkdownSection(
-      sourceAgents,
-      "### Delegating portfolio prose",
-    ),
-    readme_workflow: extractMarkdownSection(
-      sourceReadme,
-      "## Portfolio content workflow",
-    ),
-  };
-  return createHash("sha256").update(JSON.stringify(projection)).digest("hex");
-}
-
 function pngDimensions(buffer) {
   if (buffer.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a") return null;
   return {
@@ -249,6 +179,7 @@ for (const file of repositoryFiles) {
 const requiredFiles = [
   "README.md",
   "AGENTS.md",
+  "docs/portfolio-case-production.md",
   "archive/README.md",
   "docs/figma-workflow.md",
   "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
@@ -270,6 +201,7 @@ const requiredFiles = [
   "site/scripts/check-production-line-limits.mjs",
   "site/scripts/configure-git-hooks.mjs",
   "site/public/mason-cv.pdf",
+  "scripts/check-worktree-alignment.mjs",
   ".githooks/pre-commit",
   ".githooks/prepare-commit-msg",
   "scripts/spawn-sync.mjs",
@@ -756,11 +688,37 @@ const localPacketRunbookPath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKE
 const externalPacketWorkflowPath = "docs/external-agent-packets.md";
 const rootAgentsPath = "AGENTS.md";
 const rootReadmePath = "README.md";
+const siteAgentsPath = "site/AGENTS.md";
+const productionRunbookPath = "docs/portfolio-case-production.md";
+const alignmentScriptPath = "scripts/check-worktree-alignment.mjs";
+const preCommitHookPath = ".githooks/pre-commit";
 const externalBaseReadme = await readFile(path.join(root, externalBaseReadmePath), "utf8");
 const localPacketRunbook = await readFile(path.join(root, localPacketRunbookPath), "utf8");
 const externalPacketWorkflow = await readFile(path.join(root, externalPacketWorkflowPath), "utf8");
 const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
 const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
+const siteAgents = await readFile(path.join(root, siteAgentsPath), "utf8");
+const productionRunbook = await readFile(path.join(root, productionRunbookPath), "utf8");
+const alignmentScript = await readFile(path.join(root, alignmentScriptPath), "utf8");
+const preCommitHook = await readFile(path.join(root, preCommitHookPath), "utf8");
+const normalizedProductionRunbook = normalizeMarkdownWhitespace(productionRunbook);
+const productionRunbookLower = normalizedProductionRunbook.toLowerCase();
+const canonicalProseOwners = new Map([
+  ["AGENTS.md", rootAgents],
+  ["README.md", rootReadme],
+  ["site/AGENTS.md", siteAgents],
+  ["docs/portfolio-case-production.md", productionRunbook],
+  [localPacketRunbookPath, localPacketRunbook],
+]);
+const defaultWriterRouteLeakage = /\bgemini(?:[-\w.]*)?\b|\bgpt(?:[-\s]?\d[\w.-]*)?\b|\b(?:default|implicit|current)\b[^\n.]{0,160}\b(?:provider|model)\b[^\n.]{0,80}(?:\b(?:is|uses?|set to|named)\b\s*(?:`[^`]+`|"[^"]+"|'[^']+'|[A-Za-z][\w.-]*)|[:=]\s*(?:`[^`]+`|"[^"]+"|'[^']+'|[A-Za-z][\w.-]*))/i;
+function hasDefaultWriterRouteLeakage(source) {
+  return defaultWriterRouteLeakage.test(source);
+}
+try {
+  spawnSyncChecked("node", [alignmentScriptPath], { cwd: root, encoding: "utf8" });
+} catch (error) {
+  record(false, `worktree alignment check failed: ${error.message}`);
+}
 const rootWriterRoute = extractMarkdownSection(
   rootAgents,
   "## Writer route and external transmission",
@@ -773,7 +731,6 @@ const rootPortfolioWorkflow = extractMarkdownSection(
   rootReadme,
   "## Portfolio content workflow",
 );
-const normalizedPortfolioWorkflow = normalizeMarkdownWhitespace(rootPortfolioWorkflow);
 
 record(
   rootPortfolioWorkflow.length > 0,
@@ -794,82 +751,103 @@ record(
   "section extractor must ignore headings inside compatible fenced blocks",
 );
 
-const relocatedRootWriterRoute = extractMarkdownSection(
-  relocateSectionUnderImmediateSibling(
-    rootAgents,
-    "## Writer route and external transmission",
-    "## Relocated writer route",
-  ),
-  "## Writer route and external transmission",
-);
-record(
-  !relocatedRootWriterRoute.includes(normalizeMarkdownWhitespace(
-    "selects one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort as the implicit default.",
-  )),
-  "routing-section relocation probe must not stitch content from an immediate sibling heading",
-);
-const relocatedRootDelegatingRoute = extractMarkdownSection(
-  relocateSectionUnderImmediateSibling(
-    rootAgents,
-    "### Delegating portfolio prose",
-    "### Relocated delegating route",
-  ),
-  "### Delegating portfolio prose",
-);
-record(
-  !relocatedRootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-    "Use a response-only writer on the selected route",
-  )),
-  "delegating-route relocation probe must not stitch content from an immediate sibling heading",
-);
-const relocatedRootPortfolioWorkflow = extractMarkdownSection(
-  relocateSectionUnderImmediateSibling(
-    rootReadme,
-    "## Portfolio content workflow",
-    "## Relocated Portfolio workflow",
-  ),
-  "## Portfolio content workflow",
-);
-record(
-  !relocatedRootPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
-    "By default, authorized reader-facing Portfolio prose is written through the exact native `gpt-5.6-sol` writer at `High` effort.",
-  )),
-  "README workflow relocation probe must not stitch content from an immediate sibling heading",
-);
-for (const [label, heading, marker, expectedText] of [
-  [
-    "Writer route and external transmission",
-    "## Writer route and external transmission",
-    "```",
-    "selects one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort as the implicit default.",
-  ],
-  [
-    "Delegating portfolio prose",
-    "### Delegating portfolio prose",
-    "~~~",
-    "Use a response-only writer on the selected route",
-  ],
-  [
-    "README Portfolio content workflow",
-    "## Portfolio content workflow",
-    "```",
-    "By default, authorized reader-facing Portfolio prose is written through the exact native `gpt-5.6-sol` writer at `High` effort.",
-  ],
-]) {
-  const fencedAgents = label === "README Portfolio content workflow"
-    ? rootAgents
-    : fenceSectionAcrossFollowingBoundary(rootAgents, heading, marker);
-  const fencedReadme = label === "README Portfolio content workflow"
-    ? fenceSectionAcrossFollowingBoundary(rootReadme, heading, marker)
-    : rootReadme;
-  const fencedSection = label === "README Portfolio content workflow"
-    ? extractMarkdownSection(fencedReadme, heading)
-    : extractMarkdownSection(fencedAgents, heading);
+for (const [file, source] of canonicalProseOwners) {
   record(
-    !fencedSection.includes(normalizeMarkdownWhitespace(expectedText)),
-    `fence mutation probe must reject ${label} owner content`,
+    !hasDefaultWriterRouteLeakage(source),
+    `${file} must not copy a provider- or model-specific default writer route`,
   );
+  for (const mutation of [
+    "The default writer route uses Gemini 3.6 Flash High.",
+    "The implicit default model is `some-provider-model`.",
+  ]) {
+    record(
+      hasDefaultWriterRouteLeakage(`${source}\n${mutation}`),
+      `${file} default-route leakage probe must reject: ${mutation}`,
+    );
+  }
 }
+
+const canonicalRunbookLink = "docs/portfolio-case-production.md";
+record(
+  rootAgents.includes(`[docs/portfolio-case-production.md](${canonicalRunbookLink})`)
+    && rootReadme.includes("](docs/portfolio-case-production.md)")
+    && siteAgents.includes("](../docs/portfolio-case-production.md)")
+    && localPacketRunbook.includes("[Portfolio case-production runbook](../../portfolio-case-production.md)"),
+  "root, site, README, and local packet instructions must link the canonical case-production runbook",
+);
+record(
+  alignmentScript.includes("process.cwd()")
+    && alignmentScript.includes('"rev-parse", "--show-toplevel"')
+    && alignmentScript.includes('"rev-parse", "--git-common-dir"')
+    && alignmentScript.includes('"worktree", "list", "--porcelain"')
+    && alignmentScript.includes("--audit-linked")
+    && alignmentScript.includes("PORTFOLIO_AUTHORIZED_LINKED_WRITE")
+    && alignmentScript.includes("linked worktree writes are disabled by default")
+    && alignmentScript.includes("authorized linked-write mode requires every canonical owner")
+    && alignmentScript.includes("linked-worktree audit failed")
+    && alignmentScript.indexOf("if (!authorizedLinkedWrite)")
+      < alignmentScript.indexOf(
+        "const { localOwnerChanges, mismatches } = await inspectOwnerAlignment(currentRoot, primaryRoot);",
+      )
+    && alignmentScript.includes("primary checkout")
+    && alignmentScript.includes("linked worktree")
+    && [
+      "AGENTS.md",
+      "README.md",
+      "site/AGENTS.md",
+      "docs/portfolio-case-production.md",
+      "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md",
+      "scripts/check-repository.mjs",
+      ".githooks/pre-commit",
+    ].every((file) => alignmentScript.includes(file)),
+  "worktree alignment must resolve the primary checkout from Git and compare the canonical owner bundle",
+);
+record(
+  preCommitHook.indexOf("check-worktree-alignment.mjs") >= 0
+    && preCommitHook.indexOf("check-production-line-limits.mjs") >= 0
+    && preCommitHook.indexOf("check-worktree-alignment.mjs")
+      < preCommitHook.indexOf("check-production-line-limits.mjs"),
+  "pre-commit must run worktree alignment before production line-limit checks",
+);
+record(
+  normalizedProductionRunbook.toLowerCase().includes("primary checkout returned by git")
+    && normalizedProductionRunbook.toLowerCase().includes("only ordinary portfolio write location")
+    && normalizedProductionRunbook.toLowerCase().includes("exactly one case study may be active at a time")
+    && normalizedProductionRunbook.toLowerCase().includes("drafting or writing")
+    && normalizedProductionRunbook.toLowerCase().includes("factual and interface review")
+    && normalizedProductionRunbook.toLowerCase().includes("reader review")
+    && normalizedProductionRunbook.toLowerCase().includes("implementation")
+    && normalizedProductionRunbook.toLowerCase().includes("rendered review")
+    && normalizedProductionRunbook.toLowerCase().includes("and repair")
+    && normalizedProductionRunbook.toLowerCase().includes("every other case parked and read-only")
+    && normalizedProductionRunbook.toLowerCase().includes("review-only by default")
+    && normalizedProductionRunbook.toLowerCase().includes("explicit task-specific authorization")
+    && normalizedProductionRunbook.toLowerCase().includes("disjoint write set")
+    && normalizedProductionRunbook.toLowerCase().includes("integration or retirement plan")
+    && normalizedProductionRunbook.toLowerCase().includes("detached commit")
+    && normalizedProductionRunbook.toLowerCase().includes("worktree-only edit is not complete")
+    && /validate the[\s\S]*instruction change, commit it, and synchronize it/.test(productionRunbook),
+  "case-production runbook must define the primary checkout, one-active-case, linked-worktree, and instruction-completion rules",
+);
+record(
+  !/gpt-5\.6|gemini/i.test(rootAgents)
+    && !/gpt-5\.6|gemini/i.test(rootReadme)
+    && rootWriterRoute.includes("shared [build-content-design-portfolio skill]")
+    && rootWriterRoute.includes("sole owner of the current default writer route")
+    && rootWriterRoute.includes("verify any exact route it selects")
+    && rootWriterRoute.includes("Never silently substitute")
+    && rootWriterRoute.includes("Mason may explicitly override"),
+  "root instructions must defer the default writer route to the shared skill while preserving exact overrides and no-substitution safety",
+);
+record(
+  rootDelegatingRoute.includes("selected response-only writer")
+    && rootDelegatingRoute.includes("factual and reader QA")
+    && rootDelegatingRoute.toLowerCase().includes("do not replace the selected writer")
+    && rootDelegatingRoute.includes("classify every existing text as an active draft, rejected draft, or Mason-selected target")
+    && rootDelegatingRoute.includes("exclude that draft completely")
+    && rootDelegatingRoute.includes("candidate as the editorial starting point"),
+  "root instructions must retain writer ownership, context separation, rejected-draft exclusion, and selected-target handling",
+);
 
 const expectedExternalContextVersion = "2026-08-04.2";
 const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
@@ -926,108 +904,63 @@ record(
   "local external-agent workflow must protect write boundaries, stale folders, rejected drafts, and selected targets",
 );
 record(
-    rootDelegatingRoute.includes(normalizeMarkdownWhitespace("Use a response-only writer on the selected route"))
-    && rootDelegatingRoute.includes("factual QA")
-    && rootDelegatingRoute.includes("independent reader")
-    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-      "single consolidated material failure allowed by the shared skill",
-    )),
-  "root instructions must retain the delegated-prose boundary and one total repair",
-);
-record(
-  rootWriterRoute.includes(normalizeMarkdownWhitespace(
-    "selects one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort as the implicit default.",
-  ))
-    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
-      "Mason's ordinary request to draft, write, rewrite, revise, edit, fix, replace, or rebuild Portfolio prose activates that default route implicitly once the root bounds the task source set.",
-    ))
-    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
-      "If the exact native route is unavailable and Mason has not explicitly selected an exact alternative for the current stage, stop; never silently substitute another model, effort, native agent role, external provider, or destination.",
-    ))
-    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
-      "Mason may explicitly override the default for that stage by selecting an exact native writer/agent route with exact model and effort; an exact external provider plus exact model; or an exact non-model destination.",
-    ))
-    && rootWriterRoute.includes(normalizeMarkdownWhitespace(
-      "Generic wording such as `delegate`, `use a subagent`, `use an external writer`, or `use another model` is not an exact writer selection and does not authorize fallback.",
-    )),
-  "root instructions must select the implicit native gpt-5.6-sol High route, stop on unavailable default, and require exact explicit alternatives",
-);
-record(
-  rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-    "By default, every authorized reader-facing Portfolio draft, rewrite, revision, edit, fix, replacement, and material prose repair goes to one response-only native writer using exact model `gpt-5.6-sol` at exact `High` effort.",
-  ))
-    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-      "Under the default route, the selected `gpt-5.6-sol` writer at `High` effort authors the reader-facing prose.",
-    ))
-    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-      "The root and reviewer agents own orchestration, source curation, factual and reader QA, mechanical integration, validation, and the final verdict; they do not replace the selected writer or silently author its prose.",
-    )),
-  "root instructions must assign prose to the exact native writer while keeping review roles separate",
-);
-record(
-  rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-    "classify every existing text as an active draft, rejected draft, or Mason-selected target",
-  ))
-    && rootDelegatingRoute.includes("exclude that draft completely")
-    && rootDelegatingRoute.includes(normalizeMarkdownWhitespace(
-      "another candidate as the target, send that candidate as the editorial starting point",
-    )),
-  "root instructions must exclude rejected drafts and honor Mason-selected editorial targets",
-);
-record(
   rootReadme.includes("docs/external-agent/base/README.md")
     && rootReadme.includes("docs/external-agent-packets.md")
     && rootReadme.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md"),
   "root README must point to the separate persistent manifest, task-folder owner, and delivery guide",
 );
+const requiredStageMarkers = [
+  "one selected response-only writer produces the candidate",
+  "factual and screenshot/interface-state qa diagnoses",
+  "distinct interface/content-system review checks state progression",
+  "fresh hiring-reader review receives only the assembled reader-facing candidate",
+  "one total same-writer repair is the maximum",
+  "integrate accepted copy locally",
+  "exact integrated route at desktop and mobile sizes",
+];
+const stagePositions = requiredStageMarkers.map((marker) => productionRunbookLower.indexOf(marker));
 record(
-  normalizedPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
-    "By default, authorized reader-facing Portfolio prose is written through the exact native `gpt-5.6-sol` writer at `High` effort.",
-  ))
-    && normalizedPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
-      "Mason may explicitly select an exact alternative writer route for a stage, including exact model and effort for a native route or exact provider and model for an external route.",
-    ))
-    && normalizedPortfolioWorkflow.includes(normalizeMarkdownWhitespace(
-      "they do not replace the selected writer or silently fall back if the default is unavailable.",
-    )),
-  "root README must summarize the native gpt-5.6-sol High default and exact override rules",
+  stagePositions.every((position, index) => position >= 0 && (index === 0 || position > stagePositions[index - 1]))
+    && productionRunbook.includes("substantial full-case creation")
+    && productionRunbook.includes("material full-case revision")
+    && productionRunbook.includes("small edit may use the root-owned")
+    && productionRunbook.includes("Mason's qualitative rejection reopens the affected reader-facing decision"),
+  "case-production runbook must define the ordered writer, factual, interface-system, reader, repair, integration, and rendered stages",
 );
-const expectedCanonicalRoutingDigest =
-  "fc26d6fe95ea2395b518d2e829714b0c9436fa5942032e6ffb2aa9a5f28778fd";
 record(
-  canonicalRoutingDigest(rootAgents, rootReadme) === expectedCanonicalRoutingDigest,
-  "canonical Portfolio routing sections do not match the expected digest",
+  productionRunbookLower.includes("prose, headings, conclusions, captions, meaning-bearing alt text")
+    && productionRunbookLower.includes("ordered visual set")
+    && productionRunbookLower.includes("each crop or treatment")
+    && productionRunbookLower.includes("reading order and emphasis")
+    && productionRunbookLower.includes("rendered layout")
+    && productionRunbookLower.includes("a review result is valid only for the surfaces it inspected")
+    && productionRunbookLower.includes("never claim complete using a review of an older candidate"),
+  "case-production runbook must define the complete candidate boundary and current-review validity",
 );
-for (const [label, mutate] of [
-  [
-    "writer route",
-    (source) => source.replace(
-      "Publication, deployment, provider synchronization,\nand live-service actions remain separate approvals.",
-      "Publication, deployment, provider synchronization, and live-service actions remain separate approvals. Mutation.",
-    ),
-  ],
-  [
-    "delegating route",
-    (source) => source.replace(
-      "Do not commission parallel\ncandidates or switch writers unless Mason explicitly selects another route.",
-      "Do not commission parallel candidates or switch writers unless Mason explicitly selects another route. Mutation.",
-    ),
-  ],
-  [
-    "README workflow",
-    (source) => source.replace(
-      "A rejected draft is excluded from a clean rebuild, while a Mason-selected\ntarget candidate may serve as the new editorial starting point subject to\nfactual review.",
-      "A rejected draft is excluded from a clean rebuild, while a Mason-selected target candidate may serve as the new editorial starting point subject to factual review. Mutation.",
-    ),
-  ],
-]) {
-  const mutatedAgents = label === "README workflow" ? rootAgents : mutate(rootAgents);
-  const mutatedReadme = label === "README workflow" ? mutate(rootReadme) : rootReadme;
-  record(
-    canonicalRoutingDigest(mutatedAgents, mutatedReadme) !== expectedCanonicalRoutingDigest,
-    `canonical Portfolio routing digest mutation probe must fail for ${label}`,
-  );
-}
+record(
+  productionRunbookLower.includes("a prose, heading, or conclusion change requires the relevant factual review")
+    && productionRunbookLower.includes("a caption, alt-text, or visible-state claim change requires factual and")
+    && productionRunbookLower.includes("an ordered visual set, crop, or visual-treatment change requires")
+    && productionRunbookLower.includes("a layout, type, alignment, or footer change requires rendered review")
+    && productionRunbookLower.includes("meaning-preserving mechanical normalization does not invalidate semantic review")
+    && productionRunbookLower.includes("plain terms")
+    && productionRunbookLower.includes("ledger, receipt, hash bureaucracy, or packet ceremony"),
+  "case-production runbook must define candidate invalidation and plain-language review records",
+);
+record(
+  productionRunbookLower.includes("byline identifies the company plus the team or workstream")
+    && productionRunbookLower.includes("never mason's role")
+    && productionRunbook.includes("DeepL · Monetization")
+    && productionRunbookLower.includes("omit years from case-study bylines portfolio-wide")
+    && productionRunbookLower.includes("blanket historical-state or terms disclaimers")
+    && productionRunbookLower.includes("use the checkout case as the current presentation baseline")
+    && productionRunbookLower.includes("does not authorize copying checkout's story")
+    && productionRunbookLower.includes("captions stay concise and visually subordinate")
+    && productionRunbook.includes("compact bottom-right “Next →” treatment")
+    && productionRunbookLower.includes("not a universal story or section template")
+    && productionRunbookLower.includes("direct mason instruction may intentionally override"),
+  "case-production runbook must define stable presentation guardrails without imposing a universal story template",
+);
 record(
   persistentExternalSources.get(persistentExternalPaths[1]).includes("does not instruct it to run")
     && persistentExternalSources.get(persistentExternalPaths[1]).includes("simulate an independent review")

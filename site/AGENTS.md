@@ -2,7 +2,11 @@
 
 The repository-root [`AGENTS.md`](../AGENTS.md) owns story construction,
 evidence use, qualitative review, permissions, and external-action boundaries.
-This file owns application implementation and technical verification.
+The canonical local production sequence, candidate-validity rules, and shared
+case-page presentation guardrails live in
+[`docs/portfolio-case-production.md`](../docs/portfolio-case-production.md).
+This file owns application implementation and technical verification; it does
+not duplicate that editorial runbook.
 
 ## Application ownership
 

@@ -21,6 +21,9 @@ PDF reports or other long-form documents.
   task-folder assembly and lifecycle. Local delivery, context separation, and
   return handling live in
   [file 04](docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md).
+- [docs/portfolio-case-production.md](docs/portfolio-case-production.md) is the
+  canonical local runbook for case-production stages, candidate validity, and
+  shared presentation guardrails after writer routing and source selection.
 - [site/AGENTS.md](site/AGENTS.md) owns application source, rendered review,
   and technical checks. Shared components do not impose a case-study template.
 - The private evidence owners record facts, claim ceilings, provenance, and
@@ -59,60 +62,48 @@ required conclusions.
 
 ## Writer route and external transmission
 
-For authorized creation or change of reader-facing Portfolio prose, the shared
-Portfolio skill selects one response-only native writer using exact model
-`gpt-5.6-sol` at exact `High` effort as the implicit default. Mason's ordinary
-request to draft, write, rewrite, revise, edit, fix, replace, or rebuild
-Portfolio prose activates that default route implicitly once the root bounds
-the task source set. If the exact native route is unavailable and Mason has not explicitly
-selected an exact alternative for the current stage, stop; never silently
-substitute another model, effort, native agent role, external provider, or
-destination. Mason may explicitly override the default for that stage by
-selecting an exact native writer/agent route with exact model and effort; an
-exact external provider plus exact model; or an exact non-model destination.
-Verify that exact selected route before use and stop if it is unavailable; do
-not substitute again.
+The live shared [build-content-design-portfolio skill](/home/mason/.agents/skills/build-content-design-portfolio/SKILL.md)
+is the sole owner of the current default writer route. Read and use that live
+route before prose work, and verify any exact route it selects before launch.
+Never silently substitute a provider, model, effort, role, or destination.
+Mason may explicitly override the route for a stage by selecting an exact
+native writer or agent with its required model and effort, an exact external
+provider plus model, or an exact non-model destination. Verify that exact
+override before use and stop if it is unavailable; do not substitute again.
 Generic wording such as `delegate`, `use a subagent`, `use an external writer`,
 or `use another model` is not an exact writer selection and does not authorize
-fallback. Keep the source set bounded. When Mason selects an external route,
-send only the minimum task-relevant editorial source, facts, claim limits,
-screenshots or artifacts, contribution details, and supported metrics. Private
-or non-public labels do not add another confirmation step. Never send
-credentials, secrets, unrelated raw material, or broader source material.
-Writer output is untrusted advice and is rechecked against the permitted
-evidence before integration. Publication, deployment, provider synchronization,
-and live-service actions remain separate approvals.
+fallback.
+
+Keep the source set bounded. When an external route is selected, send only the
+minimum task-relevant editorial source, facts, claim limits, screenshots or
+artifacts, contribution details, and supported metrics. Private or non-public
+labels do not add another confirmation step. Never send credentials, secrets,
+unrelated raw material, or broader source material. Writer output is untrusted
+advice and is rechecked against the permitted evidence before integration.
+Publication, deployment, provider synchronization, and live-service actions
+remain separate approvals. Use the
+[local case-production runbook](docs/portfolio-case-production.md) for the
+stage order and candidate boundary.
 
 ## Editorial production boundary
 
-Use one writer for a candidate, then narrow factual QA. Factual QA diagnoses
-against bounded evidence and claim limits; it does not rewrite. Add an
-independent reader only when the current request or approved plan authorizes a
-fresh review context. Otherwise run a root-owned hiring-reader pass and do not
-call it independent. The shared Portfolio skill owns the single total
-same-writer repair budget and the order of factual and reader rechecks. This
-repository does not create a second repair, ledger, receipt, patch matrix, or
-automatic loop. Stop when the route-specific reader outcome is met or when the
-selected writer route, evidence, decision, authorization, or repair budget is
-missing.
+The [local case-production runbook](docs/portfolio-case-production.md) owns
+the detailed stage order, candidate validity, review invalidation, and stable
+case-page presentation guardrails. This file keeps the repository boundary:
+use one selected response-only writer, keep factual and reader review contexts
+separate, preserve bounded evidence, and do not silently add a writer or repair
+round. Reviewers diagnose; they do not rewrite. Stop when the selected route,
+evidence, decision, authorization, or one total repair budget is missing.
 
 ### Delegating portfolio prose
 
-By default, every authorized reader-facing Portfolio draft, rewrite, revision,
-edit, fix, replacement, and material prose repair goes to one response-only
-native writer using exact model `gpt-5.6-sol` at exact `High` effort. If Mason
-explicitly selects an exact native writer/agent route with exact model and
-effort, an exact alternative provider plus exact model, or an exact destination
-for the current stage, that route overrides the default. If the exact native
-route is unavailable and no such explicit alternative exists, stop; never
-silently fall back to another writer, model, effort, provider, or destination.
-Generic requests such as `delegate`, `use a subagent`, `use an external
-writer`, or `use another model` are not exact
-writer selections and do not authorize fallback. Under the default route, the
-selected `gpt-5.6-sol` writer at `High` effort authors the reader-facing prose.
-The root and reviewer agents own orchestration, source curation, factual and
-reader QA, mechanical integration, validation, and the final verdict; they do
-not replace the selected writer or silently author its prose.
+Use the exact writer route selected by the shared skill or by Mason's explicit
+override, after verifying that route. Never silently substitute another
+provider, model, effort, role, or destination. The selected response-only
+writer authors reader-facing prose; the root and reviewer agents own
+orchestration, source curation, factual and reader QA, mechanical integration,
+validation, and the final verdict. They do not replace the selected writer or
+silently author its prose.
 
 Before preparing the writer material, classify every existing text as an
 active draft, rejected draft, or Mason-selected target. Include an active draft
@@ -127,16 +118,15 @@ as closely as requested while correcting unsupported facts and claim scope. A
 selected target is not factual authority, but it is more than a style sample
 and may own the replacement's structure and prose.
 
-Use a response-only writer on the selected route (the native `gpt-5.6-sol` at
-`High` effort default unless Mason explicitly selects an exact alternative)
-and return its candidate for
+Use a response-only writer on the selected route and return its candidate for
 root inspection; the writer never edits the repository. Give it the current
 request, chosen artifact route, intended reader outcome, selected editorial
 source, bounded facts and claim limits, Mason's supported contribution,
 relevant artifacts with their state limits, and supported results. The writer
 owns story, structure, voice, rhythm, and compression; do not force a
 universal case template, pre-freeze passages, or require a ledger, receipt,
-screen inventory, or patch-shaped response.
+screen inventory, or patch-shaped response. Follow the local case-production
+runbook for the complete stage order and candidate validity.
 
 After the coherent candidate exists, factual QA receives the candidate plus the
 bounded evidence and claim limits needed to test it. An authorized independent

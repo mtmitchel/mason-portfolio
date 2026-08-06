@@ -1,3 +1,4 @@
 #!/bin/sh
 repository_root=$(git rev-parse --show-toplevel) || exit 1
+node "$repository_root/scripts/check-worktree-alignment.mjs" || exit $?
 exec node "$repository_root/site/scripts/check-production-line-limits.mjs" --staged

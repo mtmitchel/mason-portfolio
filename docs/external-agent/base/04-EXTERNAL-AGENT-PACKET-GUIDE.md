@@ -1,11 +1,13 @@
 # Local external-agent delivery guide
 
 Local only. Never install or attach this file in an external Portfolio project.
-The base [README](README.md) is the sole persistent-set manifest. This file owns
-delivery, context separation, and return handling only; the numbered files own
-external content guidance and
-[`docs/external-agent-packets.md`](../../external-agent-packets.md) owns optional
-task-folder lifecycle.
+The base [README](README.md) is the sole persistent-set manifest. The
+[Portfolio case-production runbook](../../portfolio-case-production.md) owns
+the local production stage order and candidate-validity rules after route and
+source selection. This file owns delivery, context separation, and return
+handling only; the numbered files own external content guidance and
+[`docs/external-agent-packets.md`](../../external-agent-packets.md) owns
+optional task-folder lifecycle.
 
 ## Prepare the minimum material
 
@@ -21,6 +23,11 @@ conditions, Mason's contribution details, and supported metrics. External
 delivery requires an exact provider plus exact model for a model route, or an
 exact destination, and a bounded source set. Keep credentials, unrelated raw
 archives, local paths, and publication or deployment work out of the delivery.
+
+Use the [case-production runbook](../../portfolio-case-production.md) to name
+the current candidate and to determine which stage or affected review follows.
+Do not turn that candidate boundary into a packet ledger, receipt, or provider
+sync claim.
 
 Use a small task folder when it reduces confusion. Keep no more than 10 files,
 one current copy of each artifact, and no persistent-context copies. A formal
