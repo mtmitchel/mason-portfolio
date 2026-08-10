@@ -46,8 +46,8 @@ Choose the form that best serves the material and the reader:
 
 The queue, current-direction notes, manifest, and existing routes are inputs to
 judgment, not approval gates or templates. The shared Portfolio skill owns the
-editorial method and current writer route; [`AGENTS.md`](AGENTS.md) owns
-repository boundaries and delegation routing. Use the
+editorial method; [`AGENTS.md`](AGENTS.md) owns repository boundaries and the
+current Portfolio writer route. Use the
 [`local case-production runbook`](docs/portfolio-case-production.md) for the
 stages after route and source selection, candidate validity, and shared
 case-page presentation guardrails.
@@ -68,7 +68,7 @@ The sole persistent-context manifest and ownership map is
 Optional task-folder lifecycle lives in
 [`docs/external-agent-packets.md`](docs/external-agent-packets.md); local
 delivery and context separation live in
-[`docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md`](docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md).
+[`docs/external-agent/base/EXTERNAL-AGENT-PACKET-GUIDE.md`](docs/external-agent/base/EXTERNAL-AGENT-PACKET-GUIDE.md).
 No external chat receives implied repository access or local workflow material.
 
 ## Repository layout

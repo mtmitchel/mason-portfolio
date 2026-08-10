@@ -16,7 +16,7 @@ const ownerFiles = [
   "README.md",
   "site/AGENTS.md",
   "docs/portfolio-case-production.md",
-  "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md",
+  "docs/external-agent/base/EXTERNAL-AGENT-PACKET-GUIDE.md",
   "scripts/check-repository.mjs",
   "scripts/check-worktree-alignment.mjs",
   ".githooks/pre-commit",

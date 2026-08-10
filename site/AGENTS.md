@@ -61,6 +61,14 @@ This rule is non-negotiable during implementation and rendered review.
 - Complete screens, focused crops, typeset excerpts, tabs, sequential figures,
   diagrams, and text-only passages are all optional. Select the smallest set
   that makes the story clear.
+- If a visible defect is embedded in a public image, rebuild or replace the
+  public derivative or use a stronger asset. The fact that CSS cannot reach an
+  embedded defect is not a reason to preserve it.
+- When interface copy is used to demonstrate Mason's work, an obvious grammar,
+  logic, or choice-structure flaw must be corrected in a truthful documented
+  reconstruction or the asset must be replaced or removed. Do not showcase a
+  flawed string as evidence of strong UX writing or publish an explanation in
+  place of the correction.
 - Captions and labels should help the reader, but their location and wording are
   not fixed.
 - A supported result can lead or end a case. Do not force it into a stat strip
@@ -70,12 +78,11 @@ Use the existing colors and typography as a starting point, not as a reason to
 repeat rejected layouts. Mason's current request outranks visual consistency
 with another case.
 
-Use one implementation pass and up to two focused rendered visual repair
-passes. A natural rejection abandons the rejected composition and interaction
-family and requires a materially different direction; it does not authorize
-cosmetic repair of the rejected concept. Clearly marked provisional copy,
-hierarchy labels, length targets, and alternate text structures may guide
-implementation only as exploration; Mason retains final copy and claim
+Use the global Qualitative and design work section and the frontend-design
+skill for direction choice, visual-bug diagnosis, rejection behavior, and
+repair limits. This file adds no separate design workflow. Clearly marked
+provisional copy, hierarchy labels, length targets, and alternate text
+structures may guide implementation only as exploration; Mason retains final copy and claim
 approval, and provisional text cannot be published or presented as fact.
 
 When rendered design quality is in scope, a transient local browser-page or

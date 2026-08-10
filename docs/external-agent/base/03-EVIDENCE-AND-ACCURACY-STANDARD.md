@@ -10,15 +10,26 @@ research.
   scope, including Mason's participation, contribution, intent, rationale,
   artifact state, lifecycle, and observed or measured result.
 - **Defensible professional reconstruction:** a confident account of ordinary
-  process, hypotheses, collaboration, trade-offs, rationale, or causal logic
-  consistent with Mason's account and artifacts and defensible in an interview.
+  professional process, rationale, hypotheses, collaboration, trade-offs, or
+  causal project logic that is consistent with Mason's account and supplied
+  artifacts and defensible in an interview. Present professional interpretation
+  directly when it is clear and supported; public prose need not announce an
+  inference or carry routine caveats. Do not invent precise historical
+  particulars that the record does not establish.
 - **Prohibited evidence-shaped invention:** invented research, quotations,
-  ownership, shipment, adoption, metrics, causation, results, or a claim that
-  an artifact proves a different evidence dimension.
+  ownership, shipment, adoption, metrics, results, measured causation, or
+  precise unsupported historical particulars such as a specific event, actor,
+  decision, method, sequence, contribution, rationale, or intent, or a claim
+  that an artifact proves a different evidence dimension.
 
 Professional interpretation may explain what a design or content decision would
 help a user do. Keep that interpretation distinct from observed or measured
 behavior.
+
+If supplied materials conflict or do not support a material public claim,
+identify the conflict or missing support instead of resolving it by assumption.
+Keep that evidence distinction internal; public prose need not announce an
+inference or carry routine caveats.
 
 ## Causation
 
@@ -34,8 +45,8 @@ After a coherent draft, inspect every supplied screenshot used by a material
 sentence, caption, or alt text. Check visible labels, values, controls,
 selections, conditions, and consequential differences between related states.
 Keep each state within its visible scope; do not merge states or generalize one
-capture as universal, default, exhaustive, or guaranteed. Report a material
-mismatch before delivery; this check diagnoses the defect and does not authorize
-an additional rewrite or repair turn. Any prose change follows the authorized
-production route. This is a limited post-draft factual check, not an exhaustive
-screen inventory.
+capture as universal, default, exhaustive, or guaranteed. During an authorized
+drafting or editing task, correct a material mismatch before delivering the
+candidate. During review or diagnosis, report the mismatch without rewriting.
+This limited post-draft check does not authorize work beyond the current request
+and is not an exhaustive screen inventory.

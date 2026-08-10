@@ -1,6 +1,6 @@
 # Mason writing voice and sample notes
 
-This file is Mason's persistent Portfolio voice reference. It supports both
+This is Mason's persistent Portfolio voice reference. It supports both
 evaluation and authorized drafting, rewriting, and line editing. It complements
 the story guidance in 02. It does not govern facts, claims, terminology, case
 structure, conclusions, or authorization.
@@ -11,8 +11,8 @@ structure, conclusions, or authorization.
   brand or publication guide outrank these samples.
 - Use the samples for cadence, directness, warmth, explanation density,
   transitions, and reader relationship only. Never import their facts,
-  examples, metrics, claims, headings, metaphors, or conclusions into another
-  case.
+  examples, metrics, claims, headings, metaphors, structure, conclusions, or
+  rhetorical habits into another case.
 - Match the sample to the genre. Do not average every sample into one generic
   voice or reproduce a passage's structure sentence by sentence.
 - Treat public pages as selected examples of Mason's writing range, not proof
@@ -20,11 +20,6 @@ structure, conclusions, or authorization.
   Brand editing may be present.
 - Do not use this editorial voice as the default for product-interface copy,
   CV bullets, technical documentation, email, or another person's writing.
-- Treat these samples as style guidance only. They are never evidence for the
-  facts, claims, structure, or conclusion of another case.
-- These samples guide style only. Natural voice, rhythm, analogy, and
-  compression remain available when they are accurate and clear; do not import
-  a sample's facts or rhetorical habits into another case.
 
 ## Selected corpus
 
@@ -54,7 +49,7 @@ voice.
 - **Informed but human.** Prefer concrete nouns, confident explanation, warmth,
   and restraint over institutional distance.
 
-## Default annotated samples
+## Annotated voice cues
 
 These short excerpts are memory cues, not copy templates. Open a linked full
 piece only when Mason explicitly requests outside research in the current chat
@@ -66,8 +61,8 @@ From [The Problem With Culture Fit and What Can Be Done About It](https://www.sm
 
 > Put them together, however, and things change a bit.
 
-Use this piece for measured pivots that complicate a familiar assumption without
-theatrical framing.
+This excerpt illustrates a measured pivot that complicates a familiar
+assumption without theatrical framing.
 
 ### Connect commercial stakes to a concrete case
 
@@ -75,8 +70,8 @@ From [How SmartRecruiters Could Save You a Million Dollars](https://www.smartrec
 
 > For some this may be inconvenient; for others it may be a blessing in disguise.
 
-Use this piece for business-facing prose that sounds confident, concrete, and
-restrained rather than promotional.
+This excerpt illustrates business-facing prose that sounds confident,
+concrete, and restrained rather than promotional.
 
 ### Explain through a human analogy
 
@@ -84,8 +79,8 @@ From [Everything You Need to Know About Onboarding](https://www.smartrecruiters.
 
 > Think of onboarding as an extended handshake and hello.
 
-This is an older editorial example of analogy. Use it only as a style cue for
-making an explanation easy to follow; do not import its facts or assumptions.
+This older editorial example illustrates how analogy can make an explanation
+easy to follow; its facts and assumptions do not transfer to another task.
 
 ### Bring curiosity into an interview or profile
 
@@ -93,10 +88,9 @@ From [Discussions on Hiring as a Global Humanism](https://hiringsuccess.com/epis
 
 > The discussion that followed is one that you're sure to appreciate.
 
-For an interview or profile task, use the edited introduction and Mason's
-questions for concise question framing and responsive follow-ups. Do not carry
-that conversational register, transcript fillers, or spoken sentence fragments
-into case-study prose.
+The edited introduction and Mason's questions illustrate concise question
+framing and responsive follow-ups. Its conversational register, transcript
+fillers, and spoken fragments do not transfer to case-study prose.
 
 ### Move from external change to product response
 
@@ -104,8 +98,8 @@ From [Localyze 2.0: The next generation of global mobility tech](https://www.loc
 
 > This isn't your run-of-the-mill product release, though.
 
-Use this piece only for the sequence from business context to concrete feature
-detail. Do not import its idiom or promotional energy into case-study prose.
+This excerpt illustrates movement from business context to concrete feature
+detail. Its idiom and promotional energy do not transfer to case-study prose.
 
 ### Turn research into an argument
 
@@ -113,10 +107,10 @@ From [Hiring Overseas Talent to Tackle the UK Labour Shortage](https://media.jou
 
 > The primary purpose of this report, though, is not to outline the merits of international hiring.
 
-Use this report for evidence-led prose with explicit questions, restrained
-claims, and readable transitions between findings and interpretation. The
-report serves a UK audience and uses British English; do not transfer that
-spelling to current Portfolio copy.
+This report illustrates evidence-led prose with explicit questions, restrained
+claims, and readable transitions between findings and interpretation. It serves
+a UK audience and uses British English; that spelling does not transfer to
+current Portfolio copy.
 
 ## Complete corpus index
 

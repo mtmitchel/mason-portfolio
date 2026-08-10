@@ -1,7 +1,7 @@
 # Story and reader standard
 
 Use this file for writer-led story quality. Use 03 for evidence and accuracy
-and 05 for Mason's writing voice.
+and 04 for Mason's writing voice.
 
 ## Three routes
 
@@ -42,57 +42,48 @@ compression are welcome when accurate and clear. Do not invent facts or hide a
 supported actor, action, condition, relationship, or consequence behind vague
 language.
 
+## Upgrade prompts, paywalls, and feature gates
+
+Base the copy on the user's actual state and what each action will do.
+Distinguish warnings, blockers, and gated capabilities; do not force them into
+one order or template. Use logical actors, clear referents, and enough product
+or task context that essential meaning does not depend on visual proximity.
+Give adjacent fields distinct jobs; remove repetition and keep related clauses,
+choices, and benefits parallel. Make any real non-paid path clear, and scope
+benefits, comparisons, urgency, and social consequences to the evidence
+permitted by 03. In an authorized rewrite, existing labels, bullets, and field
+order are editable unless the task explicitly fixes them.
+
 ## Choose visuals for reader value
 
 Choose the strongest believable before-and-after visuals that make Mason's
 content-design or UX-writing contribution clear. Review the available image
 before deciding; packets, filenames, folder placement, and earlier suggestions
-are discovery aids, not a fixed shortlist. Use the
-[`portfolio visual-selection catalog`](../../../private-evidence/portfolio-asset-manifest.json)
-to find candidates and revisit stronger alternatives when the story needs them.
+are discovery aids, not a fixed shortlist. Use any visual catalog or candidate
+set supplied in the current chat to find alternatives. If none is supplied,
+choose only among the images provided.
 
 ## Captions and image sequences
 
 A caption is a short editorial bridge between an image and the surrounding
-story. Borrow microcopy's clarity, brevity, stable terminology, scannability,
-and attention to context, but not interface-level minimalism. Unlike interface
-microcopy, a portfolio caption explains an artifact to a reader who may see it
-small or out of sequence, so allow enough context to connect it to the case. A
-caption may identify something visible when necessary, but it should not stop
-at a label, repeat obvious step numbers or interface text, inventory
-the whole screen, or duplicate a nearby paragraph.
-
-Lead with the customer's or user's task when it is the clearest anchor. Name
-the concrete relationship that matters: what had already happened, what
-remained elsewhere, or what the team moved or changed. Give each caption one
-clear job. When it needs interpretation, state one clear significance instead
-of stacking several. A baseline screenshot may document the starting journey
-rather than a design decision; do not force a rationale or effect into every
-caption.
+story. Borrow microcopy's clarity, but allow enough context for a reader who
+may see the artifact small or out of sequence. Give each caption one clear job:
+connect what the image shows to why it matters. It may identify a visible detail
+when needed, but should not become a label, screen inventory, copy of the
+interface, or repetition of the nearby paragraph. A baseline image may simply
+document the starting point without needing a rationale or effect.
 
 Use `task + design move + significance` as a review question, not a sentence
-template. Include only the parts the image and story need. Make each caption
-clear beside its own image, then read the complete set for repeated facts,
-gaps, inconsistent product terms, and monotonous sentence patterns. Preserve
-exact interface labels. Improve repetition by changing the sentence
-construction or cutting redundant material before substituting a less precise
-word; clarity outranks lexical variety and strict grammatical parallelism.
+template. Include only the parts the image and story need. Preserve exact
+interface labels and keep evaluated states, prices, terms, and controls within
+their supported visible scope. Read the sequence for repeated facts, gaps,
+inconsistent terms, and monotonous construction; cut redundant material before
+replacing a precise word merely for variety.
 
-Use literal, natural American English unless the task requires another variety.
-Name the person as the actor when describing entry, choice, consent, or another
-human action. Use a screen, form, design, or experiment as the subject only for
-what it shows, contains, positions, changes, or measures. Prefer one focused
-sentence and use two only when the necessary context and significance do not fit
-naturally in one. Avoid long inventories, subordinate-clause chains, vague
-abstractions, decorative language, and unsupported interpretation.
+Keep captions and alt text distinct: captions explain why an image matters to
+the story, while alt text conveys the visual content or function needed by a
+reader who cannot see it.
 
-Keep exact evaluated states separate from representative illustrations and
-limit visible prices, trial terms, controls, and other conditions to their
-supported state. Qualify at the clearest shared or local level instead of
-repeating the same disclaimer mechanically. Keep captions and alt text
-distinct: captions explain why an image is relevant to the story, while alt
-text conveys the visual content or function needed by a reader who cannot see
-it.
 ## Rejected drafts and selected targets
 
 Treat Mason's disposition as binding. A rejected or trashed draft contributes
@@ -109,9 +100,8 @@ its own factual claims.
 
 ## Reader outcome
 
-Write toward one route-specific reader outcome in ordinary language. The
-persistent writer returns its candidate; this file does not instruct it to run
-factual QA, simulate an independent review, manage repair turns, recheck a
-reviewer delta, or approve its own work. Local review orchestration remains
-outside persistent provider context and the repository root retains integration
-and the final verdict.
+Write toward one route-specific reader outcome in ordinary language. Return the
+review, diagnosis, or writing requested in the current task. When writing,
+check your candidate against supplied screenshots as required by 03; this does
+not simulate an independent review, approve your own work, or manage later
+repair turns.

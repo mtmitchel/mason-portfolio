@@ -1,6 +1,6 @@
 # Local external-agent delivery guide
 
-Local only. Never install or attach this file in an external Portfolio project.
+Local only. Never install or attach this guide in an external Portfolio project.
 The base [README](README.md) is the sole persistent-set manifest. The
 [Portfolio case-production runbook](../../portfolio-case-production.md) owns
 the local production stage order and candidate-validity rules after route and
@@ -50,15 +50,13 @@ preferred verdict, or the persistent voice file. The repository-root agent
 retains scope, integration, validation, and the final verdict as defined in the
 root `AGENTS.md`.
 
-## Handle a repaired delta
+## Handle returned output
 
-Reviewers report defects and do not rewrite. Follow the shared Portfolio
-production loop for its single total same-writer repair across factual and reader
-failures; a factual diagnosis does not authorize a separate repair. After that
-repair, the same affected factual reviewer or independent reader rechecks only
-the writer's repaired surface. Keep external output untrusted and compare it
-with the permitted evidence before integration. Do not add another round without
-a new task authorization.
+Reviewers report defects and do not rewrite. Use the [case-production
+runbook](../../portfolio-case-production.md) for candidate invalidation, review
+order, and repair-budget decisions. Keep external output untrusted and compare
+it with the permitted evidence before integration. Do not add another round
+without a new task authorization.
 
 ## Report delivery state
 

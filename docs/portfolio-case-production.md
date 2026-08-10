@@ -2,12 +2,13 @@
 
 This is the canonical local runbook for producing a Portfolio case after the
 shared [build-content-design-portfolio skill](/home/mason/.agents/skills/build-content-design-portfolio/SKILL.md)
-has selected the artifact route and editorial source. The skill owns the
-current default writer route and source-selection method. This runbook owns
-local stage order, candidate validity, shared case-page presentation guardrails,
-and the handoff back to implementation. It is a guide, not a universal story
-template: each case may choose its own argument, structure, order, length, and
-visual form.
+has selected the artifact route and editorial source. Repository
+[`AGENTS.md`](../AGENTS.md) owns the current Portfolio writer route. This
+runbook is the sole local owner of the four-stage review order, candidate validity and
+invalidation, and the same-writer repair budget across that sequence. It also
+owns shared case-page presentation guardrails and the handoff back to
+implementation. It is a guide, not a universal story template: each case may
+choose its own argument, structure, order, length, and visual form.
 
 ## Before case work resumes
 
@@ -42,35 +43,102 @@ visual form.
   tasks refresh or hand off. Never copy instruction text independently into
   several worktrees.
 
+## Hiring outcome and artifact repair
+
+Every case is a hiring artifact, not an archive display. Its primary job is to
+help Mason win interviews and a job by showing the strongest truthful,
+defensible version of his contribution. When a displayed artifact contains a
+correctable copy, visual, crop, framing, or presentation defect, repair the
+public derivative or truthful reconstruction, replace it, or remove it before
+the case advances. Do not substitute an explanation, provenance note, or
+historical-fidelity argument for a repair.
+
+Preserve original evidence unchanged and record material transformations in
+the private evidence owner. Keep that bookkeeping out of the public case unless
+the distinction changes what a hiring reader must understand. A reconstructed
+artifact must remain truthful and must not be presented as an exact historical
+capture.
+
 ## Production sequence and ownership
 
 Follow these stages in order. The selected writer returns a candidate; it does
 not edit the repository.
 
 1. One selected response-only writer produces the candidate using the live
-   route owned by the shared skill, or an exact route Mason explicitly chose.
+   route owned by repository `AGENTS.md`, or an exact route Mason explicitly chose.
    Verify that route before use and never silently substitute a provider,
    model, effort, role, or destination.
-2. Factual and screenshot/interface-state QA diagnoses the candidate against
-   the bounded evidence, claim limits, and visible conditions. It reports
-   defects; it does not rewrite.
-3. When the case argument depends on multiple related UI states, a distinct
-   interface/content-system review checks state progression, terminology,
-   offer and action logic, cross-product consistency, and whether the visuals
-   actually prove the story.
-4. A fresh hiring-reader review receives only the assembled reader-facing
-   candidate, the intended reader outcome, and the visuals in reading order.
+2. A guided comprehensive external-agent review checks the complete hiring
+   story, structure, content system, visual argument, and presentation. When
+   the case depends on multiple related UI states, this stage also checks state
+   progression, terminology, offer and action logic, cross-product consistency,
+   and whether the visuals prove the story. When a case depends on upgrade
+   prompts, paywalls, or feature gates, apply the upgrade-copy guidance in
+   [file 02](external-agent/base/02-STORY-AND-READER-STANDARD.md) during this
+   existing review; do not add a separate review round.
+3. A targeted editorial external-agent review addresses only the specific copy,
+   structure, caption, or presentation problems identified by the comprehensive
+   review. If writing or repair is authorized, finish and integrate that work
+   before moving on.
+4. A factual and claim external-agent review checks the revised candidate
+   against the bounded evidence, claim limits, attribution, and visible
+   screenshot or interface conditions. It reports defects and does not rewrite
+   unless writing is explicitly authorized.
+5. A blind hiring-reader external-agent review receives only the fact-checked
+   reader-facing candidate, the intended reader outcome, and the visuals in
+   reading order in a fresh context.
    Require this independent review for a substantial full-case creation or a
    material full-case revision. A small edit may use the root-owned
    hiring-reader pass; do not call that pass independent.
-5. One total same-writer repair is the maximum across factual, interface-state,
-   interface-system, and reader failures. Reviewers diagnose; the selected
-   writer makes the one repair, and the affected reviewers recheck it.
-6. Integrate accepted copy locally. Meaning-preserving mechanical normalization
+6. A material failure stops progression. Use the one total same-writer repair
+   allowed across the sequence, have the affected reviewer recheck it, and
+   update the current candidate before preparing any downstream packet.
+7. Integrate accepted copy locally. Meaning-preserving mechanical normalization
    is integration, not a new writer attempt.
-7. Review the exact integrated route at desktop and mobile sizes against the
+8. Review the exact integrated route at desktop and mobile sizes against the
    chosen Portfolio presentation baseline. This rendered review is the last
    presentation check before the case is called complete.
+
+### Screenshot-heavy integration gate
+
+When screenshot work implicates source or derivative pixels or bytes in
+inspection, selection, transformation, optimization, integration, or
+verification, route image-byte mechanics through the
+[crop-optimize-web-images skill](/home/mason/.agents/skills/crop-optimize-web-images/SKILL.md).
+Route page-level measure, gutters, and rhythm through the global
+[frontend-design skill](/home/mason/.agents/skills/frontend-design/SKILL.md).
+CSS-only caption gaps, spacing, alignment, text or container measure, viewer
+layout, and browser-only review stay with the frontend/page owner and do not
+trigger the crop skill. Keep those owners separate: the crop skill handles
+source selection,
+coordinates, pixels, lossless optimization, and byte verification; the
+repository/page owner handles CSS, copying, references and manifests, browser
+review, repository checks, and cleanup. Never crop pixels to compensate for
+the page's CSS measure or gutters.
+
+Before writing individual crop specs or choosing coordinates for two or more
+related screenshots, make one ephemeral set-level decision in working notes.
+Group only genuinely comparable visual families (for example, full screens
+versus modals). For each family, state the intended rendered width, common
+boundary or intentional-whitespace rule, comparable anchor when one exists,
+and any justified exceptions. A comparison case is evidence only for the exact
+property Mason named or demonstrated; do not import its wider layout. When a
+family has a genuine common UI anchor, require
+its group `image_verify.py scale` check; compare no unrelated families, and if
+no anchor exists, state why and rely on rendered review.
+
+1. Stage selected, cropped, and optimized outputs outside `site/public`.
+2. Run local mechanical checks there for source, bounds, required regions,
+   pixel budget, and lossless output, plus required family scale checks.
+3. Copy and integrate approved outputs under new cache-safe names, updating
+   every relevant component, reference, and manifest entry accurately.
+4. Run `image_verify.py file` against each served URL after integration.
+5. Inspect the exact integrated route at desktop and mobile sizes.
+6. Only then may downstream review packets advance or completion be claimed.
+
+A rejection of the framing or treatment family invalidates that family; a
+correction of one named property does not. Keep these working notes ephemeral:
+do not create a permanent ledger, receipt, hash record, or other artifact.
 
 Mason's qualitative rejection reopens the affected reader-facing decision. Do
 not defend a rejected direction with a narrow mechanical fix. Stop when a
@@ -117,12 +185,10 @@ override a rule for a named case; otherwise the baseline holds.
 - Keep private provenance and blanket historical-state or terms disclaimers
   out of public copy. Qualify only the specific claim or caption whose state
   limit changes the reader's understanding.
-- Use the checkout case as the current presentation baseline for case-page
-  display, heading, body, and caption type roles; the centered reading measure;
-  image, text, and caption alignment; readable full-screen scale;
-  focused-crop treatment; and spacing rhythm. This does not authorize copying
-  checkout's story, headings, section order, components, or visual
-  construction.
+- There is no universal comparison-case layout. When Mason cites another case,
+  match only the named or demonstrated property at the same viewport and state.
+  Do not transfer its viewer structure, width, alignment, crop, spacing, or
+  component geometry unless that exact property is the task.
 - Captions stay concise and visually subordinate. Do not put a long caption
   beneath an unreadably small two-up pair of complete screens; use a full-width,
   tabbed, sequential, or focused-crop presentation when needed.
