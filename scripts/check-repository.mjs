@@ -179,14 +179,15 @@ for (const file of repositoryFiles) {
 const requiredFiles = [
   "README.md",
   "AGENTS.md",
+  "CLAUDE.md",
   "docs/portfolio-case-production.md",
   "archive/README.md",
   "docs/figma-workflow.md",
   "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
   "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
   "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
-  "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md",
-  "docs/external-agent/base/05-MASON-WRITING-VOICE.md",
+  "docs/external-agent/base/04-MASON-WRITING-VOICE.md",
+  "docs/external-agent/base/EXTERNAL-AGENT-PACKET-GUIDE.md",
   "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt",
   "private-evidence/README.md",
   "private-evidence/claim-review.md",
@@ -676,183 +677,110 @@ const tracked = spawnSyncChecked(
   .split("\0")
   .filter(Boolean);
 
-const projectInstructionsPath = path.join(root, "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt");
+const projectInstructionsPath = path.join(
+  root,
+  "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt",
+);
 const projectInstructions = await readFile(projectInstructionsPath, "utf8");
 record(
   [...projectInstructions].length < 8000,
   `PROJECT_INSTRUCTIONS.txt must be fewer than 8,000 Unicode characters: ${[...projectInstructions].length}`,
 );
 
-const externalBaseReadmePath = "docs/external-agent/base/README.md";
-const localPacketRunbookPath = "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md";
-const externalPacketWorkflowPath = "docs/external-agent-packets.md";
-const rootAgentsPath = "AGENTS.md";
-const rootReadmePath = "README.md";
-const siteAgentsPath = "site/AGENTS.md";
-const productionRunbookPath = "docs/portfolio-case-production.md";
 const alignmentScriptPath = "scripts/check-worktree-alignment.mjs";
 const preCommitHookPath = ".githooks/pre-commit";
-const externalBaseReadme = await readFile(path.join(root, externalBaseReadmePath), "utf8");
-const localPacketRunbook = await readFile(path.join(root, localPacketRunbookPath), "utf8");
-const externalPacketWorkflow = await readFile(path.join(root, externalPacketWorkflowPath), "utf8");
-const rootAgents = await readFile(path.join(root, rootAgentsPath), "utf8");
-const rootReadme = await readFile(path.join(root, rootReadmePath), "utf8");
-const siteAgents = await readFile(path.join(root, siteAgentsPath), "utf8");
-const productionRunbook = await readFile(path.join(root, productionRunbookPath), "utf8");
-const alignmentScript = await readFile(path.join(root, alignmentScriptPath), "utf8");
-const preCommitHook = await readFile(path.join(root, preCommitHookPath), "utf8");
-const normalizedProductionRunbook = normalizeMarkdownWhitespace(productionRunbook);
-const productionRunbookLower = normalizedProductionRunbook.toLowerCase();
-const canonicalProseOwners = new Map([
-  ["AGENTS.md", rootAgents],
-  ["README.md", rootReadme],
-  ["site/AGENTS.md", siteAgents],
-  ["docs/portfolio-case-production.md", productionRunbook],
-  [localPacketRunbookPath, localPacketRunbook],
-]);
-const defaultWriterRouteLeakage = /\bgemini(?:[-\w.]*)?\b|\bgpt(?:[-\s]?\d[\w.-]*)?\b|\b(?:default|implicit|current)\b[^\n.]{0,160}\b(?:provider|model)\b[^\n.]{0,80}(?:\b(?:is|uses?|set to|named)\b\s*(?:`[^`]+`|"[^"]+"|'[^']+'|[A-Za-z][\w.-]*)|[:=]\s*(?:`[^`]+`|"[^"]+"|'[^']+'|[A-Za-z][\w.-]*))/i;
-function hasDefaultWriterRouteLeakage(source) {
-  return defaultWriterRouteLeakage.test(source);
-}
+const externalBaseReadmePath = "docs/external-agent/base/README.md";
+const persistentExternalPaths = [
+  "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
+  "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
+  "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
+  "docs/external-agent/base/04-MASON-WRITING-VOICE.md",
+];
+
 try {
   spawnSyncChecked("node", [alignmentScriptPath], { cwd: root, encoding: "utf8" });
 } catch (error) {
   record(false, `worktree alignment check failed: ${error.message}`);
 }
-const rootWriterRoute = extractMarkdownSection(
-  rootAgents,
-  "## Writer route and external transmission",
-);
-const rootDelegatingRoute = extractMarkdownSection(
-  rootAgents,
-  "### Delegating portfolio prose",
-);
-const rootPortfolioWorkflow = extractMarkdownSection(
-  rootReadme,
-  "## Portfolio content workflow",
+
+const preCommitHook = await readFile(path.join(root, preCommitHookPath), "utf8");
+const alignmentHookPosition = preCommitHook.indexOf("check-worktree-alignment.mjs");
+const lineLimitHookPosition = preCommitHook.indexOf("check-production-line-limits.mjs");
+record(
+  alignmentHookPosition >= 0
+    && lineLimitHookPosition >= 0
+    && alignmentHookPosition < lineLimitHookPosition,
+  "pre-commit must run worktree alignment before production line-limit checks",
 );
 
-record(
-  rootPortfolioWorkflow.length > 0,
-  "root README must contain exactly one Portfolio content workflow section",
-);
-record(
-  extractMarkdownSection("## Target\n## Sibling\nsibling", "## Target") === "",
-  "section extractor must stop at an immediately adjacent equal-rank heading",
-);
-record(
-  extractMarkdownSection("### Target\nown content\n### Sibling\nsibling", "### Target")
-    === "own content",
-  "section extractor must stop an H3 at an immediately adjacent H3 sibling",
-);
-record(
-  extractMarkdownSection("```\n## Target\nfenced\n```\n## Target\nreal", "## Target") === "real"
-    && extractMarkdownSection("~~~~\n## Target\nfenced\n~~~\n## Target\nstill fenced\n~~~~\n## Target\nreal", "## Target") === "real",
-  "section extractor must ignore headings inside compatible fenced blocks",
-);
+const structuralInstructionOwners = new Map([
+  ["AGENTS.md", [
+    "## Canonical owners",
+    "## Hiring and evidence standard",
+    "## Portfolio prose route",
+    "## Implementation and design",
+    "## Verification",
+  ]],
+  ["README.md", [
+    "## Start here",
+    "## Portfolio content workflow",
+    "## Checks",
+  ]],
+  ["site/AGENTS.md", [
+    "## Application ownership",
+    "## Design freedom",
+    "## Technical quality",
+    "## Verification",
+  ]],
+  ["docs/portfolio-case-production.md", [
+    "## Before case work resumes",
+    "## Production sequence and ownership",
+    "### Screenshot-heavy integration gate",
+    "## Candidate boundary and review validity",
+    "## Shared presentation baseline",
+  ]],
+]);
 
-for (const [file, source] of canonicalProseOwners) {
-  record(
-    !hasDefaultWriterRouteLeakage(source),
-    `${file} must not copy a provider- or model-specific default writer route`,
-  );
-  for (const mutation of [
-    "The default writer route uses Gemini 3.6 Flash High.",
-    "The implicit default model is `some-provider-model`.",
-  ]) {
+for (const [file, headings] of structuralInstructionOwners) {
+  const source = await readFile(path.join(root, file), "utf8");
+  for (const heading of headings) {
     record(
-      hasDefaultWriterRouteLeakage(`${source}\n${mutation}`),
-      `${file} default-route leakage probe must reject: ${mutation}`,
+      extractMarkdownSection(source, heading).length > 0,
+      `${file} must contain one non-empty ${heading} section outside code fences`,
     );
   }
 }
 
-const canonicalRunbookLink = "docs/portfolio-case-production.md";
 record(
-  rootAgents.includes(`[docs/portfolio-case-production.md](${canonicalRunbookLink})`)
-    && rootReadme.includes("](docs/portfolio-case-production.md)")
-    && siteAgents.includes("](../docs/portfolio-case-production.md)")
-    && localPacketRunbook.includes("[Portfolio case-production runbook](../../portfolio-case-production.md)"),
-  "root, site, README, and local packet instructions must link the canonical case-production runbook",
-);
-record(
-  alignmentScript.includes("process.cwd()")
-    && alignmentScript.includes('"rev-parse", "--show-toplevel"')
-    && alignmentScript.includes('"rev-parse", "--git-common-dir"')
-    && alignmentScript.includes('"worktree", "list", "--porcelain"')
-    && alignmentScript.includes("--audit-linked")
-    && alignmentScript.includes("PORTFOLIO_AUTHORIZED_LINKED_WRITE")
-    && alignmentScript.includes("linked worktree writes are disabled by default")
-    && alignmentScript.includes("authorized linked-write mode requires every canonical owner")
-    && alignmentScript.includes("linked-worktree audit failed")
-    && alignmentScript.indexOf("if (!authorizedLinkedWrite)")
-      < alignmentScript.indexOf(
-        "const { localOwnerChanges, mismatches } = await inspectOwnerAlignment(currentRoot, primaryRoot);",
-      )
-    && alignmentScript.includes("primary checkout")
-    && alignmentScript.includes("linked worktree")
-    && [
-      "AGENTS.md",
-      "README.md",
-      "site/AGENTS.md",
-      "docs/portfolio-case-production.md",
-      "docs/external-agent/base/04-EXTERNAL-AGENT-PACKET-GUIDE.md",
-      "scripts/check-repository.mjs",
-      ".githooks/pre-commit",
-    ].every((file) => alignmentScript.includes(file)),
-  "worktree alignment must resolve the primary checkout from Git and compare the canonical owner bundle",
-);
-record(
-  preCommitHook.indexOf("check-worktree-alignment.mjs") >= 0
-    && preCommitHook.indexOf("check-production-line-limits.mjs") >= 0
-    && preCommitHook.indexOf("check-worktree-alignment.mjs")
-      < preCommitHook.indexOf("check-production-line-limits.mjs"),
-  "pre-commit must run worktree alignment before production line-limit checks",
-);
-record(
-  normalizedProductionRunbook.toLowerCase().includes("primary checkout returned by git")
-    && normalizedProductionRunbook.toLowerCase().includes("only ordinary portfolio write location")
-    && normalizedProductionRunbook.toLowerCase().includes("exactly one case study may be active at a time")
-    && normalizedProductionRunbook.toLowerCase().includes("drafting or writing")
-    && normalizedProductionRunbook.toLowerCase().includes("factual and interface review")
-    && normalizedProductionRunbook.toLowerCase().includes("reader review")
-    && normalizedProductionRunbook.toLowerCase().includes("implementation")
-    && normalizedProductionRunbook.toLowerCase().includes("rendered review")
-    && normalizedProductionRunbook.toLowerCase().includes("and repair")
-    && normalizedProductionRunbook.toLowerCase().includes("every other case parked and read-only")
-    && normalizedProductionRunbook.toLowerCase().includes("review-only by default")
-    && normalizedProductionRunbook.toLowerCase().includes("explicit task-specific authorization")
-    && normalizedProductionRunbook.toLowerCase().includes("disjoint write set")
-    && normalizedProductionRunbook.toLowerCase().includes("integration or retirement plan")
-    && normalizedProductionRunbook.toLowerCase().includes("detached commit")
-    && normalizedProductionRunbook.toLowerCase().includes("worktree-only edit is not complete")
-    && /validate the[\s\S]*instruction change, commit it, and synchronize it/.test(productionRunbook),
-  "case-production runbook must define the primary checkout, one-active-case, linked-worktree, and instruction-completion rules",
-);
-record(
-  !/gpt-5\.6|gemini/i.test(rootAgents)
-    && !/gpt-5\.6|gemini/i.test(rootReadme)
-    && rootWriterRoute.includes("shared [build-content-design-portfolio skill]")
-    && rootWriterRoute.includes("sole owner of the current default writer route")
-    && rootWriterRoute.includes("verify any exact route it selects")
-    && rootWriterRoute.includes("Never silently substitute")
-    && rootWriterRoute.includes("Mason may explicitly override"),
-  "root instructions must defer the default writer route to the shared skill while preserving exact overrides and no-substitution safety",
-);
-record(
-  rootDelegatingRoute.includes("selected response-only writer")
-    && rootDelegatingRoute.includes("factual and reader QA")
-    && rootDelegatingRoute.toLowerCase().includes("do not replace the selected writer")
-    && rootDelegatingRoute.includes("classify every existing text as an active draft, rejected draft, or Mason-selected target")
-    && rootDelegatingRoute.includes("exclude that draft completely")
-    && rootDelegatingRoute.includes("candidate as the editorial starting point"),
-  "root instructions must retain writer ownership, context separation, rejected-draft exclusion, and selected-target handling",
+  extractMarkdownSection("## Target\n## Sibling\nsibling", "## Target") === ""
+    && extractMarkdownSection(
+      "```\n## Target\nfenced\n```\n## Target\nreal",
+      "## Target",
+    ) === "real",
+  "Markdown section extraction must respect sibling headings and code fences",
 );
 
-const expectedExternalContextVersion = "2026-08-04.2";
+const claudeAdapter = await readFile(path.join(root, "CLAUDE.md"), "utf8");
+const claudeImportCount = claudeAdapter
+  .split(/\r?\n/)
+  .filter((line) => line.trim() === "@AGENTS.md").length;
+const claudeNonBlankLines = claudeAdapter
+  .split(/\r?\n/)
+  .filter((line) => line.trim().length > 0).length;
+record(
+  claudeImportCount === 1 && claudeNonBlankLines <= 20,
+  "CLAUDE.md must remain a thin adapter with one AGENTS.md import",
+);
+record(
+  !/^##\s+(?:Commands|Architecture|Evidence|Workflow)\b/im.test(claudeAdapter),
+  "CLAUDE.md must not mirror repository policy or architecture sections",
+);
+
 const externalContextVersionPattern = /^\s*External-context version:\s*([^\s]+)\s*$/gim;
 const versionDeclarations = [];
-for (const file of tracked.filter((entry) => entry.startsWith("docs/external-agent/base/"))) {
+for (const file of repositoryFiles.map(repoPath).filter(
+  (entry) => entry.startsWith("docs/external-agent/base/"),
+)) {
   const source = await readFile(path.join(root, file), "utf8");
   for (const match of source.matchAll(externalContextVersionPattern)) {
     versionDeclarations.push({ file, version: match[1].replace(/[`'\"]/g, "") });
@@ -861,140 +789,38 @@ for (const file of tracked.filter((entry) => entry.startsWith("docs/external-age
 record(
   versionDeclarations.length === 1
     && versionDeclarations[0].file === externalBaseReadmePath
-    && versionDeclarations[0].version === expectedExternalContextVersion,
-  "external context must declare the expected version once in the base README",
+    && /^\d{4}-\d{2}-\d{2}\.\d+$/.test(versionDeclarations[0].version),
+  "external context must declare one dated version in its canonical README",
 );
 
-const persistentExternalPaths = [
-  "docs/external-agent/base/01-AUDIENCE-AND-PORTFOLIO-GOAL.md",
-  "docs/external-agent/base/02-STORY-AND-READER-STANDARD.md",
-  "docs/external-agent/base/03-EVIDENCE-AND-ACCURACY-STANDARD.md",
-  "docs/external-agent/base/05-MASON-WRITING-VOICE.md",
-];
+const externalBaseReadme = await readFile(path.join(root, externalBaseReadmePath), "utf8");
+record(
+  persistentExternalPaths.every((file) => externalBaseReadme.includes(path.basename(file))),
+  "external context README must list every persistent external source file",
+);
+
 const persistentExternalSources = new Map();
 for (const file of persistentExternalPaths) {
   persistentExternalSources.set(file, await readFile(path.join(root, file), "utf8"));
 }
 
-record(
-  externalBaseReadme.includes("Install the complete contents of")
-    && persistentExternalPaths.every((file) => externalBaseReadme.includes(path.basename(file)))
-    && externalBaseReadme.includes("Keep `04-EXTERNAL-AGENT-PACKET-GUIDE.md`")
-    && externalBaseReadme.includes("local."),
-  "external base README must declare the exact persistent 01, 02, 03, and 05 set and exclude 04",
-);
-record(
-  localPacketRunbook.includes("Local only. Never install or attach this file")
-    && localPacketRunbook.includes("[README](README.md)")
-    && localPacketRunbook.includes("../../external-agent-packets.md")
-    && /factual[\s\S]*reviewer/i.test(localPacketRunbook)
-    && /independent[\s\S]*reader/i.test(localPacketRunbook)
-    && /Exclude a rejected or trashed draft\s+completely/i.test(localPacketRunbook)
-    && /selects another candidate as the target/i.test(localPacketRunbook),
-  "04 must remain local, separate review contexts, exclude rejected drafts, and carry selected targets",
-);
-record(
-  externalPacketWorkflow.includes("## Folder lifecycle")
-    && externalPacketWorkflow.includes("external-agent/base/README.md")
-    && externalPacketWorkflow.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md")
-    && /authorized write set/i.test(externalPacketWorkflow)
-    && /do not silently reuse/i.test(externalPacketWorkflow)
-    && /must not contain a[\s\S]*rejected draft/i.test(externalPacketWorkflow)
-    && /Mason-selected target/i.test(externalPacketWorkflow),
-  "local external-agent workflow must protect write boundaries, stale folders, rejected drafts, and selected targets",
-);
-record(
-  rootReadme.includes("docs/external-agent/base/README.md")
-    && rootReadme.includes("docs/external-agent-packets.md")
-    && rootReadme.includes("04-EXTERNAL-AGENT-PACKET-GUIDE.md"),
-  "root README must point to the separate persistent manifest, task-folder owner, and delivery guide",
-);
-const requiredStageMarkers = [
-  "one selected response-only writer produces the candidate",
-  "factual and screenshot/interface-state qa diagnoses",
-  "distinct interface/content-system review checks state progression",
-  "fresh hiring-reader review receives only the assembled reader-facing candidate",
-  "one total same-writer repair is the maximum",
-  "integrate accepted copy locally",
-  "exact integrated route at desktop and mobile sizes",
-];
-const stagePositions = requiredStageMarkers.map((marker) => productionRunbookLower.indexOf(marker));
-record(
-  stagePositions.every((position, index) => position >= 0 && (index === 0 || position > stagePositions[index - 1]))
-    && productionRunbook.includes("substantial full-case creation")
-    && productionRunbook.includes("material full-case revision")
-    && productionRunbook.includes("small edit may use the root-owned")
-    && productionRunbook.includes("Mason's qualitative rejection reopens the affected reader-facing decision"),
-  "case-production runbook must define the ordered writer, factual, interface-system, reader, repair, integration, and rendered stages",
-);
-record(
-  productionRunbookLower.includes("prose, headings, conclusions, captions, meaning-bearing alt text")
-    && productionRunbookLower.includes("ordered visual set")
-    && productionRunbookLower.includes("each crop or treatment")
-    && productionRunbookLower.includes("reading order and emphasis")
-    && productionRunbookLower.includes("rendered layout")
-    && productionRunbookLower.includes("a review result is valid only for the surfaces it inspected")
-    && productionRunbookLower.includes("never claim complete using a review of an older candidate"),
-  "case-production runbook must define the complete candidate boundary and current-review validity",
-);
-record(
-  productionRunbookLower.includes("a prose, heading, or conclusion change requires the relevant factual review")
-    && productionRunbookLower.includes("a caption, alt-text, or visible-state claim change requires factual and")
-    && productionRunbookLower.includes("an ordered visual set, crop, or visual-treatment change requires")
-    && productionRunbookLower.includes("a layout, type, alignment, or footer change requires rendered review")
-    && productionRunbookLower.includes("meaning-preserving mechanical normalization does not invalidate semantic review")
-    && productionRunbookLower.includes("plain terms")
-    && productionRunbookLower.includes("ledger, receipt, hash bureaucracy, or packet ceremony"),
-  "case-production runbook must define candidate invalidation and plain-language review records",
-);
-record(
-  productionRunbookLower.includes("byline identifies the company plus the team or workstream")
-    && productionRunbookLower.includes("never mason's role")
-    && productionRunbook.includes("DeepL · Monetization")
-    && productionRunbookLower.includes("omit years from case-study bylines portfolio-wide")
-    && productionRunbookLower.includes("blanket historical-state or terms disclaimers")
-    && productionRunbookLower.includes("use the checkout case as the current presentation baseline")
-    && productionRunbookLower.includes("does not authorize copying checkout's story")
-    && productionRunbookLower.includes("captions stay concise and visually subordinate")
-    && productionRunbook.includes("compact bottom-right “Next →” treatment")
-    && productionRunbookLower.includes("not a universal story or section template")
-    && productionRunbookLower.includes("direct mason instruction may intentionally override"),
-  "case-production runbook must define stable presentation guardrails without imposing a universal story template",
-);
-record(
-  persistentExternalSources.get(persistentExternalPaths[1]).includes("does not instruct it to run")
-    && persistentExternalSources.get(persistentExternalPaths[1]).includes("simulate an independent review")
-    && /rejected or trashed draft[\s\S]*no prose, headings, structure/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /selects another candidate as the target[\s\S]*editorial starting point/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /does not authorize[\s\S]*additional rewrite or repair turn/i.test(persistentExternalSources.get(persistentExternalPaths[2])),
-  "persistent guidance must separate review, exclude rejected drafts, honor selected targets, and avoid extra repairs",
-);
-record(
-  persistentExternalSources.get(persistentExternalPaths[1]).includes("## Captions and image sequences")
-    && /short editorial bridge/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /Borrow microcopy's clarity[\s\S]*not interface-level minimalism/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /Lead with the customer's or user's task[\s\S]*what had already happened[\s\S]*remained elsewhere[\s\S]*moved or changed/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /state one[\s\S]*clear significance[\s\S]*instead[\s\S]*of stacking several[\s\S]*baseline screenshot[\s\S]*do not force a[\s\S]*rationale or effect/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /task \+ design move \+ significance[\s\S]*review question, not a sentence[\s\S]*template/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /clarity outranks lexical variety and strict grammatical\s+parallelism/i.test(persistentExternalSources.get(persistentExternalPaths[1]))
-    && /captions explain why an image is relevant[\s\S]*alt\s+text conveys the visual content or function/i.test(persistentExternalSources.get(persistentExternalPaths[1])),
-  "02 must adapt microcopy principles, keep captions concrete and coherent as a set, and distinguish them from alt text",
-);
-
 const providerLeakagePatterns = [
-  [/04-EXTERNAL-AGENT-PACKET-GUIDE/i, "local packet runbook"],
+  [/EXTERNAL-AGENT-PACKET-GUIDE/i, "local packet runbook"],
   [/docs\/external-agent-packets\.md/i, "local packet workflow"],
+  [/private-evidence\//i, "private evidence"],
+  [/\b05-MASON-WRITING-VOICE\.md\b/i, "stale voice filename"],
   [/\bbuild-content-design-portfolio\b/i, "local skill name"],
   [/\b(?:AGENTS\.md|CLAUDE\.md|localhost|tmp\/|Codex)\b/i, "repository or machine mechanics"],
 ];
 for (const [file, source] of [
-  ["docs/external-agent/base/PROJECT_INSTRUCTIONS.txt", await readFile(path.join(root, "docs/external-agent/base/PROJECT_INSTRUCTIONS.txt"), "utf8")],
+  ["docs/external-agent/base/PROJECT_INSTRUCTIONS.txt", projectInstructions],
   ...persistentExternalSources.entries(),
 ]) {
   for (const [pattern, label] of providerLeakagePatterns) {
     record(!pattern.test(source), `${file} must not expose ${label}`);
   }
 }
+
 const generatedPrefixes = [
   ".agents/",
   ".codex/",

@@ -21,6 +21,15 @@ the selected subject.
 
 ## Hiring purpose
 
+The primary purpose of every Portfolio artifact is to help Mason win interviews
+and a job. When a supplied screenshot or reconstruction used to showcase his
+work contains a correctable copy or visual defect, do not treat the defect as a
+fidelity requirement. Recommend or create, when authorized, a corrected
+truthful Portfolio reconstruction, choose a stronger asset, or omit it. Never
+praise, excuse, or preserve a visible flaw that weakens the hiring case. Keep
+source truth and private provenance intact; do not turn routine provenance into
+reader-facing caveats unless needed to prevent a misleading claim.
+
 The readers are recruiters, content-design and UX-writing hiring managers, and
 product, design, and growth leaders. They need a selective account that makes
 Mason's value easy to understand and remember:
